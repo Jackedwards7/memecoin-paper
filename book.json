@@ -47,7 +47,7 @@
       "tokens": 8037.4088586806265,
       "entry_px": 0.008741086677968597,
       "entry_mc": 8625571,
-      "peak_px": 0.01051,
+      "peak_px": 0.01104,
       "stop": -0.25,
       "tp1": 0.6,
       "tp1_done": false,
@@ -106,5 +106,5 @@
     "2026-11-02 05:44 UTC BUY ANAKIN 0.50 SOL @ $0.0030809492 (mc $3,066,672): Momentum: 7h old, +5,969% 24h, 2:1 buys/sells, $138k/h volume; small size because it is vertical and has an 11-wallet bundle (~0.9% supply)",
     "2026-11-02 08:30 UTC BUY CBUCKS 0.50 SOL @ $0.0019096153 (mc $1,799,967): CBUCKS: 26-day coin, $1.8M cap, liq $146k, 1h buys 28>20, 1h +2% and 24h +48%, RugCheck no risks, LP 99.99% locked; distinct theme; modest volume noted"
   ],
-  "last_mark": "2026-11-02 10:34 UTC"
+  "last_mark": "2026-11-02 11:04 UTC"
 }
