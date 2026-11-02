@@ -9,7 +9,7 @@
       "tokens": 30645.369642820086,
       "entry_px": 0.0030567179019799153,
       "entry_mc": 2905987,
-      "peak_px": 0.003086,
+      "peak_px": 0.003088,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -28,7 +28,7 @@
       "tokens": 34900.23922035854,
       "entry_px": 0.0020130431501173603,
       "entry_mc": 1989964,
-      "peak_px": 0.002187,
+      "peak_px": 0.002207,
       "stop": -0.3,
       "tp1": 0.8,
       "tp1_done": false,
@@ -86,5 +86,5 @@
     "2026-11-02 05:44 UTC BUY GATO 0.75 SOL @ $0.0087410867 (mc $8,625,571): Mature 68-day coin, $8.7M cap, deepest pool on the board, 96% LP locked; +38% 24h",
     "2026-11-02 05:44 UTC BUY ANAKIN 0.50 SOL @ $0.0030809492 (mc $3,066,672): Momentum: 7h old, +5,969% 24h, 2:1 buys/sells, $138k/h volume; small size because it is vertical and has an 11-wallet bundle (~0.9% supply)"
   ],
-  "last_mark": "2026-11-02 06:48 UTC"
+  "last_mark": "2026-11-02 06:50 UTC"
 }
