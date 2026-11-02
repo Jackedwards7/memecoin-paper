@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.851406002095502,
+  "cash_sol": 7.461682392173467,
   "positions": {
     "EJAxERvKU4kEVXn3NarjvRtgaMaJyP9ZuMeKA7JJpump": {
       "symbol": "CHOO",
@@ -25,17 +25,17 @@
       "symbol": "GATO",
       "opened": "2026-11-02 05:44 UTC",
       "cost_sol": 0.75,
-      "tokens": 8037.4088586806265,
+      "tokens": 4018.7044293403133,
       "entry_px": 0.008741086677968597,
       "entry_mc": 8625571,
-      "peak_px": 0.01366,
+      "peak_px": 0.01413,
       "stop": -0.25,
       "tp1": 0.6,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "Mature 68-day coin, $8.7M cap, deepest pool on the board, 96% LP locked; +38% 24h",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.6102763900779642,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/5e3dxlxgwmtdcoka51wyyakttjfzbwqcoyuhbui5gt2m",
       "misses": 0
@@ -137,7 +137,8 @@
     "2026-11-02 08:30 UTC BUY CBUCKS 0.50 SOL @ $0.0019096153 (mc $1,799,967): CBUCKS: 26-day coin, $1.8M cap, liq $146k, 1h buys 28>20, 1h +2% and 24h +48%, RugCheck no risks, LP 99.99% locked; distinct theme; modest volume noted",
     "2026-11-02 15:45 UTC SELL 100% ANAKIN -> 0.324 SOL @ $0.00203: stop-loss at -34%",
     "2026-11-02 17:23 UTC SELL 100% Anakin -> 0.527 SOL @ $0.001619: stop-loss at -47%",
-    "2026-11-02 17:24 UTC BUY three 0.50 SOL @ $0.00046225308 (mc $461,979): three: 187-day coin, liq $140k, 1h buys 450>179, 1h +3% and 24h +2%, 5m flat, RugCheck no risks, LP 96% locked; distinct theme"
+    "2026-11-02 17:24 UTC BUY three 0.50 SOL @ $0.00046225308 (mc $461,979): three: 187-day coin, liq $140k, 1h buys 450>179, 1h +3% and 24h +2%, 5m flat, RugCheck no risks, LP 96% locked; distinct theme",
+    "2026-11-02 23:46 UTC SELL 50% GATO -> 0.610 SOL @ $0.01413: take-profit at +62%: half sold, cost recovered"
   ],
-  "last_mark": "2026-11-02 23:26 UTC"
+  "last_mark": "2026-11-02 23:46 UTC"
 }
