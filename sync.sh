@@ -7,9 +7,13 @@ set -u
 cd "$(dirname "$0")"
 PY="${PY:-python3}"
 resync() { git rebase --abort 2>/dev/null; git fetch -q origin && git reset -q --hard origin/main; }
-# Save any marks made outside this script (manual trades, the old watcher) before pulling.
-git add book.json book.md && git commit -qm "local mark $(date -u +%FT%H:%MZ)" 2>/dev/null || true
+# Set aside uncommitted repricing (peaks, miss counters) while pulling, instead of a commit per tick.
+# If the pulled book changed too (a cloud trade), the remote book wins and this tick reprices it.
+# Note: resync hard-resets to origin, so never leave uncommitted code edits in this folder.
+stashed=0
+git diff --quiet -- book.json book.md || { git stash push -q -- book.json book.md && stashed=1; }
 git pull -q --rebase origin main || resync
+if [ "$stashed" = 1 ]; then git stash pop -q 2>/dev/null || { git reset -q --hard HEAD; git stash drop -q; }; fi
 nlog() { "$PY" -I -c "import json;print(len(json.load(open('book.json'))['log']))"; }
 before=$(nlog)
 "$PY" -I memepaper.py mark --quiet || exit 1
