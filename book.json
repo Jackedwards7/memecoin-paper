@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.5,
+  "cash_sol": 6.823947223296852,
   "positions": {
     "ExxzYBTt3jwU5MUxuw2F4toYbTLdFwThSjyaCn6Xpump": {
       "symbol": "Anakin",
@@ -47,7 +47,7 @@
       "tokens": 8037.4088586806265,
       "entry_px": 0.008741086677968597,
       "entry_mc": 8625571,
-      "peak_px": 0.01199,
+      "peak_px": 0.01202,
       "stop": -0.25,
       "tp1": 0.6,
       "tp1_done": false,
@@ -57,25 +57,6 @@
       "realised_sol": 0.0,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/5e3dxlxgwmtdcoka51wyyakttjfzbwqcoyuhbui5gt2m",
-      "misses": 0
-    },
-    "8s4bNqEztH1JP7mkU747uMr7AckCQdiV47FDqYnDpump": {
-      "symbol": "ANAKIN",
-      "opened": "2026-11-02 05:44 UTC",
-      "cost_sol": 0.5,
-      "tokens": 15202.173672592264,
-      "entry_px": 0.003080949212180219,
-      "entry_mc": 3066672,
-      "peak_px": 0.005622,
-      "stop": -0.3,
-      "tp1": 1.0,
-      "tp1_done": false,
-      "thesis": "Momentum: 7h old, +5,969% 24h, 2:1 buys/sells, $138k/h volume; small size because it is vertical and has an 11-wallet bundle (~0.9% supply)",
-      "rugcheck": 1,
-      "risks": [],
-      "realised_sol": 0.0,
-      "dex": "pumpswap",
-      "url": "https://dexscreener.com/solana/hcgpz2exv8sfcmvq9fjpbd71brljvzutd2avvv86gwbk",
       "misses": 0
     },
     "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
@@ -98,13 +79,39 @@
       "misses": 0
     }
   },
-  "closed": [],
+  "closed": [
+    {
+      "symbol": "ANAKIN",
+      "opened": "2026-11-02 05:44 UTC",
+      "cost_sol": 0.5,
+      "tokens": 0.0,
+      "entry_px": 0.003080949212180219,
+      "entry_mc": 3066672,
+      "peak_px": 0.005622,
+      "stop": -0.3,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "Momentum: 7h old, +5,969% 24h, 2:1 buys/sells, $138k/h volume; small size because it is vertical and has an 11-wallet bundle (~0.9% supply)",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.3239472232968512,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/hcgpz2exv8sfcmvq9fjpbd71brljvzutd2avvv86gwbk",
+      "misses": 0,
+      "mint": "8s4bNqEztH1JP7mkU747uMr7AckCQdiV47FDqYnDpump",
+      "closed": "2026-11-02 15:45 UTC",
+      "pnl_sol": -0.17605277670314878,
+      "pnl_pct": -0.35210555340629757,
+      "exit_reason": "stop-loss at -34%"
+    }
+  ],
   "log": [
     "2026-11-02 05:44 UTC BUY Anakin 1.00 SOL @ $0.0030567179 (mc $2,905,987): Anakin narrative leader that has survived 3 days; +15% 1h, buys > sells, no wallet above ~3% of supply",
     "2026-11-02 05:44 UTC BUY CHOO 0.75 SOL @ $0.0020130432 (mc $1,989,964): 11-day runner, +123% 24h with buys > sells, holders spread, 72% LP locked",
     "2026-11-02 05:44 UTC BUY GATO 0.75 SOL @ $0.0087410867 (mc $8,625,571): Mature 68-day coin, $8.7M cap, deepest pool on the board, 96% LP locked; +38% 24h",
     "2026-11-02 05:44 UTC BUY ANAKIN 0.50 SOL @ $0.0030809492 (mc $3,066,672): Momentum: 7h old, +5,969% 24h, 2:1 buys/sells, $138k/h volume; small size because it is vertical and has an 11-wallet bundle (~0.9% supply)",
-    "2026-11-02 08:30 UTC BUY CBUCKS 0.50 SOL @ $0.0019096153 (mc $1,799,967): CBUCKS: 26-day coin, $1.8M cap, liq $146k, 1h buys 28>20, 1h +2% and 24h +48%, RugCheck no risks, LP 99.99% locked; distinct theme; modest volume noted"
+    "2026-11-02 08:30 UTC BUY CBUCKS 0.50 SOL @ $0.0019096153 (mc $1,799,967): CBUCKS: 26-day coin, $1.8M cap, liq $146k, 1h buys 28>20, 1h +2% and 24h +48%, RugCheck no risks, LP 99.99% locked; distinct theme; modest volume noted",
+    "2026-11-02 15:45 UTC SELL 100% ANAKIN -> 0.324 SOL @ $0.00203: stop-loss at -34%"
   ],
-  "last_mark": "2026-11-02 15:29 UTC"
+  "last_mark": "2026-11-02 15:45 UTC"
 }
