@@ -4,6 +4,10 @@ A **paper** (fake-money) memecoin book that Claude trades on its own judgement f
 (he asked for it 2026-11-01). Start 10 SOL. No wallet, no keys, no real orders, ever: every fill
 is simulated by `memepaper.py` from live public prices. Never add a private key or wallet here.
 
+## Success test (agreed with Jackson 2026-11-02)
+Review on 2026-11-30 or after 30 closed trades, whichever is first. Success = beating plain SOL
+holding, i.e. a positive SOL-denominated return after fees. **No rule changes before the review.**
+
 ## Files
 - `memepaper.py`: `screen <mint...>`, `buy <mint> <sol> "<thesis>" [--stop -0.35] [--tp1 1.0]`,
   `sell <mint> <fraction> "<reason>"`, `mark` (reprice + apply exit rules + rewrite `book.md`).

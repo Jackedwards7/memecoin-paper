@@ -16,6 +16,8 @@ BOOK = os.path.join(HERE, "book.json")
 REPORT = os.path.join(HERE, "book.md")
 
 START_SOL = 10.0
+START_SOL_USD = 94.86   # SOL price when the book opened (2026-11-02 05:44 UTC), for the benchmark
+REVIEW_DATE = "2026-11-30"  # judge the book then, or after 30 closed trades; rules frozen until then
 FEE = 0.0125        # pump.fun/PumpSwap fee ~1% + priority/tip, each side
 SLIP_K = 0.5        # extra slippage: size / liquidity * SLIP_K (rough constant-product impact)
 MAX_POS_SOL = 1.0   # no single position above 10% of the starting book
@@ -247,6 +249,11 @@ slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py
 
 **Equity {equity:.3f} SOL** (start {b['start_sol']:.1f} SOL, {equity / b['start_sol'] - 1:+.1%}) · cash {b['cash_sol']:.3f} SOL ·
 open {len(b['positions'])} · closed {len(b['closed'])} ({wins} won) · SOL ${su:,.2f} · marked {now()}
+
+**Benchmark (vs just holding SOL): {equity / b['start_sol'] - 1:+.1%}.** The book is counted in SOL, so its SOL
+return *is* its edge over holding SOL. In dollars: ${equity * su:,.0f} vs ${b['start_sol'] * START_SOL_USD:,.0f} at the start
+({equity * su / (b['start_sol'] * START_SOL_USD) - 1:+.1%}); SOL itself moved {su / START_SOL_USD - 1:+.1%}.
+Review on {REVIEW_DATE} or after 30 closed trades ({len(b['closed'])}/30), rules unchanged until then.
 
 ## Open positions
 
