@@ -33,8 +33,34 @@ def get(url):
     return json.loads(out)
 
 
+SOL_MINT = "So11111111111111111111111111111111111111112"
+SOL_CACHE = os.path.join(HERE, ".sol_usd")  # last good price, for when both sources fail
+
+
 def sol_usd():
-    return get("https://api.coingecko.com/api/v3/simple/price?ids=solana&vs_currencies=usd")["solana"]["usd"]
+    """SOL in USD: CoinGecko, else the deepest DexScreener SOL/USDC-USDT pair, else the
+    last good price (under 6h old). Free CoinGecko rate-limits shared cloud IPs."""
+    px = None
+    try:
+        px = float(get("https://api.coingecko.com/api/v3/simple/price?ids=solana&vs_currencies=usd")["solana"]["usd"])
+    except Exception:
+        try:
+            ps = [p for p in get(f"https://api.dexscreener.com/tokens/v1/solana/{SOL_MINT}")
+                  if p["baseToken"]["address"] == SOL_MINT and p["quoteToken"]["symbol"] in ("USDC", "USDT")]
+            best = max(ps, key=lambda p: (p.get("liquidity") or {}).get("usd") or 0)
+            px = float(best["priceUsd"])
+        except Exception:
+            pass
+    if px and 1 < px < 100000:
+        open(SOL_CACHE, "w").write(f"{px} {time.time()}")
+        return px
+    try:
+        v, t = open(SOL_CACHE).read().split()
+        if time.time() - float(t) < 6 * 3600:
+            return float(v)
+    except Exception:
+        pass
+    raise RuntimeError("no SOL price from CoinGecko, DexScreener or a recent cache")
 
 
 def pairs(mints):
