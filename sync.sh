@@ -14,7 +14,7 @@ nlog() { "$PY" -I -c "import json;print(len(json.load(open('book.json'))['log'])
 before=$(nlog)
 "$PY" -I memepaper.py mark --quiet || exit 1
 after=$(nlog)
-last=$(git log -1 --format=%ct 2>/dev/null || echo 0)
+last=$(git log -1 --format=%ct origin/main 2>/dev/null || echo 0)  # last PUSHED commit
 if [ "$after" != "$before" ] || [ $(( $(date +%s) - last )) -ge 1800 ]; then
   git add book.json book.md
   git commit -qm "mark $(date -u +%FT%H:%MZ)$([ "$after" != "$before" ] && echo ' (trade)')" || true
