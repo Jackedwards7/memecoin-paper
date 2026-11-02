@@ -8,17 +8,17 @@ area: trading
 *Paper only: simulated fills from live DexScreener prices, 1.25% fee each side plus a size/liquidity
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
-**Equity 9.964 SOL** (start 10.0 SOL, -0.4%) · cash 7.000 SOL ·
-open 4 · closed 0 (0 won) · SOL $94.31 · marked 2026-11-02 06:28 UTC
+**Equity 10.011 SOL** (start 10.0 SOL, +0.1%) · cash 7.000 SOL ·
+open 4 · closed 0 (0 won) · SOL $94.35 · marked 2026-11-02 06:29 UTC
 
 ## Open positions
 
 | Coin | Mint | Opened | Cost SOL | Entry mcap | Move | Value SOL (incl. realised) | Thesis |
 |---|---|---|---|---|---|---|---|
-| Anakin | `ExxzYBTt…` | 2026-11-02 05:44 UTC | 1.00 | $2,905,987 | -2% | 0.969 | Anakin narrative leader that has survived 3 days; +15% 1h, buys > sells, no wallet above ~3% of supply |
-| CHOO | `EJAxERvK…` | 2026-11-02 05:44 UTC | 0.75 | $1,989,964 | +1% | 0.749 | 11-day runner, +123% 24h with buys > sells, holders spread, 72% LP locked |
-| GATO | `HsprHxBR…` | 2026-11-02 05:44 UTC | 0.75 | $8,625,571 | -3% | 0.720 | Mature 68-day coin, $8.7M cap, deepest pool on the board, 96% LP locked; +38% 24h |
-| ANAKIN | `8s4bNqEz…` | 2026-11-02 05:44 UTC | 0.50 | $3,066,672 | +6% | 0.525 | Momentum: 7h old, +5,969% 24h, 2:1 buys/sells, $138k/h volume; small size because it is vertical and has an 11-wallet bundle (~0.9% supply) |
+| Anakin | `ExxzYBTt…` | 2026-11-02 05:44 UTC | 1.00 | $2,905,987 | -2% | 0.975 | Anakin narrative leader that has survived 3 days; +15% 1h, buys > sells, no wallet above ~3% of supply |
+| CHOO | `EJAxERvK…` | 2026-11-02 05:44 UTC | 0.75 | $1,989,964 | +5% | 0.782 | 11-day runner, +123% 24h with buys > sells, holders spread, 72% LP locked |
+| GATO | `HsprHxBR…` | 2026-11-02 05:44 UTC | 0.75 | $8,625,571 | -4% | 0.718 | Mature 68-day coin, $8.7M cap, deepest pool on the board, 96% LP locked; +38% 24h |
+| ANAKIN | `8s4bNqEz…` | 2026-11-02 05:44 UTC | 0.50 | $3,066,672 | +8% | 0.536 | Momentum: 7h old, +5,969% 24h, 2:1 buys/sells, $138k/h volume; small size because it is vertical and has an 11-wallet bundle (~0.9% supply) |
 
 ## Closed
 

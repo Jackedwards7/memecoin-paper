@@ -7,6 +7,8 @@ set -u
 cd "$(dirname "$0")"
 PY="${PY:-python3}"
 resync() { git rebase --abort 2>/dev/null; git fetch -q origin && git reset -q --hard origin/main; }
+# Save any marks made outside this script (manual trades, the old watcher) before pulling.
+git add book.json book.md && git commit -qm "local mark $(date -u +%FT%H:%MZ)" 2>/dev/null || true
 git pull -q --rebase origin main || resync
 nlog() { "$PY" -I -c "import json;print(len(json.load(open('book.json'))['log']))"; }
 before=$(nlog)
