@@ -8,23 +8,23 @@ area: trading
 *Paper only: simulated fills from live DexScreener prices, 1.25% fee each side plus a size/liquidity
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
-**Equity 10.361 SOL** (start 10.0 SOL, +3.6%) · cash 6.500 SOL ·
-open 5 · closed 0 (0 won) · SOL $94.21 · marked 2026-11-02 08:30 UTC
+**Equity 10.521 SOL** (start 10.0 SOL, +5.2%) · cash 6.500 SOL ·
+open 5 · closed 0 (0 won) · SOL $94.62 · marked 2026-11-02 09:01 UTC
 
-**Benchmark (vs just holding SOL): +3.6%.** The book is counted in SOL, so its SOL
-return *is* its edge over holding SOL. In dollars: $976 vs $949 at the start
-(+2.9%); SOL itself moved -0.7%.
+**Benchmark (vs just holding SOL): +5.2%.** The book is counted in SOL, so its SOL
+return *is* its edge over holding SOL. In dollars: $996 vs $949 at the start
+(+4.9%); SOL itself moved -0.3%.
 Review on 2026-11-30 or after 30 closed trades (0/30), rules unchanged until then.
 
 ## Open positions
 
 | Coin | Mint | Opened | Cost SOL | Entry mcap | Move | Value SOL (incl. realised) | Thesis |
 |---|---|---|---|---|---|---|---|
-| Anakin | `ExxzYBTt…` | 2026-11-02 05:44 UTC | 1.00 | $2,905,987 | +13% | 1.125 | Anakin narrative leader that has survived 3 days; +15% 1h, buys > sells, no wallet above ~3% of supply |
-| CHOO | `EJAxERvK…` | 2026-11-02 05:44 UTC | 0.75 | $1,989,964 | +7% | 0.796 | 11-day runner, +123% 24h with buys > sells, holders spread, 72% LP locked |
-| GATO | `HsprHxBR…` | 2026-11-02 05:44 UTC | 0.75 | $8,625,571 | +4% | 0.779 | Mature 68-day coin, $8.7M cap, deepest pool on the board, 96% LP locked; +38% 24h |
-| ANAKIN | `8s4bNqEz…` | 2026-11-02 05:44 UTC | 0.50 | $3,066,672 | +34% | 0.668 | Momentum: 7h old, +5,969% 24h, 2:1 buys/sells, $138k/h volume; small size because it is vertical and has an 11-wallet bundle (~0.9% supply) |
-| CBUCKS | `DtcicPCK…` | 2026-11-02 08:30 UTC | 0.50 | $1,799,967 | -0% | 0.494 | CBUCKS: 26-day coin, $1.8M cap, liq $146k, 1h buys 28>20, 1h +2% and 24h +48%, RugCheck no risks, LP 99.99% locked; distinct theme; modest volume noted |
+| Anakin | `ExxzYBTt…` | 2026-11-02 05:44 UTC | 1.00 | $2,905,987 | +18% | 1.164 | Anakin narrative leader that has survived 3 days; +15% 1h, buys > sells, no wallet above ~3% of supply |
+| CHOO | `EJAxERvK…` | 2026-11-02 05:44 UTC | 0.75 | $1,989,964 | +5% | 0.782 | 11-day runner, +123% 24h with buys > sells, holders spread, 72% LP locked |
+| GATO | `HsprHxBR…` | 2026-11-02 05:44 UTC | 0.75 | $8,625,571 | +16% | 0.861 | Mature 68-day coin, $8.7M cap, deepest pool on the board, 96% LP locked; +38% 24h |
+| ANAKIN | `8s4bNqEz…` | 2026-11-02 05:44 UTC | 0.50 | $3,066,672 | +44% | 0.711 | Momentum: 7h old, +5,969% 24h, 2:1 buys/sells, $138k/h volume; small size because it is vertical and has an 11-wallet bundle (~0.9% supply) |
+| CBUCKS | `DtcicPCK…` | 2026-11-02 08:30 UTC | 0.50 | $1,799,967 | +2% | 0.502 | CBUCKS: 26-day coin, $1.8M cap, liq $146k, 1h buys 28>20, 1h +2% and 24h +48%, RugCheck no risks, LP 99.99% locked; distinct theme; modest volume noted |
 
 ## Closed
 
