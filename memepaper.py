@@ -16,6 +16,7 @@ files to <state>/orders/ instead, and the next tick applies them in order. One w
 
   python3 -I memepaper.py tick        # apply pending orders, then mark
   python3 -I memepaper.py status      # report, pending orders, last results (read only)
+  python3 -I memepaper.py replay <YYYY-MM-DD>   # re-run the arms' picks on a day's dataset
   python3 -I memepaper.py migrate <old repo dir> <state dir>   # one-time move of the books
   python3 -I memepaper.py loop [--minutes 55] [--every 60]     # the hot loop (GitHub Actions)
   python3 -I memepaper.py watchdog    # alert if the loop's health.json is stale
@@ -27,7 +28,7 @@ pass from the last 2 hours, and each buy also opens a same-size position in cont
 random coin from the same gate-pass pool. Gate failures are tracked as shadow rejects for 7 days.
 The review asks whether picks beat the control after costs.
 """
-import json, sys, time, subprocess, datetime, os, fcntl, random, urllib.parse, copy
+import json, sys, time, subprocess, datetime, os, fcntl, random, urllib.parse, copy, gzip, glob
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 BOOK = os.path.join(HERE, "book.json")
@@ -73,6 +74,19 @@ EVENT_M5_DROP = -20       # % price change over 5 minutes (DexScreener's m5)
 STALE_MIN = 20            # watchdog: last pushed tick older than this -> alert (pushes come every 10 min)
 ERRORS_ALERT = 3          # failed ticks in a row before an alert
 PUSH_EVERY_S = 600        # the loop pushes on anything material, else this often
+# Phase 3: every CYCLE_MIN the loop snapshots the universe into data/ and runs the mechanical arms.
+CYCLE_MIN = 15
+CYCLE_BUDGET_S = 45       # gating stops here and resumes next cycle, so exits are never held up
+UNIVERSE_MIN_AGE_H = 6    # the cloud universe rule (CLAUDE.md, Entries)
+UNIVERSE_MIN_LIQ = 75_000
+GATE_REFRESH_MIN = 60     # a coin is re-gated at most this often (a pass lasts GATE_TTL_H)
+WATCH_DAYS = 10           # a coin that ever qualified is tracked this long after it last did
+WATCH_FRESH_H = 24        # one that never has gets this long from its last listing (most are tiny)
+WATCH_MAX = 400
+GATE_STOP_AFTER = 3       # checks that couldn't finish in one cycle before gating waits for the next
+CANT_CHECK = ("RugCheck unavailable", "copycat check failed")  # an outage, not a verdict on the coin
+ARM_CASH_FLOOR = 5.0      # the same floor Claude's entries have
+ARM_COOLDOWN_H = 24       # an arm won't re-buy a coin it closed this recently
 LOCK = "/tmp/memepaper.lock"  # the 2-minute watcher and manual trades never write at once
 ORDERS = None             # state mode: the orders inbox folder. None = legacy mode (books beside the code)
 BOOKS = None              # state mode: the folder of arm books
@@ -182,14 +196,17 @@ def norm(s):
     return "".join(ch for ch in (s or "").lower() if ch.isalnum())
 
 
-def gate_one(mint, p):
+def gate_one(mint, p, info=None):
     """The playbook's hard safety gates (wiki: memecoin-trading-playbook). Returns the failures;
-    an empty list is a pass. Anything that can't be checked counts as a fail."""
+    an empty list is a pass. Anything that can't be checked counts as a fail. If `info` is a dict
+    it's filled with the measurements behind the checks, for the dataset and the arms."""
+    info = {} if info is None else info
     try:
         r = get(f"https://api.rugcheck.xyz/v1/tokens/{mint}/report")
     except Exception as e:
         return [f"RugCheck unavailable ({e.__class__.__name__})"]
     fails = []
+    info.update(score=r.get("score_normalised"), holders=r.get("totalHolders"))
     # 1-2. authorities revoked, no risky Token-2022 extension
     if r.get("mintAuthority") or r.get("freezeAuthority"):
         fails.append("mint or freeze authority not revoked")
@@ -208,7 +225,7 @@ def gate_one(mint, p):
     mk = [m for m in r.get("markets") or [] if m.get("lp")]
     if mk:
         deep = max(mk, key=lambda m: (m["lp"].get("quoteUSD") or 0) + (m["lp"].get("baseUSD") or 0))
-        locked = deep["lp"].get("lpLockedPct") or 0
+        locked = info["lp_locked"] = deep["lp"].get("lpLockedPct") or 0
         if deep.get("marketType") not in GRAD_POOLS:
             fails.append(f"deepest pool is {deep.get('marketType')}, not a graduation pool")
         elif locked < LP_LOCK_MIN:
@@ -228,6 +245,9 @@ def gate_one(mint, p):
         # RugCheck's per-wallet insider flag; its network totals overlap and include the pool.
         ins = sum(h.get("amount", 0) for h in r.get("topHolders") or []
                   if h.get("insider") and h.get("owner") not in pools) / supply
+        info.update(insider=ins, creator=(r.get("creatorBalance") or 0) / supply,
+                    top=max([h.get("amount", 0) / supply for h in r.get("topHolders") or []
+                             if h.get("owner") not in pools and h.get("address") not in pools], default=0))
         if ins > INSIDER_MAX:
             fails.append(f"insider wallets hold {ins:.0%}")
         if (r.get("creatorBalance") or 0) / supply > CREATOR_MAX:
@@ -463,7 +483,8 @@ def mark(quiet=False):
     extra = {p: load(p) for p in other_arms()}  # phase 3's variant books, when there are any
     su = sol_usd()
     t = time.time()
-    shadows = [(k, m) for k in ("rejects", "passes") for m, r in b[k].items() if len(r["moves"]) < len(REJECT_DAYS)]
+    shadows = [(k, m) for k in ("rejects", "passes") for m, r in b[k].items()
+               if any(f"{d}d" not in r["moves"] and t - r["at"] >= d * 86400 for d in REJECT_DAYS)]
     due = list(dict.fromkeys(m for _, m in shadows))
     held = [m for bk in (b, c, *extra.values()) for m in bk["positions"]]
     want = list(dict.fromkeys(held + due))
@@ -678,6 +699,227 @@ def tick(quiet=True):
     return material
 
 
+def _momentum(r):
+    """Claude's entry preference, as a rule: 1h buys > sells, 1h and 24h up, no vertical 5m spike."""
+    return r["buys_h1"] > r["sells_h1"] and r["h1"] > 0 and r["h24"] > 0 and r["m5"] < 25
+
+
+# The mechanical arms. Each is a rule over a dataset row (and, for v-dip, the coin's price a week
+# ago) plus which qualifying coin it takes: the highest value of `rank`. Every arm uses the same
+# gate, size, costs and exit code; only what's listed here differs. See CLAUDE.md, Arms.
+VARIANTS = {
+    "v-momentum":   {"rule": lambda r, wk: _momentum(r), "rank": "vol_h24"},
+    "v-no-spike":   {"rule": lambda r, wk: _momentum(r) and r["h24"] <= 150, "rank": "vol_h24"},
+    "v-mature":     {"rule": lambda r, wk: r["age_h"] >= 72 and r["liq"] >= 150_000, "rank": "liq"},
+    "v-tight":      {"rule": lambda r, wk: _momentum(r), "rank": "vol_h24", "stop": -0.20, "tp1": 0.40},
+    "v-loose":      {"rule": lambda r, wk: _momentum(r), "rank": "vol_h24", "stop": -0.40, "tp1": 1.50},
+    "v-dip":        {"rule": lambda r, wk: wk is not None and r["px"] > wk and -35 <= r["h24"] <= -15
+                                           and r["buys_h1"] > r["sells_h1"], "rank": "vol_h24"},
+    "v-low-bundle": {"rule": lambda r, wk: _momentum(r) and (r["gate"].get("insider") is not None)
+                                           and r["gate"]["insider"] <= 0.05, "rank": "vol_h24"},
+    "v-velocity":   {"rule": lambda r, wk: _momentum(r), "rank": "avg_trade"},
+}
+
+
+def _passed(r):
+    """A row an arm may buy: in the universe with a clean gate result from the last GATE_TTL_H."""
+    g = r.get("gate")
+    return bool(r["eligible"] and g and not g["fails"] and r["t"] - g["at"] < GATE_TTL_H * 3600)
+
+
+def view(bk, t):
+    """All pick() needs to know about a book. Saved in the dataset, so a day can be replayed exactly."""
+    cut = t - ARM_COOLDOWN_H * 3600
+    recent = [x["mint"] for x in bk["closed"] if _ts(x["closed"]) >= cut]
+    return {"cash": round(bk["cash_sol"], 9), "held": sorted(bk["positions"]), "recent": sorted(set(recent))}
+
+
+def pick(name, rows, v, week=None):
+    """The row this arm buys this cycle, or None. Pure: same inputs, same answer, live or replayed."""
+    arm_ = VARIANTS[name]
+    if v["cash"] <= ARM_CASH_FLOOR or len(v["held"]) >= MAX_OPEN:
+        return None
+    ok = [r for r in rows if _passed(r) and r["mint"] not in v["held"] and r["mint"] not in v["recent"]
+          and arm_["rule"](r, (week or {}).get(r["mint"]))]
+    return max(ok, key=lambda r: (r[arm_["rank"]], r["mint"])) if ok else None
+
+
+def _ts(s):
+    return datetime.datetime.strptime(s, "%Y-%m-%d %H:%M UTC").replace(tzinfo=datetime.timezone.utc).timestamp()
+
+
+def candidates():
+    """Solana mints ending in `pump` from DexScreener's profile and boost lists, as in CLAUDE.md.
+    Boosts are paid ads: a candidate list only. One list failing is fine; both failing isn't."""
+    out, errs = [], []
+    for u in ("https://api.dexscreener.com/token-profiles/latest/v1",
+              "https://api.dexscreener.com/token-boosts/top/v1"):
+        try:
+            out += [x["tokenAddress"] for x in get(u) or []
+                    if x.get("chainId") == "solana" and str(x.get("tokenAddress", "")).endswith("pump")]
+        except Exception as e:
+            errs.append(e)
+    if len(errs) == 2:
+        raise errs[0]
+    return list(dict.fromkeys(out))
+
+
+def _jload(path, default):
+    return json.load(open(path)) if os.path.exists(path) else default
+
+
+def _jsave(path, x):
+    with open(path + ".tmp", "w") as f:
+        json.dump(x, f)
+    os.replace(path + ".tmp", path)
+
+
+def make_row(mint, p, gate_, t):
+    """One dataset row. Keeps the gate result as it was then: RugCheck's flags change over time."""
+    tx, vol, pc = p.get("txns") or {}, p.get("volume") or {}, p.get("priceChange") or {}
+    h1, h24 = tx.get("h1") or {}, tx.get("h24") or {}
+    trades = (h24.get("buys") or 0) + (h24.get("sells") or 0)
+    age = (t * 1000 - (p.get("pairCreatedAt") or t * 1000)) / 3.6e6
+    return {"t": t, "mint": mint, "symbol": p["baseToken"].get("symbol"), "px": float(p["priceUsd"]),
+            "liq": _liq(p), "mc": p.get("marketCap") or 0, "dex": p.get("dexId"), "age_h": round(age, 2),
+            "vol_h1": vol.get("h1") or 0, "vol_h24": vol.get("h24") or 0,
+            "buys_h1": h1.get("buys") or 0, "sells_h1": h1.get("sells") or 0,
+            "buys_h24": h24.get("buys") or 0, "sells_h24": h24.get("sells") or 0, "trades_h24": trades,
+            "avg_trade": round((vol.get("h24") or 0) / trades, 2) if trades else 0,
+            "m5": pc.get("m5") or 0, "h1": pc.get("h1") or 0, "h6": pc.get("h6") or 0, "h24": pc.get("h24") or 0,
+            "eligible": age >= UNIVERSE_MIN_AGE_H and _liq(p) >= UNIVERSE_MIN_LIQ, "gate": gate_, "arms": []}
+
+
+def snapshot(t):
+    """Price the watch list, gate what's due (longest wait first, inside CYCLE_BUDGET_S) and return
+    (rows, pairs, new gate results). Rows cover every coin that has ever qualified, so one that
+    collapses stays in the data: a dataset of only the living would flatter every rule."""
+    wp, gp = os.path.join(STATE, "watch.json"), os.path.join(STATE, "gate.json")
+    watch, cache = _jload(wp, {}), _jload(gp, {})
+    for m in candidates():
+        watch.setdefault(m, {"ok": False})["t"] = t
+    live = [(m, w) for m, w in watch.items() if t - w["t"] < (WATCH_DAYS * 86400 if w["ok"] else WATCH_FRESH_H * 3600)]
+    watch = dict(sorted(live, key=lambda x: (not x[1]["ok"], -x[1]["t"]))[:WATCH_MAX])
+    ps, rows = pairs(list(watch)), {}
+    for m, w in watch.items():
+        p = ps.get(m)
+        if p and p.get("priceUsd") and p.get("dexId"):  # DexScreener lists some pairs with no price yet
+            r = make_row(m, p, None, t)
+            if r["eligible"]:
+                w.update(ok=True, t=t)
+            if w["ok"]:
+                rows[m] = r
+    due = [m for m, r in rows.items() if r["eligible"]
+           and t - cache.get(m, {}).get("tried", 0) >= GATE_REFRESH_MIN * 60]
+    due.sort(key=lambda m: cache.get(m, {}).get("tried", 0))
+    results, end, stuck = {}, clock() + CYCLE_BUDGET_S, 0
+    for m in due:
+        if clock() >= end or stuck >= GATE_STOP_AFTER:
+            break
+        info = {}
+        fails = gate_one(m, ps[m], info)
+        if any(f.startswith(CANT_CHECK) for f in fails):
+            cache.setdefault(m, {"at": 0, "fails": fails})["tried"] = t
+            stuck += 1
+            continue
+        cache[m] = {"at": t, "tried": t, "fails": fails, **info}
+        results[m] = {"symbol": rows[m]["symbol"], "px": rows[m]["px"], "fails": fails}
+    cache = {m: g for m, g in cache.items() if t - g["tried"] < 2 * 86400}
+    for m, r in rows.items():
+        r["gate"] = cache.get(m)
+    _jsave(wp, watch)
+    _jsave(gp, cache)
+    return list(rows.values()), ps, results
+
+
+def _data_path(t):
+    os.makedirs(os.path.join(STATE, "data"), exist_ok=True)
+    day = datetime.datetime.fromtimestamp(t, datetime.timezone.utc).strftime("%Y-%m-%d")
+    return os.path.join(STATE, "data", day + ".jsonl")
+
+
+def read_day(day):
+    """A day's dataset lines, from the plain file or its gzipped copy."""
+    base = os.path.join(STATE, "data", day + ".jsonl")
+    if os.path.exists(base):
+        return [json.loads(x) for x in open(base)]
+    if os.path.exists(base + ".gz"):
+        with gzip.open(base + ".gz", "rt") as f:
+            return [json.loads(x) for x in f]
+    return []
+
+
+def week_ago(t):
+    """Each coin's price about 7 days before t (first row of that day), for v-dip. Empty until the
+    dataset is a week old, so v-dip can't trade before then."""
+    day = datetime.datetime.fromtimestamp(t - 7 * 86400, datetime.timezone.utc).strftime("%Y-%m-%d")
+    out = {}
+    for x in read_day(day):
+        if "mint" in x:
+            out.setdefault(x["mint"], x["px"])
+    return out
+
+
+def _roll_data(path):
+    """Gzip finished days. Today's file stays plain text: git stores appends as small deltas, while
+    a gzip file would be stored whole on every push."""
+    for f in glob.glob(os.path.join(os.path.dirname(path), "*.jsonl")):
+        if f != path:
+            with open(f, "rb") as src, gzip.open(f + ".gz", "wb") as dst:
+                dst.write(src.read())
+            os.remove(f)
+
+
+def cycle():
+    """Every CYCLE_MIN: snapshot the universe, record gate results, let each arm buy at most one
+    coin, append it all to the dataset. Returns the number of coins recorded."""
+    t = round(clock())
+    rows, ps, results = snapshot(t)
+    if results:
+        b = load()
+        _ingest_gate(b, results, t)
+        save(b)
+    week, su, views = week_ago(t), sol_usd(), {}
+    for name, a in VARIANTS.items():
+        path = os.path.join(BOOKS, name + ".json")
+        bk = load(path)
+        v = views[name] = view(bk, t)
+        r = pick(name, rows, v, week)
+        if r:
+            _open(bk, r["mint"], MAX_POS_SOL, f"{name} rule", a.get("stop", -0.35), a.get("tp1", 1.0), ps[r["mint"]], su)
+            r["arms"].append(name)
+        save(bk, path)
+    path = _data_path(t)
+    with open(path, "a") as f:
+        f.write(json.dumps({"cycle": t, "views": views, "week": {r["mint"]: week[r["mint"]] for r in rows if r["mint"] in week}}) + "\n")
+        for r in rows:
+            f.write(json.dumps(r) + "\n")
+    _roll_data(path)
+    return len(rows)
+
+
+def replay(day):
+    """Re-run every arm's pick over a recorded day and compare with what the arm did live. Entries
+    only: exits run every 60 s and the dataset is 15-minute rows. Returns the differences."""
+    diffs, n, cycles = [], 0, []
+    for x in read_day(day):
+        if "cycle" in x:
+            cycles.append((x, []))
+        else:
+            cycles[-1][1].append(x)
+    for x, rows in cycles:
+        for name in VARIANTS.keys() & x["views"].keys():  # arms added later have no history here
+            n += 1
+            r = pick(name, rows, x["views"][name], x["week"])
+            live = [y["mint"] for y in rows if name in y["arms"]]
+            if (r["mint"] if r else None) != (live[0] if live else None):
+                diffs.append(f"{x['cycle']} {name}: replay {r['mint'] if r else None}, live {live}")
+    print(f"replayed {n} arm decisions on {day}: {len(diffs)} differences")
+    for d in diffs:
+        print(" ", d)
+    return diffs
+
+
 def notify(title, msg, priority="default", tags=""):
     """Push an alert to Jackson's phone with ntfy. The topic name is the only secret (a GitHub
     secret, masked in the public logs); without it the alert only prints. Never raises."""
@@ -754,6 +996,17 @@ def loop_once(h):
             notify("memepaper: recovered", f"ticking again after {h['errors_in_a_row']} failed ticks", "default", "ok")
         h["errors_in_a_row"] = 0
         h["last_ok"], h["last_ok_ts"] = now(), clock()
+        if clock() - h.get("last_cycle_ts", 0) >= CYCLE_MIN * 60:
+            try:
+                n = cycle()
+                print(f"cycle: {n} coins recorded")
+                h["last_cycle"], h["last_cycle_ts"], h["cycle_errors"], material = now(), clock(), 0, True
+            except Exception as e:  # a failed snapshot never stops the exits: try again next tick
+                h["cycle_errors"] = h.get("cycle_errors", 0) + 1
+                h["last_cycle_error"] = f"{now()} {e.__class__.__name__}: {str(e)[:200]}"
+                print("cycle failed:", h["last_cycle_error"])
+                if h["cycle_errors"] == ERRORS_ALERT:
+                    notify("memepaper: snapshots failing", h["last_cycle_error"], "default", "warning")
     h["last_tick"], h["last_tick_ts"] = now(), clock()
     h["ticks"] = h.get("ticks", 0) + 1
     try:
@@ -831,7 +1084,8 @@ def status(done=10):
             print(f"  {o.get('applied_at', '?')}  {o.get('kind')}  {o.get('mint', '')[:6]}  {o.get('result')}")
     try:
         h = json.load(open(os.path.join(STATE, "health.json")))
-        print(f"loop: last tick {h.get('last_tick')}, {h.get('errors_in_a_row', 0)} failed in a row")
+        print(f"loop: last tick {h.get('last_tick')}, {h.get('errors_in_a_row', 0)} failed in a row; "
+              f"last snapshot {h.get('last_cycle')}, {h.get('cycle_errors', 0)} failed in a row")
     except Exception:
         print("loop: no health.json yet")
 
@@ -911,6 +1165,14 @@ def write_report(b, su, ps, c=None, quiet=False):
         return sum(x.get("swaps", 0) for x in list(bk["closed"]) + list(bk["positions"].values())
                    if not v2_only or x.get("v") == 2)
     pp_s, cp_s = pp - swaps(b, True) * extra_usd, cp - swaps(c, False) * extra_usd
+    arm_rows = []
+    for path in other_arms():
+        bk = load(path)
+        n, w, pnl, cost = arm(bk, ps, su, False)
+        arm_rows.append(f"| {os.path.basename(path)[:-5]} | {n} | {w} | {len(bk['positions'])} | {pnl:+.3f} | {pnl / cost if cost else 0:+.1%} |")
+    arms_md = ("\n## Mechanical arms\n\nSame gate, size, costs and exit code as the picks; rules in `CLAUDE.md`. Judged against the "
+               "control, and only after enough closed trades.\n\n| Arm | Closed | Won | Open | P&L SOL (incl. open) | Return on SOL deployed |\n"
+               "|---|---|---|---|---|---|\n" + "\n".join(arm_rows) + "\n" if arm_rows else "")
     orders_md = ("\n## Orders (last 15)\n\n" + "\n".join(f"- {x['at']} `{x['id']}`: {x['result']}" for x in b["applied"][-15:]) + "\n"
                  if b.get("applied") else "")
     md = f"""---
@@ -947,7 +1209,7 @@ If every swap were sandwiched at the ${SANDWICH_STRESS_USD:.0f} median: picks {p
 **Gate value** (raw price moves, no costs; the gate earns its keep if passes beat rejects):
 passes {len(b['passes'])} tracked, median {pas} · rejects {len(b['rejects'])} tracked, median {rej}.
 Legacy v1 positions (opened before v2, 1.25% fee model, sizes to 1 SOL) stay under the same exits and are left out of this table.
-
+{arms_md}
 ## Open positions
 
 | Coin | Mint | Opened | Cost SOL | Entry mcap | Move | Value SOL (incl. realised) | Thesis |
@@ -994,6 +1256,8 @@ def main(a):
         mark(quiet="--quiet" in a)
     elif cmd == "status":
         status()
+    elif cmd == "replay":
+        sys.exit(1 if replay(a[1]) else 0)
     elif cmd == "tick":
         tick(quiet="--verbose" not in a)
     elif cmd == "loop":

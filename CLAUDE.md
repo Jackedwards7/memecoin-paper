@@ -36,6 +36,9 @@ every rule against the data.
     gate when it applies the buy, refuses an order over 30 minutes old, and opens the control.
   - `./order.sh sell <mint> <fraction> "<reason>"`.
   A refused order is a normal outcome: its reason is in `status`. Never edit files on `state`.
+- **Every 15 minutes the loop also snapshots the universe** (see Arms and dataset). `state` then
+  holds `data/` too, plus `watch.json` and `gate.json`. Its gate results are recorded in the picks
+  book like yours, so your control draws from every recent pass, not only the coins you gated.
 - **Files on `main`:** `memepaper.py` (all the logic; always `python3 -I`), `order.sh`,
   `mirror.sh` (the Mac's read-only copy into Jackson's vault), `PLAYBOOK.md` (the research behind
   these rules: read it before judging a coin), `tests/` (offline; `python3 -I -m unittest discover
@@ -84,6 +87,40 @@ Size **0.25 SOL** (the script caps it). Steps:
 5. `./order.sh buy` is refused for a coin without a gate pass from the last 2 hours, and opens the control position by
    itself on a different gate pass (never the pick). If your pick is the only pass, it gets no control.
 No buy is a fine outcome. Cash is a position.
+
+## Arms and dataset (Tier 1 phase 3)
+The hot loop runs eight mechanical arms beside your picks, in `books/v-*.json`, so rule sets
+compete on the same coins. You never trade them. Same gate, 0.25 SOL size, costs and exit code as
+the picks; each buys at most one coin per 15-minute cycle, keeps cash above 5 SOL, holds at most 6
+and waits 24 hours before re-buying a coin it closed. Stop −35% and take-profit +100% unless listed.
+
+"Momentum" means 1h buys > sells, 1h and 24h change above 0, 5m change under +25%.
+
+| Arm | Buys | Takes the highest |
+|---|---|---|
+| `v-momentum` | momentum | 24h volume |
+| `v-no-spike` | momentum, 24h change at most +150% | 24h volume |
+| `v-mature` | pair at least 72h old, liquidity at least $150k | liquidity |
+| `v-tight` | momentum; stop −20%, take-profit +40% | 24h volume |
+| `v-loose` | momentum; stop −40%, take-profit +150% | 24h volume |
+| `v-dip` | above its price 7 days ago, 24h change −35% to −15%, 1h buys > sells | 24h volume |
+| `v-low-bundle` | momentum, flagged insiders at most 5% | 24h volume |
+| `v-velocity` | momentum | average trade size |
+
+`v-dip` can't trade until the dataset is a week old. `v-x-organic` and `v-x-exit` wait for the Grok
+X scout. Arm trades don't alert the phone. The report's "Mechanical arms" table shows each one; no
+arm is judged before the review, and none changes a rule by itself.
+
+**Dataset:** `data/YYYY-MM-DD.jsonl` on `state` (finished days gzipped). Each cycle writes a header
+line (each arm's cash and holdings, plus prices from a week ago) and one row per coin that has ever
+been in the universe, kept for 10 days after it last qualified, so coins that collapse stay in the
+data. A row holds what the arms saw: price, liquidity, volume, trades, price changes and the gate
+result of that moment. An outage at RugCheck is not a verdict: the coin is retried in an hour and
+never becomes a shadow reject.
+
+`python3 -I memepaper.py replay <YYYY-MM-DD>` (state mode) re-runs every arm's choice on a recorded
+day and lists any entry that differs from what the arm did. Entries only: exits run every minute
+and the rows are 15 minutes apart, so an exit rule can't be replayed exactly from this data.
 
 ## What not to do (from the research)
 No copy-trading wallets, no buying because an influencer called it, no fresh launches (bots win

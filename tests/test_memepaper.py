@@ -63,6 +63,7 @@ class Env(unittest.TestCase):
                 os.remove(f)
         self.market, self.rc, self.search, self.fail_urls = {}, {}, {}, []
         self.search_mint = {}  # mint -> DexScreener search answer, for the rug rule's second look
+        self.listed = []       # mints on DexScreener's profile and boost lists
         self.t = time.time()   # the fake clock; tests move it forward
         for n in NAMES:
             self.market[MINT[n]] = best_pair(n)
@@ -78,6 +79,8 @@ class Env(unittest.TestCase):
     def fake_get(self, url):
         if any(f in url for f in self.fail_urls):
             raise subprocess.CalledProcessError(22, ["curl", url])
+        if "token-profiles/latest" in url or "token-boosts/top" in url:
+            return [{"chainId": "solana", "tokenAddress": m} for m in self.listed]
         if "/tokens/v1/solana/" in url:
             return [self.market[m] for m in url.rsplit("/", 1)[1].split(",") if m in self.market]
         if "rugcheck.xyz" in url:
@@ -970,6 +973,463 @@ class TestLoop(Env):
         self.assertEqual(git(self.state, "status", "--porcelain"), "")
 
 
+def row(mint="Apump", **kw):
+    """A dataset row that v-momentum would buy, with a gate pass from the same moment."""
+    r = {"t": 1000, "mint": mint, "symbol": mint[:4], "px": 1.0, "liq": 200_000, "mc": 1e6, "dex": "pumpswap",
+         "age_h": 100, "vol_h1": 1000, "vol_h24": 50_000, "buys_h1": 20, "sells_h1": 10, "buys_h24": 200,
+         "sells_h24": 100, "trades_h24": 300, "avg_trade": 166.0, "m5": 1, "h1": 5, "h6": 5, "h24": 20,
+         "eligible": True, "gate": {"at": 1000, "tried": 1000, "fails": [], "insider": 0.0}, "arms": []}
+    return {**r, **kw}
+
+
+EMPTY = {"cash": 10.0, "held": [], "recent": []}
+
+
+class TestPick(unittest.TestCase):
+    def m(self, name, rows, v=EMPTY, week=None):
+        r = mp.pick(name, rows, v, week)
+        return r and r["mint"]
+
+    def test_the_momentum_rule(self):
+        self.assertEqual(self.m("v-momentum", [row()]), "Apump")
+        for bad in ({"buys_h1": 10}, {"h1": 0}, {"h24": 0}, {"m5": 25}):
+            self.assertIsNone(self.m("v-momentum", [row(**bad)]), bad)
+
+    def test_no_coin_without_a_clean_recent_gate(self):
+        self.assertIsNone(self.m("v-momentum", [row(gate=None)]))
+        self.assertIsNone(self.m("v-momentum", [row(eligible=False)]))
+        self.assertIsNone(self.m("v-momentum", [row(gate={"at": 1000, "fails": ["x"]})]))
+        stale = 1000 + mp.GATE_TTL_H * 3600
+        self.assertIsNone(self.m("v-momentum", [row(t=stale)]))
+        self.assertEqual(self.m("v-momentum", [row(t=stale - 1)]), "Apump")
+
+    def test_book_limits(self):
+        self.assertIsNone(self.m("v-momentum", [row()], {**EMPTY, "cash": mp.ARM_CASH_FLOOR}))
+        self.assertIsNone(self.m("v-momentum", [row()], {**EMPTY, "held": list("abcdef")}))
+        self.assertEqual(self.m("v-momentum", [row()], {**EMPTY, "held": list("abcde")}), "Apump")
+        self.assertIsNone(self.m("v-momentum", [row()], {**EMPTY, "held": ["Apump"]}))
+        self.assertIsNone(self.m("v-momentum", [row()], {**EMPTY, "recent": ["Apump"]}))
+
+    def test_rank_decides_and_ties_are_stable(self):
+        a, b = row("Apump", vol_h24=1, avg_trade=9), row("Bpump", vol_h24=9, avg_trade=1)
+        self.assertEqual(self.m("v-momentum", [a, b]), "Bpump")
+        self.assertEqual(self.m("v-velocity", [a, b]), "Apump")
+        self.assertEqual(self.m("v-momentum", [row("Apump"), row("Bpump")]), self.m("v-momentum", [row("Bpump"), row("Apump")]))
+
+    def test_no_spike(self):
+        self.assertEqual(self.m("v-no-spike", [row(h24=150)]), "Apump")
+        self.assertIsNone(self.m("v-no-spike", [row(h24=151)]))
+
+    def test_mature_ignores_momentum_and_ranks_by_liquidity(self):
+        down = {"buys_h1": 0, "h1": -5, "h24": -5}
+        self.assertEqual(self.m("v-mature", [row(age_h=72, liq=150_000, **down)]), "Apump")
+        self.assertIsNone(self.m("v-mature", [row(age_h=71, liq=150_000)]))
+        self.assertIsNone(self.m("v-mature", [row(age_h=72, liq=149_999)]))
+        self.assertEqual(self.m("v-mature", [row("Apump", liq=9e5, vol_h24=1), row("Bpump", liq=2e5, vol_h24=9)]), "Apump")
+
+    def test_low_bundle(self):
+        g = {"at": 1000, "fails": []}
+        self.assertEqual(self.m("v-low-bundle", [row(gate={**g, "insider": 0.05})]), "Apump")
+        self.assertIsNone(self.m("v-low-bundle", [row(gate={**g, "insider": 0.06})]))
+        self.assertIsNone(self.m("v-low-bundle", [row(gate=g)]))  # no measurement is not a low one
+
+    def test_dip_needs_a_week_of_history(self):
+        d = {"px": 1.0, "h24": -25, "h1": -3}
+        self.assertIsNone(self.m("v-dip", [row(**d)]))
+        self.assertEqual(self.m("v-dip", [row(**d)], week={"Apump": 0.5}), "Apump")
+        self.assertIsNone(self.m("v-dip", [row(**d)], week={"Apump": 2.0}))  # not up on the week
+        for h in (-14, -36):
+            self.assertIsNone(self.m("v-dip", [row(px=1.0, h24=h)], week={"Apump": 0.5}), h)
+        self.assertIsNone(self.m("v-dip", [row(buys_h1=1, **d)], week={"Apump": 0.5}))
+
+    def test_exit_settings_differ_only_where_named(self):
+        self.assertEqual((mp.VARIANTS["v-tight"]["stop"], mp.VARIANTS["v-tight"]["tp1"]), (-0.20, 0.40))
+        self.assertEqual((mp.VARIANTS["v-loose"]["stop"], mp.VARIANTS["v-loose"]["tp1"]), (-0.40, 1.50))
+        self.assertEqual(sum("stop" in a for a in mp.VARIANTS.values()), 2)
+
+
+class CycleEnv(Env):
+    def setUp(self):
+        super().setUp()
+        self.state = os.path.join(self.tmp.name, "state")
+        mp.use_state(self.state)
+        self.market, self.rc, self.search = {}, {}, {}
+
+    def coin(self, mint, px=1.0, listed=True, **kw):
+        self.add_fake(mint, px)
+        self.market[mint].update({"pairCreatedAt": (self.t - 100 * 3600) * 1000,
+                                  "txns": {"h1": {"buys": 20, "sells": 10}, "h24": {"buys": 200, "sells": 100}},
+                                  "volume": {"h1": 1000, "h24": 50_000},
+                                  "priceChange": {"m5": 1, "h1": 5, "h6": 5, "h24": 20}, **kw})
+        if listed:
+            self.listed.append(mint)
+
+    def book(self, name):
+        return mp.load(os.path.join(mp.BOOKS, name + ".json"))
+
+    def rows(self):
+        return [x for x in mp.read_day(self.day()) if "mint" in x]
+
+    def day(self):
+        return datetime.datetime.fromtimestamp(self.t, datetime.timezone.utc).strftime("%Y-%m-%d")
+
+    def cycle(self):
+        return self.run_quiet(mp.cycle)
+
+
+class TestCycle(CycleEnv):
+    def test_lists_keep_solana_pump_mints_only(self):
+        urls = {"token-profiles": [{"chainId": "solana", "tokenAddress": "Apump"}, {"chainId": "base", "tokenAddress": "Bpump"},
+                                   {"chainId": "solana", "tokenAddress": "Cxyz"}],
+                "token-boosts": [{"chainId": "solana", "tokenAddress": "Apump"}, {"chainId": "solana", "tokenAddress": "Dpump"}]}
+        with mock.patch.object(mp, "get", lambda u: next(v for k, v in urls.items() if k in u)):
+            self.assertEqual(mp.candidates(), ["Apump", "Dpump"])
+
+    def test_one_list_down_is_fine_both_is_not(self):
+        self.listed = ["Apump"]
+        self.fail_urls = ["token-boosts"]
+        self.assertEqual(mp.candidates(), ["Apump"])
+        self.fail_urls = ["token-boosts", "token-profiles"]
+        with self.assertRaises(subprocess.CalledProcessError):
+            mp.candidates()
+
+    def test_arms_buy_and_the_dataset_records_it(self):
+        self.coin("Apump")
+        self.assertEqual(self.cycle(), 1)
+        for name in ("v-momentum", "v-no-spike", "v-mature", "v-tight", "v-loose", "v-low-bundle", "v-velocity"):
+            bk = self.book(name)
+            self.assertEqual(list(bk["positions"]), ["Apump"], name)
+            self.assertEqual(bk["positions"]["Apump"]["cost_sol"], mp.MAX_POS_SOL)
+            self.assertEqual(bk["positions"]["Apump"]["v"], 2)
+        self.assertEqual(self.book("v-dip")["positions"], {})
+        self.assertEqual(self.book("v-tight")["positions"]["Apump"]["stop"], -0.20)
+        self.assertEqual(self.book("v-loose")["positions"]["Apump"]["tp1"], 1.5)
+        self.assertEqual(self.book("v-momentum")["positions"]["Apump"]["stop"], -0.35)
+        r, = self.rows()
+        self.assertEqual(r["gate"]["fails"], [])
+        self.assertEqual(len(r["arms"]), 7)
+        self.assertEqual((r["vol_h24"], r["buys_h1"], r["avg_trade"]), (50_000, 20, 166.67))
+
+    def test_arms_never_touch_the_picks_or_control(self):
+        self.coin("Apump")
+        self.cycle()
+        self.assertEqual(mp.load()["positions"], {})
+        self.assertEqual(mp.load(mp.CONTROL)["positions"], {})
+        self.assertEqual(mp.load()["cash_sol"], mp.START_SOL)
+
+    def test_gate_results_reach_the_picks_book(self):
+        self.coin("Apump")
+        self.coin("Bpump")
+        self.rc["Bpump"]["mintAuthority"] = "someone"
+        self.cycle()
+        b = mp.load()
+        self.assertIn("Apump", b["gate_pass"])
+        self.assertIn("Apump", b["passes"])
+        self.assertIn("Bpump", b["rejects"])
+        self.assertNotIn("Bpump", self.book("v-momentum")["positions"])
+
+    def test_universe_rule(self):
+        self.coin("Youngpump", pairCreatedAt=(self.t - 5 * 3600) * 1000)
+        self.coin("Thinpump", liquidity={"usd": mp.UNIVERSE_MIN_LIQ - 1})
+        self.coin("Apump")
+        self.listed = ["Youngpump", "Thinpump", "Apump"]
+        seen = []
+        real = mp.gate_one
+        with mock.patch.object(mp, "gate_one", lambda m, p, i=None: seen.append(m) or real(m, p, i)):
+            self.cycle()
+        self.assertEqual(seen, ["Apump"])
+        self.assertEqual([r["mint"] for r in self.rows()], ["Apump"])
+
+    def test_a_coin_that_qualified_stays_in_the_data_after_it_collapses(self):
+        self.coin("Apump")
+        self.cycle()
+        self.listed = []
+        self.t += 3600
+        self.price("Apump", 0.1, liq=5_000)
+        self.cycle()
+        rows = self.rows()
+        self.assertEqual(len(rows), 2)
+        self.assertFalse(rows[1]["eligible"])
+
+    def test_a_coin_that_never_qualified_leaves_after_a_day(self):
+        self.coin("Youngpump", pairCreatedAt=self.t * 1000)
+        self.cycle()
+        self.listed = []
+        self.t += mp.WATCH_FRESH_H * 3600 - 60
+        self.market["Youngpump"]["pairCreatedAt"] = self.t * 1000
+        self.cycle()
+        self.assertIn("Youngpump", json.load(open(os.path.join(self.state, "watch.json"))))
+        self.t += 120
+        self.cycle()
+        self.assertNotIn("Youngpump", json.load(open(os.path.join(self.state, "watch.json"))))
+
+    def test_a_qualified_coin_leaves_after_watch_days(self):
+        self.coin("Apump")
+        self.cycle()
+        self.listed = []
+        self.price("Apump", 1.0, liq=5_000)
+        self.t += mp.WATCH_DAYS * 86400 - 60
+        self.cycle()
+        self.assertIn("Apump", json.load(open(os.path.join(self.state, "watch.json"))))
+        self.t += 120
+        self.cycle()
+        self.assertNotIn("Apump", json.load(open(os.path.join(self.state, "watch.json"))))
+
+    def test_a_coin_still_qualifying_stays_with_no_listing(self):
+        self.coin("Apump")
+        self.cycle()
+        self.listed = []
+        for _ in range(3):
+            self.t += mp.WATCH_DAYS * 86400 / 2
+            self.cycle()
+        self.assertIn("Apump", json.load(open(os.path.join(self.state, "watch.json"))))
+
+    def test_the_cap_drops_unqualified_coins_first(self):
+        self.coin("Apump")
+        self.cycle()
+        self.listed = ["New1pump", "New2pump"]
+        self.t += 60
+        for m in self.listed:
+            self.market[m] = fake_pair(m, 1.0, liq=100)
+        with mock.patch.object(mp, "WATCH_MAX", 2):
+            self.cycle()
+        self.assertIn("Apump", json.load(open(os.path.join(self.state, "watch.json"))))
+
+    def test_pair_with_no_price_is_skipped(self):
+        self.coin("Apump")
+        self.coin("Bpump")
+        del self.market["Bpump"]["priceUsd"]
+        self.assertEqual(self.cycle(), 1)
+
+    def test_gates_are_cached_for_an_hour(self):
+        self.coin("Apump")
+        seen = []
+        real = mp.gate_one
+        with mock.patch.object(mp, "gate_one", lambda m, p, i=None: seen.append(m) or real(m, p, i)):
+            self.cycle()
+            self.t += mp.GATE_REFRESH_MIN * 60 - 1
+            self.cycle()
+            self.assertEqual(len(seen), 1)
+            self.t += 1
+            self.cycle()
+            self.assertEqual(len(seen), 2)
+
+    def test_budget_stops_gating_and_the_rest_wait_their_turn(self):
+        for m in ("Apump", "Bpump", "Cpump"):
+            self.coin(m)
+        seen = []
+        real = mp.gate_one
+
+        def slow(m, p, i=None):
+            seen.append(m)
+            self.t += mp.CYCLE_BUDGET_S
+            return real(m, p, i)
+        with mock.patch.object(mp, "gate_one", slow):
+            self.cycle()
+            self.assertEqual(len(seen), 1)
+            self.cycle()
+            self.assertEqual(len(set(seen)), 2)
+            self.cycle()
+        self.assertEqual(set(seen), {"Apump", "Bpump", "Cpump"})
+
+    def test_the_longest_wait_is_gated_first(self):
+        self.coin("Apump")
+        self.cycle()
+        self.t += mp.GATE_REFRESH_MIN * 60
+        self.coin("Bpump")
+        seen = []
+        real = mp.gate_one
+
+        def slow(m, p, i=None):
+            seen.append(m)
+            self.t += mp.CYCLE_BUDGET_S
+            return real(m, p, i)
+        with mock.patch.object(mp, "gate_one", slow):
+            self.cycle()
+        self.assertEqual(seen, ["Bpump"])
+
+    def test_an_outage_is_not_a_verdict(self):
+        self.coin("Apump")
+        self.fail_urls = ["rugcheck.xyz"]
+        self.cycle()
+        b = mp.load()
+        self.assertEqual((b["rejects"], b["passes"]), ({}, {}))
+        self.assertEqual(self.book("v-momentum")["positions"], {})
+        self.fail_urls = ["/latest/dex/search"]
+        self.t += mp.GATE_REFRESH_MIN * 60
+        self.cycle()
+        self.assertEqual(mp.load()["rejects"], {})
+        self.fail_urls = []
+        self.t += mp.GATE_REFRESH_MIN * 60
+        self.cycle()
+        self.assertIn("Apump", self.book("v-momentum")["positions"])
+
+    def test_an_outage_keeps_the_last_pass(self):
+        self.coin("Apump")
+        self.cycle()
+        self.fail_urls = ["rugcheck.xyz"]
+        self.t += mp.GATE_REFRESH_MIN * 60
+        self.cycle()
+        g = json.load(open(os.path.join(self.state, "gate.json")))["Apump"]
+        self.assertEqual(g["fails"], [])
+        self.assertEqual(g["tried"], round(self.t))
+
+    def test_gating_stops_after_repeated_outages(self):
+        for m in ("Apump", "Bpump", "Cpump", "Dpump", "Epump"):
+            self.coin(m)
+        self.fail_urls = ["rugcheck.xyz"]
+        seen = []
+        real = mp.gate_one
+        with mock.patch.object(mp, "gate_one", lambda m, p, i=None: seen.append(m) or real(m, p, i)):
+            self.cycle()
+        self.assertEqual(len(seen), mp.GATE_STOP_AFTER)
+
+    def test_arm_cooldown_after_a_close(self):
+        self.coin("Apump")
+        self.cycle()
+        self.price("Apump", 0.3)
+        self.run_quiet(mp.mark, True)
+        self.assertEqual(self.book("v-momentum")["positions"], {})
+        self.price("Apump", 1.0)
+        self.t += mp.GATE_REFRESH_MIN * 60
+        self.cycle()
+        self.assertEqual(self.book("v-momentum")["positions"], {})
+
+    def test_arms_get_the_same_exits(self):
+        self.coin("Apump")
+        self.cycle()
+        self.price("Apump", 0.75)
+        self.run_quiet(mp.mark, True)
+        self.assertEqual(self.book("v-tight")["positions"], {})  # -25% is under its -20% stop
+        self.assertIn("Apump", self.book("v-momentum")["positions"])
+
+    def test_one_entry_per_arm_per_cycle(self):
+        for m in ("Apump", "Bpump"):
+            self.coin(m)
+        self.cycle()
+        self.assertEqual(len(self.book("v-momentum")["positions"]), 1)
+        self.t += 60
+        self.cycle()
+        self.assertEqual(len(self.book("v-momentum")["positions"]), 2)
+
+    def test_week_ago_feeds_the_dip_arm(self):
+        self.coin("Apump", px=0.5)
+        self.cycle()
+        self.t += 7 * 86400
+        self.market["Apump"].update({"priceUsd": "1.0", "priceChange": {"m5": 0, "h1": -3, "h6": -9, "h24": -25}})
+        self.listed = ["Apump"]
+        self.cycle()
+        self.assertIn("Apump", self.book("v-dip")["positions"])
+        self.assertEqual(self.run_quiet(mp.replay, self.day()), [])  # the week's prices are in the dataset
+
+    def test_old_days_are_gzipped_and_still_readable(self):
+        self.coin("Apump")
+        self.cycle()
+        first = self.day()
+        self.t += 86400
+        self.cycle()
+        d = os.path.join(self.state, "data")
+        self.assertEqual(sorted(os.listdir(d)), [first + ".jsonl.gz", self.day() + ".jsonl"])
+        self.assertEqual(len([x for x in mp.read_day(first) if "mint" in x]), 1)
+
+    def test_replay_matches_live(self):
+        for m, v in (("Apump", 9), ("Bpump", 5), ("Cpump", 1)):
+            self.coin(m, volume={"h24": v})
+        self.cycle()
+        self.t += 900
+        self.cycle()
+        self.t += 900
+        self.cycle()
+        self.assertEqual(self.run_quiet(mp.replay, self.day()), [])
+        self.assertIn("replayed 24", self.out.getvalue())
+
+    def test_replay_catches_a_changed_row(self):
+        self.coin("Apump")
+        self.cycle()
+        path = mp._data_path(self.t)
+        lines = [json.loads(x) for x in open(path)]
+        lines[1]["h24"] = -5
+        with open(path, "w") as f:
+            f.write("".join(json.dumps(x) + "\n" for x in lines))
+        self.assertTrue(self.run_quiet(mp.replay, self.day()))
+
+    def test_report_lists_the_arms(self):
+        self.coin("Apump")
+        self.cycle()
+        self.price("Apump", 2.0)
+        self.run_quiet(mp.mark, True)
+        rep = open(mp.REPORT).read()
+        self.assertIn("## Mechanical arms", rep)
+        self.assertIn("| v-momentum | 0 | 0 | 1 |", rep)
+        self.assertNotIn("{arms_md}", rep)
+
+    def test_no_arms_table_in_legacy_mode(self):
+        with mock.patch.object(mp, "BOOKS", None):
+            self.run_quiet(mp.mark, True)
+        self.assertNotIn("Mechanical arms", open(mp.REPORT).read())
+
+
+class TestCycleInLoop(CycleEnv):
+    """The loop's scheduling of cycles."""
+
+    def setUp(self):
+        super().setUp()
+        self.alerts = []
+        self.p_notify = mock.patch.object(mp, "notify", lambda *a, **k: self.alerts.append(a))
+        self.p_notify.start()
+        self.h = {}
+
+    def tearDown(self):
+        self.p_notify.stop()
+        super().tearDown()
+
+    def once(self):
+        return self.run_quiet(mp.loop_once, self.h)
+
+    def test_runs_every_15_minutes(self):
+        n = []
+        with mock.patch.object(mp, "cycle", lambda: n.append(1) or 0):
+            self.once()
+            self.t += mp.CYCLE_MIN * 60 - 1
+            self.once()
+            self.assertEqual(len(n), 1)
+            self.t += 1
+            self.once()
+        self.assertEqual(len(n), 2)
+
+    def test_a_cycle_makes_the_tick_material(self):
+        self.assertTrue(self.once())
+        self.assertFalse(self.once())
+
+    def test_failed_cycles_leave_the_ticks_alone_and_alert_once(self):
+        self.fail_urls = ["token-profiles", "token-boosts"]
+        self.hold("A")
+        self.price("A", 0.5)
+        for _ in range(mp.ERRORS_ALERT + 2):
+            self.once()
+        self.assertEqual(self.h["errors_in_a_row"], 0)
+        self.assertEqual(self.h["cycle_errors"], mp.ERRORS_ALERT + 2)
+        self.assertEqual(mp.load()["positions"], {})
+        self.assertEqual([a[0] for a in self.alerts].count("memepaper: snapshots failing"), 1)
+        self.fail_urls = []
+        self.once()
+        self.assertEqual(self.h["cycle_errors"], 0)
+
+    def test_arm_trades_do_not_ping_the_phone(self):
+        self.coin("Apump")
+        self.once()
+        self.assertTrue(self.book("v-momentum")["positions"])
+        self.assertEqual(self.alerts, [])
+
+    def test_no_cycle_after_a_failed_tick(self):
+        def down():
+            raise RuntimeError("no SOL price")
+        n = []
+        with mock.patch.object(mp, "sol_usd", down), mock.patch.object(mp, "cycle", lambda: n.append(1) or 0):
+            self.once()
+        self.assertEqual(n, [])
+
+
 class TestCutover(Env):
     """order.sh and mirror.sh against a real git remote with `main` and `state` branches."""
 
@@ -1111,6 +1571,11 @@ class TestRulesText(unittest.TestCase):
         self.assertIn("No wallet, no keys, no real orders", t)
         self.assertIn("event exit", t)
         self.assertIn("30 minutes", t)
+
+    def test_every_arm_is_documented(self):
+        t = open(os.path.join(os.path.dirname(FIX), "..", "CLAUDE.md")).read()
+        for name in mp.VARIANTS:
+            self.assertIn(f"`{name}`", t)
 
 
 if __name__ == "__main__":
