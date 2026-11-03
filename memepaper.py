@@ -275,17 +275,19 @@ def buy(mint, sol, thesis, stop=-0.35, tp1=1.0):
         sys.exit(f"no gate pass in the last {GATE_TTL_H}h: run `gate {mint}` first")
     su = sol_usd()
     c = load(CONTROL)
-    free = [m for m in pool if m not in c["positions"]]
+    # The control never draws the pick itself (from 2026-11-03): a control on the same coin
+    # copies the pick's result and tells the review nothing.
+    free = [m for m in pool if m != mint and m not in c["positions"]]
     ctl = random.SystemRandom().choice(free) if free else None
-    ps = pairs([mint] + ([ctl] if ctl and ctl != mint else []))
+    ps = pairs([mint] + ([ctl] if ctl else []))
     _open(b, mint, sol, thesis, stop, tp1, ps[mint], su)
     save(b)
     # Control arm: same size and exits, on a coin drawn at random from the same gate passes.
     if ctl and ctl in ps:
-        _open(c, ctl, sol, f"control for {ps[mint]['baseToken']['symbol']}: random pick from {len(pool)} gate passes", stop, tp1, ps[ctl], su)
+        _open(c, ctl, sol, f"control for {ps[mint]['baseToken']['symbol']}: random pick from {len(free)} other gate passes", stop, tp1, ps[ctl], su)
         save(c, CONTROL)
     else:
-        print("no control entry: every gate pass is already held in the control book")
+        print("no control entry: no other unheld gate pass to draw from")
 
 
 def _sell(b, mint, frac, reason, p, su):

@@ -62,7 +62,7 @@ Size **0.25 SOL** (the script caps it). Steps:
    across open positions. If the theme is in DexScreener's top narratives
    (`https://api.dexscreener.com/metas/trending/v1`), say so in the thesis; it isn't required.
 5. `buy` refuses a coin without a gate pass from the last 2 hours, and opens the control position by
-   itself.
+   itself on a different gate pass (never the pick). If your pick is the only pass, it gets no control.
 No buy is a fine outcome. Cash is a position.
 
 ## What not to do (from the research)
