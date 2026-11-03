@@ -1089,7 +1089,10 @@ class TestWorkflows(unittest.TestCase):
         self.assertIn("group: hot-loop", w)
         self.assertIn("cancel-in-progress: false", w)  # queue the next run, never kill a running one
         self.assertIn('cron: "*/30 * * * *"', w)
-        self.assertIn("--minutes 55", w)  # longer than the 30-minute cron, so one is always queued
+        self.assertIn("--minutes 55", w)
+        self.assertIn("actions: write", w)
+        self.assertEqual(w.count("run: $NEXT_RUN"), 2)  # each run starts the next: cron can't be relied on
+        self.assertIn("if: always()", w)
         self.assertIn("timeout-minutes: 70", w)
         self.assertIn("secrets.NTFY_TOPIC", w)
         self.assertNotIn("run: echo", w)

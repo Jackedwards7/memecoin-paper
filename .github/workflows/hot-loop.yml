@@ -1,7 +1,9 @@
-# The always-on hot loop (Tier 1 phase 2). Each run ticks every 60 s for 55 minutes. A run is
-# started every 30 minutes and the concurrency group queues it behind the one running, so one is
-# always waiting when the last ends. Books live on the `state` branch and this job is their only
-# writer. Paper only: public prices, no wallet, no keys. The one secret is the ntfy topic.
+# The always-on hot loop (Tier 1 phase 2). Each run ticks every 60 s for 55 minutes. Each run
+# starts its own successor, first thing and again at the end, and the concurrency group holds it
+# until this one ends, so one is always waiting. GitHub's cron is only the backup: on 2026-11-03 it
+# fired zero times in the first hour. To stop the chain, disable the workflow first. Books live on
+# the `state` branch and this job is their only writer. Paper only: public prices, no wallet, no
+# keys. The one secret is the ntfy topic.
 name: hot loop
 on:
   schedule:
@@ -12,11 +14,18 @@ concurrency:
   cancel-in-progress: false
 permissions:
   contents: write
+  actions: write  # to start the next run
 jobs:
   loop:
     runs-on: ubuntu-latest
     timeout-minutes: 70
+    env:
+      GH_TOKEN: ${{ github.token }}
+      NEXT_RUN: gh workflow run hot-loop.yml --ref main -R ${{ github.repository }}
     steps:
+      - name: Queue the next run
+        continue-on-error: true  # the end of this run tries again, and the cron backs it up
+        run: $NEXT_RUN
       - uses: actions/checkout@v4
       - name: Check out the state branch
         run: |
@@ -34,3 +43,6 @@ jobs:
           MEMEPAPER_SHADOW: ${{ vars.MEMEPAPER_SHADOW }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: python3 -I memepaper.py loop --minutes 55 --every 60
+      - name: Queue the next run again, on the code as it is now
+        if: always()
+        run: $NEXT_RUN
