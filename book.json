@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.786302326415858,
+  "cash_sol": 7.536302326415858,
   "positions": {
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
       "symbol": "GATO",
@@ -57,6 +57,28 @@
       "realised_sol": 0.0,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/5byl7mzolabynwmpzkpkjf4mgkz7febzranos19pre2z",
+      "misses": 0
+    },
+    "4nuj5NLHMtQSezfmz6CwBpCRJisFie6F6MxNNz1dpump": {
+      "symbol": "Ahsoka",
+      "opened": "2026-11-03 16:15 UTC",
+      "cost_sol": 0.25,
+      "tokens": 21984.609029880616,
+      "entry_px": 0.0010452789935343593,
+      "entry_mc": 1032979,
+      "peak_px": 0.0010452789935343593,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "Ahsoka: 26h coin, $1.0M cap, liq $87k, gate pass; 1h +10.8%, 24h +35%, 5m +6.4% (not a spike); 1h buys 532 vs sells 641 (slightly negative); only gate pass with positive 1h/24h; thin liquidity noted",
+      "rugcheck": 31,
+      "risks": [
+        "High holder correlation"
+      ],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/hpymxw5bzvks2lphuzljxwemyrpu7uu3vfqq3o5abzdj",
+      "v": 2,
       "misses": 0
     }
   },
@@ -170,13 +192,13 @@
     "2026-11-02 23:46 UTC SELL 50% GATO -> 0.610 SOL @ $0.01413: take-profit at +62%: half sold, cost recovered",
     "2026-11-03 00:14 UTC BUY WASTED 0.50 SOL @ $0.0013745757 (mc $1,348,715): WASTED: 78h coin, liq 110k, 1h buys 911>683, 1h +6.8% and 24h +215%, 5m +10.9% (<25%), RugCheck no risks, LP 98.8% locked; distinct theme",
     "2026-11-03 00:28 UTC SELL 100% WASTED -> 0.306 SOL @ $0.0008665: stop-loss at -37%",
-    "2026-11-03 04:22 UTC SELL 100% CHOO -> 0.518 SOL @ $0.001389: stop-loss at -31%"
+    "2026-11-03 04:22 UTC SELL 100% CHOO -> 0.518 SOL @ $0.001389: stop-loss at -31%",
+    "2026-11-03 16:15 UTC BUY Ahsoka 0.25 SOL @ $0.001045279 (mc $1,032,979): Ahsoka: 26h coin, $1.0M cap, liq $87k, gate pass; 1h +10.8%, 24h +35%, 5m +6.4% (not a spike); 1h buys 532 vs sells 641 (slightly negative); only gate pass with positive 1h/24h; thin liquidity noted"
   ],
-  "last_mark": "2026-11-03 12:18 UTC",
+  "last_mark": "2026-11-03 16:15 UTC",
   "gate_pass": {
-    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1793708326.388025,
-    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1793708326.388025,
-    "31SYoqWFhx3i9UsfnoXTjFp4ZwJA8F8UPrMxymfDpump": 1793708326.388025
+    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1793722528.6784072,
+    "4nuj5NLHMtQSezfmz6CwBpCRJisFie6F6MxNNz1dpump": 1793722528.6784072
   },
   "rejects": {
     "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
@@ -212,6 +234,15 @@
       "px": 0.001411,
       "fails": [
         "RugCheck danger: Low Liquidity"
+      ],
+      "moves": {}
+    },
+    "nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump": {
+      "symbol": "Dacity",
+      "at": 1793722528.6784072,
+      "px": 0.006966,
+      "fails": [
+        "deepest pool is meteoraDlmm, not a graduation pool"
       ],
       "moves": {}
     }

@@ -1,10 +1,35 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 10.0,
-  "positions": {},
+  "cash_sol": 9.75,
+  "positions": {
+    "4nuj5NLHMtQSezfmz6CwBpCRJisFie6F6MxNNz1dpump": {
+      "symbol": "Ahsoka",
+      "opened": "2026-11-03 16:15 UTC",
+      "cost_sol": 0.25,
+      "tokens": 21984.609029880616,
+      "entry_px": 0.0010452789935343593,
+      "entry_mc": 1032979,
+      "peak_px": 0.0010452789935343593,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "control for Ahsoka: random pick from 2 gate passes",
+      "rugcheck": 31,
+      "risks": [
+        "High holder correlation"
+      ],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/hpymxw5bzvks2lphuzljxwemyrpu7uu3vfqq3o5abzdj",
+      "v": 2,
+      "misses": 0
+    }
+  },
   "closed": [],
-  "log": [],
+  "log": [
+    "2026-11-03 16:15 UTC BUY Ahsoka 0.25 SOL @ $0.001045279 (mc $1,032,979): control for Ahsoka: random pick from 2 gate passes"
+  ],
   "gate_pass": {},
   "rejects": {},
-  "last_mark": "2026-11-03 12:18 UTC"
+  "last_mark": "2026-11-03 16:15 UTC"
 }
