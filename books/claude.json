@@ -201,7 +201,7 @@
     "2026-11-03 16:15 UTC BUY Ahsoka 0.25 SOL @ $0.001045279 (mc $1,032,979): Ahsoka: 26h coin, $1.0M cap, liq $87k, gate pass; 1h +10.8%, 24h +35%, 5m +6.4% (not a spike); 1h buys 532 vs sells 641 (slightly negative); only gate pass with positive 1h/24h; thin liquidity noted",
     "2026-11-03 19:30 UTC SELL 100% Ahsoka -> 0.158 SOL @ $0.0006786: stop-loss at -35%"
   ],
-  "last_mark": "2026-11-03 23:44 UTC",
+  "last_mark": "2026-11-03 23:54 UTC",
   "gate_pass": {
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1793722528.6784072,
     "4nuj5NLHMtQSezfmz6CwBpCRJisFie6F6MxNNz1dpump": 1793722528.6784072
