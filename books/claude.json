@@ -1,0 +1,256 @@
+{
+  "start_sol": 10.0,
+  "cash_sol": 7.693906511788961,
+  "positions": {
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "opened": "2026-11-02 05:44 UTC",
+      "cost_sol": 0.75,
+      "tokens": 4018.7044293403133,
+      "entry_px": 0.008741086677968597,
+      "entry_mc": 8625571,
+      "peak_px": 0.01446,
+      "stop": -0.25,
+      "tp1": 0.6,
+      "tp1_done": true,
+      "thesis": "Mature 68-day coin, $8.7M cap, deepest pool on the board, 96% LP locked; +38% 24h",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.6102763900779642,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/5e3dxlxgwmtdcoka51wyyakttjfzbwqcoyuhbui5gt2m",
+      "misses": 0
+    },
+    "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
+      "symbol": "CBUCKS",
+      "opened": "2026-11-02 08:30 UTC",
+      "cost_sol": 0.5,
+      "tokens": 24358.930789027894,
+      "entry_px": 0.001909615323549115,
+      "entry_mc": 1799967,
+      "peak_px": 0.002064,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "CBUCKS: 26-day coin, $1.8M cap, liq $146k, 1h buys 28>20, 1h +2% and 24h +48%, RugCheck no risks, LP 99.99% locked; distinct theme; modest volume noted",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/b4cp45pgifvm5faxfh6aev8qz3eunqnqgbw7kuc7mhnb",
+      "misses": 0
+    },
+    "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": {
+      "symbol": "three",
+      "opened": "2026-11-02 17:24 UTC",
+      "cost_sol": 0.5,
+      "tokens": 99101.8282488034,
+      "entry_px": 0.0004622530765526329,
+      "entry_mc": 461979,
+      "peak_px": 0.0005386,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "three: 187-day coin, liq $140k, 1h buys 450>179, 1h +3% and 24h +2%, 5m flat, RugCheck no risks, LP 96% locked; distinct theme",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/5byl7mzolabynwmpzkpkjf4mgkz7febzranos19pre2z",
+      "misses": 0
+    }
+  },
+  "closed": [
+    {
+      "symbol": "ANAKIN",
+      "opened": "2026-11-02 05:44 UTC",
+      "cost_sol": 0.5,
+      "tokens": 0.0,
+      "entry_px": 0.003080949212180219,
+      "entry_mc": 3066672,
+      "peak_px": 0.005622,
+      "stop": -0.3,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "Momentum: 7h old, +5,969% 24h, 2:1 buys/sells, $138k/h volume; small size because it is vertical and has an 11-wallet bundle (~0.9% supply)",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.3239472232968512,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/hcgpz2exv8sfcmvq9fjpbd71brljvzutd2avvv86gwbk",
+      "misses": 0,
+      "mint": "8s4bNqEztH1JP7mkU747uMr7AckCQdiV47FDqYnDpump",
+      "closed": "2026-11-02 15:45 UTC",
+      "pnl_sol": -0.17605277670314878,
+      "pnl_pct": -0.35210555340629757,
+      "exit_reason": "stop-loss at -34%"
+    },
+    {
+      "symbol": "Anakin",
+      "opened": "2026-11-02 05:44 UTC",
+      "cost_sol": 1.0,
+      "tokens": 0.0,
+      "entry_px": 0.0030567179019799153,
+      "entry_mc": 2905987,
+      "peak_px": 0.003824,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "Anakin narrative leader that has survived 3 days; +15% 1h, buys > sells, no wallet above ~3% of supply",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.5274587787986506,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/hja61kefsawrt3dw9p15mlh6u5maqgzgbe51ngg7bytt",
+      "misses": 0,
+      "mint": "ExxzYBTt3jwU5MUxuw2F4toYbTLdFwThSjyaCn6Xpump",
+      "closed": "2026-11-02 17:23 UTC",
+      "pnl_sol": -0.47254122120134945,
+      "pnl_pct": -0.47254122120134945,
+      "exit_reason": "stop-loss at -47%"
+    },
+    {
+      "symbol": "WASTED",
+      "opened": "2026-11-03 00:14 UTC",
+      "cost_sol": 0.5,
+      "tokens": 0.0,
+      "entry_px": 0.0013745756524645085,
+      "entry_mc": 1348715,
+      "peak_px": 0.0013745756524645085,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "WASTED: 78h coin, liq 110k, 1h buys 911>683, 1h +6.8% and 24h +215%, 5m +10.9% (<25%), RugCheck no risks, LP 98.8% locked; distinct theme",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.30639083767558084,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/tt7dks9yjjzj1fwmgopmkbmdrezzymamrhodcgdfwqn",
+      "misses": 0,
+      "mint": "GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump",
+      "closed": "2026-11-03 00:28 UTC",
+      "pnl_sol": -0.19360916232441916,
+      "pnl_pct": -0.3872183246488383,
+      "exit_reason": "stop-loss at -37%"
+    },
+    {
+      "symbol": "CHOO",
+      "opened": "2026-11-02 05:44 UTC",
+      "cost_sol": 0.75,
+      "tokens": 0.0,
+      "entry_px": 0.0020130431501173603,
+      "entry_mc": 1989964,
+      "peak_px": 0.002288,
+      "stop": -0.3,
+      "tp1": 0.8,
+      "tp1_done": false,
+      "thesis": "11-day runner, +123% 24h with buys > sells, holders spread, 72% LP locked",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.5182290965668107,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/3ung5b7czbspnmjfrzzznyqvpk8q3lerr6baynfohdfz",
+      "misses": 0,
+      "mint": "EJAxERvKU4kEVXn3NarjvRtgaMaJyP9ZuMeKA7JJpump",
+      "closed": "2026-11-03 04:22 UTC",
+      "pnl_sol": -0.2317709034331893,
+      "pnl_pct": -0.3090278712442524,
+      "exit_reason": "stop-loss at -31%"
+    },
+    {
+      "symbol": "Ahsoka",
+      "opened": "2026-11-03 16:15 UTC",
+      "cost_sol": 0.25,
+      "tokens": 0.0,
+      "entry_px": 0.0010452789935343593,
+      "entry_mc": 1032979,
+      "peak_px": 0.0010452789935343593,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "Ahsoka: 26h coin, $1.0M cap, liq $87k, gate pass; 1h +10.8%, 24h +35%, 5m +6.4% (not a spike); 1h buys 532 vs sells 641 (slightly negative); only gate pass with positive 1h/24h; thin liquidity noted",
+      "rugcheck": 31,
+      "risks": [
+        "High holder correlation"
+      ],
+      "realised_sol": 0.1576041853731029,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/hpymxw5bzvks2lphuzljxwemyrpu7uu3vfqq3o5abzdj",
+      "v": 2,
+      "misses": 0,
+      "mint": "4nuj5NLHMtQSezfmz6CwBpCRJisFie6F6MxNNz1dpump",
+      "closed": "2026-11-03 19:30 UTC",
+      "pnl_sol": -0.09239581462689711,
+      "pnl_pct": -0.36958325850758844,
+      "exit_reason": "stop-loss at -35%"
+    }
+  ],
+  "log": [
+    "2026-11-02 05:44 UTC BUY Anakin 1.00 SOL @ $0.0030567179 (mc $2,905,987): Anakin narrative leader that has survived 3 days; +15% 1h, buys > sells, no wallet above ~3% of supply",
+    "2026-11-02 05:44 UTC BUY CHOO 0.75 SOL @ $0.0020130432 (mc $1,989,964): 11-day runner, +123% 24h with buys > sells, holders spread, 72% LP locked",
+    "2026-11-02 05:44 UTC BUY GATO 0.75 SOL @ $0.0087410867 (mc $8,625,571): Mature 68-day coin, $8.7M cap, deepest pool on the board, 96% LP locked; +38% 24h",
+    "2026-11-02 05:44 UTC BUY ANAKIN 0.50 SOL @ $0.0030809492 (mc $3,066,672): Momentum: 7h old, +5,969% 24h, 2:1 buys/sells, $138k/h volume; small size because it is vertical and has an 11-wallet bundle (~0.9% supply)",
+    "2026-11-02 08:30 UTC BUY CBUCKS 0.50 SOL @ $0.0019096153 (mc $1,799,967): CBUCKS: 26-day coin, $1.8M cap, liq $146k, 1h buys 28>20, 1h +2% and 24h +48%, RugCheck no risks, LP 99.99% locked; distinct theme; modest volume noted",
+    "2026-11-02 15:45 UTC SELL 100% ANAKIN -> 0.324 SOL @ $0.00203: stop-loss at -34%",
+    "2026-11-02 17:23 UTC SELL 100% Anakin -> 0.527 SOL @ $0.001619: stop-loss at -47%",
+    "2026-11-02 17:24 UTC BUY three 0.50 SOL @ $0.00046225308 (mc $461,979): three: 187-day coin, liq $140k, 1h buys 450>179, 1h +3% and 24h +2%, 5m flat, RugCheck no risks, LP 96% locked; distinct theme",
+    "2026-11-02 23:46 UTC SELL 50% GATO -> 0.610 SOL @ $0.01413: take-profit at +62%: half sold, cost recovered",
+    "2026-11-03 00:14 UTC BUY WASTED 0.50 SOL @ $0.0013745757 (mc $1,348,715): WASTED: 78h coin, liq 110k, 1h buys 911>683, 1h +6.8% and 24h +215%, 5m +10.9% (<25%), RugCheck no risks, LP 98.8% locked; distinct theme",
+    "2026-11-03 00:28 UTC SELL 100% WASTED -> 0.306 SOL @ $0.0008665: stop-loss at -37%",
+    "2026-11-03 04:22 UTC SELL 100% CHOO -> 0.518 SOL @ $0.001389: stop-loss at -31%",
+    "2026-11-03 16:15 UTC BUY Ahsoka 0.25 SOL @ $0.001045279 (mc $1,032,979): Ahsoka: 26h coin, $1.0M cap, liq $87k, gate pass; 1h +10.8%, 24h +35%, 5m +6.4% (not a spike); 1h buys 532 vs sells 641 (slightly negative); only gate pass with positive 1h/24h; thin liquidity noted",
+    "2026-11-03 19:30 UTC SELL 100% Ahsoka -> 0.158 SOL @ $0.0006786: stop-loss at -35%"
+  ],
+  "last_mark": "2026-11-03 19:30 UTC",
+  "gate_pass": {
+    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1793722528.6784072,
+    "4nuj5NLHMtQSezfmz6CwBpCRJisFie6F6MxNNz1dpump": 1793722528.6784072
+  },
+  "rejects": {
+    "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
+      "symbol": "GLITCH",
+      "at": 1793679254.8911457,
+      "px": 0.003906,
+      "fails": [
+        "copycat: an earlier 'Infinite Money Glitch' exists (znv3FZ)"
+      ],
+      "moves": {}
+    },
+    "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
+      "symbol": "CBUCKS",
+      "at": 1793679254.8911457,
+      "px": 0.001823,
+      "fails": [
+        "a wallet holds 15% of supply"
+      ],
+      "moves": {}
+    },
+    "GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump": {
+      "symbol": "WASTED",
+      "at": 1793679254.8911457,
+      "px": 0.0009925,
+      "fails": [
+        "copycat: an earlier 'WASTED' exists (FsjgzA)"
+      ],
+      "moves": {}
+    },
+    "8oUGdPdyxVaCSJSZpcVZuxqoyiZAmc2Z22FsDRZ3pump": {
+      "symbol": "Wanted",
+      "at": 1793693677.2540336,
+      "px": 0.001411,
+      "fails": [
+        "RugCheck danger: Low Liquidity"
+      ],
+      "moves": {}
+    },
+    "nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump": {
+      "symbol": "Dacity",
+      "at": 1793722528.6784072,
+      "px": 0.006966,
+      "fails": [
+        "deepest pool is meteoraDlmm, not a graduation pool"
+      ],
+      "moves": {}
+    }
+  }
+}
