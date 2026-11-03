@@ -10,12 +10,19 @@ DexScreener and RugCheck APIs and every fill is simulated.
   python3 -I memepaper.py sell <mint> <fraction 0-1> "<reason>"
   python3 -I memepaper.py mark        # reprice, apply stops/take-profits, write the .md
 
+State mode (Tier 1 phase 1; on when MEMEPAPER_STATE names a folder): books live in
+<state>/books/<arm>.json, and only `tick` changes them. `gate`, `buy` and `sell` then write order
+files to <state>/orders/ instead, and the next tick applies them in order. One writer per file.
+
+  python3 -I memepaper.py tick        # apply pending orders, then mark
+  python3 -I memepaper.py migrate <old repo dir> <state dir>   # one-time move of the books
+
 Rules v2 (from 2026-11-03, Jackson's call after the playbook research): every buy needs a gate
 pass from the last 2 hours, and each buy also opens a same-size position in control.json on a
 random coin from the same gate-pass pool. Gate failures are tracked as shadow rejects for 7 days.
 The review asks whether picks beat the control after costs.
 """
-import json, sys, time, subprocess, datetime, os, fcntl, random, urllib.parse
+import json, sys, time, subprocess, datetime, os, fcntl, random, urllib.parse, copy
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 BOOK = os.path.join(HERE, "book.json")
@@ -28,6 +35,12 @@ V2_START = "2026-11-03 01:30 UTC"  # rules v2 begin; positions opened before are
 REVIEW_DATE = "2026-11-30"  # judge v2 then, or after 30 closed v2 trades; rules frozen until then
 FEE = 0.015         # v2: PumpSwap pool fee 0.25-1.2% + terminal/priority 0.5-1%, each side (v1 used 1.25%)
 SLIP_K = 0.5        # extra slippage: size / liquidity * SLIP_K (rough constant-product impact)
+# Sandwich (MEV) charge per swap, from 2026-11-03 research: sandwiched swaps lose a median ~$5, and
+# memecoin terminal users are hit 14-21x their share of swaps. The share of our swaps that would be
+# sandwiched isn't measured; $0.50 assumes about 1 in 10 (a guess, labelled as one). The report also
+# shows P&L as if every swap were sandwiched at the median.
+SANDWICH_USD = 0.50
+SANDWICH_STRESS_USD = 5.0
 MAX_POS_SOL = 0.25  # v2: 2.5% of the starting book (practitioner sizing is 1-5% a play; v1 allowed 1 SOL)
 MAX_OPEN = 6        # open v2 positions; legacy v1 positions don't count
 GATE_TTL_H = 2      # a buy needs a gate pass this recent
@@ -43,6 +56,26 @@ TIME_STOP_H = 48          # flat this long without hitting the take-profit -> se
 TIME_STOP_MIN_GAIN = 0.20 # "flat" = less than +20% from entry
 MISSES_TO_ZERO = 3        # consecutive checks with no price before a coin counts as rugged
 LOCK = "/tmp/memepaper.lock"  # the 2-minute watcher and manual trades never write at once
+ORDERS = None             # state mode: the orders inbox folder. None = legacy mode (books beside the code)
+BOOKS = None              # state mode: the folder of arm books
+ORDER_TTL_MIN = 30        # a buy order older than this is refused: its prices and thesis are stale
+APPLIED_KEEP = 500        # order ids remembered in the claude book, so none is applied twice
+STOP_RANGE = (-0.5, -0.1) # an order's stop and take-profit must sit inside these
+TP1_RANGE = (0.2, 5.0)
+
+
+class Refused(Exception):
+    """A trade the rules don't allow. Legacy commands exit with it; ticks record it."""
+
+
+def use_state(d):
+    """Point every path at a state folder (the state branch's worktree)."""
+    global BOOK, CONTROL, REPORT, SOL_CACHE, ORDERS, BOOKS
+    BOOKS, ORDERS = os.path.join(d, "books"), os.path.join(d, "orders")
+    for x in (BOOKS, ORDERS, os.path.join(ORDERS, "done")):
+        os.makedirs(x, exist_ok=True)
+    BOOK, CONTROL = os.path.join(BOOKS, "claude.json"), os.path.join(BOOKS, "control.json")
+    REPORT, SOL_CACHE = os.path.join(d, "book.md"), os.path.join(d, ".sol_usd")
 
 
 def get(url):
@@ -112,11 +145,17 @@ def load(path=None):
         b = {"start_sol": START_SOL, "cash_sol": START_SOL, "positions": {}, "closed": [], "log": []}
     b.setdefault("gate_pass", {})
     b.setdefault("rejects", {})
+    b.setdefault("passes", {})
     return b
 
 
 def save(b, path=None):
-    json.dump(b, open(path or BOOK, "w"), indent=2)
+    """Write to a temp file and rename, so a crash never leaves half a book."""
+    path = path or BOOK
+    tmp = path + ".tmp"
+    with open(tmp, "w") as f:
+        json.dump(b, f, indent=2)
+    os.replace(tmp, path)
 
 
 def norm(s):
@@ -194,10 +233,9 @@ def gate_one(mint, p):
 def gate(mints):
     """Gate each mint. A pass is remembered for GATE_TTL_H hours (buy needs it, and the pool of
     passes is what the control arm draws from); a fail becomes a shadow reject, scored later."""
-    b = load()
     t = time.time()
-    b["gate_pass"] = {m: s for m, s in b["gate_pass"].items() if t - s < GATE_TTL_H * 3600}
     ps = pairs(mints)
+    results = {}
     for m in mints:
         p = ps.get(m)
         if not p:
@@ -205,16 +243,37 @@ def gate(mints):
             continue
         fails = gate_one(m, p)
         sym = p["baseToken"]["symbol"]
+        results[m] = {"symbol": sym, "px": float(p["priceUsd"]), "fails": fails}
         if fails:
-            b["gate_pass"].pop(m, None)
-            if m not in b["rejects"]:
-                b["rejects"][m] = {"symbol": sym, "at": t, "px": float(p["priceUsd"]), "fails": fails, "moves": {}}
             print(f"{sym[:10]:10} {m[:6]}  FAIL " + "; ".join(fails))
         else:
-            b["gate_pass"][m] = t
             warn = "  (warning: paid boost with no profile)" if p.get("boosts") and not p.get("info") else ""
             print(f"{sym[:10]:10} {m[:6]}  PASS{warn}")
+    if ORDERS:
+        o = write_order("gate", results=results)
+        print(f"queued {o['id']}: the next tick records these results")
+        return
+    b = load()
+    _ingest_gate(b, results, t)
     save(b)
+
+
+def _ingest_gate(b, results, t):
+    """Record gate results checked at time t: passes unlock buys for GATE_TTL_H hours, fails
+    revoke any pass and become shadow rejects."""
+    b["gate_pass"] = {m: s for m, s in b["gate_pass"].items() if time.time() - s < GATE_TTL_H * 3600}
+    for m, r in results.items():
+        if r["fails"]:
+            b["gate_pass"].pop(m, None)
+            if m not in b["rejects"]:
+                b["rejects"][m] = {"symbol": r["symbol"], "at": t, "px": r["px"], "fails": r["fails"], "moves": {}}
+        else:
+            # Shadow passes: scored like rejects, so the gate is judged on losses avoided
+            # (passes against rejects), not on whether any pick made money.
+            if m not in b["passes"] and m not in b["rejects"]:
+                b["passes"][m] = {"symbol": r["symbol"], "at": t, "px": r["px"], "fails": [], "moves": {}}
+            if time.time() - t < GATE_TTL_H * 3600:
+                b["gate_pass"][m] = max(t, b["gate_pass"].get(m, 0))
 
 
 def now():
@@ -251,42 +310,72 @@ def screen(mints):
 def _open(b, mint, sol, thesis, stop, tp1, p, su):
     px = float(p["priceUsd"])
     fill = px * (1 + impact(sol, p, su))
-    tokens = sol * (1 - FEE) * su / fill
+    mev = SANDWICH_USD / su
+    tokens = (sol * (1 - FEE) - mev) * su / fill
     score, risks = rug(mint)
     b["cash_sol"] -= sol
     b["positions"][mint] = {
         "symbol": p["baseToken"]["symbol"], "opened": now(), "cost_sol": sol, "tokens": tokens,
         "entry_px": fill, "entry_mc": p.get("marketCap"), "peak_px": fill, "stop": stop, "tp1": tp1,
         "tp1_done": False, "thesis": thesis, "rugcheck": score, "risks": risks, "realised_sol": 0.0,
-        "dex": p["dexId"], "url": p.get("url"), "v": 2}
+        "dex": p["dexId"], "url": p.get("url"), "v": 2, "mev_sol": mev, "swaps": 1}
     b["log"].append(f"{now()} BUY {p['baseToken']['symbol']} {sol:.2f} SOL @ ${fill:.8g} (mc ${p.get('marketCap',0):,.0f}): {thesis}")
     print(b["log"][-1])
 
 
 def buy(mint, sol, thesis, stop=-0.35, tp1=1.0):
-    b = load()
+    """Legacy mode: trade now. State mode: queue an order for the next tick."""
+    if ORDERS:
+        o = write_order("buy", mint=mint, sol=float(sol), thesis=thesis, stop=float(stop), tp1=float(tp1))
+        print(f"queued {o['id']}: the next tick re-checks the gate and buys")
+        return
+    b, c = load(), load(CONTROL)
+    try:
+        _buy(b, c, mint, sol, thesis, stop, tp1)
+    except Refused as e:
+        sys.exit(str(e))
+
+
+def _buy(b, c, mint, sol, thesis, stop, tp1, regate=False, persist=True):
+    """Open the pick and its control, saving both books. Raises Refused, changing nothing.
+    regate: run the gate again on the pick first (ticks do, so a pass is fresh when it's used).
+    persist: save the books here (legacy); a tick saves them itself, together with the order id."""
     sol = min(float(sol), MAX_POS_SOL, b["cash_sol"])
+    if not (STOP_RANGE[0] <= stop <= STOP_RANGE[1] and TP1_RANGE[0] <= tp1 <= TP1_RANGE[1]):
+        raise Refused(f"stop {stop} or take-profit {tp1} outside the allowed range")
+    if sol <= 0:
+        raise Refused("no cash")
     if sum(1 for q in b["positions"].values() if q.get("v") == 2) >= MAX_OPEN:
-        sys.exit("max open positions reached")
+        raise Refused("max open positions reached")
     if mint in b["positions"]:
-        sys.exit("already holding")
+        raise Refused("already holding")
     t = time.time()
     pool = [m for m, s in b["gate_pass"].items() if t - s < GATE_TTL_H * 3600]
     if mint not in pool:
-        sys.exit(f"no gate pass in the last {GATE_TTL_H}h: run `gate {mint}` first")
+        raise Refused(f"no gate pass in the last {GATE_TTL_H}h: run `gate {mint}` first")
+    if regate:
+        p = pairs([mint]).get(mint)
+        fails = gate_one(mint, p) if p else ["no pair"]
+        if fails:
+            _ingest_gate(b, {mint: {"symbol": (p or {}).get("baseToken", {}).get("symbol", mint[:6]),
+                                    "px": float(p["priceUsd"]) if p else 0.0, "fails": fails}}, t)
+            raise Refused("gate failed at execution: " + "; ".join(fails))
     su = sol_usd()
-    c = load(CONTROL)
     # The control never draws the pick itself (from 2026-11-03): a control on the same coin
     # copies the pick's result and tells the review nothing.
     free = [m for m in pool if m != mint and m not in c["positions"]]
     ctl = random.SystemRandom().choice(free) if free else None
     ps = pairs([mint] + ([ctl] if ctl else []))
+    if mint not in ps:
+        raise Refused("no price for the pick")
     _open(b, mint, sol, thesis, stop, tp1, ps[mint], su)
-    save(b)
+    if persist:
+        save(b)
     # Control arm: same size and exits, on a coin drawn at random from the same gate passes.
     if ctl and ctl in ps:
         _open(c, ctl, sol, f"control for {ps[mint]['baseToken']['symbol']}: random pick from {len(free)} other gate passes", stop, tp1, ps[ctl], su)
-        save(c, CONTROL)
+        if persist:
+            save(c, CONTROL)
     else:
         print("no control entry: no other unheld gate pass to draw from")
 
@@ -297,6 +386,11 @@ def _sell(b, mint, frac, reason, p, su):
     px = float(p["priceUsd"]) if p else 0.0
     gross_sol = qty * px / su
     proceeds = gross_sol * (1 - FEE) * (1 - impact(gross_sol, p, su) if p else 0)
+    if p:  # a real swap: charge the sandwich cost (a rug marked to zero isn't a swap)
+        mev = min(proceeds, SANDWICH_USD / su)
+        proceeds -= mev
+        pos["mev_sol"] = pos.get("mev_sol", 0.0) + mev
+        pos["swaps"] = pos.get("swaps", 0) + 1
     pos["tokens"] -= qty
     pos["realised_sol"] += proceeds
     b["cash_sol"] += proceeds
@@ -310,6 +404,11 @@ def _sell(b, mint, frac, reason, p, su):
 
 
 def sell(mint, frac, reason):
+    """Legacy mode: sell now. State mode: queue an order for the next tick."""
+    if ORDERS:
+        o = write_order("sell", mint=mint, fraction=float(frac), reason=reason)
+        print(f"queued {o['id']}: the next tick sells")
+        return
     b = load()
     su = sol_usd()
     p = pairs([mint]).get(mint)
@@ -335,15 +434,21 @@ def mark(quiet=False):
     The control book gets the same rules; shadow rejects get their 1/3/7-day moves recorded."""
     b = load()
     c = load(CONTROL)
+    extra = {p: load(p) for p in other_arms()}  # phase 3's variant books, when there are any
     su = sol_usd()
     t = time.time()
-    due = [m for m, r in b["rejects"].items() if len(r["moves"]) < len(REJECT_DAYS)]
-    want = list(dict.fromkeys(list(b["positions"]) + list(c["positions"]) + due))
+    shadows = [(k, m) for k in ("rejects", "passes") for m, r in b[k].items() if len(r["moves"]) < len(REJECT_DAYS)]
+    due = list(dict.fromkeys(m for _, m in shadows))
+    held = [m for bk in (b, c, *extra.values()) for m in bk["positions"]]
+    want = list(dict.fromkeys(held + due))
     ps = pairs(want) if want else {}
-    for bk in (b, c):
+    for bk in (b, c, *extra.values()):
         _apply_exits(bk, ps, su)
-    for m in due:
-        r, p = b["rejects"][m], ps.get(m)
+    for p, bk in extra.items():
+        bk["last_mark"] = now()
+        save(bk, p)
+    for k, m in shadows:
+        r, p = b[k][m], ps.get(m)
         for d in REJECT_DAYS:
             if f"{d}d" in r["moves"] or t - r["at"] < d * 86400:
                 continue
@@ -379,6 +484,156 @@ def _apply_exits(b, ps, su):
             _sell(b, mint, 1.0, f"trailing stop: 40% off peak, {r:+.0%} from entry", p, su)
         elif not pos["tp1_done"] and held_hours(pos) >= TIME_STOP_H and r < TIME_STOP_MIN_GAIN:
             _sell(b, mint, 1.0, f"time stop: {held_hours(pos):.0f}h held, {r:+.0%}, no take-profit", p, su)
+
+
+def other_arms():
+    """Book files beyond claude and control (state mode only)."""
+    if not BOOKS:
+        return []
+    return [os.path.join(BOOKS, f) for f in sorted(os.listdir(BOOKS))
+            if f.endswith(".json") and f not in ("claude.json", "control.json")]
+
+
+_LAST_ORDER_US = 0
+
+
+def write_order(kind, **fields):
+    """Drop an order file in the inbox. The id starts with the UTC time, so a sort is time order.
+    Written to a temp name and renamed, so a tick never reads half an order."""
+    global _LAST_ORDER_US
+    us = max(time.time_ns() // 1000, _LAST_ORDER_US + 1)  # strictly increasing, even within one microsecond
+    _LAST_ORDER_US = us
+    t = us / 1e6
+    oid = (datetime.datetime.fromtimestamp(t, datetime.timezone.utc).strftime("%Y%m%dT%H%M%S.%f")
+           + f"Z-{kind}-{random.SystemRandom().randrange(16 ** 6):06x}")
+    o = {"id": oid, "kind": kind, "at": t, "by": os.environ.get("MEMEPAPER_BY", "local"), **fields}
+    tmp = os.path.join(ORDERS, f".{oid}.tmp")
+    with open(tmp, "w") as f:
+        json.dump(o, f, indent=2)
+    os.replace(tmp, os.path.join(ORDERS, oid + ".json"))
+    return o
+
+
+def _apply_one(b, c, o):
+    """One order's effect on the books (not yet saved). Returns its result line."""
+    kind, age = o.get("kind"), time.time() - float(o.get("at") or 0)
+    if kind == "gate":
+        _ingest_gate(b, o["results"], float(o["at"]))
+        return f"recorded {len(o['results'])} gate results, {sum(1 for r in o['results'].values() if not r['fails'])} passed"
+    if kind == "buy":
+        if age > ORDER_TTL_MIN * 60:
+            return f"refused: order is {age / 60:.0f} min old (limit {ORDER_TTL_MIN})"
+        try:
+            n = len(c["positions"])
+            _buy(b, c, o["mint"], float(o["sol"]), str(o["thesis"]), float(o.get("stop", -0.35)),
+                 float(o.get("tp1", 1.0)), regate=True, persist=False)
+        except Refused as e:
+            return f"refused: {e}"
+        pos = b["positions"][o["mint"]]
+        ctl = "control opened" if len(c["positions"]) > n else "no control"
+        return f"bought {pos['symbol']} {pos['cost_sol']:.2f} SOL @ ${pos['entry_px']:.8g}; {ctl}"
+    if kind == "sell":
+        m, frac = o.get("mint"), float(o.get("fraction", 0))
+        if m not in b["positions"]:
+            return "refused: not held"
+        if not 0 < frac <= 1:
+            return f"refused: fraction {frac} not in (0, 1]"
+        _sell(b, m, frac, str(o.get("reason", "")), pairs([m]).get(m), sol_usd())
+        return f"sold {frac:.0%} of {m[:6]}"
+    return f"refused: unknown kind {kind!r}"
+
+
+def apply():
+    """Apply every pending order, oldest first. An order's id goes into the claude book in the same
+    save as its effect, and the file moves to orders/done/ after, so a crash between the two can't
+    apply an order twice. Returns how many orders were handled."""
+    b, c = load(), load(CONTROL)
+    b.setdefault("applied", [])
+    seen = {x["id"] for x in b["applied"]}
+    n = 0
+    for f in sorted(x for x in os.listdir(ORDERS) if x.endswith(".json")):
+        path = os.path.join(ORDERS, f)
+        try:
+            o = json.load(open(path))
+            oid = o["id"]
+        except Exception as e:
+            o, oid = {"id": f[:-5]}, f[:-5]
+            o["result"] = f"refused: unreadable ({e.__class__.__name__})"
+        else:
+            if oid in seen:
+                o["result"] = next(x["result"] for x in b["applied"] if x["id"] == oid)
+            else:
+                o["result"] = _apply_one(b, c, o)
+        if oid not in seen:
+            b["applied"] = (b["applied"] + [{"id": oid, "kind": o.get("kind"), "result": o["result"], "at": now()}])[-APPLIED_KEEP:]
+            seen.add(oid)
+            # Claude's book first: it holds the order id. If the process dies before the control
+            # save, the order is never re-applied, so at worst a control entry is missing, never doubled.
+            save(b)
+            save(c, CONTROL)
+        o["applied_at"] = now()
+        done = os.path.join(ORDERS, "done", f)
+        with open(done + ".tmp", "w") as fh:
+            json.dump(o, fh, indent=2)
+        os.replace(done + ".tmp", done)
+        os.remove(path)
+        print(f"order {oid}: {o['result']}")
+        n += 1
+    return n
+
+
+def _fingerprint():
+    """What a tick changed that's worth pushing: trades, orders, rejects scored, trailing peaks."""
+    out = []
+    for p in [BOOK, CONTROL] + other_arms():
+        bk = load(p)
+        out.append((len(bk["log"]), len(bk.get("applied", [])), len(bk["closed"]),
+                    sum(len(r["moves"]) for k in ("rejects", "passes") for r in bk[k].values()),
+                    tuple(sorted((m, x["peak_px"]) for m, x in bk["positions"].items() if x.get("tp1_done")))))
+    return out
+
+
+def tick(quiet=True):
+    """State mode's one writer step: apply orders, then mark. Prints `material: yes|no` last, so the
+    runner knows whether to push now or wait."""
+    if not ORDERS:
+        sys.exit("tick needs state mode: set MEMEPAPER_STATE to the state folder")
+    before = _fingerprint()
+    n = apply()
+    mark(quiet=quiet)
+    material = n > 0 or _fingerprint() != before
+    print(f"material: {'yes' if material else 'no'}")
+    return material
+
+
+def equity(bk, ps, su):
+    return bk["cash_sol"] + sum(x["tokens"] * (float(ps[m]["priceUsd"]) if m in ps else x["entry_px"]) / su
+                                for m, x in bk["positions"].items())
+
+
+def migrate(src, dst, force=False):
+    """Copy the legacy books (book.json, control.json beside the code) into a state folder and prove
+    nothing changed: same positions, same cash and the same equity to 1e-9 SOL at one set of prices."""
+    use_state(dst)
+    if os.path.exists(BOOK) and not force:
+        sys.exit(f"{BOOK} exists; pass --force to overwrite")
+    old_b = json.load(open(os.path.join(src, "book.json")))
+    old_c = json.load(open(os.path.join(src, "control.json")))
+    save(copy.deepcopy(old_b), BOOK)
+    save(copy.deepcopy(old_c), CONTROL)
+    if os.path.exists(os.path.join(src, ".sol_usd")):
+        open(SOL_CACHE, "w").write(open(os.path.join(src, ".sol_usd")).read())
+    new_b, new_c = load(), load(CONTROL)
+    su = sol_usd()
+    mints = list(dict.fromkeys(list(old_b["positions"]) + list(old_c["positions"])))
+    ps = pairs(mints) if mints else {}
+    for name, a, z in (("claude", old_b, new_b), ("control", old_c, new_c)):
+        ea, ez = equity(a, ps, su), equity(z, ps, su)
+        if abs(ea - ez) > 1e-9 or a["positions"] != z["positions"] or a["cash_sol"] != z["cash_sol"] or a["closed"] != z["closed"]:
+            sys.exit(f"migration check FAILED for {name}: {ea!r} vs {ez!r}")
+        print(f"{name}: {len(z['positions'])} open, {len(z['closed'])} closed, cash {z['cash_sol']:.9f}, "
+              f"equity {ez:.9f} SOL both sides")
+    print("migration check passed")
 
 
 def arm(bk, ps, su, v2_only):
@@ -417,8 +672,17 @@ def write_report(b, su, ps, c=None, quiet=False):
     wins = sum(1 for c in b["closed"] if c["pnl_sol"] > 0)
     pn, pw, pp, pc = arm(b, ps, su, True)
     cn, cw, cp, cc = arm(c, ps, su, False)
-    meds = [(d, median([r["moves"][f"{d}d"] for r in b["rejects"].values() if f"{d}d" in r["moves"]])) for d in REJECT_DAYS]
-    rej = ", ".join(f"{d}d {m:+.0%}" if m is not None else f"{d}d n/a" for d, m in meds)
+    def meds_of(k):
+        ms = [(d, median([r["moves"][f"{d}d"] for r in b[k].values() if f"{d}d" in r["moves"]])) for d in REJECT_DAYS]
+        return ", ".join(f"{d}d {m:+.0%}" if m is not None else f"{d}d n/a" for d, m in ms)
+    rej, pas = meds_of("rejects"), meds_of("passes")
+    extra_usd = (SANDWICH_STRESS_USD - SANDWICH_USD) / su
+    def swaps(bk, v2_only):
+        return sum(x.get("swaps", 0) for x in list(bk["closed"]) + list(bk["positions"].values())
+                   if not v2_only or x.get("v") == 2)
+    pp_s, cp_s = pp - swaps(b, True) * extra_usd, cp - swaps(c, False) * extra_usd
+    orders_md = ("\n## Orders (last 15)\n\n" + "\n".join(f"- {x['at']} `{x['id']}`: {x['result']}" for x in b["applied"][-15:]) + "\n"
+                 if b.get("applied") else "")
     md = f"""---
 title: Memecoin paper book
 created: 2026-11-01
@@ -447,7 +711,11 @@ control position on a random gate pass (`control.json`, same mechanical exits, n
 | Picks | {pn} | {pw} | {pp:+.3f} | {pp / pc if pc else 0:+.1%} |
 | Control | {cn} | {cw} | {cp:+.3f} | {cp / cc if cc else 0:+.1%} |
 
-Shadow rejects (gate failures, scored as if bought): {len(b['rejects'])} tracked; median move {rej}.
+Costs in every fill: {FEE:.1%} fee each side, size/liquidity slippage, and a ${SANDWICH_USD:.2f} sandwich charge per swap.
+If every swap were sandwiched at the ${SANDWICH_STRESS_USD:.0f} median: picks {pp_s:+.3f} SOL, control {cp_s:+.3f} SOL.
+
+**Gate value** (raw price moves, no costs; the gate earns its keep if passes beat rejects):
+passes {len(b['passes'])} tracked, median {pas} · rejects {len(b['rejects'])} tracked, median {rej}.
 Legacy v1 positions (opened before v2, 1.25% fee model, sizes to 1 SOL) stay under the same exits and are left out of this table.
 
 ## Open positions
@@ -465,17 +733,20 @@ Legacy v1 positions (opened before v2, 1.25% fee model, sizes to 1 SOL) stay und
 ## Log
 
 {chr(10).join('- ' + l for l in b['log'][-40:])}
-"""
+{orders_md}"""
     open(REPORT, "w").write(md)
     if not quiet:
         print(f"equity {equity:.3f} SOL ({equity / b['start_sol'] - 1:+.1%}), open {len(b['positions'])}, report written")
 
 
-if __name__ == "__main__":
-    a = sys.argv[1:]
+def main(a):
     if not a:
         sys.exit(__doc__)
     cmd = a[0]
+    if cmd == "migrate":
+        return migrate(a[1], a[2], force="--force" in a)
+    if os.environ.get("MEMEPAPER_STATE"):
+        use_state(os.environ["MEMEPAPER_STATE"])
     lockf = open(LOCK, "w")
     fcntl.flock(lockf, fcntl.LOCK_EX)  # released when the process exits
     if cmd == "screen":
@@ -489,5 +760,11 @@ if __name__ == "__main__":
         sell(a[1], a[2], a[3])
     elif cmd == "mark":
         mark(quiet="--quiet" in a)
+    elif cmd == "tick":
+        tick(quiet="--verbose" not in a)
     else:
         sys.exit(__doc__)
+
+
+if __name__ == "__main__":
+    main(sys.argv[1:])

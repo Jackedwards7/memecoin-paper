@@ -1,14 +1,29 @@
 # Memecoin trading playbook (research)
 
-Copied from Jackson's vault (wiki page memecoin-trading-playbook, research checked 2026-11-02) so the
-cloud run can read it. Outside knowledge from a deep-research run, not trading advice. The rules
-that bind are in CLAUDE.md; this is the evidence behind them. Refreshed at each review.
+Copied from Jackson's vault (wiki page memecoin-trading-playbook: first run 2026-11-02, second run
+2026-11-03) so the cloud run can read it. Outside knowledge from deep-research runs, not trading
+advice. The rules that bind are in CLAUDE.md; this is the evidence behind them. Refreshed at each review.
+
+## What the second run means for decisions here
+
+- **Expect most entries to lose, even after the gate.** The best published rug filter halved losses
+  (about 61% to 27%) and its picks still lost money. A pass is permission, not a reason to buy.
+- **Never buy near migration.** 84% of migrated coins touched below 30% of their migration price
+  within 20 minutes; the pool usually stays, the price doesn't. That is why entries need a pair at
+  least 2 h (local) or 6 h (cloud) old.
+- **Bundles hide concentration.** Bundled or linked wallets held 36.5% of a migrated coin's supply on
+  average. Read RugCheck's insider flags as a floor, not the full picture.
+- **Doubles are mostly manipulated** (82.8% showed wash trading, price inflation or >30% ownership
+  concentration). A coin that has already doubled needs more scrutiny, not less.
+- **Costs are real:** every paper fill now carries a sandwich charge; see CLAUDE.md.
+- **Liquidity velocity** (fewer trades to reach a level) predicts graduation, not profit. It's a
+  feature for the variant tests, not a buy signal on its own.
 
 What the research says about memecoin trading, boiled down to rules a paper bot can apply. Asked for
 in chat on 2026-11-02 so Jackson can feed it to memecoin-paper-book. All of it is outside
 knowledge from a deep-research run checked 2026-11-02, not from his raw notes. Full report with
 every citation: Memecoin trading playbook (in Jackson's vault).
-Paper only: Claude places no real-money trades (paper-trading-experiment).
+Paper only: Claude places no real-money trades (paper-trading-experiment). In use as the paper book's rules v2 since 2026-11-03.
 
 ## The base rates
 
@@ -83,3 +98,20 @@ reportedly closed new API access on 2026-10-31, and the Google Trends API is inv
 pump.fun coins launch shortly after an X or Truth Social post, so by the time a bot sees a social
 spike, creators have acted. The free, readable signal is narrative rotation on DexScreener
 (`/metas/trending/v1`). The daily routine logs it: memecoin-trend-check.
+
+## Second run, 2026-11-03: bot design and self-learning
+
+A second deep-research run, mostly on academic papers, also outside knowledge:
+Memecoin bot research (in Jackson's vault).
+
+- Holding from the curve to graduation has negative expected value. 84% of migrated coins touch
+  below 30% of their migration price within 20 minutes. The pools are rarely drained (98%, above);
+  the price collapses anyway.
+- The best published rug filter cut simulated losses from about 61% to 27%, but its picks still
+  lost money. Score our filter on losses avoided compared with the control arm.
+- Two new features: liquidity velocity (how few trades a coin needs to reach a curve level) and
+  holder concentration after merging bundled wallets.
+- Sandwich bots kept $345M on Solana over 3 years. Paper fills need a sandwich charge for each route.
+- Self-tuning: log every variant, deflate results by the number tried, and promote a change only if
+  it passes a PBO or deflated-Sharpe check across several splits. Strategies that passed still lost
+  money.

@@ -47,6 +47,7 @@ class Env(unittest.TestCase):
         self.patches = [mock.patch.object(mp, k, os.path.join(d, v)) for k, v in
                         (("BOOK", "book.json"), ("CONTROL", "control.json"), ("REPORT", "book.md"),
                          ("SOL_CACHE", ".sol_usd"))]
+        self.patches += [mock.patch.object(mp, "ORDERS", None), mock.patch.object(mp, "BOOKS", None)]
         self.patches += [mock.patch.object(mp, "get", self.fake_get),
                          mock.patch.object(mp, "sol_usd", lambda: SU)]
         for p in self.patches:
@@ -109,7 +110,7 @@ class Env(unittest.TestCase):
                                 "tokens": sol * SU / entry, "entry_px": entry, "entry_mc": 0,
                                 "peak_px": entry, "stop": -0.35, "tp1": 1.0, "tp1_done": False,
                                 "thesis": "test", "rugcheck": 1, "risks": [], "realised_sol": 0.0,
-                                "dex": "pumpswap", "url": "", "v": 2, **extra}
+                                "dex": "pumpswap", "url": "", "v": 2, "mev_sol": 0.0, "swaps": 1, **extra}
         mp.save(b, path)
 
     def price(self, mint, px, liq=200_000):
@@ -134,11 +135,15 @@ class TestCosts(Env):
         pos = mp.load()["positions"]["A"]
         imp = mp.impact(0.25, self.market["A"], SU)
         self.assertAlmostEqual(pos["entry_px"], 1.0 * (1 + imp))
-        self.assertAlmostEqual(pos["tokens"], 0.25 * (1 - mp.FEE) * SU / pos["entry_px"])
+        mev = mp.SANDWICH_USD / SU
+        self.assertAlmostEqual(pos["tokens"], (0.25 * (1 - mp.FEE) - mev) * SU / pos["entry_px"])
         self.run_quiet(mp.sell, "A", "1", "t")
         c = mp.load()["closed"][0]
         self.assertLess(c["pnl_sol"], 0)  # a flat round trip always loses the costs
-        self.assertGreater(c["pnl_sol"], -0.25 * 0.05)
+        # fees both sides + two sandwich charges + a sliver of slippage, nothing else
+        expected = -(0.25 * 2 * mp.FEE + 2 * mev)
+        self.assertAlmostEqual(c["pnl_sol"], expected, delta=0.002)
+        self.assertEqual((c["swaps"], round(c["mev_sol"], 12)), (2, round(2 * mev, 12)))
         self.assertAlmostEqual(mp.load()["cash_sol"], 10 - 0.25 + c["realised_sol"])
 
     def test_fee_and_size_constants(self):
@@ -244,6 +249,7 @@ class TestExits(Env):
         b = self.mark()
         self.assertNotIn("A", b["positions"])
         self.assertEqual(b["closed"][0]["realised_sol"], 0)
+        self.assertEqual(b["closed"][0]["swaps"], 1)  # the rug isn't a swap: no sandwich charge
 
     def test_one_miss_then_price_resets_counter(self):
         self.hold("A")
@@ -436,6 +442,26 @@ class TestBuy(Env):
 # --- shadow rejects and the report ---------------------------------------------------------
 
 class TestRejects(Env):
+    def test_passes_are_tracked_like_rejects(self):
+        self.run_quiet(mp.gate, [MINT["gato"], MINT["cbucks"]])
+        b = mp.load()
+        self.assertIn(MINT["gato"], b["passes"])
+        self.assertNotIn(MINT["cbucks"], b["passes"])
+        b["passes"][MINT["gato"]]["at"] -= 1.5 * 86400
+        mp.save(b)
+        self.price(MINT["gato"], float(b["passes"][MINT["gato"]]["px"]) * 1.2)
+        self.run_quiet(mp.mark, quiet=True)
+        self.assertAlmostEqual(mp.load()["passes"][MINT["gato"]]["moves"]["1d"], 0.2)
+
+    def test_a_coin_counts_once(self):
+        # A coin that failed first and passed later stays a reject; the first verdict is kept.
+        self.run_quiet(mp.gate, [MINT["cbucks"]])
+        self.rc[MINT["cbucks"]]["topHolders"] = []
+        self.run_quiet(mp.gate, [MINT["cbucks"]])
+        b = mp.load()
+        self.assertIn(MINT["cbucks"], b["rejects"])
+        self.assertNotIn(MINT["cbucks"], b["passes"])
+
     def test_scored_on_schedule(self):
         t0 = time.time()
         b = mp.load()
@@ -469,8 +495,19 @@ class TestReport(Env):
         self.assertEqual((n, cost), (0, 0.25))
         self.assertGreater(pnl, 0)
         md = open(mp.REPORT).read()
-        for s in ("## v2 test", "| Picks |", "| Control |", "Shadow rejects", "## Open positions"):
+        for s in ("## v2 test", "| Picks |", "| Control |", "Gate value", "If every swap were sandwiched", "## Open positions"):
             self.assertIn(s, md)
+
+    def test_stress_line_charges_every_swap(self):
+        for m in ("A", "B"):
+            self.add_fake(m, 1.0)
+        self.run_quiet(mp.gate, ["A", "B"])
+        self.run_quiet(mp.buy, "A", "0.25", "t")
+        self.run_quiet(mp.mark, quiet=True)
+        b, c = mp.load(), mp.load(mp.CONTROL)
+        _, _, pnl, _ = mp.arm(b, self.market, SU, True)
+        extra = (mp.SANDWICH_STRESS_USD - mp.SANDWICH_USD) / SU
+        self.assertIn(f"picks {pnl - extra:+.3f} SOL", open(mp.REPORT).read())
 
     def test_median(self):
         self.assertIsNone(mp.median([]))
@@ -526,6 +563,193 @@ class TestReplay(Env):
             self.assertAlmostEqual(b["cash_sol"], b["start_sol"] - spent + got_back, places=9)
             for x in b["closed"]:
                 self.assertAlmostEqual(x["pnl_sol"], x["realised_sol"] - x["cost_sol"], places=9)
+
+
+# --- state mode: orders inbox, tick, migration --------------------------------------------
+
+class TestState(Env):
+    """Books in <state>/books, only tick writes them; gate/buy/sell queue order files."""
+
+    def setUp(self):
+        super().setUp()
+        self.state = os.path.join(self.tmp.name, "state")
+        mp.use_state(self.state)
+        for m in ("A", "B", "C"):
+            self.add_fake(m, 1.0)
+
+    def pending(self):
+        return sorted(f for f in os.listdir(mp.ORDERS) if f.endswith(".json"))
+
+    def done(self):
+        d = os.path.join(mp.ORDERS, "done")
+        return [json.load(open(os.path.join(d, f))) for f in sorted(os.listdir(d)) if f.endswith(".json")]
+
+    def tick(self):
+        return self.run_quiet(mp.tick)
+
+    def test_paths(self):
+        self.assertEqual(mp.BOOK, os.path.join(self.state, "books", "claude.json"))
+        self.assertEqual(mp.CONTROL, os.path.join(self.state, "books", "control.json"))
+
+    def test_gate_buy_sell_only_queue(self):
+        self.run_quiet(mp.gate, ["A", "B"])
+        self.run_quiet(mp.buy, "A", "0.25", "t")
+        self.run_quiet(mp.sell, "A", "1", "t")
+        self.assertEqual(len(self.pending()), 3)
+        self.assertFalse(os.path.exists(mp.BOOK))  # nothing touched the books
+        kinds = [json.load(open(os.path.join(mp.ORDERS, f)))["kind"] for f in self.pending()]
+        self.assertEqual(kinds, ["gate", "buy", "sell"])  # ids sort in time order
+
+    def test_tick_applies_in_order(self):
+        self.run_quiet(mp.gate, ["A", "B", "C"])
+        self.run_quiet(mp.buy, "A", "0.25", "thesis")
+        self.assertTrue(self.tick())
+        b, c = mp.load(), mp.load(mp.CONTROL)
+        self.assertIn("A", b["positions"])
+        self.assertEqual(len(c["positions"]), 1)
+        self.assertNotIn("A", c["positions"])
+        self.assertEqual(self.pending(), [])
+        res = [o["result"] for o in self.done()]
+        self.assertTrue(res[0].startswith("recorded 3 gate results, 3 passed"))
+        self.assertTrue(res[1].startswith("bought"))
+        self.assertEqual([x["id"] for x in b["applied"]], [o["id"] for o in self.done()])
+        self.assertIn("## Orders", open(mp.REPORT).read())
+
+    def test_buy_before_its_gate_is_refused(self):
+        self.run_quiet(mp.buy, "A", "0.25", "t")
+        time.sleep(0.002)
+        self.run_quiet(mp.gate, ["A", "B"])
+        self.tick()
+        self.assertNotIn("A", mp.load()["positions"])
+        self.assertTrue(self.done()[0]["result"].startswith("refused: no gate pass"))
+
+    def test_stale_buy_refused(self):
+        self.run_quiet(mp.gate, ["A", "B"])
+        self.run_quiet(mp.buy, "A", "0.25", "t")
+        f = os.path.join(mp.ORDERS, self.pending()[1])
+        o = json.load(open(f))
+        o["at"] -= (mp.ORDER_TTL_MIN + 1) * 60
+        json.dump(o, open(f, "w"))
+        self.tick()
+        self.assertEqual(mp.load()["positions"], {})
+        self.assertIn("min old", self.done()[1]["result"])
+
+    def test_regate_at_execution(self):
+        self.run_quiet(mp.gate, ["A", "B"])
+        self.run_quiet(mp.buy, "A", "0.25", "t")
+        self.rc["A"]["mintAuthority"] = "X"  # the coin turned bad between gate and tick
+        self.tick()
+        b = mp.load()
+        self.assertEqual(b["positions"], {})
+        self.assertIn("gate failed at execution", self.done()[1]["result"])
+        self.assertIn("A", b["rejects"])
+        self.assertNotIn("A", b["gate_pass"])
+        self.assertEqual(mp.load(mp.CONTROL)["positions"], {})
+
+    def test_bad_order_values_refused(self):
+        self.run_quiet(mp.gate, ["A", "B"])
+        self.run_quiet(mp.buy, "A", "0.25", "t", stop=-0.9)
+        self.tick()
+        self.assertEqual(mp.load()["positions"], {})
+        self.assertIn("outside the allowed range", self.done()[1]["result"])
+
+    def test_sell_orders(self):
+        self.run_quiet(mp.gate, ["A", "B"])
+        self.run_quiet(mp.buy, "A", "0.25", "t")
+        self.tick()
+        self.run_quiet(mp.sell, "Z", "1", "not held")
+        self.run_quiet(mp.sell, "A", "1.5", "bad fraction")
+        self.run_quiet(mp.sell, "A", "1", "thesis broke")
+        self.tick()
+        res = [o["result"] for o in self.done()][2:]
+        self.assertEqual(res[0], "refused: not held")
+        self.assertTrue(res[1].startswith("refused: fraction"))
+        self.assertTrue(res[2].startswith("sold 100%"))
+        b = mp.load()
+        self.assertNotIn("A", b["positions"])
+        self.assertEqual(b["closed"][0]["exit_reason"], "thesis broke")
+
+    def test_crash_between_save_and_move_never_doubles(self):
+        self.run_quiet(mp.gate, ["A", "B"])
+        self.run_quiet(mp.buy, "A", "0.25", "t")
+        self.run_quiet(mp.sell, "A", "0.5", "half")  # a re-applied sell would sell another half
+        names = self.pending()
+        self.tick()
+        tokens = mp.load()["positions"]["A"]["tokens"]
+        # Simulate the crash: the books were saved, but the files never left the inbox.
+        for n in names:
+            o = json.load(open(os.path.join(mp.ORDERS, "done", n)))
+            json.dump(o, open(os.path.join(mp.ORDERS, n), "w"))
+        cash = mp.load()["cash_sol"]
+        self.tick()
+        b = mp.load()
+        self.assertEqual(self.pending(), [])
+        self.assertEqual(b["cash_sol"], cash)
+        self.assertEqual(b["positions"]["A"]["tokens"], tokens)
+        self.assertEqual(len(b["applied"]), 3)
+        self.assertEqual(len(mp.load(mp.CONTROL)["positions"]), 1)
+
+    def test_unreadable_order(self):
+        open(os.path.join(mp.ORDERS, "20260101T000000.000Z-buy-junk.json"), "w").write("{not json")
+        open(os.path.join(mp.ORDERS, ".half-written.tmp"), "w").write("{")
+        self.tick()
+        self.assertEqual(self.pending(), [])
+        self.assertTrue(self.done()[0]["result"].startswith("refused: unreadable"))
+        self.assertTrue(os.path.exists(os.path.join(mp.ORDERS, ".half-written.tmp")))  # temp files are left alone
+
+    def test_material_flag(self):
+        self.assertFalse(self.tick())  # nothing happened
+        self.run_quiet(mp.gate, ["A", "B"])
+        self.assertTrue(self.tick())   # an order
+        self.price("A", 1.01)
+        self.assertFalse(self.tick())  # a price wiggle alone isn't worth a push
+
+    def test_extra_arms_are_marked(self):
+        arm = os.path.join(mp.BOOKS, "v-test.json")
+        self.hold("A", path=arm)
+        self.price("A", 0.5)
+        self.tick()
+        self.assertIn("stop-loss", mp.load(arm)["closed"][0]["exit_reason"])
+
+    def test_tick_needs_state_mode(self):
+        with mock.patch.object(mp, "ORDERS", None):
+            with self.assertRaises(SystemExit):
+                mp.tick()
+
+    def test_cli_in_state_mode(self):
+        with mock.patch.dict(os.environ, {"MEMEPAPER_STATE": self.state}), \
+                mock.patch.object(mp, "LOCK", os.path.join(self.tmp.name, "lock")):
+            self.run_quiet(mp.main, ["gate", "A", "B"])
+            self.run_quiet(mp.main, ["buy", "A", "0.25", "cli thesis", "--stop", "-0.3"])
+            self.run_quiet(mp.main, ["tick"])
+        pos = mp.load()["positions"]["A"]
+        self.assertEqual((pos["stop"], pos["thesis"]), (-0.3, "cli thesis"))
+
+    def test_saves_are_atomic(self):
+        self.run_quiet(mp.gate, ["A", "B"])
+        self.tick()
+        left = [f for d in (mp.BOOKS, mp.ORDERS) for f in os.listdir(d) if f.endswith(".tmp")]
+        self.assertEqual(left, [])
+
+
+class TestMigrate(Env):
+    def test_migrate_keeps_every_number(self):
+        for m in ("A", "B"):
+            self.add_fake(m, 1.0)
+        self.run_quiet(mp.gate, ["A", "B"])
+        self.run_quiet(mp.buy, "A", "0.25", "t")
+        self.hold("L1", entry=2.0, sol=1.0)
+        self.price("L1", 2.5)
+        self.run_quiet(mp.mark, quiet=True)
+        src = self.tmp.name
+        before = mp.load(), mp.load(mp.CONTROL)
+        dst = os.path.join(src, "state")
+        self.run_quiet(mp.migrate, src, dst)
+        self.assertIn("migration check passed", self.out.getvalue())
+        self.assertEqual(mp.load(), before[0])
+        self.assertEqual(mp.load(mp.CONTROL), before[1])
+        with self.assertRaises(SystemExit):
+            self.run_quiet(mp.migrate, src, dst)  # never overwrites without --force
 
 
 # --- rules text and code agree --------------------------------------------------------------

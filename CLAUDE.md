@@ -14,7 +14,9 @@ Review on 2026-11-30 or after 30 closed v2 trades, whichever is first. Two quest
 1. Do picks beat the **control arm** (a random coin that passed the same gates, same size, same
    exits) after costs? If not, the picking adds nothing.
 2. Is the book ahead of plain SOL holding (a positive SOL-denominated return after fees)?
-Shadow rejects (coins the gates failed, scored at 1, 3 and 7 days) show whether the gates help.
+The gate is judged on **losses avoided**: every coin it passes and every coin it fails is scored at
+1, 3 and 7 days ("Gate value" in the report). The best published filter only halved losses, so
+passes beating rejects is the bar, not passes making money.
 **No rule changes before the review.** Filters stop working within weeks, so the review re-checks
 every rule against the data.
 
@@ -32,8 +34,10 @@ every rule against the data.
   edits code, so it never needs them.
 
 ## Costs (in the script)
-1.5% fee each side (PumpSwap pool fee plus terminal and priority fees) and a slippage charge
-based on size against liquidity. Never trade a coin still on the bonding curve.
+1.5% fee each side (PumpSwap pool fee plus terminal and priority fees), a slippage charge based on
+size against liquidity, and from 2026-11-03 a $0.50 sandwich (MEV) charge per swap (a guess at
+about 1 in 10 swaps hit at the $5 median; the report also shows P&L if every swap were hit).
+Never trade a coin still on the bonding curve, or one that migrated in the last 2 hours.
 
 ## Exit rules (applied by `mark`, no judgement needed)
 Hard stop −25% to −35% per position; sell half at the take-profit (+60% to +100%); then a 40%
