@@ -8,12 +8,12 @@ area: trading
 *Paper only: simulated fills from live DexScreener prices, 1.50% fee each side plus a size/liquidity
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
-**Equity 9.222 SOL** (start 10.0 SOL, -7.8%) · cash 7.694 SOL ·
-open 3 · closed 5 (0 won) · SOL $93.07 · marked 2026-11-03 20:16 UTC
+**Equity 9.226 SOL** (start 10.0 SOL, -7.7%) · cash 7.694 SOL ·
+open 3 · closed 5 (0 won) · SOL $93.31 · marked 2026-11-03 20:27 UTC
 
-**Benchmark (vs just holding SOL): -7.8%.** The book is counted in SOL, so its SOL
-return *is* its edge over holding SOL. In dollars: $858 vs $949 at the start
-(-9.5%); SOL itself moved -1.9%.
+**Benchmark (vs just holding SOL): -7.7%.** The book is counted in SOL, so its SOL
+return *is* its edge over holding SOL. In dollars: $861 vs $949 at the start
+(-9.2%); SOL itself moved -1.6%.
 Review on 2026-11-30 or after 30 closed v2 trades (1/30), rules unchanged until then.
 
 ## v2 test (from 2026-11-03 01:30 UTC)
@@ -38,7 +38,7 @@ Legacy v1 positions (opened before v2, 1.25% fee model, sizes to 1 SOL) stay und
 | Coin | Mint | Opened | Cost SOL | Entry mcap | Move | Value SOL (incl. realised) | Thesis |
 |---|---|---|---|---|---|---|---|
 | GATO | `HsprHxBR…` | 2026-11-02 05:44 UTC | 0.75 | $8,625,571 | +38% | 1.131 | Mature 68-day coin, $8.7M cap, deepest pool on the board, 96% LP locked; +38% 24h |
-| CBUCKS | `DtcicPCK…` | 2026-11-02 08:30 UTC | 0.50 | $1,799,967 | -5% | 0.473 | CBUCKS: 26-day coin, $1.8M cap, liq $146k, 1h buys 28>20, 1h +2% and 24h +48%, RugCheck no risks, LP 99.99% locked; distinct theme; modest volume noted |
+| CBUCKS | `DtcicPCK…` | 2026-11-02 08:30 UTC | 0.50 | $1,799,967 | -4% | 0.477 | CBUCKS: 26-day coin, $1.8M cap, liq $146k, 1h buys 28>20, 1h +2% and 24h +48%, RugCheck no risks, LP 99.99% locked; distinct theme; modest volume noted |
 | three | `FeMbDoX7…` | 2026-11-02 17:24 UTC | 0.50 | $461,979 | +9% | 0.534 | three: 187-day coin, liq $140k, 1h buys 450>179, 1h +3% and 24h +2%, 5m flat, RugCheck no risks, LP 96% locked; distinct theme |
 
 ## Closed
