@@ -19,7 +19,7 @@
       "realised_sol": 0.6102763900779642,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/5e3dxlxgwmtdcoka51wyyakttjfzbwqcoyuhbui5gt2m",
-      "misses": 0
+      "entry_liq": 363049.32
     },
     "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
       "symbol": "CBUCKS",
@@ -38,7 +38,7 @@
       "realised_sol": 0.0,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/b4cp45pgifvm5faxfh6aev8qz3eunqnqgbw7kuc7mhnb",
-      "misses": 0
+      "entry_liq": 140886.71
     },
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": {
       "symbol": "three",
@@ -57,7 +57,7 @@
       "realised_sol": 0.0,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/5byl7mzolabynwmpzkpkjf4mgkz7febzranos19pre2z",
-      "misses": 0
+      "entry_liq": 144754.83
     }
   },
   "closed": [
@@ -201,7 +201,7 @@
     "2026-11-03 16:15 UTC BUY Ahsoka 0.25 SOL @ $0.001045279 (mc $1,032,979): Ahsoka: 26h coin, $1.0M cap, liq $87k, gate pass; 1h +10.8%, 24h +35%, 5m +6.4% (not a spike); 1h buys 532 vs sells 641 (slightly negative); only gate pass with positive 1h/24h; thin liquidity noted",
     "2026-11-03 19:30 UTC SELL 100% Ahsoka -> 0.158 SOL @ $0.0006786: stop-loss at -35%"
   ],
-  "last_mark": "2026-11-03 19:30 UTC",
+  "last_mark": "2026-11-03 20:16 UTC",
   "gate_pass": {
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1793722528.6784072,
     "4nuj5NLHMtQSezfmz6CwBpCRJisFie6F6MxNNz1dpump": 1793722528.6784072
@@ -252,5 +252,6 @@
       ],
       "moves": {}
     }
-  }
+  },
+  "passes": {}
 }
