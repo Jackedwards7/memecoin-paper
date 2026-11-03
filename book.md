@@ -8,12 +8,12 @@ area: trading
 *Paper only: simulated fills from live DexScreener prices, 1.50% fee each side plus a size/liquidity
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
-**Equity 9.239 SOL** (start 10.0 SOL, -7.6%) · cash 7.444 SOL ·
-open 4 · closed 5 (0 won) · SOL $93.43 · marked 2026-11-03 20:47 UTC
+**Equity 9.191 SOL** (start 10.0 SOL, -8.1%) · cash 7.444 SOL ·
+open 4 · closed 5 (0 won) · SOL $93.62 · marked 2026-11-03 21:49 UTC
 
-**Benchmark (vs just holding SOL): -7.6%.** The book is counted in SOL, so its SOL
-return *is* its edge over holding SOL. In dollars: $863 vs $949 at the start
-(-9.0%); SOL itself moved -1.5%.
+**Benchmark (vs just holding SOL): -8.1%.** The book is counted in SOL, so its SOL
+return *is* its edge over holding SOL. In dollars: $860 vs $949 at the start
+(-9.3%); SOL itself moved -1.3%.
 Review on 2026-11-30 or after 30 closed v2 trades (1/30), rules unchanged until then.
 
 ## v2 test (from 2026-11-03 01:30 UTC)
@@ -23,11 +23,11 @@ control position on a random gate pass (`control.json`, same mechanical exits, n
 
 | Arm | Closed | Won | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|
-| Picks | 1 | 0 | -0.068 | -13.7% |
-| Control | 1 | 0 | -0.103 | -20.6% |
+| Picks | 1 | 0 | -0.059 | -11.8% |
+| Control | 1 | 0 | -0.108 | -21.7% |
 
 Costs in every fill: 1.5% fee each side, size/liquidity slippage, and a $0.50 sandwich charge per swap.
-If every swap were sandwiched at the $5 median: picks -0.117 SOL, control -0.151 SOL.
+If every swap were sandwiched at the $5 median: picks -0.107 SOL, control -0.156 SOL.
 
 **Gate value** (raw price moves, no costs; the gate earns its keep if passes beat rejects):
 passes 3 tracked, median 1d n/a, 3d n/a, 7d n/a · rejects 6 tracked, median 1d n/a, 3d n/a, 7d n/a.
@@ -37,10 +37,10 @@ Legacy v1 positions (opened before v2, 1.25% fee model, sizes to 1 SOL) stay und
 
 | Coin | Mint | Opened | Cost SOL | Entry mcap | Move | Value SOL (incl. realised) | Thesis |
 |---|---|---|---|---|---|---|---|
-| GATO | `HsprHxBR…` | 2026-11-02 05:44 UTC | 0.75 | $8,625,571 | +36% | 1.123 | Mature 68-day coin, $8.7M cap, deepest pool on the board, 96% LP locked; +38% 24h |
-| CBUCKS | `DtcicPCK…` | 2026-11-02 08:30 UTC | 0.50 | $1,799,967 | -3% | 0.481 | CBUCKS: 26-day coin, $1.8M cap, liq $146k, 1h buys 28>20, 1h +2% and 24h +48%, RugCheck no risks, LP 99.99% locked; distinct theme; modest volume noted |
-| three | `FeMbDoX7…` | 2026-11-02 17:24 UTC | 0.50 | $461,979 | +8% | 0.528 | three: 187-day coin, liq $140k, 1h buys 450>179, 1h +3% and 24h +2%, 5m flat, RugCheck no risks, LP 96% locked; distinct theme |
-| HELL | `A75Xx6Se…` | 2026-11-03 20:15 UTC | 0.25 | $2,583,618 | +14% | 0.274 | Passed gate; mature pumpswap coin (511h), liq $141k, 1h +0.8%, 24h +6%, 5m +2.1%, buys~sells; not a spike. Only other passes: ANONVOYAGE (vertical +3681% 24h, rejected) and held GATO. |
+| GATO | `HsprHxBR…` | 2026-11-02 05:44 UTC | 0.75 | $8,625,571 | +33% | 1.111 | Mature 68-day coin, $8.7M cap, deepest pool on the board, 96% LP locked; +38% 24h |
+| CBUCKS | `DtcicPCK…` | 2026-11-02 08:30 UTC | 0.50 | $1,799,967 | -13% | 0.433 | CBUCKS: 26-day coin, $1.8M cap, liq $146k, 1h buys 28>20, 1h +2% and 24h +48%, RugCheck no risks, LP 99.99% locked; distinct theme; modest volume noted |
+| three | `FeMbDoX7…` | 2026-11-02 17:24 UTC | 0.50 | $461,979 | +8% | 0.531 | three: 187-day coin, liq $140k, 1h buys 450>179, 1h +3% and 24h +2%, 5m flat, RugCheck no risks, LP 96% locked; distinct theme |
+| HELL | `A75Xx6Se…` | 2026-11-03 20:15 UTC | 0.25 | $2,583,618 | +18% | 0.283 | Passed gate; mature pumpswap coin (511h), liq $141k, 1h +0.8%, 24h +6%, 5m +2.1%, buys~sells; not a spike. Only other passes: ANONVOYAGE (vertical +3681% 24h, rejected) and held GATO. |
 
 ## Closed
 
