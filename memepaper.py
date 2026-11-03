@@ -5,23 +5,40 @@ Paper only. No wallet, no keys, no orders: prices come from the free public
 DexScreener and RugCheck APIs and every fill is simulated.
 
   python3 -I memepaper.py screen <mint> [<mint> ...]   # table of live stats
+  python3 -I memepaper.py gate <mint> [<mint> ...]     # hard safety gates; passes unlock buy
   python3 -I memepaper.py buy <mint> <sol> "<thesis>" [--stop -0.35] [--tp1 1.0]
   python3 -I memepaper.py sell <mint> <fraction 0-1> "<reason>"
   python3 -I memepaper.py mark        # reprice, apply stops/take-profits, write the .md
+
+Rules v2 (from 2026-11-03, Jackson's call after the playbook research): every buy needs a gate
+pass from the last 2 hours, and each buy also opens a same-size position in control.json on a
+random coin from the same gate-pass pool. Gate failures are tracked as shadow rejects for 7 days.
+The review asks whether picks beat the control after costs.
 """
-import json, sys, time, subprocess, datetime, os, fcntl
+import json, sys, time, subprocess, datetime, os, fcntl, random, urllib.parse
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 BOOK = os.path.join(HERE, "book.json")
+CONTROL = os.path.join(HERE, "control.json")
 REPORT = os.path.join(HERE, "book.md")
 
 START_SOL = 10.0
 START_SOL_USD = 94.86   # SOL price when the book opened (2026-11-02 05:44 UTC), for the benchmark
-REVIEW_DATE = "2026-11-30"  # judge the book then, or after 30 closed trades; rules frozen until then
-FEE = 0.0125        # pump.fun/PumpSwap fee ~1% + priority/tip, each side
+V2_START = "2026-11-03 01:30 UTC"  # rules v2 begin; positions opened before are legacy v1
+REVIEW_DATE = "2026-11-30"  # judge v2 then, or after 30 closed v2 trades; rules frozen until then
+FEE = 0.015         # v2: PumpSwap pool fee 0.25-1.2% + terminal/priority 0.5-1%, each side (v1 used 1.25%)
 SLIP_K = 0.5        # extra slippage: size / liquidity * SLIP_K (rough constant-product impact)
-MAX_POS_SOL = 1.0   # no single position above 10% of the starting book
-MAX_OPEN = 6
+MAX_POS_SOL = 0.25  # v2: 2.5% of the starting book (practitioner sizing is 1-5% a play; v1 allowed 1 SOL)
+MAX_OPEN = 6        # open v2 positions; legacy v1 positions don't count
+GATE_TTL_H = 2      # a buy needs a gate pass this recent
+GRAD_POOLS = ("pump_fun_amm", "raydium", "raydium_cpmm")  # graduation pools (PumpSwap; Raydium before 2025)
+LP_LOCK_MIN = 90          # % of the deepest pool's LP burned or locked
+TOP_HOLDER_MAX = 0.05     # any single non-pool wallet
+INSIDER_MAX = 0.15        # wallets RugCheck flags as insiders (bundles, linked wallets)
+COPY_MIN_LIQ = 10_000     # $ liquidity for a same-name pool to count as an earlier original
+CREATOR_MAX = 0.10
+TRANSFER_FEE_MAX = 3      # % Token-2022 transfer fee
+REJECT_DAYS = (1, 3, 7)   # shadow rejects are scored this many days after the gate failed them
 TIME_STOP_H = 48          # flat this long without hitting the take-profit -> sell
 TIME_STOP_MIN_GAIN = 0.20 # "flat" = less than +20% from entry
 MISSES_TO_ZERO = 3        # consecutive checks with no price before a coin counts as rugged
@@ -87,14 +104,116 @@ def rug(mint):
         return None, [f"rugcheck error {e}"]
 
 
-def load():
-    if os.path.exists(BOOK):
-        return json.load(open(BOOK))
-    return {"start_sol": START_SOL, "cash_sol": START_SOL, "positions": {}, "closed": [], "log": []}
+def load(path=BOOK):
+    if os.path.exists(path):
+        b = json.load(open(path))
+    else:
+        b = {"start_sol": START_SOL, "cash_sol": START_SOL, "positions": {}, "closed": [], "log": []}
+    b.setdefault("gate_pass", {})
+    b.setdefault("rejects", {})
+    return b
 
 
-def save(b):
-    json.dump(b, open(BOOK, "w"), indent=2)
+def save(b, path=BOOK):
+    json.dump(b, open(path, "w"), indent=2)
+
+
+def norm(s):
+    return "".join(ch for ch in (s or "").lower() if ch.isalnum())
+
+
+def gate_one(mint, p):
+    """The playbook's hard safety gates (wiki: memecoin-trading-playbook). Returns the failures;
+    an empty list is a pass. Anything that can't be checked counts as a fail."""
+    try:
+        r = get(f"https://api.rugcheck.xyz/v1/tokens/{mint}/report")
+    except Exception as e:
+        return [f"RugCheck unavailable ({e.__class__.__name__})"]
+    fails = []
+    # 1-2. authorities revoked, no risky Token-2022 extension
+    if r.get("mintAuthority") or r.get("freezeAuthority"):
+        fails.append("mint or freeze authority not revoked")
+    ext = r.get("token_extensions") or {}
+    for k in ("permanentDelegate", "transferHook", "nonTransferable"):
+        if ext.get(k):
+            fails.append(f"Token-2022 {k}")
+    if ((r.get("transferFee") or {}).get("pct") or 0) > TRANSFER_FEE_MAX:
+        fails.append(f"transfer fee {r['transferFee']['pct']}%")
+    if r.get("rugged"):
+        fails.append("RugCheck marks it rugged")
+    danger = [x.get("name") for x in r.get("risks") or [] if x.get("level") == "danger"]
+    if danger:
+        fails.append("RugCheck danger: " + ", ".join(danger))
+    # 3. the deepest pool is the graduation pool with its LP locked, not a pool the dev opened
+    mk = [m for m in r.get("markets") or [] if m.get("lp")]
+    if mk:
+        deep = max(mk, key=lambda m: (m["lp"].get("quoteUSD") or 0) + (m["lp"].get("baseUSD") or 0))
+        locked = deep["lp"].get("lpLockedPct") or 0
+        if deep.get("marketType") not in GRAD_POOLS:
+            fails.append(f"deepest pool is {deep.get('marketType')}, not a graduation pool")
+        elif locked < LP_LOCK_MIN:
+            fails.append(f"LP only {locked:.0f}% locked")
+    else:
+        fails.append("no pool data")
+    # 4. supply spread: no big single wallet, insider cluster or creator bag
+    supply = (r.get("token") or {}).get("supply") or 0
+    pools = {m.get("pubkey") for m in mk} | {a for a, v in (r.get("knownAccounts") or {}).items()
+                                              if (v or {}).get("type") == "AMM"}
+    if supply:
+        big = [h for h in r.get("topHolders") or []
+               if h.get("owner") not in pools and h.get("address") not in pools
+               and h.get("amount", 0) / supply > TOP_HOLDER_MAX]
+        if big:
+            fails.append(f"a wallet holds {big[0]['amount'] / supply:.0%} of supply")
+        # RugCheck's per-wallet insider flag; its network totals overlap and include the pool.
+        ins = sum(h.get("amount", 0) for h in r.get("topHolders") or []
+                  if h.get("insider") and h.get("owner") not in pools) / supply
+        if ins > INSIDER_MAX:
+            fails.append(f"insider wallets hold {ins:.0%}")
+        if (r.get("creatorBalance") or 0) / supply > CREATOR_MAX:
+            fails.append(f"creator holds {r['creatorBalance'] / supply:.0%}")
+    else:
+        fails.append("no supply data")
+    # 6. originals only: the earliest real Solana pool with this name must be this mint. Same-name
+    # launches that never got a real pool (dead on the curve) don't count as the original.
+    name = (r.get("tokenMeta") or {}).get("name") or p["baseToken"].get("name")
+    try:
+        same = [q for q in get("https://api.dexscreener.com/latest/dex/search?q=" + urllib.parse.quote(name)).get("pairs") or []
+                if q.get("chainId") == "solana" and q.get("pairCreatedAt") and norm(q["baseToken"].get("name")) == norm(name)
+                and ((q.get("liquidity") or {}).get("usd") or 0) >= COPY_MIN_LIQ]
+        if same:
+            first = min(same, key=lambda q: q["pairCreatedAt"])
+            if first["baseToken"]["address"] != mint:
+                fails.append(f"copycat: an earlier '{name}' exists ({first['baseToken']['address'][:6]})")
+    except Exception as e:
+        fails.append(f"copycat check failed ({e.__class__.__name__})")
+    return fails
+
+
+def gate(mints):
+    """Gate each mint. A pass is remembered for GATE_TTL_H hours (buy needs it, and the pool of
+    passes is what the control arm draws from); a fail becomes a shadow reject, scored later."""
+    b = load()
+    t = time.time()
+    b["gate_pass"] = {m: s for m, s in b["gate_pass"].items() if t - s < GATE_TTL_H * 3600}
+    ps = pairs(mints)
+    for m in mints:
+        p = ps.get(m)
+        if not p:
+            print(f"{m[:6]}  FAIL no pair")
+            continue
+        fails = gate_one(m, p)
+        sym = p["baseToken"]["symbol"]
+        if fails:
+            b["gate_pass"].pop(m, None)
+            if m not in b["rejects"]:
+                b["rejects"][m] = {"symbol": sym, "at": t, "px": float(p["priceUsd"]), "fails": fails, "moves": {}}
+            print(f"{sym[:10]:10} {m[:6]}  FAIL " + "; ".join(fails))
+        else:
+            b["gate_pass"][m] = t
+            warn = "  (warning: paid boost with no profile)" if p.get("boosts") and not p.get("info") else ""
+            print(f"{sym[:10]:10} {m[:6]}  PASS{warn}")
+    save(b)
 
 
 def now():
@@ -128,15 +247,7 @@ def screen(mints):
         print(r)
 
 
-def buy(mint, sol, thesis, stop=-0.35, tp1=1.0):
-    b = load()
-    sol = min(float(sol), MAX_POS_SOL, b["cash_sol"])
-    if len(b["positions"]) >= MAX_OPEN:
-        sys.exit("max open positions reached")
-    if mint in b["positions"]:
-        sys.exit("already holding")
-    su = sol_usd()
-    p = pairs([mint])[mint]
+def _open(b, mint, sol, thesis, stop, tp1, p, su):
     px = float(p["priceUsd"])
     fill = px * (1 + impact(sol, p, su))
     tokens = sol * (1 - FEE) * su / fill
@@ -146,10 +257,35 @@ def buy(mint, sol, thesis, stop=-0.35, tp1=1.0):
         "symbol": p["baseToken"]["symbol"], "opened": now(), "cost_sol": sol, "tokens": tokens,
         "entry_px": fill, "entry_mc": p.get("marketCap"), "peak_px": fill, "stop": stop, "tp1": tp1,
         "tp1_done": False, "thesis": thesis, "rugcheck": score, "risks": risks, "realised_sol": 0.0,
-        "dex": p["dexId"], "url": p.get("url")}
+        "dex": p["dexId"], "url": p.get("url"), "v": 2}
     b["log"].append(f"{now()} BUY {p['baseToken']['symbol']} {sol:.2f} SOL @ ${fill:.8g} (mc ${p.get('marketCap',0):,.0f}): {thesis}")
-    save(b)
     print(b["log"][-1])
+
+
+def buy(mint, sol, thesis, stop=-0.35, tp1=1.0):
+    b = load()
+    sol = min(float(sol), MAX_POS_SOL, b["cash_sol"])
+    if sum(1 for q in b["positions"].values() if q.get("v") == 2) >= MAX_OPEN:
+        sys.exit("max open positions reached")
+    if mint in b["positions"]:
+        sys.exit("already holding")
+    t = time.time()
+    pool = [m for m, s in b["gate_pass"].items() if t - s < GATE_TTL_H * 3600]
+    if mint not in pool:
+        sys.exit(f"no gate pass in the last {GATE_TTL_H}h: run `gate {mint}` first")
+    su = sol_usd()
+    c = load(CONTROL)
+    free = [m for m in pool if m not in c["positions"]]
+    ctl = random.SystemRandom().choice(free) if free else None
+    ps = pairs([mint] + ([ctl] if ctl and ctl != mint else []))
+    _open(b, mint, sol, thesis, stop, tp1, ps[mint], su)
+    save(b)
+    # Control arm: same size and exits, on a coin drawn at random from the same gate passes.
+    if ctl and ctl in ps:
+        _open(c, ctl, sol, f"control for {ps[mint]['baseToken']['symbol']}: random pick from {len(pool)} gate passes", stop, tp1, ps[ctl], su)
+        save(c, CONTROL)
+    else:
+        print("no control entry: every gate pass is already held in the control book")
 
 
 def _sell(b, mint, frac, reason, p, su):
@@ -176,7 +312,7 @@ def sell(mint, frac, reason):
     p = pairs([mint]).get(mint)
     _sell(b, mint, float(frac), reason, p, su)
     save(b)
-    write_report(b, su, {})
+    write_report(b, su, pairs(list(b["positions"])) if b["positions"] else {})
 
 
 def held_hours(pos):
@@ -192,10 +328,33 @@ def mark(quiet=False):
       - time stop: held TIME_STOP_H hours, take-profit never reached and less than
         +TIME_STOP_MIN_GAIN from entry -> sell, the money is better used elsewhere;
       - a coin with no DexScreener pair on MISSES_TO_ZERO checks in a row is marked to zero
-        (one miss is usually an API blip, not a rug)."""
+        (one miss is usually an API blip, not a rug).
+    The control book gets the same rules; shadow rejects get their 1/3/7-day moves recorded."""
     b = load()
+    c = load(CONTROL)
     su = sol_usd()
-    ps = pairs(list(b["positions"])) if b["positions"] else {}
+    t = time.time()
+    due = [m for m, r in b["rejects"].items() if len(r["moves"]) < len(REJECT_DAYS)]
+    want = list(dict.fromkeys(list(b["positions"]) + list(c["positions"]) + due))
+    ps = pairs(want) if want else {}
+    for bk in (b, c):
+        _apply_exits(bk, ps, su)
+    for m in due:
+        r, p = b["rejects"][m], ps.get(m)
+        for d in REJECT_DAYS:
+            if f"{d}d" in r["moves"] or t - r["at"] < d * 86400:
+                continue
+            if p:
+                r["moves"][f"{d}d"] = float(p["priceUsd"]) / r["px"] - 1
+            elif t - r["at"] > (d + 1) * 86400:
+                r["moves"][f"{d}d"] = -1.0  # no pair a day past due: gone
+    c["last_mark"] = b["last_mark"] = now()
+    save(c, CONTROL)
+    save(b)
+    write_report(b, su, ps, c, quiet=quiet)
+
+
+def _apply_exits(b, ps, su):
     for mint in list(b["positions"]):
         pos = b["positions"][mint]
         p = ps.get(mint)
@@ -217,12 +376,28 @@ def mark(quiet=False):
             _sell(b, mint, 1.0, f"trailing stop: 40% off peak, {r:+.0%} from entry", p, su)
         elif not pos["tp1_done"] and held_hours(pos) >= TIME_STOP_H and r < TIME_STOP_MIN_GAIN:
             _sell(b, mint, 1.0, f"time stop: {held_hours(pos):.0f}h held, {r:+.0%}, no take-profit", p, su)
-    b["last_mark"] = now()
-    save(b)
-    write_report(b, su, pairs(list(b["positions"])) if b["positions"] else {}, quiet=quiet)
 
 
-def write_report(b, su, ps, quiet=False):
+def arm(bk, ps, su, v2_only):
+    """(closed count, wins, P&L SOL incl. open marks, SOL deployed) for the v2 test."""
+    cl = [x for x in bk["closed"] if not v2_only or x.get("v") == 2]
+    op = [(m, x) for m, x in bk["positions"].items() if not v2_only or x.get("v") == 2]
+    pnl = sum(x["pnl_sol"] for x in cl)
+    for m, x in op:
+        p = ps.get(m)
+        px = float(p["priceUsd"]) if p else x["entry_px"]
+        pnl += x["tokens"] * px / su + x["realised_sol"] - x["cost_sol"]
+    cost = sum(x["cost_sol"] for x in cl) + sum(x["cost_sol"] for _, x in op)
+    return len(cl), sum(1 for x in cl if x["pnl_sol"] > 0), pnl, cost
+
+
+def median(xs):
+    xs = sorted(xs)
+    return (xs[len(xs) // 2] + xs[(len(xs) - 1) // 2]) / 2 if xs else None
+
+
+def write_report(b, su, ps, c=None, quiet=False):
+    c = c or load(CONTROL)
     open_val = 0.0
     lines = []
     for mint, pos in b["positions"].items():
@@ -237,6 +412,10 @@ def write_report(b, su, ps, quiet=False):
     closed = [f"| {c['symbol']} | {c['opened']} → {c['closed']} | {c['cost_sol']:.2f} | {c['pnl_sol']:+.3f} ({c['pnl_pct']:+.0%}) | {c['exit_reason']} |"
               for c in b["closed"]]
     wins = sum(1 for c in b["closed"] if c["pnl_sol"] > 0)
+    pn, pw, pp, pc = arm(b, ps, su, True)
+    cn, cw, cp, cc = arm(c, ps, su, False)
+    meds = [(d, median([r["moves"][f"{d}d"] for r in b["rejects"].values() if f"{d}d" in r["moves"]])) for d in REJECT_DAYS]
+    rej = ", ".join(f"{d}d {m:+.0%}" if m is not None else f"{d}d n/a" for d, m in meds)
     md = f"""---
 title: Memecoin paper book
 created: 2026-11-01
@@ -253,7 +432,20 @@ open {len(b['positions'])} · closed {len(b['closed'])} ({wins} won) · SOL ${su
 **Benchmark (vs just holding SOL): {equity / b['start_sol'] - 1:+.1%}.** The book is counted in SOL, so its SOL
 return *is* its edge over holding SOL. In dollars: ${equity * su:,.0f} vs ${b['start_sol'] * START_SOL_USD:,.0f} at the start
 ({equity * su / (b['start_sol'] * START_SOL_USD) - 1:+.1%}); SOL itself moved {su / START_SOL_USD - 1:+.1%}.
-Review on {REVIEW_DATE} or after 30 closed trades ({len(b['closed'])}/30), rules unchanged until then.
+Review on {REVIEW_DATE} or after 30 closed v2 trades ({pn}/30), rules unchanged until then.
+
+## v2 test (from {V2_START})
+
+Does picking beat a random coin that passed the same gates, after costs? Each pick opens a same-size
+control position on a random gate pass (`control.json`, same mechanical exits, no judgement exits).
+
+| Arm | Closed | Won | P&L SOL (incl. open) | Return on SOL deployed |
+|---|---|---|---|---|
+| Picks | {pn} | {pw} | {pp:+.3f} | {pp / pc if pc else 0:+.1%} |
+| Control | {cn} | {cw} | {cp:+.3f} | {cp / cc if cc else 0:+.1%} |
+
+Shadow rejects (gate failures, scored as if bought): {len(b['rejects'])} tracked; median move {rej}.
+Legacy v1 positions (opened before v2, 1.25% fee model, sizes to 1 SOL) stay under the same exits and are left out of this table.
 
 ## Open positions
 
@@ -285,6 +477,8 @@ if __name__ == "__main__":
     fcntl.flock(lockf, fcntl.LOCK_EX)  # released when the process exits
     if cmd == "screen":
         screen(a[1:])
+    elif cmd == "gate":
+        gate(a[1:])
     elif cmd == "buy":
         kw = {k.lstrip("-"): float(v) for k, v in zip(a[4::2], a[5::2])}
         buy(a[1], a[2], a[3], **kw)
