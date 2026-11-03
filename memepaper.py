@@ -104,7 +104,8 @@ def rug(mint):
         return None, [f"rugcheck error {e}"]
 
 
-def load(path=BOOK):
+def load(path=None):
+    path = path or BOOK  # looked up at call time, so tests can point BOOK at a temp folder
     if os.path.exists(path):
         b = json.load(open(path))
     else:
@@ -114,8 +115,8 @@ def load(path=BOOK):
     return b
 
 
-def save(b, path=BOOK):
-    json.dump(b, open(path, "w"), indent=2)
+def save(b, path=None):
+    json.dump(b, open(path or BOOK, "w"), indent=2)
 
 
 def norm(s):

@@ -1,0 +1,23 @@
+{
+  "cash_sol": 9.629284858,
+  "open": [
+    "FLAT"
+  ],
+  "closed": [
+    [
+      "DOWN",
+      "stop-loss at -38%",
+      -0.099645398
+    ],
+    [
+      "GONE",
+      "no pair found on 3 checks in a row: treated as rugged, marked to zero",
+      -0.25
+    ],
+    [
+      "UP",
+      "trailing stop: 40% off peak, +85% from entry",
+      0.228930256
+    ]
+  ]
+}

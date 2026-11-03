@@ -27,6 +27,9 @@ every rule against the data.
   only. Never hand-edit.
 - `PLAYBOOK.md`: the research behind these rules. Read it before judging a coin.
 - `sync.sh`: the Mac's 2-minute watcher (pull, mark, push). Not for the cloud run.
+- `tests/`: offline tests (fixtures, no network). Run `python3 -I -m unittest discover -s tests -t .`
+  after any change to `memepaper.py`; GitHub runs them on every code push. The cloud run never
+  edits code, so it never needs them.
 
 ## Costs (in the script)
 1.5% fee each side (PumpSwap pool fee plus terminal and priority fees) and a slippage charge
