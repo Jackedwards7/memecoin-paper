@@ -1,19 +1,19 @@
 ---
 title: Memecoin paper book
 created: 2026-11-01
-updated: 2026-11-02
+updated: 2026-11-03
 area: trading
 ---
 
 *Paper only: simulated fills from live DexScreener prices, 1.25% fee each side plus a size/liquidity
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
-**Equity 9.494 SOL** (start 10.0 SOL, -5.1%) · cash 7.268 SOL ·
-open 4 · closed 3 (0 won) · SOL $92.23 · marked 2026-11-03 00:28 UTC
+**Equity 9.510 SOL** (start 10.0 SOL, -4.9%) · cash 7.268 SOL ·
+open 4 · closed 3 (0 won) · SOL $92.28 · marked 2026-11-03 00:31 UTC
 
-**Benchmark (vs just holding SOL): -5.1%.** The book is counted in SOL, so its SOL
-return *is* its edge over holding SOL. In dollars: $876 vs $949 at the start
-(-7.7%); SOL itself moved -2.8%.
+**Benchmark (vs just holding SOL): -4.9%.** The book is counted in SOL, so its SOL
+return *is* its edge over holding SOL. In dollars: $878 vs $949 at the start
+(-7.5%); SOL itself moved -2.7%.
 Review on 2026-11-30 or after 30 closed trades (3/30), rules unchanged until then.
 
 ## Open positions
@@ -21,9 +21,9 @@ Review on 2026-11-30 or after 30 closed trades (3/30), rules unchanged until the
 | Coin | Mint | Opened | Cost SOL | Entry mcap | Move | Value SOL (incl. realised) | Thesis |
 |---|---|---|---|---|---|---|---|
 | CHOO | `EJAxERvK…` | 2026-11-02 05:44 UTC | 0.75 | $1,989,964 | -11% | 0.677 | 11-day runner, +123% 24h with buys > sells, holders spread, 72% LP locked |
-| GATO | `HsprHxBR…` | 2026-11-02 05:44 UTC | 0.75 | $8,625,571 | +40% | 1.145 | Mature 68-day coin, $8.7M cap, deepest pool on the board, 96% LP locked; +38% 24h |
-| CBUCKS | `DtcicPCK…` | 2026-11-02 08:30 UTC | 0.50 | $1,799,967 | -1% | 0.499 | CBUCKS: 26-day coin, $1.8M cap, liq $146k, 1h buys 28>20, 1h +2% and 24h +48%, RugCheck no risks, LP 99.99% locked; distinct theme; modest volume noted |
-| three | `FeMbDoX7…` | 2026-11-02 17:24 UTC | 0.50 | $461,979 | +4% | 0.515 | three: 187-day coin, liq $140k, 1h buys 450>179, 1h +3% and 24h +2%, 5m flat, RugCheck no risks, LP 96% locked; distinct theme |
+| GATO | `HsprHxBR…` | 2026-11-02 05:44 UTC | 0.75 | $8,625,571 | +42% | 1.152 | Mature 68-day coin, $8.7M cap, deepest pool on the board, 96% LP locked; +38% 24h |
+| CBUCKS | `DtcicPCK…` | 2026-11-02 08:30 UTC | 0.50 | $1,799,967 | -2% | 0.492 | CBUCKS: 26-day coin, $1.8M cap, liq $146k, 1h buys 28>20, 1h +2% and 24h +48%, RugCheck no risks, LP 99.99% locked; distinct theme; modest volume noted |
+| three | `FeMbDoX7…` | 2026-11-02 17:24 UTC | 0.50 | $461,979 | +7% | 0.531 | three: 187-day coin, liq $140k, 1h buys 450>179, 1h +3% and 24h +2%, 5m flat, RugCheck no risks, LP 96% locked; distinct theme |
 
 ## Closed
 
