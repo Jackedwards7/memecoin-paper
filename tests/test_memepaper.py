@@ -1413,7 +1413,7 @@ class ScoutEnv(CycleEnv):
         at = int(self.t) - 600
         i = x_id(at, self.n)
         if real:
-            self.xposts[str(i)] = {"user": {"screen_name": handle}, "text": words + " and more"}
+            self.xposts[str(i)] = {"user": {"screen_name": handle}, "text": words + " Apump and more"}
         return {"url": f"https://x.com/{handle}/status/{i}", "handle": handle, "followers": followers, "account_age_days": age,
                 "posted_at": iso(at), "matched": "ticker", "first_words": words}
 
@@ -1585,7 +1585,7 @@ class TestScoutTrust(ScoutEnv):
         self.assertEqual(self.scout()["clean"], 1)
 
     def test_contradicted_author_or_text_fails(self):
-        for change in ({"user": {"screen_name": "someoneelse"}, "text": "hello gato"}, {"user": {"screen_name": "alice"}, "text": "nothing like it"}):
+        for change in ({"user": {"screen_name": "someoneelse"}, "text": "hello gato Apump"}, {"user": {"screen_name": "alice"}, "text": "nothing like it Apump"}):
             ps = [self.post("alice"), self.post("alice", words="another post"), self.post("alice", words="third")]
             n = ps[0]["url"].rsplit("/", 1)[1]
             self.xposts[n] = change
@@ -1593,12 +1593,35 @@ class TestScoutTrust(ScoutEnv):
             self.assertEqual(self.scout()["clean"], 0, change)
             self.t += 60
 
+    def verdict(self, x_answer, words="hello gato", handle="alice", symbol="GATO"):
+        p = self.post(handle, words=words)
+        self.xposts[p["url"].rsplit("/", 1)[1]] = x_answer
+        return mp.scout_verify([({"mint": "Apump", "symbol": symbol}, p)])
+
+    def test_a_common_word_is_not_the_coin(self):
+        self.assertEqual(self.verdict({"user": {"screen_name": "alice"}, "text": "hello gato meu amor"}), (0, 0, 1))
+        self.assertEqual(self.verdict({"user": {"screen_name": "alice"}, "text": "hello gato $GATOR"}), (0, 0, 1))
+
+    def test_the_cashtag_or_mint_is_the_coin(self):
+        self.assertEqual(self.verdict({"user": {"screen_name": "alice"}, "text": "hello gato $gato!"}), (1, 0, 0))
+        self.assertEqual(self.verdict({"user": {"screen_name": "alice"}, "text": "hello gato Apump"}), (1, 0, 0))
+        link = {"urls": [{"expanded_url": "https://dexscreener.com/solana/Apump"}]}
+        self.assertEqual(self.verdict({"user": {"screen_name": "alice"}, "text": "hello gato https://t.co/x", "entities": link}), (1, 0, 0))
+
+    def test_a_retweet_is_checked_against_the_account_it_quotes(self):
+        x = {"user": {"screen_name": "orig"}, "text": "hello gato $GATO"}
+        self.assertEqual(self.verdict(x, "RT @orig: hello gato"), (1, 0, 0))
+        self.assertEqual(self.verdict(x, "RT @other: hello gato"), (0, 0, 1))
+
+    def test_a_tombstone_counts_as_not_found(self):
+        self.assertEqual(self.verdict({"__typename": "TweetTombstone"}), (0, 1, 0))
+
     def test_sample_is_capped(self):
         looked = []
         real = self.fake_get
         ps = [self.post(f"a{i}") for i in range(12)]
         with mock.patch.object(mp, "get", lambda u: looked.append(u) or real(u)):
-            mp.scout_verify(ps)
+            mp.scout_verify([(self.coin_x("Apump", ps), p) for p in ps])
         self.assertEqual(len(looked), mp.SCOUT_SAMPLE)
 
     def test_a_quiet_run_keeps_trust_as_it_is(self):

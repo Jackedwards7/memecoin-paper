@@ -980,11 +980,20 @@ def scout_check(d):
     return bad
 
 
-def scout_verify(posts):
-    """Look up a random sample on X's public embed data: does each post exist, by that account,
-    saying that? Returns (found, not found, contradicted). Follower counts aren't in that data."""
+def _on_topic(c, r):
+    """Does this X post really mention the coin? Common tickers are common words ($GATO is "gato",
+    Spanish for cat), so the post must hold the mint, in its text or a link, or the exact cashtag."""
+    text = (r.get("text") or "") + " ".join(u.get("expanded_url") or "" for u in (r.get("entities") or {}).get("urls") or [])
+    return c["mint"] in text or re.search(rf"\${re.escape(str(c['symbol']))}\b", text, re.I) is not None
+
+
+def scout_verify(pairs):
+    """Look up a random sample of (coin, post) on X's public embed data: does each post exist, by
+    that account, saying that, about that coin? A retweet comes back as the original, so it's
+    compared with the account it quotes. Returns (found, not found, contradicted). Follower counts
+    aren't in that data."""
     found, missing, wrong = 0, 0, 0
-    for p in random.sample(posts, min(SCOUT_SAMPLE, len(posts))):
+    for c, p in random.sample(pairs, min(SCOUT_SAMPLE, len(pairs))):
         n = _X_URL.match(p["url"])[2]
         try:
             r = get(f"https://cdn.syndication.twimg.com/tweet-result?id={n}&token=a")
@@ -992,9 +1001,11 @@ def scout_verify(posts):
             missing += 1
             continue
         who = ((r or {}).get("user") or {}).get("screen_name")
+        rt = re.match(r"RT @(\w+): ?(.*)", p["first_words"], re.S)
+        author, words = (rt[1], rt[2]) if rt else (p["handle"], p["first_words"])
         if not who:
             missing += 1
-        elif who.lower() == p["handle"].lower() and norm(p["first_words"])[:20] in norm(r.get("text")):
+        elif who.lower() == author.lower() and norm(words)[:20] in norm(r.get("text")) and _on_topic(c, r):
             found += 1
         else:
             wrong += 1
@@ -1046,7 +1057,7 @@ def _judge(s, d):
     if bad:
         s.update(clean=0, verdict="rejected: " + bad[0])
         return
-    posts = [p for c in d["coins"] for p in c["posts"]]
+    posts = [(c, p) for c in d["coins"] for p in c["posts"]]
     before = s["coins"]
     s.update(run_ts=_utc(d["run_at"]), coins={c["mint"]: _x_metrics(c["posts"], before.get(c["mint"]))
                                               for c in d["coins"] if c["status"] != "failed"})

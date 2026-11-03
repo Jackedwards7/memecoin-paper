@@ -127,7 +127,8 @@ and the rows are 15 minutes apart, so an exit rule can't be replayed exactly fro
 A Grok bot, Scout, reads `grok/watchlist.txt` on `state` every 4 hours, copies facts about recent X
 posts into a file on the private desk and never touches this repo. Each cycle the loop reads the
 newest file. It checks the shape, checks each post's link number against its stated time, looks up 5
-random posts on X, and keeps only counts (`scout.json`). A failed check resets trust to zero. The X
+random posts on X (each must exist, match its account and text, and hold the mint or exact cashtag),
+and keeps only counts (`scout.json`). A failed check resets trust to zero. The X
 arms act only after 3 clean files in a row and on data under 5 hours old; otherwise they do nothing
 and no other arm is affected. Follower counts can't be verified this way, so treat them as Scout's
 reading. The report's "X scout" section is information for your judgement, never a gate: influencer
