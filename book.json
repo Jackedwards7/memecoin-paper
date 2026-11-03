@@ -47,7 +47,7 @@
       "tokens": 99101.8282488034,
       "entry_px": 0.0004622530765526329,
       "entry_mc": 461979,
-      "peak_px": 0.0005252,
+      "peak_px": 0.0005386,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -172,11 +172,11 @@
     "2026-11-03 00:28 UTC SELL 100% WASTED -> 0.306 SOL @ $0.0008665: stop-loss at -37%",
     "2026-11-03 04:22 UTC SELL 100% CHOO -> 0.518 SOL @ $0.001389: stop-loss at -31%"
   ],
-  "last_mark": "2026-11-03 08:14 UTC",
+  "last_mark": "2026-11-03 12:18 UTC",
   "gate_pass": {
-    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1793693677.2540336,
-    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1793693677.2540336,
-    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1793693677.2540336
+    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1793708326.388025,
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1793708326.388025,
+    "31SYoqWFhx3i9UsfnoXTjFp4ZwJA8F8UPrMxymfDpump": 1793708326.388025
   },
   "rejects": {
     "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
