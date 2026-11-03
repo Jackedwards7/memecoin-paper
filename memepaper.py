@@ -28,7 +28,7 @@ pass from the last 2 hours, and each buy also opens a same-size position in cont
 random coin from the same gate-pass pool. Gate failures are tracked as shadow rejects for 7 days.
 The review asks whether picks beat the control after costs.
 """
-import json, sys, time, subprocess, datetime, os, fcntl, random, urllib.parse, copy, gzip, glob
+import json, sys, time, subprocess, datetime, os, fcntl, random, urllib.parse, copy, gzip, glob, re
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 BOOK = os.path.join(HERE, "book.json")
@@ -87,6 +87,19 @@ GATE_STOP_AFTER = 3       # checks that couldn't finish in one cycle before gati
 CANT_CHECK = ("RugCheck unavailable", "copycat check failed")  # an outage, not a verdict on the coin
 ARM_CASH_FLOOR = 5.0      # the same floor Claude's entries have
 ARM_COOLDOWN_H = 24       # an arm won't re-buy a coin it closed this recently
+# The Grok X scout writes one file per run to the private desk; the loop reads the newest. Nothing
+# in a file is trusted: it's shape-checked, a sample of its posts is looked up on X, and the X arms
+# only act after SCOUT_TRUST_RUNS clean files in a row. Any bad file resets that to zero.
+DESK_SCOUT = "https://api.github.com/repos/Jackedwards7/lucent-bot-desk/contents/from-bots/scout/memecoin"
+SCOUT_MAX_AGE_H = 5       # a run every 4 hours, plus lateness; older data isn't used
+SCOUT_TRUST_RUNS = 3
+SCOUT_SAMPLE = 5          # posts looked up per file
+SCOUT_TIME_SLACK_S = 120
+SCOUT_MAX_COINS, SCOUT_MAX_POSTS = 15, 20
+X_NEW_DAYS = 30           # an account younger than this is "new"
+X_SMALL_FOLLOWERS = 10_000
+X_KOL_FOLLOWERS = 100_000
+X_KOL_BURST = 3           # large accounts on one coin in a window, and more than last window
 LOCK = "/tmp/memepaper.lock"  # the 2-minute watcher and manual trades never write at once
 ORDERS = None             # state mode: the orders inbox folder. None = legacy mode (books beside the code)
 BOOKS = None              # state mode: the folder of arm books
@@ -718,7 +731,20 @@ VARIANTS = {
     "v-low-bundle": {"rule": lambda r, wk: _momentum(r) and (r["gate"].get("insider") is not None)
                                            and r["gate"]["insider"] <= 0.05, "rank": "vol_h24"},
     "v-velocity":   {"rule": lambda r, wk: _momentum(r), "rank": "avg_trade"},
+    "v-x-organic":  {"rule": lambda r, wk: _momentum(r) and _x_organic(r), "rank": "vol_h24"},
+    "v-x-exit":     {"rule": lambda r, wk: _momentum(r) and _x_ok(r), "rank": "vol_h24", "x_exit": True},
 }
+
+
+def _x_ok(r):
+    """X data the arms may use: a trusted scout, recent, with this coin in it."""
+    return bool(r.get("x") and r["x"]["trusted"])
+
+
+def _x_organic(r):
+    """Posts rising, mostly from small accounts over X_NEW_DAYS old."""
+    x = r.get("x") or {}
+    return _x_ok(r) and x["posts"] > x["before"] and (x["small_share"] or 0) >= 0.5
 
 
 def _passed(r):
@@ -787,7 +813,7 @@ def make_row(mint, p, gate_, t):
             "buys_h24": h24.get("buys") or 0, "sells_h24": h24.get("sells") or 0, "trades_h24": trades,
             "avg_trade": round((vol.get("h24") or 0) / trades, 2) if trades else 0,
             "m5": pc.get("m5") or 0, "h1": pc.get("h1") or 0, "h6": pc.get("h6") or 0, "h24": pc.get("h24") or 0,
-            "eligible": age >= UNIVERSE_MIN_AGE_H and _liq(p) >= UNIVERSE_MIN_LIQ, "gate": gate_, "arms": []}
+            "eligible": age >= UNIVERSE_MIN_AGE_H and _liq(p) >= UNIVERSE_MIN_LIQ, "gate": gate_, "arms": [], "x": None}
 
 
 def snapshot(t):
@@ -870,25 +896,212 @@ def _roll_data(path):
             os.remove(f)
 
 
+def _desk(url, raw=False):
+    """Read the private desk. The token reaches curl on stdin, so it's never in a process list or log."""
+    kind = "raw+json" if raw else "json"
+    cfg = (f'header = "Authorization: Bearer {os.environ["DESK_TOKEN"]}"\n'
+           f'header = "Accept: application/vnd.github.{kind}"\n')
+    out = subprocess.run(["curl", "-sf", "-m", "20", "-A", "memepaper/1.0", "-K", "-", url],
+                         input=cfg, capture_output=True, text=True, check=True).stdout
+    return json.loads(out)
+
+
+def _utc(s):
+    return datetime.datetime.strptime(s, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=datetime.timezone.utc).timestamp()
+
+
+def _post_ts(n):
+    """An X post's number carries the time it was posted."""
+    return ((n >> 22) + 1288834974657) / 1000
+
+
+def _whole(x):
+    return x is None or (type(x) is int and x >= 0)
+
+
+_X_URL = re.compile(r"^https://(?:x|twitter)\.com/(\w{1,15})/status/(\d{15,20})$")
+_X_POST = {"url", "handle", "followers", "account_age_days", "posted_at", "matched", "first_words"}
+
+
+def _check_post(p, run, where):
+    if not isinstance(p, dict) or set(p) != _X_POST:
+        return [f"{where}: wrong fields"]
+    m = _X_URL.match(str(p["url"]))
+    if not m:
+        return [f"{where}: bad link"]
+    bad = []
+    if m[1].lower() != str(p["handle"]).lower():
+        bad.append(f"{where}: handle isn't the one in the link")
+    if not _whole(p["followers"]) or not _whole(p["account_age_days"]):
+        bad.append(f"{where}: followers and account age must be whole numbers or null")
+    if p["matched"] not in ("mint", "ticker") or not isinstance(p["first_words"], str) or len(p["first_words"]) > 60:
+        bad.append(f"{where}: bad matched or first_words")
+    try:
+        at = _utc(p["posted_at"])
+    except (TypeError, ValueError):
+        return bad + [f"{where}: bad time"]
+    if abs(_post_ts(int(m[2])) - at) > SCOUT_TIME_SLACK_S:
+        bad.append(f"{where}: the link's number disagrees with the stated time, so it wasn't copied from X")
+    if not run - 4 * 3600 - SCOUT_TIME_SLACK_S <= at <= run + SCOUT_TIME_SLACK_S:
+        bad.append(f"{where}: outside the 4-hour window")
+    return bad
+
+
+def scout_check(d):
+    """Everything wrong with a scout file's shape, as a list. Empty means it's the fixed shape."""
+    if not isinstance(d, dict) or set(d) != {"scout", "run_at", "watchlist_at", "window_hours", "coins", "errors"}:
+        return ["top-level fields are wrong"]
+    try:
+        run = _utc(d["run_at"])
+    except (TypeError, ValueError):
+        return ["bad run_at"]
+    if d["scout"] != "v1" or d["window_hours"] != 4:
+        return ["scout must be v1 and window_hours 4"]
+    if not isinstance(d["coins"], list) or len(d["coins"]) > SCOUT_MAX_COINS or not isinstance(d["errors"], list):
+        return [f"coins must be a list of at most {SCOUT_MAX_COINS}, errors a list"]
+    if not d["coins"] and not (len(d["errors"]) == 1 and d["errors"][0] in ("cannot read", "incomplete", "empty")):
+        return ["no coins needs exactly one failure reason"]
+    bad, seen = [], set()
+    for c in d["coins"]:
+        if not isinstance(c, dict) or set(c) != {"mint", "symbol", "status", "posts"} or not isinstance(c["posts"], list):
+            bad.append("coin fields are wrong")
+            continue
+        where = str(c["symbol"])[:12]
+        if c["status"] not in ("ok", "none", "failed") or (c["status"] == "ok") != bool(c["posts"]):
+            bad.append(f"{where}: status doesn't fit its posts")
+        if len(c["posts"]) > SCOUT_MAX_POSTS:
+            bad.append(f"{where}: over {SCOUT_MAX_POSTS} posts")
+        for i, p in enumerate(c["posts"], 1):
+            bad += _check_post(p, run, f"{where} post {i}")
+            if isinstance(p, dict):
+                if (c["mint"], str(p.get("url"))) in seen:
+                    bad.append(f"{where} post {i}: repeated")
+                seen.add((c["mint"], str(p.get("url"))))
+    return bad
+
+
+def scout_verify(posts):
+    """Look up a random sample on X's public embed data: does each post exist, by that account,
+    saying that? Returns (found, not found, contradicted). Follower counts aren't in that data."""
+    found, missing, wrong = 0, 0, 0
+    for p in random.sample(posts, min(SCOUT_SAMPLE, len(posts))):
+        n = _X_URL.match(p["url"])[2]
+        try:
+            r = get(f"https://cdn.syndication.twimg.com/tweet-result?id={n}&token=a")
+        except Exception:
+            missing += 1
+            continue
+        who = ((r or {}).get("user") or {}).get("screen_name")
+        if not who:
+            missing += 1
+        elif who.lower() == p["handle"].lower() and norm(p["first_words"])[:20] in norm(r.get("text")):
+            found += 1
+        else:
+            wrong += 1
+    return found, missing, wrong
+
+
+def _x_metrics(posts, before):
+    """The counts the arms and the report use. Scout only copies; every number here is ours."""
+    known = [p for p in posts if p["followers"] is not None and p["account_age_days"] is not None]
+    dated = [p for p in posts if p["account_age_days"] is not None]
+    small = [p for p in known if p["followers"] < X_SMALL_FOLLOWERS and p["account_age_days"] >= X_NEW_DAYS]
+    kol = {p["handle"].lower() for p in posts if (p["followers"] or 0) >= X_KOL_FOLLOWERS}
+    words = [norm(p["first_words"])[:40] for p in posts]
+    before = before or {"posts": len(posts), "kol": len(kol)}  # no earlier run: nothing has risen
+    return {"posts": len(posts), "before": before["posts"], "accounts": len({p["handle"].lower() for p in posts}),
+            "new_share": round(sum(p["account_age_days"] < X_NEW_DAYS for p in dated) / len(dated), 3) if dated else None,
+            "small_share": round(len(small) / len(known), 3) if known else None,
+            "kol": len(kol), "kol_before": before["kol"], "repeats": len(words) - len(set(words))}
+
+
+def scout_update(t):
+    """Fetch the newest scout file if there's a new one, judge it and keep only numbers. Returns the
+    metrics by mint with `trusted` set, for the rows. A failure here only leaves the X arms idle."""
+    path = os.path.join(STATE, "scout.json")
+    s = _jload(path, {"file": None, "run_ts": 0, "clean": 0, "verdict": "no file yet", "coins": {}})
+    was = s["clean"] >= SCOUT_TRUST_RUNS
+    if not os.environ.get("DESK_TOKEN"):
+        s["verdict"] = "not connected: no DESK_TOKEN"
+    else:
+        try:
+            names = [e["name"] for e in _desk(DESK_SCOUT) if e["name"].endswith(".json")]
+            new = max(names, default=None)
+            if new and new != s["file"]:
+                s["file"] = new
+                _judge(s, _desk(f"{DESK_SCOUT}/{urllib.parse.quote(new)}", raw=True))
+        except Exception as e:  # the folder not existing yet is an error too; nothing changes
+            s["last_error"] = f"{now()} {e.__class__.__name__}"
+    fresh = t - s["run_ts"] < SCOUT_MAX_AGE_H * 3600
+    trusted = s["clean"] >= SCOUT_TRUST_RUNS
+    if trusted != was:
+        notify("memepaper: X scout " + ("trusted, X arms on" if trusted else "not trusted, X arms off"), s["verdict"], "default", "mag")
+    _jsave(path, s)
+    return {m: {**x, "trusted": trusted and fresh} for m, x in s["coins"].items()} if fresh else {}
+
+
+def _judge(s, d):
+    """Update the scout state `s` with a new file: the verdict, the clean count and the metrics."""
+    bad = scout_check(d)
+    if bad:
+        s.update(clean=0, verdict="rejected: " + bad[0])
+        return
+    posts = [p for c in d["coins"] for p in c["posts"]]
+    before = s["coins"]
+    s.update(run_ts=_utc(d["run_at"]), coins={c["mint"]: _x_metrics(c["posts"], before.get(c["mint"]))
+                                              for c in d["coins"] if c["status"] != "failed"})
+    if not posts:  # a quiet run or a failure file proves nothing either way
+        s["verdict"] = "no posts: " + ", ".join(d["errors"]) if d["errors"] else "no posts"
+        return
+    found, missing, wrong = scout_verify(posts)
+    if wrong or found < missing:
+        s.update(clean=0, verdict=f"not verified: {found} posts found on X, {missing} not found, {wrong} contradicted")
+    else:
+        s["clean"] += 1
+        s["verdict"] = f"clean: {found} posts found on X, {missing} not found"
+
+
+def write_watchlist(rows, t):
+    """What Scout searches: coins held in any book, then gate passes by 24h volume. The file is
+    public, so Scout needs no token, and symbols are cut to letters and digits."""
+    coins = {m: x["symbol"] for p in [BOOK, CONTROL] + other_arms() for m, x in load(p)["positions"].items()}
+    for r in sorted((r for r in rows if _passed(r)), key=lambda r: -r["vol_h24"]):
+        coins.setdefault(r["mint"], r["symbol"])
+    d = os.path.join(STATE, "grok")
+    os.makedirs(d, exist_ok=True)
+    at = datetime.datetime.fromtimestamp(t, datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    lines = [f"{m} {''.join(ch for ch in str(y) if ch.isalnum())[:12] or 'UNKNOWN'}" for m, y in list(coins.items())[:SCOUT_MAX_COINS]]
+    with open(os.path.join(d, "watchlist.txt"), "w") as f:
+        f.write("\n".join([f"WATCHLIST {at}", *lines, "END"]) + "\n")
+
+
 def cycle():
-    """Every CYCLE_MIN: snapshot the universe, record gate results, let each arm buy at most one
-    coin, append it all to the dataset. Returns the number of coins recorded."""
+    """Every CYCLE_MIN: snapshot the universe, record gate results, read the X scout, let each arm
+    sell on X signals and buy at most one coin, append it all to the dataset. Returns the coins recorded."""
     t = round(clock())
     rows, ps, results = snapshot(t)
     if results:
         b = load()
         _ingest_gate(b, results, t)
         save(b)
+    x = scout_update(t)
+    for r in rows:
+        r["x"] = x.get(r["mint"])
     week, su, views = week_ago(t), sol_usd(), {}
     for name, a in VARIANTS.items():
         path = os.path.join(BOOKS, name + ".json")
         bk = load(path)
+        for m in list(bk["positions"]) if a.get("x_exit") else []:
+            c = x.get(m)
+            if c and c["trusted"] and m in ps and c["kol"] >= X_KOL_BURST and c["kol"] > c["kol_before"]:
+                _sell(bk, m, 1.0, "x exit: large accounts piling in", ps[m], su)
         v = views[name] = view(bk, t)
         r = pick(name, rows, v, week)
         if r:
             _open(bk, r["mint"], MAX_POS_SOL, f"{name} rule", a.get("stop", -0.35), a.get("tp1", 1.0), ps[r["mint"]], su)
             r["arms"].append(name)
         save(bk, path)
+    write_watchlist(rows, t)
     path = _data_path(t)
     with open(path, "a") as f:
         f.write(json.dumps({"cycle": t, "views": views, "week": {r["mint"]: week[r["mint"]] for r in rows if r["mint"] in week}}) + "\n")
@@ -1173,6 +1386,18 @@ def write_report(b, su, ps, c=None, quiet=False):
     arms_md = ("\n## Mechanical arms\n\nSame gate, size, costs and exit code as the picks; rules in `CLAUDE.md`. Judged against the "
                "control, and only after enough closed trades.\n\n| Arm | Closed | Won | Open | P&L SOL (incl. open) | Return on SOL deployed |\n"
                "|---|---|---|---|---|---|\n" + "\n".join(arm_rows) + "\n" if arm_rows else "")
+    sc = _jload(os.path.join(STATE, "scout.json"), None) if STATE else None
+    scout_md = ""
+    if sc:
+        names = {r: x for bk in [b, *[load(p) for p in other_arms()]] for r, x in bk["positions"].items()}
+        xrows = [f"| {names.get(m, {}).get('symbol', m[:6])} | {x['posts']} | {x['before']} | {x['accounts']} | "
+                 f"{'?' if x['small_share'] is None else format(x['small_share'], '.0%')} | "
+                 f"{'?' if x['new_share'] is None else format(x['new_share'], '.0%')} | {x['kol']} | {x['repeats']} |"
+                 for m, x in sc["coins"].items()]
+        scout_md = (f"\n## X scout\n\n{sc['verdict']}. Clean files in a row: {sc['clean']} of {SCOUT_TRUST_RUNS} needed for the X arms. "
+                    "Facts copied by Grok and counted by code: information only, never a gate.\n"
+                    + ("\n| Coin | Posts (4h) | Last run | Accounts | Small accounts | New accounts | Large accounts | Repeats |\n"
+                       "|---|---|---|---|---|---|---|---|\n" + "\n".join(xrows) + "\n" if xrows else ""))
     orders_md = ("\n## Orders (last 15)\n\n" + "\n".join(f"- {x['at']} `{x['id']}`: {x['result']}" for x in b["applied"][-15:]) + "\n"
                  if b.get("applied") else "")
     md = f"""---
@@ -1209,7 +1434,7 @@ If every swap were sandwiched at the ${SANDWICH_STRESS_USD:.0f} median: picks {p
 **Gate value** (raw price moves, no costs; the gate earns its keep if passes beat rejects):
 passes {len(b['passes'])} tracked, median {pas} · rejects {len(b['rejects'])} tracked, median {rej}.
 Legacy v1 positions (opened before v2, 1.25% fee model, sizes to 1 SOL) stay under the same exits and are left out of this table.
-{arms_md}
+{arms_md}{scout_md}
 ## Open positions
 
 | Coin | Mint | Opened | Cost SOL | Entry mcap | Move | Value SOL (incl. realised) | Thesis |

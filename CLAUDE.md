@@ -89,7 +89,7 @@ Size **0.25 SOL** (the script caps it). Steps:
 No buy is a fine outcome. Cash is a position.
 
 ## Arms and dataset (Tier 1 phase 3)
-The hot loop runs eight mechanical arms beside your picks, in `books/v-*.json`, so rule sets
+The hot loop runs ten mechanical arms beside your picks, in `books/v-*.json`, so rule sets
 compete on the same coins. You never trade them. Same gate, 0.25 SOL size, costs and exit code as
 the picks; each buys at most one coin per 15-minute cycle, keeps cash above 5 SOL, holds at most 6
 and waits 24 hours before re-buying a coin it closed. Stop −35% and take-profit +100% unless listed.
@@ -106,9 +106,10 @@ and waits 24 hours before re-buying a coin it closed. Stop −35% and take-profi
 | `v-dip` | above its price 7 days ago, 24h change −35% to −15%, 1h buys > sells | 24h volume |
 | `v-low-bundle` | momentum, flagged insiders at most 5% | 24h volume |
 | `v-velocity` | momentum | average trade size |
+| `v-x-organic` | momentum, X posts rising, at least half from small accounts over 30 days old | 24h volume |
+| `v-x-exit` | momentum with X data; also sells when 3+ large accounts post and that's more than last run | 24h volume |
 
-`v-dip` can't trade until the dataset is a week old. `v-x-organic` and `v-x-exit` wait for the Grok
-X scout. Arm trades don't alert the phone. The report's "Mechanical arms" table shows each one; no
+`v-dip` can't trade until the dataset is a week old. Arm trades don't alert the phone. The report's "Mechanical arms" table shows each one; no
 arm is judged before the review, and none changes a rule by itself.
 
 **Dataset:** `data/YYYY-MM-DD.jsonl` on `state` (finished days gzipped). Each cycle writes a header
@@ -121,6 +122,16 @@ never becomes a shadow reject.
 `python3 -I memepaper.py replay <YYYY-MM-DD>` (state mode) re-runs every arm's choice on a recorded
 day and lists any entry that differs from what the arm did. Entries only: exits run every minute
 and the rows are 15 minutes apart, so an exit rule can't be replayed exactly from this data.
+
+## X scout
+A Grok bot, Scout, reads `grok/watchlist.txt` on `state` every 4 hours, copies facts about recent X
+posts into a file on the private desk and never touches this repo. Each cycle the loop reads the
+newest file. It checks the shape, checks each post's link number against its stated time, looks up 5
+random posts on X, and keeps only counts (`scout.json`). A failed check resets trust to zero. The X
+arms act only after 3 clean files in a row and on data under 5 hours old; otherwise they do nothing
+and no other arm is affected. Follower counts can't be verified this way, so treat them as Scout's
+reading. The report's "X scout" section is information for your judgement, never a gate: influencer
+posts often mark the top, and X activity can be faked.
 
 ## What not to do (from the research)
 No copy-trading wallets, no buying because an influencer called it, no fresh launches (bots win
