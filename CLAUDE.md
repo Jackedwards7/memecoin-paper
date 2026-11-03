@@ -20,18 +20,27 @@ passes beating rejects is the bar, not passes making money.
 **No rule changes before the review.** Filters stop working within weeks, so the review re-checks
 every rule against the data.
 
-## Files
-- `memepaper.py`: `screen <mint...>`, `gate <mint...>`,
-  `buy <mint> <sol> "<thesis>" [--stop -0.35] [--tp1 1.0]`, `sell <mint> <fraction> "<reason>"`,
-  `mark` (reprice both books, apply exit rules, score rejects, rewrite `book.md`).
-  Always run with `python3 -I`.
-- `book.json` (picks), `control.json` (control arm) and `book.md` (report): written by the script
-  only. Never hand-edit.
-- `PLAYBOOK.md`: the research behind these rules. Read it before judging a coin.
-- `sync.sh`: the Mac's 2-minute watcher (pull, mark, push). Not for the cloud run.
-- `tests/`: offline tests (fixtures, no network). Run `python3 -I -m unittest discover -s tests -t .`
-  after any change to `memepaper.py`; GitHub runs them on every code push. The cloud run never
-  edits code, so it never needs them.
+## How it runs (from the 2026-11 cut-over, Tier 1 phase 2)
+- **The hot loop** (GitHub Actions, `.github/workflows/hot-loop.yml`) is the only writer of the
+  books. Every 60 s it applies new orders, reprices every book and applies the exit rules below.
+  It alerts Jackson's phone (ntfy) on trades and failures; a separate watchdog alerts if it stops.
+- **Data lives on the `state` branch**, code on `main`. `state` holds `books/claude.json` (picks),
+  `books/control.json` (control arm), `book.md` (the report), `orders/` (the inbox) and
+  `orders/done/` (each order with its result), plus `health.json`.
+- **You trade by order, never by editing a book.** `./order.sh` runs a command in state mode and
+  pushes the order it writes; the loop applies it within about a minute:
+  - `./order.sh status`: the report, pending orders, the last results and the loop's health.
+  - `./order.sh screen <mint...>`: live stats (read only).
+  - `./order.sh gate <mint...>`: prints PASS/FAIL now; the loop records the passes.
+  - `./order.sh buy <mint> <sol> "<thesis>" [--stop -0.35] [--tp1 1.0]`: the loop re-runs the
+    gate when it applies the buy, refuses an order over 30 minutes old, and opens the control.
+  - `./order.sh sell <mint> <fraction> "<reason>"`.
+  A refused order is a normal outcome: its reason is in `status`. Never edit files on `state`.
+- **Files on `main`:** `memepaper.py` (all the logic; always `python3 -I`), `order.sh`,
+  `mirror.sh` (the Mac's read-only copy into Jackson's vault), `PLAYBOOK.md` (the research behind
+  these rules: read it before judging a coin), `tests/` (offline; `python3 -I -m unittest discover
+  -s tests -t .`). `main` is protected: changes land by pull request with the tests passing. The
+  review run never edits code.
 
 ## Costs (in the script)
 1.5% fee each side (PumpSwap pool fee plus terminal and priority fees), a slippage charge based on
@@ -39,7 +48,7 @@ size against liquidity, and from 2026-11-03 a $0.50 sandwich (MEV) charge per sw
 about 1 in 10 swaps hit at the $5 median; the report also shows P&L if every swap were hit).
 Never trade a coin still on the bonding curve, or one that migrated in the last 2 hours.
 
-## Exit rules (applied by `mark`, no judgement needed)
+## Exit rules (applied by the hot loop every minute, no judgement needed)
 Hard stop −25% to −35% per position; sell half at the take-profit (+60% to +100%); then a 40%
 trailing stop from the peak; time stop after 48h without the take-profit if under +20%.
 From 2026-11-03 (Tier 1 phase 2, both books alike): an **event exit** sells everything at once when
@@ -49,7 +58,7 @@ pool with $1k+ and RugCheck calls it rugged or shows under $1k pooled (or after 
 replaces "3 checks in a row", which a 60-second loop would trip on a 3-minute API blip.
 
 ## Judgement exits (the review run, picks only)
-Sell (`sell <mint> 1 "<reason>"`) if: sellers lead buys for 2+ hours while the price slides;
+Sell (`./order.sh sell <mint> 1 "<reason>"`) if: sellers lead buys for 2+ hours while the price slides;
 hourly volume under ~20% of its recent level; liquidity pulled or falling fast; the coin's theme is
 clearly rotating away (see `/metas/trending/v1` below). Write the reason plainly.
 
@@ -60,9 +69,9 @@ Size **0.25 SOL** (the script caps it). Steps:
    `https://api.dexscreener.com/token-profiles/latest/v1` and `/token-boosts/top/v1`.
    Boosts are paid ads: a candidate list only, never a reason to buy.
 2. **Universe:** keep those with pair age ≥ 6h (cloud) / ≥ 2h (local) and liquidity ≥ $75k
-   (`screen` shows both).
+   (`./order.sh screen` shows both).
 3. **Gate every coin in the universe**, not just your favourite, in one call:
-   `gate <mint> <mint> ...`. The script checks mint and freeze authority revoked, no risky
+   `./order.sh gate <mint> <mint> ...`. The script checks mint and freeze authority revoked, no risky
    Token-2022 extension, deepest pool is the graduation pool with LP ≥ 90% locked, no wallet over
    5%, insiders ≤ 15%, creator ≤ 10%, no RugCheck danger (including a creator history of rugs), and
    that it is the original, not a copycat of an earlier coin with the same name. Anything it can't
@@ -72,7 +81,7 @@ Size **0.25 SOL** (the script caps it). Steps:
    positive, and a 5m move under +25% (no buying a vertical spike). Same theme counts at most twice
    across open positions. If the theme is in DexScreener's top narratives
    (`https://api.dexscreener.com/metas/trending/v1`), say so in the thesis; it isn't required.
-5. `buy` refuses a coin without a gate pass from the last 2 hours, and opens the control position by
+5. `./order.sh buy` is refused for a coin without a gate pass from the last 2 hours, and opens the control position by
    itself on a different gate pass (never the pick). If your pick is the only pass, it gets no control.
 No buy is a fine outcome. Cash is a position.
 

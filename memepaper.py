@@ -15,6 +15,7 @@ State mode (Tier 1 phase 1; on when MEMEPAPER_STATE names a folder): books live 
 files to <state>/orders/ instead, and the next tick applies them in order. One writer per file.
 
   python3 -I memepaper.py tick        # apply pending orders, then mark
+  python3 -I memepaper.py status      # report, pending orders, last results (read only)
   python3 -I memepaper.py migrate <old repo dir> <state dir>   # one-time move of the books
   python3 -I memepaper.py loop [--minutes 55] [--every 60]     # the hot loop (GitHub Actions)
   python3 -I memepaper.py watchdog    # alert if the loop's health.json is stale
@@ -816,6 +817,25 @@ def watchdog(now_ts=None):
     return age
 
 
+def status(done=10):
+    """Read-only view for Claude's runs: the report, pending orders and the last results."""
+    if os.path.exists(REPORT):
+        print(open(REPORT).read())
+    pending = sorted(f for f in os.listdir(ORDERS) if f.endswith(".json")) if ORDERS else []
+    print(f"pending orders: {len(pending)}" + "".join(f"\n  {f[:-5]}" for f in pending))
+    d = os.path.join(ORDERS, "done") if ORDERS else None
+    if d and os.path.isdir(d):
+        print("last results:")
+        for f in sorted(x for x in os.listdir(d) if x.endswith(".json"))[-done:]:
+            o = json.load(open(os.path.join(d, f)))
+            print(f"  {o.get('applied_at', '?')}  {o.get('kind')}  {o.get('mint', '')[:6]}  {o.get('result')}")
+    try:
+        h = json.load(open(os.path.join(STATE, "health.json")))
+        print(f"loop: last tick {h.get('last_tick')}, {h.get('errors_in_a_row', 0)} failed in a row")
+    except Exception:
+        print("loop: no health.json yet")
+
+
 def equity(bk, ps, su):
     return bk["cash_sol"] + sum(x["tokens"] * (float(ps[m]["priceUsd"]) if m in ps else x["entry_px"]) / su
                                 for m, x in bk["positions"].items())
@@ -969,7 +989,11 @@ def main(a):
     elif cmd == "sell":
         sell(a[1], a[2], a[3])
     elif cmd == "mark":
+        if ORDERS:
+            sys.exit("state mode: only the hot loop marks the books (tick); use `status` to read them")
         mark(quiet="--quiet" in a)
+    elif cmd == "status":
+        status()
     elif cmd == "tick":
         tick(quiet="--verbose" not in a)
     elif cmd == "loop":

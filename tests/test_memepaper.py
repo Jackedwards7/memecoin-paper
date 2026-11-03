@@ -970,6 +970,98 @@ class TestLoop(Env):
         self.assertEqual(git(self.state, "status", "--porcelain"), "")
 
 
+class TestCutover(Env):
+    """order.sh and mirror.sh against a real git remote with `main` and `state` branches."""
+
+    def setUp(self):
+        super().setUp()
+        root = os.path.dirname(FIX) + "/.."
+        t = self.tmp.name
+        self.remote, self.code = os.path.join(t, "remote.git"), os.path.join(t, "code")
+        git(t, "init", "-q", "--bare", self.remote)
+        seed = os.path.join(t, "seed")
+        for d, br in ((self.code, "main"), (seed, "state")):
+            os.makedirs(d)
+            git(d, "init", "-q", "-b", br)
+            for k, v in (("user.name", "t"), ("user.email", "t@example.invalid"), ("commit.gpgsign", "false")):
+                git(d, "config", k, v)
+            git(d, "remote", "add", "origin", self.remote)
+        for f in ("memepaper.py", "order.sh", "mirror.sh", ".gitignore"):
+            with open(os.path.join(root, f)) as src, open(os.path.join(self.code, f), "w") as dst:
+                dst.write(src.read())
+        git(self.code, "add", "-A")
+        git(self.code, "commit", "-qm", "code")
+        git(self.code, "push", "-q", "origin", "main")
+        mp.use_state(seed)
+        self.hold("A")
+        mp.save(mp.load(mp.CONTROL), mp.CONTROL)
+        self.run_quiet(mp.write_report, mp.load(), SU, {})
+        open(os.path.join(seed, ".gitignore"), "w").write("*.tmp\n")
+        git(seed, "add", "-A")
+        git(seed, "commit", "-qm", "seed")
+        git(seed, "push", "-q", "origin", "state")
+        self.books = git(seed, "rev-parse", "HEAD:books")
+
+    def sh(self, script, *a, **env):
+        e = {**os.environ, "PY": sys.executable, "MEMEPAPER_BY": "test", **env}
+        e.pop("MEMEPAPER_STATE", None)
+        return subprocess.run(["bash", os.path.join(self.code, script), *a], capture_output=True, text=True, env=e)
+
+    def remote_state(self, path):
+        return subprocess.run(["git", "--git-dir", self.remote, "show", "state:" + path],
+                              capture_output=True, text=True).stdout
+
+    def test_order_sh_pushes_an_order_and_never_a_book(self):
+        r = self.sh("order.sh", "sell", "A", "1", "cloud says out")
+        self.assertEqual(r.returncode, 0, r.stderr)
+        tree = subprocess.run(["git", "--git-dir", self.remote, "ls-tree", "-r", "--name-only", "state"],
+                              capture_output=True, text=True).stdout.split()
+        orders = [f for f in tree if f.startswith("orders/") and f.endswith("-sell-" + f[-11:-5] + ".json")]
+        self.assertEqual(len(orders), 1)
+        o = json.loads(self.remote_state(orders[0]))
+        self.assertEqual((o["kind"], o["mint"], o["by"]), ("sell", "A", "test"))
+        new_books = subprocess.run(["git", "--git-dir", self.remote, "rev-parse", "state:books"],
+                                   capture_output=True, text=True).stdout
+        self.assertEqual(new_books, self.books)  # books untouched
+
+    def test_two_orders_in_a_row(self):
+        self.assertEqual(self.sh("order.sh", "sell", "A", "0.5", "half").returncode, 0)
+        self.assertEqual(self.sh("order.sh", "sell", "A", "0.5", "rest").returncode, 0)
+        log = subprocess.run(["git", "--git-dir", self.remote, "log", "--format=%s", "state"],
+                             capture_output=True, text=True).stdout
+        self.assertEqual(log.count("order: sell"), 2)
+
+    def test_status_is_read_only(self):
+        r = self.sh("order.sh", "status")
+        self.assertEqual(r.returncode, 0, r.stderr)
+        self.assertIn("pending orders: 0", r.stdout)
+        log = subprocess.run(["git", "--git-dir", self.remote, "log", "--format=%s", "state"],
+                             capture_output=True, text=True).stdout
+        self.assertEqual(log.strip(), "seed")
+
+    def test_unknown_command_refused(self):
+        self.assertEqual(self.sh("order.sh", "mark").returncode, 2)
+
+    def test_mirror_copies_and_never_pushes(self):
+        vault = os.path.join(self.tmp.name, "vault")
+        os.makedirs(os.path.join(vault, "output", "trading"))
+        before = git(self.remote, "for-each-ref")
+        r = self.sh("mirror.sh", VAULT=vault)
+        self.assertEqual(r.returncode, 0, r.stderr)
+        out = os.path.join(vault, "output", "trading")
+        self.assertIn("A", json.load(open(os.path.join(out, "2026-11-01-memecoin-paper-book.json")))["positions"])
+        self.assertTrue(os.path.exists(os.path.join(out, "2026-11-01-memecoin-paper-control.json")))
+        self.assertTrue(open(os.path.join(out, "2026-11-01-memecoin-paper-book.md")).read())
+        self.assertEqual(git(self.remote, "for-each-ref"), before)
+
+    def test_mark_refused_in_state_mode(self):
+        with mock.patch.dict(os.environ, {"MEMEPAPER_STATE": os.path.join(self.tmp.name, "st")}), \
+                mock.patch.object(mp, "LOCK", os.path.join(self.tmp.name, "lock")), \
+                self.assertRaises(SystemExit) as e:
+            mp.main(["mark"])
+        self.assertIn("only the hot loop", str(e.exception))
+
+
 class TestNotify(unittest.TestCase):
     def test_no_topic_only_prints(self):
         with mock.patch.dict(os.environ, {}, clear=True), redirect_stdout(io.StringIO()) as out:
