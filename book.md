@@ -8,12 +8,12 @@ area: trading
 *Paper only: simulated fills from live DexScreener prices, 1.50% fee each side plus a size/liquidity
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
-**Equity 9.280 SOL** (start 10.0 SOL, -7.2%) · cash 7.694 SOL ·
-open 3 · closed 5 (0 won) · SOL $93.22 · marked 2026-11-03 19:30 UTC
+**Equity 9.196 SOL** (start 10.0 SOL, -8.0%) · cash 7.444 SOL ·
+open 4 · closed 5 (0 won) · SOL $93.10 · marked 2026-11-03 20:15 UTC
 
-**Benchmark (vs just holding SOL): -7.2%.** The book is counted in SOL, so its SOL
-return *is* its edge over holding SOL. In dollars: $865 vs $949 at the start
-(-8.8%); SOL itself moved -1.7%.
+**Benchmark (vs just holding SOL): -8.0%.** The book is counted in SOL, so its SOL
+return *is* its edge over holding SOL. In dollars: $856 vs $949 at the start
+(-9.7%); SOL itself moved -1.9%.
 Review on 2026-11-30 or after 30 closed v2 trades (1/30), rules unchanged until then.
 
 ## v2 test (from 2026-11-03 01:30 UTC)
@@ -23,19 +23,24 @@ control position on a random gate pass (`control.json`, same mechanical exits, n
 
 | Arm | Closed | Won | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|
-| Picks | 1 | 0 | -0.092 | -37.0% |
-| Control | 1 | 0 | -0.092 | -37.0% |
+| Picks | 1 | 0 | -0.102 | -20.3% |
+| Control | 1 | 0 | -0.102 | -20.3% |
 
-Shadow rejects (gate failures, scored as if bought): 5 tracked; median move 1d n/a, 3d n/a, 7d n/a.
+Costs in every fill: 1.5% fee each side, size/liquidity slippage, and a $0.50 sandwich charge per swap.
+If every swap were sandwiched at the $5 median: picks -0.150 SOL, control -0.150 SOL.
+
+**Gate value** (raw price moves, no costs; the gate earns its keep if passes beat rejects):
+passes 3 tracked, median 1d n/a, 3d n/a, 7d n/a · rejects 6 tracked, median 1d n/a, 3d n/a, 7d n/a.
 Legacy v1 positions (opened before v2, 1.25% fee model, sizes to 1 SOL) stay under the same exits and are left out of this table.
 
 ## Open positions
 
 | Coin | Mint | Opened | Cost SOL | Entry mcap | Move | Value SOL (incl. realised) | Thesis |
 |---|---|---|---|---|---|---|---|
-| GATO | `HsprHxBR…` | 2026-11-02 05:44 UTC | 0.75 | $8,625,571 | +46% | 1.161 | Mature 68-day coin, $8.7M cap, deepest pool on the board, 96% LP locked; +38% 24h |
-| CBUCKS | `DtcicPCK…` | 2026-11-02 08:30 UTC | 0.50 | $1,799,967 | +2% | 0.509 | CBUCKS: 26-day coin, $1.8M cap, liq $146k, 1h buys 28>20, 1h +2% and 24h +48%, RugCheck no risks, LP 99.99% locked; distinct theme; modest volume noted |
-| three | `FeMbDoX7…` | 2026-11-02 17:24 UTC | 0.50 | $461,979 | +7% | 0.527 | three: 187-day coin, liq $140k, 1h buys 450>179, 1h +3% and 24h +2%, 5m flat, RugCheck no risks, LP 96% locked; distinct theme |
+| GATO | `HsprHxBR…` | 2026-11-02 05:44 UTC | 0.75 | $8,625,571 | +36% | 1.125 | Mature 68-day coin, $8.7M cap, deepest pool on the board, 96% LP locked; +38% 24h |
+| CBUCKS | `DtcicPCK…` | 2026-11-02 08:30 UTC | 0.50 | $1,799,967 | -7% | 0.463 | CBUCKS: 26-day coin, $1.8M cap, liq $146k, 1h buys 28>20, 1h +2% and 24h +48%, RugCheck no risks, LP 99.99% locked; distinct theme; modest volume noted |
+| three | `FeMbDoX7…` | 2026-11-02 17:24 UTC | 0.50 | $461,979 | +9% | 0.534 | three: 187-day coin, liq $140k, 1h buys 450>179, 1h +3% and 24h +2%, 5m flat, RugCheck no risks, LP 96% locked; distinct theme |
+| HELL | `A75Xx6Se…` | 2026-11-03 20:15 UTC | 0.25 | $2,583,618 | -0% | 0.241 | Passed gate; mature pumpswap coin (511h), liq $141k, 1h +0.8%, 24h +6%, 5m +2.1%, buys~sells; not a spike. Only other passes: ANONVOYAGE (vertical +3681% 24h, rejected) and held GATO. |
 
 ## Closed
 
@@ -63,3 +68,4 @@ Legacy v1 positions (opened before v2, 1.25% fee model, sizes to 1 SOL) stay und
 - 2026-11-03 04:22 UTC SELL 100% CHOO -> 0.518 SOL @ $0.001389: stop-loss at -31%
 - 2026-11-03 16:15 UTC BUY Ahsoka 0.25 SOL @ $0.001045279 (mc $1,032,979): Ahsoka: 26h coin, $1.0M cap, liq $87k, gate pass; 1h +10.8%, 24h +35%, 5m +6.4% (not a spike); 1h buys 532 vs sells 641 (slightly negative); only gate pass with positive 1h/24h; thin liquidity noted
 - 2026-11-03 19:30 UTC SELL 100% Ahsoka -> 0.158 SOL @ $0.0006786: stop-loss at -35%
+- 2026-11-03 20:15 UTC BUY HELL 0.25 SOL @ $0.0027084573 (mc $2,583,618): Passed gate; mature pumpswap coin (511h), liq $141k, 1h +0.8%, 24h +6%, 5m +2.1%, buys~sells; not a spike. Only other passes: ANONVOYAGE (vertical +3681% 24h, rejected) and held GATO.

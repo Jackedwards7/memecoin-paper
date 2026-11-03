@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.693906511788961,
+  "cash_sol": 7.443906511788961,
   "positions": {
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
       "symbol": "GATO",
@@ -19,7 +19,7 @@
       "realised_sol": 0.6102763900779642,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/5e3dxlxgwmtdcoka51wyyakttjfzbwqcoyuhbui5gt2m",
-      "misses": 0
+      "entry_liq": 355150.15
     },
     "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
       "symbol": "CBUCKS",
@@ -38,7 +38,7 @@
       "realised_sol": 0.0,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/b4cp45pgifvm5faxfh6aev8qz3eunqnqgbw7kuc7mhnb",
-      "misses": 0
+      "entry_liq": 140899
     },
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": {
       "symbol": "three",
@@ -57,7 +57,29 @@
       "realised_sol": 0.0,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/5byl7mzolabynwmpzkpkjf4mgkz7febzranos19pre2z",
-      "misses": 0
+      "entry_liq": 146236.13
+    },
+    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": {
+      "symbol": "HELL",
+      "opened": "2026-11-03 20:15 UTC",
+      "cost_sol": 0.25,
+      "tokens": 8279.943969510467,
+      "entry_px": 0.0027084573377041676,
+      "entry_mc": 2583618,
+      "peak_px": 0.0027084573377041676,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "Passed gate; mature pumpswap coin (511h), liq $141k, 1h +0.8%, 24h +6%, 5m +2.1%, buys~sells; not a spike. Only other passes: ANONVOYAGE (vertical +3681% 24h, rejected) and held GATO.",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/ewsyhiuznynqh5f65ypfsoqblq2kyetuvhm5un7wsfdg",
+      "v": 2,
+      "mev_sol": 0.0053705692803437165,
+      "swaps": 1,
+      "entry_liq": 137816.54
     }
   },
   "closed": [
@@ -199,12 +221,14 @@
     "2026-11-03 00:28 UTC SELL 100% WASTED -> 0.306 SOL @ $0.0008665: stop-loss at -37%",
     "2026-11-03 04:22 UTC SELL 100% CHOO -> 0.518 SOL @ $0.001389: stop-loss at -31%",
     "2026-11-03 16:15 UTC BUY Ahsoka 0.25 SOL @ $0.001045279 (mc $1,032,979): Ahsoka: 26h coin, $1.0M cap, liq $87k, gate pass; 1h +10.8%, 24h +35%, 5m +6.4% (not a spike); 1h buys 532 vs sells 641 (slightly negative); only gate pass with positive 1h/24h; thin liquidity noted",
-    "2026-11-03 19:30 UTC SELL 100% Ahsoka -> 0.158 SOL @ $0.0006786: stop-loss at -35%"
+    "2026-11-03 19:30 UTC SELL 100% Ahsoka -> 0.158 SOL @ $0.0006786: stop-loss at -35%",
+    "2026-11-03 20:15 UTC BUY HELL 0.25 SOL @ $0.0027084573 (mc $2,583,618): Passed gate; mature pumpswap coin (511h), liq $141k, 1h +0.8%, 24h +6%, 5m +2.1%, buys~sells; not a spike. Only other passes: ANONVOYAGE (vertical +3681% 24h, rejected) and held GATO."
   ],
-  "last_mark": "2026-11-03 19:30 UTC",
+  "last_mark": "2026-11-03 20:15 UTC",
   "gate_pass": {
-    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1793722528.6784072,
-    "4nuj5NLHMtQSezfmz6CwBpCRJisFie6F6MxNNz1dpump": 1793722528.6784072
+    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1793736927.1940875,
+    "8muc9DdhqWfAPcvmEebNQCG89bLiwi12T2KtBtzVpump": 1793736927.1940875,
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1793736927.1940875
   },
   "rejects": {
     "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
@@ -250,6 +274,39 @@
       "fails": [
         "deepest pool is meteoraDlmm, not a graduation pool"
       ],
+      "moves": {}
+    },
+    "C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump": {
+      "symbol": "BTC",
+      "at": 1793736927.1940875,
+      "px": 0.01028,
+      "fails": [
+        "RugCheck danger: Top 10 holders high ownership, Single holder ownership",
+        "a wallet holds 61% of supply"
+      ],
+      "moves": {}
+    }
+  },
+  "passes": {
+    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": {
+      "symbol": "HELL",
+      "at": 1793736927.1940875,
+      "px": 0.003107,
+      "fails": [],
+      "moves": {}
+    },
+    "8muc9DdhqWfAPcvmEebNQCG89bLiwi12T2KtBtzVpump": {
+      "symbol": "ANONVOYAGE",
+      "at": 1793736927.1940875,
+      "px": 0.002234,
+      "fails": [],
+      "moves": {}
+    },
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "at": 1793736927.1940875,
+      "px": 0.01193,
+      "fails": [],
       "moves": {}
     }
   }
