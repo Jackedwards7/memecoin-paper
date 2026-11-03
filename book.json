@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.461682392173467,
+  "cash_sol": 6.961682392173467,
   "positions": {
     "EJAxERvKU4kEVXn3NarjvRtgaMaJyP9ZuMeKA7JJpump": {
       "symbol": "CHOO",
@@ -66,7 +66,7 @@
       "tokens": 99101.8282488034,
       "entry_px": 0.0004622530765526329,
       "entry_mc": 461979,
-      "peak_px": 0.0004806,
+      "peak_px": 0.0004833,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -76,6 +76,25 @@
       "realised_sol": 0.0,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/5byl7mzolabynwmpzkpkjf4mgkz7febzranos19pre2z",
+      "misses": 0
+    },
+    "GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump": {
+      "symbol": "WASTED",
+      "opened": "2026-11-03 00:14 UTC",
+      "cost_sol": 0.5,
+      "tokens": 33035.786294179605,
+      "entry_px": 0.0013745756524645085,
+      "entry_mc": 1348715,
+      "peak_px": 0.0013745756524645085,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "WASTED: 78h coin, liq 110k, 1h buys 911>683, 1h +6.8% and 24h +215%, 5m +10.9% (<25%), RugCheck no risks, LP 98.8% locked; distinct theme",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/tt7dks9yjjzj1fwmgopmkbmdrezzymamrhodcgdfwqn",
       "misses": 0
     }
   },
@@ -138,7 +157,8 @@
     "2026-11-02 15:45 UTC SELL 100% ANAKIN -> 0.324 SOL @ $0.00203: stop-loss at -34%",
     "2026-11-02 17:23 UTC SELL 100% Anakin -> 0.527 SOL @ $0.001619: stop-loss at -47%",
     "2026-11-02 17:24 UTC BUY three 0.50 SOL @ $0.00046225308 (mc $461,979): three: 187-day coin, liq $140k, 1h buys 450>179, 1h +3% and 24h +2%, 5m flat, RugCheck no risks, LP 96% locked; distinct theme",
-    "2026-11-02 23:46 UTC SELL 50% GATO -> 0.610 SOL @ $0.01413: take-profit at +62%: half sold, cost recovered"
+    "2026-11-02 23:46 UTC SELL 50% GATO -> 0.610 SOL @ $0.01413: take-profit at +62%: half sold, cost recovered",
+    "2026-11-03 00:14 UTC BUY WASTED 0.50 SOL @ $0.0013745757 (mc $1,348,715): WASTED: 78h coin, liq 110k, 1h buys 911>683, 1h +6.8% and 24h +215%, 5m +10.9% (<25%), RugCheck no risks, LP 98.8% locked; distinct theme"
   ],
-  "last_mark": "2026-11-02 23:46 UTC"
+  "last_mark": "2026-11-03 00:14 UTC"
 }
