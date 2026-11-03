@@ -41,8 +41,12 @@ Never trade a coin still on the bonding curve, or one that migrated in the last 
 
 ## Exit rules (applied by `mark`, no judgement needed)
 Hard stop −25% to −35% per position; sell half at the take-profit (+60% to +100%); then a 40%
-trailing stop from the peak; time stop after 48h without the take-profit if under +20%; a coin with
-no price on 3 checks in a row is marked to zero.
+trailing stop from the peak; time stop after 48h without the take-profit if under +20%.
+From 2026-11-03 (Tier 1 phase 2, both books alike): an **event exit** sells everything at once when
+pool liquidity is down 40%+ since entry or the price is down 20%+ in 5 minutes. A coin missing from
+the price call is marked to zero only after 30 minutes missing *and* when DexScreener search finds no
+pool with $1k+ and RugCheck calls it rugged or shows under $1k pooled (or after 24h missing). This
+replaces "3 checks in a row", which a 60-second loop would trip on a 3-minute API blip.
 
 ## Judgement exits (the review run, picks only)
 Sell (`sell <mint> 1 "<reason>"`) if: sellers lead buys for 2+ hours while the price slides;

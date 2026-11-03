@@ -47,9 +47,11 @@ class Env(unittest.TestCase):
         self.patches = [mock.patch.object(mp, k, os.path.join(d, v)) for k, v in
                         (("BOOK", "book.json"), ("CONTROL", "control.json"), ("REPORT", "book.md"),
                          ("SOL_CACHE", ".sol_usd"))]
-        self.patches += [mock.patch.object(mp, "ORDERS", None), mock.patch.object(mp, "BOOKS", None)]
+        self.patches += [mock.patch.object(mp, "ORDERS", None), mock.patch.object(mp, "BOOKS", None),
+                         mock.patch.object(mp, "STATE", None)]
         self.patches += [mock.patch.object(mp, "get", self.fake_get),
-                         mock.patch.object(mp, "sol_usd", lambda: SU)]
+                         mock.patch.object(mp, "sol_usd", lambda: SU),
+                         mock.patch.object(mp, "clock", lambda: self.t)]
         for p in self.patches:
             p.start()
         self.reset()
@@ -60,6 +62,8 @@ class Env(unittest.TestCase):
             if os.path.exists(f):
                 os.remove(f)
         self.market, self.rc, self.search, self.fail_urls = {}, {}, {}, []
+        self.search_mint = {}  # mint -> DexScreener search answer, for the rug rule's second look
+        self.t = time.time()   # the fake clock; tests move it forward
         for n in NAMES:
             self.market[MINT[n]] = best_pair(n)
             self.rc[MINT[n]] = copy.deepcopy(RC[n])
@@ -84,8 +88,10 @@ class Env(unittest.TestCase):
             return r
         if "/latest/dex/search" in url:
             q = url.split("q=")[1]
+            if q in self.search_mint:
+                return self.search_mint[q]
             for m, r in self.rc.items():
-                if mp.urllib.parse.quote(r["tokenMeta"]["name"]) == q:
+                if mp.urllib.parse.quote((r.get("tokenMeta") or {}).get("name", "")) == q:
                     return self.search.get(m, {"pairs": []})
             return {"pairs": []}
         raise subprocess.CalledProcessError(22, ["curl", url])
@@ -113,9 +119,10 @@ class Env(unittest.TestCase):
                                 "dex": "pumpswap", "url": "", "v": 2, "mev_sol": 0.0, "swaps": 1, **extra}
         mp.save(b, path)
 
-    def price(self, mint, px, liq=200_000):
-        self.market[mint] = {**self.market.get(mint, fake_pair(mint, px)), "priceUsd": str(px),
-                             "liquidity": {"usd": liq}}
+    def price(self, mint, px, liq=200_000, m5=0):
+        old = self.market.get(mint, fake_pair(mint, px))
+        self.market[mint] = {**old, "priceUsd": str(px), "liquidity": {"usd": liq},
+                             "priceChange": {**(old.get("priceChange") or {}), "m5": m5}}
 
 
 # --- costs ---------------------------------------------------------------------------------
@@ -241,23 +248,102 @@ class TestExits(Env):
         self.assertIn("C", b["positions"])     # 47h: too early
         self.assertIn("time stop", b["closed"][0]["exit_reason"])
 
-    def test_missing_price_marks_to_zero_on_third_miss(self):
+    def vanish(self, mint, rugged=False, pooled=0):
+        """Drop a coin from the batch price call, with RugCheck saying `rugged` and `pooled` $."""
+        self.market.pop(mint, None)
+        self.rc[mint] = {"rugged": rugged, "markets": [{"lp": {"quoteUSD": pooled / 2, "baseUSD": pooled / 2}}]}
+
+    def test_api_blip_never_zeroes(self):
+        # The bug this rule fixes: at 60 s ticks, "3 misses in a row" zeroed a live coin in 3 minutes.
         self.hold("A")
-        self.market.pop("A", None)
+        self.vanish("A", rugged=True)
+        for _ in range(5):
+            self.t += 60
+            self.assertIn("A", self.mark()["positions"])
+        self.price("A", 1.0)
+        pos = self.mark()["positions"]["A"]
+        self.assertNotIn("missing_since", pos)
+
+    def test_rug_rule_waits_then_needs_both_sources(self):
+        self.hold("A")
+        self.vanish("A", pooled=50_000)  # DexScreener lost it, but RugCheck still sees a live pool
+        self.mark()
+        self.t += (mp.RUG_MISSING_MIN - 1) * 60
         self.assertIn("A", self.mark()["positions"])
-        self.assertIn("A", self.mark()["positions"])
+        self.t += 2 * 60
+        self.assertIn("A", self.mark()["positions"])  # sources disagree: keep waiting
+        self.rc["A"]["rugged"] = True
+        self.t += 60
+        self.assertIn("A", self.mark()["positions"])  # asked again only every RUG_RECHECK_MIN
+        self.t += mp.RUG_RECHECK_MIN * 60
         b = self.mark()
         self.assertNotIn("A", b["positions"])
+        self.assertIn("both show it gone", b["closed"][0]["exit_reason"])
         self.assertEqual(b["closed"][0]["realised_sol"], 0)
         self.assertEqual(b["closed"][0]["swaps"], 1)  # the rug isn't a swap: no sandwich charge
 
-    def test_one_miss_then_price_resets_counter(self):
+    def test_drained_pool_counts_as_gone(self):
         self.hold("A")
-        self.market.pop("A", None)
+        self.vanish("A", pooled=500)
         self.mark()
+        self.t += (mp.RUG_MISSING_MIN + 1) * 60
+        self.assertNotIn("A", self.mark()["positions"])
+
+    def test_search_still_finds_it_and_prices_it(self):
+        self.hold("A")
+        self.vanish("A", rugged=True)
+        self.search_mint["A"] = {"pairs": [{**fake_pair("A", 2.0), "chainId": "solana"}]}
         self.mark()
-        self.price("A", 1.0)
-        self.assertEqual(self.mark()["positions"]["A"]["misses"], 0)
+        self.t += (mp.RUG_MISSING_MIN + 1) * 60
+        b = self.mark()
+        self.assertTrue(b["positions"]["A"]["tp1_done"])  # priced at 2.0 from the search pair
+        self.assertNotIn("missing_since", b["positions"]["A"])
+
+    def test_unknown_when_a_source_is_down(self):
+        self.hold("A")
+        self.vanish("A", rugged=True)
+        self.fail_urls = ["/latest/dex/search"]
+        self.mark()
+        self.t += 3 * 3600
+        self.assertIn("A", self.mark()["positions"])
+
+    def test_backstop_after_a_day(self):
+        self.hold("A")
+        self.vanish("A", pooled=50_000)
+        self.mark()
+        self.t += mp.RUG_BACKSTOP_H * 3600
+        b = self.mark()
+        self.assertNotIn("A", b["positions"])
+        self.assertIn(f"no price for {mp.RUG_BACKSTOP_H}h", b["closed"][0]["exit_reason"])
+
+    def test_event_exit_on_liquidity_drop(self):
+        self.hold("A", entry_liq=200_000)
+        self.price("A", 1.0, liq=121_000)  # -39.5%: holds
+        self.assertIn("A", self.mark()["positions"])
+        self.price("A", 1.0, liq=119_000)  # -40.5%: out
+        b = self.mark()
+        self.assertNotIn("A", b["positions"])
+        self.assertIn("event exit: liquidity down", b["closed"][0]["exit_reason"])
+
+    def test_event_exit_on_fast_drop(self):
+        self.hold("A")
+        self.price("A", 1.2, m5=-19)
+        self.assertIn("A", self.mark()["positions"])
+        self.price("A", 1.2, m5=-20)  # fires even above entry: a crash in progress
+        b = self.mark()
+        self.assertNotIn("A", b["positions"])
+        self.assertIn("event exit: price -20% in 5 minutes", b["closed"][0]["exit_reason"])
+
+    def test_old_positions_get_a_liquidity_baseline(self):
+        self.hold("A")  # no entry_liq, like every position opened before phase 2
+        self.price("A", 1.0, liq=150_000)
+        self.assertEqual(self.mark()["positions"]["A"]["entry_liq"], 150_000)
+
+    def test_buy_records_entry_liquidity(self):
+        self.add_fake("Z", 1.0, liq=150_000)
+        self.run_quiet(mp.gate, ["Z"])
+        self.run_quiet(mp.buy, "Z", "0.25", "t")
+        self.assertEqual(mp.load()["positions"]["Z"]["entry_liq"], 150_000)
 
     def test_control_book_gets_same_exits(self):
         self.hold("A", path=mp.CONTROL)
@@ -522,7 +608,7 @@ PATH = {  # price per tick for each coin
     "UP": [1.0, 1.3, 2.1, 2.6, 3.2, 2.4, 1.85, 1.7],     # take-profit, then trailing stop
     "DOWN": [1.0, 0.9, 0.8, 0.7, 0.62, 0.6, 0.6, 0.6],   # hard stop
     "FLAT": [1.0, 1.05, 0.98, 1.02, 1.0, 1.01, 0.99, 1.0],  # holds
-    "GONE": [1.0, 1.1, None, None, None, None, None, None],  # vanishes: zero on the 3rd miss
+    "GONE": [1.0, 1.1, None, None, None, None, None, None],  # vanishes; zero once gone 30 min, confirmed
 }
 
 
@@ -534,9 +620,11 @@ class TestReplay(Env):
         for m in PATH:
             self.run_quiet(mp.buy, m, "0.25", "replay")
         for tick in range(1, len(PATH["UP"])):
+            self.t += 10 * 60  # ten minutes a tick
             for m, ps in PATH.items():
                 if ps[tick] is None:
                     self.market.pop(m, None)
+                    self.rc[m]["rugged"] = True
                 else:
                     self.price(m, ps[tick])
             self.run_quiet(mp.mark, quiet=True)
@@ -754,12 +842,180 @@ class TestMigrate(Env):
 
 # --- rules text and code agree --------------------------------------------------------------
 
+# --- phase 2: hot loop, health, alerts, watchdog ------------------------------------------
+
+def git(cwd, *a):
+    return subprocess.run(["git", "-C", cwd, *a], capture_output=True, text=True, check=True).stdout
+
+
+class TestLoop(Env):
+    def setUp(self):
+        super().setUp()
+        self.state = os.path.join(self.tmp.name, "state")
+        mp.use_state(self.state)
+        self.alerts = []
+        self.p_notify = mock.patch.object(mp, "notify", lambda *a, **k: self.alerts.append(a))
+        self.p_notify.start()
+        self.h = {}
+
+    def tearDown(self):
+        self.p_notify.stop()
+        super().tearDown()
+
+    def once(self):
+        return self.run_quiet(mp.loop_once, self.h)
+
+    def test_trade_alert(self):
+        self.hold("A")
+        self.price("A", 0.5)
+        self.once()
+        (title, msg, prio, _), = self.alerts
+        self.assertEqual(title, "memepaper: trade")
+        self.assertIn("pick: ", msg)
+        self.assertIn("stop-loss", msg)
+        self.assertEqual(prio, "high")
+
+    def test_quiet_tick_sends_nothing(self):
+        self.hold("A")
+        self.once()
+        self.assertEqual(self.alerts, [])
+
+    def test_errors_alert_once_then_recover(self):
+        def down():
+            raise RuntimeError("no SOL price")
+        with mock.patch.object(mp, "sol_usd", down):
+            for _ in range(mp.ERRORS_ALERT + 2):
+                self.once()
+        self.assertEqual([a[0] for a in self.alerts], ["memepaper: ticks failing"])
+        self.assertEqual(self.h["errors_in_a_row"], mp.ERRORS_ALERT + 2)
+        self.once()
+        self.assertEqual(self.alerts[-1][0], "memepaper: recovered")
+        self.assertEqual(self.h["errors_in_a_row"], 0)
+
+    def test_health_file(self):
+        self.once()
+        self.once()
+        h = json.load(open(os.path.join(self.state, "health.json")))
+        self.assertEqual(h["ticks"], 2)
+        self.assertEqual(h["last_tick_ts"], self.t)
+
+    def test_even_sys_exit_cant_stop_the_loop(self):
+        with mock.patch.object(mp, "tick", lambda: sys.exit("boom")):
+            self.once()
+        self.assertEqual(self.h["errors_in_a_row"], 1)
+
+    def write_health(self, age_min):
+        json.dump({"last_tick_ts": self.t - age_min * 60}, open(os.path.join(self.state, "health.json"), "w"))
+
+    def test_watchdog(self):
+        wp = os.path.join(self.state, "watchdog.json")
+        self.write_health(5)
+        mp.watchdog(self.t)
+        self.assertEqual(self.alerts, [])
+        self.assertFalse(os.path.exists(wp))  # healthy: nothing written, no commit
+        self.write_health(mp.STALE_MIN + 5)
+        mp.watchdog(self.t)
+        self.assertEqual(self.alerts[-1][0], "memepaper: loop stale")
+        mp.watchdog(self.t + 15 * 60)  # still stale: no repeat inside the hour
+        self.assertEqual(len(self.alerts), 1)
+        mp.watchdog(self.t + 61 * 60)
+        self.assertEqual(len(self.alerts), 2)
+        self.write_health(0)
+        mp.watchdog(self.t)
+        self.assertEqual(self.alerts[-1][0], "memepaper: loop back")
+        self.assertEqual(json.load(open(wp)), {"alerted": 0})
+
+    def git_pair(self):
+        """A bare remote, this state folder and a second clone standing in for the cloud routine."""
+        remote, cloud = os.path.join(self.tmp.name, "remote.git"), os.path.join(self.tmp.name, "cloud")
+        git(self.tmp.name, "init", "-q", "--bare", remote)
+        for d in (self.state, cloud):
+            os.makedirs(d, exist_ok=True)
+            git(d, "init", "-q", "-b", "state")
+            git(d, "config", "user.name", "t")
+            git(d, "config", "user.email", "t@example.invalid")
+            git(d, "config", "commit.gpgsign", "false")
+            git(d, "remote", "add", "origin", remote)
+        open(os.path.join(self.state, ".gitignore"), "w").write("*.tmp\n")
+        self.hold("A")
+        git(self.state, "add", "-A")
+        git(self.state, "commit", "-qm", "seed")
+        git(self.state, "push", "-q", "origin", "state")
+        git(cloud, "pull", "-q", "origin", "state")
+        return cloud
+
+    def test_quiet_run_still_pushes_at_the_end(self):
+        cloud = self.git_pair()
+        self.run_quiet(mp.loop, minutes=0.5, every=60)
+        git(cloud, "pull", "-q", "origin", "state")
+        self.assertEqual(json.load(open(os.path.join(cloud, "health.json")))["ticks"], 1)
+
+    def test_loop_end_to_end_with_git(self):
+        """A real git remote: the cloud drops an order on `state`, one loop run applies and pushes it."""
+        cloud = self.git_pair()
+        with mock.patch.object(mp, "ORDERS", os.path.join(cloud, "orders")):  # the cloud routine's write
+            os.makedirs(mp.ORDERS, exist_ok=True)
+            o = mp.write_order("sell", mint="A", fraction=1.0, reason="cloud says out")
+        git(cloud, "add", "-A")
+        git(cloud, "commit", "-qm", "order")
+        git(cloud, "push", "-q", "origin", "state")
+        self.run_quiet(mp.loop, minutes=0.5, every=60)  # one tick, then the closing push
+        git(cloud, "pull", "-q", "origin", "state")
+        b = json.load(open(os.path.join(cloud, "books", "claude.json")))
+        self.assertNotIn("A", b["positions"])
+        self.assertEqual(b["closed"][0]["exit_reason"], "cloud says out")
+        self.assertTrue(os.path.exists(os.path.join(cloud, "orders", "done", o["id"] + ".json")))
+        self.assertFalse(os.path.exists(os.path.join(cloud, "orders", o["id"] + ".json")))
+        self.assertTrue(os.path.exists(os.path.join(cloud, "health.json")))
+        self.assertEqual(git(self.state, "status", "--porcelain"), "")
+
+
+class TestNotify(unittest.TestCase):
+    def test_no_topic_only_prints(self):
+        with mock.patch.dict(os.environ, {}, clear=True), redirect_stdout(io.StringIO()) as out:
+            self.assertFalse(mp.notify("t", "m"))
+        self.assertIn("alert: t: m", out.getvalue())
+
+    def test_topic_is_used_but_never_printed(self):
+        calls = []
+        with mock.patch.dict(os.environ, {"NTFY_TOPIC": "sekrit-topic", "MEMEPAPER_SHADOW": "1"}), \
+                mock.patch.object(mp.subprocess, "run", lambda a, **k: calls.append(a)), \
+                redirect_stdout(io.StringIO()) as out:
+            self.assertTrue(mp.notify("memepaper: trade", "pick: BUY X", "high"))
+        self.assertEqual(calls[0][-1], "https://ntfy.sh/sekrit-topic")
+        self.assertIn("Title: [shadow] memepaper: trade", calls[0])
+        self.assertNotIn("sekrit", out.getvalue())
+
+
+class TestWorkflows(unittest.TestCase):
+    def read(self, name):
+        with open(os.path.join(os.path.dirname(FIX), "..", ".github", "workflows", name)) as f:
+            return f.read()
+
+    def test_hot_loop_never_overlaps_and_never_gaps(self):
+        w = self.read("hot-loop.yml")
+        self.assertIn("group: hot-loop", w)
+        self.assertIn("cancel-in-progress: false", w)  # queue the next run, never kill a running one
+        self.assertIn('cron: "*/30 * * * *"', w)
+        self.assertIn("--minutes 55", w)  # longer than the 30-minute cron, so one is always queued
+        self.assertIn("timeout-minutes: 70", w)
+        self.assertIn("secrets.NTFY_TOPIC", w)
+        self.assertNotIn("run: echo", w)
+
+    def test_watchdog_is_separate(self):
+        w = self.read("watchdog.yml")
+        self.assertIn("memepaper.py watchdog", w)
+        self.assertNotIn("group: hot-loop", w)
+
+
 class TestRulesText(unittest.TestCase):
     def test_claude_md_matches_code(self):
         t = open(os.path.join(os.path.dirname(FIX), "..", "CLAUDE.md")).read()
         self.assertIn("0.25 SOL", t)
         self.assertIn("1.5% fee", t)
         self.assertIn("No wallet, no keys, no real orders", t)
+        self.assertIn("event exit", t)
+        self.assertIn("30 minutes", t)
 
 
 if __name__ == "__main__":

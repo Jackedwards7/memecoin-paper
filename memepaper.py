@@ -16,6 +16,10 @@ files to <state>/orders/ instead, and the next tick applies them in order. One w
 
   python3 -I memepaper.py tick        # apply pending orders, then mark
   python3 -I memepaper.py migrate <old repo dir> <state dir>   # one-time move of the books
+  python3 -I memepaper.py loop [--minutes 55] [--every 60]     # the hot loop (GitHub Actions)
+  python3 -I memepaper.py watchdog    # alert if the loop's health.json is stale
+
+Alerts go to ntfy when NTFY_TOPIC is set (a GitHub secret); otherwise they only print.
 
 Rules v2 (from 2026-11-03, Jackson's call after the playbook research): every buy needs a gate
 pass from the last 2 hours, and each buy also opens a same-size position in control.json on a
@@ -54,10 +58,24 @@ TRANSFER_FEE_MAX = 3      # % Token-2022 transfer fee
 REJECT_DAYS = (1, 3, 7)   # shadow rejects are scored this many days after the gate failed them
 TIME_STOP_H = 48          # flat this long without hitting the take-profit -> sell
 TIME_STOP_MIN_GAIN = 0.20 # "flat" = less than +20% from entry
-MISSES_TO_ZERO = 3        # consecutive checks with no price before a coin counts as rugged
+# Rug rule (phase 2): a coin missing from the batch price call counts as rugged only after
+# RUG_MISSING_MIN minutes AND when both second sources agree it's gone: DexScreener search finds no
+# pair with GONE_LIQ+ liquidity, and RugCheck marks it rugged or shows under GONE_LIQ in its pools.
+# Replaces "3 checks in a row", which at 60 s ticks would zero a live coin after a 3-minute API blip.
+RUG_MISSING_MIN = 30
+RUG_RECHECK_MIN = 5       # how often the second sources are asked while a coin is missing
+RUG_BACKSTOP_H = 24       # missing this long with the sources disagreeing -> marked to zero anyway
+GONE_LIQ = 1_000
+# Event exits (phase 2): sell at once, before the normal rules, on either of these.
+EVENT_LIQ_DROP = 0.40     # pool liquidity down this much since entry (a pull or a drain)
+EVENT_M5_DROP = -20       # % price change over 5 minutes (DexScreener's m5)
+STALE_MIN = 20            # watchdog: last pushed tick older than this -> alert (pushes come every 10 min)
+ERRORS_ALERT = 3          # failed ticks in a row before an alert
+PUSH_EVERY_S = 600        # the loop pushes on anything material, else this often
 LOCK = "/tmp/memepaper.lock"  # the 2-minute watcher and manual trades never write at once
 ORDERS = None             # state mode: the orders inbox folder. None = legacy mode (books beside the code)
 BOOKS = None              # state mode: the folder of arm books
+STATE = None              # state mode: the state branch's worktree
 ORDER_TTL_MIN = 30        # a buy order older than this is refused: its prices and thesis are stale
 APPLIED_KEEP = 500        # order ids remembered in the claude book, so none is applied twice
 STOP_RANGE = (-0.5, -0.1) # an order's stop and take-profit must sit inside these
@@ -70,7 +88,8 @@ class Refused(Exception):
 
 def use_state(d):
     """Point every path at a state folder (the state branch's worktree)."""
-    global BOOK, CONTROL, REPORT, SOL_CACHE, ORDERS, BOOKS
+    global BOOK, CONTROL, REPORT, SOL_CACHE, ORDERS, BOOKS, STATE
+    STATE = d
     BOOKS, ORDERS = os.path.join(d, "books"), os.path.join(d, "orders")
     for x in (BOOKS, ORDERS, os.path.join(ORDERS, "done")):
         os.makedirs(x, exist_ok=True)
@@ -276,6 +295,10 @@ def _ingest_gate(b, results, t):
                 b["gate_pass"][m] = max(t, b["gate_pass"].get(m, 0))
 
 
+def clock():
+    return time.time()  # one place to fake the time in tests
+
+
 def now():
     return datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
@@ -318,7 +341,8 @@ def _open(b, mint, sol, thesis, stop, tp1, p, su):
         "symbol": p["baseToken"]["symbol"], "opened": now(), "cost_sol": sol, "tokens": tokens,
         "entry_px": fill, "entry_mc": p.get("marketCap"), "peak_px": fill, "stop": stop, "tp1": tp1,
         "tp1_done": False, "thesis": thesis, "rugcheck": score, "risks": risks, "realised_sol": 0.0,
-        "dex": p["dexId"], "url": p.get("url"), "v": 2, "mev_sol": mev, "swaps": 1}
+        "dex": p["dexId"], "url": p.get("url"), "v": 2, "mev_sol": mev, "swaps": 1,
+        "entry_liq": (p.get("liquidity") or {}).get("usd") or 0}
     b["log"].append(f"{now()} BUY {p['baseToken']['symbol']} {sol:.2f} SOL @ ${fill:.8g} (mc ${p.get('marketCap',0):,.0f}): {thesis}")
     print(b["log"][-1])
 
@@ -429,8 +453,9 @@ def mark(quiet=False):
       - after that, a 40% trailing stop from the peak on the rest;
       - time stop: held TIME_STOP_H hours, take-profit never reached and less than
         +TIME_STOP_MIN_GAIN from entry -> sell, the money is better used elsewhere;
-      - a coin with no DexScreener pair on MISSES_TO_ZERO checks in a row is marked to zero
-        (one miss is usually an API blip, not a rug).
+      - event exits first: liquidity down EVENT_LIQ_DROP since entry, or price down EVENT_M5_DROP %
+        in 5 minutes, sells everything at once;
+      - a coin missing from the price call is marked to zero only by the rug rule (see the constants).
     The control book gets the same rules; shadow rejects get their 1/3/7-day moves recorded."""
     b = load()
     c = load(CONTROL)
@@ -462,20 +487,66 @@ def mark(quiet=False):
     write_report(b, su, ps, c, quiet=quiet)
 
 
+def _liq(p):
+    return (p.get("liquidity") or {}).get("usd") or 0
+
+
+def _second_look(mint):
+    """Ask the second sources about a coin the batch call didn't return. ('alive', pair) when
+    DexScreener search still has a liquid pair, ('gone', None) when search has none AND RugCheck
+    calls it rugged or its pools hold under GONE_LIQ, else ('unknown', None): keep waiting."""
+    try:
+        found = [q for q in get("https://api.dexscreener.com/latest/dex/search?q=" + mint).get("pairs") or []
+                 if q.get("chainId") == "solana" and q["baseToken"].get("address") == mint]
+    except Exception:
+        return "unknown", None
+    live = [q for q in found if _liq(q) >= GONE_LIQ]
+    if live:
+        return "alive", max(live, key=_liq)
+    try:
+        r = get(f"https://api.rugcheck.xyz/v1/tokens/{mint}/report")
+    except Exception:
+        return "unknown", None
+    pooled = sum((m["lp"].get("quoteUSD") or 0) + (m["lp"].get("baseUSD") or 0)
+                 for m in r.get("markets") or [] if m.get("lp"))
+    return ("gone", None) if r.get("rugged") or pooled < GONE_LIQ else ("unknown", None)
+
+
 def _apply_exits(b, ps, su):
+    t = clock()
     for mint in list(b["positions"]):
         pos = b["positions"][mint]
         p = ps.get(mint)
         if not p:
-            pos["misses"] = pos.get("misses", 0) + 1
-            if pos["misses"] >= MISSES_TO_ZERO:
-                _sell(b, mint, 1.0, f"no pair found on {MISSES_TO_ZERO} checks in a row: treated as rugged, marked to zero", None, su)
-            continue
-        pos["misses"] = 0
+            pos.pop("misses", None)  # v1's counter; the rug rule below is time-based
+            since = pos.setdefault("missing_since", t)
+            if t - since < RUG_MISSING_MIN * 60:
+                continue
+            if t - since >= RUG_BACKSTOP_H * 3600:
+                _sell(b, mint, 1.0, f"no price for {RUG_BACKSTOP_H}h: treated as rugged, marked to zero", None, su)
+                continue
+            if t - pos.get("second_look", 0) < RUG_RECHECK_MIN * 60:
+                continue
+            pos["second_look"] = t
+            state, p = _second_look(mint)
+            if state == "gone":
+                _sell(b, mint, 1.0, f"no price for {(t - since) / 60:.0f} min and RugCheck and DexScreener "
+                                    "search both show it gone: treated as rugged, marked to zero", None, su)
+            if state != "alive":
+                continue
+        for k in ("misses", "missing_since", "second_look"):
+            pos.pop(k, None)
         px = float(p["priceUsd"])
         pos["peak_px"] = max(pos["peak_px"], px)
         r = px / pos["entry_px"] - 1
-        if not pos["tp1_done"] and r >= pos["tp1"]:
+        liq = _liq(p)
+        base = pos.setdefault("entry_liq", liq)  # positions opened before phase 2: first seen liquidity
+        m5 = (p.get("priceChange") or {}).get("m5")
+        if base and liq <= base * (1 - EVENT_LIQ_DROP):
+            _sell(b, mint, 1.0, f"event exit: liquidity down {1 - liq / base:.0%} since entry, {r:+.0%} from entry", p, su)
+        elif m5 is not None and float(m5) <= EVENT_M5_DROP:
+            _sell(b, mint, 1.0, f"event exit: price {float(m5):+.0f}% in 5 minutes, {r:+.0%} from entry", p, su)
+        elif not pos["tp1_done"] and r >= pos["tp1"]:
             pos["tp1_done"] = True
             _sell(b, mint, 0.5, f"take-profit at {r:+.0%}: half sold, cost recovered", p, su)
         elif not pos["tp1_done"] and r <= pos["stop"]:
@@ -604,6 +675,145 @@ def tick(quiet=True):
     material = n > 0 or _fingerprint() != before
     print(f"material: {'yes' if material else 'no'}")
     return material
+
+
+def notify(title, msg, priority="default", tags=""):
+    """Push an alert to Jackson's phone with ntfy. The topic name is the only secret (a GitHub
+    secret, masked in the public logs); without it the alert only prints. Never raises."""
+    if os.environ.get("MEMEPAPER_SHADOW"):
+        title = "[shadow] " + title
+    print(f"alert: {title}: {msg}")
+    topic = os.environ.get("NTFY_TOPIC")
+    if not topic:
+        return False
+    try:
+        subprocess.run(["curl", "-sf", "-m", "10", "-H", f"Title: {title}", "-H", f"Priority: {priority}",
+                        "-H", f"Tags: {tags}", "--data-binary", msg[:3000], "https://ntfy.sh/" + topic],
+                       capture_output=True, check=True)
+        return True
+    except Exception:
+        return False
+
+
+def _git(*a):
+    return subprocess.run(["git", "-C", STATE, *a], capture_output=True, text=True)
+
+
+def _branch():
+    return os.environ.get("MEMEPAPER_BRANCH", "state")
+
+
+def pull():
+    """Fetch new order files. Only this loop writes books, so a rebase never meets a conflict;
+    if one fails anyway (network), carry on ticking and try again next minute."""
+    if _git("pull", "-q", "--rebase", "--autostash", "origin", _branch()).returncode:
+        _git("rebase", "--abort")
+        return False
+    return True
+
+
+def push(msg):
+    """Commit everything in the state folder and push, rebasing over new orders up to 3 times."""
+    _git("add", "-A")
+    if _git("diff", "--cached", "--quiet").returncode == 0:
+        return True
+    _git("commit", "-qm", msg)
+    for _ in range(3):
+        if _git("push", "-q", "origin", "HEAD:" + _branch()).returncode == 0:
+            return True
+        _git("pull", "-q", "--rebase", "origin", _branch())
+    return False
+
+
+def _health_path():
+    return os.path.join(STATE, "health.json")
+
+
+def _logs():
+    return {p: len(load(p)["log"]) for p in (BOOK, CONTROL)}
+
+
+def loop_once(h):
+    """One minute of the hot loop: tick, then record health and send alerts. Never raises, so one
+    bad API answer can't stop the loop. Returns whether the tick changed anything material."""
+    before, material = _logs(), False
+    try:
+        material = tick()
+    except BaseException as e:  # SystemExit too: nothing a tick does may end the loop
+        if isinstance(e, KeyboardInterrupt):
+            raise
+        h["errors_in_a_row"] = h.get("errors_in_a_row", 0) + 1
+        h["last_error"] = f"{now()} {e.__class__.__name__}: {str(e)[:200]}"
+        print("tick failed:", h["last_error"])
+        if h["errors_in_a_row"] == ERRORS_ALERT:
+            notify("memepaper: ticks failing", f"{ERRORS_ALERT} ticks in a row failed. Last: {h['last_error']}",
+                   "high", "warning")
+    else:
+        if h.get("errors_in_a_row", 0) >= ERRORS_ALERT:
+            notify("memepaper: recovered", f"ticking again after {h['errors_in_a_row']} failed ticks", "default", "ok")
+        h["errors_in_a_row"] = 0
+        h["last_ok"], h["last_ok_ts"] = now(), clock()
+    h["last_tick"], h["last_tick_ts"] = now(), clock()
+    h["ticks"] = h.get("ticks", 0) + 1
+    try:
+        lines = [f"{'pick' if p == BOOK else 'control'}: {x}"
+                 for p, n in before.items() for x in load(p)["log"][n:]]
+    except Exception:
+        lines = []
+    if lines:
+        hot = any(w in x for x in lines for w in ("event exit", "rugged", "stop-loss"))
+        notify("memepaper: trade", "\n".join(lines), "high" if hot else "default", "chart_with_downwards_trend" if hot else "moneybag")
+    with open(_health_path() + ".tmp", "w") as f:
+        json.dump(h, f, indent=2)
+    os.replace(_health_path() + ".tmp", _health_path())
+    return material
+
+
+def loop(minutes=55, every=60):
+    """The hot loop: pull new orders, tick, push on anything material or every PUSH_EVERY_S.
+    GitHub Actions starts one every 30 minutes and queues the next, so a run lasting 55 minutes
+    leaves no gap. Ends with a push so the next run starts from everything this one did."""
+    h = json.load(open(_health_path())) if os.path.exists(_health_path()) else {}
+    h.update(run=os.environ.get("GITHUB_RUN_ID", "local"), code=os.environ.get("GITHUB_SHA", "local")[:7],
+             started=now(), shadow=bool(os.environ.get("MEMEPAPER_SHADOW")))
+    end, last_push, push_fails = clock() + minutes * 60, clock(), 0
+    while True:
+        t0 = clock()
+        pull()
+        material = loop_once(h)
+        if material or clock() - last_push >= PUSH_EVERY_S or clock() + every >= end:
+            if push(f"tick {now()}{' (trade)' if material else ''}"):
+                last_push, push_fails = clock(), 0
+            else:
+                push_fails += 1
+                if push_fails == ERRORS_ALERT:
+                    notify("memepaper: can't push", f"{ERRORS_ALERT} pushes in a row failed; ticking continues locally", "high", "warning")
+        if clock() + every >= end:
+            break
+        time.sleep(max(1.0, every - (clock() - t0)))
+
+
+def watchdog(now_ts=None):
+    """Alert when the loop's last tick is more than STALE_MIN minutes old, at most once an hour
+    (watchdog.json remembers; only the watchdog writes it). Runs as its own scheduled workflow."""
+    t = now_ts or clock()
+    try:
+        last = json.load(open(_health_path())).get("last_tick_ts", 0)
+    except Exception:
+        last = 0
+    wp = os.path.join(STATE, "watchdog.json")
+    w = json.load(open(wp)) if os.path.exists(wp) else {}
+    age, was = (t - last) / 60, dict(w)
+    if age <= STALE_MIN and w.get("alerted"):
+        notify("memepaper: loop back", f"ticking again (last tick {age:.0f} min ago)", "default", "ok")
+        w = {"alerted": 0}
+    elif age > STALE_MIN and t - w.get("alerted", 0) >= 3600:
+        notify("memepaper: loop stale", f"no tick for {age:.0f} min. Check Actions: hot loop.", "urgent", "rotating_light")
+        w = {"alerted": t}
+    if w != was:  # written only when the alert state changes, so a healthy loop costs no commits
+        with open(wp, "w") as f:
+            json.dump(w, f, indent=2)
+    return age
 
 
 def equity(bk, ps, su):
@@ -762,6 +972,16 @@ def main(a):
         mark(quiet="--quiet" in a)
     elif cmd == "tick":
         tick(quiet="--verbose" not in a)
+    elif cmd == "loop":
+        kw = {k.lstrip("-"): float(v) for k, v in zip(a[1::2], a[2::2])}
+        if not ORDERS:
+            sys.exit("loop needs state mode: set MEMEPAPER_STATE to the state folder")
+        loop(**kw)
+    elif cmd == "watchdog":
+        if not ORDERS:
+            sys.exit("watchdog needs state mode: set MEMEPAPER_STATE to the state folder")
+        watchdog()
+        push(f"watchdog {now()}")
     else:
         sys.exit(__doc__)
 

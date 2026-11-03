@@ -1,0 +1,36 @@
+# The always-on hot loop (Tier 1 phase 2). Each run ticks every 60 s for 55 minutes. A run is
+# started every 30 minutes and the concurrency group queues it behind the one running, so one is
+# always waiting when the last ends. Books live on the `state` branch and this job is their only
+# writer. Paper only: public prices, no wallet, no keys. The one secret is the ntfy topic.
+name: hot loop
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+concurrency:
+  group: hot-loop
+  cancel-in-progress: false
+permissions:
+  contents: write
+jobs:
+  loop:
+    runs-on: ubuntu-latest
+    timeout-minutes: 70
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check out the state branch
+        run: |
+          git fetch -q origin state
+          git worktree add -q -B state state-wt origin/state
+          git -C state-wt config user.name "memepaper hot loop"
+          git -C state-wt config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Loop
+        env:
+          MEMEPAPER_STATE: state-wt
+          MEMEPAPER_BY: hot-loop
+          MEMEPAPER_SHADOW: ${{ vars.MEMEPAPER_SHADOW }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python3 -I memepaper.py loop --minutes 55 --every 60
