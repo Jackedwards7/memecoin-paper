@@ -8,12 +8,12 @@ area: trading
 *Paper only: simulated fills from live DexScreener prices, 1.50% fee each side plus a size/liquidity
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
-**Equity 9.177 SOL** (start 10.0 SOL, -8.2%) · cash 7.694 SOL ·
-open 3 · closed 5 (0 won) · SOL $93.58 · marked 2026-11-03 22:05 UTC
+**Equity 9.147 SOL** (start 10.0 SOL, -8.5%) · cash 7.694 SOL ·
+open 3 · closed 5 (0 won) · SOL $93.50 · marked 2026-11-03 22:16 UTC
 
-**Benchmark (vs just holding SOL): -8.2%.** The book is counted in SOL, so its SOL
-return *is* its edge over holding SOL. In dollars: $859 vs $949 at the start
-(-9.5%); SOL itself moved -1.3%.
+**Benchmark (vs just holding SOL): -8.5%.** The book is counted in SOL, so its SOL
+return *is* its edge over holding SOL. In dollars: $855 vs $949 at the start
+(-9.8%); SOL itself moved -1.4%.
 Review on 2026-11-30 or after 30 closed v2 trades (1/30), rules unchanged until then.
 
 ## v2 test (from 2026-11-03 01:30 UTC)
@@ -37,8 +37,8 @@ Legacy v1 positions (opened before v2, 1.25% fee model, sizes to 1 SOL) stay und
 
 | Coin | Mint | Opened | Cost SOL | Entry mcap | Move | Value SOL (incl. realised) | Thesis |
 |---|---|---|---|---|---|---|---|
-| GATO | `HsprHxBR…` | 2026-11-02 05:44 UTC | 0.75 | $8,625,571 | +30% | 1.100 | Mature 68-day coin, $8.7M cap, deepest pool on the board, 96% LP locked; +38% 24h |
-| CBUCKS | `DtcicPCK…` | 2026-11-02 08:30 UTC | 0.50 | $1,799,967 | -9% | 0.454 | CBUCKS: 26-day coin, $1.8M cap, liq $146k, 1h buys 28>20, 1h +2% and 24h +48%, RugCheck no risks, LP 99.99% locked; distinct theme; modest volume noted |
+| GATO | `HsprHxBR…` | 2026-11-02 05:44 UTC | 0.75 | $8,625,571 | +25% | 1.081 | Mature 68-day coin, $8.7M cap, deepest pool on the board, 96% LP locked; +38% 24h |
+| CBUCKS | `DtcicPCK…` | 2026-11-02 08:30 UTC | 0.50 | $1,799,967 | -11% | 0.443 | CBUCKS: 26-day coin, $1.8M cap, liq $146k, 1h buys 28>20, 1h +2% and 24h +48%, RugCheck no risks, LP 99.99% locked; distinct theme; modest volume noted |
 | three | `FeMbDoX7…` | 2026-11-02 17:24 UTC | 0.50 | $461,979 | +10% | 0.540 | three: 187-day coin, liq $140k, 1h buys 450>179, 1h +3% and 24h +2%, 5m flat, RugCheck no risks, LP 96% locked; distinct theme |
 
 ## Closed
