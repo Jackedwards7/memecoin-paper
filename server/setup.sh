@@ -93,5 +93,5 @@ unit memepaper-feed "memepaper launch feed" "/usr/bin/python3 -I $CODE/memepaper
 sudo systemctl daemon-reload
 sudo systemctl enable --now memepaper-loop memepaper-feed
 sleep 5
-systemctl --no-pager --lines=0 status memepaper-loop memepaper-feed | grep -E 'Active:|●'
+systemctl --no-pager --lines=0 status memepaper-loop memepaper-feed | grep -E 'Active:|●' || true
 echo "Done. Logs: journalctl -u memepaper-loop -f"
