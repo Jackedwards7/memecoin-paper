@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.443906511788961,
+  "cash_sol": 7.920937801196387,
   "positions": {
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
       "symbol": "GATO",
@@ -20,25 +20,6 @@
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/5e3dxlxgwmtdcoka51wyyakttjfzbwqcoyuhbui5gt2m",
       "entry_liq": 355150.15
-    },
-    "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
-      "symbol": "CBUCKS",
-      "opened": "2026-11-02 08:30 UTC",
-      "cost_sol": 0.5,
-      "tokens": 24358.930789027894,
-      "entry_px": 0.001909615323549115,
-      "entry_mc": 1799967,
-      "peak_px": 0.002064,
-      "stop": -0.35,
-      "tp1": 1.0,
-      "tp1_done": false,
-      "thesis": "CBUCKS: 26-day coin, $1.8M cap, liq $146k, 1h buys 28>20, 1h +2% and 24h +48%, RugCheck no risks, LP 99.99% locked; distinct theme; modest volume noted",
-      "rugcheck": 1,
-      "risks": [],
-      "realised_sol": 0.0,
-      "dex": "pumpswap",
-      "url": "https://dexscreener.com/solana/b4cp45pgifvm5faxfh6aev8qz3eunqnqgbw7kuc7mhnb",
-      "entry_liq": 140899
     },
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": {
       "symbol": "three",
@@ -205,6 +186,32 @@
       "pnl_sol": -0.09239581462689711,
       "pnl_pct": -0.36958325850758844,
       "exit_reason": "stop-loss at -35%"
+    },
+    {
+      "symbol": "CBUCKS",
+      "opened": "2026-11-02 08:30 UTC",
+      "cost_sol": 0.5,
+      "tokens": 0.0,
+      "entry_px": 0.001909615323549115,
+      "entry_mc": 1799967,
+      "peak_px": 0.002064,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "CBUCKS: 26-day coin, $1.8M cap, liq $146k, 1h buys 28>20, 1h +2% and 24h +48%, RugCheck no risks, LP 99.99% locked; distinct theme; modest volume noted",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.4770312894074266,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/b4cp45pgifvm5faxfh6aev8qz3eunqnqgbw7kuc7mhnb",
+      "entry_liq": 140899,
+      "mev_sol": 0.005365958360163125,
+      "swaps": 1,
+      "mint": "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump",
+      "closed": "2026-11-04 08:31 UTC",
+      "pnl_sol": -0.022968710592573383,
+      "pnl_pct": -0.045937421185146765,
+      "exit_reason": "time stop: 48h held, -2%, no take-profit"
     }
   ],
   "log": [
@@ -222,9 +229,10 @@
     "2026-11-03 04:22 UTC SELL 100% CHOO -> 0.518 SOL @ $0.001389: stop-loss at -31%",
     "2026-11-03 16:15 UTC BUY Ahsoka 0.25 SOL @ $0.001045279 (mc $1,032,979): Ahsoka: 26h coin, $1.0M cap, liq $87k, gate pass; 1h +10.8%, 24h +35%, 5m +6.4% (not a spike); 1h buys 532 vs sells 641 (slightly negative); only gate pass with positive 1h/24h; thin liquidity noted",
     "2026-11-03 19:30 UTC SELL 100% Ahsoka -> 0.158 SOL @ $0.0006786: stop-loss at -35%",
-    "2026-11-03 20:15 UTC BUY HELL 0.25 SOL @ $0.0027084573 (mc $2,583,618): Passed gate; mature pumpswap coin (511h), liq $141k, 1h +0.8%, 24h +6%, 5m +2.1%, buys~sells; not a spike. Only other passes: ANONVOYAGE (vertical +3681% 24h, rejected) and held GATO."
+    "2026-11-03 20:15 UTC BUY HELL 0.25 SOL @ $0.0027084573 (mc $2,583,618): Passed gate; mature pumpswap coin (511h), liq $141k, 1h +0.8%, 24h +6%, 5m +2.1%, buys~sells; not a spike. Only other passes: ANONVOYAGE (vertical +3681% 24h, rejected) and held GATO.",
+    "2026-11-04 08:31 UTC SELL 100% CBUCKS -> 0.477 SOL @ $0.001874: time stop: 48h held, -2%, no take-profit"
   ],
-  "last_mark": "2026-11-04 08:14 UTC",
+  "last_mark": "2026-11-04 08:31 UTC",
   "gate_pass": {
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1793780032.8948514,
     "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1793780032.8948514,
@@ -272,7 +280,9 @@
       "fails": [
         "RugCheck danger: Low Liquidity"
       ],
-      "moves": {}
+      "moves": {
+        "1d": -0.9986109142452162
+      }
     },
     "nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump": {
       "symbol": "Dacity",
