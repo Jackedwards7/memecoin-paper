@@ -127,6 +127,25 @@ never becomes a shadow reject.
 day and lists any entry that differs from what the arm did. Entries only: exits run every minute
 and the rows are 15 minutes apart, so an exit rule can't be replayed exactly from this data.
 
+## Flight simulator (backtest)
+`python3 -I memepaper.py backtest [--coins N] [--seed N] [--minliq N] [--offline]` replays past coins through the live `pick`,
+`_open`, `_apply_exits` and `_sell`, so rule sets can be compared now. Read only: it holds every book in memory, takes no lock
+and writes nothing but its own cache (`.backtest/`, or `MEMEPAPER_BT`). It needs no key or wallet. Results are information only:
+it changes no rule, and no arm is judged on it.
+
+- **Sample:** pump.fun graduates drawn at random from the chain's own migration list (21 to 85 days old), so the draw can't
+  know how a coin ended. Mint, pool and the pool's opening size come from that transaction too, because GeckoTerminal stops
+  listing a dead coin's pools. Pools that opened on under 10 SOL or had under 1000 transactions ever are skipped to save candle calls, since a
+  collapse adds transactions and the universe needs far more; every 10th skipped coin is fetched anyway and the report says how
+  many of those reached it.
+- **Prices:** 15-minute GeckoTerminal candles, each read as its low, high and close with nothing between: 1-minute data shows
+  these coins losing 98% inside a minute, so a stop fills at the far side of the gap, never on a line drawn through it. A candle
+  hides whether its low or high came first, so everything runs both ways. Costs are the live ones, and `_paper_trip` at entry is printed beside each arm.
+- **Modelled:** liquidity (from price: graduate pools are constant product with burned LP) and buys against sells (1h volume in
+  rising against falling candles). The gate can't be replayed, so every coin counts as a pass.
+- **Not testable:** seven arms read data with no history, and the report lists what each needs. The rest of what the
+  sample can't show is printed under every result. Candles come at about 4 calls a minute, so a stop loses nothing: run it again.
+
 ## Reading the coins (Tier 1 phase 3b)
 This layer records and works things out. It changes no rule on the picks or the control.
 

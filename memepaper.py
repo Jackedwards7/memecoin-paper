@@ -24,6 +24,7 @@ files to <state>/orders/ instead, and the next tick applies them in order. One w
   python3 -I memepaper.py loop [--minutes 55] [--every 60]     # the hot loop (GitHub Actions)
   python3 -I memepaper.py watchdog    # alert if the loop's health.json is stale
   python3 -I memepaper.py feed [--seconds N]   # keep the free launch stream in MEMEPAPER_FEED (a server, not Actions)
+  python3 -I memepaper.py backtest [--coins N] [--seed N] [--minliq N] [--offline]   # flight simulator: past coins through the exit code (read only)
 
 Alerts go to ntfy when NTFY_TOPIC is set (a GitHub secret); otherwise they only print.
 
@@ -33,7 +34,7 @@ random coin from the same gate-pass pool. Gate failures are tracked as shadow re
 The review asks whether picks beat the control after costs.
 """
 import json, sys, time, subprocess, datetime, os, fcntl, random, urllib.parse, copy, gzip, glob, re, hashlib, math, struct, zlib
-import base64, socket, sqlite3, ssl
+import base64, socket, sqlite3, ssl, bisect, contextlib, statistics
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 BOOK = os.path.join(HERE, "book.json")
@@ -147,6 +148,34 @@ JUP_COINS_KEYLESS = 2     # with no key it refused the sixth call of a burst (me
 JUP_BPS = 1000
 JUP_STOP_AFTER = 2        # failed coins before this cycle gives up: it's only a measurement
 HEALTH_PING_S = 300
+# The flight simulator (backtest). Read only: it keeps its own cache and never touches a book.
+BT_CACHE = os.path.join(HERE, ".backtest")
+BT_RPC = "https://api.mainnet-beta.solana.com"
+BT_MIGRATOR = "39azUYFWPz3VHgKCf3VChUwbpURdCHRxjWVowf5jUJjg"  # every pump.fun graduation goes through it, whatever became of the coin
+BT_PUMP = "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P"
+BT_AMM = "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA"
+BT_SOL_POOL = "58oQChx4yWmvKdwLLZzBi4ChoCc2fqCUWBkwMihLYQo2"  # SOL/USDC, for SOL's price back then
+BT_DAYS = (21, 85)        # graduates this old: 2 pages of candles fit behind them, and the free tier reaches ~90 days
+BT_BAR = 900              # 15-minute candles
+BT_PAGE = 1000            # candles a call, so 10.4 days
+BT_PAGES = 2              # a coin that reached the universe gets the second page
+BT_BUSY_TXS = 1000        # a pool with fewer transactions ever is skipped: see _bt_screen
+BT_POOL_TOKENS = 206.9e6  # tokens every graduate pool opens with
+BT_MIN_OPEN_SOL = 10      # a pool that opened on less is skipped too (about 4 in 10 open on under 1 SOL)
+BT_AUDIT_EVERY = 10       # every Nth skipped coin is fetched anyway, to prove the skip hides nothing
+BT_GT_GAP_S = 13          # measured 2026-11-04: at 6 s it stalled on 429 every few calls, about 23 s a coin overall
+BT_WAIT_S = 65
+BT_RPC_GAP_S = 0.5
+BT_RPC_WAIT_S = 11
+BT_RPC_TRIES = 6
+BT_SEEDS = 10             # random-pick draws pooled for the baseline
+BT_RESAMPLES = 1000
+BT_COLLAPSED = -0.9       # a universe coin this far off its peak by the end of its data, or inside one candle
+# Arms the candles can't separate. Their entries read data with no history, so each would only
+# repeat v-momentum's numbers.
+BT_NOT_TESTABLE = {"v-low-bundle": "insider share at the time", "v-velocity": "trade counts", "v-x-organic": "X posts",
+                   "v-x-exit": "X posts", "v-unease": "3 of its 5 signs (sellers, trade size, SOL leaving)",
+                   "v-networks": "RugCheck's graph at the time", "v-unpaid": "paid-listing history"}
 LOCK = "/tmp/memepaper.lock"  # the 2-minute watcher and manual trades never write at once
 ORDERS = None             # state mode: the orders inbox folder. None = legacy mode (books beside the code)
 BOOKS = None              # state mode: the folder of arm books
@@ -2120,6 +2149,440 @@ def replay(day):
     return diffs
 
 
+def _rpc(method, params):
+    """Solana's public read-only RPC. No key, no wallet: it only answers questions about history.
+    Its limit resets in about 10 seconds and can arrive as HTTP 429 or as a 429 inside a 200."""
+    for _ in range(BT_RPC_TRIES):
+        p = subprocess.run(["curl", "-s", "-m", "30", "-A", "memepaper/1.0", "-H", "content-type: application/json", "-w", "\n%{http_code}",
+                            "-d", json.dumps({"jsonrpc": "2.0", "id": 1, "method": method, "params": params}), BT_RPC],
+                           capture_output=True, text=True, check=True)
+        body, code = p.stdout.rsplit("\n", 1)
+        d = json.loads(body) if code != "429" else {"error": {"code": 429}}
+        if (d.get("error") or {}).get("code") != 429:
+            break
+        time.sleep(BT_RPC_WAIT_S)
+    else:
+        raise GtRefused()
+    if code != "200" or "error" in d:
+        raise ValueError(f"rpc {code}: {str(d.get('error'))[:100]}")
+    return d["result"]
+
+
+def _bt_call(f, *a):
+    """One public call, waiting out refusals. Anything else is the caller's to skip."""
+    for _ in range(10):
+        try:
+            return f(*a)
+        except GtRefused:
+            time.sleep(BT_WAIT_S)
+    raise GtRefused()
+
+
+def _bt_graduations(path, t):
+    """Every migration signature in the window, newest first, from the chain. This list can't know
+    how a coin ended, which is the whole guard against survivorship. Resumes where it stopped."""
+    lo, hi = t - BT_DAYS[1] * 86400, t - BT_DAYS[0] * 86400
+    seen = [json.loads(x) for x in open(path)] if os.path.exists(path) else []
+    before = seen[-1]["sig"] if seen else None
+    with open(path, "a") as f:
+        while not (seen and seen[-1]["t"] < lo):
+            q = {"limit": 1000, **({"before": before} if before else {})}
+            got = _bt_call(_rpc, "getSignaturesForAddress", [BT_MIGRATOR, q])
+            if not got:
+                break
+            before = got[-1]["signature"]
+            for x in got:
+                if not x["err"] and x.get("blockTime"):
+                    seen.append({"sig": x["signature"], "t": x["blockTime"]})
+                    f.write(json.dumps(seen[-1]) + "\n")
+            time.sleep(BT_RPC_GAP_S)
+    return [x for x in seen if lo <= x["t"] <= hi]
+
+
+def _bt_grad(sig):
+    """A graduation from its own transaction: {mint, pool, k}, or None for a retry that made no pool.
+    All from the chain, because GeckoTerminal stops listing a dead coin's pools. k is the pool's
+    SOL x tokens at birth. It varies: some pools opened on 85 SOL, others on under 1."""
+    tx = _rpc("getTransaction", [sig, {"encoding": "jsonParsed", "maxSupportedTransactionVersion": 1}])
+    if not tx:
+        raise ValueError("no such transaction")
+    if not any("CreatePool" in x for x in tx["meta"]["logMessages"]):
+        return None
+    acc = next((i["accounts"] for i in tx["transaction"]["message"]["instructions"] if i.get("programId") == BT_PUMP), None)
+    if not acc or BT_AMM not in acc:
+        raise ValueError("not a migration")
+    mint, pool = acc[2], acc[acc.index(BT_AMM) + 1]  # the same place in both versions of the instruction
+    held = {x["mint"]: x["uiTokenAmount"]["uiAmount"] for x in tx["meta"]["postTokenBalances"] if x["owner"] == pool}
+    if not held.get(mint) or not held.get(SOL_MINT):
+        raise ValueError("pool balances missing")
+    return {"mint": mint, "pool": pool, "k": held[mint] * held[SOL_MINT]}
+
+
+def _bt_today(pools):
+    """pool -> how it stands today, for checking the liquidity model. A pool missing here is delisted."""
+    got = _gt("/pools/multi/" + ",".join(pools)).get("data") or []
+    return {x["attributes"]["address"]: {"reserve": x["attributes"].get("reserve_in_usd"), "px_now": x["attributes"].get("base_token_price_usd")} for x in got}
+
+
+def _bt_screen(c):
+    """Could this coin ever have reached the universe? Candle calls are the scarce thing, so the
+    chain answers first. Its pool's opening size is known at birth, and reaching the universe takes
+    far more than BT_BUSY_TXS transactions while a collapse only adds more, so this drops coins
+    that never got going, not coins that crashed. The audit in bt_fetch checks that claim."""
+    if c["k"] / BT_POOL_TOKENS < BT_MIN_OPEN_SOL:
+        return False
+    n, q = 0, {"limit": 1000}
+    while n < BT_BUSY_TXS:
+        got = _rpc("getSignaturesForAddress", [c["pool"], q])
+        n += len(got)
+        if len(got) < 1000:
+            break
+        q["before"] = got[-1]["signature"]
+        time.sleep(BT_RPC_GAP_S)
+    return n >= BT_BUSY_TXS
+
+
+def _bt_page(pool, before):
+    got = _gt(f"/pools/{pool}/ohlcv/minute?aggregate={BT_BAR // 60}&limit={BT_PAGE}&before_timestamp={before}")
+    return got["data"]["attributes"]["ohlcv_list"]
+
+
+def _bt_sol(path):
+    """SOL's daily close: {day start: price}."""
+    if not os.path.exists(path):
+        got = _bt_call(_gt, f"/pools/{BT_SOL_POOL}/ohlcv/day?limit=200")
+        _jsave(path, {str(x[0]): x[4] for x in got["data"]["attributes"]["ohlcv_list"]})
+    return {int(k): v for k, v in _jload(path, {}).items()}
+
+
+def _bt_su(sol):
+    """A function from time to SOL's price that day."""
+    days = sorted(sol)
+    return lambda t: sol[days[max(0, bisect.bisect_right(days, t) - 1)]]
+
+
+def bt_liq(px, su, k):
+    """Pool liquidity from price alone, since candles carry none. A graduate's pool is constant
+    product with its LP burned, so its SOL side is sqrt(k x price in SOL) and only price moves it."""
+    return 2 * math.sqrt(k * px * su)
+
+
+def _bt_reached(c, su_at, min_liq):
+    return any(x[0] + BT_BAR - c["born"] >= UNIVERSE_MIN_AGE_H * 3600 and bt_liq(x[4], su_at(x[0]), c["k"]) >= min_liq for x in c["bars"])
+
+
+def bt_fetch(cache, n, seed, t, min_liq=UNIVERSE_MIN_LIQ):
+    """Draw n graduates at random and pull what they need, saving as it goes: a stop loses nothing
+    and a second run carries on. Writes to `cache` only."""
+    os.makedirs(cache, exist_ok=True)
+    path = os.path.join(cache, f"coins-{seed}.json")
+    s = _jload(path, {"seed": seed, "at": t, "coins": {}, "drawn": 0, "retries": 0, "unreadable": 0, "other": 0, "population": 0})
+    grads = _bt_graduations(os.path.join(cache, "graduations.jsonl"), s["at"])
+    s["population"] = len(grads)
+    random.Random(seed).shuffle(grads)
+    su_at = _bt_su(_bt_sol(os.path.join(cache, "sol.json")))
+    for x in grads[s["drawn"]:]:
+        if len(s["coins"]) >= n:
+            break
+        try:
+            g = _bt_call(_bt_grad, x["sig"])
+        except (ValueError, KeyError, subprocess.CalledProcessError):
+            s["unreadable"] += 1
+            g = False
+        s["drawn"] += 1
+        if g is None:
+            s["retries"] += 1
+        elif g and not g["mint"].endswith("pump"):
+            s["other"] += 1
+        elif g:
+            s["coins"][g.pop("mint")] = {**g, "born": x["t"]}
+        time.sleep(BT_RPC_GAP_S)
+        if s["drawn"] % 200 == 0:
+            _jsave(path, s)
+            print(f"drew {len(s['coins'])} coins", flush=True)
+    _jsave(path, s)
+    skipped = 0
+    for c in s["coins"].values():
+        if "busy" not in c:
+            try:
+                c["busy"] = _bt_call(_bt_screen, c)
+            except (ValueError, subprocess.CalledProcessError):
+                continue
+            time.sleep(BT_RPC_GAP_S)
+        skipped += not c["busy"]
+        c["audit"] = not c["busy"] and ("bars" in c or skipped % BT_AUDIT_EVERY == 0)
+        if (c["busy"] or c["audit"]) and "bars" not in c and "no_bars" not in c:
+            try:
+                c["until"] = min(c["born"] + BT_PAGE * BT_BAR, s["at"])
+                c["bars"] = _bt_call(_bt_page, c["pool"], c["until"])
+                time.sleep(BT_GT_GAP_S)
+                if _bt_reached(c, su_at, min_liq):
+                    for p in range(1, BT_PAGES):
+                        c["until"] = min(c["born"] + (p + 1) * BT_PAGE * BT_BAR, s["at"])
+                        c["bars"] += _bt_call(_bt_page, c["pool"], c["until"])
+                        time.sleep(BT_GT_GAP_S)
+            except (ValueError, KeyError, subprocess.CalledProcessError):
+                c.pop("bars", None)
+                c["no_bars"] = True
+            _jsave(path, s)
+            print(f"candles: {sum('bars' in x for x in s['coins'].values())} coins", flush=True)
+    todo = [c for c in s["coins"].values() if c.get("bars") and "today" not in c]
+    for i in range(0, len(todo), GT_CHUNK):
+        chunk = todo[i:i + GT_CHUNK]
+        try:
+            got = _bt_call(_bt_today, [c["pool"] for c in chunk])
+        except (ValueError, subprocess.CalledProcessError):
+            continue  # a failed call says nothing about the coins: the next run asks again
+        for c in chunk:
+            c["today"] = got.get(c["pool"])
+        time.sleep(BT_GT_GAP_S)
+    _jsave(path, s)
+    return s
+
+
+def bt_path(bar, low_first):
+    """A candle as the 15 prices the minute loop would have seen: its low, high and close, five
+    minutes each, and nothing between them. A line between prints would be a fiction: 1-minute data
+    shows these coins losing 98% inside one minute, and a line lets a stop out at -40% on the way
+    down, at a price that never traded. A candle hides whether its low or high came first, which
+    decides stop against take-profit, so every run is done both ways."""
+    o, h, l, c = bar[1:5]
+    return [l] * 5 + [h] * 5 + [c] * 5 if low_first else [h] * 5 + [l] * 5 + [c] * 5
+
+
+def bt_bars(c):
+    """A coin's candles, oldest first, with a flat candle for each stretch nobody traded, up to the
+    end of what was fetched: a coin that went quiet is still held, at its last price."""
+    got = sorted({x[0]: x for x in c["bars"] if x[4] > 0}.values())
+    out = []
+    for x in got:
+        while out and out[-1][0] + BT_BAR < x[0]:
+            p = out[-1][4]
+            out.append([out[-1][0] + BT_BAR, p, p, p, p, 0])
+        out.append(x)
+    while out and out[-1][0] + 2 * BT_BAR <= c["until"]:
+        p = out[-1][4]
+        out.append([out[-1][0] + BT_BAR, p, p, p, p, 0])
+    return out
+
+
+def bt_rows(m, c, bars, flat, su_at, min_liq):
+    """What the arms would have read at each candle's close, from that candle and earlier only.
+    Buys and sells have no history, so 1h volume in rising candles stands in for one and falling for
+    the other. Stops at 48h before the data does, so a late entry can still run its time stop."""
+    rows = []
+    for i, x in enumerate(bars):
+        t, px = x[0] + BT_BAR, x[4]
+        su, age = su_at(t), (t - c["born"]) / 3600
+        day, liq = bars[max(0, i - 95):i + 1], bt_liq(px, su, c["k"])
+        vol = sum(y[5] for y in day)
+        if age < UNIVERSE_MIN_AGE_H or liq < min_liq or not vol or t > c["until"] - TIME_STOP_H * 3600:
+            continue
+        hour = bars[max(0, i - 3):i + 1]
+        rows.append({"t": t, "mint": m, "px": px, "liq": liq, "age_h": age, "vol_h24": vol, "avg_trade": 0,
+                     "buys_h1": sum(y[5] for y in hour if y[4] >= y[1]), "sells_h1": sum(y[5] for y in hour if y[4] < y[1]),
+                     "m5": (px / flat[(i + 1) * 15 - 6] - 1) * 100, "h1": (px / hour[0][1] - 1) * 100, "h24": (px / day[0][1] - 1) * 100,
+                     "wk": bars[i - 672][4] if i >= 672 else None, "eligible": True, "paid": True, "arms": [],
+                     "gate": {"fails": [], "at": t}, "read": read_coin(bars[max(0, i + 1 - READ_WINDOW):i + 1]), "x": None})
+    return rows
+
+
+def bt_prepare(coins, su_at, low_first, min_liq=UNIVERSE_MIN_LIQ):
+    """Every coin's minute prices, and the rows of each cycle. Shared by all the arms."""
+    prices, cycles = {}, {}
+    for m, c in coins.items():
+        bars = bt_bars(c)
+        if not bars:
+            continue
+        flat = [p for x in bars for p in bt_path(x, low_first)]
+        prices[m] = {"t0": bars[0][0], "flat": flat, "born": c["born"], "k": c["k"]}
+        for r in bt_rows(m, c, bars, flat, su_at, min_liq):
+            cycles.setdefault(r["t"], []).append(r)
+    return {"prices": prices, "cycles": cycles, "su": su_at}
+
+
+def bt_pair(m, q, t, su):
+    """The price call's answer for a coin at minute t, shaped as DexScreener's."""
+    i = (t - q["t0"]) // 60 - 1
+    px = q["flat"][min(i, len(q["flat"]) - 1)]
+    was = q["flat"][max(0, i - 5)] if i < len(q["flat"]) else px
+    return {"baseToken": {"address": m, "symbol": m[:6]}, "priceUsd": px, "liquidity": {"usd": bt_liq(px, su, q["k"])}, "dexId": "pumpswap",
+            "priceChange": {"m5": (px / was - 1) * 100}, "marketCap": px * 1e9, "pairCreatedAt": q["born"] * 1000}
+
+
+@contextlib.contextmanager
+def _bt_time(box):
+    """Run the live book code in simulated time, quietly and offline: the clock reads box[0] and no
+    position asks RugCheck. Restored afterwards. Backtest is a process of its own, never the loop."""
+    g = globals()
+    keep = {k: g[k] for k in ("clock", "now", "held_hours", "rug")}
+    stamp = lambda: datetime.datetime.fromtimestamp(box[0], datetime.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    g.update(clock=lambda: box[0], now=stamp, held_hours=lambda pos: (box[0] - _ts(pos["opened"])) / 3600, rug=lambda m: (None, []))
+    try:
+        with open(os.devnull, "w") as null, contextlib.redirect_stdout(null):
+            yield
+    finally:
+        g.update(keep)
+
+
+def bt_any(rows, v, rng):
+    """The control arm's rule as a baseline: any coin that passed, at random."""
+    if v["cash"] <= ARM_CASH_FLOOR or len(v["held"]) >= MAX_OPEN:
+        return None
+    ok = [r for r in rows if _passed(r) and r["mint"] not in v["held"] and r["mint"] not in v["recent"]]
+    return rng.choice(ok) if ok else None
+
+
+def bt_arm(name, prep, rng=None):
+    """One arm through the whole sample on the live code: pick, view, _open, _apply_exits, _sell.
+    Exits run on the minute prices of a candle before anything is bought at its close, so a buy
+    never sees its own candle. Returns the closed trades."""
+    a, q, su_at = VARIANTS.get(name, {}), prep["prices"], prep["su"]
+    b = {"cash_sol": START_SOL, "positions": {}, "closed": [], "log": []}
+    box = [0]
+    with _bt_time(box):
+        if prep["cycles"]:
+            t0, t1 = min(prep["cycles"]), max(prep["cycles"])
+            ends = [x["t0"] + len(x["flat"]) * 60 for x in q.values()]
+            for t in range(t0, max(ends + [t1]) + BT_BAR, BT_BAR):
+                su = su_at(t)
+                for box[0] in range(t - BT_BAR + 60, t + 60, 60):
+                    if not b["positions"]:
+                        break
+                    _apply_exits(b, {m: bt_pair(m, q[m], box[0], su) for m in b["positions"]}, su)
+                box[0] = t
+                rows = prep["cycles"].get(t)
+                if not rows:
+                    continue
+                v = view(b, t)
+                r = bt_any(rows, v, rng) if rng else pick(name, rows, v, {x["mint"]: x["wk"] for x in rows if x["wk"]})
+                if r:
+                    # cycle()'s stop, copied so this tool leaves the live path untouched
+                    stop = min(STOP_RANGE[1], max(STOP_RANGE[0], -SWING_K * r["read"]["swing"])) if a.get("swing_stop") else a.get("stop", -0.35)
+                    p = bt_pair(r["mint"], q[r["mint"]], t, su)
+                    _open(b, r["mint"], MAX_POS_SOL, f"{name} rule", stop, a.get("tp1", 1.0), p, su)
+                    b["positions"][r["mint"]]["trip"] = _paper_trip(p, su)
+            for m in list(b["positions"]):
+                _sell(b, m, 1.0, "data ended", bt_pair(m, q[m], box[0], su_at(box[0])), su_at(box[0]))
+    return b["closed"]
+
+
+def bt_band(trades, seed):
+    """The mean trade and a 90% band around it, resampling whole coins: repeat trades in one coin
+    are one piece of evidence, not several."""
+    by = {}
+    for x in trades:
+        by.setdefault(x["mint"], []).append(x["pnl_pct"])
+    groups, rng, means = list(by.values()), random.Random(seed), []
+    for _ in range(BT_RESAMPLES):
+        pick_ = [y for g in rng.choices(groups, k=len(groups)) for y in g]
+        means.append(sum(pick_) / len(pick_))
+    means.sort()
+    return means[len(means) // 20], means[-len(means) // 20]
+
+
+def bt_stats(trades, seed):
+    if not trades:
+        return {"n": 0}
+    pct = [x["pnl_pct"] for x in trades]
+    why = {}
+    for x in trades:
+        k = re.split(r"[: ]+at |:", x["exit_reason"])[0]
+        why[k] = why.get(k, 0) + 1
+    lo, hi = bt_band(trades, seed)
+    return {"n": len(trades), "coins": len({x["mint"] for x in trades}), "win": sum(p > 0 for p in pct) / len(pct), "mean": sum(pct) / len(pct),
+            "median": statistics.median(pct), "lo": lo, "hi": hi, "sol": sum(x["pnl_sol"] for x in trades),
+            "trip": sum(x["trip"] for x in trades) / len(trades), "tp": sum(x["tp1_done"] for x in trades) / len(trades), "why": why}
+
+
+def bt_compare(coins, su_at, seed, min_liq=UNIVERSE_MIN_LIQ):
+    """Every testable arm, and the random baseline, under both candle orders."""
+    out = {}
+    for low_first in (True, False):
+        prep = bt_prepare(coins, su_at, low_first, min_liq)
+        for name in VARIANTS:
+            if name not in BT_NOT_TESTABLE:
+                out.setdefault(name, {})[low_first] = bt_stats(bt_arm(name, prep), seed)
+        pooled = [x for i in range(BT_SEEDS) for x in bt_arm("random pass", prep, random.Random(seed + i))]
+        out.setdefault("random pass", {})[low_first] = bt_stats(pooled, seed)
+    return out
+
+
+def _bt_sample_lines(s, su_at, min_liq):
+    cs = s["coins"].values()
+    have = [c for c in cs if c.get("bars")]
+    audit = [c for c in have if c.get("audit")]
+    reached = [c for c in have if c.get("busy") and _bt_reached(c, su_at, min_liq)]
+    fell, gapped = [], 0
+    for c in reached:
+        bars = bt_bars(c)
+        fell.append(bars[-1][4] / max(x[2] for x in bars) - 1)
+        gapped += any(x[3] / x[1] - 1 <= BT_COLLAPSED for x in bars)
+    alive = [c for c in reached if float((c.get("today") or {}).get("reserve") or 0) >= min_liq]
+    ratio = [bt_liq(float(c["today"]["px_now"]), su_at(s["at"]), c["k"]) / float(c["today"]["reserve"]) for c in have
+             if float((c.get("today") or {}).get("reserve") or 0) > 0 and c["today"].get("px_now")]
+    born = [c["born"] for c in cs]
+    day = lambda t: datetime.datetime.fromtimestamp(t, datetime.timezone.utc).strftime("%Y-%m-%d")
+    return [f"Sample: {len(s['coins'])} pump.fun graduates, {day(min(born))} to {day(max(born))}, drawn at random (seed {s['seed']}) from "
+            f"{s['population']} migration signatures on the chain, so the draw can't know how a coin ended.",
+            f"  draws: {s['drawn']}; retries that made no pool {s['retries']}; mints not ending in pump {s['other']}; unreadable or not SOL-quoted {s['unreadable']}",
+            f"  never busy (under {BT_BUSY_TXS} pool transactions ever, or opened on under {BT_MIN_OPEN_SOL} SOL), skipped: {sum(c.get('busy') is False for c in cs)}; busy: {sum(bool(c.get('busy')) for c in cs)}; "
+            f"busy with no candles: {sum(bool(c.get('busy')) and not c.get('bars') for c in cs)}",
+            f"  skip check: {len(audit)} skipped coins fetched anyway, {sum(_bt_reached(c, su_at, min_liq) for c in audit)} reached the universe",
+            f"  reached the universe (6h old, modelled liquidity ${min_liq:,.0f}+): {len(reached)}. Of those {sum(f <= BT_COLLAPSED for f in fell)} ended "
+            f"{-BT_COLLAPSED:.0%}+ off their peak, {gapped} lost that much inside one 15-minute candle, and {len(reached) - len(alive)} are under the liquidity bar today, so collapses are in the sample.",
+            f"  liquidity model against today's pools: median {statistics.median(ratio):.2f}x actual over {len(ratio)} coins" if ratio else "  liquidity model: no live pools to check against"]
+
+
+def _bt_row(name, r):
+    a, b = r[True], r[False]
+    if not a["n"]:
+        return f"{name:<14} no trades"
+    top = sorted(a["why"].items(), key=lambda x: -x[1])[:3]
+    return (f"{name:<14}{a['n']:>5}{a['coins']:>6}{a['win']:>6.0%}{a['tp']:>6.0%}{a['median']:>8.0%}{a['mean']:>8.1%}  {a['lo']:>+6.0%} to {a['hi']:<+6.0%}"
+            f"{b.get('mean', 0):>8.1%}{a['sol']:>+8.2f}{a['trip']:>7.1%}  " + ", ".join(f"{k} {v}" for k, v in top))
+
+
+def bt_report(s, res, su_at, min_liq):
+    head = f"{'arm':<14}{'trades':>5}{'coins':>6}{'win':>6}{'tp':>6}{'median':>8}{'mean':>8}  {'90% band of mean':<18}{'mean*':>8}{'SOL':>8}{'costs':>7}  exits"
+    lines = ["Flight simulator. Fake money, past data, information only: this changes no rule and no arm is judged on it.", ""]
+    lines += _bt_sample_lines(s, su_at, min_liq) + ["", head]
+    lines += [_bt_row(n, res[n]) for n in res]
+    lines += ["", "Each arm: 0.25 SOL a trade, live `pick`, `_open`, `_apply_exits`, `_sell`. Figures assume each candle's low came first; mean* is the same run with its high first.",
+              "costs: mean `_paper_trip` at entry, the round trip's share of the stake, already inside every figure. random pass: any coin in the universe, "
+              f"{BT_SEEDS} draws pooled.", "", "No result (candles hold no history of what these arms read; their exits match v-momentum's):"]
+    lines += [f"  {k}: needs {v}" for k, v in BT_NOT_TESTABLE.items()]
+    lines += ["", "What this sample can't show:",
+              "  - The gate, and this is the big one. Candles have no holders, insiders or locks, so every coin counts as a pass, including the coins the live gate "
+              "exists to refuse. These figures are the rules with no gate in front of them, not what the live arms should expect.",
+              "  - Buys against sells: 1h volume in rising against falling candles stands in for them, so momentum entries are approximate.",
+              "  - Paid listings: live arms only see coins someone paid to list; this sample is every graduate.",
+              "  - Liquidity: modelled from price. A real drain or added LP doesn't show, so the liquidity event exit fires only on price.",
+              "  - Minute prices: each candle is only its low, high and close, so a stop fills at the candle's extreme, a slide looks like a step, and a wick the 60-second loop would miss still counts.",
+              "  - Fill quality in a crash: costs use the modelled pool, not the queue of sellers on the day.",
+              "  - Old coins: only a coin's first 10 to 21 days are here. The sample is thin, so arms rarely compete for a coin and `rank` barely matters.",
+              "  - The future: one stretch of one market. The rules stay frozen until the review."]
+    return "\n".join(lines)
+
+
+def backtest(a):
+    """The flight simulator's command. Read only: its files all go in its cache folder."""
+    cache = os.environ.get("MEMEPAPER_BT") or BT_CACHE
+    offline = "--offline" in a
+    a = [x for x in a if x != "--offline"]
+    kw = {k.lstrip("-"): float(v) for k, v in zip(a[::2], a[1::2])}
+    seed, min_liq = int(kw.get("seed", 7)), kw.get("minliq", UNIVERSE_MIN_LIQ)
+    if offline:
+        s = _jload(os.path.join(cache, f"coins-{seed}.json"), None)
+        if not s:
+            sys.exit("nothing cached yet: run backtest without --offline first")
+    else:
+        s = bt_fetch(cache, int(kw.get("coins", 300)), seed, round(clock()), min_liq)
+    su_at = _bt_su(_bt_sol(os.path.join(cache, "sol.json")))
+    coins = {m: c for m, c in s["coins"].items() if c.get("bars") and c.get("busy")}
+    print(bt_report(s, bt_compare(coins, su_at, seed, min_liq), su_at, min_liq))
+
+
 def notify(title, msg, priority="default", tags=""):
     """Push an alert to Jackson's phone with ntfy. The topic name is the only secret (a GitHub
     secret, masked in the public logs); without it the alert only prints. Never raises."""
@@ -2462,6 +2925,8 @@ def main(a):
     cmd = a[0]
     if cmd == "migrate":
         return migrate(a[1], a[2], force="--force" in a)
+    if cmd == "backtest":  # read only and slow: it needs no book, so it takes no lock
+        return backtest(a[1:])
     if os.environ.get("MEMEPAPER_STATE"):
         use_state(os.environ["MEMEPAPER_STATE"])
     if cmd == "feed":  # runs for good beside the loop, so it can't take the books' lock
