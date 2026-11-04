@@ -143,6 +143,8 @@ it changes no rule, and no arm is judged on it.
   hides whether its low or high came first, so everything runs both ways. Costs are the live ones, and `_paper_trip` at entry is printed beside each arm.
 - **Modelled:** liquidity (from price: graduate pools are constant product with burned LP) and buys against sells (1h volume in
   rising against falling candles). The gate can't be replayed, so every coin counts as a pass.
+- **Checked 2026-11-04 on seed 7:** the model read 0.90x the chain's real pool balance at 28 entries; simulated exits matched
+  real 1-minute closes on 15 of 16 trades (median 1.01x), the miss being a wick where the simulator was harsher.
 - **Not testable:** seven arms read data with no history, and the report lists what each needs. The rest of what the
   sample can't show is printed under every result. Candles come at about 4 calls a minute, so a stop loses nothing: run it again.
 

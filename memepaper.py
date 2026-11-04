@@ -2531,7 +2531,7 @@ def _bt_sample_lines(s, su_at, min_liq):
             f"  skip check: {len(audit)} skipped coins fetched anyway, {sum(_bt_reached(c, su_at, min_liq) for c in audit)} reached the universe",
             f"  reached the universe (6h old, modelled liquidity ${min_liq:,.0f}+): {len(reached)}. Of those {sum(f <= BT_COLLAPSED for f in fell)} ended "
             f"{-BT_COLLAPSED:.0%}+ off their peak, {gapped} lost that much inside one 15-minute candle, and {len(reached) - len(alive)} are under the liquidity bar today, so collapses are in the sample.",
-            f"  liquidity model against today's pools: median {statistics.median(ratio):.2f}x actual over {len(ratio)} coins" if ratio else "  liquidity model: no live pools to check against"]
+            f"  liquidity model against today's pools: median {statistics.median(ratio):.2f}x actual over {len(ratio)} coins, a weak check as nearly all are dead now" if ratio else "  liquidity model: no live pools to check against"]
 
 
 def _bt_row(name, r):
