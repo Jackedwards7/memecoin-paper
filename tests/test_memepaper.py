@@ -3277,5 +3277,845 @@ class TestRulesText(unittest.TestCase):
             self.assertIn(f"`{name}`", t)
 
 
+# --- phase 4: post-mortems -----------------------------------------------------------------
+def stamp(t):
+    return datetime.datetime.fromtimestamp(t, datetime.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+
+
+class TestPostmortem(ReadEnv):
+    def case(self, mint="Apump", pnl=-0.3, peak=0.0, exit="stop-loss at -30%", held=2, ago=30, **kw):
+        c = {"book": "v-momentum", "mint": mint, "symbol": mint[:4], "opened": stamp(self.t - (ago + held) * 3600), "closed": stamp(self.t - ago * 3600),
+             "pnl_pct": pnl, "peak": peak, "exit": exit, "thesis": "x", "entry": {"h24": 20, "m5": 1}, "exit_px": 1.0, **kw}
+        with open(os.path.join(self.state, "cases.jsonl"), "a") as f:
+            f.write(json.dumps(c) + "\n")
+        return c
+
+    def after(self, c, vs_exit):
+        with open(os.path.join(self.state, "cases.jsonl"), "a") as f:
+            f.write(json.dumps({"after": mp._case_key(c), "h": 24, "px": 2, "vs_exit": vs_exit}) + "\n")
+
+    def labels(self):
+        return mp._lines(os.path.join(self.state, "lessons", "postmortems.jsonl"))[0]
+
+    def lessons(self):
+        return open(os.path.join(self.state, "LESSONS.md")).read()
+
+    def test_each_rule_in_order(self):
+        base = {"opened": "2026-11-05 00:00 UTC", "closed": "2026-11-05 02:00 UTC", "peak": 0.1, "entry": {"h24": 20, "m5": 1}}
+        for want, c, vs in (
+                ("rug", {"pnl_pct": -1.0, "exit": "no price for 24h: treated as rugged, marked to zero"}, None),
+                ("rug", {"pnl_pct": -0.95, "exit": "stop-loss at -95%"}, 3.0),
+                ("liquidity-pulled", {"pnl_pct": -0.5, "exit": "event exit: liquidity down 50% since entry, -50% from entry"}, None),
+                ("won-trailed", {"pnl_pct": 0.4, "exit": "trailing stop: 40% off peak, +40% from entry"}, None),
+                ("won-held", {"pnl_pct": 0.1, "exit": "time stop: 48h held, +10%, no take-profit"}, None),
+                ("stop-too-tight", {"pnl_pct": -0.3, "exit": "stop-loss at -30%"}, 0.5),
+                ("other", {"pnl_pct": -0.3, "exit": "stop-loss at -30%"}, 0.49),
+                ("other", {"pnl_pct": -0.3, "exit": "stop-loss at -30%"}, None),
+                ("bought-spike", {"pnl_pct": -0.3, "exit": "stop-loss at -30%", "peak": 0.04, "entry": {"h24": 150, "m5": 1}}, None),
+                ("bought-spike", {"pnl_pct": -0.3, "exit": "stop-loss at -30%", "peak": 0.04, "entry": {"h24": 1, "m5": 15}}, None),
+                ("other", {"pnl_pct": -0.3, "exit": "stop-loss at -30%", "peak": 0.05, "entry": {"h24": 150, "m5": 1}}, None),
+                ("slow-bleed", {"pnl_pct": -0.1, "exit": "time stop: 48h held, -10%, no take-profit", "closed": "2026-11-07 00:00 UTC"}, None),
+                ("slow-bleed", {"pnl_pct": -0.3, "exit": "stop-loss at -30%", "closed": "2026-11-05 12:00 UTC"}, None),
+                ("other", {"pnl_pct": -0.3, "exit": "stop-loss at -30%", "closed": "2026-11-05 11:59 UTC"}, None),
+                ("other", {"pnl_pct": 0.0, "exit": "unease exit: 4 of 5 signs"}, None)):
+            self.assertEqual(mp.label({**base, **c}, vs)[0], want, c)
+
+    def test_no_entry_record_is_no_crash(self):
+        self.assertEqual(mp.label({"opened": "2026-11-05 00:00 UTC", "closed": "2026-11-05 01:00 UTC", "peak": 0, "entry": None, "pnl_pct": -0.2, "exit": "stop-loss at -20%"})[0], "other")
+
+    def test_code_leaves_the_judgement_labels_alone(self):
+        self.assertEqual({"copycat", "theme-faded"} & {mp.label({"opened": "2026-11-05 00:00 UTC", "closed": "2026-11-05 01:00 UTC", "peak": p, "entry": {"h24": h}, "pnl_pct": x, "exit": e})[0]
+                                                       for p in (0, 1) for h in (0, 500) for x in (-1, -0.2, 0.5) for e in ("x", "copycat", "theme faded", "stop-loss", "trailing")}, set())
+
+    def test_it_waits_a_day_or_for_the_look_back(self):
+        self.case(ago=24)
+        self.assertEqual(mp.postmortem(round(self.t)), 0)
+        self.assertEqual(self.labels(), [])
+        self.t += 3600
+        self.assertEqual(mp.postmortem(round(self.t)), 1)
+        c = self.case("Bpump", ago=1)
+        self.after(c, 0.8)
+        self.assertEqual(mp.postmortem(round(self.t)), 1)
+        self.assertEqual(self.labels()[-1]["label"], "stop-too-tight")
+
+    def test_each_trade_is_labelled_once(self):
+        self.case()
+        for _ in range(3):
+            mp.postmortem(round(self.t))
+        self.assertEqual(len(self.labels()), 1)
+        x = self.labels()[0]
+        self.assertEqual((x["book"], x["symbol"], x["pnl_pct"]), ("v-momentum", "Apum", -0.3))
+
+    def test_the_label_list_is_closed(self):
+        self.case(pnl=0.5, exit="trailing stop")
+        self.case("Bpump", exit="anything at all")
+        mp.postmortem(round(self.t))
+        self.assertTrue(all(x["label"] in mp.LABELS for x in self.labels()))
+
+    def test_an_idea_needs_three_repeats(self):
+        for i in range(2):
+            self.after(self.case(f"{i}pump"), 1.0)
+        mp.postmortem(round(self.t))
+        self.assertNotIn("To test", self.lessons())
+        self.assertEqual(mp.lesson_ideas(), [])
+        self.after(self.case("3pump"), 1.0)
+        mp.postmortem(round(self.t))
+        self.assertEqual(mp.lesson_ideas(), ["stop-too-tight"])
+        self.assertIn("To test: stop-too-tight: widen the stop", self.lessons())
+        self.assertIn("**stop-too-tight**: 3 trades, mean -30%", self.lessons())
+
+    def test_wins_never_become_ideas(self):
+        for i in range(5):
+            self.case(f"{i}pump", pnl=0.5, exit="trailing stop")
+        mp.postmortem(round(self.t))
+        self.assertEqual(mp.lesson_ideas(), [])
+
+    def test_lessons_stay_small(self):
+        for i in range(300):
+            self.case(f"{i}pump" * 3, exit=f"odd exit {i} " * 8)
+        mp.postmortem(round(self.t))
+        self.assertLessEqual(os.path.getsize(os.path.join(self.state, "LESSONS.md")), mp.LESSONS_MAX)
+        with mock.patch.object(mp, "LESSONS_MAX", 100):
+            mp.write_lessons()
+        self.assertLessEqual(os.path.getsize(os.path.join(self.state, "LESSONS.md")), 100)
+
+    def test_a_cycle_runs_it(self):
+        self.case()
+        self.cycle()
+        self.assertEqual(len(self.labels()), 1)
+
+
+# --- phase 5: numbers inside bounds --------------------------------------------------------
+class ArmEnv(ReadEnv):
+    def registry(self, **kw):
+        os.makedirs(os.path.join(self.state, "params"), exist_ok=True)
+        mp._jsave(os.path.join(self.state, "params", "arms.json"), kw)
+
+    def setUp(self):
+        super().setUp()
+        mp._CLAMPED.clear()
+
+
+class TestBounds(ArmEnv):
+    def test_the_file_holds_the_agreed_limits(self):
+        b = json.load(open(os.path.join(mp.HERE, "params", "bounds.json")))
+        self.assertEqual(set(b), set(mp.PARAM_KEYS))
+        self.assertEqual(b["stop"], [-0.5, -0.15])
+        self.assertLessEqual(b["sol"][1], mp.MAX_POS_SOL)
+        self.assertLessEqual(b["max_open"][1], mp.MAX_OPEN)
+        self.assertGreaterEqual(b["min_age_h"][0], 1)
+        self.assertGreaterEqual(b["min_liq"][0], 50_000)
+
+    def test_out_of_bounds_is_clamped_and_alerted_once(self):
+        for _ in range(2):
+            self.assertEqual(mp._clamped("x", {"stop": -0.9, "sol": 5}), {"stop": -0.5, "sol": 0.25})
+        self.assertEqual(len(self.alerts), 1)
+        self.assertIn("stop -0.9 clamped to -0.5", self.alerts[0][1])
+
+    def test_inside_bounds_says_nothing(self):
+        self.assertEqual(mp._clamped("x", {"stop": -0.3, "tp1": 1.2}), {"stop": -0.3, "tp1": 1.2})
+        self.assertEqual(self.alerts, [])
+
+    def test_junk_is_dropped(self):
+        got = mp._clamped("x", {"rule": 1, "rank": "liq", "stop": "-0.3", "tp1": True, "sol": float("nan"), "max_open": None, "min_liq": 60_000})
+        self.assertEqual(got, {"min_liq": 60_000})
+        self.assertEqual(len(self.alerts), 1)
+
+    def test_no_bounds_file_means_no_changes(self):
+        with mock.patch.object(mp, "HERE", self.tmp.name):
+            self.assertEqual(mp._clamped("x", {"stop": -0.3}), {})
+
+    def test_code_arms_run_as_written(self):
+        self.registry(added={"v-c1": {"base": "v-tight", "stop": -0.3}})
+        self.assertIs(mp.arm_cfg("v-tight"), mp.VARIANTS["v-tight"])
+
+    def test_an_added_arm_is_a_code_arm_with_clamped_numbers(self):
+        self.registry(added={"v-c1": {"base": "v-tight", "stop": -0.9, "sol": 1, "rule": "x", "rank": "liq"}})
+        a = mp.arm_cfg("v-c1")
+        self.assertIs(a["rule"], mp.VARIANTS["v-tight"]["rule"])
+        self.assertEqual((a["stop"], a["sol"], a["tp1"], a["rank"]), (-0.5, 0.25, 0.40, "vol_h24"))
+
+    def test_live_arms_drops_the_retired(self):
+        self.assertEqual(set(mp.live_arms()), set(mp.VARIANTS))
+        self.registry(retired=["v-dip", "v-c1"], added={"v-c1": {"base": "v-tight"}, "v-c2": {"base": "v-loose"}})
+        self.assertEqual(set(mp.live_arms()), set(mp.VARIANTS) - {"v-dip"} | {"v-c2"})
+
+    def test_pick_honours_the_numbers(self):
+        self.coin("Apump")
+        self.cycle()
+        r, = self.rows()
+        v = {"cash": 10, "held": [], "recent": []}
+        a = mp.VARIANTS["v-momentum"]
+        self.assertEqual(mp.pick("v-momentum", [r], v)["mint"], "Apump")
+        for k, x in (("min_age_h", r["age_h"] + 1), ("min_liq", r["liq"] + 1), ("max_h24", r["h24"] - 1)):
+            self.assertIsNone(mp.pick("x", [r], v, None, {**a, k: x}), k)
+            self.assertIsNotNone(mp.pick("x", [r], v, None, {**a, k: r[{"min_age_h": "age_h", "min_liq": "liq", "max_h24": "h24"}[k]]}), k)
+        self.assertIsNone(mp.pick("x", [r], {**v, "held": ["B"]}, None, {**a, "max_open": 1}))
+
+    def test_the_gate_still_binds_an_added_arm(self):
+        self.coin("Apump")
+        self.cycle()
+        r, = self.rows()
+        r["gate"]["fails"] = ["mint authority"]
+        self.assertIsNone(mp.pick("x", [r], {"cash": 10, "held": [], "recent": []}, None, mp.VARIANTS["v-momentum"]))
+
+    def test_a_cycle_runs_added_arms_and_skips_retired_ones(self):
+        self.registry(retired=["v-tight"], added={"v-c1": {"base": "v-momentum", "stop": -0.2, "tp1": 0.5, "sol": 0.1}})
+        self.coin("Apump")
+        self.cycle()
+        p = self.book("v-c1")["positions"]["Apump"]
+        self.assertEqual((p["cost_sol"], p["stop"], p["tp1"]), (0.1, -0.2, 0.5))
+        self.assertEqual(self.book("v-tight")["positions"], {})
+        self.assertEqual(self.book("v-momentum")["positions"]["Apump"]["cost_sol"], mp.MAX_POS_SOL)
+
+    def test_a_retired_arm_still_sells_what_it_holds(self):
+        self.coin("Apump")
+        self.cycle()
+        self.registry(retired=["v-tight"])
+        self.price("Apump", 0.5)
+        self.run_quiet(mp.mark, True)
+        b = self.book("v-tight")
+        self.assertEqual(b["positions"], {})
+        self.assertIn("stop-loss", b["closed"][0]["exit_reason"])
+
+    def test_replay_still_matches_with_added_and_retired_arms(self):
+        self.t = mp._ts("2026-12-01 12:00 UTC")
+        self.registry(added={"v-c1": {"base": "v-momentum", "max_h24": 50}})
+        self.coin("Apump")
+        self.coin("Bpump", priceChange={"m5": 1, "h1": 5, "h6": 5, "h24": 90})
+        self.cycle()
+        self.registry(retired=["v-c1", "v-tight"], added={"v-c1": {"base": "v-momentum", "max_h24": 50}})
+        self.assertEqual(self.run_quiet(mp.replay, self.day()), [])
+
+    def test_replay_checks_added_arms_too(self):
+        self.t = mp._ts("2026-12-01 12:00 UTC")
+        self.registry(added={"v-c1": {"base": "v-momentum"}})
+        self.coin("Apump")
+        self.cycle()
+        path = mp._data_path(round(self.t))
+        lines = [json.loads(x) for x in open(path)]
+        lines[1]["arms"].remove("v-c1")
+        with open(path, "w") as f:
+            f.write("".join(json.dumps(x) + "\n" for x in lines))
+        self.assertEqual(len(self.run_quiet(mp.replay, self.day())), 1)
+
+
+# --- phase 5: the statistics ---------------------------------------------------------------
+class TestStats(unittest.TestCase):
+    good = [0.3, 0.1, 0.4, 0.05, 0.25, 0.2, 0.35, 0.15] * 5
+
+    def test_more_tries_mean_less_belief(self):
+        srs = [0.1, 0.5, 0.9, 0.2]
+        self.assertGreater(mp.dsr(self.good, srs, 2), mp.dsr(self.good, srs, 2000))
+
+    def test_one_try_is_a_plain_probabilistic_sharpe(self):
+        self.assertGreater(mp.dsr(self.good, [], 1), 0.99)
+        self.assertLess(mp.dsr([-x for x in self.good], [], 1), 0.01)
+
+    def test_flat_or_tiny_samples_score_nothing(self):
+        self.assertEqual(mp.dsr([0.1] * 20, [0.1], 5), 0.0)
+        self.assertEqual(mp.dsr([0.1, 0.2], [0.1], 5), 0.0)
+
+    def test_known_value(self):
+        # Worked out apart from the code: Sharpe .2065, skew 1.99, kurtosis 5.30, 8 returns, one trial
+        self.assertAlmostEqual(mp.dsr([1.0, -0.1, -0.1, -0.1, -0.1, 0.2, -0.1, -0.1], [], 1), 0.7535, 3)
+
+    def test_arms_that_move_together_count_as_one(self):
+        a = [1.0, 2, 3, 4, 5, 6, 7, 8]
+        self.assertAlmostEqual(mp.n_eff(10, {"a": a, "b": [x * 2 for x in a], "c": [x + 1 for x in a]}), 1.0)
+
+    def test_arms_that_dont_count_in_full(self):
+        self.assertAlmostEqual(mp.n_eff(10, {"a": [1.0, -1, 1, -1], "b": [1.0, 1, -1, -1]}), 10.0)
+        self.assertEqual(mp.n_eff(10, {"a": [0.0] * 8, "b": [0.0] * 8}), 10)
+
+    def test_a_steady_winner_isnt_overfit(self):
+        self.assertEqual(mp.pbo({"a": [5.0] * 8, "b": [1.0] * 8, "c": [0.0] * 8}), 0.0)
+
+    def test_a_winner_by_one_lucky_block_is(self):
+        m = {"a": [9.0, 0, 0, 0, 0, 0, 0, 0], "b": [0.0, 9, 0, 0, 0, 0, 0, 0], "c": [0.0, 0, 9, 0, 0, 0, 0, 0], "d": [0.0, 0, 0, 9, 0, 0, 0, 0]}
+        self.assertGreater(mp.pbo(m), 0.3)
+
+    def test_one_arm_has_nothing_to_compare(self):
+        self.assertIsNone(mp.pbo({"a": [1.0] * 8}))
+        self.assertIsNone(mp.pbo({}))
+
+    def test_seventy_splits(self):
+        n = []
+        real = mp.itertools.combinations
+        with mock.patch.object(mp.itertools, "combinations", lambda *a: n.append(1) or real(*a)):
+            mp.pbo({"a": [1.0] * 8, "b": [0.0] * 8})
+        self.assertEqual(len(list(real(range(8), 4))), 70)
+
+    def test_blocks_put_trades_in_their_eighth(self):
+        t0 = mp._ts("2026-11-01 00:00 UTC")
+        got = mp._blocks([{"closed": stamp(t0), "pnl_sol": 1}, {"closed": stamp(t0 + 840), "pnl_sol": 2}], t0, t0 + 840)
+        self.assertEqual(got, [1, 0, 0, 0, 0, 0, 0, 2])
+
+    def test_drawdown(self):
+        self.assertAlmostEqual(mp._drawdown([1, -2, 1, -3, 5]), 4)
+        self.assertEqual(mp._drawdown([]), 0)
+
+    def test_beating_control_takes_mean_and_median(self):
+        self.assertTrue(mp.beat([0.3, 0.2, 0.1], [0.1, 0.0, -0.1]))
+        self.assertFalse(mp.beat([5.0, -0.1, -0.1], [0.1, 0.0, -0.1]), "mean only")
+        self.assertFalse(mp.beat([0.3, 0.3, -3.0], [0.1, 0.0, -0.1]), "median only")
+        self.assertFalse(mp.beat([0.3, 0.2, 0.1], []))
+        self.assertFalse(mp.beat([], [0.1]))
+        self.assertFalse(mp.beat([0.3, 0.2], [0.1], 3), "too few")
+        self.assertTrue(mp.beat([0.3, 0.2, 0.1], [0.1], 3))
+
+    def test_promotion_is_all_four(self):
+        good = {"n": 15, "beats_control": True, "beats_halves": True, "dsr": 0.95}
+        self.assertTrue(mp.promotable(good, 0.10))
+        for k, v in (("n", 14), ("beats_control", False), ("beats_halves", False), ("dsr", 0.949)):
+            self.assertFalse(mp.promotable({**good, k: v}, 0.10), k)
+        self.assertFalse(mp.promotable(good, 0.11))
+        self.assertFalse(mp.promotable(good, None))
+
+    def test_both_halves_must_be_ahead(self):
+        t0, t1 = 1_000_000 * 60, 1_000_000 * 60 + 86400
+        trade = lambda at, x: {"closed": stamp(t0 + at * 86400), "pnl_pct": x, "pnl_sol": x}
+        ctrl = [trade(0.1, 0.0), trade(0.9, 0.0)]
+        self.assertTrue(mp.score([trade(0.1, 0.1), trade(0.9, 0.1)], ctrl, t0, t1)["beats_halves"])
+        self.assertFalse(mp.score([trade(0.1, -0.1), trade(0.9, 0.5)], ctrl, t0, t1)["beats_halves"])
+        self.assertFalse(mp.score([trade(0.1, 0.5), trade(0.9, -0.1)], ctrl, t0, t1)["beats_halves"])
+
+
+# --- phase 5: the replay -------------------------------------------------------------------
+class TestSim(ArmEnv):
+    def setUp(self):
+        super().setUp()
+        self.t = mp._ts("2026-12-01 12:00 UTC")
+
+    def test_fills_cost_the_same_as_real_ones(self):
+        self.coin("Apump")
+        pair = self.market["Apump"]
+        b = mp.load()
+        self.run_quiet(mp._open, b, "Apump", 0.25, "x", -0.35, 1.0, pair, SU)
+        s = {"cash": 10.0, "pos": {}, "trades": [], "recent": {}}
+        r = {"mint": "Apump", "px": 1.0, "liq": 200_000}
+        mp._sim_buy(s, {}, r, self.t, SU)
+        self.assertAlmostEqual(s["pos"]["Apump"]["tokens"], b["positions"]["Apump"]["tokens"])
+        self.assertAlmostEqual(s["pos"]["Apump"]["entry"], b["positions"]["Apump"]["entry_px"])
+        for px, liq, frac in ((2.0, 200_000, 0.5), (1.5, 90_000, 1.0)):
+            self.price("Apump", px, liq)
+            self.run_quiet(mp._sell, b, "Apump", frac, "x", self.market["Apump"], SU)
+            mp._sim_sell(s, "Apump", frac, {"px": px, "liq": liq}, SU, self.t, "x")
+            self.assertAlmostEqual(s["cash"], b["cash_sol"])
+        self.assertAlmostEqual(s["trades"][0]["pnl_sol"], b["closed"][0]["pnl_sol"])
+
+    def test_a_rug_pays_nothing(self):
+        s = {"cash": 9.75, "pos": {"A": {"tokens": 10.0, "sol": 0.25, "got": 0.0}}, "trades": [], "recent": {}}
+        mp._sim_sell(s, "A", 1.0, None, SU, self.t, "gone")
+        self.assertEqual(s["trades"][0]["pnl_pct"], -1)
+
+    def run_days(self, *prices):
+        self.coin("Apump")
+        for px, kw in prices:
+            self.price("Apump", px, **kw)
+            self.cycle()
+            self.t += 900
+
+    def replayed(self, why_arm="v-momentum", **kw):
+        return mp.sim({"a": {**mp.VARIANTS[why_arm], **kw}}, [stamp(self.t)[:10]], SU)["a"]
+
+    def test_stop_exit(self):
+        self.run_days((1.0, {}), (0.6, {}))
+        x, = self.replayed()
+        self.assertEqual(x["why"], "stop")
+        self.assertLess(x["pnl_pct"], -0.35)
+
+    def test_a_wider_stop_stays_in(self):
+        self.run_days((1.0, {}), (0.7, {}))
+        self.assertEqual(self.replayed(stop=-0.2)[0]["why"], "stop")
+        self.assertEqual(self.replayed(stop=-0.45), [])
+
+    def test_take_profit_then_trailing_stop(self):
+        self.run_days((1.0, {}), (2.2, {}), (3.0, {}), (1.7, {}))
+        x, = self.replayed()
+        self.assertEqual(x["why"], "trail")
+        self.assertGreater(x["pnl_pct"], 0.5)
+
+    def test_event_exits(self):
+        self.run_days((1.0, {}), (1.0, {"liq": 100_000}))
+        self.assertEqual(self.replayed()[0]["why"], "liquidity")
+        self.t += 86400
+        self.run_days((1.0, {}), (0.9, {"m5": -25}))
+        self.assertEqual(self.replayed()[0]["why"], "m5")
+
+    def test_it_agrees_with_the_live_book(self):
+        self.coin("Apump")
+        for px in (1.0, 2.2, 1.2):
+            self.price("Apump", px)
+            self.cycle()
+            self.run_quiet(mp.mark, True)
+            self.t += 900
+        live = self.book("v-momentum")["closed"]
+        x, = self.replayed()
+        self.assertEqual(len(live), 1)
+        self.assertAlmostEqual(x["pnl_sol"], live[0]["pnl_sol"], 2)
+
+    def test_a_closed_coin_waits_out_the_cooldown(self):
+        self.run_days((1.0, {}), (0.6, {}), (0.6, {}), (0.3, {}))
+        self.assertEqual(len(self.replayed()), 1)
+
+    def test_no_data_is_no_trades(self):
+        self.assertEqual(mp.sim({"a": mp.VARIANTS["v-momentum"]}, ["2020-01-01"], SU), {"a": []})
+
+    def test_the_control_draw_repeats(self):
+        coins = [f"{i}pump" for i in range(12)]
+        for m in coins:
+            self.coin(m)
+        self.cycle()
+        self.t += 900
+        for i, m in enumerate(coins):
+            self.price(m, 0.2 + i * 0.03)
+        self.cycle()
+        arm = {"rule": lambda r, wk: True, "rank": "_draw"}
+        day = stamp(self.t)[:10]
+        first = mp.sim({"c": arm}, [day], SU)
+        self.assertEqual(len(first["c"]), 1)
+        for _ in range(6):
+            self.assertEqual(mp.sim({"c": arm}, [day], SU), first)
+
+
+# --- phase 5: the weekly run ---------------------------------------------------------------
+class TestLearn(ArmEnv):
+    def setUp(self):
+        super().setUp()
+        self.dry_day = mp._ts("2026-11-22 12:00 UTC")
+        self.live_day = mp._ts("2026-12-06 12:00 UTC")
+        self.t = self.live_day
+        self.assertEqual(datetime.datetime.fromtimestamp(self.t, datetime.timezone.utc).weekday(), 6)
+
+    def trades(self, name, pcts, days=26):
+        path = mp.CONTROL if name == "control" else os.path.join(mp.BOOKS, name + ".json")
+        b = mp.load(path)
+        for i, x in enumerate(pcts):
+            at = self.t - (days - days * i / len(pcts)) * 86400
+            b["closed"].append({"mint": f"{name}{i}", "symbol": "x", "v": 2, "opened": stamp(at - 3600), "closed": stamp(at), "pnl_pct": x, "pnl_sol": x * 0.25})
+        mp.save(b, path)
+
+    def learn(self, **kw):
+        return self.run_quiet(mp.learn, round(self.t), **kw)
+
+    def report(self):
+        return open(os.path.join(self.state, "LEARNING.md")).read()
+
+    def reg(self):
+        return mp._registry()
+
+    def trials(self):
+        return mp._trials()
+
+    def test_sundays_once_a_week(self):
+        self.t = self.live_day - 86400
+        self.assertIsNone(self.learn())
+        self.t = self.live_day
+        self.assertIsNotNone(self.learn())
+        self.assertIsNone(self.learn())
+        self.t += 7 * 86400
+        self.assertIsNotNone(self.learn())
+
+    def test_force_runs_any_day(self):
+        self.t = self.live_day - 86400
+        self.assertIsNotNone(self.learn(force=True))
+
+    def test_the_cycle_runs_it(self):
+        self.cycle()
+        self.assertTrue(os.path.exists(os.path.join(self.state, "learn.json")))
+
+    def test_every_live_arm_is_a_trial_and_only_once(self):
+        self.learn()
+        self.t += 7 * 86400
+        self.learn()
+        self.assertEqual(sorted(x["name"] for x in self.trials()), sorted(mp.VARIANTS))
+
+    def test_a_trial_is_never_forgotten(self):
+        self.learn()
+        self.registry(retired=list(mp.VARIANTS)[:3])
+        self.t += 7 * 86400
+        self.learn()
+        self.assertEqual(len(self.trials()), len(mp.VARIANTS))
+
+    def test_before_the_freeze_lifts_it_only_proposes(self):
+        self.t = self.dry_day
+        self.trades("control", [0.0] * 20)
+        self.trades("v-dip", [-0.2] * 20)
+        s = self.learn()
+        self.assertEqual(s["propose"]["retire"], "v-dip")
+        self.assertEqual(s["done"], [])
+        self.assertFalse(os.path.exists(os.path.join(self.state, "params", "arms.json")))
+        self.assertFalse(os.path.exists(os.path.join(self.state, "CHANGELOG.md")))
+        self.assertIn("Proposes only until 2026-11-30", self.report())
+        self.assertEqual(self.alerts, [])
+
+    def test_after_it_the_worst_loser_is_retired(self):
+        self.trades("control", [0.0] * 20)
+        self.trades("v-dip", [-0.2] * 20)
+        self.trades("v-tight", [-0.1] * 20)
+        self.learn()
+        self.assertEqual(self.reg()["retired"], ["v-dip"])
+        self.assertIn("retired v-dip", open(os.path.join(self.state, "CHANGELOG.md")).read())
+        self.assertEqual(len(self.alerts), 1)
+
+    def test_no_arm_is_retired_on_too_few_trades_or_by_beating_control(self):
+        self.trades("control", [0.0] * 20)
+        self.trades("v-dip", [-0.5] * 14)
+        self.trades("v-tight", [0.1] * 20)
+        self.learn()
+        self.assertEqual(self.reg()["retired"], [])
+
+    def test_no_control_no_retirement(self):
+        self.trades("v-dip", [-0.2] * 20)
+        self.learn()
+        self.assertEqual(self.reg()["retired"], [])
+
+    def test_old_trades_and_v1_trades_are_left_out(self):
+        self.trades("control", [0.0] * 20)
+        self.trades("v-dip", [-0.2] * 20, days=60)
+        self.t += 0
+        s = self.learn()
+        self.assertIsNone(s["worst"])
+
+    def promoted(self, arm="v-mature"):
+        return arm in self.learn()["promoted"]
+
+    STEADY = [0.3, 0.1, 0.4, 0.05, 0.25, 0.2, 0.35, 0.15] * 5
+
+    def test_promotion_needs_all_of_it(self):
+        self.trades("control", [0.01, -0.01] * 20)
+        self.trades("v-mature", self.STEADY)
+        self.trades("v-dip", [0.02, -0.02] * 20)
+        self.assertTrue(self.promoted())
+
+    def test_one_good_half_isnt_enough(self):
+        self.trades("control", [0.01, -0.01] * 20)
+        self.trades("v-mature", self.STEADY[:20] + [-0.3, -0.1] * 10)
+        self.trades("v-dip", [0.02, -0.02] * 20)
+        self.assertFalse(self.promoted())
+
+    def test_too_few_trades_isnt_enough(self):
+        self.trades("control", [0.01, -0.01] * 20)
+        self.trades("v-mature", self.STEADY[:14])
+        self.trades("v-dip", [0.02, -0.02] * 20)
+        self.assertFalse(self.promoted())
+
+    def test_mean_without_median_isnt_enough(self):
+        self.trades("control", [0.01, 0.02] * 20)
+        self.trades("v-mature", [3.0] + [-0.01] * 39)
+        self.trades("v-dip", [0.02, -0.02] * 20)
+        self.assertFalse(self.promoted())
+
+    def test_a_lone_arm_cant_be_promoted(self):
+        self.trades("control", [0.01, -0.01] * 20)
+        self.trades("v-mature", self.STEADY)
+        self.assertFalse(self.promoted())
+
+    def fake_sim(self, **means):
+        def sim(cfgs, days, su):
+            self.seen = cfgs
+            return {k: [{"pnl_pct": means.get(k, 0.0)}] * (20 if k in means else 3) for k in cfgs}
+        return mock.patch.object(mp, "sim", sim)
+
+    def seven_arms(self):
+        self.registry(retired=list(mp.VARIANTS)[7:])
+        self.trades("control", [0.0] * 20)
+        self.trades("v-momentum", [0.3] * 20)
+
+    def test_a_challenger_must_beat_the_control_in_replay(self):
+        self.seven_arms()
+        with self.fake_sim(control=0.1, **{"try-0": 0.05}):
+            self.learn()
+        self.assertEqual(self.reg()["added"], {})
+        self.assertIn("did not beat control", self.report())
+
+    def test_the_best_challenger_goes_live_inside_the_bounds(self):
+        self.seven_arms()
+        with self.fake_sim(control=0.0, **{"try-0": 0.2, "try-1": 0.3}):
+            self.learn()
+        self.assertEqual(self.reg()["added"], {"v-c1": {"base": "v-momentum", "stop": -0.40}})
+        self.assertIn("v-c1", mp.live_arms())
+        self.assertIn("added v-c1: v-momentum with wider stop", open(os.path.join(self.state, "CHANGELOG.md")).read())
+
+    def test_a_few_good_replay_trades_arent_enough(self):
+        self.seven_arms()
+        with mock.patch.object(mp, "sim", lambda c, d, s: {k: [{"pnl_pct": 0.9 if k != "control" else 0.0}] * (14 if k != "control" else 20) for k in c}):
+            self.learn()
+        self.assertEqual(self.reg()["added"], {})
+
+    def test_only_one_a_week(self):
+        self.seven_arms()
+        with self.fake_sim(control=0.0, **{"try-0": 0.2, "try-1": 0.3, "try-2": 0.4}):
+            self.learn()
+        self.assertEqual(len(self.reg()["added"]), 1)
+
+    def test_every_replayed_challenger_counts_as_a_trial(self):
+        self.seven_arms()
+        before = len(self.trials())
+        with self.fake_sim(control=0.0):
+            self.learn()
+        got = [x for x in self.trials() if x["kind"] == "replay"]
+        self.assertEqual(len(got), 4)
+        self.assertGreaterEqual(len(self.trials()), before + 4)
+
+    def test_no_challenger_at_the_cap(self):
+        self.trades("control", [0.0] * 20)
+        self.trades("v-momentum", [0.3] * 20)
+        with self.fake_sim(control=0.0, **{"try-0": 0.2}):
+            self.learn()
+        self.assertEqual(self.reg()["added"], {})
+        self.assertNotIn("replay", [x["kind"] for x in self.trials()])
+
+    def test_a_challenger_of_an_added_arm_keeps_the_code_rule(self):
+        self.registry(retired=list(mp.VARIANTS)[6:], added={"v-c1": {"base": "v-mature", "stop": -0.3}})
+        self.trades("control", [0.0] * 20)
+        self.trades("v-c1", [0.3] * 20)
+        with self.fake_sim(control=0.0, **{"try-0": 0.2}):
+            self.learn()
+        self.assertEqual(self.reg()["added"]["v-c2"], {"base": "v-mature", "stop": -0.25})
+
+    def test_a_change_at_the_bound_is_no_challenger(self):
+        self.registry(retired=list(mp.VARIANTS)[6:], added={"v-c1": {"base": "v-mature", "stop": -0.5, "tp1": 3.0}})
+        self.trades("control", [0.0] * 20)
+        self.trades("v-c1", [0.3] * 20)
+        with self.fake_sim(control=0.0):
+            self.learn()
+        self.assertEqual({x["why"] for x in self.trials() if x["kind"] == "replay"}, {"tighter stop", "sooner take-profit"})
+        self.assertEqual(self.alerts, [])
+
+    def test_lessons_come_first(self):
+        self.seven_arms()
+        os.makedirs(os.path.join(self.state, "lessons"), exist_ok=True)
+        with open(os.path.join(self.state, "lessons", "postmortems.jsonl"), "w") as f:
+            f.writelines(json.dumps({"key": str(i), "label": "bought-spike"}) + "\n" for i in range(3))
+        with self.fake_sim(control=0.0, **{"try-0": 0.2}):
+            self.learn()
+        self.assertEqual(self.reg()["added"]["v-c1"]["max_h24"], 300)
+
+    def test_it_never_touches_the_picks_the_control_or_the_bounds(self):
+        before = open(os.path.join(mp.HERE, "params", "bounds.json")).read()
+        self.trades("control", [-0.5] * 20)
+        self.trades("v-dip", [-0.6] * 20)
+        c, b = json.dumps(mp.load(mp.CONTROL)), json.dumps(mp.load())
+        self.learn()
+        self.assertEqual(json.dumps(mp.load(mp.CONTROL)), c)
+        self.assertEqual(json.dumps(mp.load()), b)
+        self.assertEqual(open(os.path.join(mp.HERE, "params", "bounds.json")).read(), before)
+        self.assertNotIn("control", self.reg()["retired"])
+
+    def test_the_report_says_so_in_a_line(self):
+        self.learn()
+        self.assertIn("Learning run 2026-12-06", mp._read_md(mp.load()))
+
+    def test_the_report_says_nothing_before_a_run(self):
+        self.assertNotIn("Learning run", mp._read_md(mp.load()))
+
+    def test_it_has_a_command(self):
+        with mock.patch.dict(os.environ, {"MEMEPAPER_STATE": self.state}), mock.patch.object(mp, "LOCK", os.path.join(self.tmp.name, "lock")):
+            self.run_quiet(mp.main, ["learn"])
+        self.assertTrue(os.path.exists(os.path.join(self.state, "LEARNING.md")))
+
+
+# --- phase 5: merging without Jackson ------------------------------------------------------
+def patch_for(path, *lines, head="@@ -10,3 +10,3 @@ def notify(title):"):
+    return f"diff --git a/{path} b/{path}\nindex 1..2 100644\n--- a/{path}\n+++ b/{path}\n{head}\n" + "\n".join(lines) + "\n"
+
+
+class TestMergeCheck(unittest.TestCase):
+    def test_ordinary_code_is_fine(self):
+        self.assertEqual(mp.merge_refusals(patch_for("memepaper.py", " keep", "-old = 1", "+new = 2")), [])
+        self.assertEqual(mp.merge_refusals(patch_for("params/notes.json", '+{"a": 1}')), [])
+
+    def test_only_the_allowed_paths(self):
+        for p in ("tests/test_memepaper.py", ".github/workflows/ci.yml", ".github/workflows/automerge.yml", "server/setup.sh", "server/update.sh",
+                  "CLAUDE.md", "order.sh", "params/bounds.json", "memepaper.py.bak", "x/memepaper.py"):
+            self.assertTrue(mp.merge_refusals(patch_for(p, "+x = 1")), p)
+
+    def test_one_bad_file_refuses_the_lot(self):
+        self.assertTrue(mp.merge_refusals(patch_for("memepaper.py", "+x = 1") + patch_for("tests/a.py", "+x = 1")))
+
+    def test_safety_limits(self):
+        for n in ("MAX_POS_SOL", "FEE", "LP_LOCK_MIN", "UNIVERSE_MIN_LIQ", "LEARN_FROM", "NO_WALLET", "GUARDED", "MERGE_NEVER"):
+            self.assertTrue(mp.merge_refusals(patch_for("memepaper.py", f"-{n} = 1", f"+{n} = 2")), n)
+
+    def test_a_longer_name_is_not_a_limit(self):
+        self.assertEqual(mp.merge_refusals(patch_for("memepaper.py", "+FEED_MAX_FRAME = 2", "+MAX_OPENED = 1")), [])
+
+    def test_guarded_functions_by_git_heading(self):
+        for f in mp.GUARDED_FUNCS:
+            self.assertTrue(mp.merge_refusals(patch_for("memepaper.py", "+    x = 1", head=f"@@ -1,3 +1,3 @@ def {f}(a):")), f)
+
+    def test_a_hunk_that_runs_into_a_guarded_function(self):
+        d = patch_for("memepaper.py", "     pass", " ", " ", " def gate_one(mint):", '     """doc."""', "+    return True")
+        self.assertEqual(mp.merge_refusals(d), ["memepaper.py: changes gate_one()"])
+
+    def test_a_hunk_that_runs_out_of_one(self):
+        d = patch_for("memepaper.py", "     pass", " ", " ", " def other():", "+    return True", head="@@ -1,3 +1,3 @@ def gate_one(a):")
+        self.assertEqual(mp.merge_refusals(d), [])
+
+    def test_a_guarded_function_at_the_end_stops_at_the_next_top_level_line(self):
+        d = patch_for("memepaper.py", "     pass", " ", " X = 1", "+Y = 2", head="@@ -1,3 +1,3 @@ def gate_one(a):")
+        self.assertEqual(mp.merge_refusals(d), [])
+
+    def test_renaming_a_guarded_function_is_changing_it(self):
+        self.assertTrue(mp.merge_refusals(patch_for("memepaper.py", "-def gate_one(mint):", "+def gate_two(mint):")))
+
+    def test_wallet_words(self):
+        for line in ("key = os.environ['PRIVATE_KEY']", "seed_phrase = 1", "Keypair.from_bytes(x)", "sendTransaction(tx)", "get('https://x/swap')", "mnemonic = 2"):
+            self.assertTrue(mp.merge_refusals(patch_for("memepaper.py", "+" + line)), line)
+        self.assertEqual(mp.merge_refusals(patch_for("memepaper.py", "-seed_phrase = 1")), [])
+
+    def test_the_command_says_and_exits(self):
+        for d, code in ((patch_for("tests/a.py", "+x"), 1), (patch_for("memepaper.py", "+x = 1"), 0)):
+            with mock.patch.object(sys, "stdin", io.StringIO(d)), redirect_stdout(io.StringIO()), self.assertRaises(SystemExit) as e:
+                mp.main(["mergecheck"])
+            self.assertEqual(e.exception.code, code)
+
+    def test_a_real_diff(self):
+        repo = os.path.dirname(os.path.abspath(mp.__file__))
+        with tempfile.TemporaryDirectory() as d:
+            run = lambda *a: subprocess.run(["git", "-C", d, "-c", "user.name=t", "-c", "user.email=t@t", *a], check=True, capture_output=True, text=True).stdout
+            run("init", "-q")
+            src = open(os.path.join(repo, "memepaper.py")).read()
+            open(os.path.join(d, "memepaper.py"), "w").write(src)
+            run("add", "-A")
+            run("commit", "-qm", "a")
+            f = os.path.join(d, "memepaper.py")
+            open(f, "w").write(src.replace('    px = float(p["priceUsd"])\n    fill = px', '    px = float(p["priceUsd"]) * 0.5\n    fill = px'))
+            self.assertEqual(mp.merge_refusals(run("diff")), ["memepaper.py: changes _open()"])
+            open(f, "w").write(src.replace('def casebook(t, ps):\n', 'def casebook(t, ps):\n    pass\n'))
+            self.assertEqual(mp.merge_refusals(run("diff")), [])
+
+    def test_the_workflow_never_runs_the_pull_requests_code(self):
+        t = open(os.path.join(os.path.dirname(os.path.abspath(mp.__file__)), ".github", "workflows", "automerge.yml")).read()
+        self.assertIn("pull_request_target", t)
+        self.assertIn("startsWith(github.head_ref, 'auto/')", t)
+        self.assertIn("head.repo.full_name == github.repository", t)
+        self.assertNotIn("ref:", t)
+        self.assertNotIn("head.sha", t)
+        self.assertNotIn("secrets.", t)
+        self.assertLess(t.index("mergecheck"), t.index("gh pr merge"))
+
+
+# --- phase 5: going back -------------------------------------------------------------------
+class TestGuard(ReadEnv):
+    def setUp(self):
+        super().setUp()
+        self.code = os.path.join(self.tmp.name, "code")
+        os.makedirs(self.code)
+        self.head, self.git = "a" * 40, []
+        self.ps = [mock.patch.object(mp, "HERE", self.code), mock.patch.dict(os.environ, {"MEMEPAPER_BY": "server"}),
+                   mock.patch.object(mp.subprocess, "run", self.fake_run)]
+        for p in self.ps:
+            p.start()
+
+    def tearDown(self):
+        for p in self.ps:
+            p.stop()
+        super().tearDown()
+
+    def fake_run(self, a, **kw):
+        self.git.append(a[3:])
+        return mock.Mock(stdout=self.head + "\n")
+
+    def state_file(self):
+        return mp._jload(os.path.join(self.state, "guard.json"), {})
+
+    def hold_file(self):
+        return os.path.join(self.tmp.name, "memepaper.hold")
+
+    def healthy(self, sha):
+        self.head = sha
+        mp.guard({})
+        self.t += mp.GUARD_S
+        mp.guard({})
+
+    def test_only_on_the_server(self):
+        with mock.patch.dict(os.environ, {"MEMEPAPER_BY": "actions"}):
+            mp.guard({"errors_in_a_row": 9})
+        self.assertEqual(self.git, [])
+
+    def test_code_that_lasts_an_hour_becomes_good(self):
+        self.healthy("a" * 40)
+        self.assertEqual(self.state_file()["good"], "a" * 40)
+
+    def test_new_code_that_fails_goes_back_and_is_held_out(self):
+        self.healthy("a" * 40)
+        self.head = "b" * 40
+        mp.guard({})
+        self.t += 600
+        mp.guard({"errors_in_a_row": mp.ERRORS_ALERT - 1})
+        with self.assertRaises(SystemExit):
+            mp.guard({"errors_in_a_row": mp.ERRORS_ALERT})
+        self.assertIn(["reset", "-q", "--hard", "a" * 40], self.git)
+        self.assertEqual(open(self.hold_file()).read(), "b" * 40)
+        self.assertEqual(self.state_file()["rolled_back"], "b" * 40)
+        self.assertIn("rolled back", self.alerts[-1][0])
+
+    def test_good_code_is_never_rolled_back(self):
+        self.healthy("a" * 40)
+        mp.guard({"errors_in_a_row": 50})
+        self.assertFalse(any("reset" in a for a in self.git))
+
+    def test_failures_after_the_first_hour_stay_put(self):
+        self.healthy("a" * 40)
+        self.healthy("b" * 40)
+        mp.guard({"errors_in_a_row": 50})
+        self.assertFalse(any("reset" in a for a in self.git))
+
+    def test_with_nothing_to_go_back_to_it_stays(self):
+        mp.guard({})
+        mp.guard({"errors_in_a_row": 50})
+        self.assertFalse(any("reset" in a for a in self.git))
+
+    def test_the_loop_runs_it(self):
+        with mock.patch.object(mp, "loop_once", lambda h: False), mock.patch.object(mp, "pull", lambda: None), mock.patch.object(mp, "push", lambda m: True), mock.patch.object(mp, "guard") as g:
+            self.run_quiet(mp.loop, 0, 60)
+        g.assert_called_once()
+
+
+class TestUpdateScript(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        d = self.tmp.name
+        self.origin, self.code, self.work = d + "/origin.git", d + "/code", d + "/work"
+        self.git(d, "init", "-q", "--bare", "-b", "main", self.origin)
+        self.git(d, "clone", "-q", self.origin, self.work)
+        self.git(self.work, "checkout", "-q", "-b", "main")
+        os.makedirs(self.work + "/server")
+        script = os.path.join(os.path.dirname(os.path.abspath(mp.__file__)), "server", "update.sh")
+        open(self.work + "/server/update.sh", "w").write(open(script).read())
+        self.first = self.commit()
+        self.git(d, "clone", "-q", self.origin, self.code)
+
+    def git(self, cwd, *a):
+        return subprocess.run(["git", "-c", "user.name=t", "-c", "user.email=t@t", *a], cwd=cwd, check=True, capture_output=True, text=True).stdout.strip()
+
+    def commit(self):
+        self.n = getattr(self, "n", 0) + 1
+        open(self.work + "/f", "w").write(str(self.n))
+        self.git(self.work, "add", "-A")
+        self.git(self.work, "commit", "-qm", "c")
+        self.git(self.work, "push", "-q", "origin", "main")
+        return self.git(self.work, "rev-parse", "HEAD")
+
+    def update(self):
+        subprocess.run(["bash", self.code + "/server/update.sh"], check=True, capture_output=True)
+        return self.git(self.code, "rev-parse", "HEAD")
+
+    def test_it_takes_new_code(self):
+        new = self.commit()
+        self.assertEqual(self.update(), new)
+
+    def test_it_leaves_out_the_held_commit_then_a_newer_one_clears_it(self):
+        bad = self.commit()
+        open(self.tmp.name + "/memepaper.hold", "w").write(bad)
+        self.assertEqual(self.update(), self.first)
+        new = self.commit()
+        self.assertEqual(self.update(), new)
+
+
 if __name__ == "__main__":
     unittest.main()

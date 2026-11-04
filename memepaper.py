@@ -24,6 +24,8 @@ files to <state>/orders/ instead, and the next tick applies them in order. One w
   python3 -I memepaper.py loop [--minutes 55] [--every 60]     # the hot loop (GitHub Actions)
   python3 -I memepaper.py watchdog    # alert if the loop's health.json is stale
   python3 -I memepaper.py feed [--seconds N]   # keep the free launch stream in MEMEPAPER_FEED (a server, not Actions)
+  python3 -I memepaper.py learn       # the weekly learning run, now; proposes only until LEARN_FROM
+  python3 -I memepaper.py mergecheck  # reads a diff on stdin: may it merge without Jackson?
 
 Alerts go to ntfy when NTFY_TOPIC is set (a GitHub secret); otherwise they only print.
 
@@ -33,7 +35,7 @@ random coin from the same gate-pass pool. Gate failures are tracked as shadow re
 The review asks whether picks beat the control after costs.
 """
 import json, sys, time, subprocess, datetime, os, fcntl, random, urllib.parse, copy, gzip, glob, re, hashlib, math, struct, zlib
-import base64, socket, sqlite3, ssl
+import base64, itertools, socket, sqlite3, ssl, statistics
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 BOOK = os.path.join(HERE, "book.json")
@@ -148,6 +150,34 @@ JUP_BPS = 1000
 JUP_STOP_AFTER = 2        # failed coins before this cycle gives up: it's only a measurement
 HEALTH_PING_S = 300
 LOCK = "/tmp/memepaper.lock"  # the 2-minute watcher and manual trades never write at once
+# Post-mortems (Tier 1 phase 4). A trade is labelled once it's a day old, so what the coin did after
+# the exit can count.
+LABELS = ("rug", "liquidity-pulled", "copycat", "bought-spike", "theme-faded", "stop-too-tight",
+          "slow-bleed", "won-held", "won-trailed", "other")  # copycat and theme-faded need judgement: code never picks them
+LABEL_WAIT_H = 25         # a closed trade gets its label after this long, with or without the 24h look-back
+STOP_RECOVERED = 0.5      # stopped out, then the coin rose this much from the exit: the stop was too tight
+SPIKE_H24, SPIKE_M5, SPIKE_PEAK = 150, 15, 0.05  # bought after this much, and never rose past this
+BLEED_H = 12              # a loss held this long fell slowly
+LESSONS_MAX = 3000        # bytes in LESSONS.md
+LESSON_REPEAT = 3         # a label seen this often becomes an idea to test
+# The weekly learning run (phase 5). It proposes only until LEARN_FROM: rules v2 are frozen for the review.
+LEARN_FROM = "2026-11-30 00:00 UTC"
+LEARN_DAYS = 28           # the scoring window
+LEARN_SIM_DAYS = 14       # how much of the dataset a challenger is replayed on
+LEARN_MIN_TRADES = 15     # closed trades before an arm can be promoted or retired
+LEARN_MAX_ARMS = 8        # no new challenger while this many arms or more are live
+LEARN_SPLITS = 8          # time blocks for PBO: 70 ways to split them in half
+DSR_MIN, PBO_MAX = 0.95, 0.10
+PARAM_KEYS = ("stop", "tp1", "sol", "max_open", "min_age_h", "min_liq", "max_h24")
+# What a merge without Jackson may touch. Guarded names are the safety limits and this guard itself.
+MERGE_PATHS = ("memepaper.py", "params/")
+MERGE_NEVER = ("params/bounds.json",)
+GUARDED = ("FEE", "SANDWICH_USD", "SLIP_K", "MAX_POS_SOL", "MAX_OPEN", "GATE_TTL_H", "GRAD_POOLS", "LP_LOCK_MIN", "TOP_HOLDER_MAX", "INSIDER_MAX", "COPY_MIN_LIQ",
+           "CREATOR_MAX", "TRANSFER_FEE_MAX", "UNIVERSE_MIN_AGE_H", "UNIVERSE_MIN_LIQ", "LEARN_FROM", "MERGE_PATHS", "MERGE_NEVER",
+           "GUARDED", "GUARDED_FUNCS", "NO_WALLET", "PARAM_KEYS")
+GUARDED_FUNCS = ("gate_one", "gate", "_passed", "impact", "_open", "_sell", "_apply_exits", "_clamped", "arm_cfg", "merge_refusals", "guard", "learn")
+NO_WALLET = re.compile(r"private.?key|secret.?key|seed.?phrase|mnemonic|keypair|signTransaction|sendTransaction|/swap\b", re.I)
+GUARD_S = 3600            # new code that stays healthy this long becomes the version to go back to
 ORDERS = None             # state mode: the orders inbox folder. None = legacy mode (books beside the code)
 BOOKS = None              # state mode: the folder of arm books
 STATE = None              # state mode: the state branch's worktree
@@ -814,6 +844,60 @@ VARIANTS = {
 }
 
 
+_CLAMPED = set()  # what's been alerted in this process, so a bad file doesn't alert every cycle
+
+
+def _clamped(name, raw, alert=True):
+    """An arm's numbers, forced inside params/bounds.json. A value out of bounds is clamped and alerted,
+    never used; a key the bounds don't list, or that isn't a number, is dropped. No bounds file means
+    no overrides at all."""
+    if not raw:
+        return {}
+    bounds = _jload(os.path.join(HERE, "params", "bounds.json"), {})
+    out, bad = {}, []
+    for k, v in raw.items():
+        lim = bounds.get(k)
+        if not lim or isinstance(v, bool) or not isinstance(v, (int, float)) or v != v:
+            bad.append(f"{k} dropped")
+            continue
+        out[k] = min(lim[1], max(lim[0], v))
+        if out[k] != v:
+            bad.append(f"{k} {v} clamped to {out[k]}")
+    if alert and bad and (name, tuple(bad)) not in _CLAMPED:
+        _CLAMPED.add((name, tuple(bad)))
+        notify("memepaper: param out of bounds", f"{name}: {'; '.join(bad)}", "high", "warning")
+    return out
+
+
+def _registry():
+    """Arms the learning run has retired or added (state/params/arms.json)."""
+    r = _jload(os.path.join(STATE, "params", "arms.json"), {}) if STATE else {}
+    return {"retired": r.get("retired", []), "added": r.get("added", {})}
+
+
+def arm_cfg(name):
+    """An arm's settings. Arms in the code run as written. An arm the learning run added is a code arm
+    with new numbers, inside the bounds: a rule is never data, and new numbers are a new arm, so no
+    arm's record mixes two sets of rules."""
+    if name in VARIANTS:
+        return VARIANTS[name]
+    add = _registry()["added"][name]
+    return {**VARIANTS[add["base"]], **_clamped(name, {k: v for k, v in add.items() if k != "base"})}
+
+
+def live_arms():
+    reg = _registry()
+    return {n: arm_cfg(n) for n in [*VARIANTS, *reg["added"]] if n not in reg["retired"]}
+
+
+def _arm_stop(a, r):
+    return min(STOP_RANGE[1], max(STOP_RANGE[0], -SWING_K * r["read"]["swing"])) if a.get("swing_stop") else a.get("stop", -0.35)
+
+
+def _x_burst(c):
+    return bool(c and c["trusted"] and c["kol"] >= X_KOL_BURST and c["kol"] > c["kol_before"])
+
+
 def _read(r, k):
     return (r.get("read") or {}).get(k)
 
@@ -842,12 +926,13 @@ def view(bk, t):
     return {"cash": round(bk["cash_sol"], 9), "held": sorted(bk["positions"]), "recent": sorted(set(recent))}
 
 
-def pick(name, rows, v, week=None):
+def pick(name, rows, v, week=None, a=None):
     """The row this arm buys this cycle, or None. Pure: same inputs, same answer, live or replayed."""
-    arm_ = VARIANTS[name]
-    if v["cash"] <= ARM_CASH_FLOOR or len(v["held"]) >= MAX_OPEN:
+    arm_ = a or arm_cfg(name)
+    if v["cash"] <= ARM_CASH_FLOOR or len(v["held"]) >= arm_.get("max_open", MAX_OPEN):
         return None
     ok = [r for r in rows if _passed(r, arm_.get("unpaid")) and r["mint"] not in v["held"] and r["mint"] not in v["recent"]
+          and r["age_h"] >= arm_.get("min_age_h", 0) and r["liq"] >= arm_.get("min_liq", 0) and r["h24"] <= arm_.get("max_h24", math.inf)
           and arm_["rule"](r, (week or {}).get(r["mint"]))]
     return max(ok, key=lambda r: (r[arm_["rank"]], r["mint"])) if ok else None
 
@@ -2047,6 +2132,9 @@ def _read_md(b):
             out += f"\nFills: a round trip on Jupiter returned {q['real']:+.1%} (median of {q['n']} quotes, before priority fees); paper charged {q['paper']:+.1%}.\n"
         if fd:
             out += f"\nLaunch feed: {'QUIET' if fd.get('quiet') else 'running'}, {fd.get('launches', 0)} launches and {fd.get('grads', 0)} graduations in the last day.\n"
+    ln = _jload(os.path.join(STATE, "learn.json"), {})
+    if ln:
+        out += f"\nLearning run {ln.get('day')}: {ln.get('summary')} Detail: LEARNING.md on `state`. No rule on this book reads it.\n"
     return out
 
 
@@ -2064,21 +2152,19 @@ def cycle():
     for r in rows:
         r["x"], r["read"], r["feed"] = x.get(r["mint"]), reads.get(r["mint"]), fed.get(r["mint"])
     week, su, views = week_ago(t), sol_usd(), {}
-    for name, a in VARIANTS.items():
+    for name, a in live_arms().items():
         path = os.path.join(BOOKS, name + ".json")
         bk = load(path)
         for m in list(bk["positions"]) if a.get("x_exit") else []:
-            c = x.get(m)
-            if c and c["trusted"] and m in ps and c["kol"] >= X_KOL_BURST and c["kol"] > c["kol_before"]:
+            if m in ps and _x_burst(x.get(m)):
                 _sell(bk, m, 1.0, "x exit: large accounts piling in", ps[m], su)
         for m in list(bk["positions"]) if a.get("unease_exit") else []:
             if m in ps and (reads.get(m) or {}).get("unease", 0) >= UNEASE_EXIT:
                 _sell(bk, m, 1.0, f"unease exit: {reads[m]['unease']} of 5 signs", ps[m], su)
         v = views[name] = view(bk, t)
-        r = pick(name, rows, v, week)
+        r = pick(name, rows, v, week, a)
         if r:
-            stop = min(STOP_RANGE[1], max(STOP_RANGE[0], -SWING_K * r["read"]["swing"])) if a.get("swing_stop") else a.get("stop", -0.35)
-            _open(bk, r["mint"], MAX_POS_SOL, f"{name} rule", stop, a.get("tp1", 1.0), ps[r["mint"]], su)
+            _open(bk, r["mint"], a.get("sol", MAX_POS_SOL), f"{name} rule", _arm_stop(a, r), a.get("tp1", 1.0), ps[r["mint"]], su)
             r["arms"].append(name)
         save(bk, path)
     write_watchlist(rows, t)
@@ -2089,8 +2175,8 @@ def cycle():
         for r in rows:
             f.write(json.dumps(r) + "\n")
     _roll_data(path)
-    for job in (lambda: market(t, rows), lambda: casebook(t, ps), lambda: story_update(t), lambda: quotes(t, rows, ps, su),
-                lambda: feed_watch(t), lambda: daily(t)):
+    for job in (lambda: market(t, rows), lambda: casebook(t, ps), lambda: postmortem(t), lambda: story_update(t), lambda: quotes(t, rows, ps, su),
+                lambda: feed_watch(t), lambda: daily(t), lambda: learn(t)):
         try:  # none of these may cost the snapshot that's already safely written
             job()
         except Exception as e:
@@ -2101,14 +2187,14 @@ def cycle():
 def replay(day):
     """Re-run every arm's pick over a recorded day and compare with what the arm did live. Entries
     only: exits run every 60 s and the dataset is 15-minute rows. Returns the differences."""
-    diffs, n, cycles = [], 0, []
+    diffs, n, cycles, known = [], 0, [], VARIANTS.keys() | _registry()["added"].keys()
     for x in read_day(day):
         if "cycle" in x:
             cycles.append((x, []))
         else:
             cycles[-1][1].append(x)
     for x, rows in cycles:
-        for name in VARIANTS.keys() & x["views"].keys():  # arms added later have no history here
+        for name in known & x["views"].keys():  # arms added later have no history here
             n += 1
             r = pick(name, rows, x["views"][name], x["week"])
             live = [y["mint"] for y in rows if name in y["arms"]]
@@ -2118,6 +2204,429 @@ def replay(day):
     for d in diffs:
         print(" ", d)
     return diffs
+
+
+def label(c, vs_exit=None):
+    """Why a closed trade ended as it did: (label, reason). Mechanical, from the fixed list; anything
+    it can't place is `other`, with the exit reason kept so a person can look."""
+    e, pnl, peak, entry = c["exit"].lower(), c["pnl_pct"], c["peak"], c.get("entry") or {}
+    if "rugged" in e or pnl <= -0.9:
+        return "rug", c["exit"][:80]
+    if "liquidity down" in e:
+        return "liquidity-pulled", c["exit"][:80]
+    if pnl > 0:
+        return ("won-trailed" if "trailing" in e else "won-held"), f"{pnl:+.0%}, peak {peak:+.0%}"
+    if "stop-loss" in e and vs_exit is not None and vs_exit >= STOP_RECOVERED:
+        return "stop-too-tight", f"stopped at {pnl:+.0%}, then {vs_exit:+.0%} from the exit in a day"
+    if peak < SPIKE_PEAK and ((entry.get("h24") or 0) >= SPIKE_H24 or (entry.get("m5") or 0) >= SPIKE_M5):
+        return "bought-spike", f"up {entry.get('h24') or 0:.0f}% in 24h at entry, peak {peak:+.0%}"
+    if (_ts(c["closed"]) - _ts(c["opened"])) / 3600 >= BLEED_H:
+        return "slow-bleed", f"{pnl:+.0%} over {(_ts(c['closed']) - _ts(c['opened'])) / 3600:.0f}h"
+    return "other", c["exit"][:80]
+
+
+def _lesson(f):
+    os.makedirs(os.path.join(STATE, "lessons"), exist_ok=True)
+    return os.path.join(STATE, "lessons", f)
+
+
+def postmortem(t):
+    """Label every closed trade a day after it closes, in any book, and rewrite the lessons when
+    there's something new. Returns how many were labelled."""
+    cases = _lines(os.path.join(STATE, "cases.jsonl"))[0]
+    path = _lesson("postmortems.jsonl")
+    done = {x["key"] for x in _lines(path)[0]}
+    after = {x["after"]: x for x in cases if "after" in x}
+    lines = []
+    for c in cases:
+        k = _case_key(c) if "book" in c else None
+        if k is None or k in done or (k not in after and t - _ts(c["closed"]) < LABEL_WAIT_H * 3600):
+            continue
+        lab, why = label(c, after.get(k, {}).get("vs_exit"))
+        lines.append({"key": k, "book": c["book"], "symbol": c["symbol"], "mint": c["mint"], "closed": c["closed"], "label": lab,
+                      "why": why, "pnl_pct": c["pnl_pct"], "at": t})
+    if lines:
+        with open(path, "a") as f:
+            f.writelines(json.dumps(x) + "\n" for x in lines)
+        write_lessons()
+    return len(lines)
+
+
+# What each repeated loss suggests testing: a change to the leading arm's numbers, inside the bounds.
+LESSON_TESTS = {
+    "stop-too-tight": ("widen the stop by 5 points", lambda a: {"stop": a.get("stop", -0.35) - 0.05}),
+    "bought-spike": ("skip coins already up a lot in 24h", lambda a: {"max_h24": a.get("max_h24", 400) * 0.75}),
+    "slow-bleed": ("take profit sooner", lambda a: {"tp1": a.get("tp1", 1.0) * 0.75}),
+    "liquidity-pulled": ("ask for a deeper pool", lambda a: {"min_liq": a.get("min_liq", UNIVERSE_MIN_LIQ) * 1.5}),
+    "rug": ("ask for an older coin", lambda a: {"min_age_h": a.get("min_age_h", UNIVERSE_MIN_AGE_H) * 2}),
+}
+
+
+def lesson_ideas():
+    """Loss labels seen LESSON_REPEAT times or more, commonest first."""
+    n = {}
+    for x in _lines(_lesson("postmortems.jsonl"))[0]:
+        n[x["label"]] = n.get(x["label"], 0) + 1
+    return [k for k, v in sorted(n.items(), key=lambda kv: (-kv[1], kv[0])) if k in LESSON_TESTS and v >= LESSON_REPEAT]
+
+
+def write_lessons():
+    """LESSONS.md: the top patterns with counts and examples, small enough to read before a decision."""
+    by = {}
+    for x in _lines(_lesson("postmortems.jsonl"))[0]:
+        by.setdefault(x["label"], []).append(x)
+    out = ["# Lessons", "", f"{sum(map(len, by.values()))} closed trades labelled, every book. Written by the bot.", ""]
+    for k, xs in sorted(by.items(), key=lambda kv: (-len(kv[1]), kv[0])):
+        ex = "; ".join(f"{x['symbol']} ({x['book']}): {x['why']}" for x in xs[-2:])
+        out.append(f"- **{k}**: {len(xs)} trades, mean {statistics.fmean(x['pnl_pct'] for x in xs):+.0%}. {ex}")
+    ideas = lesson_ideas()
+    if ideas:
+        out += ["", "To test: " + "; ".join(f"{k}: {LESSON_TESTS[k][0]}" for k in ideas) + "."]
+    text = "\n".join(out) + "\n"
+    with open(os.path.join(STATE, "LESSONS.md"), "w") as f:
+        f.write(text.encode()[:LESSONS_MAX].decode(errors="ignore"))
+
+
+def trial(t, name, kind, params, why, **res):
+    """One line in the trial registry, never deleted. The number of things tried is what deflates the
+    results, so a variant counts here whether or not it ever went live."""
+    with open(os.path.join(STATE, "trials.jsonl"), "a") as f:
+        f.write(json.dumps({"t": t, "name": name, "kind": kind, "params": params, "why": why, **res}) + "\n")
+
+
+def _arm_numbers(a):
+    return {k: a[k] for k in PARAM_KEYS if k in a}
+
+
+def _trials():
+    return _lines(os.path.join(STATE, "trials.jsonl"))[0]
+
+
+def trials_sync(t):
+    """Every live arm, with the numbers it runs on, has a line in the registry."""
+    seen = {(x["name"], json.dumps(x["params"], sort_keys=True)) for x in _trials()}
+    for n, a in live_arms().items():
+        if (n, json.dumps(_arm_numbers(a), sort_keys=True)) not in seen:
+            trial(t, n, "arm", _arm_numbers(a), "live arm")
+
+
+def dsr(xs, srs, n):
+    """Deflated Sharpe (Bailey and Lopez de Prado): the chance the true Sharpe of these returns is above
+    what the best of `n` tries would show by luck. `srs` are the Sharpes of everything tried."""
+    T = len(xs)
+    sd = statistics.pstdev(xs) if T > 2 else 0
+    if not sd:
+        return 0.0
+    m = statistics.fmean(xs)
+    sr = m / sd
+    skew = sum((x - m) ** 3 for x in xs) / T / sd ** 3
+    kurt = sum((x - m) ** 4 for x in xs) / T / sd ** 4
+    nd = statistics.NormalDist()
+    sr0 = 0.0
+    if n > 1:
+        spread = statistics.pvariance(srs) ** 0.5 if len(srs) > 1 else (1 / (T - 1)) ** 0.5
+        g = 0.5772156649
+        sr0 = spread * ((1 - g) * nd.inv_cdf(1 - 1 / n) + g * nd.inv_cdf(1 - 1 / (n * math.e)))
+    den = 1 - skew * sr + (kurt - 1) / 4 * sr * sr
+    return nd.cdf((sr - sr0) * (T - 1) ** 0.5 / den ** 0.5) if den > 0 else 0.0
+
+
+def n_eff(n, m):
+    """Trials that move together count as fewer: n shrinks towards 1 as the arms' block P&L correlates."""
+    rs = []
+    for a, b in itertools.combinations(m.values(), 2):
+        try:
+            rs.append(statistics.correlation(a, b))
+        except (statistics.StatisticsError, ValueError):
+            pass
+    rho = max(0.0, statistics.fmean(rs)) if rs else 0.0
+    return max(1.0, rho + (1 - rho) * n)
+
+
+def pbo(m, s=LEARN_SPLITS):
+    """Probability of backtest overfitting: over every way to split `s` time blocks in half, how often
+    the best arm of one half lands in the bottom half of the arms on the other. `m` maps arm -> P&L per
+    block. None when there's nothing to compare."""
+    arms = sorted(m)
+    if len(arms) < 2:
+        return None
+    over = tries = 0
+    for c in itertools.combinations(range(s), s // 2):
+        o = [i for i in range(s) if i not in c]
+        best = max(arms, key=lambda a: (sum(m[a][i] for i in c), a))
+        rank = sorted(arms, key=lambda a: (sum(m[a][i] for i in o), a)).index(best) + 1
+        over += rank / (len(arms) + 1) <= 0.5
+        tries += 1
+    return over / tries
+
+
+def _blocks(closed, t0, t1, s=LEARN_SPLITS):
+    out = [0.0] * s
+    for x in closed:
+        out[min(s - 1, int((_ts(x["closed"]) - t0) / (t1 - t0) * s))] += x["pnl_sol"]
+    return out
+
+
+def _drawdown(xs):
+    peak = total = worst = 0.0
+    for x in xs:
+        total += x
+        peak = max(peak, total)
+        worst = max(worst, peak - total)
+    return worst
+
+
+def beat(xs, base, n=1):
+    """Mean and median both ahead of the control, on at least n trades."""
+    return bool(len(xs) >= n and base and statistics.fmean(xs) > statistics.fmean(base) and median(xs) > median(base))
+
+
+def score(closed, ctrl, t0, t1):
+    """One arm against control over the window: the numbers, and whether it beat control overall and
+    in each half, so one lucky coin can't carry it."""
+    pc = [x["pnl_pct"] for x in closed]
+    cc = [x["pnl_pct"] for x in ctrl]
+    mid = (t0 + t1) / 2
+    half = lambda xs, early: [x["pnl_pct"] for x in xs if (_ts(x["closed"]) < mid) == early]
+    ahead = lambda a, b: bool(a and b and statistics.fmean(a) > statistics.fmean(b))
+    return {"n": len(pc), "mean": statistics.fmean(pc) if pc else None, "median": median(pc), "drawdown_sol": round(_drawdown(x["pnl_sol"] for x in closed), 4),
+            "beats_control": beat(pc, cc), "beats_halves": ahead(half(closed, True), half(ctrl, True)) and ahead(half(closed, False), half(ctrl, False))}
+
+
+def promotable(c, overfit):
+    """The four-part test: enough trades, ahead of control overall and in each half, and still ahead
+    after deflating for every try and for overfitting. A minimum bar, not proof of an edge."""
+    return bool(c["n"] >= LEARN_MIN_TRADES and c["beats_control"] and c["beats_halves"] and c["dsr"] >= DSR_MIN and overfit is not None and overfit <= PBO_MAX)
+
+
+def _sim_sell(b, m, frac, r, su, t, why):
+    """The same money as _sell, on a replayed position. r None is a rug marked to zero."""
+    p = b["pos"][m]
+    qty = p["tokens"] * frac
+    if r:
+        pair = {"priceUsd": r["px"], "liquidity": {"usd": r["liq"]}}
+        gross = qty * r["px"] / su
+        got = gross * (1 - FEE) * (1 - impact(gross, pair, su))
+        got -= min(got, SANDWICH_USD / su)
+    else:
+        got = 0.0
+    p["tokens"] -= qty
+    p["got"] += got
+    b["cash"] += got
+    if frac >= 0.999:
+        b["trades"].append({"mint": m, "pnl_pct": p["got"] / p["sol"] - 1, "pnl_sol": p["got"] - p["sol"], "why": why})
+        b["recent"][m] = t
+        del b["pos"][m]
+
+
+def _sim_exits(b, a, by, t, su):
+    """_apply_exits at 15-minute steps, plus the arms' own exits from cycle()."""
+    for m in list(b["pos"]):
+        p, r = b["pos"][m], by.get(m)
+        if not r:
+            if t - p["seen"] >= RUG_BACKSTOP_H * 3600:
+                _sim_sell(b, m, 1.0, None, su, t, "gone")
+            continue
+        p["seen"], p["peak"] = t, max(p["peak"], r["px"])
+        ret = r["px"] / p["entry"] - 1
+        if p["liq"] and r["liq"] <= p["liq"] * (1 - EVENT_LIQ_DROP):
+            _sim_sell(b, m, 1.0, r, su, t, "liquidity")
+        elif r["m5"] <= EVENT_M5_DROP:
+            _sim_sell(b, m, 1.0, r, su, t, "m5")
+        elif a.get("x_exit") and _x_burst(r.get("x")):
+            _sim_sell(b, m, 1.0, r, su, t, "x")
+        elif a.get("unease_exit") and (r.get("read") or {}).get("unease", 0) >= UNEASE_EXIT:
+            _sim_sell(b, m, 1.0, r, su, t, "unease")
+        elif not p["half"] and ret >= p["tp1"]:
+            p["half"] = True
+            _sim_sell(b, m, 0.5, r, su, t, "tp1")
+        elif not p["half"] and ret <= p["stop"]:
+            _sim_sell(b, m, 1.0, r, su, t, "stop")
+        elif p["half"] and r["px"] <= p["peak"] * 0.6:
+            _sim_sell(b, m, 1.0, r, su, t, "trail")
+        elif not p["half"] and (t - p["at"]) / 3600 >= TIME_STOP_H and ret < TIME_STOP_MIN_GAIN:
+            _sim_sell(b, m, 1.0, r, su, t, "time")
+
+
+def _sim_buy(b, a, r, t, su):
+    sol = a.get("sol", MAX_POS_SOL)
+    fill = r["px"] * (1 + impact(sol, {"priceUsd": r["px"], "liquidity": {"usd": r["liq"]}}, su))
+    b["cash"] -= sol
+    b["pos"][r["mint"]] = {"sol": sol, "tokens": (sol * (1 - FEE) - SANDWICH_USD / su) * su / fill, "entry": fill, "peak": fill, "got": 0.0, "half": False,
+                           "stop": _arm_stop(a, r), "tp1": a.get("tp1", 1.0), "liq": r["liq"], "at": t, "seen": t}
+
+
+def sim(cfgs, days, su):
+    """Replay rule sets over recorded days, entries and exits, in one pass: the dataset is big, and this
+    runs inside the loop. Exits are seen every 15 minutes, not every minute, so this is an estimate:
+    good for comparing rule sets on the same days, not for predicting P&L. Returns name -> closed trades."""
+    books = {n: {"cash": START_SOL, "pos": {}, "trades": [], "recent": {}} for n in cfgs}
+    for day in days:
+        cycles = []
+        for x in read_day(day):
+            if "cycle" in x:
+                cycles.append((x, []))
+            elif cycles:
+                cycles[-1][1].append(x)
+        for x, rows in cycles:
+            t, by = x["cycle"], {r["mint"]: r for r in rows}
+            for r in rows:  # the control's random draw, the same every replay
+                r["_draw"] = hashlib.sha256(f"{t}{r['mint']}".encode()).hexdigest()
+            for n, a in cfgs.items():
+                b = books[n]
+                _sim_exits(b, a, by, t, su)
+                v = {"cash": b["cash"], "held": sorted(b["pos"]), "recent": [m for m, c in b["recent"].items() if t - c < ARM_COOLDOWN_H * 3600]}
+                r = pick(n, rows, v, x["week"], a)
+                if r:
+                    _sim_buy(b, a, r, t, su)
+    return {n: b["trades"] for n, b in books.items()}
+
+
+def challengers(a, ideas):
+    """One-step changes to the leader's numbers: fixes from the lessons first, then a small move either way."""
+    out = [(LESSON_TESTS[k][0], LESSON_TESTS[k][1](a)) for k in ideas]
+    stop, tp = a.get("stop", -0.35), a.get("tp1", 1.0)
+    out += [("tighter stop", {"stop": stop + 0.05}), ("wider stop", {"stop": stop - 0.05}), ("sooner take-profit", {"tp1": tp * 0.75}), ("later take-profit", {"tp1": tp * 1.25})]
+    return out[:4]
+
+
+def _days_back(t, n):
+    return [_day(t - i * 86400) for i in range(n, 0, -1)]
+
+
+def _changelog(t, line):
+    with open(os.path.join(STATE, "CHANGELOG.md"), "a") as f:
+        f.write(f"- {_day(t)}: {line}\n")
+    notify("memepaper: learning run", line)
+
+
+def learn(t, force=False):
+    """The weekly learning run, Sundays UTC. Scores every arm on its last LEARN_DAYS against control,
+    applies the four-part promotion test, replays challengers, and writes LEARNING.md. Before LEARN_FROM
+    it only proposes. After it, it may retire the worst arm and add one challenger, numbers only and
+    inside the bounds. It never touches the picks, the control, the gate or the bounds."""
+    path = os.path.join(STATE, "learn.json")
+    s = _jload(path, {})
+    when = datetime.datetime.fromtimestamp(t, datetime.timezone.utc)
+    week = "%d-W%02d" % when.isocalendar()[:2]
+    if not force and (when.weekday() != 6 or s.get("week") == week):
+        return None
+    trials_sync(t)
+    t0, arms, su = t - LEARN_DAYS * 86400, live_arms(), sol_usd()
+    window = lambda p: [x for x in load(p)["closed"] if x.get("v") == 2 and _ts(x["closed"]) >= t0]
+    ctrl, closed = window(CONTROL), {n: window(os.path.join(BOOKS, n + ".json")) for n in arms}
+    scores = {n: score(xs, ctrl, t0, t) for n, xs in closed.items()}
+    blocks = {n: _blocks(xs, t0, t) for n, xs in closed.items() if xs}
+    tried = {(x["name"], json.dumps(x["params"], sort_keys=True)) for x in _trials()}
+    n = n_eff(len(tried), blocks)
+    srs = [statistics.fmean(p) / statistics.pstdev(p) for p in ([x["pnl_pct"] for x in xs] for xs in closed.values()) if len(p) > 2 and statistics.pstdev(p)]
+    overfit = pbo(blocks)
+    for name, c in scores.items():
+        c["dsr"] = round(dsr([x["pnl_pct"] for x in closed[name]], srs, n), 4)
+        c["promoted"] = promotable(c, overfit)
+    ready = [x for x in scores if scores[x]["n"] >= LEARN_MIN_TRADES]
+    leader = max(ready, key=lambda x: (scores[x]["mean"], x), default=None)
+    cmean = statistics.fmean(x["pnl_pct"] for x in ctrl) if ctrl else None
+    worst = min([x for x in ready if cmean is not None and scores[x]["mean"] < cmean], key=lambda x: (scores[x]["mean"], x), default=None)
+    # A challenger needs a leader to change and room to run: 14 arms went live, so this waits for retirements.
+    best, tests = None, []
+    if leader and len(arms) - bool(worst) < LEARN_MAX_ARMS:
+        cands = {}
+        for i, (why, change) in enumerate(challengers(arms[leader], lesson_ideas())):
+            change = _clamped(leader, {k: round(v, 4) for k, v in change.items()}, alert=False)
+            if any(arms[leader].get(k) != v for k, v in change.items()):  # at a bound, a change may be no change
+                cands[f"try-{i}"] = (why, change, {**arms[leader], **change})
+        res = sim({"control": {"rule": lambda r, wk: True, "rank": "_draw"}, **{k: v[2] for k, v in cands.items()}}, _days_back(t, LEARN_SIM_DAYS), su)
+        base = [x["pnl_pct"] for x in res["control"]]
+        for k, (why, change, a) in cands.items():
+            xs = [x["pnl_pct"] for x in res[k]]
+            ok = beat(xs, base, LEARN_MIN_TRADES)
+            tests.append({"why": why, "change": change, "n": len(xs), "mean": statistics.fmean(xs) if xs else None, "median": median(xs), "beat_control": ok})
+            trial(t, f"{leader}+{why}", "replay", _arm_numbers(a), why, n=len(xs), mean=tests[-1]["mean"], passed=ok)
+        best = max((x for x in tests if x["beat_control"]), key=lambda x: x["mean"], default=None)
+    acting, did = t >= _ts(LEARN_FROM), []
+    if acting and (worst or best):
+        reg = _registry()
+        if worst:
+            reg["retired"].append(worst)
+            did.append(f"retired {worst}: mean {scores[worst]['mean']:+.1%} over {scores[worst]['n']} trades, under control's {cmean:+.1%}")
+        if best:
+            name = f"v-c{len(reg['added']) + 1}"
+            root = reg["added"].get(leader, {}).get("base", leader)
+            reg["added"][name] = {"base": root, **_arm_numbers(arms[leader]), **best["change"]}
+            did.append(f"added {name}: {leader} with {best['why']}, replay mean {best['mean']:+.1%} over {best['n']} trades")
+            trial(t, name, "arm", _arm_numbers(arm_cfg(leader)) | best["change"], best["why"])
+        os.makedirs(os.path.join(STATE, "params"), exist_ok=True)
+        _jsave(os.path.join(STATE, "params", "arms.json"), reg)
+        for line in did:
+            _changelog(t, line)
+    champs = sorted(x for x in scores if scores[x]["promoted"])
+    summary = (f"{len(ready)} of {len(arms)} arms have {LEARN_MIN_TRADES}+ trades. Promoted: {', '.join(champs) or 'none'}. "
+               + ("; ".join(did) + "." if did else ("Proposes only until 2026-11-30." if not acting else "No change.")))
+    s.update(week=week, day=_day(t), summary=summary, leader=leader, worst=worst, promoted=champs, pbo=overfit, trials=len(tried), n_eff=round(n, 1),
+             propose={"retire": worst, "add": best}, done=did)
+    _jsave(path, s)
+    rows = "\n".join(f"| {k} | {c['n']} | {'' if c['mean'] is None else format(c['mean'], '+.1%')} | {'' if c['median'] is None else format(c['median'], '+.1%')} | "
+                     f"{c['drawdown_sol']} | {'yes' if c['beats_control'] else 'no'} | {'yes' if c['beats_halves'] else 'no'} | {c['dsr']:.2f} | {'yes' if c['promoted'] else 'no'} |"
+                     for k, c in sorted(scores.items(), key=lambda kv: -(kv[1]["mean"] or -9)))
+    with open(os.path.join(STATE, "LEARNING.md"), "w") as f:
+        f.write(f"# Learning run {_day(t)}\n\n{summary}\n\nTrials so far: {len(tried)} ({n:.1f} effective). PBO: {'not enough to compare' if overfit is None else format(overfit, '.0%')}. "
+                f"Control: {len(ctrl)} trades, mean {'n/a' if cmean is None else format(cmean, '+.1%')}.\n\n"
+                f"| Arm | Trades | Mean | Median | Drawdown SOL | Beats control | Both halves | Deflated Sharpe | Promoted |\n|---|---|---|---|---|---|---|---|---|\n{rows}\n\n"
+                f"Proposed retirement: {worst or 'none'}. Replayed on {LEARN_SIM_DAYS} days:\n\n"
+                + ("\n".join(f"- {x['why']}: {x['n']} trades, mean {'n/a' if x['mean'] is None else format(x['mean'], '+.1%')}, {'beat' if x['beat_control'] else 'did not beat'} control" for x in tests) or "- nothing to replay yet")
+                + "\n\nPassing is a minimum bar, not proof of profit. Gate value is in the report.\n")
+    return s
+
+
+def merge_refusals(diff):
+    """Why this diff can't merge without Jackson: the reasons, or nothing. Code merges alone only inside
+    MERGE_PATHS, and never when it touches a safety limit, this guard or anything near a wallet."""
+    no, f, fn = [], None, None
+    for x in diff.splitlines():
+        if x.startswith("diff --git "):
+            f, fn = x.split(" b/", 1)[1], None
+            if f in MERGE_NEVER or not (f == MERGE_PATHS[0] or f.startswith(MERGE_PATHS[1:])):
+                no.append(f"{f}: outside what merges alone")
+            continue
+        if x.startswith(("--- ", "+++ ")):
+            continue
+        body = x.split("@@")[-1].lstrip() if x.startswith("@@") else x[1:]  # git names the function a hunk starts in
+        if x.startswith("@@") or body[:1].strip():  # anything at the top level ends a function
+            d = re.match(r"def (\w+)\(", body)
+            fn = d[1] if d else None
+        if x[:1] in ("+", "-"):
+            if fn in GUARDED_FUNCS:
+                no.append(f"{f}: changes {fn}()")
+            no += [f"{f}: changes {g}" for g in GUARDED if re.search(rf"\b{g}\b", x)]
+            if x[0] == "+" and NO_WALLET.search(x):
+                no.append(f"{f}: adds wallet code: {x[1:80].strip()}")
+    return list(dict.fromkeys(no))
+
+
+def guard(h):
+    """Server only. New code that stays healthy for GUARD_S becomes the version to go back to. If it
+    fails ERRORS_ALERT ticks in a row before then, go back, hold that commit out of the next pull, and
+    stop: systemd restarts the loop on the good code."""
+    if os.environ.get("MEMEPAPER_BY") != "server":
+        return
+    git = lambda *a: subprocess.run(["git", "-C", HERE, *a], capture_output=True, text=True)
+    head, path = git("rev-parse", "HEAD").stdout.strip(), os.path.join(STATE, "guard.json")
+    s = _jload(path, {})
+    if head and head not in (s.get("good"), s.get("new")):
+        s.update(new=head, since=clock())
+    if s.get("new") == head:
+        if clock() - s["since"] >= GUARD_S:
+            s.update(good=head, new=None)
+        elif s.get("good") and h.get("errors_in_a_row", 0) >= ERRORS_ALERT:
+            git("reset", "-q", "--hard", s["good"])
+            with open(os.path.join(os.path.dirname(HERE), "memepaper.hold"), "w") as f:
+                f.write(head)
+            s.update(new=None, rolled_back=head)
+            _jsave(path, s)
+            notify("memepaper: rolled back", f"{head[:7]} failed {ERRORS_ALERT} ticks in its first hour. Back on {s['good'][:7]}: it stays out until a newer commit.", "high", "warning")
+            sys.exit(0)
+    _jsave(path, s)
 
 
 def notify(title, msg, priority="default", tags=""):
@@ -2247,6 +2756,7 @@ def loop(minutes=55, every=60):
         t0 = clock()
         pull()
         material = loop_once(h)
+        guard(h)
         if material or clock() - last_push >= PUSH_EVERY_S or clock() + every >= end:
             if push(f"tick {now()}{' (trade)' if material else ''}"):
                 last_push, push_fails = clock(), 0
@@ -2462,6 +2972,10 @@ def main(a):
     cmd = a[0]
     if cmd == "migrate":
         return migrate(a[1], a[2], force="--force" in a)
+    if cmd == "mergecheck":  # no state needed: the auto-merge workflow runs this on main's own code
+        no = merge_refusals(sys.stdin.read())
+        print("\n".join(no) or "ok")
+        sys.exit(1 if no else 0)
     if os.environ.get("MEMEPAPER_STATE"):
         use_state(os.environ["MEMEPAPER_STATE"])
     if cmd == "feed":  # runs for good beside the loop, so it can't take the books' lock
@@ -2485,6 +2999,8 @@ def main(a):
         status()
     elif cmd == "replay":
         sys.exit(1 if replay(a[1]) else 0)
+    elif cmd == "learn":
+        print(json.dumps(learn(round(clock()), force=True), indent=2))
     elif cmd == "brief":
         brief(a[1])
     elif cmd == "autopsy":

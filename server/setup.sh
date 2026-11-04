@@ -87,8 +87,8 @@ RestartSec=30
 WantedBy=multi-user.target
 EOF
 }
-# A day per run, and a pull before each, so merged code arrives by itself.
-unit memepaper-loop "memepaper hot loop" "/usr/bin/python3 -I $CODE/memepaper.py loop --minutes 1440 --every 60" "ExecStartPre=-/usr/bin/git -C $CODE pull -q --ff-only"
+# A day per run, and an update before each, so merged code arrives by itself.
+unit memepaper-loop "memepaper hot loop" "/usr/bin/python3 -I $CODE/memepaper.py loop --minutes 1440 --every 60" "ExecStartPre=-/bin/bash $CODE/server/update.sh"
 unit memepaper-feed "memepaper launch feed" "/usr/bin/python3 -I $CODE/memepaper.py feed" ""
 sudo systemctl daemon-reload
 sudo systemctl enable --now memepaper-loop memepaper-feed
