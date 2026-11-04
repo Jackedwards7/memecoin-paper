@@ -3138,8 +3138,13 @@ class TestQuotes(ReadEnv):
 
     def test_holdings_first_then_the_busiest_passes(self):
         rows = [self.passing(f"P{i}pump", vol_h24=i) for i in range(8)] + [row("Hpump", t=round(self.t), vol_h24=0)]
-        got = [x["mint"] for x in self.go(rows, held=["Hpump"])]
+        with mock.patch.dict(os.environ, {"JUP_API_KEY": "k"}):
+            got = [x["mint"] for x in self.go(rows, held=["Hpump"])]
         self.assertEqual(got, ["Hpump", "P7pump", "P6pump", "P5pump", "P4pump"])
+
+    def test_with_no_key_it_stays_under_the_burst_limit(self):
+        self.assertEqual(len(self.go([self.passing(f"P{i}pump") for i in range(8)])), mp.JUP_COINS_KEYLESS)
+        self.assertLessEqual(len(self.jup_calls), 5)
 
     def test_unpaid_passes_count_and_fails_do_not(self):
         rows = [self.passing("Apump", paid=False), row("Bpump", t=round(self.t), gate={"at": round(self.t), "fails": ["no"]})]
@@ -3147,7 +3152,8 @@ class TestQuotes(ReadEnv):
 
     def test_it_gives_up_quietly_after_two_failures(self):
         self.jup_fail = ("P0pump", "P1pump", "P2pump")
-        self.assertEqual(self.go([self.passing(f"P{i}pump", vol_h24=9 - i) for i in range(4)]), [])
+        with mock.patch.dict(os.environ, {"JUP_API_KEY": "k"}):
+            self.assertEqual(self.go([self.passing(f"P{i}pump", vol_h24=9 - i) for i in range(4)]), [])
         self.assertEqual(len(self.jup_calls), 2)
 
     def test_one_failure_skips_only_that_coin(self):

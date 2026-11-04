@@ -143,6 +143,7 @@ FEED_STALE_MIN = 30
 JUP = "https://lite-api.jup.ag/swap/v1/quote"
 JUP_KEYED = "https://api.jup.ag/swap/v1/quote"
 JUP_COINS = 5             # coins a cycle, two calls each
+JUP_COINS_KEYLESS = 2     # with no key it refused the sixth call of a burst (measured 2026-11-03)
 JUP_BPS = 1000
 JUP_STOP_AFTER = 2        # failed coins before this cycle gives up: it's only a measurement
 HEALTH_PING_S = 300
@@ -1594,7 +1595,7 @@ def quotes(t, rows, ps, su):
     coins = sorted((r for r in rows if r["mint"] in ps and (r["mint"] in held or _passed(r, True))),
                    key=lambda r: (r["mint"] not in held, -r["vol_h24"], r["mint"]))
     stake, fails = round(MAX_POS_SOL * 1e9), 0
-    for r in coins[:JUP_COINS]:
+    for r in coins[:JUP_COINS if os.environ.get("JUP_API_KEY") else JUP_COINS_KEYLESS]:
         try:
             a = _jup({"inputMint": SOL_MINT, "outputMint": r["mint"], "amount": stake, "slippageBps": JUP_BPS})
             b = _jup({"inputMint": r["mint"], "outputMint": SOL_MINT, "amount": a["outAmount"], "slippageBps": JUP_BPS})
