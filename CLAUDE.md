@@ -89,7 +89,7 @@ Size **0.25 SOL** (the script caps it). Steps:
 No buy is a fine outcome. Cash is a position.
 
 ## Arms and dataset (Tier 1 phase 3)
-The hot loop runs thirteen mechanical arms beside your picks, in `books/v-*.json`, so rule sets
+The hot loop runs fourteen mechanical arms beside your picks, in `books/v-*.json`, so rule sets
 compete on the same coins. You never trade them. Same gate, 0.25 SOL size, costs and exit code as
 the picks; each buys at most one coin per 15-minute cycle, keeps cash above 5 SOL, holds at most 6
 and waits 24 hours before re-buying a coin it closed. Stop −35% and take-profit +100% unless listed.
@@ -111,6 +111,7 @@ and waits 24 hours before re-buying a coin it closed. Stop −35% and take-profi
 | `v-swing` | momentum with a coin reading; stop set at 4 of the coin's normal 15-minute swings | 24h volume |
 | `v-unease` | momentum with a coin reading; also sells when 4 of the 5 unease signs are on | 24h volume |
 | `v-networks` | momentum, RugCheck's insider networks hold at most 15% | 24h volume |
+| `v-unpaid` | momentum, and only coins nobody paid to list | 24h volume |
 
 `v-dip` can't trade until the dataset is a week old. Arm trades don't alert the phone. The report's "Mechanical arms" table shows each one; no
 arm is judged before the review, and none changes a rule by itself.

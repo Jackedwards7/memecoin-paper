@@ -43,6 +43,8 @@ jobs:
           MEMEPAPER_SHADOW: ${{ vars.MEMEPAPER_SHADOW }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           DESK_TOKEN: ${{ secrets.DESK_TOKEN }}
+          HEALTHCHECK_URL: ${{ secrets.HEALTHCHECK_URL }}
+          JUP_API_KEY: ${{ secrets.JUP_API_KEY }}
         run: python3 -I memepaper.py loop --minutes 55 --every 60
       - name: Queue the next run again, on the code as it is now
         if: always()

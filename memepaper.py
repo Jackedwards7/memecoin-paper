@@ -23,6 +23,7 @@ files to <state>/orders/ instead, and the next tick applies them in order. One w
   python3 -I memepaper.py migrate <old repo dir> <state dir>   # one-time move of the books
   python3 -I memepaper.py loop [--minutes 55] [--every 60]     # the hot loop (GitHub Actions)
   python3 -I memepaper.py watchdog    # alert if the loop's health.json is stale
+  python3 -I memepaper.py feed [--seconds N]   # keep the free launch stream in MEMEPAPER_FEED (a server, not Actions)
 
 Alerts go to ntfy when NTFY_TOPIC is set (a GitHub secret); otherwise they only print.
 
@@ -32,6 +33,7 @@ random coin from the same gate-pass pool. Gate failures are tracked as shadow re
 The review asks whether picks beat the control after costs.
 """
 import json, sys, time, subprocess, datetime, os, fcntl, random, urllib.parse, copy, gzip, glob, re, hashlib, math, struct, zlib
+import base64, socket, sqlite3, ssl
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 BOOK = os.path.join(HERE, "book.json")
@@ -107,7 +109,7 @@ DESK_STORIES = DESK_SCOUT.rsplit("/", 1)[0] + "/stories"  # Grok's why-it's-movi
 DESK_OPINION = DESK_SCOUT.rsplit("/", 1)[0] + "/opinion"  # Grok's weekly argument against our lessons
 STORY_MAX_CHARS = 400     # a note longer than this is cut: it's read as data, never as instructions
 # The reading layer (Tier 1 phase 3b). Records and derives; it never changes the live book's rules.
-SCHEMA = 2                # dataset version; a change here means old rows lack the new fields
+SCHEMA = 3                # dataset version; a change here means old rows lack the new fields
 GT = "https://api.geckoterminal.com/api/v2/networks/solana"
 GT_PER_TICK = 3           # calls a minute. Docs say 30; live probes hit 429 after a handful
 GT_GAP_S = 5
@@ -125,6 +127,25 @@ AUTOPSY_LOSS = -0.5
 AUTOPSY_MIN = 30          # coins on each side before a result is shown at all
 DATA_MIN_CYCLES = 85      # of 96 a day, before the check alerts
 DATA_MAX_MB = 500
+GT_FIRST_CANDLES = 1000   # a coin's first fetch brings its history, so a reading needn't wait a day
+# The free launch stream (PumpPortal, no key, no wallet). `feed` is its own always-on process and
+# writes a local sqlite file, never the state branch; the loop only reads that file. It can't run on
+# Actions: see server/setup.sh. With MEMEPAPER_FEED unset everything here does nothing.
+PP_HOST, PP_PATH = "pumpportal.fun", "/api/data"
+FEED_QUIET_S = 120        # launches come every few seconds: this long with no frame is a dead connection
+FEED_RETRY_S = (5, 900)   # reconnect wait, doubling
+FEED_STEADY_S = 300       # a connection that lasted this long starts the wait again
+FEED_BAN_S = 3900         # a refused handshake may be a ban, and PumpPortal's lift hourly
+FEED_MAX_FRAME = 1 << 20
+FEED_GRAD_H = 2           # how long a graduate is offered to the watch list once old enough for the universe
+FEED_STALE_MIN = 30
+# Jupiter's real prices beside the paper fills. Quotes only: nothing is signed or sent.
+JUP = "https://lite-api.jup.ag/swap/v1/quote"
+JUP_KEYED = "https://api.jup.ag/swap/v1/quote"
+JUP_COINS = 5             # coins a cycle, two calls each
+JUP_BPS = 1000
+JUP_STOP_AFTER = 2        # failed coins before this cycle gives up: it's only a measurement
+HEALTH_PING_S = 300
 LOCK = "/tmp/memepaper.lock"  # the 2-minute watcher and manual trades never write at once
 ORDERS = None             # state mode: the orders inbox folder. None = legacy mode (books beside the code)
 BOOKS = None              # state mode: the folder of arm books
@@ -786,6 +807,9 @@ VARIANTS = {
     # RugCheck's per-wallet flag read 0 on 8 of 8 live coins while its graph held up to 50%: this
     # prices the difference. No network found counts as clean.
     "v-networks":   {"rule": lambda r, wk: _momentum(r) and ((r.get("gate") or {}).get("networks") or 0) <= MAX_NETWORKS, "rank": "vol_h24"},
+    # Every other arm and the control only see coins someone paid to list. This one only sees coins
+    # nobody did, under the same gate: it prices that bias.
+    "v-unpaid":     {"rule": lambda r, wk: _momentum(r) and not r.get("paid", True), "rank": "vol_h24", "unpaid": True},
 }
 
 
@@ -804,10 +828,10 @@ def _x_organic(r):
     return _x_ok(r) and x["posts"] > x["before"] and (x["small_share"] or 0) >= 0.5
 
 
-def _passed(r):
+def _passed(r, unpaid=False):
     """A row an arm may buy: in the universe with a clean gate result from the last GATE_TTL_H."""
     g = r.get("gate")
-    return bool(r["eligible"] and r.get("paid", True) and g and not g["fails"] and r["t"] - g["at"] < GATE_TTL_H * 3600)
+    return bool(r["eligible"] and (unpaid or r.get("paid", True)) and g and not g["fails"] and r["t"] - g["at"] < GATE_TTL_H * 3600)
 
 
 def view(bk, t):
@@ -822,7 +846,7 @@ def pick(name, rows, v, week=None):
     arm_ = VARIANTS[name]
     if v["cash"] <= ARM_CASH_FLOOR or len(v["held"]) >= MAX_OPEN:
         return None
-    ok = [r for r in rows if _passed(r) and r["mint"] not in v["held"] and r["mint"] not in v["recent"]
+    ok = [r for r in rows if _passed(r, arm_.get("unpaid")) and r["mint"] not in v["held"] and r["mint"] not in v["recent"]
           and arm_["rule"](r, (week or {}).get(r["mint"]))]
     return max(ok, key=lambda r: (r[arm_["rank"]], r["mint"])) if ok else None
 
@@ -888,12 +912,12 @@ def snapshot(t):
     watch, cache = _jload(wp, {}), _jload(gp, {})
     for m in candidates():
         watch.setdefault(m, {"ok": False}).update(t=t, paid=True)
-    for m in _jload(os.path.join(STATE, "gt.json"), {}).get("free", []):  # unpaid: recorded, never traded
+    for m in _jload(os.path.join(STATE, "gt.json"), {}).get("free", []) + feed_grads(t):  # unpaid: only v-unpaid may trade them
         watch.setdefault(m, {"ok": False, "paid": False})["t"] = t
     for m in held_coins():  # everything held is read, however it got there
         watch.setdefault(m, {}).update(ok=True, t=t)
     live = [(m, w) for m, w in watch.items() if t - w["t"] < (WATCH_DAYS * 86400 if w["ok"] else WATCH_FRESH_H * 3600)]
-    watch = dict(sorted(live, key=lambda x: (not x[1]["ok"], -x[1]["t"]))[:WATCH_MAX])
+    watch = dict(sorted(live, key=lambda x: (not x[1]["ok"], not x[1]["ok"] and not x[1].get("paid", True), -x[1]["t"]))[:WATCH_MAX])
     ps, rows = pairs(list(watch)), {}
     for m, w in watch.items():
         p = ps.get(m)
@@ -1272,6 +1296,10 @@ class GtRefused(Exception):
     pass
 
 
+class FeedRefused(Exception):
+    pass
+
+
 def _gt(path):
     """GeckoTerminal, which needs a version header. Unlike get(), this tells a refusal (back off)
     from a pool it doesn't know (skip that coin): curl -f reports both the same way."""
@@ -1303,7 +1331,8 @@ def _gt_job(s, job, m, t):
         _extra(t, k="flow", coins=out)
     elif job in ("c15", "c5"):
         c, mins = s["coins"][m], 15 if job == "c15" else 5
-        got = _gt(f"/pools/{c['pool']}/ohlcv/minute?aggregate={mins}&limit=200&include_empty_intervals=true")
+        n = GT_FIRST_CANDLES if job + "_ts" not in c and c.get("tier", 4) <= 3 else 200
+        got = _gt(f"/pools/{c['pool']}/ohlcv/minute?aggregate={mins}&limit={n}&include_empty_intervals=true")
         new = [x for x in sorted(got["data"]["attributes"]["ohlcv_list"])
                if x[0] > c.get(job + "_ts", 0) and x[0] + mins * 60 <= t]  # closed candles only
         if new:
@@ -1345,6 +1374,237 @@ def gt_work(t):
     s["behind"] = max(0, len(jobs) - n)
     _jsave(path, s)
     return n
+
+
+def _ws_open():
+    """A websocket to the launch stream, by hand: the script stays stdlib-only."""
+    ca = "/etc/ssl/cert.pem"  # the python.org build on the Mac has no CA bundle; Linux's default works
+    ctx = ssl.create_default_context(cafile=ca if os.path.exists(ca) else None)
+    s = ctx.wrap_socket(socket.create_connection((PP_HOST, 443), 15), server_hostname=PP_HOST)
+    s.settimeout(FEED_QUIET_S)
+    key = base64.b64encode(os.urandom(16)).decode()
+    s.sendall(f"GET {PP_PATH} HTTP/1.1\r\nHost: {PP_HOST}\r\nUpgrade: websocket\r\nConnection: Upgrade\r\n"
+              f"Sec-WebSocket-Key: {key}\r\nSec-WebSocket-Version: 13\r\nUser-Agent: memepaper/1.0\r\n\r\n".encode())
+    buf = b""
+    while b"\r\n\r\n" not in buf:
+        c = s.recv(4096)
+        if not c:
+            raise ConnectionError("closed during the handshake")
+        buf += c
+    head, rest = buf.split(b"\r\n\r\n", 1)
+    if head.split()[1:2] != [b"101"]:
+        s.close()
+        raise FeedRefused(head[:80].decode("latin-1"))
+    return s, rest
+
+
+def _ws_send(s, data, op=1):
+    mask, n = os.urandom(4), len(data)
+    head = bytes([0x80 | op]) + (bytes([0x80 | n]) if n < 126 else bytes([0x80 | 126]) + struct.pack(">H", n))
+    s.sendall(head + mask + bytes(b ^ mask[i % 4] for i, b in enumerate(data)))
+
+
+def _ws_frames(buf):
+    """The whole frames at the front of buf, as ([(opcode, payload)], what's left over)."""
+    out = []
+    while len(buf) >= 2:
+        n, i = buf[1] & 127, 2
+        if n >= 126:
+            i = 4 if n == 126 else 10
+            if len(buf) < i:
+                break
+            n = struct.unpack(">H" if n == 126 else ">Q", buf[2:i])[0]
+        if n > FEED_MAX_FRAME:
+            raise ConnectionError(f"frame of {n} bytes")
+        if len(buf) < i + n:
+            break
+        out.append((buf[0] & 15, buf[i:i + n]))
+        buf = buf[i + n:]
+    return out, buf
+
+
+def _feed_path():
+    return os.environ.get("MEMEPAPER_FEED") or None
+
+
+def _feed_db(path):
+    db = sqlite3.connect(path, timeout=10)
+    db.execute("PRAGMA journal_mode=WAL")  # the loop reads while this writes
+    db.execute("CREATE TABLE IF NOT EXISTS launches (mint TEXT PRIMARY KEY, t INTEGER, creator TEXT, first_buy_sol REAL, mc_sol REAL, symbol TEXT)")
+    db.execute("CREATE INDEX IF NOT EXISTS launches_creator ON launches (creator)")
+    db.execute("CREATE INDEX IF NOT EXISTS launches_t ON launches (t)")
+    db.execute("CREATE TABLE IF NOT EXISTS grads (mint TEXT PRIMARY KEY, t INTEGER, pool TEXT)")
+    db.execute("CREATE INDEX IF NOT EXISTS grads_t ON grads (t)")
+    return db
+
+
+def _feed_store(db, x, t):
+    """One event from the stream. Its text is data: bound as parameters and cut short, never run."""
+    mint, kind = x.get("mint"), x.get("txType")
+    num = lambda k: x[k] if type(x.get(k)) in (int, float) else None
+    if not isinstance(mint, str) or not 32 <= len(mint) <= 64:
+        return False
+    with db:
+        if kind == "create" and isinstance(x.get("traderPublicKey"), str):
+            db.execute("INSERT OR IGNORE INTO launches VALUES (?,?,?,?,?,?)",
+                       (mint, t, x["traderPublicKey"][:64], num("solAmount"), num("marketCapSol"), str(x.get("symbol"))[:32]))
+        elif kind == "migrate":
+            db.execute("INSERT OR IGNORE INTO grads VALUES (?,?,?)", (mint, t, str(x.get("pool"))[:32]))
+        else:
+            return False
+    return True
+
+
+def _feed_session(db, end=None):
+    """One connection, until it drops or `end`."""
+    s, buf = _ws_open()
+    try:
+        for m in ("subscribeNewToken", "subscribeMigration"):
+            _ws_send(s, json.dumps({"method": m}).encode())
+        while end is None or clock() < end:
+            frames, buf = _ws_frames(buf)
+            for op, d in frames:
+                if op == 9:
+                    _ws_send(s, d, 10)
+                elif op == 8:
+                    raise ConnectionError("the server closed the stream")
+                elif op == 1:
+                    try:
+                        x = json.loads(d)
+                    except ValueError:
+                        continue
+                    if isinstance(x, dict):
+                        _feed_store(db, x, round(clock()))
+            c = s.recv(65536)
+            if not c:
+                raise ConnectionError("the stream ended")
+            buf += c
+    finally:
+        s.close()
+
+
+def feed(seconds=None):
+    """Keep the launch stream in a local file for good. One connection only: PumpPortal bans more."""
+    path = _feed_path()
+    if not path:
+        sys.exit("feed needs MEMEPAPER_FEED: a sqlite file outside the state folder")
+    if STATE and os.path.abspath(path).startswith(os.path.abspath(STATE) + os.sep):
+        sys.exit("feed: that file is inside the state folder, and the loop would commit it")
+    lock = open(path + ".lock", "w")
+    try:
+        fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except OSError:
+        sys.exit("feed: one is already connected, and a second could get this address banned")
+    db, wait = _feed_db(path), FEED_RETRY_S[0]
+    end = clock() + seconds if seconds else None
+    while end is None or clock() < end:
+        t0 = clock()
+        try:
+            _feed_session(db, end)
+            nap = 0
+        except FeedRefused as e:
+            print(f"feed refused, waiting {FEED_BAN_S // 60} min: {e}")
+            nap = FEED_BAN_S
+        except OSError as e:
+            wait = FEED_RETRY_S[0] if clock() - t0 >= FEED_STEADY_S else min(wait * 2, FEED_RETRY_S[1])
+            print(f"feed dropped, retrying in {wait}s: {e.__class__.__name__}: {str(e)[:200]}")
+            nap = wait
+        time.sleep(nap)
+
+
+def _feed_ro():
+    p = _feed_path()
+    return sqlite3.connect(f"file:{urllib.parse.quote(p)}?mode=ro", uri=True, timeout=5) if p and os.path.exists(p) else None
+
+
+def feed_read(mints, t):
+    """What the stream knows about these coins, counting only what had happened by t. The creator's
+    counts start when the feed did, so a 0 in its first weeks means none seen, not none."""
+    out, db = {}, None
+    try:
+        db = _feed_ro()
+        for m in mints if db else ():
+            x = db.execute("SELECT creator, first_buy_sol FROM launches WHERE mint=?", (m,)).fetchone()
+            if x:
+                n, g = db.execute("SELECT COUNT(*), COUNT(g.mint) FROM launches l LEFT JOIN grads g ON g.mint=l.mint AND g.t<=? "
+                                  "WHERE l.creator=? AND l.mint<>? AND l.t<=?", (t, x[0], m, t)).fetchone()
+                out[m] = {"creator": x[0], "first_buy_sol": x[1], "launches": n, "grads": g}
+    except sqlite3.Error as e:  # a bad read costs these columns, never the snapshot
+        print(f"feed read failed: {str(e)[:200]}")
+    finally:
+        if db:
+            db.close()
+    return out
+
+
+def feed_grads(t):
+    """Graduates just reaching the universe's age: found by the stream, not by anyone paying for a
+    listing. About 1,300 graduate a day and most die at once, so waiting for that age keeps them from
+    flooding WATCH_MAX before they could ever qualify. Their early candles come with the first fetch."""
+    db = None
+    try:
+        db = _feed_ro()
+        return [x[0] for x in db.execute("SELECT mint FROM grads WHERE t>? AND t<=?", (t - (UNIVERSE_MIN_AGE_H + FEED_GRAD_H) * 3600, t - UNIVERSE_MIN_AGE_H * 3600))] if db else []
+    except sqlite3.Error as e:
+        print(f"feed read failed: {str(e)[:200]}")
+        return []
+    finally:
+        if db:
+            db.close()
+
+
+def feed_watch(t):
+    """Say so once when the stream goes quiet, so the columns don't just stop without a word."""
+    if not _feed_path():
+        return
+    path = os.path.join(STATE, "feed.json")
+    s, db = _jload(path, {}), _feed_ro()
+    try:
+        last, day = db.execute("SELECT MAX(t), SUM(t>?) FROM launches", (t - 86400,)).fetchone() if db else (None, 0)
+        grads = db.execute("SELECT COUNT(*) FROM grads WHERE t>?", (t - 86400,)).fetchone()[0] if db else 0
+    finally:
+        if db:
+            db.close()
+    quiet = not last or t - last > FEED_STALE_MIN * 60
+    if quiet != s.get("quiet", False):
+        notify("memepaper: launch feed " + ("quiet" if quiet else "back"), f"last launch recorded {t - (last or t):.0f}s ago", "default", "warning" if quiet else "ok")
+    _jsave(path, {"quiet": quiet, "last": last, "launches": day or 0, "grads": grads})
+
+
+def _jup(q):
+    key = os.environ.get("JUP_API_KEY")
+    url = (JUP_KEYED if key else JUP) + "?" + urllib.parse.urlencode(q)
+    p = subprocess.run(["curl", "-sf", "-m", "8", "-A", "memepaper/1.0"] + (["-H", f"x-api-key: {key}"] if key else []) + [url],
+                       capture_output=True, text=True, check=True)
+    return json.loads(p.stdout)
+
+
+def _paper_trip(p, su):
+    """What a paper round trip of MAX_POS_SOL charges right now, as a share of the stake."""
+    mev = SANDWICH_USD / su
+    back = (MAX_POS_SOL * (1 - FEE) - mev) / (1 + impact(MAX_POS_SOL, p, su))
+    return (back * (1 - FEE) * (1 - impact(back, p, su)) - mev) / MAX_POS_SOL - 1
+
+
+def quotes(t, rows, ps, su):
+    """Ask Jupiter what buying and selling straight back would really return, beside what the paper
+    fills charge. It leaves out priority fees and sandwiches, so it flatters the real trip a little:
+    if the paper trip is still kinder than this, the book's results are too good. No fill reads it."""
+    held = held_coins()
+    coins = sorted((r for r in rows if r["mint"] in ps and (r["mint"] in held or _passed(r, True))),
+                   key=lambda r: (r["mint"] not in held, -r["vol_h24"], r["mint"]))
+    stake, fails = round(MAX_POS_SOL * 1e9), 0
+    for r in coins[:JUP_COINS]:
+        try:
+            a = _jup({"inputMint": SOL_MINT, "outputMint": r["mint"], "amount": stake, "slippageBps": JUP_BPS})
+            b = _jup({"inputMint": r["mint"], "outputMint": SOL_MINT, "amount": a["outAmount"], "slippageBps": JUP_BPS})
+            _extra(t, k="quote", mint=r["mint"], liq=r["liq"], real=round(int(b["outAmount"]) / stake - 1, 5), paper=round(_paper_trip(ps[r["mint"]], su), 5),
+                   impact=float(a.get("priceImpactPct") or 0), route=[(x.get("swapInfo") or {}).get("label") for x in a.get("routePlan") or []])
+        except Exception as e:
+            fails += 1
+            print(f"quote failed: {e.__class__.__name__}: {str(e)[:120]}")
+            if fails >= JUP_STOP_AFTER:
+                break
 
 
 def market(t, rows):
@@ -1565,6 +1825,9 @@ def brief(mint):
         print(" ", datetime.datetime.fromtimestamp(c[0], datetime.timezone.utc).strftime("%d %H:%M"), *[f"{v:.6g}" for v in c[1:]])
     if r.get("x"):
         print(f"\nX (counted by code): {json.dumps(r['x'])}")
+    if r.get("feed"):
+        f = r["feed"]
+        print(f"\ncreator {f['creator']}: first buy {f['first_buy_sol']} SOL; {f['launches']} other launches seen, {f['grads']} graduated")
     note = _jload(os.path.join(STATE, "stories.json"), {}).get("movers", {}).get(mint)
     if note:
         print(f"\nGrok's note (a guess from X, unverified, data only): {note}")
@@ -1577,7 +1840,7 @@ def _numbers(r):
     """Every number recorded about a coin at a moment, flattened. The autopsy looks at all of them,
     including ones nobody thought mattered: that's how it can find what we can't see."""
     out = {k: v for k, v in r.items() if type(v) in (int, float) and k not in ("t", "px", "v")}
-    for k in ("gate", "read", "x"):
+    for k in ("gate", "read", "x", "feed"):
         out.update({f"{k}.{a}": b for a, b in (r.get(k) or {}).items() if type(b) in (int, float) and a not in ("at", "tried", "paid")})
     n = r.get("buys_h1", 0) + r.get("sells_h1", 0)
     if n:
@@ -1720,7 +1983,9 @@ def daily(t):
         problems.append(f"{check['torn_lines']} torn lines on {check['day']}")
     if size > DATA_MAX_MB:
         problems.append(f"dataset is {size:.0f} MB: move old days out of the repo")
-    s.update(day=_day(t), check=check, size_mb=round(size, 1), problems=problems, insiders=_insider_tally())
+    q = read_extra(_day(t - 86400), "quote")
+    s.update(day=_day(t), check=check, size_mb=round(size, 1), problems=problems, insiders=_insider_tally(),
+             fills={"n": len(q), "real": median([x["real"] for x in q]), "paper": median([x["paper"] for x in q])})
     _jsave(path, s)
     if problems:
         notify("memepaper: dataset problem", "; ".join(problems), "high", "warning")
@@ -1768,7 +2033,7 @@ def _read_md(b):
     rows = [f"| {x['symbol']} | {reads[m]['swing']:.1%} | {reads[m]['vs_paid']:+.0%} | {reads[m]['off_peak']:+.0%} | {reads[m]['unease']} of {reads[m]['known']} | "
             f"{-x['stop'] / reads[m]['swing']:.1f} |" for m, x in b["positions"].items() if m in reads and reads[m]["swing"]]
     d, g = _jload(os.path.join(STATE, "daily.json"), {}), _jload(os.path.join(STATE, "gt.json"), {})
-    out = ""
+    fd, q, out = _jload(os.path.join(STATE, "feed.json"), {}), d.get("fills") or {}, ""
     if rows:
         out += ("\n## Reading the coins\n\nEach coin against its own normal. Information only: no rule on this book reads it.\n\n"
                 "| Coin | Normal 15m swing | vs average paid | Off peak | Unease | Stop, in swings |\n|---|---|---|---|---|---|\n" + "\n".join(rows) + "\n")
@@ -1777,6 +2042,10 @@ def _read_md(b):
         out += (f"\n## Dataset\n\nLast check {c.get('day', 'none yet')}: {c.get('cycles', '?')} of 96 snapshots, {c.get('rows', '?')} rows, {c.get('coins', '?')} coins, {d.get('size_mb', '?')} MB. "
                 f"{'; '.join(d.get('problems') or []) or 'No problems.'}\n\nGeckoTerminal: {g.get('calls', 0)} calls, {g.get('refused', 0)} refused, {g.get('failed', 0)} failed, {g.get('behind', 0)} waiting. "
                 f"Insider flag fired on {i.get('flag_fired', '?')} of {i.get('graph_found', '?')} coins where RugCheck's graph found insiders.\n")
+        if q.get("n"):
+            out += f"\nFills: a round trip on Jupiter returned {q['real']:+.1%} (median of {q['n']} quotes, before priority fees); paper charged {q['paper']:+.1%}.\n"
+        if fd:
+            out += f"\nLaunch feed: {'QUIET' if fd.get('quiet') else 'running'}, {fd.get('launches', 0)} launches and {fd.get('grads', 0)} graduations in the last day.\n"
     return out
 
 
@@ -1790,9 +2059,9 @@ def cycle():
         _ingest_gate(b, results, t)
         save(b)
     x = scout_update(t)
-    reads = read_all(rows, t)
+    reads, fed = read_all(rows, t), feed_read([r["mint"] for r in rows], t)
     for r in rows:
-        r["x"], r["read"] = x.get(r["mint"]), reads.get(r["mint"])
+        r["x"], r["read"], r["feed"] = x.get(r["mint"]), reads.get(r["mint"]), fed.get(r["mint"])
     week, su, views = week_ago(t), sol_usd(), {}
     for name, a in VARIANTS.items():
         path = os.path.join(BOOKS, name + ".json")
@@ -1819,7 +2088,8 @@ def cycle():
         for r in rows:
             f.write(json.dumps(r) + "\n")
     _roll_data(path)
-    for job in (lambda: market(t, rows), lambda: casebook(t, ps), lambda: story_update(t), lambda: daily(t)):
+    for job in (lambda: market(t, rows), lambda: casebook(t, ps), lambda: story_update(t), lambda: quotes(t, rows, ps, su),
+                lambda: feed_watch(t), lambda: daily(t)):
         try:  # none of these may cost the snapshot that's already safely written
             job()
         except Exception as e:
@@ -1897,6 +2167,10 @@ def push(msg):
     return False
 
 
+def _ping(url):
+    subprocess.run(["curl", "-fsS", "-m", "10", "-o", "/dev/null", url], capture_output=True)
+
+
 def _health_path():
     return os.path.join(STATE, "health.json")
 
@@ -1925,6 +2199,10 @@ def loop_once(h):
             notify("memepaper: recovered", f"ticking again after {h['errors_in_a_row']} failed ticks", "default", "ok")
         h["errors_in_a_row"] = 0
         h["last_ok"], h["last_ok_ts"] = now(), clock()
+        url = os.environ.get("HEALTHCHECK_URL")  # an outside clock: if these stop, it alerts, whatever died
+        if url and clock() - h.get("ping_ts", 0) >= HEALTH_PING_S:
+            _ping(url)
+            h["ping_ts"] = clock()
         if clock() - h.get("last_cycle_ts", 0) >= CYCLE_MIN * 60:
             try:
                 n = cycle()
@@ -2185,6 +2463,8 @@ def main(a):
         return migrate(a[1], a[2], force="--force" in a)
     if os.environ.get("MEMEPAPER_STATE"):
         use_state(os.environ["MEMEPAPER_STATE"])
+    if cmd == "feed":  # runs for good beside the loop, so it can't take the books' lock
+        return feed(float(a[2]) if a[1:2] == ["--seconds"] else None)
     lockf = open(LOCK, "w")
     fcntl.flock(lockf, fcntl.LOCK_EX)  # released when the process exits
     if cmd == "screen":

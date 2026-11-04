@@ -50,7 +50,8 @@ class Env(unittest.TestCase):
         self.patches += [mock.patch.object(mp, "ORDERS", None), mock.patch.object(mp, "BOOKS", None),
                          mock.patch.object(mp, "STATE", None)]
         self.patches += [mock.patch.object(mp, "get", self.fake_get), mock.patch.object(mp, "_gt", self.fake_gt),
-                         mock.patch.object(mp, "GT_GAP_S", 0),
+                         mock.patch.object(mp, "GT_GAP_S", 0), mock.patch.object(mp, "_jup", self.fake_jup),
+                         mock.patch.dict(os.environ, {"MEMEPAPER_FEED": "", "HEALTHCHECK_URL": "", "JUP_API_KEY": ""}),
                          mock.patch.object(mp, "sol_usd", lambda: SU),
                          mock.patch.object(mp, "clock", lambda: self.t)]
         for p in self.patches:
@@ -67,6 +68,7 @@ class Env(unittest.TestCase):
         self.listed = []       # mints on DexScreener's profile and boost lists
         self.xposts = {}       # post number -> X's public embed answer
         self.gt, self.gt_calls = {}, []  # GeckoTerminal: path fragment -> answer, and calls made
+        self.jup_calls, self.jup_back, self.jup_fail = [], 0.95, ()  # Jupiter: a round trip's return, mints it won't quote
         self.t = time.time()   # the fake clock; tests move it forward
         for n in NAMES:
             self.market[MINT[n]] = best_pair(n)
@@ -78,6 +80,14 @@ class Env(unittest.TestCase):
         for p in self.patches:
             p.stop()
         self.tmp.cleanup()
+
+    def fake_jup(self, q):
+        self.jup_calls.append(q)
+        if q["inputMint"] in self.jup_fail or q["outputMint"] in self.jup_fail:
+            raise subprocess.CalledProcessError(22, ["curl"])
+        if q["inputMint"] == mp.SOL_MINT:
+            return {"outAmount": "1000", "priceImpactPct": "0.01", "routePlan": [{"swapInfo": {"label": "Pump.fun Amm"}}]}
+        return {"outAmount": str(round(mp.MAX_POS_SOL * 1e9 * self.jup_back))}
 
     def fake_get(self, url):
         if any(f in url for f in self.fail_urls):
@@ -1362,7 +1372,7 @@ class TestCycle(CycleEnv):
         self.t += 900
         self.cycle()
         self.assertEqual(self.run_quiet(mp.replay, self.day()), [])
-        self.assertIn("replayed 39", self.out.getvalue())
+        self.assertIn("replayed 42", self.out.getvalue())
 
     def test_replay_catches_a_changed_row(self):
         self.coin("Apump")
@@ -1398,7 +1408,8 @@ def iso(ts):
     return datetime.datetime.fromtimestamp(ts, datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
-GT_REAL = mp._gt  # the suite swaps it out in setUp
+GT_REAL = mp._gt
+JUP_REAL = mp._jup  # the suite swaps it out in setUp
 
 
 class ScoutEnv(CycleEnv):
@@ -1990,11 +2001,28 @@ class TestUnpaid(ReadEnv):
         self.assertEqual((rows["Apump"]["paid"], rows["Fpump"]["paid"]), (True, False))
         self.assertIsNotNone(rows["Fpump"]["gate"])
 
-    def test_no_arm_or_control_ever_buys_it(self):
+    def test_only_its_own_arm_ever_buys_it(self):
         self.cycle()
         for p in mp.other_arms():
-            self.assertNotIn("Fpump", mp.load(p)["positions"])
+            if not p.endswith("v-unpaid.json"):
+                self.assertNotIn("Fpump", mp.load(p)["positions"])
+        self.assertIn("Fpump", self.book("v-unpaid")["positions"])
         self.assertNotIn("Fpump", mp.load()["gate_pass"])
+
+    def test_its_arm_never_buys_a_paid_coin(self):
+        self.market.pop("Fpump")
+        self.gtfile(free=[])
+        self.cycle()
+        self.assertEqual(self.book("v-unpaid")["positions"], {})
+        self.assertIn("Apump", self.book("v-momentum")["positions"])
+
+    def test_it_stays_watched_once_its_arm_holds_it(self):
+        self.cycle()
+        self.gtfile(free=[])
+        self.t += 3 * 86400
+        self.cycle()
+        rows = {r["mint"]: r for r in self.rows()}
+        self.assertFalse(rows["Fpump"]["paid"])
 
     def test_paid_coins_are_gated_first(self):
         old = {"at": 0, "fails": []}
@@ -2750,6 +2778,482 @@ class TestWorkflows(unittest.TestCase):
         w = self.read("watchdog.yml")
         self.assertIn("memepaper.py watchdog", w)
         self.assertNotIn("group: hot-loop", w)
+
+
+class TestFrames(unittest.TestCase):
+    def test_a_short_frame(self):
+        self.assertEqual(mp._ws_frames(b"\x81\x02hi"), ([(1, b"hi")], b""))
+
+    def test_two_frames_and_a_part(self):
+        out, left = mp._ws_frames(b"\x81\x01a\x89\x01b\x81\x05par")
+        self.assertEqual(out, [(1, b"a"), (9, b"b")])
+        self.assertEqual(left, b"\x81\x05par")
+
+    def test_medium_and_long_lengths(self):
+        body = b"x" * 300
+        self.assertEqual(mp._ws_frames(b"\x81\x7e" + struct.pack(">H", 300) + body)[0], [(1, body)])
+        self.assertEqual(mp._ws_frames(b"\x81\x7f" + struct.pack(">Q", 300) + body)[0], [(1, body)])
+
+    def test_a_length_not_yet_arrived_waits(self):
+        for part in (b"\x81", b"\x81\x7e\x01", b"\x81\x7f\x00\x00"):
+            self.assertEqual(mp._ws_frames(part), ([], part))
+
+    def test_a_huge_frame_is_a_dead_connection_not_a_memory_leak(self):
+        with self.assertRaises(ConnectionError):
+            mp._ws_frames(b"\x81\x7f" + struct.pack(">Q", mp.FEED_MAX_FRAME + 1))
+
+    def test_what_we_send_is_masked_and_unmasks(self):
+        for n in (5, 300):
+            s = mock.Mock()
+            mp._ws_send(s, b"y" * n, 10)
+            x = s.sendall.call_args[0][0]
+            self.assertEqual(x[0], 0x80 | 10)
+            self.assertTrue(x[1] & 0x80)
+            i = 2 if n < 126 else 4
+            self.assertEqual(n, x[1] & 127 if n < 126 else struct.unpack(">H", x[2:4])[0])
+            mask, body = x[i:i + 4], x[i + 4:]
+            self.assertEqual(bytes(b ^ mask[j % 4] for j, b in enumerate(body)), b"y" * n)
+
+
+MINT1, MINT2, MINT3 = "A" * 40 + "pump", "B" * 40 + "pump", "C" * 40 + "pump"
+
+
+def launch(mint, creator="Maker1", **kw):
+    return {"mint": mint, "txType": "create", "traderPublicKey": creator, "solAmount": 1.5, "marketCapSol": 30.0, "symbol": "ABC", **kw}
+
+
+def text_frame(x):
+    d = x if isinstance(x, bytes) else json.dumps(x).encode()
+    return (b"\x81\x7e" + struct.pack(">H", len(d)) if len(d) > 125 else bytes([0x81, len(d)])) + d
+
+
+class FakeSock:
+    def __init__(self, chunks):
+        self.chunks, self.sent, self.closed = list(chunks), [], False
+
+    def recv(self, n):
+        return self.chunks.pop(0) if self.chunks else b""
+
+    def sendall(self, d):
+        self.sent.append(d)
+
+    def settimeout(self, s):
+        pass
+
+    def close(self):
+        self.closed = True
+
+
+class FeedEnv(ReadEnv):
+    def setUp(self):
+        super().setUp()
+        self.fp = os.path.join(self.tmp.name, "feed.sqlite")
+        self.pe = mock.patch.dict(os.environ, {"MEMEPAPER_FEED": self.fp})
+        self.pe.start()
+        self.db = mp._feed_db(self.fp)
+
+    def tearDown(self):
+        self.db.close()
+        self.pe.stop()
+        super().tearDown()
+
+    def add(self, x, t=None):
+        return mp._feed_store(self.db, x, round(self.t if t is None else t))
+
+    def all(self, table):
+        return self.db.execute(f"SELECT * FROM {table}").fetchall()
+
+
+class TestFeedStore(FeedEnv):
+    def test_a_launch(self):
+        self.assertTrue(self.add(launch(MINT1)))
+        self.assertEqual(self.all("launches"), [(MINT1, round(self.t), "Maker1", 1.5, 30.0, "ABC")])
+
+    def test_a_graduation(self):
+        self.assertTrue(self.add({"mint": MINT1, "txType": "migrate", "pool": "pump-amm"}))
+        self.assertEqual(self.all("grads"), [(MINT1, round(self.t), "pump-amm")])
+
+    def test_the_first_sighting_stands(self):
+        self.add(launch(MINT1), 100)
+        self.add(launch(MINT1, creator="Other"), 200)
+        self.assertEqual(self.all("launches")[0][1:3], (100, "Maker1"))
+
+    def test_anything_else_is_ignored(self):
+        for x in ({"message": "Successfully subscribed"}, {"mint": 5, "txType": "create"}, {"mint": "short", "txType": "create", "traderPublicKey": "a"},
+                  {"mint": MINT1, "txType": "buy"}, {"mint": MINT1, "txType": "create"}, {"mint": MINT1, "txType": "create", "traderPublicKey": 7}):
+            self.assertFalse(self.add(x), x)
+        self.assertEqual(self.all("launches"), [])
+
+    def test_its_text_is_only_data(self):
+        evil = "x'); DROP TABLE launches; --" * 5
+        self.add(launch(MINT1, symbol=evil, solAmount="lots"))
+        got = self.all("launches")[0]
+        self.assertEqual(got[5], evil[:32])
+        self.assertIsNone(got[3])
+
+
+class TestFeedStream(FeedEnv):
+    def run_session(self, chunks, end=None):
+        s = FakeSock(chunks[1:])
+        with mock.patch.object(mp, "_ws_open", lambda: (s, chunks[0])):
+            try:
+                mp._feed_session(self.db, end)
+            except ConnectionError as e:
+                s.error = str(e)
+        return s
+
+    def test_it_subscribes_to_both_and_stores_what_comes(self):
+        s = self.run_session([text_frame(launch(MINT1)), text_frame({"mint": MINT1, "txType": "migrate", "pool": "p"})])
+        self.assertEqual(len(s.sent), 2)
+        self.assertEqual((len(self.all("launches")), len(self.all("grads"))), (1, 1))
+        self.assertTrue(s.closed)
+
+    def test_a_frame_split_in_two_still_arrives(self):
+        f = text_frame(launch(MINT1))
+        self.run_session([b"", f[:9], f[9:]])
+        self.assertEqual(len(self.all("launches")), 1)
+
+    def test_it_answers_pings(self):
+        s = self.run_session([b"\x89\x02hi"])
+        self.assertEqual(s.sent[-1][0], 0x8a)
+
+    def test_it_survives_rubbish(self):
+        self.run_session([text_frame(b"not json") + text_frame(b"[1,2]") + text_frame(launch(MINT1))])
+        self.assertEqual(len(self.all("launches")), 1)
+
+    def test_a_close_frame_ends_the_session_as_a_drop(self):
+        self.assertIn("closed", self.run_session([b"\x88\x00" + text_frame(launch(MINT1))]).error)
+        self.assertEqual(self.all("launches"), [])
+
+    def test_a_silent_end_is_a_drop(self):
+        self.assertIn("ended", self.run_session([b""]).error)
+
+    def test_the_handshake(self):
+        ok = b"HTTP/1.1 101 Switching Protocols\r\nUpgrade: websocket\r\n\r\n" + b"\x81\x01a"
+        for reply, refused in ((ok, False), (b"HTTP/1.1 403 Forbidden\r\n\r\n", True)):
+            s = FakeSock([reply[:10], reply[10:]])
+            ctx = mock.Mock()
+            ctx.wrap_socket.return_value = s
+            with mock.patch.object(mp.ssl, "create_default_context", lambda cafile=None: ctx), mock.patch.object(mp.socket, "create_connection"):
+                if refused:
+                    with self.assertRaises(mp.FeedRefused):
+                        mp._ws_open()
+                else:
+                    self.assertEqual(mp._ws_open(), (s, b"\x81\x01a"))
+            self.assertIn(b"Sec-WebSocket-Version: 13", s.sent[0])
+
+    def naps(self, results, step=0):
+        """Run feed() against scripted sessions; returns the waits it chose."""
+        it, naps = iter(results), []
+
+        def session(db, end):
+            self.t += step
+            x = next(it, None)
+            if x is None:
+                self.t = end
+            elif isinstance(x, Exception):
+                raise x
+        with mock.patch.object(mp, "_feed_session", session), mock.patch.object(mp.time, "sleep", naps.append):
+            self.run_quiet(mp.feed, 10 ** 6)
+        return [n for n in naps if n]
+
+    def test_drops_back_off_and_a_steady_connection_resets_that(self):
+        self.assertEqual(self.naps([ConnectionError("x"), OSError("y"), TimeoutError("z")]), [10, 20, 40])
+
+    def test_a_steady_connection_starts_the_wait_again(self):
+        self.assertEqual(self.naps([ConnectionError("x"), ConnectionError("x")], step=mp.FEED_STEADY_S), [5, 5])
+
+    def test_the_wait_has_a_ceiling(self):
+        self.assertEqual(self.naps([ConnectionError("x")] * 12)[-1], mp.FEED_RETRY_S[1])
+
+    def test_a_refusal_waits_out_a_ban(self):
+        self.assertEqual(self.naps([mp.FeedRefused("403")]), [mp.FEED_BAN_S])
+
+    def test_a_second_feed_refuses_to_connect(self):
+        held = open(self.fp + ".lock", "w")
+        mp.fcntl.flock(held, mp.fcntl.LOCK_EX)
+        with mock.patch.object(mp, "_feed_session") as s, self.assertRaises(SystemExit):
+            mp.feed(1)
+        s.assert_not_called()
+        held.close()
+
+    def test_it_needs_a_file_outside_the_state_folder(self):
+        for path, why in (("", "needs"), (os.path.join(self.state, "x.sqlite"), "state folder")):
+            with mock.patch.dict(os.environ, {"MEMEPAPER_FEED": path}), self.assertRaises(SystemExit) as e:
+                mp.feed(1)
+            self.assertIn(why, str(e.exception))
+
+    def test_it_never_waits_for_the_books_lock(self):
+        with mock.patch.object(mp, "feed") as f, mock.patch.object(mp.fcntl, "flock", side_effect=AssertionError):
+            mp.main(["feed", "--seconds", "7"])
+        f.assert_called_once_with(7.0)
+
+
+class TestFeedRead(FeedEnv):
+    def test_a_creators_record_leaves_out_this_coin(self):
+        self.add(launch(MINT1), 100)
+        self.add(launch(MINT2), 110)
+        self.add(launch(MINT3, creator="Maker2"), 120)
+        self.add({"mint": MINT2, "txType": "migrate", "pool": "p"}, 200)
+        self.add({"mint": MINT1, "txType": "migrate", "pool": "p"}, 200)
+        self.assertEqual(mp.feed_read([MINT1, "unknown"], 300), {MINT1: {"creator": "Maker1", "first_buy_sol": 1.5, "launches": 1, "grads": 1}})
+
+    def test_nothing_from_after_the_moment_counts(self):
+        self.add(launch(MINT1), 100)
+        self.add(launch(MINT2), 500)
+        self.add(launch(MINT3), 110)
+        self.add({"mint": MINT3, "txType": "migrate", "pool": "p"}, 400)
+        got = mp.feed_read([MINT1], 300)[MINT1]
+        self.assertEqual((got["launches"], got["grads"]), (1, 0))
+
+    def test_no_feed_means_no_columns_and_no_trouble(self):
+        for path in ("", os.path.join(self.tmp.name, "absent.sqlite")):
+            with mock.patch.dict(os.environ, {"MEMEPAPER_FEED": path}):
+                self.assertEqual(mp.feed_read([MINT1], 1), {})
+                self.assertEqual(mp.feed_grads(1), [])
+
+    def test_a_broken_file_costs_the_columns_not_the_cycle(self):
+        bad = os.path.join(self.tmp.name, "bad.sqlite")
+        with open(bad, "w") as f:
+            f.write("not a database" * 100)
+        self.coin("Apump")
+        self.listed.append("Apump")
+        with mock.patch.dict(os.environ, {"MEMEPAPER_FEED": bad}):
+            self.assertEqual(self.cycle(), 1)
+        self.assertIsNone(self.rows()[0]["feed"])
+
+    def test_the_row_carries_it_and_the_autopsy_sees_it(self):
+        self.coin(MINT1)
+        self.add(launch(MINT1), self.t - 3600)
+        self.cycle()
+        r = self.rows()[0]
+        self.assertEqual(r["feed"]["creator"], "Maker1")
+        self.assertEqual(r["v"], mp.SCHEMA)
+        self.assertEqual(mp._numbers(r)["feed.first_buy_sol"], 1.5)
+        self.assertNotIn("feed.creator", mp._numbers(r))
+
+    def test_the_brief_shows_it(self):
+        self.coin(MINT1)
+        self.add(launch(MINT1), self.t - 3600)
+        self.cycle()
+        self.run_quiet(mp.brief, MINT1)
+        self.assertIn("creator Maker1: first buy 1.5 SOL", self.out.getvalue())
+
+    def test_graduates_join_the_watch_list_unpaid_as_they_reach_the_universes_age(self):
+        age = mp.UNIVERSE_MIN_AGE_H * 3600
+        for m, ago in ((MINT1, age + 60), (MINT2, age - 60), (MINT3, age + mp.FEED_GRAD_H * 3600 + 60)):
+            self.coin(m, listed=False)
+            self.add({"mint": m, "txType": "migrate", "pool": "p"}, self.t - ago)
+        self.cycle()
+        rows = {r["mint"]: r for r in self.rows()}
+        self.assertEqual(list(rows), [MINT1])
+        self.assertFalse(rows[MINT1]["paid"])
+
+    def test_a_paid_coin_that_graduates_stays_paid(self):
+        self.coin(MINT1)
+        self.add({"mint": MINT1, "txType": "migrate", "pool": "p"}, self.t - mp.UNIVERSE_MIN_AGE_H * 3600 - 60)
+        self.cycle()
+        self.assertTrue(self.rows()[0]["paid"])
+
+    def test_a_cycle_checks_on_the_feed(self):
+        self.coin("Apump")
+        self.add(launch(MINT1), self.t)
+        self.cycle()
+        self.assertEqual(mp._jload(os.path.join(self.state, "feed.json"), {})["launches"], 1)
+
+    def test_unpaid_coins_never_crowd_out_paid_ones(self):
+        self.coin("Apump")
+        wp = os.path.join(self.state, "watch.json")
+        mp._jsave(wp, {f"U{i}pump": {"ok": False, "paid": False, "t": round(self.t)} for i in range(3)})
+        self.t += 1
+        with mock.patch.object(mp, "WATCH_MAX", 2), mock.patch.object(mp, "feed_grads", lambda t: ["U0pump", "U1pump", "U2pump"]):
+            self.cycle()
+        self.assertIn("Apump", mp._jload(wp, {}))
+
+    def test_a_quiet_feed_alerts_once_and_says_when_it_is_back(self):
+        path = os.path.join(self.state, "feed.json")
+        self.add(launch(MINT1), self.t)
+        mp.feed_watch(round(self.t))
+        self.assertEqual(self.alerts, [])
+        self.t += mp.FEED_STALE_MIN * 60 + 1
+        mp.feed_watch(round(self.t))
+        mp.feed_watch(round(self.t))
+        self.assertEqual([a[0] for a in self.alerts], ["memepaper: launch feed quiet"])
+        self.add(launch(MINT2), self.t)
+        mp.feed_watch(round(self.t))
+        self.assertEqual(self.alerts[-1][0], "memepaper: launch feed back")
+        self.assertEqual(mp._jload(path, {})["launches"], 2)
+
+    def test_a_feed_that_never_started_alerts(self):
+        with mock.patch.dict(os.environ, {"MEMEPAPER_FEED": os.path.join(self.tmp.name, "absent.sqlite")}):
+            mp.feed_watch(round(self.t))
+        self.assertEqual(len(self.alerts), 1)
+
+    def test_without_a_feed_it_says_nothing(self):
+        with mock.patch.dict(os.environ, {"MEMEPAPER_FEED": ""}):
+            mp.feed_watch(round(self.t))
+        self.assertEqual(self.alerts, [])
+        self.assertFalse(os.path.exists(os.path.join(self.state, "feed.json")))
+
+    def test_the_report_says_how_it_is_doing(self):
+        mp._jsave(os.path.join(self.state, "feed.json"), {"quiet": True, "launches": 9, "grads": 2})
+        self.gtfile(calls=1)
+        self.assertIn("Launch feed: QUIET, 9 launches and 2 graduations", mp._read_md(mp.load()))
+
+
+class TestQuotes(ReadEnv):
+    def setUp(self):
+        super().setUp()
+        self.su = 100.0
+
+    def reset_arms(self):
+        for p in mp.other_arms():
+            os.remove(p)
+
+    def go(self, rows, held=()):
+        ps = {r["mint"]: fake_pair(r["mint"], 1.0) for r in rows}
+        with mock.patch.object(mp, "held_coins", lambda: dict.fromkeys(held)):
+            self.run_quiet(mp.quotes, round(self.t), rows, ps, self.su)
+        return mp.read_extra(self.day(), "quote")
+
+    def passing(self, mint, **kw):
+        return row(mint, t=round(self.t), gate={"at": round(self.t), "fails": []}, **kw)
+
+    def test_it_buys_then_sells_back_what_the_buy_returned(self):
+        q = self.go([self.passing("Apump")])[0]
+        self.assertEqual(self.jup_calls[0], {"inputMint": mp.SOL_MINT, "outputMint": "Apump", "amount": 250_000_000, "slippageBps": mp.JUP_BPS})
+        self.assertEqual((self.jup_calls[1]["inputMint"], self.jup_calls[1]["amount"]), ("Apump", "1000"))
+        self.assertAlmostEqual(q["real"], -0.05)
+        self.assertEqual(q["route"], ["Pump.fun Amm"])
+        self.assertEqual(q["impact"], 0.01)
+
+    def test_the_paper_figure_is_what_a_paper_trade_really_costs(self):
+        p = fake_pair("Apump", 1.0)
+        b = mp.load()
+        with mock.patch.object(mp, "rug", lambda m: (1, [])):
+            self.run_quiet(mp._open, b, "Apump", mp.MAX_POS_SOL, "x", -0.35, 1.0, p, self.su)
+        before = b["cash_sol"]
+        self.run_quiet(mp._sell, b, "Apump", 1.0, "x", p, self.su)
+        self.assertAlmostEqual(mp._paper_trip(p, self.su), (b["cash_sol"] - before) / mp.MAX_POS_SOL - 1, places=9)
+
+    def test_holdings_first_then_the_busiest_passes(self):
+        rows = [self.passing(f"P{i}pump", vol_h24=i) for i in range(8)] + [row("Hpump", t=round(self.t), vol_h24=0)]
+        got = [x["mint"] for x in self.go(rows, held=["Hpump"])]
+        self.assertEqual(got, ["Hpump", "P7pump", "P6pump", "P5pump", "P4pump"])
+
+    def test_unpaid_passes_count_and_fails_do_not(self):
+        rows = [self.passing("Apump", paid=False), row("Bpump", t=round(self.t), gate={"at": round(self.t), "fails": ["no"]})]
+        self.assertEqual([x["mint"] for x in self.go(rows)], ["Apump"])
+
+    def test_it_gives_up_quietly_after_two_failures(self):
+        self.jup_fail = ("P0pump", "P1pump", "P2pump")
+        self.assertEqual(self.go([self.passing(f"P{i}pump", vol_h24=9 - i) for i in range(4)]), [])
+        self.assertEqual(len(self.jup_calls), 2)
+
+    def test_one_failure_skips_only_that_coin(self):
+        self.jup_fail = ("P0pump",)
+        self.assertEqual([x["mint"] for x in self.go([self.passing(f"P{i}pump", vol_h24=9 - i) for i in range(2)])], ["P1pump"])
+
+    def test_a_coin_with_no_price_is_skipped(self):
+        r = self.passing("Apump")
+        with mock.patch.object(mp, "held_coins", dict):
+            mp.quotes(round(self.t), [r], {}, self.su)
+        self.assertEqual(self.jup_calls, [])
+
+    def test_a_cycle_records_them_and_never_changes_a_fill(self):
+        self.coin("Apump")
+        self.cycle()
+        self.assertEqual(len(mp.read_extra(self.day(), "quote")), 1)
+        first = self.book("v-momentum")["positions"]["Apump"]["tokens"]
+        self.reset_arms()
+        self.jup_back = 0.5
+        self.cycle()
+        self.assertEqual(self.book("v-momentum")["positions"]["Apump"]["tokens"], first)
+
+    def test_the_daily_check_and_report_compare_them(self):
+        self.line(k="quote", real=-0.05, paper=-0.04)
+        self.line(k="quote", real=-0.07, paper=-0.04)
+        self.t += 86400
+        self.assertTrue(self.run_quiet(mp.daily, round(self.t)))
+        d = mp._jload(os.path.join(self.state, "daily.json"), {})
+        self.assertEqual((d["fills"]["n"], d["fills"]["paper"]), (2, -0.04))
+        self.assertAlmostEqual(d["fills"]["real"], -0.06)
+        self.assertIn("returned -6.0% (median of 2 quotes, before priority fees); paper charged -4.0%", mp._read_md(mp.load()))
+
+    def test_the_url_follows_the_key(self):
+        done = mock.Mock(stdout="{}")
+        with mock.patch.object(mp.subprocess, "run", return_value=done) as run:
+            JUP_REAL({"a": 1})
+            cmd = run.call_args[0][0]
+            self.assertTrue(cmd[-1].startswith(mp.JUP + "?a=1"))
+            self.assertNotIn("-H", cmd)
+            with mock.patch.dict(os.environ, {"JUP_API_KEY": "k"}):
+                JUP_REAL({"a": 1})
+            cmd = run.call_args[0][0]
+            self.assertTrue(cmd[-1].startswith(mp.JUP_KEYED + "?a=1"))
+            self.assertIn("x-api-key: k", cmd)
+
+
+class TestFirstFetch(ReadEnv):
+    def fetch(self, **c):
+        self.gt = {"ohlcv": {"data": {"attributes": {"ohlcv_list": []}}}}
+        s = {"coins": {"a": {"pool": "Pa", **c}}}
+        mp._gt_job(s, "c15", "a", round(self.t))
+        return self.gt_calls[-1]
+
+    def test_a_coins_first_fetch_brings_its_history(self):
+        self.assertIn(f"limit={mp.GT_FIRST_CANDLES}&", self.fetch(tier=3))
+
+    def test_after_that_only_what_is_new(self):
+        self.assertIn("limit=200&", self.fetch(tier=3, c15_ts=5))
+
+    def test_coins_outside_the_universe_stay_small(self):
+        self.assertIn("limit=200&", self.fetch(tier=4))
+
+
+class TestPing(TestCycleInLoop):
+    def pings(self, n=1, step=60):
+        seen = []
+        with mock.patch.object(mp, "_ping", seen.append), mock.patch.object(mp, "cycle", lambda: 0), \
+                mock.patch.dict(os.environ, {"HEALTHCHECK_URL": "https://hc.test/abc"}):
+            for _ in range(n):
+                self.once()
+                self.t += step
+        return seen
+
+    def test_a_good_tick_pings_at_most_every_five_minutes(self):
+        self.assertEqual(self.pings(11), ["https://hc.test/abc"] * 3)
+
+    def test_a_failed_tick_does_not(self):
+        with mock.patch.object(mp, "tick", side_effect=ValueError("x")):
+            self.assertEqual(self.pings(), [])
+
+    def test_no_url_no_ping(self):
+        with mock.patch.object(mp, "_ping", side_effect=AssertionError), mock.patch.object(mp, "cycle", lambda: 0):
+            self.once()
+
+
+class TestServer(unittest.TestCase):
+    def read(self):
+        with open(os.path.join(os.path.dirname(FIX), "..", "server", "setup.sh")) as f:
+            return f.read()
+
+    def test_the_stream_stays_off_actions(self):
+        w = TestWorkflows.read(self, "hot-loop.yml")
+        self.assertNotIn("MEMEPAPER_FEED", w)
+        self.assertNotIn("memepaper.py feed", w)
+
+    def test_the_setup_is_valid_shell(self):
+        self.assertEqual(subprocess.run(["bash", "-n"], input=self.read(), text=True).returncode, 0)
+
+    def test_it_will_not_start_a_second_writer(self):
+        s = self.read()
+        self.assertIn("last_tick_ts", s)
+        self.assertLess(s.index("last_tick_ts"), s.index("systemctl enable"))
+
+    def test_it_holds_no_secret(self):
+        s = self.read()
+        self.assertNotRegex(s, r"(NTFY_TOPIC|DESK_TOKEN|HEALTHCHECK_URL|JUP_API_KEY)=\S")
 
 
 class TestRulesText(unittest.TestCase):
