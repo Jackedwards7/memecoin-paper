@@ -224,11 +224,11 @@
     "2026-11-03 19:30 UTC SELL 100% Ahsoka -> 0.158 SOL @ $0.0006786: stop-loss at -35%",
     "2026-11-03 20:15 UTC BUY HELL 0.25 SOL @ $0.0027084573 (mc $2,583,618): Passed gate; mature pumpswap coin (511h), liq $141k, 1h +0.8%, 24h +6%, 5m +2.1%, buys~sells; not a spike. Only other passes: ANONVOYAGE (vertical +3681% 24h, rejected) and held GATO."
   ],
-  "last_mark": "2026-11-04 07:17 UTC",
+  "last_mark": "2026-11-04 07:48 UTC",
   "gate_pass": {
-    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1793736927.1940875,
-    "8muc9DdhqWfAPcvmEebNQCG89bLiwi12T2KtBtzVpump": 1793736927.1940875,
-    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1793736927.1940875
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1793776750.053479,
+    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1793776750.053479,
+    "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1793776750.053479
   },
   "rejects": {
     "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
@@ -291,6 +291,24 @@
         "a wallet holds 61% of supply"
       ],
       "moves": {}
+    },
+    "DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump": {
+      "symbol": "AMD",
+      "at": 1793776750.053479,
+      "px": 0.001454,
+      "fails": [
+        "already pumped: +2904% in 24h"
+      ],
+      "moves": {}
+    },
+    "8muc9DdhqWfAPcvmEebNQCG89bLiwi12T2KtBtzVpump": {
+      "symbol": "ANONVOYAGE",
+      "at": 1793776750.053479,
+      "px": 0.0007342,
+      "fails": [
+        "already pumped: +1115% in 24h"
+      ],
+      "moves": {}
     }
   },
   "passes": {
@@ -312,6 +330,13 @@
       "symbol": "GATO",
       "at": 1793736927.1940875,
       "px": 0.01193,
+      "fails": [],
+      "moves": {}
+    },
+    "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": {
+      "symbol": "three",
+      "at": 1793776750.053479,
+      "px": 0.0005298,
       "fails": [],
       "moves": {}
     }
