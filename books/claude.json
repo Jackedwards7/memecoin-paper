@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.693906511788961,
+  "cash_sol": 8.170989001291847,
   "positions": {
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
       "symbol": "GATO",
@@ -20,25 +20,6 @@
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/5e3dxlxgwmtdcoka51wyyakttjfzbwqcoyuhbui5gt2m",
       "entry_liq": 363049.32
-    },
-    "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
-      "symbol": "CBUCKS",
-      "opened": "2026-11-02 08:30 UTC",
-      "cost_sol": 0.5,
-      "tokens": 24358.930789027894,
-      "entry_px": 0.001909615323549115,
-      "entry_mc": 1799967,
-      "peak_px": 0.002064,
-      "stop": -0.35,
-      "tp1": 1.0,
-      "tp1_done": false,
-      "thesis": "CBUCKS: 26-day coin, $1.8M cap, liq $146k, 1h buys 28>20, 1h +2% and 24h +48%, RugCheck no risks, LP 99.99% locked; distinct theme; modest volume noted",
-      "rugcheck": 1,
-      "risks": [],
-      "realised_sol": 0.0,
-      "dex": "pumpswap",
-      "url": "https://dexscreener.com/solana/b4cp45pgifvm5faxfh6aev8qz3eunqnqgbw7kuc7mhnb",
-      "entry_liq": 140886.71
     },
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": {
       "symbol": "three",
@@ -183,6 +164,32 @@
       "pnl_sol": -0.09239581462689711,
       "pnl_pct": -0.36958325850758844,
       "exit_reason": "stop-loss at -35%"
+    },
+    {
+      "symbol": "CBUCKS",
+      "opened": "2026-11-02 08:30 UTC",
+      "cost_sol": 0.5,
+      "tokens": 0.0,
+      "entry_px": 0.001909615323549115,
+      "entry_mc": 1799967,
+      "peak_px": 0.002064,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "CBUCKS: 26-day coin, $1.8M cap, liq $146k, 1h buys 28>20, 1h +2% and 24h +48%, RugCheck no risks, LP 99.99% locked; distinct theme; modest volume noted",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.47708248950288734,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/b4cp45pgifvm5faxfh6aev8qz3eunqnqgbw7kuc7mhnb",
+      "entry_liq": 140886.71,
+      "mev_sol": 0.0053665342921541265,
+      "swaps": 1,
+      "mint": "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump",
+      "closed": "2026-11-04 08:30 UTC",
+      "pnl_sol": -0.02291751049711266,
+      "pnl_pct": -0.04583502099422532,
+      "exit_reason": "time stop: 48h held, -2%, no take-profit"
     }
   ],
   "log": [
@@ -199,9 +206,10 @@
     "2026-11-03 00:28 UTC SELL 100% WASTED -> 0.306 SOL @ $0.0008665: stop-loss at -37%",
     "2026-11-03 04:22 UTC SELL 100% CHOO -> 0.518 SOL @ $0.001389: stop-loss at -31%",
     "2026-11-03 16:15 UTC BUY Ahsoka 0.25 SOL @ $0.001045279 (mc $1,032,979): Ahsoka: 26h coin, $1.0M cap, liq $87k, gate pass; 1h +10.8%, 24h +35%, 5m +6.4% (not a spike); 1h buys 532 vs sells 641 (slightly negative); only gate pass with positive 1h/24h; thin liquidity noted",
-    "2026-11-03 19:30 UTC SELL 100% Ahsoka -> 0.158 SOL @ $0.0006786: stop-loss at -35%"
+    "2026-11-03 19:30 UTC SELL 100% Ahsoka -> 0.158 SOL @ $0.0006786: stop-loss at -35%",
+    "2026-11-04 08:30 UTC SELL 100% CBUCKS -> 0.477 SOL @ $0.001874: time stop: 48h held, -2%, no take-profit"
   ],
-  "last_mark": "2026-11-04 08:26 UTC",
+  "last_mark": "2026-11-04 08:30 UTC",
   "gate_pass": {
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1793722528.6784072,
     "4nuj5NLHMtQSezfmz6CwBpCRJisFie6F6MxNNz1dpump": 1793722528.6784072
