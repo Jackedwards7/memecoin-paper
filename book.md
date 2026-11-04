@@ -8,12 +8,12 @@ area: trading
 *Paper only: simulated fills from live DexScreener prices, 1.50% fee each side plus a size/liquidity
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
-**Equity 9.225 SOL** (start 10.0 SOL, -7.8%) · cash 8.730 SOL ·
-open 1 · closed 7 (1 won) · SOL $95.41 · marked 2026-11-04 18:53 UTC
+**Equity 9.196 SOL** (start 10.0 SOL, -8.0%) · cash 8.730 SOL ·
+open 1 · closed 7 (1 won) · SOL $94.81 · marked 2026-11-04 19:04 UTC
 
-**Benchmark (vs just holding SOL): -7.8%.** The book is counted in SOL, so its SOL
-return *is* its edge over holding SOL. In dollars: $880 vs $949 at the start
-(-7.2%); SOL itself moved +0.6%.
+**Benchmark (vs just holding SOL): -8.0%.** The book is counted in SOL, so its SOL
+return *is* its edge over holding SOL. In dollars: $872 vs $949 at the start
+(-8.1%); SOL itself moved -0.1%.
 Review on 2026-11-30 or after 30 closed v2 trades (1/30), rules unchanged until then.
 
 ## v2 test (from 2026-11-03 01:30 UTC)
@@ -37,7 +37,7 @@ Legacy v1 positions (opened before v2, 1.25% fee model, sizes to 1 SOL) stay und
 
 | Coin | Mint | Opened | Cost SOL | Entry mcap | Move | Value SOL (incl. realised) | Thesis |
 |---|---|---|---|---|---|---|---|
-| GATO | `HsprHxBR…` | 2026-11-02 05:44 UTC | 0.75 | $8,625,571 | +34% | 1.105 | Mature 68-day coin, $8.7M cap, deepest pool on the board, 96% LP locked; +38% 24h |
+| GATO | `HsprHxBR…` | 2026-11-02 05:44 UTC | 0.75 | $8,625,571 | +26% | 1.076 | Mature 68-day coin, $8.7M cap, deepest pool on the board, 96% LP locked; +38% 24h |
 
 ## Closed
 
