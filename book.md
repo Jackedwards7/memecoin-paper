@@ -8,12 +8,12 @@ area: trading
 *Paper only: simulated fills from live DexScreener prices, 1.50% fee each side plus a size/liquidity
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
-**Equity 9.244 SOL** (start 10.0 SOL, -7.6%) · cash 8.171 SOL ·
-open 2 · closed 6 (0 won) · SOL $95.88 · marked 2026-11-04 18:10 UTC
+**Equity 9.215 SOL** (start 10.0 SOL, -7.9%) · cash 8.730 SOL ·
+open 1 · closed 7 (1 won) · SOL $95.95 · marked 2026-11-04 18:15 UTC
 
-**Benchmark (vs just holding SOL): -7.6%.** The book is counted in SOL, so its SOL
-return *is* its edge over holding SOL. In dollars: $886 vs $949 at the start
-(-6.6%); SOL itself moved +1.1%.
+**Benchmark (vs just holding SOL): -7.9%.** The book is counted in SOL, so its SOL
+return *is* its edge over holding SOL. In dollars: $884 vs $949 at the start
+(-6.8%); SOL itself moved +1.1%.
 Review on 2026-11-30 or after 30 closed v2 trades (1/30), rules unchanged until then.
 
 ## v2 test (from 2026-11-03 01:30 UTC)
@@ -37,8 +37,7 @@ Legacy v1 positions (opened before v2, 1.25% fee model, sizes to 1 SOL) stay und
 
 | Coin | Mint | Opened | Cost SOL | Entry mcap | Move | Value SOL (incl. realised) | Thesis |
 |---|---|---|---|---|---|---|---|
-| GATO | `HsprHxBR…` | 2026-11-02 05:44 UTC | 0.75 | $8,625,571 | +32% | 1.096 | Mature 68-day coin, $8.7M cap, deepest pool on the board, 96% LP locked; +38% 24h |
-| three | `FeMbDoX7…` | 2026-11-02 17:24 UTC | 0.50 | $461,979 | +23% | 0.588 | three: 187-day coin, liq $140k, 1h buys 450>179, 1h +3% and 24h +2%, 5m flat, RugCheck no risks, LP 96% locked; distinct theme |
+| GATO | `HsprHxBR…` | 2026-11-02 05:44 UTC | 0.75 | $8,625,571 | +32% | 1.095 | Mature 68-day coin, $8.7M cap, deepest pool on the board, 96% LP locked; +38% 24h |
 
 ## Closed
 
@@ -50,6 +49,7 @@ Legacy v1 positions (opened before v2, 1.25% fee model, sizes to 1 SOL) stay und
 | CHOO | 2026-11-02 05:44 UTC → 2026-11-03 04:22 UTC | 0.75 | -0.232 (-31%) | stop-loss at -31% |
 | Ahsoka | 2026-11-03 16:15 UTC → 2026-11-03 19:30 UTC | 0.25 | -0.092 (-37%) | stop-loss at -35% |
 | CBUCKS | 2026-11-02 08:30 UTC → 2026-11-04 08:30 UTC | 0.50 | -0.023 (-5%) | time stop: 48h held, -2%, no take-profit |
+| three | 2026-11-02 17:24 UTC → 2026-11-04 18:15 UTC | 0.50 | +0.059 (+12%) | time stop: 49h held, +20%, no take-profit |
 
 ## Log
 
@@ -68,3 +68,4 @@ Legacy v1 positions (opened before v2, 1.25% fee model, sizes to 1 SOL) stay und
 - 2026-11-03 16:15 UTC BUY Ahsoka 0.25 SOL @ $0.001045279 (mc $1,032,979): Ahsoka: 26h coin, $1.0M cap, liq $87k, gate pass; 1h +10.8%, 24h +35%, 5m +6.4% (not a spike); 1h buys 532 vs sells 641 (slightly negative); only gate pass with positive 1h/24h; thin liquidity noted
 - 2026-11-03 19:30 UTC SELL 100% Ahsoka -> 0.158 SOL @ $0.0006786: stop-loss at -35%
 - 2026-11-04 08:30 UTC SELL 100% CBUCKS -> 0.477 SOL @ $0.001874: time stop: 48h held, -2%, no take-profit
+- 2026-11-04 18:15 UTC SELL 100% three -> 0.559 SOL @ $0.0005545: time stop: 49h held, +20%, no take-profit
