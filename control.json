@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 9.657604185373103,
+  "cash_sol": 9.407604185373103,
   "positions": {
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
       "symbol": "GATO",
@@ -23,6 +23,28 @@
       "mev_sol": 0.0053705692803437165,
       "swaps": 1,
       "entry_liq": 355150.15
+    },
+    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": {
+      "symbol": "HELL",
+      "opened": "2026-11-04 16:16 UTC",
+      "cost_sol": 0.25,
+      "tokens": 7247.415193944528,
+      "entry_px": 0.0032275196568763097,
+      "entry_mc": 3078601,
+      "peak_px": 0.0032275196568763097,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "control for DESSA: random pick from 1 other gate passes",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/ewsyhiuznynqh5f65ypfsoqblq2kyetuvhm5un7wsfdg",
+      "v": 2,
+      "mev_sol": 0.005153576582148011,
+      "swaps": 1,
+      "entry_liq": 150620.32
     }
   },
   "closed": [
@@ -57,10 +79,11 @@
   "log": [
     "2026-11-03 16:15 UTC BUY Ahsoka 0.25 SOL @ $0.001045279 (mc $1,032,979): control for Ahsoka: random pick from 2 gate passes",
     "2026-11-03 19:30 UTC SELL 100% Ahsoka -> 0.158 SOL @ $0.0006786: stop-loss at -35%",
-    "2026-11-03 20:15 UTC BUY GATO 0.25 SOL @ $0.011930782 (mc $11,777,174): control for HELL: random pick from 2 other gate passes"
+    "2026-11-03 20:15 UTC BUY GATO 0.25 SOL @ $0.011930782 (mc $11,777,174): control for HELL: random pick from 2 other gate passes",
+    "2026-11-04 16:16 UTC BUY HELL 0.25 SOL @ $0.0032275197 (mc $3,078,601): control for DESSA: random pick from 1 other gate passes"
   ],
   "gate_pass": {},
   "rejects": {},
-  "last_mark": "2026-11-04 13:16 UTC",
+  "last_mark": "2026-11-04 16:16 UTC",
   "passes": {}
 }
