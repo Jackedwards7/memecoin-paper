@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.670937801196387,
+  "cash_sol": 8.23236117997561,
   "positions": {
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
       "symbol": "GATO",
@@ -20,25 +20,6 @@
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/5e3dxlxgwmtdcoka51wyyakttjfzbwqcoyuhbui5gt2m",
       "entry_liq": 355150.15
-    },
-    "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": {
-      "symbol": "three",
-      "opened": "2026-11-02 17:24 UTC",
-      "cost_sol": 0.5,
-      "tokens": 99101.8282488034,
-      "entry_px": 0.0004622530765526329,
-      "entry_mc": 461979,
-      "peak_px": 0.0006768,
-      "stop": -0.35,
-      "tp1": 1.0,
-      "tp1_done": false,
-      "thesis": "three: 187-day coin, liq $140k, 1h buys 450>179, 1h +3% and 24h +2%, 5m flat, RugCheck no risks, LP 96% locked; distinct theme",
-      "rugcheck": 1,
-      "risks": [],
-      "realised_sol": 0.0,
-      "dex": "pumpswap",
-      "url": "https://dexscreener.com/solana/5byl7mzolabynwmpzkpkjf4mgkz7febzranos19pre2z",
-      "entry_liq": 146236.13
     },
     "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": {
       "symbol": "HELL",
@@ -69,7 +50,7 @@
       "tokens": 1692.443145053224,
       "entry_px": 0.013820951721993822,
       "entry_mc": 13536760,
-      "peak_px": 0.013820951721993822,
+      "peak_px": 0.01873,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -234,6 +215,32 @@
       "pnl_sol": -0.022968710592573383,
       "pnl_pct": -0.045937421185146765,
       "exit_reason": "time stop: 48h held, -2%, no take-profit"
+    },
+    {
+      "symbol": "three",
+      "opened": "2026-11-02 17:24 UTC",
+      "cost_sol": 0.5,
+      "tokens": 0.0,
+      "entry_px": 0.0004622530765526329,
+      "entry_mc": 461979,
+      "peak_px": 0.0006768,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "three: 187-day coin, liq $140k, 1h buys 450>179, 1h +3% and 24h +2%, 5m flat, RugCheck no risks, LP 96% locked; distinct theme",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.5614233787792234,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/5byl7mzolabynwmpzkpkjf4mgkz7febzranos19pre2z",
+      "entry_liq": 146236.13,
+      "mev_sol": 0.005281504172388296,
+      "swaps": 1,
+      "mint": "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump",
+      "closed": "2026-11-04 20:13 UTC",
+      "pnl_sol": 0.061423378779223436,
+      "pnl_pct": 0.12284675755844687,
+      "exit_reason": "time stop: 51h held, +19%, no take-profit"
     }
   ],
   "log": [
@@ -253,12 +260,15 @@
     "2026-11-03 19:30 UTC SELL 100% Ahsoka -> 0.158 SOL @ $0.0006786: stop-loss at -35%",
     "2026-11-03 20:15 UTC BUY HELL 0.25 SOL @ $0.0027084573 (mc $2,583,618): Passed gate; mature pumpswap coin (511h), liq $141k, 1h +0.8%, 24h +6%, 5m +2.1%, buys~sells; not a spike. Only other passes: ANONVOYAGE (vertical +3681% 24h, rejected) and held GATO.",
     "2026-11-04 08:31 UTC SELL 100% CBUCKS -> 0.477 SOL @ $0.001874: time stop: 48h held, -2%, no take-profit",
-    "2026-11-04 16:16 UTC BUY DESSA 0.25 SOL @ $0.013820952 (mc $13,536,760): Passed gate; mature pumpswap coin (219h), mc $13.6M, liq $353k, 1h +17.7%, 24h +59%, 5m flat (+0.2%), 1h buys 736 vs sells 758 roughly even; distinct theme"
+    "2026-11-04 16:16 UTC BUY DESSA 0.25 SOL @ $0.013820952 (mc $13,536,760): Passed gate; mature pumpswap coin (219h), mc $13.6M, liq $353k, 1h +17.7%, 24h +59%, 5m flat (+0.2%), 1h buys 736 vs sells 758 roughly even; distinct theme",
+    "2026-11-04 20:13 UTC SELL 100% three -> 0.561 SOL @ $0.0005498: time stop: 51h held, +19%, no take-profit"
   ],
-  "last_mark": "2026-11-04 16:16 UTC",
+  "last_mark": "2026-11-04 20:14 UTC",
   "gate_pass": {
-    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1793808998.155869,
-    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1793809007.981873
+    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1793823262.8175466,
+    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1793823262.8175466,
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1793823262.8175466,
+    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1793823262.8175466
   },
   "rejects": {
     "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
@@ -343,6 +353,15 @@
         "already pumped: +1115% in 24h"
       ],
       "moves": {}
+    },
+    "5tdWkbqhTqVyPmksqX8WVKrHbjjqmvQfrMGwZoZPpump": {
+      "symbol": "AMD",
+      "at": 1793823262.8175466,
+      "px": 0.0008932,
+      "fails": [
+        "copycat: an earlier 'Always Moist Downstairs' exists (HjiBij)"
+      ],
+      "moves": {}
     }
   },
   "passes": {
@@ -392,6 +411,13 @@
       "symbol": "DESSA",
       "at": 1793808998.155869,
       "px": 0.01389,
+      "fails": [],
+      "moves": {}
+    },
+    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
+      "symbol": "JOB",
+      "at": 1793823262.8175466,
+      "px": 0.004481,
       "fails": [],
       "moves": {}
     }
