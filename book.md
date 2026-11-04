@@ -8,12 +8,12 @@ area: trading
 *Paper only: simulated fills from live DexScreener prices, 1.50% fee each side plus a size/liquidity
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
-**Equity 9.193 SOL** (start 10.0 SOL, -8.1%) · cash 8.171 SOL ·
-open 2 · closed 6 (0 won) · SOL $93.36 · marked 2026-11-04 10:45 UTC
+**Equity 9.192 SOL** (start 10.0 SOL, -8.1%) · cash 8.171 SOL ·
+open 2 · closed 6 (0 won) · SOL $93.44 · marked 2026-11-04 10:56 UTC
 
 **Benchmark (vs just holding SOL): -8.1%.** The book is counted in SOL, so its SOL
-return *is* its edge over holding SOL. In dollars: $858 vs $949 at the start
-(-9.5%); SOL itself moved -1.6%.
+return *is* its edge over holding SOL. In dollars: $859 vs $949 at the start
+(-9.5%); SOL itself moved -1.5%.
 Review on 2026-11-30 or after 30 closed v2 trades (1/30), rules unchanged until then.
 
 ## v2 test (from 2026-11-03 01:30 UTC)
@@ -37,8 +37,8 @@ Legacy v1 positions (opened before v2, 1.25% fee model, sizes to 1 SOL) stay und
 
 | Coin | Mint | Opened | Cost SOL | Entry mcap | Move | Value SOL (incl. realised) | Thesis |
 |---|---|---|---|---|---|---|---|
-| GATO | `HsprHxBR…` | 2026-11-02 05:44 UTC | 0.75 | $8,625,571 | +20% | 1.063 | Mature 68-day coin, $8.7M cap, deepest pool on the board, 96% LP locked; +38% 24h |
-| three | `FeMbDoX7…` | 2026-11-02 17:24 UTC | 0.50 | $461,979 | +16% | 0.569 | three: 187-day coin, liq $140k, 1h buys 450>179, 1h +3% and 24h +2%, 5m flat, RugCheck no risks, LP 96% locked; distinct theme |
+| GATO | `HsprHxBR…` | 2026-11-02 05:44 UTC | 0.75 | $8,625,571 | +18% | 1.054 | Mature 68-day coin, $8.7M cap, deepest pool on the board, 96% LP locked; +38% 24h |
+| three | `FeMbDoX7…` | 2026-11-02 17:24 UTC | 0.50 | $461,979 | +18% | 0.578 | three: 187-day coin, liq $140k, 1h buys 450>179, 1h +3% and 24h +2%, 5m flat, RugCheck no risks, LP 96% locked; distinct theme |
 
 ## Closed
 
