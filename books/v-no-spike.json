@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 9.25,
+  "cash_sol": 9.49706190003119,
   "positions": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
       "symbol": "JOB",
@@ -145,22 +145,22 @@
       "symbol": "DESSA",
       "opened": "2026-11-05 05:31 UTC",
       "cost_sol": 0.25,
-      "tokens": 1061.1412566196632,
+      "tokens": 530.5706283098316,
       "entry_px": 0.021781183566104798,
       "entry_mc": 21334117,
-      "peak_px": 0.04207,
+      "peak_px": 0.04464,
       "stop": -0.35,
       "tp1": 1.0,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-no-spike rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.2470619000311901,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/dextcer4k9dwbxtmu8znvvwgevvmvhmb183pf2xxzwvh",
       "v": 2,
-      "mev_sol": 0.005214308061320263,
-      "swaps": 1,
+      "mev_sol": 0.010625563472575674,
+      "swaps": 2,
       "entry_liq": 441142.28,
       "at_entry": {
         "px": 0.02178,
@@ -218,10 +218,11 @@
   "log": [
     "2026-11-05 03:07 UTC BUY JOB 0.25 SOL @ $0.0042945122 (mc $4,182,985): v-no-spike rule",
     "2026-11-05 03:23 UTC BUY HELL 0.25 SOL @ $0.0030285038 (mc $2,888,294): v-no-spike rule",
-    "2026-11-05 05:31 UTC BUY DESSA 0.25 SOL @ $0.021781184 (mc $21,334,117): v-no-spike rule"
+    "2026-11-05 05:31 UTC BUY DESSA 0.25 SOL @ $0.021781184 (mc $21,334,117): v-no-spike rule",
+    "2026-11-05 15:06 UTC SELL 50% DESSA -> 0.247 SOL @ $0.04464: take-profit at +105%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-05 15:05 UTC"
+  "last_mark": "2026-11-05 15:06 UTC"
 }

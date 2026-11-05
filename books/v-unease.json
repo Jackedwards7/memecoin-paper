@@ -1,27 +1,27 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 9.001993740014681,
+  "cash_sol": 9.24905564004587,
   "positions": {
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": {
       "symbol": "DESSA",
       "opened": "2026-11-05 05:31 UTC",
       "cost_sol": 0.25,
-      "tokens": 1061.1412566196632,
+      "tokens": 530.5706283098316,
       "entry_px": 0.021781183566104798,
       "entry_mc": 21334117,
-      "peak_px": 0.04207,
+      "peak_px": 0.04464,
       "stop": -0.35,
       "tp1": 1.0,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-unease rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.2470619000311901,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/dextcer4k9dwbxtmu8znvvwgevvmvhmb183pf2xxzwvh",
       "v": 2,
-      "mev_sol": 0.005214308061320263,
-      "swaps": 1,
+      "mev_sol": 0.010625563472575674,
+      "swaps": 2,
       "entry_liq": 441142.28,
       "at_entry": {
         "px": 0.02178,
@@ -559,10 +559,11 @@
     "2026-11-05 09:31 UTC BUY GAVELDROP 0.25 SOL @ $0.00078134403 (mc $777,479): v-unease rule",
     "2026-11-05 10:25 UTC SELL 100% GAVELDROP -> 0.261 SOL @ $0.0008789: event exit: price -20% in 5 minutes, +12% from entry",
     "2026-11-05 10:56 UTC SELL 100% Democat -> 0.148 SOL @ $0.0006582: stop-loss at -35%",
-    "2026-11-05 12:27 UTC BUY VETO 0.25 SOL @ $0.00091127508 (mc $895,359): v-unease rule"
+    "2026-11-05 12:27 UTC BUY VETO 0.25 SOL @ $0.00091127508 (mc $895,359): v-unease rule",
+    "2026-11-05 15:06 UTC SELL 50% DESSA -> 0.247 SOL @ $0.04464: take-profit at +105%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-05 15:05 UTC"
+  "last_mark": "2026-11-05 15:06 UTC"
 }
