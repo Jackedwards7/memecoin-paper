@@ -1,12 +1,12 @@
-MOVERS 2026-11-05T10:19:01Z
-9Y1F6dZ6HpjZDYZdYuUGwMbkUiPsyU7WPTqTQU4Tpump Democat +4%
-Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump baton +5%
-npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA +5%
-A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL +13%
-9mWrj77gDZ7w4rwHF6STYXDZmYRMyf39L4go1mXepump GAVELDROP +66%
-HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO -8%
-nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity -8%
+MOVERS 2026-11-05T10:35:01Z
+Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump CATE +3%
+npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA +4%
+FZcbX6uBkeACEg38cFBqvQgTJiL98aKovQT23AfCpump UCI +4%
+SivBpeYowiW8LyKyhoZGoh67qCc2ZV4jpWy6btPpump VETO +5%
+DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD +7%
 7F8BkfhPaDGMeNkaYeVa99WAqo86LpXDKsLQXpM7pump GTA -6%
-DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -2%
-33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump DOPE -2%
+HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO -5%
+GTBxUiw6wJdmmkCGZgRHLyYxqu1vG4KtRpeox6yDpump JEANPHIL -3%
+9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump ANSEM -2%
+A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL -2%
 END
