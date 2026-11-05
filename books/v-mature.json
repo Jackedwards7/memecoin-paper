@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 9.75,
+  "cash_sol": 9.5,
   "positions": {
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": {
       "symbol": "DESSA",
@@ -63,14 +63,90 @@
       },
       "reentry": false,
       "since_loss_h": null
+    },
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "opened": "2026-11-05 03:23 UTC",
+      "cost_sol": 0.25,
+      "tokens": 2134.0847316445797,
+      "entry_px": 0.010930751555503378,
+      "entry_mc": 10789510,
+      "peak_px": 0.010930751555503378,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-mature rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/5e3dxlxgwmtdcoka51wyyakttjfzbwqcoyuhbui5gt2m",
+      "v": 2,
+      "mev_sol": 0.005167424555601488,
+      "swaps": 1,
+      "entry_liq": 351799.3,
+      "at_entry": {
+        "px": 0.01093,
+        "liq": 351799.3,
+        "mc": 10789510,
+        "dex": "pumpswap",
+        "age_h": 1718.93,
+        "vol_h1": 62737.26,
+        "vol_h24": 1697040.05,
+        "buys_h1": 1041,
+        "sells_h1": 1822,
+        "buys_h24": 19610,
+        "sells_h24": 33422,
+        "trades_h24": 53032,
+        "avg_trade": 32.0,
+        "m5": -0.44,
+        "h1": -1.94,
+        "h6": -0.6,
+        "h24": 1.61,
+        "eligible": true,
+        "v": 3,
+        "pool": "5E3dXLXGwmTDCokA51WYYaKttjFZBwqCoyUHBUi5gt2m",
+        "m5_raw": -0.44,
+        "buys_m5": 18,
+        "sells_m5": 39,
+        "buys_h6": 7751,
+        "sells_h6": 13639,
+        "vol_m5": 1377.43,
+        "vol_h6": 525908.89,
+        "liq_base": 16143366,
+        "liq_quote": 1812.9784,
+        "fdv": 10789106,
+        "boosts": 100,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0368,
+          "paid": 0.011052993003049811,
+          "vs_paid": -0.0074,
+          "off_peak": -0.126,
+          "accel": -0.0257,
+          "candles": 96,
+          "unease": 2,
+          "known": 2,
+          "signs": [
+            "failed_high",
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": null
     }
   },
   "closed": [],
   "log": [
-    "2026-11-05 03:07 UTC BUY DESSA 0.25 SOL @ $0.02045115 (mc $20,031,834): v-mature rule"
+    "2026-11-05 03:07 UTC BUY DESSA 0.25 SOL @ $0.02045115 (mc $20,031,834): v-mature rule",
+    "2026-11-05 03:23 UTC BUY GATO 0.25 SOL @ $0.010930752 (mc $10,789,510): v-mature rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-05 03:18 UTC"
+  "last_mark": "2026-11-05 03:23 UTC"
 }
