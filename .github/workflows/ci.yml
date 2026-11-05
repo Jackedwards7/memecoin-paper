@@ -4,7 +4,7 @@ name: tests
 on:
   push:
     branches: [main]
-    paths: ["memepaper.py", "order.sh", "mirror.sh", "tests/**", "CLAUDE.md", ".github/workflows/**"]
+    paths: ["memepaper.py", "order.sh", "mirror.sh", "params/**", "server/**", "tests/**", "CLAUDE.md", ".github/workflows/**"]
   pull_request:  # every PR, so the required check on main always reports
   workflow_dispatch:
 permissions:

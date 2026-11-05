@@ -1,0 +1,27 @@
+# Code on an auto/ branch merges by itself once the tests pass, if `mergecheck` allows the diff. The
+# guard always runs from main's copy, never the pull request's: this workflow checks out nothing else.
+name: auto-merge
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, ready_for_review]
+permissions:
+  contents: write
+  pull-requests: write
+  checks: read
+jobs:
+  merge:
+    if: startsWith(github.head_ref, 'auto/') && github.event.pull_request.head.repo.full_name == github.repository && !github.event.pull_request.draft
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+      PR: ${{ github.event.pull_request.number }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check what it touches
+        run: gh pr diff "$PR" | python3 -I memepaper.py mergecheck
+      - name: Wait for the tests, then merge
+        run: |
+          sleep 30
+          gh pr checks "$PR" --required --watch --fail-fast
+          gh pr merge "$PR" --merge --delete-branch
