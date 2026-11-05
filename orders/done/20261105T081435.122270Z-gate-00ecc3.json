@@ -3,5 +3,7 @@
   "kind": "gate",
   "at": 1793866475.12227,
   "by": "local",
-  "results": {}
+  "results": {},
+  "result": "recorded 0 gate results, 0 passed",
+  "applied_at": "2026-11-05 08:15 UTC"
 }
