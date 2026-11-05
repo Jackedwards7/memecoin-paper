@@ -393,6 +393,17 @@ class TestGate(Env):
             mutate(self.rc[m])
         return mp.gate_one(m, self.market[m])
 
+    def test_top10_counts_wallets_not_the_pool(self):
+        m, info = MINT["gato"], {}
+        r = self.rc[m]
+        pool = r["markets"][0]["pubkey"] if r["markets"][0].get("pubkey") else "POOLX"
+        r["markets"][0]["pubkey"] = pool
+        s = r["token"]["supply"]
+        r["topHolders"] = [{"owner": pool, "address": "p", "amount": int(s * 0.5)}] + \
+                          [{"owner": f"w{i}", "address": f"a{i}", "amount": int(s * 0.01)} for i in range(12)]
+        mp.gate_one(m, self.market[m], info)
+        self.assertAlmostEqual(info["top10"], 0.10, places=4)
+
     def test_fixture_outcomes(self):
         self.assertEqual(self.fails("gato"), [])
         self.assertEqual(self.fails("rico"), [])
@@ -1938,6 +1949,29 @@ class TestRecording(ReadEnv):
         self.assertEqual(len(self.rows()), 1)
         self.assertEqual(mp.datacheck(self.day())["torn_lines"], 1)
 
+    def test_the_row_shows_what_big_wallets_did_since_the_last_reading(self):
+        new = {"top10": 0.2, "creator": 0.0, "insider": 0.05, "holders": 90}
+        old = {"at": 1000, "top10": 0.3, "creator": 0.02, "insider": 0.05, "holders": 100}
+        self.assertEqual(mp._gate_moves(old, new, 1000 + 7200),
+                         {"top10_chg": -0.1, "creator_chg": -0.02, "insider_chg": 0.0, "holders_chg": -0.1, "chg_h": 2.0})
+
+    def test_a_first_reading_or_a_failed_one_has_no_moves(self):
+        self.assertEqual(mp._gate_moves(None, {"top10": 0.2}, 1000), {})
+        self.assertEqual(mp._gate_moves({"at": 0, "fails": ["x"]}, {"top10": 0.2}, 1000), {})
+
+    def test_two_readings_put_the_moves_on_the_row(self):
+        self.coin("Apump")
+        self.cycle()
+        self.assertNotIn("top10_chg", self.rows()[-1]["gate"])
+        g = os.path.join(self.state, "gate.json")
+        c = mp._jload(g, {})
+        c["Apump"].update(top10=c["Apump"]["top10"] + 0.1, tried=0, at=self.t - 3600)
+        mp._jsave(g, c)
+        self.cycle()
+        r = self.rows()[-1]["gate"]
+        self.assertEqual((r["top10_chg"], r["chg_h"]), (-0.1, 1.0))
+        self.assertEqual(mp._numbers(self.rows()[-1])["gate.top10_chg"], -0.1)
+
     def test_gate_details_go_to_the_side_stream_not_the_cache(self):
         self.coin("Apump")
         self.rc["Apump"].update({"insiderNetworks": [{"size": 3, "currentHolding": 5}], "graphInsidersDetected": 7})
@@ -2404,6 +2438,37 @@ class TestAutopsy(ReadEnv):
         with open(os.path.join(self.state, "data", "extra", mp._day(at) + ".jsonl"), "w") as f:
             f.write(json.dumps({"t": at + 40_000, "k": "gone", "mints": ["Zpump"]}) + "\n")
         self.assertIn("0 coins doubled, 1 halved", mp.autopsy(round(self.t)))
+
+    def test_the_danger_check_needs_enough_coins(self):
+        self.build(n=5)
+        self.assertEqual(mp.autopsy(round(self.t)).split("## Danger check")[1].count("Too few to read"), 1)
+
+    def test_the_danger_check_finds_what_the_crashes_had(self):
+        rows, base = [], round(self.t) - 5 * 86400
+        for i in range(40):
+            rows += self.coin_path(f"c{i}", base + (i % 3) * 43200, [1 - j / 12 for j in range(12)], liq=50_000 + i,
+                                   gate={"at": 1, "top10_chg": -0.2})
+            rows += self.coin_path(f"s{i}", base + (i % 3) * 43200, [1 - j / 40 for j in range(12)], liq=50_000 + i,
+                                   gate={"at": 1, "top10_chg": 0.01})
+        rows.sort(key=lambda r: r["t"])
+        os.makedirs(os.path.join(self.state, "data"), exist_ok=True)
+        by = {}
+        for r in rows:
+            by.setdefault(mp._day(r["t"]), []).append(r)
+        for day, xs in by.items():
+            with open(os.path.join(self.state, "data", day + ".jsonl"), "a") as f:
+                f.writelines(json.dumps(x) + "\n" for x in xs)
+        out = mp.autopsy(round(self.t)).split("## Danger check")[1]
+        self.assertIn("40 fell 80% or more within 24h of being sampled, 40 did not", out)
+        self.assertIn("| gate.top10_chg | 0.00 |", out)  # 0.00: a crash always scored lower
+
+    def test_a_coin_gone_for_good_counts_as_a_crash(self):
+        at = round(self.t) - 2 * 86400
+        os.makedirs(os.path.join(self.state, "data", "extra"), exist_ok=True)
+        self.day_file(2, self.coin_path("Zpump", at, [1.0] * 9))
+        with open(os.path.join(self.state, "data", "extra", mp._day(at) + ".jsonl"), "w") as f:
+            f.write(json.dumps({"t": at + 40_000, "k": "gone", "mints": ["Zpump"]}) + "\n")
+        self.assertIn("1 fell 80% or more", mp.autopsy(round(self.t)))
 
     def test_a_coin_that_comes_back_was_not_gone(self):
         at = round(self.t) - 2 * 86400

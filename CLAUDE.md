@@ -147,7 +147,9 @@ This layer records and works things out. It changes no rule on the picks or the 
   (read the image), X counts, Grok's note, the most similar past cases and how they ended.
 - **`./order.sh autopsy`:** every number recorded, compared between coins that doubled and coins that
   halved within 24 hours, most of it noise by design. A number counts only if it points the same way
-  in both halves of the period, and even then it's a lead for a new arm, never a rule.
+  in both halves of the period, and even then it's a lead for a new arm, never a rule. Its danger check
+  asks the same of coins that fell 80% or more within 24 hours against the rest, including what big
+  wallets did between hourly gate readings (`gate.top10_chg`, `creator_chg`, `insider_chg`, `holders_chg`).
 - **`./order.sh datacheck [day]`:** snapshots, gaps, torn lines and missing values. Once a day the
   loop checks yesterday, fingerprints finished days, and alerts the phone if something's wrong.
 - **Grok's notes:** why coins moved (every 4 hours) and a weekly argument against the autopsy. Cut to
