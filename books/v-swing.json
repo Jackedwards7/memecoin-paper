@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.5,
+  "cash_sol": 8.761132175912778,
   "positions": {
     "7F8BkfhPaDGMeNkaYeVa99WAqo86LpXDKsLQXpM7pump": {
       "symbol": "GTA",
@@ -372,12 +372,14 @@
       },
       "reentry": false,
       "since_loss_h": null
-    },
-    "9mWrj77gDZ7w4rwHF6STYXDZmYRMyf39L4go1mXepump": {
+    }
+  },
+  "closed": [
+    {
       "symbol": "GAVELDROP",
       "opened": "2026-11-05 09:31 UTC",
       "cost_sol": 0.25,
-      "tokens": 29776.36804358595,
+      "tokens": 0.0,
       "entry_px": 0.0007813440331589258,
       "entry_mc": 777479,
       "peak_px": 0.001209,
@@ -387,12 +389,12 @@
       "thesis": "v-swing rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.2611321759127781,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/gggoctynusmgdfpqmrc9pv8jx6jpg4mkm4rkenzkakto",
       "v": 2,
-      "mev_sol": 0.005180810278727592,
-      "swaps": 1,
+      "mev_sol": 0.010347700843985421,
+      "swaps": 2,
       "entry_liq": 77227.17,
       "at_entry": {
         "px": 0.0007811,
@@ -446,20 +448,26 @@
         }
       },
       "reentry": false,
-      "since_loss_h": null
+      "since_loss_h": null,
+      "mint": "9mWrj77gDZ7w4rwHF6STYXDZmYRMyf39L4go1mXepump",
+      "closed": "2026-11-05 10:25 UTC",
+      "pnl_sol": 0.011132175912778097,
+      "pnl_pct": 0.04452870365111239,
+      "exit_reason": "event exit: price -20% in 5 minutes, +12% from entry",
+      "exit_px": 0.0008789
     }
-  },
-  "closed": [],
+  ],
   "log": [
     "2026-11-05 03:23 UTC BUY GTA 0.25 SOL @ $0.0036215354 (mc $3,604,040): v-swing rule",
     "2026-11-05 03:39 UTC BUY JOB 0.25 SOL @ $0.0043685175 (mc $4,255,149): v-swing rule",
     "2026-11-05 04:11 UTC BUY Democat 0.25 SOL @ $0.0010152873 (mc $1,011,231): v-swing rule",
     "2026-11-05 05:31 UTC BUY DESSA 0.25 SOL @ $0.021781184 (mc $21,334,117): v-swing rule",
     "2026-11-05 08:11 UTC BUY HELL 0.25 SOL @ $0.0032255185 (mc $3,076,245): v-swing rule",
-    "2026-11-05 09:31 UTC BUY GAVELDROP 0.25 SOL @ $0.00078134403 (mc $777,479): v-swing rule"
+    "2026-11-05 09:31 UTC BUY GAVELDROP 0.25 SOL @ $0.00078134403 (mc $777,479): v-swing rule",
+    "2026-11-05 10:25 UTC SELL 100% GAVELDROP -> 0.261 SOL @ $0.0008789: event exit: price -20% in 5 minutes, +12% from entry"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-05 10:19 UTC"
+  "last_mark": "2026-11-05 10:25 UTC"
 }

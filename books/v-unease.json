@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.843042693483751,
+  "cash_sol": 9.104174869396529,
   "positions": {
     "9Y1F6dZ6HpjZDYZdYuUGwMbkUiPsyU7WPTqTQU4Tpump": {
       "symbol": "Democat",
@@ -223,81 +223,6 @@
       },
       "reentry": false,
       "since_loss_h": 1.1
-    },
-    "9mWrj77gDZ7w4rwHF6STYXDZmYRMyf39L4go1mXepump": {
-      "symbol": "GAVELDROP",
-      "opened": "2026-11-05 09:31 UTC",
-      "cost_sol": 0.25,
-      "tokens": 29776.36804358595,
-      "entry_px": 0.0007813440331589258,
-      "entry_mc": 777479,
-      "peak_px": 0.001209,
-      "stop": -0.35,
-      "tp1": 1.0,
-      "tp1_done": false,
-      "thesis": "v-unease rule",
-      "rugcheck": 1,
-      "risks": [],
-      "realised_sol": 0.0,
-      "dex": "pumpswap",
-      "url": "https://dexscreener.com/solana/gggoctynusmgdfpqmrc9pv8jx6jpg4mkm4rkenzkakto",
-      "v": 2,
-      "mev_sol": 0.005180810278727592,
-      "swaps": 1,
-      "entry_liq": 77227.17,
-      "at_entry": {
-        "px": 0.0007811,
-        "liq": 77227.17,
-        "mc": 777479,
-        "dex": "pumpswap",
-        "age_h": 10.77,
-        "vol_h1": 120954.72,
-        "vol_h24": 2537064.39,
-        "buys_h1": 6163,
-        "sells_h1": 2987,
-        "buys_h24": 113863,
-        "sells_h24": 41697,
-        "trades_h24": 155560,
-        "avg_trade": 16.31,
-        "m5": 0.46,
-        "h1": 11.3,
-        "h6": 56.94,
-        "h24": 1154,
-        "eligible": true,
-        "v": 3,
-        "pool": "GgGoctYNusmGdFpqmrC9pv8JX6JPG4mkm4RkeNzkakTo",
-        "m5_raw": 0.46,
-        "buys_m5": 652,
-        "sells_m5": 272,
-        "buys_h6": 47495,
-        "sells_h6": 16695,
-        "vol_m5": 9326.06,
-        "vol_h6": 734844.98,
-        "liq_base": 50772733,
-        "liq_quote": 389.3606,
-        "fdv": 777479,
-        "boosts": 500,
-        "links": [
-          "telegram",
-          "twitter",
-          "website"
-        ],
-        "read": {
-          "swing": 0.1792,
-          "paid": 0.0005732034323096584,
-          "vs_paid": 0.2637,
-          "off_peak": -0.2415,
-          "accel": 0.0086,
-          "candles": 43,
-          "unease": 1,
-          "known": 3,
-          "signs": [
-            "failed_high"
-          ]
-        }
-      },
-      "reentry": false,
-      "since_loss_h": 1.0
     }
   },
   "closed": [
@@ -461,6 +386,87 @@
       "pnl_pct": -0.41533109566019166,
       "exit_reason": "stop-loss at -36%",
       "exit_px": 0.002305
+    },
+    {
+      "symbol": "GAVELDROP",
+      "opened": "2026-11-05 09:31 UTC",
+      "cost_sol": 0.25,
+      "tokens": 0.0,
+      "entry_px": 0.0007813440331589258,
+      "entry_mc": 777479,
+      "peak_px": 0.001209,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unease rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.2611321759127781,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/gggoctynusmgdfpqmrc9pv8jx6jpg4mkm4rkenzkakto",
+      "v": 2,
+      "mev_sol": 0.010347700843985421,
+      "swaps": 2,
+      "entry_liq": 77227.17,
+      "at_entry": {
+        "px": 0.0007811,
+        "liq": 77227.17,
+        "mc": 777479,
+        "dex": "pumpswap",
+        "age_h": 10.77,
+        "vol_h1": 120954.72,
+        "vol_h24": 2537064.39,
+        "buys_h1": 6163,
+        "sells_h1": 2987,
+        "buys_h24": 113863,
+        "sells_h24": 41697,
+        "trades_h24": 155560,
+        "avg_trade": 16.31,
+        "m5": 0.46,
+        "h1": 11.3,
+        "h6": 56.94,
+        "h24": 1154,
+        "eligible": true,
+        "v": 3,
+        "pool": "GgGoctYNusmGdFpqmrC9pv8JX6JPG4mkm4RkeNzkakTo",
+        "m5_raw": 0.46,
+        "buys_m5": 652,
+        "sells_m5": 272,
+        "buys_h6": 47495,
+        "sells_h6": 16695,
+        "vol_m5": 9326.06,
+        "vol_h6": 734844.98,
+        "liq_base": 50772733,
+        "liq_quote": 389.3606,
+        "fdv": 777479,
+        "boosts": 500,
+        "links": [
+          "telegram",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.1792,
+          "paid": 0.0005732034323096584,
+          "vs_paid": 0.2637,
+          "off_peak": -0.2415,
+          "accel": 0.0086,
+          "candles": 43,
+          "unease": 1,
+          "known": 3,
+          "signs": [
+            "failed_high"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 1.0,
+      "mint": "9mWrj77gDZ7w4rwHF6STYXDZmYRMyf39L4go1mXepump",
+      "closed": "2026-11-05 10:25 UTC",
+      "pnl_sol": 0.011132175912778097,
+      "pnl_pct": 0.04452870365111239,
+      "exit_reason": "event exit: price -20% in 5 minutes, +12% from entry",
+      "exit_px": 0.0008789
     }
   ],
   "log": [
@@ -471,10 +477,11 @@
     "2026-11-05 07:07 UTC SELL 100% JOB -> 0.197 SOL @ $0.003697: unease exit: 4 of 5 signs",
     "2026-11-05 08:11 UTC BUY HELL 0.25 SOL @ $0.0032255185 (mc $3,076,245): v-unease rule",
     "2026-11-05 08:33 UTC SELL 100% GTA -> 0.146 SOL @ $0.002305: stop-loss at -36%",
-    "2026-11-05 09:31 UTC BUY GAVELDROP 0.25 SOL @ $0.00078134403 (mc $777,479): v-unease rule"
+    "2026-11-05 09:31 UTC BUY GAVELDROP 0.25 SOL @ $0.00078134403 (mc $777,479): v-unease rule",
+    "2026-11-05 10:25 UTC SELL 100% GAVELDROP -> 0.261 SOL @ $0.0008789: event exit: price -20% in 5 minutes, +12% from entry"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-05 10:19 UTC"
+  "last_mark": "2026-11-05 10:25 UTC"
 }
