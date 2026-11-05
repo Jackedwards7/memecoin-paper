@@ -50,7 +50,7 @@
       "tokens": 1692.443145053224,
       "entry_px": 0.013820951721993822,
       "entry_mc": 13536760,
-      "peak_px": 0.02041,
+      "peak_px": 0.02044,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -263,7 +263,7 @@
     "2026-11-04 16:16 UTC BUY DESSA 0.25 SOL @ $0.013820952 (mc $13,536,760): Passed gate; mature pumpswap coin (219h), mc $13.6M, liq $353k, 1h +17.7%, 24h +59%, 5m flat (+0.2%), 1h buys 736 vs sells 758 roughly even; distinct theme",
     "2026-11-04 20:13 UTC SELL 100% three -> 0.561 SOL @ $0.0005498: time stop: 51h held, +19%, no take-profit"
   ],
-  "last_mark": "2026-11-05 00:14 UTC",
+  "last_mark": "2026-11-05 02:46 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1793837635.6444306,
     "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1793837635.6444306,
