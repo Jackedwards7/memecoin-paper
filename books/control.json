@@ -1,29 +1,7 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 9.30541340135642,
+  "cash_sol": 9.4983537403824,
   "positions": {
-    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
-      "symbol": "GATO",
-      "opened": "2026-11-03 20:15 UTC",
-      "cost_sol": 0.25,
-      "tokens": 1879.665163600923,
-      "entry_px": 0.01193078184044129,
-      "entry_mc": 11777174,
-      "peak_px": 0.01237,
-      "stop": -0.35,
-      "tp1": 1.0,
-      "tp1_done": false,
-      "thesis": "control for HELL: random pick from 2 other gate passes",
-      "rugcheck": 1,
-      "risks": [],
-      "realised_sol": 0.0,
-      "dex": "pumpswap",
-      "url": "https://dexscreener.com/solana/5e3dxlxgwmtdcoka51wyyakttjfzbwqcoyuhbui5gt2m",
-      "v": 2,
-      "mev_sol": 0.0053705692803437165,
-      "swaps": 1,
-      "entry_liq": 355150.15
-    },
     "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": {
       "symbol": "HELL",
       "opened": "2026-11-04 16:16 UTC",
@@ -102,6 +80,34 @@
       "pnl_pct": -0.40876313606673165,
       "exit_reason": "stop-loss at -35%",
       "exit_px": 0.001963
+    },
+    {
+      "symbol": "GATO",
+      "opened": "2026-11-03 20:15 UTC",
+      "cost_sol": 0.25,
+      "tokens": 0.0,
+      "entry_px": 0.01193078184044129,
+      "entry_mc": 11777174,
+      "peak_px": 0.01237,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "control for HELL: random pick from 2 other gate passes",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.19294033902598107,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/5e3dxlxgwmtdcoka51wyyakttjfzbwqcoyuhbui5gt2m",
+      "v": 2,
+      "mev_sol": 0.010947192077577713,
+      "swaps": 2,
+      "entry_liq": 355150.15,
+      "mint": "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump",
+      "closed": "2026-11-05 20:15 UTC",
+      "pnl_sol": -0.05705966097401893,
+      "pnl_pct": -0.22823864389607573,
+      "exit_reason": "time stop: 48h held, -19%, no take-profit",
+      "exit_px": 0.009614
     }
   ],
   "log": [
@@ -110,10 +116,11 @@
     "2026-11-03 20:15 UTC BUY GATO 0.25 SOL @ $0.011930782 (mc $11,777,174): control for HELL: random pick from 2 other gate passes",
     "2026-11-04 16:16 UTC BUY HELL 0.25 SOL @ $0.0032275197 (mc $3,078,601): control for DESSA: random pick from 1 other gate passes",
     "2026-11-05 02:48 UTC BUY GTA 0.25 SOL @ $0.0030314896 (mc $3,016,549): control for JOB: random pick from 1 other gate passes",
-    "2026-11-05 10:28 UTC SELL 100% GTA -> 0.148 SOL @ $0.001963: stop-loss at -35%"
+    "2026-11-05 10:28 UTC SELL 100% GTA -> 0.148 SOL @ $0.001963: stop-loss at -35%",
+    "2026-11-05 20:15 UTC SELL 100% GATO -> 0.193 SOL @ $0.009614: time stop: 48h held, -19%, no take-profit"
   ],
   "gate_pass": {},
   "rejects": {},
-  "last_mark": "2026-11-05 20:11 UTC",
+  "last_mark": "2026-11-05 20:15 UTC",
   "passes": {}
 }

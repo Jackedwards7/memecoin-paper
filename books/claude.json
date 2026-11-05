@@ -1,29 +1,7 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.550539205834257,
+  "cash_sol": 8.80725245908984,
   "positions": {
-    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": {
-      "symbol": "HELL",
-      "opened": "2026-11-03 20:15 UTC",
-      "cost_sol": 0.25,
-      "tokens": 8279.943969510467,
-      "entry_px": 0.0027084573377041676,
-      "entry_mc": 2583618,
-      "peak_px": 0.004071,
-      "stop": -0.35,
-      "tp1": 1.0,
-      "tp1_done": false,
-      "thesis": "Passed gate; mature pumpswap coin (511h), liq $141k, 1h +0.8%, 24h +6%, 5m +2.1%, buys~sells; not a spike. Only other passes: ANONVOYAGE (vertical +3681% 24h, rejected) and held GATO.",
-      "rugcheck": 1,
-      "risks": [],
-      "realised_sol": 0.0,
-      "dex": "pumpswap",
-      "url": "https://dexscreener.com/solana/ewsyhiuznynqh5f65ypfsoqblq2kyetuvhm5un7wsfdg",
-      "v": 2,
-      "mev_sol": 0.0053705692803437165,
-      "swaps": 1,
-      "entry_liq": 137816.54
-    },
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": {
       "symbol": "DESSA",
       "opened": "2026-11-04 16:16 UTC",
@@ -271,6 +249,34 @@
       "pnl_pct": 0.25370177250311504,
       "exit_reason": "trailing stop: 40% off peak, -8% from entry",
       "exit_px": 0.008052
+    },
+    {
+      "symbol": "HELL",
+      "opened": "2026-11-03 20:15 UTC",
+      "cost_sol": 0.25,
+      "tokens": 0.0,
+      "entry_px": 0.0027084573377041676,
+      "entry_mc": 2583618,
+      "peak_px": 0.004071,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "Passed gate; mature pumpswap coin (511h), liq $141k, 1h +0.8%, 24h +6%, 5m +2.1%, buys~sells; not a spike. Only other passes: ANONVOYAGE (vertical +3681% 24h, rejected) and held GATO.",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.2567132532555824,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/ewsyhiuznynqh5f65ypfsoqblq2kyetuvhm5un7wsfdg",
+      "v": 2,
+      "mev_sol": 0.010947192077577713,
+      "swaps": 2,
+      "entry_liq": 137816.54,
+      "mint": "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump",
+      "closed": "2026-11-05 20:15 UTC",
+      "pnl_sol": 0.006713253255582419,
+      "pnl_pct": 0.026853013022329675,
+      "exit_reason": "time stop: 48h held, +6%, no take-profit",
+      "exit_px": 0.002884
     }
   ],
   "log": [
@@ -294,15 +300,15 @@
     "2026-11-04 20:13 UTC SELL 100% three -> 0.561 SOL @ $0.0005498: time stop: 51h held, +19%, no take-profit",
     "2026-11-05 02:48 UTC BUY JOB 0.25 SOL @ $0.0041005003 (mc $3,994,528): Gate pass; mature pumpswap coin (200h), mc $4.0M, liq $198k, 1h +1.3%, 24h +70%, 5m +1.2% (no spike), 1h buys 175 vs sells 143. Other passes GTA (6h, vertical +5633% 24h, -29% 1h) skipped.",
     "2026-11-05 12:55 UTC SELL 100% GATO -> 0.330 SOL @ $0.008052: trailing stop: 40% off peak, -8% from entry",
-    "2026-11-05 13:47 UTC SELL 50% DESSA -> 0.238 SOL @ $0.02787: take-profit at +102%: half sold, cost recovered"
+    "2026-11-05 13:47 UTC SELL 50% DESSA -> 0.238 SOL @ $0.02787: take-profit at +102%: half sold, cost recovered",
+    "2026-11-05 20:15 UTC SELL 100% HELL -> 0.257 SOL @ $0.002884: time stop: 48h held, +6%, no take-profit"
   ],
-  "last_mark": "2026-11-05 20:11 UTC",
+  "last_mark": "2026-11-05 20:15 UTC",
   "gate_pass": {
-    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1793909461,
-    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1793909461,
-    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1793909461,
-    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1793909461,
-    "EwX2T1p2PmgTsSq2Bi6XtQYxPC5krR4P2fxPfN4Qpump": 1793906580,
+    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1793909660.369152,
+    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1793909660.369152,
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1793909660.369152,
+    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1793909660.369152,
     "9mWrj77gDZ7w4rwHF6STYXDZmYRMyf39L4go1mXepump": 1793905621
   },
   "rejects": {
@@ -402,7 +408,9 @@
       "fails": [
         "copycat: an earlier 'Always Moist Downstairs' exists (HjiBij)"
       ],
-      "moves": {}
+      "moves": {
+        "1d": -0.9979433497536946
+      }
     },
     "SivBpeYowiW8LyKyhoZGoh67qCc2ZV4jpWy6btPpump": {
       "symbol": "VETO",
@@ -511,7 +519,9 @@
       "at": 1793823262.8175466,
       "px": 0.004481,
       "fails": [],
-      "moves": {}
+      "moves": {
+        "1d": 0.15376032135684015
+      }
     },
     "7F8BkfhPaDGMeNkaYeVa99WAqo86LpXDKsLQXpM7pump": {
       "symbol": "GTA",
@@ -603,6 +613,12 @@
       "kind": "gate",
       "result": "recorded 8 gate results, 6 passed",
       "at": "2026-11-05 16:16 UTC"
+    },
+    {
+      "id": "20261105T201420.369152Z-gate-551436",
+      "kind": "gate",
+      "result": "recorded 7 gate results, 4 passed",
+      "at": "2026-11-05 20:15 UTC"
     }
   ]
 }
