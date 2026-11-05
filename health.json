@@ -1,12 +1,15 @@
 {
-  "run": "41956291489",
-  "code": "2e29c1b",
-  "started": "2026-11-05 02:36 UTC",
+  "run": "local",
+  "code": "local",
+  "started": "2026-11-05 03:06 UTC",
   "shadow": false,
   "errors_in_a_row": 0,
-  "last_ok": "2026-11-05 02:48 UTC",
-  "last_ok_ts": 1793846902.130139,
-  "last_tick": "2026-11-05 02:48 UTC",
-  "last_tick_ts": 1793846902.1301436,
-  "ticks": 13
+  "last_ok": "2026-11-05 03:07 UTC",
+  "last_ok_ts": 1793848020.6392896,
+  "last_tick": "2026-11-05 03:07 UTC",
+  "last_tick_ts": 1793848044.288859,
+  "ticks": 14,
+  "last_cycle": "2026-11-05 03:07 UTC",
+  "last_cycle_ts": 1793848033.2034538,
+  "cycle_errors": 0
 }
