@@ -8,12 +8,12 @@ area: trading
 *Paper only: simulated fills from live DexScreener prices, 1.50% fee each side plus a size/liquidity
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
-**Equity 9.456 SOL** (start 10.0 SOL, -5.4%) · cash 8.807 SOL ·
-open 2 · closed 9 (3 won) · SOL $89.48 · marked 2026-11-05 21:26 UTC
+**Equity 9.438 SOL** (start 10.0 SOL, -5.6%) · cash 8.807 SOL ·
+open 2 · closed 9 (3 won) · SOL $89.76 · marked 2026-11-05 21:31 UTC
 
-**Benchmark (vs just holding SOL): -5.4%.** The book is counted in SOL, so its SOL
-return *is* its edge over holding SOL. In dollars: $846 vs $949 at the start
-(-10.8%); SOL itself moved -5.7%.
+**Benchmark (vs just holding SOL): -5.6%.** The book is counted in SOL, so its SOL
+return *is* its edge over holding SOL. In dollars: $847 vs $949 at the start
+(-10.7%); SOL itself moved -5.4%.
 Review on 2026-11-30 or after 30 closed v2 trades (2/30), rules unchanged until then.
 
 ## v2 test (from 2026-11-03 01:30 UTC)
@@ -23,11 +23,11 @@ control position on a random gate pass (`control.json`, same mechanical exits, n
 
 | Arm | Closed | Won | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|
-| Picks | 2 | 1 | +0.301 | +30.1% |
-| Control | 3 | 0 | -0.269 | -26.9% |
+| Picks | 2 | 1 | +0.284 | +28.4% |
+| Control | 3 | 0 | -0.248 | -24.8% |
 
 Costs in every fill: 1.5% fee each side, size/liquidity slippage, and a $0.50 sandwich charge per swap.
-If every swap were sandwiched at the $5 median: picks +0.050 SOL, control -0.521 SOL.
+If every swap were sandwiched at the $5 median: picks +0.033 SOL, control -0.499 SOL.
 
 **Gate value** (raw price moves, no costs; the gate earns its keep if passes beat rejects):
 passes 14 tracked, median 1d -8%, 3d n/a, 7d n/a · rejects 13 tracked, median 1d -17%, 3d n/a, 7d n/a.
@@ -40,17 +40,17 @@ Same gate, size, costs and exit code as the picks; rules in `CLAUDE.md`. Judged 
 | Arm | Closed | Won | Open | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|---|
 | v-dip | 0 | 0 | 0 | +0.000 | +0.0% |
-| v-loose | 5 | 1 | 4 | -0.287 | -12.7% |
-| v-low-bundle | 5 | 1 | 4 | -0.206 | -9.2% |
-| v-mature | 0 | 0 | 4 | +0.233 | +23.3% |
-| v-momentum | 5 | 1 | 4 | -0.206 | -9.2% |
-| v-networks | 4 | 0 | 4 | -0.219 | -10.9% |
-| v-no-spike | 0 | 0 | 3 | +0.253 | +33.7% |
-| v-swing | 4 | 1 | 4 | -0.114 | -5.7% |
-| v-tight | 8 | 0 | 1 | -0.387 | -17.2% |
-| v-unease | 5 | 1 | 3 | -0.209 | -10.5% |
-| v-unpaid | 2 | 0 | 4 | -0.160 | -10.6% |
-| v-velocity | 5 | 1 | 4 | -0.206 | -9.2% |
+| v-loose | 5 | 1 | 4 | -0.283 | -12.6% |
+| v-low-bundle | 5 | 1 | 4 | -0.202 | -9.0% |
+| v-mature | 0 | 0 | 4 | +0.258 | +25.8% |
+| v-momentum | 5 | 1 | 4 | -0.202 | -9.0% |
+| v-networks | 4 | 0 | 4 | -0.214 | -10.7% |
+| v-no-spike | 0 | 0 | 3 | +0.259 | +34.5% |
+| v-swing | 4 | 1 | 4 | -0.109 | -5.4% |
+| v-tight | 8 | 0 | 1 | -0.388 | -17.2% |
+| v-unease | 5 | 1 | 3 | -0.189 | -9.5% |
+| v-unpaid | 2 | 0 | 4 | -0.167 | -11.1% |
+| v-velocity | 5 | 1 | 4 | -0.202 | -9.0% |
 | v-x-exit | 0 | 0 | 0 | +0.000 | +0.0% |
 | v-x-organic | 0 | 0 | 0 | +0.000 | +0.0% |
 
@@ -79,8 +79,8 @@ Launch feed: running, 9138 launches and 559 graduations in the last day.
 
 | Coin | Mint | Opened | Cost SOL | Entry mcap | Move | Value SOL (incl. realised) | Thesis |
 |---|---|---|---|---|---|---|---|
-| DESSA | `npz2Fhou…` | 2026-11-04 16:16 UTC | 0.25 | $13,536,760 | +158% | 0.575 | Passed gate; mature pumpswap coin (219h), mc $13.6M, liq $353k, 1h +17.7%, 24h +59%, 5m flat (+0.2%), 1h buys 736 vs sells 758 roughly even; distinct theme |
-| JOB | `9Pq7aLAb…` | 2026-11-05 02:48 UTC | 0.25 | $3,994,528 | +20% | 0.312 | Gate pass; mature pumpswap coin (200h), mc $4.0M, liq $198k, 1h +1.3%, 24h +70%, 5m +1.2% (no spike), 1h buys 175 vs sells 143. Other passes GTA (6h, vertical +5633% 24h, -29% 1h) skipped. |
+| DESSA | `npz2Fhou…` | 2026-11-04 16:16 UTC | 0.25 | $13,536,760 | +157% | 0.573 | Passed gate; mature pumpswap coin (219h), mc $13.6M, liq $353k, 1h +17.7%, 24h +59%, 5m flat (+0.2%), 1h buys 736 vs sells 758 roughly even; distinct theme |
+| JOB | `9Pq7aLAb…` | 2026-11-05 02:48 UTC | 0.25 | $3,994,528 | +14% | 0.296 | Gate pass; mature pumpswap coin (200h), mc $4.0M, liq $198k, 1h +1.3%, 24h +70%, 5m +1.2% (no spike), 1h buys 175 vs sells 143. Other passes GTA (6h, vertical +5633% 24h, -29% 1h) skipped. |
 
 ## Closed
 
