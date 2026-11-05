@@ -1,12 +1,11 @@
-# Runs the offline test suite on any change to code, tests or rules. Book-only commits (the
-# watcher's marks, the cloud review's trades) don't trigger it. No secrets, no network calls.
+# Runs the offline test suite on every pull request and on code pushes to main. State-branch
+# commits (the loop's ticks, orders) never trigger it. No secrets, no network calls.
 name: tests
 on:
   push:
     branches: [main]
-    paths: ["memepaper.py", "sync.sh", "tests/**", "CLAUDE.md", ".github/workflows/**"]
-  pull_request:
-    paths: ["memepaper.py", "sync.sh", "tests/**", "CLAUDE.md", ".github/workflows/**"]
+    paths: ["memepaper.py", "order.sh", "mirror.sh", "tests/**", "CLAUDE.md", ".github/workflows/**"]
+  pull_request:  # every PR, so the required check on main always reports
   workflow_dispatch:
 permissions:
   contents: read
