@@ -296,7 +296,7 @@
     "2026-11-05 12:55 UTC SELL 100% GATO -> 0.330 SOL @ $0.008052: trailing stop: 40% off peak, -8% from entry",
     "2026-11-05 13:47 UTC SELL 50% DESSA -> 0.238 SOL @ $0.02787: take-profit at +102%: half sold, cost recovered"
   ],
-  "last_mark": "2026-11-05 18:14 UTC",
+  "last_mark": "2026-11-05 18:19 UTC",
   "gate_pass": {
     "7F8BkfhPaDGMeNkaYeVa99WAqo86LpXDKsLQXpM7pump": 1793901781,
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1793901781,
@@ -304,7 +304,8 @@
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1793901781,
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1793901781,
     "9mWrj77gDZ7w4rwHF6STYXDZmYRMyf39L4go1mXepump": 1793896981,
-    "6Mt1oHb12F7JvJhFqcYERPJ3YqKgMGF9b8623uFYpump": 1793898901
+    "6Mt1oHb12F7JvJhFqcYERPJ3YqKgMGF9b8623uFYpump": 1793898901,
+    "EwX2T1p2PmgTsSq2Bi6XtQYxPC5krR4P2fxPfN4Qpump": 1793902741
   },
   "rejects": {
     "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
@@ -430,6 +431,15 @@
       "fails": [
         "RugCheck danger: Low Liquidity",
         "a wallet holds 6% of supply"
+      ],
+      "moves": {}
+    },
+    "34As1e1Kop9zBvu5e84kjg452Uigq8krcoGEJiWRpump": {
+      "symbol": "UHI",
+      "at": 1793902741,
+      "px": 0.001674,
+      "fails": [
+        "copycat: an earlier 'Universal High Income' exists (5QmbJw)"
       ],
       "moves": {}
     }
