@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 9.75,
+  "cash_sol": 9.5,
   "positions": {
     "7F8BkfhPaDGMeNkaYeVa99WAqo86LpXDKsLQXpM7pump": {
       "symbol": "GTA",
@@ -75,14 +75,90 @@
       },
       "reentry": false,
       "since_loss_h": null
+    },
+    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
+      "symbol": "JOB",
+      "opened": "2026-11-05 03:39 UTC",
+      "cost_sol": 0.25,
+      "tokens": 5340.959502170519,
+      "entry_px": 0.0043685174902595774,
+      "entry_mc": 4255149,
+      "peak_px": 0.0043685174902595774,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unease rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/hauvbmnthcfmg9srxmvz1gaxnpu955hkpdsasc2cx4c8",
+      "v": 2,
+      "mev_sol": 0.0051663566852655505,
+      "swaps": 1,
+      "entry_liq": 204223.67,
+      "at_entry": {
+        "px": 0.004368,
+        "liq": 204223.67,
+        "mc": 4255149,
+        "dex": "pumpswap",
+        "age_h": 200.43,
+        "vol_h1": 51778.77,
+        "vol_h24": 1430429.8,
+        "buys_h1": 174,
+        "sells_h1": 103,
+        "buys_h24": 5196,
+        "sells_h24": 7980,
+        "trades_h24": 13176,
+        "avg_trade": 108.56,
+        "m5": -1.24,
+        "h1": 8.17,
+        "h6": -4.97,
+        "h24": 89.35,
+        "eligible": true,
+        "v": 3,
+        "pool": "HAUVBmNthCFmG9SRXMvZ1GAXNpU955hkPdSAsC2cx4C8",
+        "m5_raw": -1.24,
+        "buys_m5": 13,
+        "sells_m5": 9,
+        "buys_h6": 1647,
+        "sells_h6": 1942,
+        "vol_m5": 5036.31,
+        "vol_h6": 408164.88,
+        "liq_base": 23634859,
+        "liq_quote": 1043.07307,
+        "fdv": 4255149,
+        "boosts": 200,
+        "links": [
+          "telegram",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0727,
+          "paid": 0.0034522256093297093,
+          "vs_paid": 0.2371,
+          "off_peak": -0.1896,
+          "accel": 0.0328,
+          "candles": 96,
+          "unease": 1,
+          "known": 2,
+          "signs": [
+            "failed_high"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": null
     }
   },
   "closed": [],
   "log": [
-    "2026-11-05 03:23 UTC BUY GTA 0.25 SOL @ $0.0036215354 (mc $3,604,040): v-unease rule"
+    "2026-11-05 03:23 UTC BUY GTA 0.25 SOL @ $0.0036215354 (mc $3,604,040): v-unease rule",
+    "2026-11-05 03:39 UTC BUY JOB 0.25 SOL @ $0.0043685175 (mc $4,255,149): v-unease rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-05 03:34 UTC"
+  "last_mark": "2026-11-05 03:39 UTC"
 }

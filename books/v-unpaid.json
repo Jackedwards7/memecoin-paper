@@ -1,11 +1,90 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 10.0,
-  "positions": {},
+  "cash_sol": 9.75,
+  "positions": {
+    "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump": {
+      "symbol": "DOPE",
+      "opened": "2026-11-05 03:39 UTC",
+      "cost_sol": 0.25,
+      "tokens": 11156.924867593474,
+      "entry_px": 0.002091263970753321,
+      "entry_mc": 2064584,
+      "peak_px": 0.002091263970753321,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unpaid rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/6iep3egqksbzwgzmbcyajtivtvykcgl9bnpbewlr8agq",
+      "v": 2,
+      "mev_sol": 0.0051663566852655505,
+      "swaps": 1,
+      "entry_liq": 191656.63,
+      "at_entry": {
+        "px": 0.002091,
+        "liq": 191656.63,
+        "mc": 2064584,
+        "dex": "pumpswap",
+        "age_h": 590.1,
+        "vol_h1": 1455.66,
+        "vol_h24": 326524.76,
+        "buys_h1": 1188,
+        "sells_h1": 482,
+        "buys_h24": 11838,
+        "sells_h24": 6647,
+        "trades_h24": 18485,
+        "avg_trade": 17.66,
+        "m5": 1.61,
+        "h1": 2.04,
+        "h6": 4.82,
+        "h24": 37.66,
+        "eligible": true,
+        "v": 3,
+        "pool": "6iep3EgqksbZwgzMBCyAJtiVtVYkCgL9BnPBEwLR8AGQ",
+        "m5_raw": 1.61,
+        "buys_m5": 92,
+        "sells_m5": 36,
+        "buys_h6": 6814,
+        "sells_h6": 2868,
+        "vol_m5": 674.41,
+        "vol_h6": 53576.96,
+        "liq_base": 46029093,
+        "liq_quote": 985.3568,
+        "fdv": 2064584,
+        "boosts": null,
+        "links": [
+          "telegram",
+          "tiktok",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0317,
+          "paid": 0.002024646657770752,
+          "vs_paid": 0.0283,
+          "off_peak": -0.1523,
+          "accel": -0.0149,
+          "candles": 96,
+          "unease": 1,
+          "known": 2,
+          "signs": [
+            "failed_high"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": null
+    }
+  },
   "closed": [],
-  "log": [],
+  "log": [
+    "2026-11-05 03:39 UTC BUY DOPE 0.25 SOL @ $0.002091264 (mc $2,064,584): v-unpaid rule"
+  ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-05 03:34 UTC"
+  "last_mark": "2026-11-05 03:39 UTC"
 }
