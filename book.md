@@ -9,7 +9,7 @@ area: trading
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
 **Equity 9.195 SOL** (start 10.0 SOL, -8.0%) · cash 8.730 SOL ·
-open 1 · closed 7 (1 won) · SOL $96.18 · marked 2026-11-05 02:18 UTC
+open 1 · closed 7 (1 won) · SOL $96.19 · marked 2026-11-05 02:29 UTC
 
 **Benchmark (vs just holding SOL): -8.0%.** The book is counted in SOL, so its SOL
 return *is* its edge over holding SOL. In dollars: $884 vs $949 at the start
