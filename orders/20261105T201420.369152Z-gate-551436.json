@@ -1,0 +1,49 @@
+{
+  "id": "20261105T201420.369152Z-gate-551436",
+  "kind": "gate",
+  "at": 1793909660.369152,
+  "by": "local",
+  "results": {
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "px": 0.009562,
+      "fails": []
+    },
+    "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
+      "symbol": "GLITCH",
+      "px": 0.003745,
+      "fails": [
+        "copycat: an earlier 'Infinite Money Glitch' exists (znv3FZ)"
+      ]
+    },
+    "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
+      "symbol": "CBUCKS",
+      "px": 0.001727,
+      "fails": [
+        "a wallet holds 15% of supply"
+      ]
+    },
+    "EwX2T1p2PmgTsSq2Bi6XtQYxPC5krR4P2fxPfN4Qpump": {
+      "symbol": "\u2588\u2588\u2588",
+      "px": 0.0007278,
+      "fails": [
+        "copycat: an earlier '\u2588\u2588\u2588' exists (Ga5Erp)"
+      ]
+    },
+    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": {
+      "symbol": "HELL",
+      "px": 0.002908,
+      "fails": []
+    },
+    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": {
+      "symbol": "DESSA",
+      "px": 0.03535,
+      "fails": []
+    },
+    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
+      "symbol": "JOB",
+      "px": 0.005217,
+      "fails": []
+    }
+  }
+}
