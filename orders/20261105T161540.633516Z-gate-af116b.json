@@ -1,0 +1,13 @@
+{
+  "id": "20261105T161540.633516Z-gate-af116b",
+  "kind": "gate",
+  "at": 1793895340.633516,
+  "by": "local",
+  "results": {
+    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": {
+      "symbol": "DESSA",
+      "px": 0.03308,
+      "fails": []
+    }
+  }
+}
