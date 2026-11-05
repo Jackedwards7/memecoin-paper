@@ -1,0 +1,52 @@
+{
+  "id": "20261105T161553.205595Z-gate-594b62",
+  "kind": "gate",
+  "at": 1793895353.205595,
+  "by": "local",
+  "results": {
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "px": 0.008726,
+      "fails": []
+    },
+    "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
+      "symbol": "GLITCH",
+      "px": 0.003054,
+      "fails": [
+        "copycat: an earlier 'Infinite Money Glitch' exists (znv3FZ)"
+      ]
+    },
+    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
+      "symbol": "JOB",
+      "px": 0.003715,
+      "fails": []
+    },
+    "9mWrj77gDZ7w4rwHF6STYXDZmYRMyf39L4go1mXepump": {
+      "symbol": "GAVELDROP",
+      "px": 0.0008155,
+      "fails": []
+    },
+    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": {
+      "symbol": "HELL",
+      "px": 0.003043,
+      "fails": []
+    },
+    "EwX2T1p2PmgTsSq2Bi6XtQYxPC5krR4P2fxPfN4Qpump": {
+      "symbol": "\u2588\u2588\u2588",
+      "px": 0.000693,
+      "fails": [
+        "copycat: an earlier '\u2588\u2588\u2588' exists (Ga5Erp)"
+      ]
+    },
+    "7F8BkfhPaDGMeNkaYeVa99WAqo86LpXDKsLQXpM7pump": {
+      "symbol": "GTA",
+      "px": 0.001289,
+      "fails": []
+    },
+    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": {
+      "symbol": "DESSA",
+      "px": 0.03294,
+      "fails": []
+    }
+  }
+}
