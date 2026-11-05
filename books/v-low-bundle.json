@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 9.05705786782413,
+  "cash_sol": 8.80705786782413,
   "positions": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
       "symbol": "JOB",
@@ -211,6 +211,79 @@
       },
       "reentry": false,
       "since_loss_h": null
+    },
+    "SivBpeYowiW8LyKyhoZGoh67qCc2ZV4jpWy6btPpump": {
+      "symbol": "VETO",
+      "opened": "2026-11-05 12:27 UTC",
+      "cost_sol": 0.25,
+      "tokens": 25357.861768168506,
+      "entry_px": 0.0009112750795497768,
+      "entry_mc": 895359,
+      "peak_px": 0.0009112750795497768,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-low-bundle rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/6fx1enzuahbwk9tjm8ptp9wobsejugn8xxzob9pkvquf",
+      "v": 2,
+      "mev_sol": 0.005215395848544904,
+      "swaps": 1,
+      "entry_liq": 79374.83,
+      "at_entry": {
+        "px": 0.000911,
+        "liq": 79374.83,
+        "mc": 895359,
+        "dex": "pumpswap",
+        "age_h": 18.02,
+        "vol_h1": 14655.66,
+        "vol_h24": 982427.8,
+        "buys_h1": 99,
+        "sells_h1": 87,
+        "buys_h24": 8387,
+        "sells_h24": 7004,
+        "trades_h24": 15391,
+        "avg_trade": 63.83,
+        "m5": 0.13,
+        "h1": 31.07,
+        "h6": 46.33,
+        "h24": 647,
+        "eligible": true,
+        "v": 3,
+        "pool": "6fx1eNzUaHBwK9TJm8pTp9woBSEjUGN8xXZoB9pkvQUF",
+        "m5_raw": 0.13,
+        "buys_m5": 6,
+        "sells_m5": 6,
+        "buys_h6": 1503,
+        "sells_h6": 1256,
+        "vol_m5": 235.92,
+        "vol_h6": 177996.18,
+        "liq_base": 44235905,
+        "liq_quote": 407.08249,
+        "fdv": 895359,
+        "boosts": null,
+        "links": [
+          "twitter"
+        ],
+        "read": {
+          "swing": 0.118,
+          "paid": 0.000570638925227425,
+          "vs_paid": 0.3949,
+          "off_peak": -0.1662,
+          "accel": 0.2988,
+          "candles": 72,
+          "unease": 1,
+          "known": 3,
+          "signs": [
+            "failed_high"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 1.5
     }
   },
   "closed": [
@@ -441,10 +514,11 @@
     "2026-11-05 07:55 UTC BUY GAVELDROP 0.25 SOL @ $0.000771843 (mc $767,975): v-low-bundle rule",
     "2026-11-05 08:33 UTC SELL 100% GTA -> 0.146 SOL @ $0.002305: stop-loss at -36%",
     "2026-11-05 10:25 UTC SELL 100% GAVELDROP -> 0.263 SOL @ $0.0008789: event exit: price -20% in 5 minutes, +14% from entry",
-    "2026-11-05 10:58 UTC SELL 100% Democat -> 0.148 SOL @ $0.0005984: stop-loss at -35%"
+    "2026-11-05 10:58 UTC SELL 100% Democat -> 0.148 SOL @ $0.0005984: stop-loss at -35%",
+    "2026-11-05 12:27 UTC BUY VETO 0.25 SOL @ $0.00091127508 (mc $895,359): v-low-bundle rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-05 12:19 UTC"
+  "last_mark": "2026-11-05 12:27 UTC"
 }
