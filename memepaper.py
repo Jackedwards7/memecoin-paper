@@ -111,7 +111,7 @@ DESK_STORIES = DESK_SCOUT.rsplit("/", 1)[0] + "/stories"  # Grok's why-it's-movi
 DESK_OPINION = DESK_SCOUT.rsplit("/", 1)[0] + "/opinion"  # Grok's weekly argument against our lessons
 STORY_MAX_CHARS = 400     # a note longer than this is cut: it's read as data, never as instructions
 # The reading layer (Tier 1 phase 3b). Records and derives; it never changes the live book's rules.
-SCHEMA = 3                # dataset version; a change here means old rows lack the new fields
+SCHEMA = 4                # dataset version; a change here means old rows lack the new fields
 GT = "https://api.geckoterminal.com/api/v2/networks/solana"
 GT_PER_TICK = 3           # calls a minute. Docs say 30; live probes hit 429 after a handful
 GT_GAP_S = 5
@@ -126,6 +126,7 @@ AUTOPSY_DAYS = 14
 AUTOPSY_HOURS = 24        # how far ahead a coin is judged
 AUTOPSY_WIN = 1.0         # +100% at some point in that time, before any -35%
 AUTOPSY_LOSS = -0.5
+AUTOPSY_CRASH = -0.8      # the danger check's collapse: this far under the sampled price in that time
 AUTOPSY_MIN = 30          # coins on each side before a result is shown at all
 DATA_MIN_CYCLES = 85      # of 96 a day, before the check alerts
 DATA_MAX_MB = 500
@@ -339,10 +340,11 @@ def gate_one(mint, p, info=None):
         ins = sum(h.get("amount", 0) for h in r.get("topHolders") or []
                   if h.get("insider") and h.get("owner") not in pools) / supply
         nets = [n.get("currentHolding") for n in r.get("insiderNetworks") or []]
+        wallets = [h.get("amount", 0) / supply for h in r.get("topHolders") or []
+                   if h.get("owner") not in pools and h.get("address") not in pools]
         info.update(insider=ins, creator=(r.get("creatorBalance") or 0) / supply,
                     networks=round(sum(x or 0 for x in nets) / supply, 6) if nets else None,
-                    top=max([h.get("amount", 0) / supply for h in r.get("topHolders") or []
-                             if h.get("owner") not in pools and h.get("address") not in pools], default=0))
+                    top=max(wallets, default=0), top10=round(sum(sorted(wallets)[-10:]), 6))
         if ins > INSIDER_MAX:
             fails.append(f"insider wallets hold {ins:.0%}")
         if (r.get("creatorBalance") or 0) / supply > CREATOR_MAX:
@@ -1028,7 +1030,7 @@ def snapshot(t):
             stuck += 1
             continue
         _extra(t, k="gate", mint=m, **info.pop("detail", {}), orders=_orders(m))
-        cache[m] = {"at": t, "tried": t, "fails": fails, **info}
+        cache[m] = {"at": t, "tried": t, "fails": fails, **info, **_gate_moves(cache.get(m), info, t)}
         if rows[m]["paid"]:  # unpaid coins stay out of the books' pass lists and the control's pool
             results[m] = {"symbol": rows[m]["symbol"], "px": rows[m]["px"], "fails": fails}
     cache = {m: g for m, g in cache.items() if t - g["tried"] < 2 * 86400}
@@ -1040,6 +1042,19 @@ def snapshot(t):
     _jsave(wp, watch)
     _jsave(gp, cache)
     return list(rows.values()), ps, results
+
+
+def _gate_moves(old, new, t):
+    """What the big wallets did since the coin's last reading. The hourly holder lists are in the side
+    stream, but only a number on the row reaches the autopsy. A first reading has nothing to compare."""
+    old = old or {}
+    out = {f"{k}_chg": round(new[k] - old[k], 6) for k in ("top10", "creator", "insider")
+           if new.get(k) is not None and old.get(k) is not None}
+    if new.get("holders") and old.get("holders"):
+        out["holders_chg"] = round(new["holders"] / old["holders"] - 1, 4)
+    if out:
+        out["chg_h"] = round((t - old["at"]) / 3600, 2)
+    return out
 
 
 def _data_path(t):
@@ -1966,9 +1981,26 @@ def _label(path):
     return "lose" if min(p for _, p in path) / px - 1 <= AUTOPSY_LOSS else None
 
 
+def _leads(a_side, b_side, a_name, b_name):
+    """Every recorded number compared between two groups of (time, numbers), as report text."""
+    if min(len(a_side), len(b_side)) < AUTOPSY_MIN:
+        return f"\nToo few to read: {AUTOPSY_MIN} of each are needed.\n"
+    cut, res = median([x[0] for x in a_side + b_side]), []
+    for k in sorted({k for _, n in a_side + b_side for k in n}):
+        def vals(side, early=None):
+            return [n[k] for at, n in side if n.get(k) is not None and (early is None or (at < cut) == early)]
+        a, b, halves = vals(a_side), vals(b_side), [(vals(a_side, e), vals(b_side, e)) for e in (True, False)]
+        if min(len(a), len(b)) >= AUTOPSY_MIN and min(len(x) for h in halves for x in h) >= 5:
+            res.append((abs(_auc(a, b) - 0.5), k, _auc(a, b), _auc(*halves[0]), _auc(*halves[1]), median(a), median(b)))
+    steady = [x for x in sorted(res, reverse=True) if (x[3] - 0.5) * (x[4] - 0.5) > 0]
+    return (f"\n{len(res)} numbers compared; {len(steady)} point the same way in both halves. Chance alone would give about half.\n"
+            f"0.50 means no difference. These are leads to test, not rules.\n\n| Number | Score | Each half | {a_name} median | {b_name} median |\n|---|---|---|---|---|\n"
+            + "\n".join(f"| {k} | {auc:.2f} | {s1:.2f} / {s2:.2f} | {ma:.4g} | {mb:.4g} |" for _, k, auc, s1, s2, ma, mb in steady[:15]) + "\n")
+
+
 def autopsy(t, days=AUTOPSY_DAYS):
-    """What separated the coins that doubled from the coins that halved, one sample per coin per day.
-    Everything recorded is compared, so most results here will be luck: a number only counts if it
+    """What separated the coins that doubled from the coins that halved, one sample per coin per day,
+    then the coins that crashed from the rest. Everything recorded is compared, so most results here will be luck: a number only counts if it
     points the same way in both halves of the period. Written to autopsy.md."""
     paths, samples, gone = {}, {}, {}
     for i in range(days, -1, -1):
@@ -1985,27 +2017,19 @@ def autopsy(t, days=AUTOPSY_DAYS):
         after = [g for g in times if m in paths and g > paths[m][-1][0]]
         if after:
             paths[m].append((min(after), 0.0))
-    win, lose = [], []
+    win, lose, crash, safe = [], [], [], []
     for (m, _d), (at, nums) in samples.items():
         path = [p for p in paths[m] if at <= p[0] <= at + AUTOPSY_HOURS * 3600]
-        kind = _label(path) if len(path) > 8 and at + AUTOPSY_HOURS * 3600 <= t else None
+        if len(path) <= 8 or at + AUTOPSY_HOURS * 3600 > t or not path[0][1]:
+            continue
+        kind = _label(path)
         if kind:
             (win if kind == "win" else lose).append((at, nums))
+        (crash if min(p for _, p in path) / path[0][1] - 1 <= AUTOPSY_CRASH else safe).append((at, nums))
     out = f"# Autopsy\n\nLast {days} days: {len(win)} coins doubled, {len(lose)} halved, within {AUTOPSY_HOURS}h of being sampled.\n"
-    if min(len(win), len(lose)) < AUTOPSY_MIN:
-        out += f"\nToo few to read: {AUTOPSY_MIN} of each are needed.\n"
-    else:
-        cut, res = median([x[0] for x in win + lose]), []
-        for k in sorted({k for _, n in win + lose for k in n}):
-            def vals(side, early=None):
-                return [n[k] for at, n in side if n.get(k) is not None and (early is None or (at < cut) == early)]
-            a, b, halves = vals(win), vals(lose), [(vals(win, e), vals(lose, e)) for e in (True, False)]
-            if min(len(a), len(b)) >= AUTOPSY_MIN and min(len(x) for h in halves for x in h) >= 5:
-                res.append((abs(_auc(a, b) - 0.5), k, _auc(a, b), _auc(*halves[0]), _auc(*halves[1]), median(a), median(b)))
-        steady = [x for x in sorted(res, reverse=True) if (x[3] - 0.5) * (x[4] - 0.5) > 0]
-        out += (f"\n{len(res)} numbers compared; {len(steady)} point the same way in both halves. Chance alone would give about half.\n"
-                "0.50 means no difference. These are leads to test, not rules.\n\n| Number | Score | Each half | Winners' median | Collapses' median |\n|---|---|---|---|---|\n"
-                + "\n".join(f"| {k} | {auc:.2f} | {s1:.2f} / {s2:.2f} | {ma:.4g} | {mb:.4g} |" for _, k, auc, s1, s2, ma, mb in steady[:15]) + "\n")
+    out += _leads(win, lose, "Winners'", "Collapses'")
+    out += (f"\n## Danger check\n\nThe same comparison for the coins to stay away from: {len(crash)} fell {-AUTOPSY_CRASH:.0%} or more "
+            f"within {AUTOPSY_HOURS}h of being sampled, {len(safe)} did not.\n" + _leads(crash, safe, "Crashes'", "Others'"))
     os.makedirs(os.path.join(STATE, "grok"), exist_ok=True)
     for f in ("autopsy.md", os.path.join("grok", "autopsy.md")):  # the second is for Grok's weekly second opinion
         with open(os.path.join(STATE, f), "w") as fh:
