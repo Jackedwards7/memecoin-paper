@@ -50,7 +50,7 @@
       "tokens": 1692.443145053224,
       "entry_px": 0.013820951721993822,
       "entry_mc": 13536760,
-      "peak_px": 0.01873,
+      "peak_px": 0.02041,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -263,12 +263,11 @@
     "2026-11-04 16:16 UTC BUY DESSA 0.25 SOL @ $0.013820952 (mc $13,536,760): Passed gate; mature pumpswap coin (219h), mc $13.6M, liq $353k, 1h +17.7%, 24h +59%, 5m flat (+0.2%), 1h buys 736 vs sells 758 roughly even; distinct theme",
     "2026-11-04 20:13 UTC SELL 100% three -> 0.561 SOL @ $0.0005498: time stop: 51h held, +19%, no take-profit"
   ],
-  "last_mark": "2026-11-04 20:14 UTC",
+  "last_mark": "2026-11-05 00:14 UTC",
   "gate_pass": {
-    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1793823262.8175466,
-    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1793823262.8175466,
-    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1793823262.8175466,
-    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1793823262.8175466
+    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1793837635.6444306,
+    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1793837635.6444306,
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1793837635.6444306
   },
   "rejects": {
     "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
@@ -334,7 +333,9 @@
         "RugCheck danger: Top 10 holders high ownership, Single holder ownership",
         "a wallet holds 61% of supply"
       ],
-      "moves": {}
+      "moves": {
+        "1d": 0.6021400778210118
+      }
     },
     "DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump": {
       "symbol": "AMD",
@@ -370,21 +371,27 @@
       "at": 1793736927.1940875,
       "px": 0.003107,
       "fails": [],
-      "moves": {}
+      "moves": {
+        "1d": -0.05471515931766979
+      }
     },
     "8muc9DdhqWfAPcvmEebNQCG89bLiwi12T2KtBtzVpump": {
       "symbol": "ANONVOYAGE",
       "at": 1793736927.1940875,
       "px": 0.002234,
       "fails": [],
-      "moves": {}
+      "moves": {
+        "1d": -0.9985402864816473
+      }
     },
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
       "symbol": "GATO",
       "at": 1793736927.1940875,
       "px": 0.01193,
       "fails": [],
-      "moves": {}
+      "moves": {
+        "1d": -0.0955574182732607
+      }
     },
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": {
       "symbol": "three",
