@@ -286,15 +286,15 @@
     "2026-11-04 20:13 UTC SELL 100% three -> 0.561 SOL @ $0.0005498: time stop: 51h held, +19%, no take-profit",
     "2026-11-05 02:48 UTC BUY JOB 0.25 SOL @ $0.0041005003 (mc $3,994,528): Gate pass; mature pumpswap coin (200h), mc $4.0M, liq $198k, 1h +1.3%, 24h +70%, 5m +1.2% (no spike), 1h buys 175 vs sells 143. Other passes GTA (6h, vertical +5633% 24h, -29% 1h) skipped."
   ],
-  "last_mark": "2026-11-05 09:26 UTC",
+  "last_mark": "2026-11-05 09:31 UTC",
   "gate_pass": {
-    "7F8BkfhPaDGMeNkaYeVa99WAqo86LpXDKsLQXpM7pump": 1793867220,
-    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1793867220,
-    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1793867220,
-    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1793867220,
-    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1793867220,
-    "9Y1F6dZ6HpjZDYZdYuUGwMbkUiPsyU7WPTqTQU4Tpump": 1793862420,
-    "9mWrj77gDZ7w4rwHF6STYXDZmYRMyf39L4go1mXepump": 1793865301
+    "7F8BkfhPaDGMeNkaYeVa99WAqo86LpXDKsLQXpM7pump": 1793871060,
+    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1793871060,
+    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1793871060,
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1793871060,
+    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1793871060,
+    "9mWrj77gDZ7w4rwHF6STYXDZmYRMyf39L4go1mXepump": 1793871060,
+    "9Y1F6dZ6HpjZDYZdYuUGwMbkUiPsyU7WPTqTQU4Tpump": 1793871060
   },
   "rejects": {
     "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
