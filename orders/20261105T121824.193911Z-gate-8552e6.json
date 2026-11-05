@@ -1,0 +1,40 @@
+{
+  "id": "20261105T121824.193911Z-gate-8552e6",
+  "kind": "gate",
+  "at": 1793881104.193911,
+  "by": "local",
+  "results": {
+    "7F8BkfhPaDGMeNkaYeVa99WAqo86LpXDKsLQXpM7pump": {
+      "symbol": "GTA",
+      "px": 0.004235,
+      "fails": []
+    },
+    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": {
+      "symbol": "HELL",
+      "px": 0.002781,
+      "fails": []
+    },
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "px": 0.01007,
+      "fails": []
+    },
+    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": {
+      "symbol": "DESSA",
+      "px": 0.02413,
+      "fails": []
+    },
+    "EwX2T1p2PmgTsSq2Bi6XtQYxPC5krR4P2fxPfN4Qpump": {
+      "symbol": "\u2588\u2588\u2588",
+      "px": 0.0007925,
+      "fails": [
+        "copycat: an earlier '\u2588\u2588\u2588' exists (Ga5Erp)"
+      ]
+    },
+    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
+      "symbol": "JOB",
+      "px": 0.003962,
+      "fails": []
+    }
+  }
+}
