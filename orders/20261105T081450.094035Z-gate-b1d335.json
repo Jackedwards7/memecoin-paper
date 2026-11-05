@@ -1,0 +1,33 @@
+{
+  "id": "20261105T081450.094035Z-gate-b1d335",
+  "kind": "gate",
+  "at": 1793866490.094035,
+  "by": "local",
+  "results": {
+    "7F8BkfhPaDGMeNkaYeVa99WAqo86LpXDKsLQXpM7pump": {
+      "symbol": "GTA",
+      "px": 0.002651,
+      "fails": []
+    },
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "px": 0.01012,
+      "fails": []
+    },
+    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": {
+      "symbol": "HELL",
+      "px": 0.00294,
+      "fails": []
+    },
+    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": {
+      "symbol": "DESSA",
+      "px": 0.02229,
+      "fails": []
+    },
+    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
+      "symbol": "JOB",
+      "px": 0.00424,
+      "fails": []
+    }
+  }
+}
