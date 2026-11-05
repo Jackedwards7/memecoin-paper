@@ -1,12 +1,12 @@
-MOVERS 2026-11-05T08:43:00Z
-GTBxUiw6wJdmmkCGZgRHLyYxqu1vG4KtRpeox6yDpump JEANPHIL +2%
-2QsEsecx1pCcnQxtCZ8DvtSEVftXyoyLVDE17viKpump USPR +3%
-npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA +6%
-DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD +18%
-SivBpeYowiW8LyKyhoZGoh67qCc2ZV4jpWy6btPpump VETO +22%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -5%
-7F8BkfhPaDGMeNkaYeVa99WAqo86LpXDKsLQXpM7pump GTA -3%
-9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump ANSEM -2%
+MOVERS 2026-11-05T08:59:00Z
+A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL +2%
+HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO +2%
+2QsEsecx1pCcnQxtCZ8DvtSEVftXyoyLVDE17viKpump USPR +2%
+GTBxUiw6wJdmmkCGZgRHLyYxqu1vG4KtRpeox6yDpump JEANPHIL +4%
+DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD +9%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -10%
+7F8BkfhPaDGMeNkaYeVa99WAqo86LpXDKsLQXpM7pump GTA -9%
+9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump ANSEM -3%
 33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump DOPE -1%
 nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity +0%
 END
