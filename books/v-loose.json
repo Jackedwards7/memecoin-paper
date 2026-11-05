@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.75,
+  "cash_sol": 8.5,
   "positions": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
       "symbol": "JOB",
@@ -347,6 +347,69 @@
       },
       "reentry": false,
       "since_loss_h": null
+    },
+    "9mWrj77gDZ7w4rwHF6STYXDZmYRMyf39L4go1mXepump": {
+      "symbol": "GAVELDROP",
+      "opened": "2026-11-05 07:55 UTC",
+      "cost_sol": 0.25,
+      "tokens": 29941.905265498113,
+      "entry_px": 0.0007718430004729872,
+      "entry_mc": 767975,
+      "peak_px": 0.0007718430004729872,
+      "stop": -0.4,
+      "tp1": 1.5,
+      "tp1_done": false,
+      "thesis": "v-loose rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/gggoctynusmgdfpqmrc9pv8jx6jpg4mkm4rkenzkakto",
+      "v": 2,
+      "mev_sol": 0.0052148518982060915,
+      "swaps": 1,
+      "entry_liq": 76112,
+      "at_entry": {
+        "px": 0.0007716,
+        "liq": 76112,
+        "mc": 767975,
+        "dex": "pumpswap",
+        "age_h": 9.17,
+        "vol_h1": 79424.52,
+        "vol_h24": 2362070.24,
+        "buys_h1": 5793,
+        "sells_h1": 3285,
+        "buys_h24": 103619,
+        "sells_h24": 37099,
+        "trades_h24": 140718,
+        "avg_trade": 16.79,
+        "m5": 0.69,
+        "h1": 23.16,
+        "h6": 25.99,
+        "h24": 1139,
+        "eligible": true,
+        "v": 3,
+        "pool": "GgGoctYNusmGdFpqmrC9pv8JX6JPG4mkm4RkeNzkakTo",
+        "m5_raw": 0.69,
+        "buys_m5": 394,
+        "sells_m5": 262,
+        "buys_h6": 54966,
+        "sells_h6": 17915,
+        "vol_m5": 5761.3,
+        "vol_h6": 736159.69,
+        "liq_base": 50126331,
+        "liq_quote": 390.751,
+        "fdv": 767975,
+        "boosts": 500,
+        "links": [
+          "telegram",
+          "twitter",
+          "website"
+        ],
+        "read": null
+      },
+      "reentry": false,
+      "since_loss_h": null
     }
   },
   "closed": [],
@@ -355,10 +418,11 @@
     "2026-11-05 03:23 UTC BUY GTA 0.25 SOL @ $0.0036215354 (mc $3,604,040): v-loose rule",
     "2026-11-05 03:39 UTC BUY HELL 0.25 SOL @ $0.0033095266 (mc $3,156,288): v-loose rule",
     "2026-11-05 03:55 UTC BUY Democat 0.25 SOL @ $0.00092417497 (mc $919,724): v-loose rule",
-    "2026-11-05 05:31 UTC BUY DESSA 0.25 SOL @ $0.021781184 (mc $21,334,117): v-loose rule"
+    "2026-11-05 05:31 UTC BUY DESSA 0.25 SOL @ $0.021781184 (mc $21,334,117): v-loose rule",
+    "2026-11-05 07:55 UTC BUY GAVELDROP 0.25 SOL @ $0.000771843 (mc $767,975): v-loose rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-05 07:50 UTC"
+  "last_mark": "2026-11-05 07:55 UTC"
 }
