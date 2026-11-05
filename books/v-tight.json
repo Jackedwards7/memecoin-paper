@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.72825889543282,
+  "cash_sol": 8.895349013685593,
   "positions": {
     "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": {
       "symbol": "HELL",
@@ -81,22 +81,22 @@
       "symbol": "DESSA",
       "opened": "2026-11-05 05:31 UTC",
       "cost_sol": 0.25,
-      "tokens": 1061.1412566196632,
+      "tokens": 530.5706283098316,
       "entry_px": 0.021781183566104798,
       "entry_mc": 21334117,
-      "peak_px": 0.03034,
+      "peak_px": 0.03136,
       "stop": -0.2,
       "tp1": 0.4,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-tight rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.1670901182527736,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/dextcer4k9dwbxtmu8znvvwgevvmvhmb183pf2xxzwvh",
       "v": 2,
-      "mev_sol": 0.005214308061320263,
-      "swaps": 1,
+      "mev_sol": 0.010472484525722407,
+      "swaps": 2,
       "entry_liq": 441142.28,
       "at_entry": {
         "px": 0.02178,
@@ -584,10 +584,11 @@
     "2026-11-05 09:10 UTC SELL 100% GAVELDROP -> 0.180 SOL @ $0.0006078: stop-loss at -21%",
     "2026-11-05 09:41 UTC SELL 100% JOB -> 0.184 SOL @ $0.003435: stop-loss at -20%",
     "2026-11-05 12:27 UTC BUY VETO 0.25 SOL @ $0.00091127508 (mc $895,359): v-tight rule",
-    "2026-11-05 13:15 UTC BUY LEEROY 0.25 SOL @ $0.00056877937 (mc $555,956): v-tight rule"
+    "2026-11-05 13:15 UTC BUY LEEROY 0.25 SOL @ $0.00056877937 (mc $555,956): v-tight rule",
+    "2026-11-05 14:18 UTC SELL 50% DESSA -> 0.167 SOL @ $0.03136: take-profit at +44%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-05 14:15 UTC"
+  "last_mark": "2026-11-05 14:18 UTC"
 }
