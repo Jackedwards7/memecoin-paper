@@ -31,7 +31,7 @@
       "tokens": 846.221572526612,
       "entry_px": 0.013820951721993822,
       "entry_mc": 13536760,
-      "peak_px": 0.03158,
+      "peak_px": 0.03196,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": true,
@@ -296,7 +296,7 @@
     "2026-11-05 12:55 UTC SELL 100% GATO -> 0.330 SOL @ $0.008052: trailing stop: 40% off peak, -8% from entry",
     "2026-11-05 13:47 UTC SELL 50% DESSA -> 0.238 SOL @ $0.02787: take-profit at +102%: half sold, cost recovered"
   ],
-  "last_mark": "2026-11-05 14:21 UTC",
+  "last_mark": "2026-11-05 14:22 UTC",
   "gate_pass": {
     "7F8BkfhPaDGMeNkaYeVa99WAqo86LpXDKsLQXpM7pump": 1793886420,
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1793886420,
