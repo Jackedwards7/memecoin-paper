@@ -4,6 +4,8 @@
 # a minute and records the result in orders/done/. Books are the loop's: this never writes them.
 #   ./order.sh status                      # books, pending orders, the last results
 #   ./order.sh screen <mint...>
+#   ./order.sh brief <mint>                 # one page: chart, reading, X, similar cases
+#   ./order.sh autopsy | datacheck [day]    # read only
 #   ./order.sh gate <mint...>               # prints PASS/FAIL now; the loop records the passes
 #   ./order.sh buy <mint> <sol> "<thesis>" [--stop -0.35] [--tp1 1.0]
 #   ./order.sh sell <mint> <fraction> "<reason>"
@@ -13,12 +15,12 @@ cd "$(dirname "$0")"
 PY="${PY:-python3}"
 BR="${MEMEPAPER_BRANCH:-state}"
 WT="${MEMEPAPER_WT:-$PWD/.state}"
-case "${1:-}" in status|screen|gate|buy|sell) ;; *) sed -n '2,10p' "$0"; exit 2;; esac
+case "${1:-}" in status|screen|brief|autopsy|datacheck|gate|buy|sell) ;; *) sed -n '2,12p' "$0"; exit 2;; esac
 git fetch -q origin "$BR"
 [ -e "$WT/.git" ] || git worktree add -q --detach "$WT" "origin/$BR"
 git -C "$WT" reset -q --hard "origin/$BR"   # a scratch copy: start from what the loop pushed
 MEMEPAPER_STATE="$WT" "$PY" -I memepaper.py "$@"
-case "$1" in status|screen) exit 0;; esac
+case "$1" in status|screen|brief|autopsy|datacheck) exit 0;; esac
 git -C "$WT" add orders
 git -C "$WT" commit -qm "order: $1 $(date -u +%FT%H:%MZ) by ${MEMEPAPER_BY:-local}" || exit 0
 for _ in 1 2 3; do

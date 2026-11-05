@@ -2,3 +2,4 @@
 __pycache__/
 .sol_usd
 .state/
+.backtest/

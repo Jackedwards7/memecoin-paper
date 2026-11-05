@@ -3,7 +3,7 @@
 # until this one ends, so one is always waiting. GitHub's cron is only the backup: on 2026-11-03 it
 # fired zero times in the first hour. To stop the chain, disable the workflow first. Books live on
 # the `state` branch and this job is their only writer. Paper only: public prices, no wallet, no
-# keys. The one secret is the ntfy topic.
+# keys. The secrets are the ntfy topic and a read-only token for the Grok scout's files.
 name: hot loop
 on:
   schedule:
@@ -42,6 +42,9 @@ jobs:
           MEMEPAPER_BY: hot-loop
           MEMEPAPER_SHADOW: ${{ vars.MEMEPAPER_SHADOW }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          DESK_TOKEN: ${{ secrets.DESK_TOKEN }}
+          HEALTHCHECK_URL: ${{ secrets.HEALTHCHECK_URL }}
+          JUP_API_KEY: ${{ secrets.JUP_API_KEY }}
         run: python3 -I memepaper.py loop --minutes 55 --every 60
       - name: Queue the next run again, on the code as it is now
         if: always()
