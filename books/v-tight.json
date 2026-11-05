@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.97825889543282,
+  "cash_sol": 8.72825889543282,
   "positions": {
     "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": {
       "symbol": "HELL",
@@ -84,7 +84,7 @@
       "tokens": 1061.1412566196632,
       "entry_px": 0.021781183566104798,
       "entry_mc": 21334117,
-      "peak_px": 0.02458,
+      "peak_px": 0.02541,
       "stop": -0.2,
       "tp1": 0.4,
       "tp1_done": false,
@@ -156,7 +156,7 @@
       "tokens": 25357.861768168506,
       "entry_px": 0.0009112750795497768,
       "entry_mc": 895359,
-      "peak_px": 0.0009829,
+      "peak_px": 0.0009983,
       "stop": -0.2,
       "tp1": 0.4,
       "tp1_done": false,
@@ -221,6 +221,67 @@
       },
       "reentry": false,
       "since_loss_h": 2.8
+    },
+    "98HEU4TvXB3xjB1t15fgxHwYDLUH4fDomvp2DCzJpump": {
+      "symbol": "LEEROY",
+      "opened": "2026-11-05 13:15 UTC",
+      "cost_sol": 0.25,
+      "tokens": 40406.52864152926,
+      "entry_px": 0.0005687793723606094,
+      "entry_mc": 555956,
+      "peak_px": 0.0005687793723606094,
+      "stop": -0.2,
+      "tp1": 0.4,
+      "tp1_done": false,
+      "thesis": "v-tight rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/bd8ezgmagxkprca2kkekilds4uee92j4crzwevofnzzn",
+      "v": 2,
+      "mev_sol": 0.005243288590604027,
+      "swaps": 1,
+      "entry_liq": 75571.42,
+      "at_entry": {
+        "px": 0.0005686,
+        "liq": 75571.42,
+        "mc": 555956,
+        "dex": "pumpswap",
+        "age_h": 13.82,
+        "vol_h1": 95499.72,
+        "vol_h24": 4156855.65,
+        "buys_h1": 705,
+        "sells_h1": 676,
+        "buys_h24": 37160,
+        "sells_h24": 23973,
+        "trades_h24": 61133,
+        "avg_trade": 68.0,
+        "m5": 16.73,
+        "h1": 17.31,
+        "h6": 92.8,
+        "h24": 1054,
+        "eligible": true,
+        "v": 3,
+        "pool": "Bd8eZgMAGXKprcA2kkeKiLDS4uEe92j4cRZwEVoFnZZn",
+        "m5_raw": 16.73,
+        "buys_m5": 57,
+        "sells_m5": 66,
+        "buys_h6": 5008,
+        "sells_h6": 3814,
+        "vol_m5": 9724.58,
+        "vol_h6": 656317.31,
+        "liq_base": 67889412,
+        "liq_quote": 66.1033,
+        "fdv": 555956,
+        "boosts": null,
+        "links": [
+          "twitter"
+        ],
+        "read": null
+      },
+      "reentry": false,
+      "since_loss_h": 3.6
     }
   },
   "closed": [
@@ -522,10 +583,11 @@
     "2026-11-05 07:59 UTC SELL 100% Democat -> 0.184 SOL @ $0.0007313: stop-loss at -21%",
     "2026-11-05 09:10 UTC SELL 100% GAVELDROP -> 0.180 SOL @ $0.0006078: stop-loss at -21%",
     "2026-11-05 09:41 UTC SELL 100% JOB -> 0.184 SOL @ $0.003435: stop-loss at -20%",
-    "2026-11-05 12:27 UTC BUY VETO 0.25 SOL @ $0.00091127508 (mc $895,359): v-tight rule"
+    "2026-11-05 12:27 UTC BUY VETO 0.25 SOL @ $0.00091127508 (mc $895,359): v-tight rule",
+    "2026-11-05 13:15 UTC BUY LEEROY 0.25 SOL @ $0.00056877937 (mc $555,956): v-tight rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-05 13:08 UTC"
+  "last_mark": "2026-11-05 13:15 UTC"
 }
