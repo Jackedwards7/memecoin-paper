@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.5,
+  "cash_sol": 8.69964056200046,
   "positions": {
     "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump": {
       "symbol": "DOPE",
@@ -353,12 +353,14 @@
       },
       "reentry": false,
       "since_loss_h": null
-    },
-    "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": {
+    }
+  },
+  "closed": [
+    {
       "symbol": "NIO",
       "opened": "2026-11-05 16:11 UTC",
       "cost_sol": 0.25,
-      "tokens": 13292.81098466766,
+      "tokens": 0.0,
       "entry_px": 0.0016342715265459807,
       "entry_mc": 1557295,
       "peak_px": 0.0016342715265459807,
@@ -368,12 +370,12 @@
       "thesis": "v-unpaid rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.19964056200046135,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/b4wmjc6pvjctu3qsvs3ett9mr4m5v5jbkrqctwantc71",
       "v": 2,
-      "mev_sol": 0.00554016620498615,
-      "swaps": 1,
+      "mev_sol": 0.011074200515998878,
+      "swaps": 2,
       "entry_liq": 135777.24,
       "at_entry": {
         "px": 0.001634,
@@ -424,20 +426,26 @@
         }
       },
       "reentry": false,
-      "since_loss_h": null
+      "since_loss_h": null,
+      "mint": "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump",
+      "closed": "2026-11-05 16:13 UTC",
+      "pnl_sol": -0.05035943799953865,
+      "pnl_pct": -0.2014377519981546,
+      "exit_reason": "event exit: price -21% in 5 minutes, -13% from entry",
+      "exit_px": 0.001416
     }
-  },
-  "closed": [],
+  ],
   "log": [
     "2026-11-05 03:39 UTC BUY DOPE 0.25 SOL @ $0.002091264 (mc $2,064,584): v-unpaid rule",
     "2026-11-05 09:47 UTC BUY CATE 0.25 SOL @ $0.040880439 (mc $39,417,935): v-unpaid rule",
     "2026-11-05 10:03 UTC BUY baton 0.25 SOL @ $0.0055162946 (mc $5,509,785): v-unpaid rule",
     "2026-11-05 11:23 UTC BUY AODT 0.25 SOL @ $0.15420364 (mc $154,227,365): v-unpaid rule",
     "2026-11-05 12:27 UTC BUY FARTBOY 0.25 SOL @ $0.023150789 (mc $23,144,326): v-unpaid rule",
-    "2026-11-05 16:11 UTC BUY NIO 0.25 SOL @ $0.0016342715 (mc $1,557,295): v-unpaid rule"
+    "2026-11-05 16:11 UTC BUY NIO 0.25 SOL @ $0.0016342715 (mc $1,557,295): v-unpaid rule",
+    "2026-11-05 16:13 UTC SELL 100% NIO -> 0.200 SOL @ $0.001416: event exit: price -21% in 5 minutes, -13% from entry"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-05 16:11 UTC"
+  "last_mark": "2026-11-05 16:13 UTC"
 }
