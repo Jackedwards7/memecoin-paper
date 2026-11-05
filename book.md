@@ -8,12 +8,12 @@ area: trading
 *Paper only: simulated fills from live DexScreener prices, 1.50% fee each side plus a size/liquidity
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
-**Equity 9.301 SOL** (start 10.0 SOL, -7.0%) · cash 7.982 SOL ·
-open 4 · closed 7 (1 won) · SOL $96.42 · marked 2026-11-05 11:55 UTC
+**Equity 9.299 SOL** (start 10.0 SOL, -7.0%) · cash 7.982 SOL ·
+open 4 · closed 7 (1 won) · SOL $96.31 · marked 2026-11-05 12:06 UTC
 
 **Benchmark (vs just holding SOL): -7.0%.** The book is counted in SOL, so its SOL
-return *is* its edge over holding SOL. In dollars: $897 vs $949 at the start
-(-5.5%); SOL itself moved +1.6%.
+return *is* its edge over holding SOL. In dollars: $896 vs $949 at the start
+(-5.6%); SOL itself moved +1.5%.
 Review on 2026-11-30 or after 30 closed v2 trades (1/30), rules unchanged until then.
 
 ## v2 test (from 2026-11-03 01:30 UTC)
@@ -23,14 +23,14 @@ control position on a random gate pass (`control.json`, same mechanical exits, n
 
 | Arm | Closed | Won | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|
-| Picks | 1 | 0 | +0.064 | +6.4% |
-| Control | 2 | 0 | -0.268 | -26.8% |
+| Picks | 1 | 0 | +0.059 | +5.9% |
+| Control | 2 | 0 | -0.269 | -26.9% |
 
 Costs in every fill: 1.5% fee each side, size/liquidity slippage, and a $0.50 sandwich charge per swap.
-If every swap were sandwiched at the $5 median: picks -0.076 SOL, control -0.455 SOL.
+If every swap were sandwiched at the $5 median: picks -0.081 SOL, control -0.456 SOL.
 
 **Gate value** (raw price moves, no costs; the gate earns its keep if passes beat rejects):
-passes 11 tracked, median 1d -8%, 3d n/a, 7d n/a · rejects 10 tracked, median 1d -11%, 3d n/a, 7d n/a.
+passes 11 tracked, median 1d -8%, 3d n/a, 7d n/a · rejects 11 tracked, median 1d -11%, 3d n/a, 7d n/a.
 Legacy v1 positions (opened before v2, 1.25% fee model, sizes to 1 SOL) stay under the same exits and are left out of this table.
 
 ## Mechanical arms
@@ -40,17 +40,17 @@ Same gate, size, costs and exit code as the picks; rules in `CLAUDE.md`. Judged 
 | Arm | Closed | Won | Open | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|---|
 | v-dip | 0 | 0 | 0 | +0.000 | +0.0% |
-| v-loose | 3 | 1 | 3 | -0.265 | -17.6% |
-| v-low-bundle | 3 | 1 | 3 | -0.241 | -16.1% |
-| v-mature | 0 | 0 | 4 | -0.064 | -6.4% |
-| v-momentum | 3 | 1 | 3 | -0.241 | -16.1% |
-| v-networks | 2 | 0 | 3 | -0.254 | -20.3% |
-| v-no-spike | 0 | 0 | 3 | -0.027 | -3.6% |
-| v-swing | 2 | 1 | 4 | -0.121 | -8.0% |
-| v-tight | 4 | 0 | 2 | -0.285 | -19.0% |
-| v-unease | 4 | 1 | 2 | -0.258 | -17.2% |
-| v-unpaid | 0 | 0 | 4 | -0.050 | -5.0% |
-| v-velocity | 3 | 1 | 3 | -0.241 | -16.1% |
+| v-loose | 3 | 1 | 3 | -0.269 | -17.9% |
+| v-low-bundle | 3 | 1 | 3 | -0.245 | -16.4% |
+| v-mature | 0 | 0 | 4 | -0.067 | -6.7% |
+| v-momentum | 3 | 1 | 3 | -0.245 | -16.4% |
+| v-networks | 2 | 0 | 3 | -0.258 | -20.6% |
+| v-no-spike | 0 | 0 | 3 | -0.032 | -4.2% |
+| v-swing | 2 | 1 | 4 | -0.152 | -10.1% |
+| v-tight | 4 | 0 | 2 | -0.288 | -19.2% |
+| v-unease | 4 | 1 | 2 | -0.260 | -17.4% |
+| v-unpaid | 0 | 0 | 4 | -0.027 | -2.7% |
+| v-velocity | 3 | 1 | 3 | -0.245 | -16.4% |
 | v-x-exit | 0 | 0 | 0 | +0.000 | +0.0% |
 | v-x-organic | 0 | 0 | 0 | +0.000 | +0.0% |
 
@@ -64,27 +64,27 @@ Each coin against its own normal. Information only: no rule on this book reads i
 
 | Coin | Normal 15m swing | vs average paid | Off peak | Unease | Stop, in swings |
 |---|---|---|---|---|---|
-| GATO | 3.4% | -8% | -20% | 2 of 5 | 7.4 |
-| HELL | 8.7% | -4% | -21% | 2 of 5 | 4.0 |
-| DESSA | 2.9% | +27% | -3% | 0 of 5 | 11.9 |
-| JOB | 6.3% | +1% | -28% | 1 of 5 | 5.5 |
+| GATO | 3.4% | -9% | -20% | 2 of 5 | 7.4 |
+| HELL | 8.7% | -7% | -19% | 2 of 5 | 4.0 |
+| DESSA | 3.0% | +28% | -2% | 0 of 5 | 11.7 |
+| JOB | 6.2% | +3% | -26% | 1 of 5 | 5.6 |
 
 ## Dataset
 
 Last check 2026-11-04: 0 of 96 snapshots, 0 rows, 0 coins, 0.0 MB. No problems.
 
-GeckoTerminal: 759 calls, 0 refused, 1 failed, 0 waiting. Insider flag fired on 0 of 2 coins where RugCheck's graph found insiders.
+GeckoTerminal: 788 calls, 0 refused, 1 failed, 0 waiting. Insider flag fired on 0 of 2 coins where RugCheck's graph found insiders.
 
-Launch feed: running, 2622 launches and 208 graduations in the last day.
+Launch feed: running, 2715 launches and 218 graduations in the last day.
 
 ## Open positions
 
 | Coin | Mint | Opened | Cost SOL | Entry mcap | Move | Value SOL (incl. realised) | Thesis |
 |---|---|---|---|---|---|---|---|
-| GATO | `HsprHxBR…` | 2026-11-02 05:44 UTC | 0.75 | $8,625,571 | +13% | 1.023 | Mature 68-day coin, $8.7M cap, deepest pool on the board, 96% LP locked; +38% 24h |
-| HELL | `A75Xx6Se…` | 2026-11-03 20:15 UTC | 0.25 | $2,583,618 | +15% | 0.267 | Passed gate; mature pumpswap coin (511h), liq $141k, 1h +0.8%, 24h +6%, 5m +2.1%, buys~sells; not a spike. Only other passes: ANONVOYAGE (vertical +3681% 24h, rejected) and held GATO. |
+| GATO | `HsprHxBR…` | 2026-11-02 05:44 UTC | 0.75 | $8,625,571 | +14% | 1.026 | Mature 68-day coin, $8.7M cap, deepest pool on the board, 96% LP locked; +38% 24h |
+| HELL | `A75Xx6Se…` | 2026-11-03 20:15 UTC | 0.25 | $2,583,618 | +13% | 0.264 | Passed gate; mature pumpswap coin (511h), liq $141k, 1h +0.8%, 24h +6%, 5m +2.1%, buys~sells; not a spike. Only other passes: ANONVOYAGE (vertical +3681% 24h, rejected) and held GATO. |
 | DESSA | `npz2Fhou…` | 2026-11-04 16:16 UTC | 0.25 | $13,536,760 | +70% | 0.413 | Passed gate; mature pumpswap coin (219h), mc $13.6M, liq $353k, 1h +17.7%, 24h +59%, 5m flat (+0.2%), 1h buys 736 vs sells 758 roughly even; distinct theme |
-| JOB | `9Pq7aLAb…` | 2026-11-05 02:48 UTC | 0.25 | $3,994,528 | -6% | 0.226 | Gate pass; mature pumpswap coin (200h), mc $4.0M, liq $198k, 1h +1.3%, 24h +70%, 5m +1.2% (no spike), 1h buys 175 vs sells 143. Other passes GTA (6h, vertical +5633% 24h, -29% 1h) skipped. |
+| JOB | `9Pq7aLAb…` | 2026-11-05 02:48 UTC | 0.25 | $3,994,528 | -7% | 0.224 | Gate pass; mature pumpswap coin (200h), mc $4.0M, liq $198k, 1h +1.3%, 24h +70%, 5m +1.2% (no spike), 1h buys 175 vs sells 143. Other passes GTA (6h, vertical +5633% 24h, -29% 1h) skipped. |
 
 ## Closed
 
