@@ -1,0 +1,13 @@
+{
+  "id": "20261105T041407.076115Z-gate-1df198",
+  "kind": "gate",
+  "at": 1793852047.076115,
+  "by": "local",
+  "results": {
+    "7F8BkfhPaDGMeNkaYeVa99WAqo86LpXDKsLQXpM7pump": {
+      "symbol": "GTA",
+      "px": 0.003523,
+      "fails": []
+    }
+  }
+}
