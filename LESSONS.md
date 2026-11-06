@@ -1,5 +1,5 @@
 # Lessons
 
-2 closed trades labelled, every book. Written by the bot.
+3 closed trades labelled, every book. Written by the bot.
 
-- **other**: 2 trades, mean -37%. Ahsoka (claude): stop-loss at -35%; Ahsoka (control): stop-loss at -35%
+- **other**: 3 trades, mean -34%. Ahsoka (control): stop-loss at -35%; GTA (v-tight): stop-loss at -23%
