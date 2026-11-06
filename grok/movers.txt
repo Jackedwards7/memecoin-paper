@@ -1,12 +1,12 @@
-MOVERS 2026-11-06T15:55:03Z
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +7%
-8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump COGE +7%
-A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL +10%
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +24%
-5VCEFq1aATjga39QtDunYjJqYBx67w8V8TXwHrqopump Diamond +39%
+MOVERS 2026-11-06T16:11:03Z
+3kCHwHecYa3AMx6TjwS4f2LdyzezibxHhb9gaPFCpump USOE +7%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +9%
+DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD +11%
+oCZHH8HnEBCPipEGdEcP3f45pQAaM7nh7P6EkRPpump AMD +16%
+5VCEFq1aATjga39QtDunYjJqYBx67w8V8TXwHrqopump Diamond +38%
 reb3NpuqZ59cWNrt1En1nTQADvQ28pL4qRQDjX2pump NATF -99%
-npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -12%
 EwX2T1p2PmgTsSq2Bi6XtQYxPC5krR4P2fxPfN4Qpump UNKNOWN -11%
-DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -7%
-5GDX5fJTQns4arM1J94wjxdA8KXFsV5qW46MLFpHpump OMNI -6%
+FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump three -8%
+npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -8%
+A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL -5%
 END
