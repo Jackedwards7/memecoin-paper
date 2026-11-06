@@ -1,12 +1,12 @@
-MOVERS 2026-11-06T16:59:27Z
-Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump baton +11%
-DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD +18%
-oCZHH8HnEBCPipEGdEcP3f45pQAaM7nh7P6EkRPpump AMD +24%
-5VCEFq1aATjga39QtDunYjJqYBx67w8V8TXwHrqopump Diamond +27%
-Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump BAGEL +58%
-FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump three -12%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -10%
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -6%
-EwX2T1p2PmgTsSq2Bi6XtQYxPC5krR4P2fxPfN4Qpump UNKNOWN -6%
-33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump DOPE -5%
+MOVERS 2026-11-06T17:15:28Z
+Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump baton +6%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +7%
+oCZHH8HnEBCPipEGdEcP3f45pQAaM7nh7P6EkRPpump AMD +14%
+Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump BAGEL +20%
+5VCEFq1aATjga39QtDunYjJqYBx67w8V8TXwHrqopump Diamond +69%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -17%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -11%
+DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -11%
+8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH -7%
+npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -6%
 END
