@@ -102,3 +102,4 @@
 {"after": "v-velocity:98HEU4TvXB3xjB1t15fgxHwYDLUH4fDomvp2DCzJpump:2026-11-05 15:35 UTC", "h": 24, "px": 0.0002329, "vs_exit": -0.3621}
 {"book": "control", "mint": "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump", "symbol": "HELL", "opened": "2026-11-04 16:16 UTC", "closed": "2026-11-06 16:16 UTC", "pnl_pct": -0.0642, "peak": 0.0757, "exit": "time stop: 48h held, -6%, no take-profit", "thesis": "control for DESSA: random pick from 1 other gate passes", "entry": null, "reentry": null, "since_loss_h": null, "exit_px": 0.003018}
 {"after": "v-unpaid:7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump:2026-11-05 16:13 UTC", "h": 24, "px": 0.001239, "vs_exit": -0.125}
+{"after": "v-unpaid:y1AZt42vceCmStjW4zetK3VoNarC1VxJ5iDjpiupump:2026-11-05 16:34 UTC", "h": 24, "px": 0.01972, "vs_exit": -0.0506}
