@@ -75,3 +75,10 @@
 {"after": "v-tight:9mWrj77gDZ7w4rwHF6STYXDZmYRMyf39L4go1mXepump:2026-11-05 09:10 UTC", "h": 24, "px": 2.45e-06, "vs_exit": -0.996}
 {"after": "v-tight:9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump:2026-11-05 09:41 UTC", "h": 24, "px": 0.00412, "vs_exit": 0.1994}
 {"after": "v-loose:7F8BkfhPaDGMeNkaYeVa99WAqo86LpXDKsLQXpM7pump:2026-11-05 10:04 UTC", "h": 24, "px": 2.381e-06, "vs_exit": -0.9989}
+{"after": "control:7F8BkfhPaDGMeNkaYeVa99WAqo86LpXDKsLQXpM7pump:2026-11-05 10:28 UTC", "h": 24, "px": 2.381e-06, "vs_exit": -0.9988}
+{"after": "v-loose:9mWrj77gDZ7w4rwHF6STYXDZmYRMyf39L4go1mXepump:2026-11-05 10:25 UTC", "h": 24, "px": 2.45e-06, "vs_exit": -0.9972}
+{"after": "v-low-bundle:9mWrj77gDZ7w4rwHF6STYXDZmYRMyf39L4go1mXepump:2026-11-05 10:25 UTC", "h": 24, "px": 2.45e-06, "vs_exit": -0.9972}
+{"after": "v-momentum:9mWrj77gDZ7w4rwHF6STYXDZmYRMyf39L4go1mXepump:2026-11-05 10:25 UTC", "h": 24, "px": 2.45e-06, "vs_exit": -0.9972}
+{"after": "v-swing:9mWrj77gDZ7w4rwHF6STYXDZmYRMyf39L4go1mXepump:2026-11-05 10:25 UTC", "h": 24, "px": 2.45e-06, "vs_exit": -0.9972}
+{"after": "v-unease:9mWrj77gDZ7w4rwHF6STYXDZmYRMyf39L4go1mXepump:2026-11-05 10:25 UTC", "h": 24, "px": 2.45e-06, "vs_exit": -0.9972}
+{"after": "v-velocity:9mWrj77gDZ7w4rwHF6STYXDZmYRMyf39L4go1mXepump:2026-11-05 10:25 UTC", "h": 24, "px": 2.45e-06, "vs_exit": -0.9972}
