@@ -1,5 +1,5 @@
 # Lessons
 
-5 closed trades labelled, every book. Written by the bot.
+10 closed trades labelled, every book. Written by the bot.
 
-- **other**: 5 trades, mean -30%. JOB (v-unease): unease exit: 4 of 5 signs; Democat (v-tight): stop-loss at -21%
+- **other**: 10 trades, mean -36%. GTA (v-unease): stop-loss at -36%; GTA (v-velocity): stop-loss at -36%
