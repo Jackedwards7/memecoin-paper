@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.698889019934432,
+  "cash_sol": 8.448889019934432,
   "positions": {
     "ECNQSQA7Y5bnXzbotgv6XcG15c6jpJ6V2BFbYzJrpump": {
       "symbol": "PAWKET",
@@ -355,6 +355,81 @@
       },
       "reentry": false,
       "since_loss_h": 16.9
+    },
+    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
+      "symbol": "JOB",
+      "opened": "2026-11-06 21:48 UTC",
+      "cost_sol": 0.25,
+      "tokens": 3955.149938822116,
+      "entry_px": 0.005474545929970073,
+      "entry_mc": 5332811,
+      "peak_px": 0.005474545929970073,
+      "stop": -0.2,
+      "tp1": 0.4,
+      "tp1_done": false,
+      "thesis": "v-tight rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/hauvbmnthcfmg9srxmvz1gaxnpu955hkpdsasc2cx4c8",
+      "v": 2,
+      "mev_sol": 0.005558025789239663,
+      "swaps": 1,
+      "entry_liq": 225505.59,
+      "at_entry": {
+        "px": 0.005474,
+        "liq": 225505.59,
+        "mc": 5332811,
+        "dex": "pumpswap",
+        "age_h": 242.59,
+        "vol_h1": 47648.91,
+        "vol_h24": 1305306.34,
+        "buys_h1": 211,
+        "sells_h1": 137,
+        "buys_h24": 5274,
+        "sells_h24": 7043,
+        "trades_h24": 12317,
+        "avg_trade": 105.98,
+        "m5": -1.08,
+        "h1": 7.49,
+        "h6": 6.35,
+        "h24": 14.31,
+        "eligible": true,
+        "v": 3,
+        "pool": "HAUVBmNthCFmG9SRXMvZ1GAXNpU955hkPdSAsC2cx4C8",
+        "m5_raw": -1.08,
+        "buys_m5": 12,
+        "sells_m5": 6,
+        "buys_h6": 1110,
+        "sells_h6": 1251,
+        "vol_m5": 2686.5,
+        "vol_h6": 285738.91,
+        "liq_base": 20683278,
+        "liq_quote": 1249.5596,
+        "fdv": 5332811,
+        "boosts": null,
+        "links": [
+          "telegram",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0469,
+          "paid": 0.004949919471068687,
+          "vs_paid": 0.1021,
+          "off_peak": -0.0762,
+          "accel": 0.119,
+          "candles": 96,
+          "unease": 1,
+          "known": 5,
+          "signs": [
+            "failed_high"
+          ]
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 26.7
     }
   },
   "closed": [
@@ -1140,10 +1215,11 @@
     "2026-11-06 12:10 UTC SELL 50% COGE -> 0.161 SOL @ $0.004098: take-profit at +41%: half sold, cost recovered",
     "2026-11-06 13:15 UTC SELL 50% AMD -> 0.167 SOL @ $0.002641: take-profit at +45%: half sold, cost recovered",
     "2026-11-06 13:30 UTC SELL 50% Rocco -> 0.162 SOL @ $0.0009945: take-profit at +41%: half sold, cost recovered",
-    "2026-11-06 21:33 UTC SELL 100% AMD -> 0.123 SOL @ $0.001965: trailing stop: 40% off peak, +8% from entry"
+    "2026-11-06 21:33 UTC SELL 100% AMD -> 0.123 SOL @ $0.001965: trailing stop: 40% off peak, +8% from entry",
+    "2026-11-06 21:48 UTC BUY JOB 0.25 SOL @ $0.0054745459 (mc $5,332,811): v-tight rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-06 21:44 UTC"
+  "last_mark": "2026-11-06 21:48 UTC"
 }
