@@ -303,11 +303,11 @@
     "2026-11-05 13:47 UTC SELL 50% DESSA -> 0.238 SOL @ $0.02787: take-profit at +102%: half sold, cost recovered",
     "2026-11-05 20:15 UTC SELL 100% HELL -> 0.257 SOL @ $0.002884: time stop: 48h held, +6%, no take-profit"
   ],
-  "last_mark": "2026-11-06 04:10 UTC",
+  "last_mark": "2026-11-06 04:14 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1793936326,
     "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1793936326,
-    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1793936326,
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1793938479.183396,
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1793936326,
     "ECNQSQA7Y5bnXzbotgv6XcG15c6jpJ6V2BFbYzJrpump": 1793936326,
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1793936326,
@@ -323,7 +323,8 @@
         "copycat: an earlier 'Infinite Money Glitch' exists (znv3FZ)"
       ],
       "moves": {
-        "1d": -0.04966717869943682
+        "1d": -0.04966717869943682,
+        "3d": -0.11111111111111116
       }
     },
     "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
@@ -334,7 +335,8 @@
         "a wallet holds 15% of supply"
       ],
       "moves": {
-        "1d": -0.02852441031267139
+        "1d": -0.02852441031267139,
+        "3d": -0.07734503565551298
       }
     },
     "GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump": {
@@ -345,7 +347,8 @@
         "copycat: an earlier 'WASTED' exists (FsjgzA)"
       ],
       "moves": {
-        "1d": -0.1741057934508815
+        "1d": -0.1741057934508815,
+        "3d": -0.3546599496221662
       }
     },
     "8oUGdPdyxVaCSJSZpcVZuxqoyiZAmc2Z22FsDRZ3pump": {
@@ -640,6 +643,12 @@
       "kind": "gate",
       "result": "recorded 7 gate results, 4 passed",
       "at": "2026-11-05 20:15 UTC"
+    },
+    {
+      "id": "20261106T041439.183396Z-gate-1bdfa8",
+      "kind": "gate",
+      "result": "recorded 1 gate results, 1 passed",
+      "at": "2026-11-06 04:14 UTC"
     }
   ]
 }
