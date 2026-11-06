@@ -464,17 +464,18 @@
     "2026-11-06 04:32 UTC SELL 100% DESSA -> 0.295 SOL @ $0.0322: event exit: price -82% in 5 minutes, +133% from entry",
     "2026-11-06 12:16 UTC BUY HELL 0.25 SOL @ $0.0029684887 (mc $2,831,474): Gate pass; mature pumpswap coin (575h), mc $2.9M, liq $138k, 1h +1.8%, 24h +10.6%, 5m +12.9% (<25%), 1h buys 2817 vs 2752. Other passes GATO (sellers lead), COGE (16h, +8457% 24h) and AMD (10h, +4852% 24h) skipped."
   ],
-  "last_mark": "2026-11-06 16:16 UTC",
+  "last_mark": "2026-11-06 16:19 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1793978581,
-    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1793978581,
-    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1793978581,
-    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1793978581,
+    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1793981897.606762,
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1793981897.606762,
+    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1793981897.606762,
     "ECNQSQA7Y5bnXzbotgv6XcG15c6jpJ6V2BFbYzJrpump": 1793979543,
-    "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1793978581,
-    "8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump": 1793980503,
-    "oCZHH8HnEBCPipEGdEcP3f45pQAaM7nh7P6EkRPpump": 1793981463,
-    "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1793981463
+    "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1793981897.606762,
+    "8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump": 1793981897.606762,
+    "oCZHH8HnEBCPipEGdEcP3f45pQAaM7nh7P6EkRPpump": 1793981897.606762,
+    "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1793981463,
+    "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": 1793981897.606762
   },
   "rejects": {
     "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
@@ -787,6 +788,13 @@
       "px": 0.000645,
       "fails": [],
       "moves": {}
+    },
+    "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": {
+      "symbol": "NIO",
+      "at": 1793981897.606762,
+      "px": 0.00126,
+      "fails": [],
+      "moves": {}
     }
   },
   "applied": [
@@ -891,6 +899,12 @@
       "kind": "buy",
       "result": "bought HELL 0.25 SOL @ $0.0029684887; control opened",
       "at": "2026-11-06 12:16 UTC"
+    },
+    {
+      "id": "20261106T161817.606762Z-gate-0e28fb",
+      "kind": "gate",
+      "result": "recorded 7 gate results, 7 passed",
+      "at": "2026-11-06 16:19 UTC"
     }
   ]
 }
