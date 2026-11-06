@@ -539,7 +539,7 @@
     "2026-11-06 12:16 UTC BUY HELL 0.25 SOL @ $0.0029684887 (mc $2,831,474): Gate pass; mature pumpswap coin (575h), mc $2.9M, liq $138k, 1h +1.8%, 24h +10.6%, 5m +12.9% (<25%), 1h buys 2817 vs 2752. Other passes GATO (sellers lead), COGE (16h, +8457% 24h) and AMD (10h, +4852% 24h) skipped.",
     "2026-11-06 20:15 UTC BUY GATO 0.25 SOL @ $0.011930744 (mc $11,775,041): Gate pass; mature pumpswap coin (1760h), mc $11.8M, liq $363k, 1h +5.3%, 24h +23.8%, 5m +0.5% (no spike), 1h buys 443 vs sells 421. Other passes DESSA/NIO/COGE/AMD skipped (sellers lead or vertical 24h); HELL/three already held."
   ],
-  "last_mark": "2026-11-06 22:35 UTC",
+  "last_mark": "2026-11-06 22:36 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794001688,
     "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1794001688,
@@ -547,11 +547,12 @@
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794001688,
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1794001688,
     "8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump": 1794003614,
-    "oCZHH8HnEBCPipEGdEcP3f45pQAaM7nh7P6EkRPpump": 1794000729,
-    "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794000729,
+    "oCZHH8HnEBCPipEGdEcP3f45pQAaM7nh7P6EkRPpump": 1794004574,
+    "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794004574,
     "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": 1794001688,
     "EwX2T1p2PmgTsSq2Bi6XtQYxPC5krR4P2fxPfN4Qpump": 1794002651,
-    "FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump": 1794003614
+    "FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump": 1794003614,
+    "GdY4Z6pYUcr3HFrABV5FEZay3J4GnjN1Uzsw6Dvxpump": 1794004574
   },
   "rejects": {
     "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
@@ -891,6 +892,13 @@
       "symbol": "DONNA",
       "at": 1794003614,
       "px": 0.001315,
+      "fails": [],
+      "moves": {}
+    },
+    "GdY4Z6pYUcr3HFrABV5FEZay3J4GnjN1Uzsw6Dvxpump": {
+      "symbol": "coin",
+      "at": 1794004574,
+      "px": 0.0006736,
       "fails": [],
       "moves": {}
     }
