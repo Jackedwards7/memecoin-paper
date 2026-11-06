@@ -1,29 +1,7 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 9.25,
+  "cash_sol": 9.545205358611039,
   "positions": {
-    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": {
-      "symbol": "DESSA",
-      "opened": "2026-11-04 16:16 UTC",
-      "cost_sol": 0.25,
-      "tokens": 846.221572526612,
-      "entry_px": 0.013820951721993822,
-      "entry_mc": 13536760,
-      "peak_px": 0.04797,
-      "stop": -0.35,
-      "tp1": 1.0,
-      "tp1_done": true,
-      "thesis": "Passed gate; mature pumpswap coin (219h), mc $13.6M, liq $353k, 1h +17.7%, 24h +59%, 5m flat (+0.2%), 1h buys 736 vs sells 758 roughly even; distinct theme",
-      "rugcheck": 1,
-      "risks": [],
-      "realised_sol": 0.23817808655927486,
-      "dex": "pumpswap",
-      "url": "https://dexscreener.com/solana/dextcer4k9dwbxtmu8znvvwgevvmvhmb183pf2xxzwvh",
-      "v": 2,
-      "mev_sol": 0.01039301910546353,
-      "swaps": 2,
-      "entry_liq": 352208
-    },
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
       "symbol": "JOB",
       "opened": "2026-11-05 02:48 UTC",
@@ -122,10 +100,41 @@
       "since_loss_h": 43.7
     }
   },
-  "closed": [],
-  "log": [],
+  "closed": [
+    {
+      "symbol": "DESSA",
+      "opened": "2026-11-04 16:16 UTC",
+      "cost_sol": 0.25,
+      "tokens": 0.0,
+      "entry_px": 0.013820951721993822,
+      "entry_mc": 13536760,
+      "peak_px": 0.04797,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": true,
+      "thesis": "Passed gate; mature pumpswap coin (219h), mc $13.6M, liq $353k, 1h +17.7%, 24h +59%, 5m flat (+0.2%), 1h buys 736 vs sells 758 roughly even; distinct theme",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.5333834451703143,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/dextcer4k9dwbxtmu8znvvwgevvmvhmb183pf2xxzwvh",
+      "v": 2,
+      "mev_sol": 0.01599714374119543,
+      "swaps": 3,
+      "entry_liq": 352208,
+      "mint": "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump",
+      "closed": "2026-11-06 04:32 UTC",
+      "pnl_sol": 0.28338344517031433,
+      "pnl_pct": 1.1335337806812573,
+      "exit_reason": "event exit: price -82% in 5 minutes, +133% from entry",
+      "exit_px": 0.0322
+    }
+  ],
+  "log": [
+    "2026-11-06 04:32 UTC SELL 100% DESSA -> 0.295 SOL @ $0.0322: event exit: price -82% in 5 minutes, +133% from entry"
+  ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-06 04:26 UTC"
+  "last_mark": "2026-11-06 04:32 UTC"
 }
