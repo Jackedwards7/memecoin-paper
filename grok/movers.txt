@@ -1,12 +1,12 @@
-MOVERS 2026-11-06T20:43:57Z
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +5%
+MOVERS 2026-11-06T21:00:02Z
+34As1e1Kop9zBvu5e84kjg452Uigq8krcoGEJiWRpump UHI +5%
 DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS +6%
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +7%
-34As1e1Kop9zBvu5e84kjg452Uigq8krcoGEJiWRpump UHI +11%
-9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump ANSEM +11%
-5VCEFq1aATjga39QtDunYjJqYBx67w8V8TXwHrqopump Diamond -20%
-A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL -10%
+9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump ANSEM +16%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +20%
+DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD +21%
+5VCEFq1aATjga39QtDunYjJqYBx67w8V8TXwHrqopump Diamond -21%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -18%
+oCZHH8HnEBCPipEGdEcP3f45pQAaM7nh7P6EkRPpump AMD -10%
+A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL -9%
 9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -5%
-FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump three -5%
-oCZHH8HnEBCPipEGdEcP3f45pQAaM7nh7P6EkRPpump AMD -4%
 END
