@@ -7,5 +7,7 @@
   "sol": 0.25,
   "thesis": "Gate pass; mature pumpswap coin (575h), mc $2.9M, liq $138k, 1h +1.8%, 24h +10.6%, 5m +12.9% (<25%), 1h buys 2817 vs 2752. Other passes GATO (sellers lead), COGE (16h, +8457% 24h) and AMD (10h, +4852% 24h) skipped.",
   "stop": -0.35,
-  "tp1": 1.0
+  "tp1": 1.0,
+  "result": "bought HELL 0.25 SOL @ $0.0029684887; control opened",
+  "applied_at": "2026-11-06 12:16 UTC"
 }

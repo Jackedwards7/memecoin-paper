@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 9.2483537403824,
+  "cash_sol": 8.9983537403824,
   "positions": {
     "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": {
       "symbol": "HELL",
@@ -100,6 +100,80 @@
       },
       "reentry": false,
       "since_loss_h": 8.0
+    },
+    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": {
+      "symbol": "DESSA",
+      "opened": "2026-11-06 12:16 UTC",
+      "cost_sol": 0.25,
+      "tokens": 635.6005898273525,
+      "entry_px": 0.034221412547631905,
+      "entry_mc": 33506560,
+      "peak_px": 0.034221412547631905,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "control for HELL: random pick from 8 other gate passes",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/dextcer4k9dwbxtmu8znvvwgevvmvhmb183pf2xxzwvh",
+      "v": 2,
+      "mev_sol": 0.005533421868083223,
+      "swaps": 1,
+      "entry_liq": 547259.28,
+      "at_entry": {
+        "px": 0.03422,
+        "liq": 547259.28,
+        "mc": 33506560,
+        "dex": "pumpswap",
+        "age_h": 263.19,
+        "vol_h1": 35782.59,
+        "vol_h24": 5029534.68,
+        "buys_h1": 115,
+        "sells_h1": 129,
+        "buys_h24": 10209,
+        "sells_h24": 10114,
+        "trades_h24": 20323,
+        "avg_trade": 247.48,
+        "m5": -2.38,
+        "h1": 3.2,
+        "h6": 3.38,
+        "h24": 41.9,
+        "eligible": true,
+        "v": 3,
+        "pool": "DEXTCER4k9dwbxTMU8zNVVwGevVmvHMB183pF2xxZwvH",
+        "m5_raw": -2.38,
+        "buys_m5": 9,
+        "sells_m5": 16,
+        "buys_h6": 637,
+        "sells_h6": 756,
+        "vol_m5": 3979.54,
+        "vol_h6": 213701.86,
+        "liq_base": 8026443,
+        "liq_quote": 3019.02265,
+        "fdv": 33506560,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.028,
+          "paid": 0.03773042869523478,
+          "vs_paid": -0.0737,
+          "off_peak": -0.2972,
+          "accel": 0.045,
+          "candles": 96,
+          "unease": 1,
+          "known": 5,
+          "signs": [
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 16.0
     }
   },
   "closed": [
@@ -195,10 +269,11 @@
     "2026-11-05 02:48 UTC BUY GTA 0.25 SOL @ $0.0030314896 (mc $3,016,549): control for JOB: random pick from 1 other gate passes",
     "2026-11-05 10:28 UTC SELL 100% GTA -> 0.148 SOL @ $0.001963: stop-loss at -35%",
     "2026-11-05 20:15 UTC SELL 100% GATO -> 0.193 SOL @ $0.009614: time stop: 48h held, -19%, no take-profit",
-    "2026-11-06 04:15 UTC BUY \u2588\u2588\u2588 0.25 SOL @ $0.00061436561 (mc $598,034): control for three: random pick from 6 other gate passes"
+    "2026-11-06 04:15 UTC BUY \u2588\u2588\u2588 0.25 SOL @ $0.00061436561 (mc $598,034): control for three: random pick from 6 other gate passes",
+    "2026-11-06 12:16 UTC BUY DESSA 0.25 SOL @ $0.034221413 (mc $33,506,560): control for HELL: random pick from 8 other gate passes"
   ],
   "gate_pass": {},
   "rejects": {},
-  "last_mark": "2026-11-06 12:15 UTC",
+  "last_mark": "2026-11-06 12:16 UTC",
   "passes": {}
 }
