@@ -1,12 +1,12 @@
-MOVERS 2026-11-06T06:02:46Z
-EwX2T1p2PmgTsSq2Bi6XtQYxPC5krR4P2fxPfN4Qpump UNKNOWN +6%
-8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump COGE +7%
-8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH +7%
-FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump three +14%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +14%
-A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL -10%
-GTBxUiw6wJdmmkCGZgRHLyYxqu1vG4KtRpeox6yDpump JEANPHIL -9%
-DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -5%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -5%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -5%
+MOVERS 2026-11-06T06:18:46Z
+34As1e1Kop9zBvu5e84kjg452Uigq8krcoGEJiWRpump UHI +4%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +6%
+3NZ9JMVBmGAqocybic2c7LQCJScmgsAZ6vQqTDzcqmJh WBTC +7%
+FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump three +13%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +32%
+8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump COGE -10%
+GTBxUiw6wJdmmkCGZgRHLyYxqu1vG4KtRpeox6yDpump JEANPHIL -7%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -6%
+Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump baton -4%
+6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx STONK -4%
 END
