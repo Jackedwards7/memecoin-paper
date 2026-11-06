@@ -1,0 +1,18 @@
+{
+  "id": "20261106T081541.719602Z-gate-ba1e65",
+  "kind": "gate",
+  "at": 1793952941.719602,
+  "by": "local",
+  "results": {
+    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
+      "symbol": "JOB",
+      "px": 0.004568,
+      "fails": []
+    },
+    "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": {
+      "symbol": "three",
+      "px": 0.0006549,
+      "fails": []
+    }
+  }
+}
