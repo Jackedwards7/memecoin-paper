@@ -1,12 +1,12 @@
-MOVERS 2026-11-06T14:18:59Z
-CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump fone +6%
-riRWUz6r5FK7zvpDzVouXyuEyPQkegEVeyyjrUppump SPCX1K +6%
-npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA +8%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +9%
-reb3NpuqZ59cWNrt1En1nTQADvQ28pL4qRQDjX2pump NATF +44%
-8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump COGE -14%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -6%
-5GDX5fJTQns4arM1J94wjxdA8KXFsV5qW46MLFpHpump OMNI -5%
-EwX2T1p2PmgTsSq2Bi6XtQYxPC5krR4P2fxPfN4Qpump UNKNOWN -4%
-FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump three -4%
+MOVERS 2026-11-06T14:34:59Z
+CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump fone +4%
+34As1e1Kop9zBvu5e84kjg452Uigq8krcoGEJiWRpump UHI +4%
+5GDX5fJTQns4arM1J94wjxdA8KXFsV5qW46MLFpHpump OMNI +6%
+A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL +12%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +28%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -10%
+oCZHH8HnEBCPipEGdEcP3f45pQAaM7nh7P6EkRPpump AMD -9%
+HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO -8%
+DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -7%
+npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -6%
 END
