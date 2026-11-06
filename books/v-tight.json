@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.413202444408396,
+  "cash_sol": 8.57555971692838,
   "positions": {
     "ECNQSQA7Y5bnXzbotgv6XcG15c6jpJ6V2BFbYzJrpump": {
       "symbol": "PAWKET",
@@ -373,22 +373,22 @@
       "symbol": "Rocco",
       "opened": "2026-11-06 11:55 UTC",
       "cost_sol": 0.25,
-      "tokens": 30958.767924912296,
+      "tokens": 15479.383962456148,
       "entry_px": 0.0007029026495104503,
       "entry_mc": 685154,
-      "peak_px": 0.0009581,
+      "peak_px": 0.0009945,
       "stop": -0.2,
       "tp1": 0.4,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-tight rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.16235727251998405,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/3jw1ykkqutngnudgbrwxpvzktmff4pwytotp3texhkbq",
       "v": 2,
-      "mev_sol": 0.0055309734513274336,
-      "swaps": 1,
+      "mev_sol": 0.011068072011681808,
+      "swaps": 2,
       "entry_liq": 78366.93,
       "at_entry": {
         "px": 0.0007027,
@@ -1132,10 +1132,11 @@
     "2026-11-06 11:39 UTC BUY AMD 0.25 SOL @ $0.001819365 (mc $1,795,596): v-tight rule",
     "2026-11-06 11:55 UTC BUY Rocco 0.25 SOL @ $0.00070290265 (mc $685,154): v-tight rule",
     "2026-11-06 12:10 UTC SELL 50% COGE -> 0.161 SOL @ $0.004098: take-profit at +41%: half sold, cost recovered",
-    "2026-11-06 13:15 UTC SELL 50% AMD -> 0.167 SOL @ $0.002641: take-profit at +45%: half sold, cost recovered"
+    "2026-11-06 13:15 UTC SELL 50% AMD -> 0.167 SOL @ $0.002641: take-profit at +45%: half sold, cost recovered",
+    "2026-11-06 13:30 UTC SELL 50% Rocco -> 0.162 SOL @ $0.0009945: take-profit at +41%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-06 13:26 UTC"
+  "last_mark": "2026-11-06 13:30 UTC"
 }
