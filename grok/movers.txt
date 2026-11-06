@@ -1,12 +1,12 @@
-MOVERS 2026-11-06T01:31:01Z
+MOVERS 2026-11-06T01:47:01Z
 DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS +4%
-EwX2T1p2PmgTsSq2Bi6XtQYxPC5krR4P2fxPfN4Qpump UNKNOWN +6%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +9%
-6Mt1oHb12F7JvJhFqcYERPJ3YqKgMGF9b8623uFYpump AMC +16%
-FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump three +21%
-HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO -13%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -6%
-ECNQSQA7Y5bnXzbotgv6XcG15c6jpJ6V2BFbYzJrpump PAWKET -2%
-GTBxUiw6wJdmmkCGZgRHLyYxqu1vG4KtRpeox6yDpump JEANPHIL -2%
-npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -2%
+Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump baton +6%
+6Mt1oHb12F7JvJhFqcYERPJ3YqKgMGF9b8623uFYpump AMC +15%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +28%
+FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump three +28%
+HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO -11%
+A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL -10%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -7%
+33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump DOPE -6%
+DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -5%
 END
