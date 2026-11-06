@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.9186376220585,
+  "cash_sol": 8.6686376220585,
   "positions": {
     "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump": {
       "symbol": "DOPE",
@@ -235,7 +235,7 @@
       "tokens": 151.0673624073634,
       "entry_px": 0.1542036421949506,
       "entry_mc": 154227365,
-      "peak_px": 0.1572,
+      "peak_px": 0.1573,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -289,6 +289,81 @@
       },
       "reentry": false,
       "since_loss_h": null
+    },
+    "BcHEaaTCvycPwwsJ9yQTXdHP9X2gCLkznDbZ8VySpump": {
+      "symbol": "Jotchua",
+      "opened": "2026-11-06 00:59 UTC",
+      "cost_sol": 0.25,
+      "tokens": 12027.505066031606,
+      "entry_px": 0.0018051748788133035,
+      "entry_mc": 1805085,
+      "peak_px": 0.0018051748788133035,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unpaid rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/akqyqgeifbbhqmanukzrrurgokskkbv8nvdccc87frr8",
+      "v": 2,
+      "mev_sol": 0.005543237250554323,
+      "swaps": 1,
+      "entry_liq": 232748.32,
+      "at_entry": {
+        "px": 0.001805,
+        "liq": 232748.32,
+        "mc": 1805085,
+        "dex": "pumpswap",
+        "age_h": 3643.73,
+        "vol_h1": 3940.74,
+        "vol_h24": 69034.04,
+        "buys_h1": 23,
+        "sells_h1": 9,
+        "buys_h24": 209,
+        "sells_h24": 313,
+        "trades_h24": 522,
+        "avg_trade": 132.25,
+        "m5": -0.35,
+        "h1": 4.16,
+        "h6": 17.92,
+        "h24": 10.48,
+        "eligible": true,
+        "v": 3,
+        "pool": "AKQyQgEifBBhQmANuKzrRuRGoKSkKBv8NVdccc87FrR8",
+        "m5_raw": -0.35,
+        "buys_m5": 2,
+        "sells_m5": 1,
+        "buys_h6": 112,
+        "sells_h6": 194,
+        "vol_m5": 231.12,
+        "vol_h6": 46569.75,
+        "liq_base": 64768506,
+        "liq_quote": 115814,
+        "fdv": 1805085,
+        "boosts": null,
+        "links": [
+          "telegram",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0121,
+          "paid": 0.0017500801104632854,
+          "vs_paid": -0.0079,
+          "off_peak": -0.099,
+          "accel": 0.2306,
+          "candles": 96,
+          "unease": 1,
+          "known": 2,
+          "signs": [
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 8.4
     }
   },
   "closed": [
@@ -449,10 +524,11 @@
     "2026-11-05 12:27 UTC BUY FARTBOY 0.25 SOL @ $0.023150789 (mc $23,144,326): v-unpaid rule",
     "2026-11-05 16:11 UTC BUY NIO 0.25 SOL @ $0.0016342715 (mc $1,557,295): v-unpaid rule",
     "2026-11-05 16:13 UTC SELL 100% NIO -> 0.200 SOL @ $0.001416: event exit: price -21% in 5 minutes, -13% from entry",
-    "2026-11-05 16:34 UTC SELL 100% FARTBOY -> 0.219 SOL @ $0.02077: event exit: price -20% in 5 minutes, -10% from entry"
+    "2026-11-05 16:34 UTC SELL 100% FARTBOY -> 0.219 SOL @ $0.02077: event exit: price -20% in 5 minutes, -10% from entry",
+    "2026-11-06 00:59 UTC BUY Jotchua 0.25 SOL @ $0.0018051749 (mc $1,805,085): v-unpaid rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-06 00:54 UTC"
+  "last_mark": "2026-11-06 00:59 UTC"
 }
