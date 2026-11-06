@@ -1,0 +1,13 @@
+{
+  "id": "20261106T041439.183396Z-gate-1bdfa8",
+  "kind": "gate",
+  "at": 1793938479.183396,
+  "by": "local",
+  "results": {
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "px": 0.01191,
+      "fails": []
+    }
+  }
+}
