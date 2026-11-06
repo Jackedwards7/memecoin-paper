@@ -386,15 +386,15 @@
     "2026-11-06 04:15 UTC BUY three 0.25 SOL @ $0.00063368775 (mc $633,365): Gate pass; mature pumpswap coin (4581h), mc $641k, liq $162k, 1h +2.8%, 24h +13.2%, 5m flat, 1h buys 1236 vs sells 489; no spike. Other passes GATO (sellers lead, 1h -3%) and COGE (8h, vertical +5173%) skipped.",
     "2026-11-06 04:32 UTC SELL 100% DESSA -> 0.295 SOL @ $0.0322: event exit: price -82% in 5 minutes, +133% from entry"
   ],
-  "last_mark": "2026-11-06 08:14 UTC",
+  "last_mark": "2026-11-06 08:15 UTC",
   "gate_pass": {
-    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1793951688,
-    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1793951688,
-    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1793951688,
+    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1793952941.719602,
+    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1793952934.176212,
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1793952934.176212,
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1793951688,
     "ECNQSQA7Y5bnXzbotgv6XcG15c6jpJ6V2BFbYzJrpump": 1793952648,
-    "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1793951688,
-    "8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump": 1793949768,
+    "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1793952941.719602,
+    "8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump": 1793952934.176212,
     "SivBpeYowiW8LyKyhoZGoh67qCc2ZV4jpWy6btPpump": 1793950728
   },
   "rejects": {
@@ -747,6 +747,18 @@
       "kind": "buy",
       "result": "bought three 0.25 SOL @ $0.00063368775; control opened",
       "at": "2026-11-06 04:15 UTC"
+    },
+    {
+      "id": "20261106T081534.176212Z-gate-a95c33",
+      "kind": "gate",
+      "result": "recorded 5 gate results, 3 passed",
+      "at": "2026-11-06 08:15 UTC"
+    },
+    {
+      "id": "20261106T081541.719602Z-gate-ba1e65",
+      "kind": "gate",
+      "result": "recorded 2 gate results, 2 passed",
+      "at": "2026-11-06 08:15 UTC"
     }
   ]
 }
