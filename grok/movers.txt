@@ -1,12 +1,12 @@
-MOVERS 2026-11-06T17:47:30Z
-8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH +5%
-v9AuWpPbvzT1ztCrYrFyn711CXnGuHWzsXjqwP8pump USOE +5%
-A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL +14%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +17%
-5VCEFq1aATjga39QtDunYjJqYBx67w8V8TXwHrqopump Diamond +19%
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -16%
-DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -16%
-EwX2T1p2PmgTsSq2Bi6XtQYxPC5krR4P2fxPfN4Qpump UNKNOWN -5%
-9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump ANSEM -5%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -4%
+MOVERS 2026-11-06T18:03:29Z
+npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA +4%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +8%
+8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH +9%
+8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump COGE +17%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +19%
+A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL -9%
+5VCEFq1aATjga39QtDunYjJqYBx67w8V8TXwHrqopump Diamond -8%
+DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -7%
+33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump DOPE -6%
+Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump BAGEL -6%
 END
