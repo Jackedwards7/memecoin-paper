@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.085320238093344,
+  "cash_sol": 8.2460347490207,
   "positions": {
     "ECNQSQA7Y5bnXzbotgv6XcG15c6jpJ6V2BFbYzJrpump": {
       "symbol": "PAWKET",
@@ -224,22 +224,22 @@
       "symbol": "COGE",
       "opened": "2026-11-06 03:06 UTC",
       "cost_sol": 0.25,
-      "tokens": 7458.117739745146,
+      "tokens": 3729.058869872573,
       "entry_px": 0.002913468016762968,
       "entry_mc": 2900248,
-      "peak_px": 0.003988,
+      "peak_px": 0.004098,
       "stop": -0.2,
       "tp1": 0.4,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-tight rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.1607145109273554,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/8gjmy6ipysxfmwwrpu9c7atssorjg6al88d9xttzslqe",
       "v": 2,
-      "mev_sol": 0.005538938739337543,
-      "swaps": 1,
+      "mev_sol": 0.011061359768716823,
+      "swaps": 2,
       "entry_liq": 140463.19,
       "at_entry": {
         "px": 0.002913,
@@ -376,7 +376,7 @@
       "tokens": 30958.767924912296,
       "entry_px": 0.0007029026495104503,
       "entry_mc": 685154,
-      "peak_px": 0.000775,
+      "peak_px": 0.0008028,
       "stop": -0.2,
       "tp1": 0.4,
       "tp1_done": false,
@@ -1130,10 +1130,11 @@
     "2026-11-06 03:06 UTC BUY COGE 0.25 SOL @ $0.002913468 (mc $2,900,248): v-tight rule",
     "2026-11-06 04:32 UTC SELL 100% DESSA -> 0.183 SOL @ $0.0322: event exit: price -82% in 5 minutes, +48% from entry",
     "2026-11-06 11:39 UTC BUY AMD 0.25 SOL @ $0.001819365 (mc $1,795,596): v-tight rule",
-    "2026-11-06 11:55 UTC BUY Rocco 0.25 SOL @ $0.00070290265 (mc $685,154): v-tight rule"
+    "2026-11-06 11:55 UTC BUY Rocco 0.25 SOL @ $0.00070290265 (mc $685,154): v-tight rule",
+    "2026-11-06 12:10 UTC SELL 50% COGE -> 0.161 SOL @ $0.004098: take-profit at +41%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-06 12:06 UTC"
+  "last_mark": "2026-11-06 12:10 UTC"
 }

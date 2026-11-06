@@ -1,12 +1,12 @@
-MOVERS 2026-11-06T11:54:48Z
+MOVERS 2026-11-06T12:10:48Z
 7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +9%
-8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump COGE +14%
-EwX2T1p2PmgTsSq2Bi6XtQYxPC5krR4P2fxPfN4Qpump UNKNOWN +15%
-DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD +16%
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +31%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -21%
+EwX2T1p2PmgTsSq2Bi6XtQYxPC5krR4P2fxPfN4Qpump UNKNOWN +9%
+DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD +9%
+8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump COGE +22%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +49%
+A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL -11%
+DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS -3%
 BcHEaaTCvycPwwsJ9yQTXdHP9X2gCLkznDbZ8VySpump Jotchua -3%
-CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump fone -3%
-A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL -3%
-DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS -2%
+nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity -3%
+oCZHH8HnEBCPipEGdEcP3f45pQAaM7nh7P6EkRPpump AMD -2%
 END
