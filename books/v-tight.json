@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.335320238093344,
+  "cash_sol": 8.085320238093344,
   "positions": {
     "ECNQSQA7Y5bnXzbotgv6XcG15c6jpJ6V2BFbYzJrpump": {
       "symbol": "PAWKET",
@@ -301,7 +301,7 @@
       "tokens": 11955.35231595237,
       "entry_px": 0.001819365036275578,
       "entry_mc": 1795596,
-      "peak_px": 0.001876,
+      "peak_px": 0.001911,
       "stop": -0.2,
       "tp1": 0.4,
       "tp1_done": false,
@@ -368,6 +368,68 @@
       },
       "reentry": false,
       "since_loss_h": 16.6
+    },
+    "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": {
+      "symbol": "Rocco",
+      "opened": "2026-11-06 11:55 UTC",
+      "cost_sol": 0.25,
+      "tokens": 30958.767924912296,
+      "entry_px": 0.0007029026495104503,
+      "entry_mc": 685154,
+      "peak_px": 0.0007029026495104503,
+      "stop": -0.2,
+      "tp1": 0.4,
+      "tp1_done": false,
+      "thesis": "v-tight rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/3jw1ykkqutngnudgbrwxpvzktmff4pwytotp3texhkbq",
+      "v": 2,
+      "mev_sol": 0.0055309734513274336,
+      "swaps": 1,
+      "entry_liq": 78366.93,
+      "at_entry": {
+        "px": 0.0007027,
+        "liq": 78366.93,
+        "mc": 685154,
+        "dex": "pumpswap",
+        "age_h": 20.83,
+        "vol_h1": 91163.56,
+        "vol_h24": 1828849.88,
+        "buys_h1": 423,
+        "sells_h1": 364,
+        "buys_h24": 13744,
+        "sells_h24": 10698,
+        "trades_h24": 24442,
+        "avg_trade": 74.82,
+        "m5": 7.43,
+        "h1": 31.08,
+        "h6": 103,
+        "h24": 1502,
+        "eligible": true,
+        "v": 3,
+        "pool": "3jW1ykKqUTNgNUDGbrwXpvZKtMFf4pWytoTP3TeXhKBQ",
+        "m5_raw": 7.43,
+        "buys_m5": 127,
+        "sells_m5": 77,
+        "buys_h6": 1294,
+        "sells_h6": 1023,
+        "vol_m5": 26193.62,
+        "vol_h6": 216155.19,
+        "liq_base": 57392859,
+        "liq_quote": 179.6198,
+        "fdv": 685154,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": null
+      },
+      "reentry": false,
+      "since_loss_h": 16.9
     }
   },
   "closed": [
@@ -1067,10 +1129,11 @@
     "2026-11-06 01:15 UTC BUY three 0.25 SOL @ $0.00060338605 (mc $603,145): v-tight rule",
     "2026-11-06 03:06 UTC BUY COGE 0.25 SOL @ $0.002913468 (mc $2,900,248): v-tight rule",
     "2026-11-06 04:32 UTC SELL 100% DESSA -> 0.183 SOL @ $0.0322: event exit: price -82% in 5 minutes, +48% from entry",
-    "2026-11-06 11:39 UTC BUY AMD 0.25 SOL @ $0.001819365 (mc $1,795,596): v-tight rule"
+    "2026-11-06 11:39 UTC BUY AMD 0.25 SOL @ $0.001819365 (mc $1,795,596): v-tight rule",
+    "2026-11-06 11:55 UTC BUY Rocco 0.25 SOL @ $0.00070290265 (mc $685,154): v-tight rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-06 11:49 UTC"
+  "last_mark": "2026-11-06 11:54 UTC"
 }
