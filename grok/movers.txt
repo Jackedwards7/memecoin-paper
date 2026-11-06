@@ -1,12 +1,12 @@
-MOVERS 2026-11-05T23:55:01Z
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +6%
-HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO +7%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +7%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +10%
-DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD +36%
-A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL -9%
-GTBxUiw6wJdmmkCGZgRHLyYxqu1vG4KtRpeox6yDpump JEANPHIL -5%
+MOVERS 2026-11-06T00:11:01Z
+Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump baton +6%
+33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump DOPE +6%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +8%
+HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO +20%
+DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD +27%
+A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL -6%
+EwX2T1p2PmgTsSq2Bi6XtQYxPC5krR4P2fxPfN4Qpump UNKNOWN -5%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -4%
 CARDSccUMFKoPRZxt5vt3ksUbxEFEcnZ3H2pd3dKxYjp CARDS -4%
-DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS -3%
-npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -2%
+8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH -2%
 END
