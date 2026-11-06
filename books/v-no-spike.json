@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 9.076790217214006,
+  "cash_sol": 8.826790217214006,
   "positions": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
       "symbol": "JOB",
@@ -284,6 +284,81 @@
       },
       "reentry": false,
       "since_loss_h": null
+    },
+    "ECNQSQA7Y5bnXzbotgv6XcG15c6jpJ6V2BFbYzJrpump": {
+      "symbol": "PAWKET",
+      "opened": "2026-11-06 15:55 UTC",
+      "cost_sol": 0.25,
+      "tokens": 25610.82462636055,
+      "entry_px": 0.0008503528417270965,
+      "entry_mc": 847419,
+      "peak_px": 0.0008503528417270965,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-no-spike rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/9icjrrzevflonfyc5xj9cjekdyirt2kvlszq9gmtahfd",
+      "v": 2,
+      "mev_sol": 0.005526693931690063,
+      "swaps": 1,
+      "entry_liq": 76044.16,
+      "at_entry": {
+        "px": 0.0008501,
+        "liq": 76044.16,
+        "mc": 847419,
+        "dex": "pumpswap",
+        "age_h": 24.77,
+        "vol_h1": 540.25,
+        "vol_h24": 44272.51,
+        "buys_h1": 47,
+        "sells_h1": 45,
+        "buys_h24": 1752,
+        "sells_h24": 1492,
+        "trades_h24": 3244,
+        "avg_trade": 13.65,
+        "m5": 1.59,
+        "h1": 0.23,
+        "h6": -0.15,
+        "h24": 27.15,
+        "eligible": true,
+        "v": 3,
+        "pool": "9icJRrZeVFLonFyC5XJ9CJekdyirt2KvLSzQ9GMtahFD",
+        "m5_raw": 1.59,
+        "buys_m5": 2,
+        "sells_m5": 1,
+        "buys_h6": 250,
+        "sells_h6": 245,
+        "vol_m5": 21.49,
+        "vol_h6": 4316.41,
+        "liq_base": 45704324,
+        "liq_quote": 410.8522,
+        "fdv": 847419,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.019,
+          "paid": 0.0007088142482735549,
+          "vs_paid": 0.1927,
+          "off_peak": -0.1465,
+          "accel": 0.0234,
+          "candles": 96,
+          "unease": 2,
+          "known": 5,
+          "signs": [
+            "failed_high",
+            "smaller_trades"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 2.5
     }
   },
   "closed": [
@@ -452,10 +527,11 @@
     "2026-11-06 01:15 UTC BUY three 0.25 SOL @ $0.00060338605 (mc $603,145): v-no-spike rule",
     "2026-11-06 04:32 UTC SELL 100% DESSA -> 0.183 SOL @ $0.0322: event exit: price -82% in 5 minutes, +48% from entry",
     "2026-11-06 08:11 UTC BUY VETO 0.25 SOL @ $0.00089886255 (mc $883,166): v-no-spike rule",
-    "2026-11-06 13:26 UTC SELL 100% VETO -> 0.147 SOL @ $0.0005819: stop-loss at -35%"
+    "2026-11-06 13:26 UTC SELL 100% VETO -> 0.147 SOL @ $0.0005819: stop-loss at -35%",
+    "2026-11-06 15:55 UTC BUY PAWKET 0.25 SOL @ $0.00085035284 (mc $847,419): v-no-spike rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-06 15:50 UTC"
+  "last_mark": "2026-11-06 15:55 UTC"
 }

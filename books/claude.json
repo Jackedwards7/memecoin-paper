@@ -464,7 +464,7 @@
     "2026-11-06 04:32 UTC SELL 100% DESSA -> 0.295 SOL @ $0.0322: event exit: price -82% in 5 minutes, +133% from entry",
     "2026-11-06 12:16 UTC BUY HELL 0.25 SOL @ $0.0029684887 (mc $2,831,474): Gate pass; mature pumpswap coin (575h), mc $2.9M, liq $138k, 1h +1.8%, 24h +10.6%, 5m +12.9% (<25%), 1h buys 2817 vs 2752. Other passes GATO (sellers lead), COGE (16h, +8457% 24h) and AMD (10h, +4852% 24h) skipped."
   ],
-  "last_mark": "2026-11-06 15:50 UTC",
+  "last_mark": "2026-11-06 15:55 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1793978581,
     "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1793978581,
@@ -472,10 +472,9 @@
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1793978581,
     "ECNQSQA7Y5bnXzbotgv6XcG15c6jpJ6V2BFbYzJrpump": 1793979543,
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1793978581,
-    "8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump": 1793976659,
+    "8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump": 1793980503,
     "oCZHH8HnEBCPipEGdEcP3f45pQAaM7nh7P6EkRPpump": 1793977621,
-    "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1793977621,
-    "5VCEFq1aATjga39QtDunYjJqYBx67w8V8TXwHrqopump": 1793976659
+    "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1793977621
   },
   "rejects": {
     "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
@@ -622,6 +621,15 @@
       "px": 0.001674,
       "fails": [
         "copycat: an earlier 'Universal High Income' exists (5QmbJw)"
+      ],
+      "moves": {}
+    },
+    "5VCEFq1aATjga39QtDunYjJqYBx67w8V8TXwHrqopump": {
+      "symbol": "Diamond",
+      "at": 1793980503,
+      "px": 0.0008689,
+      "fails": [
+        "deepest pool is meteoraDlmm, not a graduation pool"
       ],
       "moves": {}
     }
