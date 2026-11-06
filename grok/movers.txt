@@ -1,12 +1,12 @@
-MOVERS 2026-11-06T22:04:11Z
-DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS +5%
+MOVERS 2026-11-06T22:20:14Z
 ZAEP4x2UzVcXErhQnzppj35HZu4WSTiyzd1fkdcpump XTO +5%
-HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO +6%
+EaxAUcXxNnVwcqm2BBocbows7D1XVY2Q63V38NEypump GTA6Coin +5%
 A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL +8%
-2JVEVXoRsskapZ8T56MjMNJq6Dk3feEUYSRmzkkipump RONIN +13%
-5VCEFq1aATjga39QtDunYjJqYBx67w8V8TXwHrqopump Diamond -38%
-8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump COGE -17%
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -15%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -9%
-FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump three -7%
+2JVEVXoRsskapZ8T56MjMNJq6Dk3feEUYSRmzkkipump RONIN +12%
+FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump DONNA +29%
+5VCEFq1aATjga39QtDunYjJqYBx67w8V8TXwHrqopump Diamond -26%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -13%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -12%
+9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump ANSEM -11%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -8%
 END
