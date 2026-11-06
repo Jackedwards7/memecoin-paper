@@ -112,3 +112,5 @@
 {"after": "v-unease:6Mt1oHb12F7JvJhFqcYERPJ3YqKgMGF9b8623uFYpump:2026-11-05 17:21 UTC", "h": 24, "px": 3.956e-06, "vs_exit": -0.996}
 {"after": "v-velocity:6Mt1oHb12F7JvJhFqcYERPJ3YqKgMGF9b8623uFYpump:2026-11-05 17:21 UTC", "h": 24, "px": 3.956e-06, "vs_exit": -0.996}
 {"after": "v-tight:SivBpeYowiW8LyKyhoZGoh67qCc2ZV4jpWy6btPpump:2026-11-05 19:04 UTC", "h": 24, "px": 8.641e-06, "vs_exit": -0.988}
+{"after": "claude:A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump:2026-11-05 20:15 UTC", "h": 24, "px": 0.002676, "vs_exit": -0.0721}
+{"after": "control:HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump:2026-11-05 20:15 UTC", "h": 24, "px": 0.0118, "vs_exit": 0.2274}
