@@ -1,12 +1,12 @@
-MOVERS 2026-11-06T22:52:14Z
-v9AuWpPbvzT1ztCrYrFyn711CXnGuHWzsXjqwP8pump USOE +5%
-ZAEP4x2UzVcXErhQnzppj35HZu4WSTiyzd1fkdcpump XTO +5%
+MOVERS 2026-11-06T23:08:14Z
+npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA +4%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +7%
+A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL +16%
 HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +22%
-8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump COGE +25%
-GdY4Z6pYUcr3HFrABV5FEZay3J4GnjN1Uzsw6Dvxpump coin +44%
-5VCEFq1aATjga39QtDunYjJqYBx67w8V8TXwHrqopump Diamond -30%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -16%
-FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump DONNA -6%
-DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -6%
-9AvytnUKsLxPxFHFqS6VLxaxt5p6BhYNr53SD2Chpump 67 -5%
+8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump COGE +37%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -9%
+DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -9%
+Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump baton -7%
+5VCEFq1aATjga39QtDunYjJqYBx67w8V8TXwHrqopump Diamond -7%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -6%
 END
