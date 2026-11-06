@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.081773082660295,
+  "cash_sol": 8.37344759334032,
   "positions": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
       "symbol": "JOB",
@@ -290,22 +290,22 @@
       "symbol": "COGE",
       "opened": "2026-11-06 04:43 UTC",
       "cost_sol": 0.25,
-      "tokens": 7257.625860651783,
+      "tokens": 3628.8129303258916,
       "entry_px": 0.002966469395553342,
       "entry_mc": 2953311,
-      "peak_px": 0.007338,
+      "peak_px": 0.00748,
       "stop": -0.4,
       "tp1": 1.5,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-loose rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.2916745106800244,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/8gjmy6ipysxfmwwrpu9c7atssorjg6al88d9xttzslqe",
       "v": 2,
-      "mev_sol": 0.00558909009613235,
-      "swaps": 1,
+      "mev_sol": 0.011148351826174602,
+      "swaps": 2,
       "entry_liq": 141319.17,
       "at_entry": {
         "px": 0.002966,
@@ -979,10 +979,11 @@
     "2026-11-06 04:32 UTC SELL 100% DESSA -> 0.372 SOL @ $0.0322: event exit: price -82% in 5 minutes, +48% from entry",
     "2026-11-06 04:43 UTC BUY COGE 0.25 SOL @ $0.0029664694 (mc $2,953,311): v-loose rule",
     "2026-11-06 14:12 UTC SELL 100% VETO -> 0.137 SOL @ $0.0005137: stop-loss at -44%",
-    "2026-11-06 14:19 UTC BUY AMD 0.25 SOL @ $0.0025224246 (mc $2,489,186): v-loose rule"
+    "2026-11-06 14:19 UTC BUY AMD 0.25 SOL @ $0.0025224246 (mc $2,489,186): v-loose rule",
+    "2026-11-06 23:19 UTC SELL 50% COGE -> 0.292 SOL @ $0.00748: take-profit at +152%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-06 23:17 UTC"
+  "last_mark": "2026-11-06 23:19 UTC"
 }
