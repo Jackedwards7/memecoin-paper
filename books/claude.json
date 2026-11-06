@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.80725245908984,
+  "cash_sol": 8.55725245908984,
   "positions": {
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": {
       "symbol": "DESSA",
@@ -45,6 +45,81 @@
       "mev_sol": 0.005189413596263622,
       "swaps": 1,
       "entry_liq": 197405.43
+    },
+    "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": {
+      "symbol": "three",
+      "opened": "2026-11-06 04:15 UTC",
+      "cost_sol": 0.25,
+      "tokens": 33955.54429061917,
+      "entry_px": 0.0006336877511324275,
+      "entry_mc": 633365,
+      "peak_px": 0.0006336877511324275,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "Gate pass; mature pumpswap coin (4581h), mc $641k, liq $162k, 1h +2.8%, 24h +13.2%, 5m flat, 1h buys 1236 vs sells 489; no spike. Other passes GATO (sellers lead, 1h -3%) and COGE (8h, vertical +5173%) skipped.",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/5byl7mzolabynwmpzkpkjf4mgkz7febzranos19pre2z",
+      "v": 2,
+      "mev_sol": 0.005592215635834918,
+      "swaps": 1,
+      "entry_liq": 161394.43,
+      "at_entry": {
+        "px": 0.0006336,
+        "liq": 161394.43,
+        "mc": 633365,
+        "dex": "pumpswap",
+        "age_h": 4581.11,
+        "vol_h1": 9680.87,
+        "vol_h24": 116995.38,
+        "buys_h1": 1227,
+        "sells_h1": 485,
+        "buys_h24": 6835,
+        "sells_h24": 3009,
+        "trades_h24": 9844,
+        "avg_trade": 11.88,
+        "m5": -0.01,
+        "h1": 0.72,
+        "h6": 18.43,
+        "h24": 11.82,
+        "eligible": true,
+        "v": 3,
+        "pool": "5ByL7MZoLABYnwMPZKPKjf4MGkZ7FeBzrAnos19Pre2z",
+        "m5_raw": -0.01,
+        "buys_m5": 70,
+        "sells_m5": 24,
+        "buys_h6": 6712,
+        "sells_h6": 2905,
+        "vol_m5": 15.53,
+        "vol_h6": 103773.86,
+        "liq_base": 126720326,
+        "liq_quote": 907.3061,
+        "fdv": 633365,
+        "boosts": 20,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0142,
+          "paid": 0.0006549333122999428,
+          "vs_paid": -0.0212,
+          "off_peak": -0.2067,
+          "accel": 0.2567,
+          "candles": 96,
+          "unease": 2,
+          "known": 5,
+          "signs": [
+            "failed_high",
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 43.7
     }
   },
   "closed": [
@@ -301,17 +376,18 @@
     "2026-11-05 02:48 UTC BUY JOB 0.25 SOL @ $0.0041005003 (mc $3,994,528): Gate pass; mature pumpswap coin (200h), mc $4.0M, liq $198k, 1h +1.3%, 24h +70%, 5m +1.2% (no spike), 1h buys 175 vs sells 143. Other passes GTA (6h, vertical +5633% 24h, -29% 1h) skipped.",
     "2026-11-05 12:55 UTC SELL 100% GATO -> 0.330 SOL @ $0.008052: trailing stop: 40% off peak, -8% from entry",
     "2026-11-05 13:47 UTC SELL 50% DESSA -> 0.238 SOL @ $0.02787: take-profit at +102%: half sold, cost recovered",
-    "2026-11-05 20:15 UTC SELL 100% HELL -> 0.257 SOL @ $0.002884: time stop: 48h held, +6%, no take-profit"
+    "2026-11-05 20:15 UTC SELL 100% HELL -> 0.257 SOL @ $0.002884: time stop: 48h held, +6%, no take-profit",
+    "2026-11-06 04:15 UTC BUY three 0.25 SOL @ $0.00063368775 (mc $633,365): Gate pass; mature pumpswap coin (4581h), mc $641k, liq $162k, 1h +2.8%, 24h +13.2%, 5m flat, 1h buys 1236 vs sells 489; no spike. Other passes GATO (sellers lead, 1h -3%) and COGE (8h, vertical +5173%) skipped."
   ],
-  "last_mark": "2026-11-06 04:14 UTC",
+  "last_mark": "2026-11-06 04:15 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1793936326,
     "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1793936326,
-    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1793938479.183396,
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1793938488.700682,
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1793936326,
     "ECNQSQA7Y5bnXzbotgv6XcG15c6jpJ6V2BFbYzJrpump": 1793936326,
-    "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1793936326,
-    "8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump": 1793938246,
+    "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1793938488.700682,
+    "8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump": 1793938488.700682,
     "EwX2T1p2PmgTsSq2Bi6XtQYxPC5krR4P2fxPfN4Qpump": 1793937286
   },
   "rejects": {
@@ -649,6 +725,18 @@
       "kind": "gate",
       "result": "recorded 1 gate results, 1 passed",
       "at": "2026-11-06 04:14 UTC"
+    },
+    {
+      "id": "20261106T041448.700682Z-gate-7832dd",
+      "kind": "gate",
+      "result": "recorded 5 gate results, 3 passed",
+      "at": "2026-11-06 04:15 UTC"
+    },
+    {
+      "id": "20261106T041454.569090Z-buy-14524d",
+      "kind": "buy",
+      "result": "bought three 0.25 SOL @ $0.00063368775; control opened",
+      "at": "2026-11-06 04:15 UTC"
     }
   ]
 }
