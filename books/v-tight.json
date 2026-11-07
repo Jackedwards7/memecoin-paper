@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.48815485354578,
+  "cash_sol": 8.23815485354578,
   "positions": {
     "ECNQSQA7Y5bnXzbotgv6XcG15c6jpJ6V2BFbYzJrpump": {
       "symbol": "PAWKET",
@@ -369,6 +369,81 @@
       },
       "reentry": false,
       "since_loss_h": 31.8
+    },
+    "FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump": {
+      "symbol": "DONNA",
+      "opened": "2026-11-07 09:00 UTC",
+      "cost_sol": 0.25,
+      "tokens": 14092.592563367964,
+      "entry_px": 0.0015413487548389601,
+      "entry_mc": 1472861,
+      "peak_px": 0.0015413487548389601,
+      "stop": -0.2,
+      "tp1": 0.4,
+      "tp1_done": false,
+      "thesis": "v-tight rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/7vurupbxg3z5qjtcstvg3vxumxenqfnupjdz3cgw2tkt",
+      "v": 2,
+      "mev_sol": 0.005540780141843972,
+      "swaps": 1,
+      "entry_liq": 99683.09,
+      "at_entry": {
+        "px": 0.001541,
+        "liq": 99683.09,
+        "mc": 1472861,
+        "dex": "pumpswap",
+        "age_h": 346.19,
+        "vol_h1": 55.48,
+        "vol_h24": 85062.23,
+        "buys_h1": 3,
+        "sells_h1": 1,
+        "buys_h24": 451,
+        "sells_h24": 319,
+        "trades_h24": 770,
+        "avg_trade": 110.47,
+        "m5": 0,
+        "h1": 0.32,
+        "h6": -0.66,
+        "h24": 174,
+        "eligible": true,
+        "v": 3,
+        "pool": "7vURUpBXG3Z5qJTCSTvG3VxumXEnQfnUPJDZ3Cgw2tkT",
+        "m5_raw": null,
+        "buys_m5": 0,
+        "sells_m5": 0,
+        "buys_h6": 13,
+        "sells_h6": 13,
+        "vol_m5": 0,
+        "vol_h6": 287.41,
+        "liq_base": 32994480,
+        "liq_quote": 541.5088,
+        "fdv": 1472861,
+        "boosts": 50,
+        "links": [
+          "instagram",
+          "telegram",
+          "tiktok",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0116,
+          "paid": 0.0013322201752012253,
+          "vs_paid": 0.1494,
+          "off_peak": -0.0152,
+          "accel": 0.014,
+          "candles": 96,
+          "unease": 0,
+          "known": 5,
+          "signs": []
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 0.1
     }
   },
   "closed": [
@@ -1304,10 +1379,11 @@
     "2026-11-06 21:48 UTC BUY JOB 0.25 SOL @ $0.0054745459 (mc $5,332,811): v-tight rule",
     "2026-11-07 02:45 UTC SELL 100% Rocco -> 0.106 SOL @ $0.0006598: trailing stop: 40% off peak, -6% from entry",
     "2026-11-07 02:52 UTC BUY BAGEL 0.25 SOL @ $0.00091026672 (mc $896,801): v-tight rule",
-    "2026-11-07 08:54 UTC SELL 100% three -> 0.183 SOL @ $0.0004814: stop-loss at -20%"
+    "2026-11-07 08:54 UTC SELL 100% three -> 0.183 SOL @ $0.0004814: stop-loss at -20%",
+    "2026-11-07 09:00 UTC BUY DONNA 0.25 SOL @ $0.0015413488 (mc $1,472,861): v-tight rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-07 08:54 UTC"
+  "last_mark": "2026-11-07 09:00 UTC"
 }
