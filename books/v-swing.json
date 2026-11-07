@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.54666166970261,
+  "cash_sol": 8.29666166970261,
   "positions": {
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
       "symbol": "GATO",
@@ -369,6 +369,80 @@
       },
       "reentry": false,
       "since_loss_h": 0.6
+    },
+    "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": {
+      "symbol": "Rocco",
+      "opened": "2026-11-07 12:28 UTC",
+      "cost_sol": 0.25,
+      "tokens": 23940.33191708853,
+      "entry_px": 0.0009037223282838746,
+      "entry_mc": 880883,
+      "peak_px": 0.0009037223282838746,
+      "stop": -0.314,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-swing rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/3jw1ykkqutngnudgbrwxpvzktmff4pwytotp3texhkbq",
+      "v": 2,
+      "mev_sol": 0.00556235398820781,
+      "swaps": 1,
+      "entry_liq": 91323.98,
+      "at_entry": {
+        "px": 0.0009035,
+        "liq": 91323.98,
+        "mc": 880883,
+        "dex": "pumpswap",
+        "age_h": 45.38,
+        "vol_h1": 5180.33,
+        "vol_h24": 757492.83,
+        "buys_h1": 53,
+        "sells_h1": 42,
+        "buys_h24": 5004,
+        "sells_h24": 4542,
+        "trades_h24": 9546,
+        "avg_trade": 79.35,
+        "m5": -0.82,
+        "h1": 7.45,
+        "h6": 6.87,
+        "h24": 26.43,
+        "eligible": true,
+        "v": 3,
+        "pool": "3jW1ykKqUTNgNUDGbrwXpvZKtMFf4pWytoTP3TeXhKBQ",
+        "m5_raw": -0.82,
+        "buys_m5": 7,
+        "sells_m5": 4,
+        "buys_h6": 390,
+        "sells_h6": 384,
+        "vol_m5": 480.16,
+        "vol_h6": 52239.29,
+        "liq_base": 51917395,
+        "liq_quote": 205.8236,
+        "fdv": 880883,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0785,
+          "paid": 0.0008536084365767642,
+          "vs_paid": 0.0048,
+          "off_peak": -0.2688,
+          "accel": 0.0674,
+          "candles": 96,
+          "unease": 1,
+          "known": 5,
+          "signs": [
+            "failed_high"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 4.3
     }
   },
   "closed": [
@@ -1284,10 +1358,11 @@
     "2026-11-07 06:52 UTC BUY NIO 0.25 SOL @ $0.0017512722 (mc $1,668,916): v-swing rule",
     "2026-11-07 08:11 UTC SELL 100% HELL -> 0.200 SOL @ $0.002618: time stop: 48h held, -19%, no take-profit",
     "2026-11-07 08:44 UTC BUY DONNA 0.25 SOL @ $0.0015413486 (mc $1,472,861): v-swing rule",
-    "2026-11-07 11:31 UTC SELL 100% COGE -> 0.286 SOL @ $0.00732: event exit: price -69% in 5 minutes, +147% from entry"
+    "2026-11-07 11:31 UTC SELL 100% COGE -> 0.286 SOL @ $0.00732: event exit: price -69% in 5 minutes, +147% from entry",
+    "2026-11-07 12:28 UTC BUY Rocco 0.25 SOL @ $0.00090372233 (mc $880,883): v-swing rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-07 12:26 UTC"
+  "last_mark": "2026-11-07 12:28 UTC"
 }
