@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.605981507200013,
+  "cash_sol": 8.355981507200013,
   "positions": {
     "ECNQSQA7Y5bnXzbotgv6XcG15c6jpJ6V2BFbYzJrpump": {
       "symbol": "PAWKET",
@@ -367,6 +367,82 @@
       },
       "reentry": false,
       "since_loss_h": 0.1
+    },
+    "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": {
+      "symbol": "NIO",
+      "opened": "2026-11-07 11:56 UTC",
+      "cost_sol": 0.25,
+      "tokens": 13724.01384941593,
+      "entry_px": 0.001578258207668729,
+      "entry_mc": 1503782,
+      "peak_px": 0.001578258207668729,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-momentum rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/b4wmjc6pvjctu3qsvs3ett9mr4m5v5jbkrqctwantc71",
+      "v": 2,
+      "mev_sol": 0.005556172908100901,
+      "swaps": 1,
+      "entry_liq": 137490.32,
+      "at_entry": {
+        "px": 0.001578,
+        "liq": 137490.32,
+        "mc": 1503782,
+        "dex": "pumpswap",
+        "age_h": 403.97,
+        "vol_h1": 7677.42,
+        "vol_h24": 1147644.62,
+        "buys_h1": 61,
+        "sells_h1": 49,
+        "buys_h24": 6767,
+        "sells_h24": 6721,
+        "trades_h24": 13488,
+        "avg_trade": 85.09,
+        "m5": 3.26,
+        "h1": 7.07,
+        "h6": -6.09,
+        "h24": 25.96,
+        "eligible": true,
+        "v": 3,
+        "pool": "B4Wmjc6PvjCtU3qSVS3eTT9Mr4M5V5jBkRQctWANTc71",
+        "m5_raw": 3.26,
+        "buys_m5": 7,
+        "sells_m5": 11,
+        "buys_h6": 796,
+        "sells_h6": 626,
+        "vol_m5": 1311.98,
+        "vol_h6": 108848.38,
+        "liq_base": 44254176,
+        "liq_quote": 752.2827,
+        "fdv": 1503782,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0493,
+          "paid": 0.0016425490329228358,
+          "vs_paid": -0.1079,
+          "off_peak": -0.375,
+          "accel": 0.0259,
+          "candles": 96,
+          "unease": 3,
+          "known": 5,
+          "signs": [
+            "failed_high",
+            "smaller_trades",
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 6.2
     }
   },
   "closed": [
@@ -1235,10 +1311,11 @@
     "2026-11-07 03:40 UTC BUY BAGEL 0.25 SOL @ $0.00099637771 (mc $981,700): v-momentum rule",
     "2026-11-07 05:44 UTC SELL 100% AMD -> 0.148 SOL @ $0.001312: stop-loss at -35%",
     "2026-11-07 05:48 UTC BUY Rocco 0.25 SOL @ $0.00078920886 (mc $769,277): v-momentum rule",
-    "2026-11-07 11:31 UTC SELL 100% COGE -> 0.286 SOL @ $0.00732: event exit: price -69% in 5 minutes, +147% from entry"
+    "2026-11-07 11:31 UTC SELL 100% COGE -> 0.286 SOL @ $0.00732: event exit: price -69% in 5 minutes, +147% from entry",
+    "2026-11-07 11:56 UTC BUY NIO 0.25 SOL @ $0.0015782582 (mc $1,503,782): v-momentum rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-07 11:55 UTC"
+  "last_mark": "2026-11-07 11:56 UTC"
 }
