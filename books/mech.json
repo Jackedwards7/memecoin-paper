@@ -1,29 +1,7 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 9.045205358611039,
+  "cash_sol": 9.34358824743125,
   "positions": {
-    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
-      "symbol": "JOB",
-      "opened": "2026-11-05 02:48 UTC",
-      "cost_sol": 0.25,
-      "tokens": 5664.232628256414,
-      "entry_px": 0.00410050028385744,
-      "entry_mc": 3994528,
-      "peak_px": 0.005951,
-      "stop": -0.35,
-      "tp1": 1.0,
-      "tp1_done": false,
-      "thesis": "Gate pass; mature pumpswap coin (200h), mc $4.0M, liq $198k, 1h +1.3%, 24h +70%, 5m +1.2% (no spike), 1h buys 175 vs sells 143. Other passes GTA (6h, vertical +5633% 24h, -29% 1h) skipped.",
-      "rugcheck": 1,
-      "risks": [],
-      "realised_sol": 0.0,
-      "dex": "pumpswap",
-      "url": "https://dexscreener.com/solana/hauvbmnthcfmg9srxmvz1gaxnpu955hkpdsasc2cx4c8",
-      "v": 2,
-      "mev_sol": 0.005189413596263622,
-      "swaps": 1,
-      "entry_liq": 197405.43
-    },
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": {
       "symbol": "three",
       "opened": "2026-11-06 04:15 UTC",
@@ -279,13 +257,42 @@
       "pnl_pct": 1.1335337806812573,
       "exit_reason": "event exit: price -82% in 5 minutes, +133% from entry",
       "exit_px": 0.0322
+    },
+    {
+      "symbol": "JOB",
+      "opened": "2026-11-05 02:48 UTC",
+      "cost_sol": 0.25,
+      "tokens": 0.0,
+      "entry_px": 0.00410050028385744,
+      "entry_mc": 3994528,
+      "peak_px": 0.005951,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "Gate pass; mature pumpswap coin (200h), mc $4.0M, liq $198k, 1h +1.3%, 24h +70%, 5m +1.2% (no spike), 1h buys 175 vs sells 143. Other passes GTA (6h, vertical +5633% 24h, -29% 1h) skipped.",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.2983828888202097,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/hauvbmnthcfmg9srxmvz1gaxnpu955hkpdsasc2cx4c8",
+      "v": 2,
+      "mev_sol": 0.01073634059870427,
+      "swaps": 2,
+      "entry_liq": 197405.43,
+      "mint": "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump",
+      "closed": "2026-11-07 03:30 UTC",
+      "pnl_sol": 0.04838288882020969,
+      "pnl_pct": 0.19353155528083876,
+      "exit_reason": "time stop: 49h held, +20%, no take-profit",
+      "exit_px": 0.004911
     }
   ],
   "log": [
-    "2026-11-06 04:32 UTC SELL 100% DESSA -> 0.295 SOL @ $0.0322: event exit: price -82% in 5 minutes, +133% from entry"
+    "2026-11-06 04:32 UTC SELL 100% DESSA -> 0.295 SOL @ $0.0322: event exit: price -82% in 5 minutes, +133% from entry",
+    "2026-11-07 03:30 UTC SELL 100% JOB -> 0.298 SOL @ $0.004911: time stop: 49h held, +20%, no take-profit"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-07 03:24 UTC"
+  "last_mark": "2026-11-07 03:30 UTC"
 }
