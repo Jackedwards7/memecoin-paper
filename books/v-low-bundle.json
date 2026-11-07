@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.725245155622417,
+  "cash_sol": 8.475245155622417,
   "positions": {
     "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": {
       "symbol": "HELL",
@@ -371,6 +371,84 @@
       },
       "reentry": false,
       "since_loss_h": 1.0
+    },
+    "oCZHH8HnEBCPipEGdEcP3f45pQAaM7nh7P6EkRPpump": {
+      "symbol": "AMD",
+      "opened": "2026-11-07 03:08 UTC",
+      "cost_sol": 0.25,
+      "tokens": 10729.959418907492,
+      "entry_px": 0.002027371367469246,
+      "entry_mc": 2001191,
+      "peak_px": 0.002027371367469246,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-low-bundle rule",
+      "rugcheck": 29,
+      "risks": [
+        "Copycat token"
+      ],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/6zv8dyrdxh56au2ebhpzzbmkprp5ixbkprj7hb2pj3rr",
+      "v": 2,
+      "mev_sol": 0.005532809560694921,
+      "swaps": 1,
+      "entry_liq": 123314.51,
+      "at_entry": {
+        "px": 0.002027,
+        "liq": 123314.51,
+        "mc": 2001191,
+        "dex": "pumpswap",
+        "age_h": 24.63,
+        "vol_h1": 150697.56,
+        "vol_h24": 4030133.89,
+        "buys_h1": 7636,
+        "sells_h1": 6172,
+        "buys_h24": 171392,
+        "sells_h24": 129034,
+        "trades_h24": 300426,
+        "avg_trade": 13.41,
+        "m5": 5.38,
+        "h1": 6.91,
+        "h6": -8.5,
+        "h24": 453,
+        "eligible": true,
+        "v": 3,
+        "pool": "6ZV8dyRdxH56Au2EbhpZZBMKpRP5ixBKPRJ7hB2pJ3rr",
+        "m5_raw": 5.38,
+        "buys_m5": 636,
+        "sells_m5": 514,
+        "buys_h6": 48600,
+        "sells_h6": 37032,
+        "vol_m5": 9321.46,
+        "vol_h6": 777683.66,
+        "liq_base": 30813597,
+        "liq_quote": 673.1047,
+        "fdv": 2001191,
+        "boosts": 100,
+        "links": [
+          "telegram",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.134,
+          "paid": 0.0019797998063063723,
+          "vs_paid": -0.0506,
+          "off_peak": -0.4783,
+          "accel": -0.1855,
+          "candles": 96,
+          "unease": 2,
+          "known": 5,
+          "signs": [
+            "failed_high",
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 23.5
     }
   },
   "closed": [
@@ -988,10 +1066,11 @@
     "2026-11-06 04:32 UTC SELL 100% DESSA -> 0.183 SOL @ $0.0322: event exit: price -82% in 5 minutes, +48% from entry",
     "2026-11-06 04:43 UTC BUY COGE 0.25 SOL @ $0.0029664694 (mc $2,953,311): v-low-bundle rule",
     "2026-11-06 22:34 UTC SELL 50% COGE -> 0.230 SOL @ $0.005933: take-profit at +100%: half sold, cost recovered",
-    "2026-11-07 03:07 UTC SELL 100% JOB -> 0.292 SOL @ $0.00505: time stop: 48h held, +18%, no take-profit"
+    "2026-11-07 03:07 UTC SELL 100% JOB -> 0.292 SOL @ $0.00505: time stop: 48h held, +18%, no take-profit",
+    "2026-11-07 03:08 UTC BUY AMD 0.25 SOL @ $0.0020273714 (mc $2,001,191): v-low-bundle rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-07 03:07 UTC"
+  "last_mark": "2026-11-07 03:08 UTC"
 }
