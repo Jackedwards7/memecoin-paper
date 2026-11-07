@@ -1,12 +1,12 @@
-MOVERS 2026-11-07T08:28:05Z
-CFYhdWXsYfS7swnJgHRwb5toTHMEQD7Ljd5gGwKLpump KILROY +8%
-Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump BAGEL +9%
+MOVERS 2026-11-07T08:44:05Z
+JTupCptw8iMVtL6ugiFjYmKwtwED1ZPTNmVWJKdpump UCI +5%
+Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump BAGEL +7%
+41WpXn15fxQXEGhiKnkqHcoJn14tNXXgmymLKE57pump scamsem +7%
 A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL +9%
-8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump COGE +9%
-41WpXn15fxQXEGhiKnkqHcoJn14tNXXgmymLKE57pump scamsem +25%
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -6%
-5GDX5fJTQns4arM1J94wjxdA8KXFsV5qW46MLFpHpump OMNI -6%
-5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat -4%
-FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump three -3%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -3%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +13%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -7%
+DKtofLM6bhb54GQy5YFSWQjQmGiZqAkjzkQJ1LTopump HODL -4%
+5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat -3%
+Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump baton -3%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -2%
 END
