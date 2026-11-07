@@ -1,12 +1,12 @@
-MOVERS 2026-11-07T07:08:05Z
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +5%
-JTupCptw8iMVtL6ugiFjYmKwtwED1ZPTNmVWJKdpump UCI +6%
-oCZHH8HnEBCPipEGdEcP3f45pQAaM7nh7P6EkRPpump AMD +7%
-DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD +14%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +16%
-CFYhdWXsYfS7swnJgHRwb5toTHMEQD7Ljd5gGwKLpump KILROY -18%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -14%
+MOVERS 2026-11-07T07:24:05Z
+9cE1m9UhUULcBdb1gFwanMTAmnCwiK5PyPM54Wcpump ADP +2%
+uopX9byPoNnbB9sRd5k75DH6FwnrbwvVMW2ifmcpump SARP +2%
+DKtofLM6bhb54GQy5YFSWQjQmGiZqAkjzkQJ1LTopump HODL +5%
+JTupCptw8iMVtL6ugiFjYmKwtwED1ZPTNmVWJKdpump UCI +5%
+DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD +15%
+CFYhdWXsYfS7swnJgHRwb5toTHMEQD7Ljd5gGwKLpump KILROY -24%
+A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL -11%
 8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH -8%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -3%
-GTBxUiw6wJdmmkCGZgRHLyYxqu1vG4KtRpeox6yDpump JEANPHIL -3%
+BcHEaaTCvycPwwsJ9yQTXdHP9X2gCLkznDbZ8VySpump Jotchua -6%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -5%
 END
