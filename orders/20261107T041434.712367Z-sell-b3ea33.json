@@ -1,0 +1,9 @@
+{
+  "id": "20261107T041434.712367Z-sell-b3ea33",
+  "kind": "sell",
+  "at": 1794024874.712367,
+  "by": "local",
+  "mint": "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump",
+  "fraction": 1.0,
+  "reason": "Volume collapsed: 53 trades in 1h vs ~1700 at entry (under 20% of recent level), 1h -4%, 24h -18%, theme fading; position -17%"
+}
