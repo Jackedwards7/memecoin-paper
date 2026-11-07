@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6780.62769941381,
+  "cash_sol": 6780.739893330723,
   "positions": {
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
       "symbol": "GATO",
@@ -368,81 +368,6 @@
       },
       "reentry": false,
       "since_loss_h": 0.8
-    },
-    "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": {
-      "symbol": "Rocco",
-      "opened": "2026-11-07 05:00 UTC",
-      "cost_sol": 0.25,
-      "tokens": 14361.439694780396,
-      "entry_px": 0.0007535038429282958,
-      "entry_mc": 734467,
-      "peak_px": 43.12,
-      "stop": -0.35,
-      "tp1": 1.0,
-      "tp1_done": true,
-      "thesis": "v-no-spike rule",
-      "rugcheck": 1,
-      "risks": [],
-      "realised_sol": 6772.014108368699,
-      "dex": "pumpswap",
-      "url": "https://dexscreener.com/solana/3jw1ykkqutngnudgbrwxpvzktmff4pwytotp3texhkbq",
-      "v": 2,
-      "mev_sol": 0.01111296907016861,
-      "swaps": 2,
-      "entry_liq": 83074.67,
-      "at_entry": {
-        "px": 0.0007533,
-        "liq": 83074.67,
-        "mc": 734467,
-        "dex": "pumpswap",
-        "age_h": 37.92,
-        "vol_h1": 12903.53,
-        "vol_h24": 1066602.07,
-        "buys_h1": 92,
-        "sells_h1": 51,
-        "buys_h24": 6794,
-        "sells_h24": 5856,
-        "trades_h24": 12650,
-        "avg_trade": 84.32,
-        "m5": 2.57,
-        "h1": 8.76,
-        "h6": -13.85,
-        "h24": 75.82,
-        "eligible": true,
-        "v": 3,
-        "pool": "3jW1ykKqUTNgNUDGbrwXpvZKtMFf4pWytoTP3TeXhKBQ",
-        "m5_raw": 2.57,
-        "buys_m5": 5,
-        "sells_m5": 1,
-        "buys_h6": 475,
-        "sells_h6": 477,
-        "vol_m5": 305.55,
-        "vol_h6": 89835.13,
-        "liq_base": 56749279,
-        "liq_quote": 186.996,
-        "fdv": 734467,
-        "boosts": null,
-        "links": [
-          "twitter",
-          "website"
-        ],
-        "read": {
-          "swing": 0.0968,
-          "paid": 0.0007777504833558072,
-          "vs_paid": -0.0764,
-          "off_peak": -0.3876,
-          "accel": -0.1129,
-          "candles": 96,
-          "unease": 2,
-          "known": 5,
-          "signs": [
-            "failed_high",
-            "under_paid"
-          ]
-        }
-      },
-      "reentry": false,
-      "since_loss_h": 1.6
     }
   },
   "closed": [
@@ -751,6 +676,87 @@
       "pnl_pct": -0.020524371571347122,
       "exit_reason": "time stop: 48h held, -2%, no take-profit",
       "exit_px": 0.002975
+    },
+    {
+      "symbol": "Rocco",
+      "opened": "2026-11-07 05:00 UTC",
+      "cost_sol": 0.25,
+      "tokens": 0.0,
+      "entry_px": 0.0007535038429282958,
+      "entry_mc": 734467,
+      "peak_px": 43.12,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": true,
+      "thesis": "v-no-spike rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 6772.126302285613,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/3jw1ykkqutngnudgbrwxpvzktmff4pwytotp3texhkbq",
+      "v": 2,
+      "mev_sol": 0.016664206996226123,
+      "swaps": 3,
+      "entry_liq": 83074.67,
+      "at_entry": {
+        "px": 0.0007533,
+        "liq": 83074.67,
+        "mc": 734467,
+        "dex": "pumpswap",
+        "age_h": 37.92,
+        "vol_h1": 12903.53,
+        "vol_h24": 1066602.07,
+        "buys_h1": 92,
+        "sells_h1": 51,
+        "buys_h24": 6794,
+        "sells_h24": 5856,
+        "trades_h24": 12650,
+        "avg_trade": 84.32,
+        "m5": 2.57,
+        "h1": 8.76,
+        "h6": -13.85,
+        "h24": 75.82,
+        "eligible": true,
+        "v": 3,
+        "pool": "3jW1ykKqUTNgNUDGbrwXpvZKtMFf4pWytoTP3TeXhKBQ",
+        "m5_raw": 2.57,
+        "buys_m5": 5,
+        "sells_m5": 1,
+        "buys_h6": 475,
+        "sells_h6": 477,
+        "vol_m5": 305.55,
+        "vol_h6": 89835.13,
+        "liq_base": 56749279,
+        "liq_quote": 186.996,
+        "fdv": 734467,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0968,
+          "paid": 0.0007777504833558072,
+          "vs_paid": -0.0764,
+          "off_peak": -0.3876,
+          "accel": -0.1129,
+          "candles": 96,
+          "unease": 2,
+          "known": 5,
+          "signs": [
+            "failed_high",
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 1.6,
+      "mint": "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump",
+      "closed": "2026-11-07 05:39 UTC",
+      "pnl_sol": 6771.876302285613,
+      "pnl_pct": 27087.50520914245,
+      "exit_reason": "trailing stop: 40% off peak, -0% from entry",
+      "exit_px": 0.0007498
     }
   ],
   "log": [
@@ -769,10 +775,11 @@
     "2026-11-07 03:23 UTC SELL 100% HELL -> 0.245 SOL @ $0.002975: time stop: 48h held, -2%, no take-profit",
     "2026-11-07 04:12 UTC BUY \u2588\u2588\u2588 0.25 SOL @ $0.00079518758 (mc $773,993): v-no-spike rule",
     "2026-11-07 05:00 UTC BUY Rocco 0.25 SOL @ $0.00075350384 (mc $734,467): v-no-spike rule",
-    "2026-11-07 05:38 UTC SELL 50% Rocco -> 6772.014 SOL @ $43.12: take-profit at +5722499%: half sold, cost recovered"
+    "2026-11-07 05:38 UTC SELL 50% Rocco -> 6772.014 SOL @ $43.12: take-profit at +5722499%: half sold, cost recovered",
+    "2026-11-07 05:39 UTC SELL 100% Rocco -> 0.112 SOL @ $0.0007498: trailing stop: 40% off peak, -0% from entry"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-07 05:38 UTC"
+  "last_mark": "2026-11-07 05:39 UTC"
 }
