@@ -553,11 +553,11 @@
     "2026-11-07 03:30 UTC SELL 100% JOB -> 0.298 SOL @ $0.004911: time stop: 49h held, +20%, no take-profit",
     "2026-11-07 04:15 UTC SELL 100% three -> 0.191 SOL @ $0.0005274: Volume collapsed: 53 trades in 1h vs ~1700 at entry (under 20% of recent level), 1h -4%, 24h -18%, theme fading; position -17%"
   ],
-  "last_mark": "2026-11-07 13:11 UTC",
+  "last_mark": "2026-11-07 13:16 UTC",
   "gate_pass": {
     "EwX2T1p2PmgTsSq2Bi6XtQYxPC5krR4P2fxPfN4Qpump": 1794056410,
-    "8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump": 1794053528,
-    "FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump": 1794053528,
+    "8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump": 1794057370,
+    "FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump": 1794057370,
     "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": 1794054490,
     "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794054490,
     "oCZHH8HnEBCPipEGdEcP3f45pQAaM7nh7P6EkRPpump": 1794050648,
@@ -865,6 +865,15 @@
       "fails": [
         "RugCheck danger: Low Liquidity",
         "copycat: an earlier 'Busted' exists (Gg3XUJ)"
+      ],
+      "moves": {}
+    },
+    "8Mi9E1V2bdPeAaRkR5yxUsAvpzP6UBUEEUrYmgKNpump": {
+      "symbol": "WEALTH",
+      "at": 1794057370,
+      "px": 0.000828,
+      "fails": [
+        "a wallet holds 10% of supply"
       ],
       "moves": {}
     }
