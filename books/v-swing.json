@@ -371,83 +371,6 @@
       },
       "reentry": false,
       "since_loss_h": 4.3
-    },
-    "21azpu32qfuNZR6TkKdUZKVnDtmvTUSBrXxhRFE5pump": {
-      "symbol": "Hakutaku",
-      "opened": "2026-11-07 15:56 UTC",
-      "cost_sol": 0.25,
-      "tokens": 13242.160403590087,
-      "entry_px": 0.0016230423771466426,
-      "entry_mc": 1545866,
-      "peak_px": 0.0016230423771466426,
-      "stop": -0.5,
-      "tp1": 1.0,
-      "tp1_done": false,
-      "thesis": "v-swing rule",
-      "rugcheck": 25,
-      "risks": [
-        "Low Liquidity"
-      ],
-      "realised_sol": 0.0,
-      "dex": "pumpswap",
-      "url": "https://dexscreener.com/solana/8ntg5uszaxtr2wb5c5noeeb6mjdtoj9lr6r3adnyfzqm",
-      "v": 2,
-      "mev_sol": 0.005598477214197738,
-      "swaps": 1,
-      "entry_liq": 855119.69,
-      "at_entry": {
-        "px": 0.001623,
-        "liq": 855119.69,
-        "mc": 1545866,
-        "dex": "pumpswap",
-        "age_h": 10.21,
-        "vol_h1": 1739.55,
-        "vol_h24": 270171.85,
-        "buys_h1": 188,
-        "sells_h1": 45,
-        "buys_h24": 6497,
-        "sells_h24": 3701,
-        "trades_h24": 10198,
-        "avg_trade": 26.49,
-        "m5": 0.1,
-        "h1": 23164,
-        "h6": 9185,
-        "h24": 4216,
-        "eligible": true,
-        "v": 3,
-        "pool": "8nTg5UsZAXtr2wB5c5noeEb6mjDtoJ9LR6R3ADNyfzqM",
-        "m5_raw": 0.1,
-        "buys_m5": 35,
-        "sells_m5": 1,
-        "buys_h6": 1478,
-        "sells_h6": 376,
-        "vol_m5": 3.83,
-        "vol_h6": 20006.93,
-        "liq_base": 525903410,
-        "liq_quote": 17.1463,
-        "fdv": 1545866,
-        "boosts": null,
-        "links": [
-          "twitter"
-        ],
-        "read": {
-          "swing": 0.2535,
-          "paid": 4.424751499163259e-05,
-          "vs_paid": -0.8423,
-          "off_peak": -0.9134,
-          "accel": 0.176,
-          "candles": 40,
-          "unease": 3,
-          "known": 3,
-          "signs": [
-            "failed_high",
-            "sol_leaving",
-            "under_paid"
-          ]
-        }
-      },
-      "reentry": false,
-      "since_loss_h": 0.9
     }
   },
   "closed": [
@@ -1410,6 +1333,89 @@
       "pnl_pct": -0.29343060788128406,
       "exit_reason": "stop-loss at -23%",
       "exit_px": 0.001342
+    },
+    {
+      "symbol": "Hakutaku",
+      "opened": "2026-11-07 15:56 UTC",
+      "cost_sol": 0.25,
+      "tokens": 0.0,
+      "entry_px": 0.0016230423771466426,
+      "entry_mc": 1545866,
+      "peak_px": 0.001625,
+      "stop": -0.5,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-swing rule",
+      "rugcheck": 25,
+      "risks": [
+        "Low Liquidity"
+      ],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/8ntg5uszaxtr2wb5c5noeeb6mjdtoj9lr6r3adnyfzqm",
+      "v": 2,
+      "mev_sol": 0.0063421227553443985,
+      "swaps": 2,
+      "entry_liq": 855119.69,
+      "at_entry": {
+        "px": 0.001623,
+        "liq": 855119.69,
+        "mc": 1545866,
+        "dex": "pumpswap",
+        "age_h": 10.21,
+        "vol_h1": 1739.55,
+        "vol_h24": 270171.85,
+        "buys_h1": 188,
+        "sells_h1": 45,
+        "buys_h24": 6497,
+        "sells_h24": 3701,
+        "trades_h24": 10198,
+        "avg_trade": 26.49,
+        "m5": 0.1,
+        "h1": 23164,
+        "h6": 9185,
+        "h24": 4216,
+        "eligible": true,
+        "v": 3,
+        "pool": "8nTg5UsZAXtr2wB5c5noeEb6mjDtoJ9LR6R3ADNyfzqM",
+        "m5_raw": 0.1,
+        "buys_m5": 35,
+        "sells_m5": 1,
+        "buys_h6": 1478,
+        "sells_h6": 376,
+        "vol_m5": 3.83,
+        "vol_h6": 20006.93,
+        "liq_base": 525903410,
+        "liq_quote": 17.1463,
+        "fdv": 1545866,
+        "boosts": null,
+        "links": [
+          "twitter"
+        ],
+        "read": {
+          "swing": 0.2535,
+          "paid": 4.424751499163259e-05,
+          "vs_paid": -0.8423,
+          "off_peak": -0.9134,
+          "accel": 0.176,
+          "candles": 40,
+          "unease": 3,
+          "known": 3,
+          "signs": [
+            "failed_high",
+            "sol_leaving",
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 0.9,
+      "mint": "21azpu32qfuNZR6TkKdUZKVnDtmvTUSBrXxhRFE5pump",
+      "closed": "2026-11-07 16:05 UTC",
+      "pnl_sol": -0.25,
+      "pnl_pct": -1.0,
+      "exit_reason": "event exit: liquidity down 100% since entry, -100% from entry",
+      "exit_px": 5.101e-06
     }
   ],
   "log": [
@@ -1444,10 +1450,11 @@
     "2026-11-07 11:31 UTC SELL 100% COGE -> 0.286 SOL @ $0.00732: event exit: price -69% in 5 minutes, +147% from entry",
     "2026-11-07 12:28 UTC BUY Rocco 0.25 SOL @ $0.00090372233 (mc $880,883): v-swing rule",
     "2026-11-07 15:00 UTC SELL 100% NIO -> 0.177 SOL @ $0.001342: stop-loss at -23%",
-    "2026-11-07 15:56 UTC BUY Hakutaku 0.25 SOL @ $0.0016230424 (mc $1,545,866): v-swing rule"
+    "2026-11-07 15:56 UTC BUY Hakutaku 0.25 SOL @ $0.0016230424 (mc $1,545,866): v-swing rule",
+    "2026-11-07 16:05 UTC SELL 100% Hakutaku -> 0.000 SOL @ $5.101e-06: event exit: liquidity down 100% since entry, -100% from entry"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-07 15:56 UTC"
+  "last_mark": "2026-11-07 16:05 UTC"
 }
