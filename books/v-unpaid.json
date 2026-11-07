@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.216218524405926,
+  "cash_sol": 7.966218524405926,
   "positions": {
     "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump": {
       "symbol": "CATE",
@@ -375,6 +375,81 @@
       },
       "reentry": false,
       "since_loss_h": 0.1
+    },
+    "CFYhdWXsYfS7swnJgHRwb5toTHMEQD7Ljd5gGwKLpump": {
+      "symbol": "KILROY",
+      "opened": "2026-11-07 03:56 UTC",
+      "cost_sol": 0.25,
+      "tokens": 40931.20753164446,
+      "entry_px": 0.000528339225840845,
+      "entry_mc": 517967,
+      "peak_px": 0.000528339225840845,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unpaid rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/fakn3y8zxrneqagcwfkniu4x8gn4dmsymyjh1s5ebrx",
+      "v": 2,
+      "mev_sol": 0.005564830272676684,
+      "swaps": 1,
+      "entry_liq": 85219.04,
+      "at_entry": {
+        "px": 0.0005282,
+        "liq": 85219.04,
+        "mc": 517967,
+        "dex": "pumpswap",
+        "age_h": 8649.32,
+        "vol_h1": 27164.47,
+        "vol_h24": 517843.49,
+        "buys_h1": 176,
+        "sells_h1": 158,
+        "buys_h24": 3097,
+        "sells_h24": 2122,
+        "trades_h24": 5219,
+        "avg_trade": 99.22,
+        "m5": -8.66,
+        "h1": 20.83,
+        "h6": 160,
+        "h24": 174,
+        "eligible": true,
+        "v": 3,
+        "pool": "faKN3Y8zXRNEQaGcWFkniu4X8gn4DmSymyJH1s5EBRX",
+        "m5_raw": -8.66,
+        "buys_m5": 25,
+        "sells_m5": 20,
+        "buys_h6": 3019,
+        "sells_h6": 2034,
+        "vol_m5": 2766.98,
+        "vol_h6": 515005.13,
+        "liq_base": 80967599,
+        "liq_quote": 472.5805,
+        "fdv": 517967,
+        "boosts": null,
+        "links": [
+          "tiktok",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.016,
+          "paid": 0.000588985510465503,
+          "vs_paid": -0.1449,
+          "off_peak": -0.5167,
+          "accel": 1.4675,
+          "candles": 96,
+          "unease": 1,
+          "known": 3,
+          "signs": [
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 0.2
     }
   },
   "closed": [
@@ -774,10 +849,11 @@
     "2026-11-06 04:11 UTC BUY 67 0.25 SOL @ $0.0013861136 (mc $1,316,496): v-unpaid rule",
     "2026-11-07 01:13 UTC SELL 100% AODT -> 0.000 SOL @ $1.78e-05: event exit: liquidity down 99% since entry, -100% from entry",
     "2026-11-07 01:16 UTC BUY ADP 0.25 SOL @ $0.010080904 (mc $10,079,724): v-unpaid rule",
-    "2026-11-07 03:44 UTC SELL 100% AMD -> 0.139 SOL @ $0.0004062: stop-loss at -39%"
+    "2026-11-07 03:44 UTC SELL 100% AMD -> 0.139 SOL @ $0.0004062: stop-loss at -39%",
+    "2026-11-07 03:56 UTC BUY KILROY 0.25 SOL @ $0.00052833923 (mc $517,967): v-unpaid rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-07 03:55 UTC"
+  "last_mark": "2026-11-07 03:56 UTC"
 }
