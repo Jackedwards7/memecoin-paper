@@ -553,7 +553,7 @@
     "2026-11-07 03:30 UTC SELL 100% JOB -> 0.298 SOL @ $0.004911: time stop: 49h held, +20%, no take-profit",
     "2026-11-07 04:15 UTC SELL 100% three -> 0.191 SOL @ $0.0005274: Volume collapsed: 53 trades in 1h vs ~1700 at entry (under 20% of recent level), 1h -4%, 24h -18%, theme fading; position -17%"
   ],
-  "last_mark": "2026-11-07 20:12 UTC",
+  "last_mark": "2026-11-07 20:14 UTC",
   "gate_pass": {
     "EwX2T1p2PmgTsSq2Bi6XtQYxPC5krR4P2fxPfN4Qpump": 1794079472,
     "8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump": 1794080432,
@@ -673,7 +673,8 @@
         "copycat: an earlier 'Always Moist Downstairs' exists (HjiBij)"
       ],
       "moves": {
-        "1d": -0.9979433497536946
+        "1d": -0.9979433497536946,
+        "3d": -0.9979478280340349
       }
     },
     "SivBpeYowiW8LyKyhoZGoh67qCc2ZV4jpWy6btPpump": {
@@ -983,7 +984,8 @@
       "px": 0.004481,
       "fails": [],
       "moves": {
-        "1d": 0.15376032135684015
+        "1d": 0.15376032135684015,
+        "3d": 0.26355724168712347
       }
     },
     "7F8BkfhPaDGMeNkaYeVa99WAqo86LpXDKsLQXpM7pump": {
