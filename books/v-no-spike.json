@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6780.637452211986,
+  "cash_sol": 6780.387452211986,
   "positions": {
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
       "symbol": "GATO",
@@ -366,6 +366,81 @@
       },
       "reentry": false,
       "since_loss_h": 7.0
+    },
+    "8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump": {
+      "symbol": "COGE",
+      "opened": "2026-11-07 21:33 UTC",
+      "cost_sol": 0.25,
+      "tokens": 1922.6280577552473,
+      "entry_px": 0.011110872388360525,
+      "entry_mc": 11063593,
+      "peak_px": 0.011110872388360525,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-no-spike rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/8gjmy6ipysxfmwwrpu9c7atssorjg6al88d9xttzslqe",
+      "v": 2,
+      "mev_sol": 0.005631899076368551,
+      "swaps": 1,
+      "entry_liq": 282656.74,
+      "at_entry": {
+        "px": 0.01111,
+        "liq": 282656.74,
+        "mc": 11063593,
+        "dex": "pumpswap",
+        "age_h": 49.74,
+        "vol_h1": 73225.32,
+        "vol_h24": 2518739.01,
+        "buys_h1": 3787,
+        "sells_h1": 2097,
+        "buys_h24": 137677,
+        "sells_h24": 84153,
+        "trades_h24": 221830,
+        "avg_trade": 11.35,
+        "m5": 4.82,
+        "h1": 11.46,
+        "h6": 11.16,
+        "h24": 106,
+        "eligible": true,
+        "v": 3,
+        "pool": "8GjMy6ipYsXfMWwRPu9C7ATssorjg6AL88d9xtTZsLqe",
+        "m5_raw": 4.82,
+        "buys_m5": 461,
+        "sells_m5": 162,
+        "buys_h6": 20411,
+        "sells_h6": 13170,
+        "vol_m5": 3530.71,
+        "vol_h6": 350344.63,
+        "liq_base": 12799782,
+        "liq_quote": 1581.4926,
+        "fdv": 11063593,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0798,
+          "paid": 0.013007230925359966,
+          "vs_paid": -0.2569,
+          "off_peak": -0.6053,
+          "accel": -0.0941,
+          "candles": 96,
+          "unease": 2,
+          "known": 5,
+          "signs": [
+            "failed_high",
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 1.0
     }
   },
   "closed": [
@@ -858,10 +933,11 @@
     "2026-11-07 05:38 UTC SELL 50% Rocco -> 6772.014 SOL @ $43.12: take-profit at +5722499%: half sold, cost recovered",
     "2026-11-07 05:39 UTC SELL 100% Rocco -> 0.112 SOL @ $0.0007498: trailing stop: 40% off peak, -0% from entry",
     "2026-11-07 10:20 UTC BUY BAGEL 0.25 SOL @ $0.00095147168 (mc $937,406): v-no-spike rule",
-    "2026-11-07 20:36 UTC SELL 100% \u2588\u2588\u2588 -> 0.148 SOL @ $0.0005111: stop-loss at -36%"
+    "2026-11-07 20:36 UTC SELL 100% \u2588\u2588\u2588 -> 0.148 SOL @ $0.0005111: stop-loss at -36%",
+    "2026-11-07 21:33 UTC BUY COGE 0.25 SOL @ $0.011110872 (mc $11,063,593): v-no-spike rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-07 21:31 UTC"
+  "last_mark": "2026-11-07 21:32 UTC"
 }
