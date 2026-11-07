@@ -553,7 +553,7 @@
     "2026-11-07 03:30 UTC SELL 100% JOB -> 0.298 SOL @ $0.004911: time stop: 49h held, +20%, no take-profit",
     "2026-11-07 04:15 UTC SELL 100% three -> 0.191 SOL @ $0.0005274: Volume collapsed: 53 trades in 1h vs ~1700 at entry (under 20% of recent level), 1h -4%, 24h -18%, theme fading; position -17%"
   ],
-  "last_mark": "2026-11-07 07:19 UTC",
+  "last_mark": "2026-11-07 07:20 UTC",
   "gate_pass": {
     "EwX2T1p2PmgTsSq2Bi6XtQYxPC5krR4P2fxPfN4Qpump": 1794033365,
     "8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump": 1794034325,
@@ -650,7 +650,8 @@
         "already pumped: +2904% in 24h"
       ],
       "moves": {
-        "1d": -0.5885832187070151
+        "1d": -0.5885832187070151,
+        "3d": -0.6262723521320495
       }
     },
     "8muc9DdhqWfAPcvmEebNQCG89bLiwi12T2KtBtzVpump": {
@@ -661,7 +662,8 @@
         "already pumped: +1115% in 24h"
       ],
       "moves": {
-        "1d": -0.996205393625715
+        "1d": -0.996205393625715,
+        "3d": -0.9966426041950422
       }
     },
     "5tdWkbqhTqVyPmksqX8WVKrHbjjqmvQfrMGwZoZPpump": {
@@ -874,7 +876,8 @@
       "px": 0.0005298,
       "fails": [],
       "moves": {
-        "1d": 0.0917327293318233
+        "1d": 0.0917327293318233,
+        "3d": -0.028690071725179234
       }
     },
     "HMYd9tosnUXuNHmq7pXmoePRVBLBBjA3JBfydq6upump": {
