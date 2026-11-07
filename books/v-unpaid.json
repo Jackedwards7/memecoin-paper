@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.19687263366958,
+  "cash_sol": 7.94687263366958,
   "positions": {
     "BcHEaaTCvycPwwsJ9yQTXdHP9X2gCLkznDbZ8VySpump": {
       "symbol": "Jotchua",
@@ -162,7 +162,7 @@
       "tokens": 2154.483212883431,
       "entry_px": 0.010080903564308774,
       "entry_mc": 10079724,
-      "peak_px": 0.01284,
+      "peak_px": 0.01287,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -308,7 +308,7 @@
       "tokens": 8141.1636920039355,
       "entry_px": 0.0026614653407941234,
       "entry_mc": 2658549,
-      "peak_px": 0.002676,
+      "peak_px": 0.002681,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -371,6 +371,77 @@
       },
       "reentry": false,
       "since_loss_h": 0.3
+    },
+    "U2mFGznZZDUUtsQyVmf9etuyvrjrAfgGiT5A1pNpump": {
+      "symbol": "GROKNAM",
+      "opened": "2026-11-07 10:52 UTC",
+      "cost_sol": 0.25,
+      "tokens": 5744.088873413462,
+      "entry_px": 0.0037635516226184806,
+      "entry_mc": 3761621,
+      "peak_px": 0.0037635516226184806,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unpaid rule",
+      "rugcheck": 33,
+      "risks": [
+        "High holder correlation"
+      ],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/6f6znfxvstwgl5ffjm1kaautcfbvmbssxrt4w3jc26zu",
+      "v": 2,
+      "mev_sol": 0.005566688933422401,
+      "swaps": 1,
+      "entry_liq": 153181.11,
+      "at_entry": {
+        "px": 0.003763,
+        "liq": 153181.11,
+        "mc": 3761621,
+        "dex": "pumpswap",
+        "age_h": 33.91,
+        "vol_h1": 6627.92,
+        "vol_h24": 153163.82,
+        "buys_h1": 175,
+        "sells_h1": 117,
+        "buys_h24": 3967,
+        "sells_h24": 2645,
+        "trades_h24": 6612,
+        "avg_trade": 23.16,
+        "m5": 0.01,
+        "h1": 0.42,
+        "h6": 4.83,
+        "h24": 16.55,
+        "eligible": true,
+        "v": 3,
+        "pool": "6f6ZnfXvstWgL5fFjM1kaaUtcfBvMbSsxrt4w3jc26zU",
+        "m5_raw": 0.01,
+        "buys_m5": 14,
+        "sells_m5": 9,
+        "buys_h6": 1061,
+        "sells_h6": 711,
+        "vol_m5": 504.31,
+        "vol_h6": 41170.22,
+        "liq_base": 20578141,
+        "liq_quote": 843.3385,
+        "fdv": 3761621,
+        "boosts": null,
+        "links": null,
+        "read": {
+          "swing": 0.0131,
+          "paid": 0.0033412543859863302,
+          "vs_paid": 0.0724,
+          "off_peak": -0.0082,
+          "accel": 0.0044,
+          "candles": 96,
+          "unease": 0,
+          "known": 5,
+          "signs": []
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 1.1
     }
   },
   "closed": [
@@ -936,10 +1007,11 @@
     "2026-11-07 03:56 UTC BUY KILROY 0.25 SOL @ $0.00052833923 (mc $517,967): v-unpaid rule",
     "2026-11-07 09:47 UTC SELL 100% CATE -> 0.205 SOL @ $0.03382: time stop: 48h held, -17%, no take-profit",
     "2026-11-07 10:03 UTC SELL 100% baton -> 0.275 SOL @ $0.006072: time stop: 48h held, +10%, no take-profit",
-    "2026-11-07 10:04 UTC BUY SPCX1K 0.25 SOL @ $0.0026614653 (mc $2,658,549): v-unpaid rule"
+    "2026-11-07 10:04 UTC BUY SPCX1K 0.25 SOL @ $0.0026614653 (mc $2,658,549): v-unpaid rule",
+    "2026-11-07 10:52 UTC BUY GROKNAM 0.25 SOL @ $0.0037635516 (mc $3,761,621): v-unpaid rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-07 10:47 UTC"
+  "last_mark": "2026-11-07 10:52 UTC"
 }
