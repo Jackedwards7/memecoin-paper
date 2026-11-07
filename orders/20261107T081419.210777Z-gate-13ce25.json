@@ -1,0 +1,44 @@
+{
+  "id": "20261107T081419.210777Z-gate-13ce25",
+  "kind": "gate",
+  "at": 1794039259.210777,
+  "by": "local",
+  "results": {
+    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": {
+      "symbol": "HELL",
+      "px": 0.002947,
+      "fails": []
+    },
+    "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
+      "symbol": "CBUCKS",
+      "px": 0.002361,
+      "fails": [
+        "a wallet holds 14% of supply"
+      ]
+    },
+    "DKtofLM6bhb54GQy5YFSWQjQmGiZqAkjzkQJ1LTopump": {
+      "symbol": "HODL",
+      "px": 0.004047,
+      "fails": [
+        "copycat: an earlier 'Diamond Hands' exists (6VhsEM)"
+      ]
+    },
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "px": 0.01224,
+      "fails": []
+    },
+    "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
+      "symbol": "GLITCH",
+      "px": 0.002897,
+      "fails": [
+        "copycat: an earlier 'Infinite Money Glitch' exists (znv3FZ)"
+      ]
+    },
+    "FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump": {
+      "symbol": "DONNA",
+      "px": 0.001536,
+      "fails": []
+    }
+  }
+}
