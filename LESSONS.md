@@ -1,8 +1,8 @@
 # Lessons
 
-66 closed trades labelled, every book. Written by the bot.
+67 closed trades labelled, every book. Written by the bot.
 
-- **other**: 30 trades, mean -36%. FARTBOY (v-unpaid): event exit: price -20% in 5 minutes, -10% from entry; VETO (v-tight): stop-loss at -21%
+- **other**: 31 trades, mean -36%. VETO (v-tight): stop-loss at -21%; VETO (v-no-spike): stop-loss at -35%
 - **won-held**: 19 trades, mean +49%. DESSA (v-unease): +72%, peak +120%; DESSA (v-velocity): +72%, peak +120%
 - **bought-spike**: 10 trades, mean -34%. AMC (v-unease): up 3554% in 24h at entry, peak +0%; AMC (v-velocity): up 3554% in 24h at entry, peak +0%
 - **slow-bleed**: 7 trades, mean -35%. DOPE (v-unpaid): -37% over 24h; VETO (v-velocity): -38% over 15h
