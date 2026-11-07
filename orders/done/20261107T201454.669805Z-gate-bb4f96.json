@@ -1,7 +1,7 @@
 {
-  "id": "20261107T201442.192745Z-gate-977080",
+  "id": "20261107T201454.669805Z-gate-bb4f96",
   "kind": "gate",
-  "at": 1794082482.192745,
+  "at": 1794082494.669805,
   "by": "local",
   "results": {
     "DKtofLM6bhb54GQy5YFSWQjQmGiZqAkjzkQJ1LTopump": {
@@ -35,5 +35,7 @@
       "px": 0.002915,
       "fails": []
     }
-  }
+  },
+  "result": "recorded 5 gate results, 2 passed",
+  "applied_at": "2026-11-07 20:15 UTC"
 }
