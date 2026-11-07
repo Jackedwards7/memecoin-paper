@@ -539,14 +539,8 @@
     "2026-11-06 12:16 UTC BUY HELL 0.25 SOL @ $0.0029684887 (mc $2,831,474): Gate pass; mature pumpswap coin (575h), mc $2.9M, liq $138k, 1h +1.8%, 24h +10.6%, 5m +12.9% (<25%), 1h buys 2817 vs 2752. Other passes GATO (sellers lead), COGE (16h, +8457% 24h) and AMD (10h, +4852% 24h) skipped.",
     "2026-11-06 20:15 UTC BUY GATO 0.25 SOL @ $0.011930744 (mc $11,775,041): Gate pass; mature pumpswap coin (1760h), mc $11.8M, liq $363k, 1h +5.3%, 24h +23.8%, 5m +0.5% (no spike), 1h buys 443 vs sells 421. Other passes DESSA/NIO/COGE/AMD skipped (sellers lead or vertical 24h); HELL/three already held."
   ],
-  "last_mark": "2026-11-07 00:49 UTC",
+  "last_mark": "2026-11-07 01:00 UTC",
   "gate_pass": {
-    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794009374,
-    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1794010515.913613,
-    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794010515.913613,
-    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794010515.913613,
-    "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1794010515.913613,
-    "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": 1794010515.913613,
     "EwX2T1p2PmgTsSq2Bi6XtQYxPC5krR4P2fxPfN4Qpump": 1794010334
   },
   "rejects": {
@@ -743,6 +737,65 @@
       "symbol": "Rocco",
       "at": 1794012254,
       "px": 0.0007767,
+      "fails": [
+        "RugCheck danger: Large Amount of LP Unlocked",
+        "deepest pool is meteoraDlmm, not a graduation pool"
+      ],
+      "moves": {}
+    },
+    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
+      "symbol": "JOB",
+      "at": 1794013214,
+      "px": 0.005592,
+      "fails": [
+        "RugCheck danger: Large Amount of LP Unlocked, Low Liquidity",
+        "deepest pool is manifest, not a graduation pool"
+      ],
+      "moves": {}
+    },
+    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": {
+      "symbol": "HELL",
+      "at": 1794013214,
+      "px": 0.002921,
+      "fails": [
+        "RugCheck danger: Large Amount of LP Unlocked",
+        "deepest pool is meteoraDlmm, not a graduation pool"
+      ],
+      "moves": {}
+    },
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "at": 1794013214,
+      "px": 0.01158,
+      "fails": [
+        "RugCheck danger: Large Amount of LP Unlocked",
+        "deepest pool is meteoraDlmm, not a graduation pool"
+      ],
+      "moves": {}
+    },
+    "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": {
+      "symbol": "three",
+      "at": 1794013214,
+      "px": 0.0005422,
+      "fails": [
+        "deepest pool is orca, not a graduation pool"
+      ],
+      "moves": {}
+    },
+    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": {
+      "symbol": "DESSA",
+      "at": 1794013214,
+      "px": 0.02288,
+      "fails": [
+        "RugCheck danger: Large Amount of LP Unlocked, Low Liquidity",
+        "deepest pool is meteoraDlmm, not a graduation pool"
+      ],
+      "moves": {}
+    },
+    "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": {
+      "symbol": "NIO",
+      "at": 1794013214,
+      "px": 0.00164,
       "fails": [
         "RugCheck danger: Large Amount of LP Unlocked",
         "deepest pool is meteoraDlmm, not a graduation pool"
