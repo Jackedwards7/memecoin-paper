@@ -1,12 +1,12 @@
-MOVERS 2026-11-07T09:00:05Z
-JTupCptw8iMVtL6ugiFjYmKwtwED1ZPTNmVWJKdpump UCI +5%
-5GDX5fJTQns4arM1J94wjxdA8KXFsV5qW46MLFpHpump OMNI +6%
-8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH +7%
-8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump COGE +7%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +8%
-CFYhdWXsYfS7swnJgHRwb5toTHMEQD7Ljd5gGwKLpump KILROY -6%
-Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump BAGEL -5%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -5%
-41WpXn15fxQXEGhiKnkqHcoJn14tNXXgmymLKE57pump scamsem -5%
-CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi -5%
+MOVERS 2026-11-07T09:16:05Z
+oCZHH8HnEBCPipEGdEcP3f45pQAaM7nh7P6EkRPpump AMD +6%
+41WpXn15fxQXEGhiKnkqHcoJn14tNXXgmymLKE57pump scamsem +8%
+A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL +13%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +15%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +16%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -9%
+Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump BAGEL -9%
+CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi -7%
+npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -4%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -4%
 END
