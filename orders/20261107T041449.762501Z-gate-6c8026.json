@@ -1,0 +1,35 @@
+{
+  "id": "20261107T041449.762501Z-gate-6c8026",
+  "kind": "gate",
+  "at": 1794024889.762501,
+  "by": "local",
+  "results": {
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "px": 0.01156,
+      "fails": []
+    },
+    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": {
+      "symbol": "HELL",
+      "px": 0.003156,
+      "fails": []
+    },
+    "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
+      "symbol": "GLITCH",
+      "px": 0.003007,
+      "fails": [
+        "copycat: an earlier 'Infinite Money Glitch' exists (znv3FZ)"
+      ]
+    },
+    "oCZHH8HnEBCPipEGdEcP3f45pQAaM7nh7P6EkRPpump": {
+      "symbol": "AMD",
+      "px": 0.001732,
+      "fails": []
+    },
+    "FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump": {
+      "symbol": "DONNA",
+      "px": 0.001511,
+      "fails": []
+    }
+  }
+}
