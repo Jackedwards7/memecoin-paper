@@ -553,16 +553,16 @@
     "2026-11-07 03:30 UTC SELL 100% JOB -> 0.298 SOL @ $0.004911: time stop: 49h held, +20%, no take-profit",
     "2026-11-07 04:15 UTC SELL 100% three -> 0.191 SOL @ $0.0005274: Volume collapsed: 53 trades in 1h vs ~1700 at entry (under 20% of recent level), 1h -4%, 24h -18%, theme fading; position -17%"
   ],
-  "last_mark": "2026-11-07 08:12 UTC",
+  "last_mark": "2026-11-07 08:15 UTC",
   "gate_pass": {
     "EwX2T1p2PmgTsSq2Bi6XtQYxPC5krR4P2fxPfN4Qpump": 1794037205,
     "8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump": 1794038165,
-    "FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump": 1794038165,
+    "FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump": 1794039259.210777,
     "oCZHH8HnEBCPipEGdEcP3f45pQAaM7nh7P6EkRPpump": 1794039126,
     "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794039126,
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794036245,
-    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1794036245,
-    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794036245,
+    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1794039259.210777,
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794039259.210777,
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1794036245,
     "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": 1794036245,
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794036245,
@@ -1177,6 +1177,18 @@
       "kind": "gate",
       "result": "recorded 5 gate results, 4 passed",
       "at": "2026-11-07 04:15 UTC"
+    },
+    {
+      "id": "20261107T081407.178625Z-gate-a254e1",
+      "kind": "gate",
+      "result": "recorded 0 gate results, 0 passed",
+      "at": "2026-11-07 08:15 UTC"
+    },
+    {
+      "id": "20261107T081419.210777Z-gate-13ce25",
+      "kind": "gate",
+      "result": "recorded 6 gate results, 3 passed",
+      "at": "2026-11-07 08:15 UTC"
     }
   ]
 }
