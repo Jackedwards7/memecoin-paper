@@ -1,0 +1,43 @@
+{
+  "id": "20261107T001515.913613Z-gate-96f007",
+  "kind": "gate",
+  "at": 1794010515.913613,
+  "by": "local",
+  "results": {
+    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": {
+      "symbol": "DESSA",
+      "px": 0.02303,
+      "fails": []
+    },
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "px": 0.01138,
+      "fails": []
+    },
+    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": {
+      "symbol": "HELL",
+      "px": 0.002965,
+      "fails": []
+    },
+    "oCZHH8HnEBCPipEGdEcP3f45pQAaM7nh7P6EkRPpump": {
+      "symbol": "AMD",
+      "px": 0.002226,
+      "fails": []
+    },
+    "FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump": {
+      "symbol": "DONNA",
+      "px": 0.001518,
+      "fails": []
+    },
+    "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": {
+      "symbol": "NIO",
+      "px": 0.001402,
+      "fails": []
+    },
+    "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": {
+      "symbol": "three",
+      "px": 0.0005558,
+      "fails": []
+    }
+  }
+}
