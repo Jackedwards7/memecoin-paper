@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.331494377999748,
+  "cash_sol": 8.081494377999748,
   "positions": {
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
       "symbol": "GATO",
@@ -296,6 +296,81 @@
       },
       "reentry": false,
       "since_loss_h": 0.1
+    },
+    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": {
+      "symbol": "HELL",
+      "opened": "2026-11-07 22:21 UTC",
+      "cost_sol": 0.25,
+      "tokens": 6702.189072993551,
+      "entry_px": 0.0032034943756682433,
+      "entry_mc": 3055728,
+      "peak_px": 0.0032034943756682433,
+      "stop": -0.2,
+      "tp1": 0.4,
+      "tp1_done": false,
+      "thesis": "v-tight rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/ewsyhiuznynqh5f65ypfsoqblq2kyetuvhm5un7wsfdg",
+      "v": 2,
+      "mev_sol": 0.005604124635731899,
+      "swaps": 1,
+      "entry_liq": 144511.39,
+      "at_entry": {
+        "px": 0.003203,
+        "liq": 144511.39,
+        "mc": 3055728,
+        "dex": "pumpswap",
+        "age_h": 609.3,
+        "vol_h1": 3749.22,
+        "vol_h24": 59715.81,
+        "buys_h1": 2420,
+        "sells_h1": 2411,
+        "buys_h24": 30758,
+        "sells_h24": 31352,
+        "trades_h24": 62110,
+        "avg_trade": 0.96,
+        "m5": 12.01,
+        "h1": 6.98,
+        "h6": 12.59,
+        "h24": 4.96,
+        "eligible": true,
+        "v": 3,
+        "pool": "EwsYHiuznyNqH5f65YpfsoQBLq2KyETuvhm5un7wsfDG",
+        "m5_raw": 12.01,
+        "buys_m5": 177,
+        "sells_m5": 172,
+        "buys_h6": 14228,
+        "sells_h6": 14492,
+        "vol_m5": 209.13,
+        "vol_h6": 23028.99,
+        "liq_base": 23348896,
+        "liq_quote": 156.2042,
+        "fdv": 3055728,
+        "boosts": 10,
+        "links": [
+          "telegram",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0805,
+          "paid": 0.0029138223385142496,
+          "vs_paid": 0.0412,
+          "off_peak": -0.0535,
+          "accel": 0.0231,
+          "candles": 96,
+          "unease": 1,
+          "known": 5,
+          "signs": [
+            "failed_high"
+          ]
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 3.6
     }
   },
   "closed": [
@@ -1649,10 +1724,11 @@
     "2026-11-07 16:05 UTC SELL 100% Hakutaku -> 0.000 SOL @ $5.101e-06: event exit: liquidity down 100% since entry, -100% from entry",
     "2026-11-07 16:50 UTC SELL 100% PAWKET -> 0.184 SOL @ $0.0007167: stop-loss at -20%",
     "2026-11-07 17:01 UTC BUY \u2588\u2588\u2588 0.25 SOL @ $0.00077008418 (mc $749,591): v-tight rule",
-    "2026-11-07 18:48 UTC SELL 100% \u2588\u2588\u2588 -> 0.181 SOL @ $0.000608: stop-loss at -21%"
+    "2026-11-07 18:48 UTC SELL 100% \u2588\u2588\u2588 -> 0.181 SOL @ $0.000608: stop-loss at -21%",
+    "2026-11-07 22:21 UTC BUY HELL 0.25 SOL @ $0.0032034944 (mc $3,055,728): v-tight rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-07 22:15 UTC"
+  "last_mark": "2026-11-07 22:20 UTC"
 }
