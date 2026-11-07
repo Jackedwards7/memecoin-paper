@@ -1,0 +1,42 @@
+{
+  "id": "20261107T121430.920755Z-gate-4b19e1",
+  "kind": "gate",
+  "at": 1794053670.920755,
+  "by": "local",
+  "results": {
+    "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
+      "symbol": "GLITCH",
+      "px": 0.002838,
+      "fails": [
+        "copycat: an earlier 'Infinite Money Glitch' exists (znv3FZ)"
+      ]
+    },
+    "DKtofLM6bhb54GQy5YFSWQjQmGiZqAkjzkQJ1LTopump": {
+      "symbol": "HODL",
+      "px": 0.003697,
+      "fails": [
+        "copycat: an earlier 'Diamond Hands' exists (6VhsEM)"
+      ]
+    },
+    "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
+      "symbol": "CBUCKS",
+      "px": 0.002626,
+      "fails": [
+        "a wallet holds 14% of supply"
+      ]
+    },
+    "FzmSx4UuG8Jhsrxvyt1xNtk6qFxo7KY4zGwPifKZpump": {
+      "symbol": "Busted",
+      "px": 0.001633,
+      "fails": [
+        "RugCheck danger: Low Liquidity",
+        "copycat: an earlier 'Busted' exists (Gg3XUJ)"
+      ]
+    },
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "px": 0.01295,
+      "fails": []
+    }
+  }
+}
