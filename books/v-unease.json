@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.68717606986814,
+  "cash_sol": 8.43717606986814,
   "positions": {
     "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": {
       "symbol": "HELL",
@@ -370,6 +370,81 @@
       },
       "reentry": false,
       "since_loss_h": 8.0
+    },
+    "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": {
+      "symbol": "NIO",
+      "opened": "2026-11-07 02:21 UTC",
+      "cost_sol": 0.25,
+      "tokens": 13919.80206069011,
+      "entry_px": 0.0015652584286043937,
+      "entry_mc": 1492029,
+      "peak_px": 0.0015652584286043937,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unease rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/b4wmjc6pvjctu3qsvs3ett9mr4m5v5jbkrqctwantc71",
+      "v": 2,
+      "mev_sol": 0.0055242514639266375,
+      "swaps": 1,
+      "entry_liq": 137028.32,
+      "at_entry": {
+        "px": 0.001565,
+        "liq": 137028.32,
+        "mc": 1492029,
+        "dex": "pumpswap",
+        "age_h": 394.38,
+        "vol_h1": 20206.36,
+        "vol_h24": 1195364.35,
+        "buys_h1": 115,
+        "sells_h1": 84,
+        "buys_h24": 6635,
+        "sells_h24": 7190,
+        "trades_h24": 13825,
+        "avg_trade": 86.46,
+        "m5": 2.05,
+        "h1": 0.22,
+        "h6": -16.12,
+        "h24": 43.3,
+        "eligible": true,
+        "v": 3,
+        "pool": "B4Wmjc6PvjCtU3qSVS3eTT9Mr4M5V5jBkRQctWANTc71",
+        "m5_raw": 2.05,
+        "buys_m5": 3,
+        "sells_m5": 7,
+        "buys_h6": 1614,
+        "sells_h6": 1504,
+        "vol_m5": 525.25,
+        "vol_h6": 259648.16,
+        "liq_base": 44407064,
+        "liq_quote": 745.6609,
+        "fdv": 1492029,
+        "boosts": 10,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0594,
+          "paid": 0.0015731836500421166,
+          "vs_paid": -0.0208,
+          "off_peak": -0.3429,
+          "accel": -0.2103,
+          "candles": 96,
+          "unease": 2,
+          "known": 5,
+          "signs": [
+            "failed_high",
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 0.8
     }
   },
   "closed": [
@@ -1036,10 +1111,11 @@
     "2026-11-06 04:43 UTC BUY COGE 0.25 SOL @ $0.0029664694 (mc $2,953,311): v-unease rule",
     "2026-11-06 11:39 UTC BUY AMD 0.25 SOL @ $0.001819365 (mc $1,795,596): v-unease rule",
     "2026-11-06 22:34 UTC SELL 50% COGE -> 0.230 SOL @ $0.005933: take-profit at +100%: half sold, cost recovered",
-    "2026-11-07 01:32 UTC SELL 100% PAWKET -> 0.213 SOL @ $0.000833: unease exit: 4 of 5 signs"
+    "2026-11-07 01:32 UTC SELL 100% PAWKET -> 0.213 SOL @ $0.000833: unease exit: 4 of 5 signs",
+    "2026-11-07 02:21 UTC BUY NIO 0.25 SOL @ $0.0015652584 (mc $1,492,029): v-unease rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-07 02:14 UTC"
+  "last_mark": "2026-11-07 02:20 UTC"
 }
