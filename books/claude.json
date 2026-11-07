@@ -553,19 +553,19 @@
     "2026-11-07 03:30 UTC SELL 100% JOB -> 0.298 SOL @ $0.004911: time stop: 49h held, +20%, no take-profit",
     "2026-11-07 04:15 UTC SELL 100% three -> 0.191 SOL @ $0.0005274: Volume collapsed: 53 trades in 1h vs ~1700 at entry (under 20% of recent level), 1h -4%, 24h -18%, theme fading; position -17%"
   ],
-  "last_mark": "2026-11-07 05:11 UTC",
+  "last_mark": "2026-11-07 05:16 UTC",
   "gate_pass": {
     "EwX2T1p2PmgTsSq2Bi6XtQYxPC5krR4P2fxPfN4Qpump": 1794025686,
     "8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump": 1794026645,
     "FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump": 1794026645,
     "oCZHH8HnEBCPipEGdEcP3f45pQAaM7nh7P6EkRPpump": 1794027605,
     "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794027605,
-    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794024725,
-    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1794024889.762501,
-    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794024889.762501,
-    "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1794024725,
-    "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": 1794024725,
-    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794024725,
+    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794028565,
+    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1794028565,
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794028565,
+    "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1794028565,
+    "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": 1794028565,
+    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794028565,
     "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": 1794027605
   },
   "rejects": {
@@ -824,6 +824,15 @@
       "fails": [
         "RugCheck danger: Large Amount of LP Unlocked",
         "deepest pool is meteoraDlmm, not a graduation pool"
+      ],
+      "moves": {}
+    },
+    "DKtofLM6bhb54GQy5YFSWQjQmGiZqAkjzkQJ1LTopump": {
+      "symbol": "HODL",
+      "at": 1794028565,
+      "px": 0.004049,
+      "fails": [
+        "copycat: an earlier 'Diamond Hands' exists (6VhsEM)"
       ],
       "moves": {}
     }
