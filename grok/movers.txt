@@ -1,12 +1,12 @@
-MOVERS 2026-11-07T08:12:06Z
-JTupCptw8iMVtL6ugiFjYmKwtwED1ZPTNmVWJKdpump UCI +6%
-8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump COGE +6%
-Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump BAGEL +8%
-A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL +12%
-41WpXn15fxQXEGhiKnkqHcoJn14tNXXgmymLKE57pump scamsem +18%
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -9%
-5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat -5%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -3%
-BcHEaaTCvycPwwsJ9yQTXdHP9X2gCLkznDbZ8VySpump Jotchua -3%
-HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO -2%
+MOVERS 2026-11-07T08:28:05Z
+CFYhdWXsYfS7swnJgHRwb5toTHMEQD7Ljd5gGwKLpump KILROY +8%
+Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump BAGEL +9%
+A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL +9%
+8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump COGE +9%
+41WpXn15fxQXEGhiKnkqHcoJn14tNXXgmymLKE57pump scamsem +25%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -6%
+5GDX5fJTQns4arM1J94wjxdA8KXFsV5qW46MLFpHpump OMNI -6%
+5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat -4%
+FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump three -3%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -3%
 END
