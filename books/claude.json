@@ -553,20 +553,20 @@
     "2026-11-07 03:30 UTC SELL 100% JOB -> 0.298 SOL @ $0.004911: time stop: 49h held, +20%, no take-profit",
     "2026-11-07 04:15 UTC SELL 100% three -> 0.191 SOL @ $0.0005274: Volume collapsed: 53 trades in 1h vs ~1700 at entry (under 20% of recent level), 1h -4%, 24h -18%, theme fading; position -17%"
   ],
-  "last_mark": "2026-11-07 15:39 UTC",
+  "last_mark": "2026-11-07 15:40 UTC",
   "gate_pass": {
     "EwX2T1p2PmgTsSq2Bi6XtQYxPC5krR4P2fxPfN4Qpump": 1794064095,
     "8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump": 1794065055,
     "FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump": 1794065055,
-    "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": 1794062175,
-    "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794062175,
+    "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": 1794066021,
+    "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794066021,
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794063135,
     "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1794063135,
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794063135,
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1794063135,
     "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": 1794063135,
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794063135,
-    "21azpu32qfuNZR6TkKdUZKVnDtmvTUSBrXxhRFE5pump": 1794059292
+    "21azpu32qfuNZR6TkKdUZKVnDtmvTUSBrXxhRFE5pump": 1794066021
   },
   "rejects": {
     "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
@@ -873,6 +873,16 @@
       "px": 0.000828,
       "fails": [
         "a wallet holds 10% of supply"
+      ],
+      "moves": {}
+    },
+    "25YymNVsua1yZbapaiVuhCgS2w8KrFwt2p7hF3Aqpump": {
+      "symbol": "PIZZA",
+      "at": 1794066021,
+      "px": 0.002655,
+      "fails": [
+        "a wallet holds 8% of supply",
+        "copycat: an earlier 'Bitcoin Pizza' exists (G9ivB7)"
       ],
       "moves": {}
     }
