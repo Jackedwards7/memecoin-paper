@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.44687263366958,
+  "cash_sol": 8.19687263366958,
   "positions": {
     "BcHEaaTCvycPwwsJ9yQTXdHP9X2gCLkznDbZ8VySpump": {
       "symbol": "Jotchua",
@@ -300,6 +300,77 @@
       },
       "reentry": false,
       "since_loss_h": 0.2
+    },
+    "riRWUz6r5FK7zvpDzVouXyuEyPQkegEVeyyjrUppump": {
+      "symbol": "SPCX1K",
+      "opened": "2026-11-07 10:04 UTC",
+      "cost_sol": 0.25,
+      "tokens": 8141.1636920039355,
+      "entry_px": 0.0026614653407941234,
+      "entry_mc": 2658549,
+      "peak_px": 0.0026614653407941234,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unpaid rule",
+      "rugcheck": 32,
+      "risks": [
+        "High holder correlation"
+      ],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/8kzvhsrqyca4cab3tdzx5osjsbqj5axnaxritbpxzx9n",
+      "v": 2,
+      "mev_sol": 0.005554321261941791,
+      "swaps": 1,
+      "entry_liq": 128692.36,
+      "at_entry": {
+        "px": 0.002661,
+        "liq": 128692.36,
+        "mc": 2658549,
+        "dex": "pumpswap",
+        "age_h": 29.74,
+        "vol_h1": 6868.91,
+        "vol_h24": 156396.55,
+        "buys_h1": 177,
+        "sells_h1": 118,
+        "buys_h24": 4001,
+        "sells_h24": 2636,
+        "trades_h24": 6637,
+        "avg_trade": 23.56,
+        "m5": 1.12,
+        "h1": 0.82,
+        "h6": 7.63,
+        "h24": 43.31,
+        "eligible": true,
+        "v": 3,
+        "pool": "8kZvhsrqYCA4CAb3tdZX5osjSbQJ5AxNaXritBpxZx9N",
+        "m5_raw": 1.12,
+        "buys_m5": 15,
+        "sells_m5": 9,
+        "buys_h6": 1066,
+        "sells_h6": 705,
+        "vol_m5": 570.43,
+        "vol_h6": 40621.63,
+        "liq_base": 24513770,
+        "liq_quote": 705.7825,
+        "fdv": 2658549,
+        "boosts": null,
+        "links": null,
+        "read": {
+          "swing": 0.0158,
+          "paid": 0.0020839084268579897,
+          "vs_paid": 0.2066,
+          "off_peak": -0.0001,
+          "accel": 0.0138,
+          "candles": 96,
+          "unease": 0,
+          "known": 5,
+          "signs": []
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 0.3
     }
   },
   "closed": [
@@ -864,10 +935,11 @@
     "2026-11-07 03:44 UTC SELL 100% AMD -> 0.139 SOL @ $0.0004062: stop-loss at -39%",
     "2026-11-07 03:56 UTC BUY KILROY 0.25 SOL @ $0.00052833923 (mc $517,967): v-unpaid rule",
     "2026-11-07 09:47 UTC SELL 100% CATE -> 0.205 SOL @ $0.03382: time stop: 48h held, -17%, no take-profit",
-    "2026-11-07 10:03 UTC SELL 100% baton -> 0.275 SOL @ $0.006072: time stop: 48h held, +10%, no take-profit"
+    "2026-11-07 10:03 UTC SELL 100% baton -> 0.275 SOL @ $0.006072: time stop: 48h held, +10%, no take-profit",
+    "2026-11-07 10:04 UTC BUY SPCX1K 0.25 SOL @ $0.0026614653 (mc $2,658,549): v-unpaid rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-07 10:03 UTC"
+  "last_mark": "2026-11-07 10:04 UTC"
 }
