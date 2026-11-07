@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.94687263366958,
+  "cash_sol": 7.69687263366958,
   "positions": {
     "BcHEaaTCvycPwwsJ9yQTXdHP9X2gCLkznDbZ8VySpump": {
       "symbol": "Jotchua",
@@ -237,7 +237,7 @@
       "tokens": 8141.1636920039355,
       "entry_px": 0.0026614653407941234,
       "entry_mc": 2658549,
-      "peak_px": 0.003025,
+      "peak_px": 0.003028,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -371,6 +371,78 @@
       },
       "reentry": false,
       "since_loss_h": 1.1
+    },
+    "XvwtkBK5SuXnj54uXt2XBrTCbBwog63kodPvw73pump": {
+      "symbol": "UKOR",
+      "opened": "2026-11-07 19:09 UTC",
+      "cost_sol": 0.25,
+      "tokens": 88.21907492721454,
+      "entry_px": 0.24460441256954513,
+      "entry_mc": 244650491,
+      "peak_px": 0.24460441256954513,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unpaid rule",
+      "rugcheck": 54,
+      "risks": [
+        "High market cap per holder",
+        "High holder correlation"
+      ],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/fguxwm7sgszagk2egvuq79brnvxypwz5m3neyabisz47",
+      "v": 2,
+      "mev_sol": 0.005576622797233996,
+      "swaps": 1,
+      "entry_liq": 1242520.7,
+      "at_entry": {
+        "px": 0.2446,
+        "liq": 1242520.7,
+        "mc": 244650491,
+        "dex": "pumpswap",
+        "age_h": 51.79,
+        "vol_h1": 6769.57,
+        "vol_h24": 166824.81,
+        "buys_h1": 1027,
+        "sells_h1": 61,
+        "buys_h24": 25348,
+        "sells_h24": 1441,
+        "trades_h24": 26789,
+        "avg_trade": 6.23,
+        "m5": -0.54,
+        "h1": 0.34,
+        "h6": 5.59,
+        "h24": 25.42,
+        "eligible": true,
+        "v": 3,
+        "pool": "FGUXWM7SGSzaGk2EgvuQ79BrnVXyPWz5M3NeYaBisz47",
+        "m5_raw": -0.54,
+        "buys_m5": 64,
+        "sells_m5": 6,
+        "buys_h6": 6296,
+        "sells_h6": 359,
+        "vol_m5": 503.74,
+        "vol_h6": 42378.99,
+        "liq_base": 2538681,
+        "liq_quote": 6931.6653,
+        "fdv": 244650491,
+        "boosts": null,
+        "links": null,
+        "read": {
+          "swing": 0.0085,
+          "paid": 0.20586254212358024,
+          "vs_paid": 0.114,
+          "off_peak": -0.0005,
+          "accel": 0.0039,
+          "candles": 96,
+          "unease": 0,
+          "known": 5,
+          "signs": []
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 0.1
     }
   },
   "closed": [
@@ -1015,10 +1087,11 @@
     "2026-11-07 10:03 UTC SELL 100% baton -> 0.275 SOL @ $0.006072: time stop: 48h held, +10%, no take-profit",
     "2026-11-07 10:04 UTC BUY SPCX1K 0.25 SOL @ $0.0026614653 (mc $2,658,549): v-unpaid rule",
     "2026-11-07 10:52 UTC BUY GROKNAM 0.25 SOL @ $0.0037635516 (mc $3,761,621): v-unpaid rule",
-    "2026-11-07 19:05 UTC SELL 100% ADP -> 0.000 SOL @ $0.0001357: event exit: liquidity down 89% since entry, -99% from entry"
+    "2026-11-07 19:05 UTC SELL 100% ADP -> 0.000 SOL @ $0.0001357: event exit: liquidity down 89% since entry, -99% from entry",
+    "2026-11-07 19:09 UTC BUY UKOR 0.25 SOL @ $0.24460441 (mc $244,650,491): v-unpaid rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-07 19:05 UTC"
+  "last_mark": "2026-11-07 19:08 UTC"
 }
