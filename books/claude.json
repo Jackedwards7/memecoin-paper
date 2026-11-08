@@ -632,7 +632,7 @@
     "2026-11-08 08:15 UTC BUY BRUH 0.25 SOL @ $0.001091289 (mc $1,080,245): Gate pass; 28h pumpswap coin, mc $1.07M, liq $84k (thin), 1h +42%, 24h +84%, 5m -2.2% (no spike now), 1h buys 163 vs sells 92. Other passes COGE (24h -92%) and GIGAHUG (11.7h, +1775% 24h vertical) skipped; GATO/HELL already held.",
     "2026-11-08 12:16 UTC SELL 100% HELL -> 0.211 SOL @ $0.002694: time stop: 48h held, -9%, no take-profit"
   ],
-  "last_mark": "2026-11-08 13:13 UTC",
+  "last_mark": "2026-11-08 13:15 UTC",
   "gate_pass": {
     "8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump": 1794142931,
     "FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump": 1794141962,
@@ -1162,7 +1162,8 @@
       "px": 0.0005686,
       "fails": [],
       "moves": {
-        "1d": -0.5650721069293001
+        "1d": -0.5650721069293001,
+        "3d": -0.8521280337671474
       }
     },
     "6Mt1oHb12F7JvJhFqcYERPJ3YqKgMGF9b8623uFYpump": {
