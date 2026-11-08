@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.447480500366393,
+  "cash_sol": 7.197480500366393,
   "positions": {
     "9AvytnUKsLxPxFHFqS6VLxaxt5p6BhYNr53SD2Chpump": {
       "symbol": "67",
@@ -162,7 +162,7 @@
       "tokens": 88.21907492721454,
       "entry_px": 0.24460441256954513,
       "entry_mc": 244650491,
-      "peak_px": 0.2626,
+      "peak_px": 0.2627,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -375,6 +375,79 @@
       },
       "reentry": false,
       "since_loss_h": 0.1
+    },
+    "GNggUoCrkgcshssMFn1AxRGEeiNpS7fFaLJMEbSWpump": {
+      "symbol": "BTX",
+      "opened": "2026-11-08 03:09 UTC",
+      "cost_sol": 0.25,
+      "tokens": 3211.2357643234964,
+      "entry_px": 0.006683731458914406,
+      "entry_mc": 6682605,
+      "peak_px": 0.006683731458914406,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unpaid rule",
+      "rugcheck": 32,
+      "risks": [
+        "High holder correlation"
+      ],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/ayqr8jmffl8kmxoejcgcx2vmths7hmxuurg22kytayfb",
+      "v": 2,
+      "mev_sol": 0.005606009642336585,
+      "swaps": 1,
+      "entry_liq": 203721.89,
+      "at_entry": {
+        "px": 0.006683,
+        "liq": 203721.89,
+        "mc": 6682605,
+        "dex": "pumpswap",
+        "age_h": 64.93,
+        "vol_h1": 1614.18,
+        "vol_h24": 44074.29,
+        "buys_h1": 170,
+        "sells_h1": 45,
+        "buys_h24": 19639,
+        "sells_h24": 6371,
+        "trades_h24": 26010,
+        "avg_trade": 1.69,
+        "m5": 0.94,
+        "h1": 0.75,
+        "h6": 1.11,
+        "h24": 7.82,
+        "eligible": true,
+        "v": 3,
+        "pool": "AyqR8jMfFL8KMXoEJcGcX2VMThs7hMXUurG22KytaYfB",
+        "m5_raw": 0.94,
+        "buys_m5": 12,
+        "sells_m5": 2,
+        "buys_h6": 1075,
+        "sells_h6": 288,
+        "vol_m5": 80.24,
+        "vol_h6": 11033.89,
+        "liq_base": 15374736,
+        "liq_quote": 1132.7268,
+        "fdv": 6682605,
+        "boosts": null,
+        "links": null,
+        "read": {
+          "swing": 0.0104,
+          "paid": 0.006499893565164535,
+          "vs_paid": 0.0291,
+          "off_peak": -0.0089,
+          "accel": 0.0033,
+          "candles": 96,
+          "unease": 1,
+          "known": 5,
+          "signs": [
+            "failed_high"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 0.5
     }
   },
   "closed": [
@@ -1260,10 +1333,11 @@
     "2026-11-08 01:01 UTC BUY NADF 0.25 SOL @ $0.20310401 (mc $203,159,634): v-unpaid rule",
     "2026-11-08 02:29 UTC SELL 100% SPCX1K -> 0.007 SOL @ $0.0001413: event exit: liquidity down 78% since entry, -95% from entry",
     "2026-11-08 02:37 UTC BUY House 0.25 SOL @ $0.00075285777 (mc $750,826): v-unpaid rule",
-    "2026-11-08 02:40 UTC SELL 100% GROKNAM -> 0.000 SOL @ $1.615e-06: event exit: liquidity down 99% since entry, -100% from entry"
+    "2026-11-08 02:40 UTC SELL 100% GROKNAM -> 0.000 SOL @ $1.615e-06: event exit: liquidity down 99% since entry, -100% from entry",
+    "2026-11-08 03:09 UTC BUY BTX 0.25 SOL @ $0.0066837315 (mc $6,682,605): v-unpaid rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-08 03:06 UTC"
+  "last_mark": "2026-11-08 03:08 UTC"
 }
