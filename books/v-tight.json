@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.994096167279777,
+  "cash_sol": 8.177766579678766,
   "positions": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
       "symbol": "JOB",
@@ -372,80 +372,6 @@
       },
       "reentry": false,
       "since_loss_h": 4.6
-    },
-    "DSAKMZsWvRQL3c4RwhXpicbbygAJXiHz8PMCfoTUpump": {
-      "symbol": "ORBIT",
-      "opened": "2026-11-08 07:09 UTC",
-      "cost_sol": 0.25,
-      "tokens": 20422.906370119606,
-      "entry_px": 0.0010482769744918838,
-      "entry_mc": 1042570,
-      "peak_px": 0.001055,
-      "stop": -0.2,
-      "tp1": 0.4,
-      "tp1_done": false,
-      "thesis": "v-tight rule",
-      "rugcheck": 1,
-      "risks": [],
-      "realised_sol": 0.0,
-      "dex": "pumpswap",
-      "url": "https://dexscreener.com/solana/ajt7zptztfeo9cqu8yuwddtmoah7bmyt7kmkmhombcne",
-      "v": 2,
-      "mev_sol": 0.005619871866921434,
-      "swaps": 1,
-      "entry_liq": 84159.88,
-      "at_entry": {
-        "px": 0.001048,
-        "liq": 84159.88,
-        "mc": 1042570,
-        "dex": "pumpswap",
-        "age_h": 6.74,
-        "vol_h1": 62365.3,
-        "vol_h24": 1619885.48,
-        "buys_h1": 5361,
-        "sells_h1": 5085,
-        "buys_h24": 27733,
-        "sells_h24": 21876,
-        "trades_h24": 49609,
-        "avg_trade": 32.65,
-        "m5": 13.83,
-        "h1": 25.77,
-        "h6": 175,
-        "h24": 1659,
-        "eligible": true,
-        "v": 3,
-        "pool": "Ajt7zptZTFeo9cQu8yuwDDTmoAh7BMyT7kMKMHoMBCNE",
-        "m5_raw": 13.83,
-        "buys_m5": 327,
-        "sells_m5": 427,
-        "buys_h6": 24787,
-        "sells_h6": 20207,
-        "vol_m5": 5043.22,
-        "vol_h6": 1020945.88,
-        "liq_base": 40414385,
-        "liq_quote": 469.8175,
-        "fdv": 1042570,
-        "boosts": null,
-        "links": [
-          "twitter",
-          "website"
-        ],
-        "read": {
-          "swing": 0.2196,
-          "paid": 0.0005588270971815199,
-          "vs_paid": 0.6057,
-          "off_peak": -0.3969,
-          "accel": -0.2043,
-          "candles": 26,
-          "unease": 1,
-          "known": 2,
-          "signs": [
-            "failed_high"
-          ]
-        }
-      },
-      "reentry": false,
-      "since_loss_h": 8.0
     }
   },
   "closed": [
@@ -1833,6 +1759,86 @@
       "pnl_pct": -0.0019159549721278202,
       "exit_reason": "time stop: 48h held, +8%, no take-profit",
       "exit_px": 0.01201
+    },
+    {
+      "symbol": "ORBIT",
+      "opened": "2026-11-08 07:09 UTC",
+      "cost_sol": 0.25,
+      "tokens": 0.0,
+      "entry_px": 0.0010482769744918838,
+      "entry_mc": 1042570,
+      "peak_px": 0.001055,
+      "stop": -0.2,
+      "tp1": 0.4,
+      "tp1_done": false,
+      "thesis": "v-tight rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.18367041239898876,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/ajt7zptztfeo9cqu8yuwddtmoah7bmyt7kmkmhombcne",
+      "v": 2,
+      "mev_sol": 0.011234694999992741,
+      "swaps": 2,
+      "entry_liq": 84159.88,
+      "at_entry": {
+        "px": 0.001048,
+        "liq": 84159.88,
+        "mc": 1042570,
+        "dex": "pumpswap",
+        "age_h": 6.74,
+        "vol_h1": 62365.3,
+        "vol_h24": 1619885.48,
+        "buys_h1": 5361,
+        "sells_h1": 5085,
+        "buys_h24": 27733,
+        "sells_h24": 21876,
+        "trades_h24": 49609,
+        "avg_trade": 32.65,
+        "m5": 13.83,
+        "h1": 25.77,
+        "h6": 175,
+        "h24": 1659,
+        "eligible": true,
+        "v": 3,
+        "pool": "Ajt7zptZTFeo9cQu8yuwDDTmoAh7BMyT7kMKMHoMBCNE",
+        "m5_raw": 13.83,
+        "buys_m5": 327,
+        "sells_m5": 427,
+        "buys_h6": 24787,
+        "sells_h6": 20207,
+        "vol_m5": 5043.22,
+        "vol_h6": 1020945.88,
+        "liq_base": 40414385,
+        "liq_quote": 469.8175,
+        "fdv": 1042570,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.2196,
+          "paid": 0.0005588270971815199,
+          "vs_paid": 0.6057,
+          "off_peak": -0.3969,
+          "accel": -0.2043,
+          "candles": 26,
+          "unease": 1,
+          "known": 2,
+          "signs": [
+            "failed_high"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 8.0,
+      "mint": "DSAKMZsWvRQL3c4RwhXpicbbygAJXiHz8PMCfoTUpump",
+      "closed": "2026-11-08 07:27 UTC",
+      "pnl_sol": -0.06632958760101124,
+      "pnl_pct": -0.26531835040404494,
+      "exit_reason": "stop-loss at -20%",
+      "exit_px": 0.0008381
     }
   ],
   "log": [
@@ -1882,10 +1888,11 @@
     "2026-11-07 23:07 UTC SELL 100% GATO -> 0.250 SOL @ $0.01201: time stop: 48h held, +8%, no take-profit",
     "2026-11-08 03:41 UTC BUY GIGAHUG 0.25 SOL @ $0.0011852976 (mc $1,178,795): v-tight rule",
     "2026-11-08 07:09 UTC BUY ORBIT 0.25 SOL @ $0.001048277 (mc $1,042,570): v-tight rule",
-    "2026-11-08 07:23 UTC SELL 50% BAGEL -> 0.163 SOL @ $0.001276: take-profit at +40%: half sold, cost recovered"
+    "2026-11-08 07:23 UTC SELL 50% BAGEL -> 0.163 SOL @ $0.001276: take-profit at +40%: half sold, cost recovered",
+    "2026-11-08 07:27 UTC SELL 100% ORBIT -> 0.184 SOL @ $0.0008381: stop-loss at -20%"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-08 07:25 UTC"
+  "last_mark": "2026-11-08 07:27 UTC"
 }
