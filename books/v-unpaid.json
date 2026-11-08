@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.300582782102667,
+  "cash_sol": 7.050582782102667,
   "positions": {
     "XvwtkBK5SuXnj54uXt2XBrTCbBwog63kodPvw73pump": {
       "symbol": "UKOR",
@@ -9,7 +9,7 @@
       "tokens": 88.21907492721454,
       "entry_px": 0.24460441256954513,
       "entry_mc": 244650491,
-      "peak_px": 0.2679,
+      "peak_px": 0.2681,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -370,6 +370,81 @@
       },
       "reentry": false,
       "since_loss_h": 0.8
+    },
+    "5GDX5fJTQns4arM1J94wjxdA8KXFsV5qW46MLFpHpump": {
+      "symbol": "OMNI",
+      "opened": "2026-11-08 05:33 UTC",
+      "cost_sol": 0.25,
+      "tokens": 37761.33103913919,
+      "entry_px": 0.0005688431633338331,
+      "entry_mc": 543402,
+      "peak_px": 0.0005688431633338331,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unpaid rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/qvcymnis5qqjejrzpgbejnnkrqdnkhjttfk7v1xqu9d",
+      "v": 2,
+      "mev_sol": 0.00560161326462021,
+      "swaps": 1,
+      "entry_liq": 88643.79,
+      "at_entry": {
+        "px": 0.0005687,
+        "liq": 88643.79,
+        "mc": 543402,
+        "dex": "pumpswap",
+        "age_h": 874.56,
+        "vol_h1": 134.67,
+        "vol_h24": 24818.4,
+        "buys_h1": 6,
+        "sells_h1": 0,
+        "buys_h24": 126,
+        "sells_h24": 170,
+        "trades_h24": 296,
+        "avg_trade": 83.85,
+        "m5": -0.15,
+        "h1": 0.51,
+        "h6": 15.99,
+        "h24": 5.79,
+        "eligible": true,
+        "v": 3,
+        "pool": "QVCymnis5qQJEJRZPgbEJnNKrQdNkhJtTFk7v1xqu9D",
+        "m5_raw": -0.15,
+        "buys_m5": 1,
+        "sells_m5": 0,
+        "buys_h6": 34,
+        "sells_h6": 25,
+        "vol_m5": 5,
+        "vol_h6": 3474.19,
+        "liq_base": 81104784,
+        "liq_quote": 33.7166,
+        "fdv": 543396,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0362,
+          "paid": 0.0005529557523331485,
+          "vs_paid": -0.0252,
+          "off_peak": -0.1388,
+          "accel": 0.0581,
+          "candles": 96,
+          "unease": 2,
+          "known": 5,
+          "signs": [
+            "smaller_trades",
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 0.2
     }
   },
   "closed": [
@@ -1424,10 +1499,11 @@
     "2026-11-08 03:09 UTC BUY BTX 0.25 SOL @ $0.0066837315 (mc $6,682,605): v-unpaid rule",
     "2026-11-08 04:11 UTC SELL 100% 67 -> 0.205 SOL @ $0.001227: time stop: 48h held, -11%, no take-profit",
     "2026-11-08 05:01 UTC BUY TripleT 0.25 SOL @ $0.0035931982 (mc $3,593,152): v-unpaid rule",
-    "2026-11-08 05:23 UTC SELL 100% KILROY -> 0.149 SOL @ $0.0003413: stop-loss at -35%"
+    "2026-11-08 05:23 UTC SELL 100% KILROY -> 0.149 SOL @ $0.0003413: stop-loss at -35%",
+    "2026-11-08 05:33 UTC BUY OMNI 0.25 SOL @ $0.00056884316 (mc $543,402): v-unpaid rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-08 05:23 UTC"
+  "last_mark": "2026-11-08 05:33 UTC"
 }
