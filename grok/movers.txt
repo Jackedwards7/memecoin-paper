@@ -1,12 +1,12 @@
-MOVERS 2026-11-08T11:41:49Z
-Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump baton +11%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +11%
-8PzFWyLpCVEmbZmVJcaRTU5r69XKJx1rd7YGpWvnpump Percolator +22%
-483nprwoMSoGQgrojSHWiePMbKPre7ZRDy4f8YNSpump HEREWEGO +47%
-4HqpRjsRS8pjdWa2B3mBAmNNxTXUeJ9L6AfFnRgipump HOPE +188%
-FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump DONNA -15%
-A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL -10%
-Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT -6%
-PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH -6%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -4%
+MOVERS 2026-11-08T11:57:56Z
+Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump baton +3%
+PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH +6%
+FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump three +8%
+8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH +13%
+483nprwoMSoGQgrojSHWiePMbKPre7ZRDy4f8YNSpump HEREWEGO +17%
+8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump COGE -39%
+FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump DONNA -19%
+A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL -7%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -7%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -5%
 END
