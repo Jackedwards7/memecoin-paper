@@ -625,7 +625,7 @@
     "2026-11-07 04:15 UTC SELL 100% three -> 0.191 SOL @ $0.0005274: Volume collapsed: 53 trades in 1h vs ~1700 at entry (under 20% of recent level), 1h -4%, 24h -18%, theme fading; position -17%",
     "2026-11-08 08:15 UTC BUY BRUH 0.25 SOL @ $0.001091289 (mc $1,080,245): Gate pass; 28h pumpswap coin, mc $1.07M, liq $84k (thin), 1h +42%, 24h +84%, 5m -2.2% (no spike now), 1h buys 163 vs sells 92. Other passes COGE (24h -92%) and GIGAHUG (11.7h, +1775% 24h vertical) skipped; GATO/HELL already held."
   ],
-  "last_mark": "2026-11-08 11:50 UTC",
+  "last_mark": "2026-11-08 11:55 UTC",
   "gate_pass": {
     "8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump": 1794134257,
     "FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump": 1794138109,
@@ -770,7 +770,8 @@
         "copycat: an earlier '\u2588\u2588\u2588' exists (Ga5Erp)"
       ],
       "moves": {
-        "1d": 0.11917029990751749
+        "1d": 0.11917029990751749,
+        "3d": -0.40362002906592676
       }
     },
     "FK5tP4Zw7ujWzaz3TgeJ5NcqGe5LFufo7m6zH6YQpump": {
