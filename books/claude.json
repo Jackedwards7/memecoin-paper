@@ -639,7 +639,7 @@
     "2026-11-08 12:16 UTC SELL 100% HELL -> 0.211 SOL @ $0.002694: time stop: 48h held, -9%, no take-profit",
     "2026-11-08 20:15 UTC SELL 100% GATO -> 0.235 SOL @ $0.01197: time stop: 48h held, +0%, no take-profit"
   ],
-  "last_mark": "2026-11-08 21:04 UTC",
+  "last_mark": "2026-11-08 21:15 UTC",
   "gate_pass": {
     "FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump": 1794168977,
     "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": 1794169944,
@@ -1215,7 +1215,8 @@
       "px": 0.0008871,
       "fails": [],
       "moves": {
-        "1d": -0.07924698455641987
+        "1d": -0.07924698455641987,
+        "3d": -0.37955134708601057
       }
     },
     "8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump": {
