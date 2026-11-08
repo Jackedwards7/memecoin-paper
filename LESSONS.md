@@ -1,8 +1,8 @@
 # Lessons
 
-126 closed trades labelled, every book. Written by the bot.
+127 closed trades labelled, every book. Written by the bot.
 
-- **other**: 39 trades, mean -36%. NIO (v-mature): stop-loss at -36%; ███ (v-tight): stop-loss at -21%
+- **other**: 40 trades, mean -36%. ███ (v-tight): stop-loss at -21%; Rocco (v-swing): stop-loss at -34%
 - **won-held**: 39 trades, mean +50%. COGE (v-unease): +106%, peak +718%; COGE (v-velocity): +106%, peak +718%
 - **slow-bleed**: 27 trades, mean -30%. NIO (control): -40% over 20h; ███ (v-swing): -27% over 14h
 - **bought-spike**: 14 trades, mean -29%. HELL (v-mature): up 2% in 24h at entry, peak +4%; PAWKET (v-tight): up 1957% in 24h at entry, peak +1%
