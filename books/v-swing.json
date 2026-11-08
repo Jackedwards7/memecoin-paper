@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.642760422402489,
+  "cash_sol": 7.392760422402489,
   "positions": {
     "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": {
       "symbol": "BAGEL",
@@ -298,7 +298,7 @@
       "tokens": 792.8554672755013,
       "entry_px": 0.027061237369943737,
       "entry_mc": 26501140,
-      "peak_px": 0.02807,
+      "peak_px": 0.02814,
       "stop": -0.1,
       "tp1": 1.0,
       "tp1_done": false,
@@ -362,6 +362,81 @@
       },
       "reentry": true,
       "since_loss_h": 1.0
+    },
+    "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": {
+      "symbol": "three",
+      "opened": "2026-11-08 14:38 UTC",
+      "cost_sol": 0.25,
+      "tokens": 44718.772720087145,
+      "entry_px": 0.00048017613619245485,
+      "entry_mc": 480001,
+      "peak_px": 0.00048017613619245485,
+      "stop": -0.1,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-swing rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/5byl7mzolabynwmpzkpkjf4mgkz7febzranos19pre2z",
+      "v": 2,
+      "mev_sol": 0.005603496581867085,
+      "swaps": 1,
+      "entry_liq": 140666.75,
+      "at_entry": {
+        "px": 0.0004801,
+        "liq": 140666.75,
+        "mc": 480001,
+        "dex": "pumpswap",
+        "age_h": 4639.5,
+        "vol_h1": 311.9,
+        "vol_h24": 34966.11,
+        "buys_h1": 3,
+        "sells_h1": 1,
+        "buys_h24": 375,
+        "sells_h24": 328,
+        "trades_h24": 703,
+        "avg_trade": 49.74,
+        "m5": 0,
+        "h1": 1,
+        "h6": 9.08,
+        "h24": 3.23,
+        "eligible": true,
+        "v": 3,
+        "pool": "5ByL7MZoLABYnwMPZKPKjf4MGkZ7FeBzrAnos19Pre2z",
+        "m5_raw": null,
+        "buys_m5": 0,
+        "sells_m5": 0,
+        "buys_h6": 40,
+        "sells_h6": 90,
+        "vol_m5": 0,
+        "vol_h6": 5304.38,
+        "liq_base": 147115168,
+        "liq_quote": 785.7367,
+        "fdv": 480001,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0138,
+          "paid": 0.0004486825171129984,
+          "vs_paid": 0.0634,
+          "off_peak": -0.0132,
+          "accel": 0.0103,
+          "candles": 96,
+          "unease": 2,
+          "known": 5,
+          "signs": [
+            "failed_high",
+            "sellers"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 1.8
     }
   },
   "closed": [
@@ -2019,10 +2094,11 @@
     "2026-11-08 12:29 UTC SELL 100% GIGAHUG -> 0.188 SOL @ $0.0009709: event exit: price -24% in 5 minutes, -18% from entry",
     "2026-11-08 12:51 UTC SELL 100% ORBIT -> 0.000 SOL @ $2.159e-06: event exit: liquidity down 97% since entry, -100% from entry",
     "2026-11-08 13:34 UTC BUY BTC 0.25 SOL @ $0.0010602814 (mc $1,045,560): v-swing rule",
-    "2026-11-08 13:51 UTC BUY DESSA 0.25 SOL @ $0.027061237 (mc $26,501,140): v-swing rule"
+    "2026-11-08 13:51 UTC BUY DESSA 0.25 SOL @ $0.027061237 (mc $26,501,140): v-swing rule",
+    "2026-11-08 14:38 UTC BUY three 0.25 SOL @ $0.00048017614 (mc $480,001): v-swing rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-08 14:33 UTC"
+  "last_mark": "2026-11-08 14:38 UTC"
 }
