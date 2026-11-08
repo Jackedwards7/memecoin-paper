@@ -1,12 +1,12 @@
-MOVERS 2026-11-08T20:00:14Z
-Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump baton +5%
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +8%
-PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH +11%
-CZRtwCDJy4cKNvtVwtgGqeEGzLnCDJdTkexgpEsMpump BTC +20%
-61V8vBaqAGMpgDQi4JcAwo1dmBGHsyhzodcPqnEVpump arc +50%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -21%
-483nprwoMSoGQgrojSHWiePMbKPre7ZRDy4f8YNSpump HEREWEGO -17%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -12%
-33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump DOPE -12%
-8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH -10%
+MOVERS 2026-11-08T20:16:17Z
+xQCPZfZAABJ6DG8gosqrNn8c3AmBytXkjZ61Bajpump UCI +5%
+BcHEaaTCvycPwwsJ9yQTXdHP9X2gCLkznDbZ8VySpump Jotchua +6%
+8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +6%
+Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump BAGEL +8%
+CZRtwCDJy4cKNvtVwtgGqeEGzLnCDJdTkexgpEsMpump BTC +8%
+6nGocDUtGSJoSz1gUPgFGTpHtUSK3s7FN6zhB6AfLoat APU -10%
+CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi -9%
+EaxAUcXxNnVwcqm2BBocbows7D1XVY2Q63V38NEypump GTA6Coin -9%
+5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat -9%
+DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS -8%
 END
