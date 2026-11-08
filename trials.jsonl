@@ -1,0 +1,14 @@
+{"t": 1794096777, "name": "v-momentum", "kind": "arm", "params": {}, "why": "live arm"}
+{"t": 1794096777, "name": "v-no-spike", "kind": "arm", "params": {}, "why": "live arm"}
+{"t": 1794096777, "name": "v-mature", "kind": "arm", "params": {}, "why": "live arm"}
+{"t": 1794096777, "name": "v-tight", "kind": "arm", "params": {"stop": -0.2, "tp1": 0.4}, "why": "live arm"}
+{"t": 1794096777, "name": "v-loose", "kind": "arm", "params": {"stop": -0.4, "tp1": 1.5}, "why": "live arm"}
+{"t": 1794096777, "name": "v-dip", "kind": "arm", "params": {}, "why": "live arm"}
+{"t": 1794096777, "name": "v-low-bundle", "kind": "arm", "params": {}, "why": "live arm"}
+{"t": 1794096777, "name": "v-velocity", "kind": "arm", "params": {}, "why": "live arm"}
+{"t": 1794096777, "name": "v-x-organic", "kind": "arm", "params": {}, "why": "live arm"}
+{"t": 1794096777, "name": "v-x-exit", "kind": "arm", "params": {}, "why": "live arm"}
+{"t": 1794096777, "name": "v-swing", "kind": "arm", "params": {}, "why": "live arm"}
+{"t": 1794096777, "name": "v-unease", "kind": "arm", "params": {}, "why": "live arm"}
+{"t": 1794096777, "name": "v-networks", "kind": "arm", "params": {}, "why": "live arm"}
+{"t": 1794096777, "name": "v-unpaid", "kind": "arm", "params": {}, "why": "live arm"}
