@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.50337157175693,
+  "cash_sol": 8.25337157175693,
   "positions": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
       "symbol": "JOB",
@@ -293,6 +293,78 @@
       },
       "reentry": true,
       "since_loss_h": 0.1
+    },
+    "CZRtwCDJy4cKNvtVwtgGqeEGzLnCDJdTkexgpEsMpump": {
+      "symbol": "BTC",
+      "opened": "2026-11-08 13:34 UTC",
+      "cost_sol": 0.25,
+      "tokens": 20314.771696341013,
+      "entry_px": 0.0010602814209268005,
+      "entry_mc": 1045560,
+      "peak_px": 0.0010602814209268005,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unease rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/crrybad77f4knubhpnutuufyht8gcbgzqhfc2uzaamt7",
+      "v": 2,
+      "mev_sol": 0.00558659217877095,
+      "swaps": 1,
+      "entry_liq": 84277.67,
+      "at_entry": {
+        "px": 0.00106,
+        "liq": 84277.67,
+        "mc": 1045560,
+        "dex": "pumpswap",
+        "age_h": 24.3,
+        "vol_h1": 254227.7,
+        "vol_h24": 938562.84,
+        "buys_h1": 2281,
+        "sells_h1": 883,
+        "buys_h24": 18955,
+        "sells_h24": 13977,
+        "trades_h24": 32932,
+        "avg_trade": 28.5,
+        "m5": -0.65,
+        "h1": 38.62,
+        "h6": 110,
+        "h24": 1106,
+        "eligible": true,
+        "v": 3,
+        "pool": "CrrYbad77F4KNUBhpnUTUufYHt8gcbGZQhfc2uZaamt7",
+        "m5_raw": -0.65,
+        "buys_m5": 37,
+        "sells_m5": 33,
+        "buys_h6": 3789,
+        "sells_h6": 2133,
+        "vol_m5": 2720.43,
+        "vol_h6": 361458.06,
+        "liq_base": 40297939,
+        "liq_quote": 464.3463,
+        "fdv": 1045560,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.1087,
+          "paid": 0.00030527845529792867,
+          "vs_paid": 1.7061,
+          "off_peak": -0.0051,
+          "accel": 0.0213,
+          "candles": 96,
+          "unease": 0,
+          "known": 2,
+          "signs": []
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 1.1
     }
   },
   "closed": [
@@ -1699,10 +1771,11 @@
     "2026-11-08 07:41 UTC BUY BRUH 0.25 SOL @ $0.00092466646 (mc $915,318): v-unease rule",
     "2026-11-08 08:08 UTC SELL 100% ORBIT -> 0.147 SOL @ $0.0006767: stop-loss at -35%",
     "2026-11-08 08:13 UTC BUY HELL 0.25 SOL @ $0.002956474 (mc $2,819,958): v-unease rule",
-    "2026-11-08 12:29 UTC SELL 100% GIGAHUG -> 0.188 SOL @ $0.0009709: event exit: price -24% in 5 minutes, -18% from entry"
+    "2026-11-08 12:29 UTC SELL 100% GIGAHUG -> 0.188 SOL @ $0.0009709: event exit: price -24% in 5 minutes, -18% from entry",
+    "2026-11-08 13:34 UTC BUY BTC 0.25 SOL @ $0.0010602814 (mc $1,045,560): v-unease rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-08 13:30 UTC"
+  "last_mark": "2026-11-08 13:34 UTC"
 }

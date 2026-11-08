@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.050582782102667,
+  "cash_sol": 6.800582782102667,
   "positions": {
     "XvwtkBK5SuXnj54uXt2XBrTCbBwog63kodPvw73pump": {
       "symbol": "UKOR",
@@ -371,6 +371,77 @@
       },
       "reentry": false,
       "since_loss_h": 0.2
+    },
+    "M4QXa2EDAeJz4ZBGYN1bkKWFWE3M47yMrDvwFTPpump": {
+      "symbol": "SPCX1K",
+      "opened": "2026-11-08 13:34 UTC",
+      "cost_sol": 0.25,
+      "tokens": 3144.5526059443487,
+      "entry_px": 0.006849742300155114,
+      "entry_mc": 6847634,
+      "peak_px": 0.006849742300155114,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unpaid rule",
+      "rugcheck": 33,
+      "risks": [
+        "High holder correlation"
+      ],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/cpspqoxfg82rlzhh1kgr1dbefwzdmzlunttjcjjwmf6u",
+      "v": 2,
+      "mev_sol": 0.00558659217877095,
+      "swaps": 1,
+      "entry_liq": 206447.99,
+      "at_entry": {
+        "px": 0.006849,
+        "liq": 206447.99,
+        "mc": 6847634,
+        "dex": "pumpswap",
+        "age_h": 14.16,
+        "vol_h1": 6485.05,
+        "vol_h24": 183767.05,
+        "buys_h1": 171,
+        "sells_h1": 113,
+        "buys_h24": 16394,
+        "sells_h24": 1680,
+        "trades_h24": 18074,
+        "avg_trade": 10.17,
+        "m5": 0.62,
+        "h1": 0.54,
+        "h6": 6.33,
+        "h24": 18358,
+        "eligible": true,
+        "v": 3,
+        "pool": "CPSpQoXFG82rLzhH1KGr1dbEFWZDMZLuNtTjcjjWmf6u",
+        "m5_raw": 0.62,
+        "buys_m5": 10,
+        "sells_m5": 7,
+        "buys_h6": 1051,
+        "sells_h6": 703,
+        "vol_m5": 395.41,
+        "vol_h6": 40053.55,
+        "liq_base": 15198368,
+        "liq_quote": 1143.7954,
+        "fdv": 6847634,
+        "boosts": null,
+        "links": null,
+        "read": {
+          "swing": 0.011,
+          "paid": 0.004795178596219003,
+          "vs_paid": 0.3359,
+          "off_peak": -0.0063,
+          "accel": -0.0067,
+          "candles": 32,
+          "unease": 0,
+          "known": 5,
+          "signs": []
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 0.3
     }
   },
   "closed": [
@@ -1507,10 +1578,11 @@
     "2026-11-08 05:01 UTC BUY TripleT 0.25 SOL @ $0.0035931982 (mc $3,593,152): v-unpaid rule",
     "2026-11-08 05:23 UTC SELL 100% KILROY -> 0.149 SOL @ $0.0003413: stop-loss at -35%",
     "2026-11-08 05:33 UTC BUY OMNI 0.25 SOL @ $0.00056884316 (mc $543,402): v-unpaid rule",
-    "2026-11-08 13:19 UTC SELL 100% NADF -> 0.000 SOL @ $1.724e-05: event exit: liquidity down 99% since entry, -100% from entry"
+    "2026-11-08 13:19 UTC SELL 100% NADF -> 0.000 SOL @ $1.724e-05: event exit: liquidity down 99% since entry, -100% from entry",
+    "2026-11-08 13:34 UTC BUY SPCX1K 0.25 SOL @ $0.0068497423 (mc $6,847,634): v-unpaid rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-08 13:30 UTC"
+  "last_mark": "2026-11-08 13:34 UTC"
 }
