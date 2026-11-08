@@ -639,7 +639,7 @@
     "2026-11-08 12:16 UTC SELL 100% HELL -> 0.211 SOL @ $0.002694: time stop: 48h held, -9%, no take-profit",
     "2026-11-08 20:15 UTC SELL 100% GATO -> 0.235 SOL @ $0.01197: time stop: 48h held, +0%, no take-profit"
   ],
-  "last_mark": "2026-11-08 20:59 UTC",
+  "last_mark": "2026-11-08 21:04 UTC",
   "gate_pass": {
     "FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump": 1794168977,
     "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": 1794169944,
@@ -1065,6 +1065,15 @@
       "px": 0.001853,
       "fails": [
         "a wallet holds 30% of supply"
+      ],
+      "moves": {}
+    },
+    "AWaBBNoVuwQ22B8Y5nEtLne2uEfk8UaYEFws7vT7pump": {
+      "symbol": "ELYSION",
+      "at": 1794171872,
+      "px": 0.004406,
+      "fails": [
+        "copycat: an earlier 'Elysion' exists (HW2Sz6)"
       ],
       "moves": {}
     }
