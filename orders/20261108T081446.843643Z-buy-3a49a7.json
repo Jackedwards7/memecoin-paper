@@ -1,0 +1,11 @@
+{
+  "id": "20261108T081446.843643Z-buy-3a49a7",
+  "kind": "buy",
+  "at": 1794125686.843643,
+  "by": "local",
+  "mint": "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump",
+  "sol": 0.25,
+  "thesis": "Gate pass; 28h pumpswap coin, mc $1.07M, liq $84k (thin), 1h +42%, 24h +84%, 5m -2.2% (no spike now), 1h buys 163 vs sells 92. Other passes COGE (24h -92%) and GIGAHUG (11.7h, +1775% 24h vertical) skipped; GATO/HELL already held.",
+  "stop": -0.35,
+  "tp1": 1.0
+}
