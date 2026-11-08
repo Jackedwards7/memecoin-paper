@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.82459391275882,
+  "cash_sol": 7.984955224737939,
   "positions": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
       "symbol": "JOB",
@@ -225,22 +225,22 @@
       "symbol": "DESSA",
       "opened": "2026-11-08 13:51 UTC",
       "cost_sol": 0.25,
-      "tokens": 792.8554672755013,
+      "tokens": 396.42773363775063,
       "entry_px": 0.027061237369943737,
       "entry_mc": 26501140,
-      "peak_px": 0.03494,
+      "peak_px": 0.038,
       "stop": -0.2,
       "tp1": 0.4,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-tight rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.16036131197911924,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/dextcer4k9dwbxtmu8znvvwgevvmvhmb183pf2xxzwvh",
       "v": 2,
-      "mev_sol": 0.005607895917451772,
-      "swaps": 1,
+      "mev_sol": 0.01120011155328669,
+      "swaps": 2,
       "entry_liq": 487459.23,
       "at_entry": {
         "px": 0.02706,
@@ -375,7 +375,7 @@
       "tokens": 31114.07740627185,
       "entry_px": 0.0006921919046090268,
       "entry_mc": 674647,
-      "peak_px": 0.0006921919046090268,
+      "peak_px": 0.0007511,
       "stop": -0.2,
       "tp1": 0.4,
       "tp1_done": false,
@@ -2285,10 +2285,11 @@
     "2026-11-08 14:38 UTC BUY three 0.25 SOL @ $0.00048017614 (mc $480,001): v-tight rule",
     "2026-11-08 15:12 UTC SELL 100% BTC -> 0.184 SOL @ $0.0008489: event exit: price -22% in 5 minutes, -20% from entry",
     "2026-11-08 15:48 UTC SELL 50% BRUH -> 0.162 SOL @ $0.001319: take-profit at +43%: half sold, cost recovered",
-    "2026-11-08 16:31 UTC BUY Rocco 0.25 SOL @ $0.0006921919 (mc $674,647): v-tight rule"
+    "2026-11-08 16:31 UTC BUY Rocco 0.25 SOL @ $0.0006921919 (mc $674,647): v-tight rule",
+    "2026-11-08 16:33 UTC SELL 50% DESSA -> 0.160 SOL @ $0.038: take-profit at +40%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-08 16:30 UTC"
+  "last_mark": "2026-11-08 16:33 UTC"
 }
