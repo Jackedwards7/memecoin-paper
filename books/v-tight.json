@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.8310153892567165,
+  "cash_sol": 7.994096167279777,
   "positions": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
       "symbol": "JOB",
@@ -81,22 +81,22 @@
       "symbol": "BAGEL",
       "opened": "2026-11-07 02:52 UTC",
       "cost_sol": 0.25,
-      "tokens": 23900.76935066812,
+      "tokens": 11950.38467533406,
       "entry_px": 0.0009102667232505564,
       "entry_mc": 896801,
-      "peak_px": 0.001214,
+      "peak_px": 0.001276,
       "stop": -0.2,
       "tp1": 0.4,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-tight rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.16308077802306042,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/bujoy6wmmyaavcug7rura4xudx6xzje5zbsnqvxfbq7g",
       "v": 2,
-      "mev_sol": 0.005532197388802833,
-      "swaps": 1,
+      "mev_sol": 0.011148912733669155,
+      "swaps": 2,
       "entry_liq": 77089.08,
       "at_entry": {
         "px": 0.00091,
@@ -1881,10 +1881,11 @@
     "2026-11-07 22:21 UTC BUY HELL 0.25 SOL @ $0.0032034944 (mc $3,055,728): v-tight rule",
     "2026-11-07 23:07 UTC SELL 100% GATO -> 0.250 SOL @ $0.01201: time stop: 48h held, +8%, no take-profit",
     "2026-11-08 03:41 UTC BUY GIGAHUG 0.25 SOL @ $0.0011852976 (mc $1,178,795): v-tight rule",
-    "2026-11-08 07:09 UTC BUY ORBIT 0.25 SOL @ $0.001048277 (mc $1,042,570): v-tight rule"
+    "2026-11-08 07:09 UTC BUY ORBIT 0.25 SOL @ $0.001048277 (mc $1,042,570): v-tight rule",
+    "2026-11-08 07:23 UTC SELL 50% BAGEL -> 0.163 SOL @ $0.001276: take-profit at +40%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-08 07:20 UTC"
+  "last_mark": "2026-11-08 07:23 UTC"
 }
