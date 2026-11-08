@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.697480500366393,
+  "cash_sol": 7.447480500366393,
   "positions": {
     "9AvytnUKsLxPxFHFqS6VLxaxt5p6BhYNr53SD2Chpump": {
       "symbol": "67",
@@ -162,7 +162,7 @@
       "tokens": 5744.088873413462,
       "entry_px": 0.0037635516226184806,
       "entry_mc": 3761621,
-      "peak_px": 0.004149,
+      "peak_px": 0.004157,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -233,7 +233,7 @@
       "tokens": 88.21907492721454,
       "entry_px": 0.24460441256954513,
       "entry_mc": 244650491,
-      "peak_px": 0.2605,
+      "peak_px": 0.2609,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -371,6 +371,81 @@
       },
       "reentry": false,
       "since_loss_h": 0.0
+    },
+    "DitHyRMQiSDhn5cnKMJV2CDDt6sVct96YrECiM49pump": {
+      "symbol": "House",
+      "opened": "2026-11-08 02:37 UTC",
+      "cost_sol": 0.25,
+      "tokens": 28407.357654117135,
+      "entry_px": 0.0007528577722856381,
+      "entry_mc": 750826,
+      "peak_px": 0.0007528577722856381,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unpaid rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/gj5t6kjtw3gww7srmhei1ojckayhyvlwb17gktf96hnh",
+      "v": 2,
+      "mev_sol": 0.0056255625562556255,
+      "swaps": 1,
+      "entry_liq": 289537.03,
+      "at_entry": {
+        "px": 0.0007528,
+        "liq": 289537.03,
+        "mc": 750826,
+        "dex": "pumpswap",
+        "age_h": 14241.36,
+        "vol_h1": 59.69,
+        "vol_h24": 3454.71,
+        "buys_h1": 2,
+        "sells_h1": 0,
+        "buys_h24": 29,
+        "sells_h24": 56,
+        "trades_h24": 85,
+        "avg_trade": 40.64,
+        "m5": 0,
+        "h1": 0.71,
+        "h6": 0.66,
+        "h24": 1.62,
+        "eligible": true,
+        "v": 3,
+        "pool": "Gj5t6KjTw3gWW7SrMHEi1ojCkaYHyvLwb17gktf96HNH",
+        "m5_raw": null,
+        "buys_m5": 0,
+        "sells_m5": 0,
+        "buys_h6": 9,
+        "sells_h6": 9,
+        "vol_m5": 0,
+        "vol_h6": 879.6,
+        "liq_base": 193194389,
+        "liq_quote": 1616.4875,
+        "fdv": 750826,
+        "boosts": null,
+        "links": [
+          "telegram",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0044,
+          "paid": 0.0007433356174781111,
+          "vs_paid": 0.0059,
+          "off_peak": -0.012,
+          "accel": -0.0055,
+          "candles": 86,
+          "unease": 1,
+          "known": 5,
+          "signs": [
+            "failed_high"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 0.1
     }
   },
   "closed": [
@@ -1177,10 +1252,11 @@
     "2026-11-07 19:09 UTC BUY UKOR 0.25 SOL @ $0.24460441 (mc $244,650,491): v-unpaid rule",
     "2026-11-08 00:59 UTC SELL 100% Jotchua -> 0.243 SOL @ $0.001879: time stop: 48h held, +4%, no take-profit",
     "2026-11-08 01:01 UTC BUY NADF 0.25 SOL @ $0.20310401 (mc $203,159,634): v-unpaid rule",
-    "2026-11-08 02:29 UTC SELL 100% SPCX1K -> 0.007 SOL @ $0.0001413: event exit: liquidity down 78% since entry, -95% from entry"
+    "2026-11-08 02:29 UTC SELL 100% SPCX1K -> 0.007 SOL @ $0.0001413: event exit: liquidity down 78% since entry, -95% from entry",
+    "2026-11-08 02:37 UTC BUY House 0.25 SOL @ $0.00075285777 (mc $750,826): v-unpaid rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-08 02:29 UTC"
+  "last_mark": "2026-11-08 02:37 UTC"
 }
