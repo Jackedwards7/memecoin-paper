@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.912095061884844,
+  "cash_sol": 8.07459391275882,
   "positions": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
       "symbol": "JOB",
@@ -154,22 +154,22 @@
       "symbol": "BRUH",
       "opened": "2026-11-08 07:41 UTC",
       "cost_sol": 0.25,
-      "tokens": 23174.369737501518,
+      "tokens": 11587.184868750759,
       "entry_px": 0.0009246664631109085,
       "entry_mc": 915318,
-      "peak_px": 0.001242,
+      "peak_px": 0.001319,
       "stop": -0.2,
       "tp1": 0.4,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-tight rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.1624988508739761,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/ehpzesdxtymvwz1iy5nt3lrnjy1xbc1kgqspl1kqnyiv",
       "v": 2,
-      "mev_sol": 0.005614823133071308,
-      "swaps": 1,
+      "mev_sol": 0.011198296053227644,
+      "swaps": 2,
       "entry_liq": 77231.91,
       "at_entry": {
         "px": 0.0009244,
@@ -2211,10 +2211,11 @@
     "2026-11-08 13:34 UTC BUY BTC 0.25 SOL @ $0.0010602814 (mc $1,045,560): v-tight rule",
     "2026-11-08 13:51 UTC BUY DESSA 0.25 SOL @ $0.027061237 (mc $26,501,140): v-tight rule",
     "2026-11-08 14:38 UTC BUY three 0.25 SOL @ $0.00048017614 (mc $480,001): v-tight rule",
-    "2026-11-08 15:12 UTC SELL 100% BTC -> 0.184 SOL @ $0.0008489: event exit: price -22% in 5 minutes, -20% from entry"
+    "2026-11-08 15:12 UTC SELL 100% BTC -> 0.184 SOL @ $0.0008489: event exit: price -22% in 5 minutes, -20% from entry",
+    "2026-11-08 15:48 UTC SELL 50% BRUH -> 0.162 SOL @ $0.001319: take-profit at +43%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-08 15:43 UTC"
+  "last_mark": "2026-11-08 15:48 UTC"
 }
