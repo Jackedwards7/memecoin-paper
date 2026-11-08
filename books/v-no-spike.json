@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6780.3794809942465,
+  "cash_sol": 6780.1294809942465,
   "positions": {
     "ECNQSQA7Y5bnXzbotgv6XcG15c6jpJ6V2BFbYzJrpump": {
       "symbol": "PAWKET",
@@ -378,6 +378,67 @@
       },
       "reentry": true,
       "since_loss_h": 2.2
+    },
+    "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
+      "symbol": "BRUH",
+      "opened": "2026-11-08 07:25 UTC",
+      "cost_sol": 0.25,
+      "tokens": 24159.475581251678,
+      "entry_px": 0.0008868611376907188,
+      "entry_mc": 877865,
+      "peak_px": 0.0008868611376907188,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-no-spike rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/ehpzesdxtymvwz1iy5nt3lrnjy1xbc1kgqspl1kqnyiv",
+      "v": 2,
+      "mev_sol": 0.005615453728661276,
+      "swaps": 1,
+      "entry_liq": 75575.9,
+      "at_entry": {
+        "px": 0.0008866,
+        "liq": 75575.9,
+        "mc": 877865,
+        "dex": "pumpswap",
+        "age_h": 26.92,
+        "vol_h1": 15040.66,
+        "vol_h24": 545745.34,
+        "buys_h1": 70,
+        "sells_h1": 67,
+        "buys_h24": 4153,
+        "sells_h24": 3806,
+        "trades_h24": 7959,
+        "avg_trade": 68.57,
+        "m5": 6.07,
+        "h1": 22.21,
+        "h6": 36.83,
+        "h24": 43.81,
+        "eligible": true,
+        "v": 3,
+        "pool": "EhPzeSdXTyMvWZ1iy5NT3LrNjY1xbC1KGqSpL1kqNYiv",
+        "m5_raw": 6.07,
+        "buys_m5": 17,
+        "sells_m5": 15,
+        "buys_h6": 611,
+        "sells_h6": 589,
+        "vol_m5": 3447.22,
+        "vol_h6": 76309.67,
+        "liq_base": 44074164,
+        "liq_quote": 410.1713,
+        "fdv": 877865,
+        "boosts": null,
+        "links": [
+          "twitter"
+        ],
+        "read": null
+      },
+      "reentry": false,
+      "since_loss_h": 3.0
     }
   },
   "closed": [
@@ -1193,10 +1254,11 @@
     "2026-11-08 01:15 UTC SELL 100% three -> 0.175 SOL @ $0.0004558: time stop: 48h held, -24%, no take-profit",
     "2026-11-08 03:09 UTC BUY JOB 0.25 SOL @ $0.0055395396 (mc $5,396,064): v-no-spike rule",
     "2026-11-08 03:25 UTC BUY HELL 0.25 SOL @ $0.0028414657 (mc $2,709,994): v-no-spike rule",
-    "2026-11-08 04:25 UTC SELL 100% NIO -> 0.149 SOL @ $0.0008964: stop-loss at -36%"
+    "2026-11-08 04:25 UTC SELL 100% NIO -> 0.149 SOL @ $0.0008964: stop-loss at -36%",
+    "2026-11-08 07:25 UTC BUY BRUH 0.25 SOL @ $0.00088686114 (mc $877,865): v-no-spike rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-08 07:23 UTC"
+  "last_mark": "2026-11-08 07:25 UTC"
 }
