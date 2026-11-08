@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.790833051256218,
+  "cash_sol": 8.540833051256218,
   "positions": {
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": {
       "symbol": "three",
@@ -232,7 +232,7 @@
       "tokens": 3874.5164988144634,
       "entry_px": 0.0055395395803753385,
       "entry_mc": 5396064,
-      "peak_px": 0.005735,
+      "peak_px": 0.005765,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -300,6 +300,79 @@
       },
       "reentry": true,
       "since_loss_h": 4.0
+    },
+    "BWh8q5etuPwekJ2JEDkbMxMQWy4FysoJ8LEwE3rFpump": {
+      "symbol": "GIGAHUG",
+      "opened": "2026-11-08 03:41 UTC",
+      "cost_sol": 0.25,
+      "tokens": 18099.410059701622,
+      "entry_px": 0.0011852976107638764,
+      "entry_mc": 1178795,
+      "peak_px": 0.0011852976107638764,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-velocity rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/brkcwryaj22fgqh6ggelbrmuedxx7ylhncaasajor8yt",
+      "v": 2,
+      "mev_sol": 0.005608524957936062,
+      "swaps": 1,
+      "entry_liq": 88742.38,
+      "at_entry": {
+        "px": 0.001185,
+        "liq": 88742.38,
+        "mc": 1178795,
+        "dex": "pumpswap",
+        "age_h": 7.12,
+        "vol_h1": 62671.08,
+        "vol_h24": 1461810.52,
+        "buys_h1": 4807,
+        "sells_h1": 2524,
+        "buys_h24": 55595,
+        "sells_h24": 18226,
+        "trades_h24": 73821,
+        "avg_trade": 19.8,
+        "m5": 4,
+        "h1": 2.61,
+        "h6": -11.27,
+        "h24": 1941,
+        "eligible": true,
+        "v": 3,
+        "pool": "BrkcwRYAJ22Fgqh6GgeLbRmUEdXx7yLhNcAAsAJoR8yt",
+        "m5_raw": 4,
+        "buys_m5": 941,
+        "sells_m5": 582,
+        "buys_h6": 36060,
+        "sells_h6": 11803,
+        "vol_m5": 5766.76,
+        "vol_h6": 426545.45,
+        "liq_base": 38255506,
+        "liq_quote": 486.9174,
+        "fdv": 1178795,
+        "boosts": 500,
+        "links": [
+          "telegram",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0745,
+          "paid": 0.0007732709947279901,
+          "vs_paid": 0.523,
+          "off_peak": -0.1999,
+          "accel": -0.0585,
+          "candles": 27,
+          "unease": 0,
+          "known": 3,
+          "signs": []
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 4.6
     }
   },
   "closed": [
@@ -1327,10 +1400,11 @@
     "2026-11-07 21:31 UTC SELL 100% PAWKET -> 0.184 SOL @ $0.0007112: time stop: 48h held, -21%, no take-profit",
     "2026-11-07 21:33 UTC SELL 100% NIO -> 0.150 SOL @ $0.00102: stop-loss at -35%",
     "2026-11-07 23:07 UTC SELL 100% GATO -> 0.250 SOL @ $0.01201: time stop: 48h held, +8%, no take-profit",
-    "2026-11-08 03:09 UTC BUY JOB 0.25 SOL @ $0.0055395396 (mc $5,396,064): v-velocity rule"
+    "2026-11-08 03:09 UTC BUY JOB 0.25 SOL @ $0.0055395396 (mc $5,396,064): v-velocity rule",
+    "2026-11-08 03:41 UTC BUY GIGAHUG 0.25 SOL @ $0.0011852976 (mc $1,178,795): v-velocity rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-08 03:35 UTC"
+  "last_mark": "2026-11-08 03:40 UTC"
 }
