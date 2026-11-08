@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.841574098269772,
+  "cash_sol": 8.591574098269772,
   "positions": {
     "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": {
       "symbol": "HELL",
@@ -152,6 +152,77 @@
       },
       "reentry": true,
       "since_loss_h": 59.7
+    },
+    "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
+      "symbol": "BRUH",
+      "opened": "2026-11-08 08:15 UTC",
+      "cost_sol": 0.25,
+      "tokens": 19645.037016024995,
+      "entry_px": 0.0010912889847197588,
+      "entry_mc": 1080245,
+      "peak_px": 0.0010912889847197588,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "Gate pass; 28h pumpswap coin, mc $1.07M, liq $84k (thin), 1h +42%, 24h +84%, 5m -2.2% (no spike now), 1h buys 163 vs sells 92. Other passes COGE (24h -92%) and GIGAHUG (11.7h, +1775% 24h vertical) skipped; GATO/HELL already held.",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/ehpzesdxtymvwz1iy5nt3lrnjy1xbc1kgqspl1kqnyiv",
+      "v": 2,
+      "mev_sol": 0.005612302166348636,
+      "swaps": 1,
+      "entry_liq": 84085.06,
+      "at_entry": {
+        "px": 0.001091,
+        "liq": 84085.06,
+        "mc": 1080245,
+        "dex": "pumpswap",
+        "age_h": 27.74,
+        "vol_h1": 31112.33,
+        "vol_h24": 482006.79,
+        "buys_h1": 163,
+        "sells_h1": 90,
+        "buys_h24": 3727,
+        "sells_h24": 3425,
+        "trades_h24": 7152,
+        "avg_trade": 67.39,
+        "m5": 1.24,
+        "h1": 44.57,
+        "h6": 83.78,
+        "h24": 83.11,
+        "eligible": true,
+        "v": 3,
+        "pool": "EhPzeSdXTyMvWZ1iy5NT3LrNjY1xbC1KGqSpL1kqNYiv",
+        "m5_raw": 1.24,
+        "buys_m5": 8,
+        "sells_m5": 2,
+        "buys_h6": 695,
+        "sells_h6": 605,
+        "vol_m5": 241.02,
+        "vol_h6": 89823.45,
+        "liq_base": 39276299,
+        "liq_quote": 463.01996,
+        "fdv": 1080245,
+        "boosts": null,
+        "links": [
+          "twitter"
+        ],
+        "read": {
+          "swing": 0.0842,
+          "paid": 0.0006435867475476761,
+          "vs_paid": 0.6688,
+          "off_peak": -0.0268,
+          "accel": 0.4488,
+          "candles": 96,
+          "unease": 0,
+          "known": 3,
+          "signs": []
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 28.0
     }
   },
   "closed": [
@@ -551,23 +622,24 @@
     "2026-11-06 12:16 UTC BUY HELL 0.25 SOL @ $0.0029684887 (mc $2,831,474): Gate pass; mature pumpswap coin (575h), mc $2.9M, liq $138k, 1h +1.8%, 24h +10.6%, 5m +12.9% (<25%), 1h buys 2817 vs 2752. Other passes GATO (sellers lead), COGE (16h, +8457% 24h) and AMD (10h, +4852% 24h) skipped.",
     "2026-11-06 20:15 UTC BUY GATO 0.25 SOL @ $0.011930744 (mc $11,775,041): Gate pass; mature pumpswap coin (1760h), mc $11.8M, liq $363k, 1h +5.3%, 24h +23.8%, 5m +0.5% (no spike), 1h buys 443 vs sells 421. Other passes DESSA/NIO/COGE/AMD skipped (sellers lead or vertical 24h); HELL/three already held.",
     "2026-11-07 03:30 UTC SELL 100% JOB -> 0.298 SOL @ $0.004911: time stop: 49h held, +20%, no take-profit",
-    "2026-11-07 04:15 UTC SELL 100% three -> 0.191 SOL @ $0.0005274: Volume collapsed: 53 trades in 1h vs ~1700 at entry (under 20% of recent level), 1h -4%, 24h -18%, theme fading; position -17%"
+    "2026-11-07 04:15 UTC SELL 100% three -> 0.191 SOL @ $0.0005274: Volume collapsed: 53 trades in 1h vs ~1700 at entry (under 20% of recent level), 1h -4%, 24h -18%, theme fading; position -17%",
+    "2026-11-08 08:15 UTC BUY BRUH 0.25 SOL @ $0.001091289 (mc $1,080,245): Gate pass; 28h pumpswap coin, mc $1.07M, liq $84k (thin), 1h +42%, 24h +84%, 5m -2.2% (no spike now), 1h buys 163 vs sells 92. Other passes COGE (24h -92%) and GIGAHUG (11.7h, +1775% 24h vertical) skipped; GATO/HELL already held."
   ],
-  "last_mark": "2026-11-08 08:13 UTC",
+  "last_mark": "2026-11-08 08:15 UTC",
   "gate_pass": {
-    "8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump": 1794122708,
+    "8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump": 1794125679.581895,
     "FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump": 1794122708,
     "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": 1794123674,
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794124634,
-    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1794124634,
-    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794124634,
+    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1794125679.581895,
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794125679.581895,
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1794124634,
     "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": 1794124634,
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794124634,
-    "BWh8q5etuPwekJ2JEDkbMxMQWy4FysoJ8LEwE3rFpump": 1794124634,
+    "BWh8q5etuPwekJ2JEDkbMxMQWy4FysoJ8LEwE3rFpump": 1794125679.581895,
     "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794122708,
     "DSAKMZsWvRQL3c4RwhXpicbbygAJXiHz8PMCfoTUpump": 1794119828,
-    "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": 1794122708
+    "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": 1794125679.581895
   },
   "rejects": {
     "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
@@ -1376,6 +1448,18 @@
       "kind": "gate",
       "result": "recorded 7 gate results, 4 passed",
       "at": "2026-11-08 04:15 UTC"
+    },
+    {
+      "id": "20261108T081439.581895Z-gate-ad161f",
+      "kind": "gate",
+      "result": "recorded 8 gate results, 5 passed",
+      "at": "2026-11-08 08:15 UTC"
+    },
+    {
+      "id": "20261108T081446.843643Z-buy-3a49a7",
+      "kind": "buy",
+      "result": "bought BRUH 0.25 SOL @ $0.001091289; control opened",
+      "at": "2026-11-08 08:15 UTC"
     }
   ]
 }

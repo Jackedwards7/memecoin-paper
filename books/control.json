@@ -1,7 +1,86 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 9.483948111919036,
-  "positions": {},
+  "cash_sol": 9.233948111919036,
+  "positions": {
+    "FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump": {
+      "symbol": "DONNA",
+      "opened": "2026-11-08 08:15 UTC",
+      "cost_sol": 0.25,
+      "tokens": 14091.756418710036,
+      "entry_px": 0.0015213442429032901,
+      "entry_mc": 1454375,
+      "peak_px": 0.0015213442429032901,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "control for BRUH: random pick from 12 other gate passes",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/7vurupbxg3z5qjtcstvg3vxumxenqfnupjdz3cgw2tkt",
+      "v": 2,
+      "mev_sol": 0.005612302166348636,
+      "swaps": 1,
+      "entry_liq": 98408.63,
+      "at_entry": {
+        "px": 0.001521,
+        "liq": 98408.63,
+        "mc": 1454375,
+        "dex": "pumpswap",
+        "age_h": 369.43,
+        "vol_h1": 0.95,
+        "vol_h24": 2110.71,
+        "buys_h1": 1,
+        "sells_h1": 0,
+        "buys_h24": 45,
+        "sells_h24": 30,
+        "trades_h24": 75,
+        "avg_trade": 28.14,
+        "m5": 0,
+        "h1": 0.76,
+        "h6": -0.69,
+        "h24": -0.98,
+        "eligible": true,
+        "v": 3,
+        "pool": "7vURUpBXG3Z5qJTCSTvG3VxumXEnQfnUPJDZ3Cgw2tkT",
+        "m5_raw": null,
+        "buys_m5": 0,
+        "sells_m5": 0,
+        "buys_h6": 3,
+        "sells_h6": 4,
+        "vol_m5": 0,
+        "vol_h6": 78.24,
+        "liq_base": 32879282,
+        "liq_quote": 543.5094,
+        "fdv": 1454375,
+        "boosts": null,
+        "links": [
+          "instagram",
+          "telegram",
+          "tiktok",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0099,
+          "paid": 0.001527251729414493,
+          "vs_paid": -0.0029,
+          "off_peak": -0.0201,
+          "accel": 0.0073,
+          "candles": 96,
+          "unease": 2,
+          "known": 5,
+          "signs": [
+            "smaller_trades",
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 4.0
+    }
+  },
   "closed": [
     {
       "symbol": "Ahsoka",
@@ -370,10 +449,11 @@
     "2026-11-06 20:15 UTC BUY NIO 0.25 SOL @ $0.001893284 (mc $1,804,103): control for GATO: random pick from 8 other gate passes",
     "2026-11-06 21:09 UTC SELL 100% DESSA -> 0.148 SOL @ $0.02211: stop-loss at -35%",
     "2026-11-07 16:37 UTC SELL 100% NIO -> 0.149 SOL @ $0.001227: stop-loss at -35%",
-    "2026-11-08 04:15 UTC SELL 100% \u2588\u2588\u2588 -> 0.204 SOL @ $0.000542: time stop: 48h held, -12%, no take-profit"
+    "2026-11-08 04:15 UTC SELL 100% \u2588\u2588\u2588 -> 0.204 SOL @ $0.000542: time stop: 48h held, -12%, no take-profit",
+    "2026-11-08 08:15 UTC BUY DONNA 0.25 SOL @ $0.0015213442 (mc $1,454,375): control for BRUH: random pick from 12 other gate passes"
   ],
   "gate_pass": {},
   "rejects": {},
-  "last_mark": "2026-11-08 08:13 UTC",
+  "last_mark": "2026-11-08 08:15 UTC",
   "passes": {}
 }
