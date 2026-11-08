@@ -1,9 +1,9 @@
 # Lessons
 
-107 closed trades labelled, every book. Written by the bot.
+108 closed trades labelled, every book. Written by the bot.
 
 - **other**: 35 trades, mean -37%. AMD (v-momentum): stop-loss at -35%; AMD (v-networks): stop-loss at -35%
-- **won-held**: 30 trades, mean +36%. JOB (v-mature): +7%, peak +36%; JOB (v-swing): +7%, peak +36%
+- **won-held**: 31 trades, mean +35%. JOB (v-swing): +7%, peak +36%; baton (v-unpaid): +10%, peak +30%
 - **slow-bleed**: 25 trades, mean -30%. three (v-tight): -27% over 32h; CATE (v-unpaid): -18% over 48h
 - **bought-spike**: 13 trades, mean -30%. PAWKET (v-swing): up 1957% in 24h at entry, peak +1%; HELL (v-mature): up 2% in 24h at entry, peak +4%
 - **won-trailed**: 3 trades, mean +902925%. Rocco (v-tight): +7%, peak +60%; Rocco (v-no-spike): +2708751%, peak +5722499%
