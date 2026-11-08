@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.283786148501786,
+  "cash_sol": 8.033786148501786,
   "positions": {
     "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": {
       "symbol": "BAGEL",
@@ -373,6 +373,80 @@
       },
       "reentry": true,
       "since_loss_h": 0.0
+    },
+    "DSAKMZsWvRQL3c4RwhXpicbbygAJXiHz8PMCfoTUpump": {
+      "symbol": "ORBIT",
+      "opened": "2026-11-08 12:46 UTC",
+      "cost_sol": 0.25,
+      "tokens": 26005.726597981142,
+      "entry_px": 0.0008266453320965421,
+      "entry_mc": 822192,
+      "peak_px": 0.0008266453320965421,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-low-bundle rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/ajt7zptztfeo9cqu8yuwddtmoah7bmyt7kmkmhombcne",
+      "v": 2,
+      "mev_sol": 0.005597223777006605,
+      "swaps": 1,
+      "entry_liq": 75226.92,
+      "at_entry": {
+        "px": 0.0008264,
+        "liq": 75226.92,
+        "mc": 822192,
+        "dex": "pumpswap",
+        "age_h": 12.36,
+        "vol_h1": 30631.2,
+        "vol_h24": 1872179.64,
+        "buys_h1": 5422,
+        "sells_h1": 4527,
+        "buys_h24": 63448,
+        "sells_h24": 46857,
+        "trades_h24": 110305,
+        "avg_trade": 16.97,
+        "m5": -3.12,
+        "h1": 10.85,
+        "h6": -9.68,
+        "h24": 1287,
+        "eligible": true,
+        "v": 3,
+        "pool": "Ajt7zptZTFeo9cQu8yuwDDTmoAh7BMyT7kMKMHoMBCNE",
+        "m5_raw": -3.12,
+        "buys_m5": 389,
+        "sells_m5": 375,
+        "buys_h6": 37606,
+        "sells_h6": 26969,
+        "vol_m5": 2279.18,
+        "vol_h6": 276384.9,
+        "liq_base": 46373619,
+        "liq_quote": 413.2045,
+        "fdv": 822192,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.1924,
+          "paid": 0.0005882246586571513,
+          "vs_paid": 0.2405,
+          "off_peak": -0.5096,
+          "accel": -0.2782,
+          "candles": 49,
+          "unease": 1,
+          "known": 5,
+          "signs": [
+            "smaller_trades"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 0.3
     }
   },
   "closed": [
@@ -1651,10 +1725,11 @@
     "2026-11-08 03:41 UTC BUY GIGAHUG 0.25 SOL @ $0.0011852976 (mc $1,178,795): v-low-bundle rule",
     "2026-11-08 04:11 UTC SELL 100% three -> 0.157 SOL @ $0.0004389: time stop: 48h held, -32%, no take-profit",
     "2026-11-08 04:13 UTC BUY HELL 0.25 SOL @ $0.0031154873 (mc $2,971,417): v-low-bundle rule",
-    "2026-11-08 12:29 UTC SELL 100% GIGAHUG -> 0.188 SOL @ $0.0009709: event exit: price -24% in 5 minutes, -18% from entry"
+    "2026-11-08 12:29 UTC SELL 100% GIGAHUG -> 0.188 SOL @ $0.0009709: event exit: price -24% in 5 minutes, -18% from entry",
+    "2026-11-08 12:46 UTC BUY ORBIT 0.25 SOL @ $0.00082664533 (mc $822,192): v-low-bundle rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-08 12:45 UTC"
+  "last_mark": "2026-11-08 12:46 UTC"
 }
