@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6780.480063658044,
+  "cash_sol": 6780.230063658044,
   "positions": {
     "ECNQSQA7Y5bnXzbotgv6XcG15c6jpJ6V2BFbYzJrpump": {
       "symbol": "PAWKET",
@@ -307,7 +307,7 @@
       "tokens": 3874.5164988144634,
       "entry_px": 0.0055395395803753385,
       "entry_mc": 5396064,
-      "peak_px": 0.005616,
+      "peak_px": 0.005735,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -375,6 +375,81 @@
       },
       "reentry": true,
       "since_loss_h": 1.9
+    },
+    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": {
+      "symbol": "HELL",
+      "opened": "2026-11-08 03:25 UTC",
+      "cost_sol": 0.25,
+      "tokens": 7554.375939065349,
+      "entry_px": 0.0028414656846765004,
+      "entry_mc": 2709994,
+      "peak_px": 0.0028414656846765004,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-no-spike rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/ewsyhiuznynqh5f65ypfsoqblq2kyetuvhm5un7wsfdg",
+      "v": 2,
+      "mev_sol": 0.005605381165919282,
+      "swaps": 1,
+      "entry_liq": 136045.49,
+      "at_entry": {
+        "px": 0.002841,
+        "liq": 136045.49,
+        "mc": 2709994,
+        "dex": "pumpswap",
+        "age_h": 614.37,
+        "vol_h1": 2643.57,
+        "vol_h24": 59380.94,
+        "buys_h1": 1480,
+        "sells_h1": 1435,
+        "buys_h24": 40786,
+        "sells_h24": 41486,
+        "trades_h24": 82272,
+        "avg_trade": 0.72,
+        "m5": -7.45,
+        "h1": 1.73,
+        "h6": 3.71,
+        "h24": 4.35,
+        "eligible": true,
+        "v": 3,
+        "pool": "EwsYHiuznyNqH5f65YpfsoQBLq2KyETuvhm5un7wsfDG",
+        "m5_raw": -7.45,
+        "buys_m5": 119,
+        "sells_m5": 117,
+        "buys_h6": 14374,
+        "sells_h6": 14463,
+        "vol_m5": 270.2,
+        "vol_h6": 16587.05,
+        "liq_base": 23806964,
+        "liq_quote": 153.2494,
+        "fdv": 2709994,
+        "boosts": 100,
+        "links": [
+          "telegram",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0829,
+          "paid": 0.002936574831265104,
+          "vs_paid": 0.0033,
+          "off_peak": -0.0937,
+          "accel": -0.005,
+          "candles": 96,
+          "unease": 1,
+          "known": 5,
+          "signs": [
+            "failed_high"
+          ]
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 2.2
     }
   },
   "closed": [
@@ -1110,10 +1185,11 @@
     "2026-11-07 22:05 UTC BUY DONNA 0.25 SOL @ $0.0015283452 (mc $1,461,157): v-no-spike rule",
     "2026-11-07 23:07 UTC SELL 100% GATO -> 0.250 SOL @ $0.01201: time stop: 48h held, +8%, no take-profit",
     "2026-11-08 01:15 UTC SELL 100% three -> 0.175 SOL @ $0.0004558: time stop: 48h held, -24%, no take-profit",
-    "2026-11-08 03:09 UTC BUY JOB 0.25 SOL @ $0.0055395396 (mc $5,396,064): v-no-spike rule"
+    "2026-11-08 03:09 UTC BUY JOB 0.25 SOL @ $0.0055395396 (mc $5,396,064): v-no-spike rule",
+    "2026-11-08 03:25 UTC BUY HELL 0.25 SOL @ $0.0028414657 (mc $2,709,994): v-no-spike rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-08 03:19 UTC"
+  "last_mark": "2026-11-08 03:24 UTC"
 }
