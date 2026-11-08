@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.402023028865058,
+  "cash_sol": 7.152023028865058,
   "positions": {
     "CFYhdWXsYfS7swnJgHRwb5toTHMEQD7Ljd5gGwKLpump": {
       "symbol": "KILROY",
@@ -370,6 +370,81 @@
       },
       "reentry": false,
       "since_loss_h": 0.5
+    },
+    "J8PSdNP3QewKq2Z1JJJFDMaqF7KcaiJhR7gbr5KZpump": {
+      "symbol": "TripleT",
+      "opened": "2026-11-08 05:01 UTC",
+      "cost_sol": 0.25,
+      "tokens": 5957.478239801249,
+      "entry_px": 0.003593198185263392,
+      "entry_mc": 3593152,
+      "peak_px": 0.003593198185263392,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unpaid rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/3kfcgj5r3zshw8htdbzjsrrksrymkvsmfhc4vo4iddxd",
+      "v": 2,
+      "mev_sol": 0.005620503597122303,
+      "swaps": 1,
+      "entry_liq": 403200.11,
+      "at_entry": {
+        "px": 0.003593,
+        "liq": 403200.11,
+        "mc": 3593152,
+        "dex": "pumpswap",
+        "age_h": 6164.3,
+        "vol_h1": 8134.93,
+        "vol_h24": 213342.92,
+        "buys_h1": 51,
+        "sells_h1": 45,
+        "buys_h24": 1493,
+        "sells_h24": 1536,
+        "trades_h24": 3029,
+        "avg_trade": 70.43,
+        "m5": 3.5,
+        "h1": 0.78,
+        "h6": 3.87,
+        "h24": 15.41,
+        "eligible": true,
+        "v": 3,
+        "pool": "3KFCgJ5R3zshW8hTDbzjSrrKSRYmKvsMfhc4Vo4iddxD",
+        "m5_raw": 3.5,
+        "buys_m5": 6,
+        "sells_m5": 8,
+        "buys_h6": 1223,
+        "sells_h6": 1185,
+        "vol_m5": 3591.24,
+        "vol_h6": 151271.83,
+        "liq_base": 55915052,
+        "liq_quote": 2274.1548,
+        "fdv": 3593152,
+        "boosts": null,
+        "links": [
+          "telegram",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0109,
+          "paid": 0.003583909814446503,
+          "vs_paid": 0.0472,
+          "off_peak": -0.0482,
+          "accel": 0.0868,
+          "candles": 96,
+          "unease": 1,
+          "known": 5,
+          "signs": [
+            "smaller_trades"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 0.8
     }
   },
   "closed": [
@@ -1341,10 +1416,11 @@
     "2026-11-08 02:37 UTC BUY House 0.25 SOL @ $0.00075285777 (mc $750,826): v-unpaid rule",
     "2026-11-08 02:40 UTC SELL 100% GROKNAM -> 0.000 SOL @ $1.615e-06: event exit: liquidity down 99% since entry, -100% from entry",
     "2026-11-08 03:09 UTC BUY BTX 0.25 SOL @ $0.0066837315 (mc $6,682,605): v-unpaid rule",
-    "2026-11-08 04:11 UTC SELL 100% 67 -> 0.205 SOL @ $0.001227: time stop: 48h held, -11%, no take-profit"
+    "2026-11-08 04:11 UTC SELL 100% 67 -> 0.205 SOL @ $0.001227: time stop: 48h held, -11%, no take-profit",
+    "2026-11-08 05:01 UTC BUY TripleT 0.25 SOL @ $0.0035931982 (mc $3,593,152): v-unpaid rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-08 04:56 UTC"
+  "last_mark": "2026-11-08 05:01 UTC"
 }
