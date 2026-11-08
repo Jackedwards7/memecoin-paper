@@ -625,11 +625,11 @@
     "2026-11-07 04:15 UTC SELL 100% three -> 0.191 SOL @ $0.0005274: Volume collapsed: 53 trades in 1h vs ~1700 at entry (under 20% of recent level), 1h -4%, 24h -18%, theme fading; position -17%",
     "2026-11-08 08:15 UTC BUY BRUH 0.25 SOL @ $0.001091289 (mc $1,080,245): Gate pass; 28h pumpswap coin, mc $1.07M, liq $84k (thin), 1h +42%, 24h +84%, 5m -2.2% (no spike now), 1h buys 163 vs sells 92. Other passes COGE (24h -92%) and GIGAHUG (11.7h, +1775% 24h vertical) skipped; GATO/HELL already held."
   ],
-  "last_mark": "2026-11-08 08:43 UTC",
+  "last_mark": "2026-11-08 08:45 UTC",
   "gate_pass": {
     "8UQdy5sHMVWUWSHeA5B3ZuuAVNumjSLPXdf19MXcpump": 1794126554,
     "FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump": 1794126554,
-    "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": 1794123674,
+    "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": 1794127520,
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794124634,
     "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1794125679.581895,
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794125679.581895,
@@ -638,7 +638,6 @@
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794124634,
     "BWh8q5etuPwekJ2JEDkbMxMQWy4FysoJ8LEwE3rFpump": 1794125679.581895,
     "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794126554,
-    "DSAKMZsWvRQL3c4RwhXpicbbygAJXiHz8PMCfoTUpump": 1794119828,
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": 1794126554
   },
   "rejects": {
