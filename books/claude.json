@@ -639,10 +639,10 @@
     "2026-11-08 12:16 UTC SELL 100% HELL -> 0.211 SOL @ $0.002694: time stop: 48h held, -9%, no take-profit",
     "2026-11-08 20:15 UTC SELL 100% GATO -> 0.235 SOL @ $0.01197: time stop: 48h held, +0%, no take-profit"
   ],
-  "last_mark": "2026-11-09 00:47 UTC",
+  "last_mark": "2026-11-09 00:49 UTC",
   "gate_pass": {
     "FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump": 1794184398,
-    "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": 1794181507,
+    "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": 1794185358,
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794182467,
     "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1794183283.965867,
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794183283.965867,
@@ -651,7 +651,7 @@
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794183283.965867,
     "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794180543,
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": 1794184398,
-    "CZRtwCDJy4cKNvtVwtgGqeEGzLnCDJdTkexgpEsMpump": 1794181507
+    "CZRtwCDJy4cKNvtVwtgGqeEGzLnCDJdTkexgpEsMpump": 1794185358
   },
   "rejects": {
     "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {

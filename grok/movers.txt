@@ -1,12 +1,12 @@
-MOVERS 2026-11-09T00:33:18Z
-PreweJYECqtQwBtpxHL171nL2K6umo692gTm7Q3rpgF OPENAI +4%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +4%
-5w3wVdJaESaJKyLmStM6Hv9UyUkmZ1b9DLQquAqqpump SID +5%
-Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump BAGEL +9%
-483nprwoMSoGQgrojSHWiePMbKPre7ZRDy4f8YNSpump HEREWEGO +11%
+MOVERS 2026-11-09T00:49:18Z
+CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi +6%
+Cm6fNnMk7NfzStP9CZpsQA2v3jjzbcYGAxdJySmHpump Buttcoin +7%
+npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA +13%
+483nprwoMSoGQgrojSHWiePMbKPre7ZRDy4f8YNSpump HEREWEGO +20%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +36%
 3SEyWEeDk2HC7kqEue1a23BQyCjv5yuWrtTyxYMFpump UODF -68%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -18%
-CZRtwCDJy4cKNvtVwtgGqeEGzLnCDJdTkexgpEsMpump BTC -14%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -7%
-8PzFWyLpCVEmbZmVJcaRTU5r69XKJx1rd7YGpWvnpump Percolator -6%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -16%
+AWaBBNoVuwQ22B8Y5nEtLne2uEfk8UaYEFws7vT7pump ELYSION -11%
+5GDX5fJTQns4arM1J94wjxdA8KXFsV5qW46MLFpHpump OMNI -6%
+6nGocDUtGSJoSz1gUPgFGTpHtUSK3s7FN6zhB6AfLoat APU -5%
 END
