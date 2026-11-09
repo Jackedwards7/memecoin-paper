@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.802373920434737,
+  "cash_sol": 6.552373920434737,
   "positions": {
     "DitHyRMQiSDhn5cnKMJV2CDDt6sVct96YrECiM49pump": {
       "symbol": "House",
@@ -370,6 +370,78 @@
       },
       "reentry": false,
       "since_loss_h": 0.3
+    },
+    "PndDKME9TTodB7x3iEhX8d3FYBPe3vAsTTQHzDdpump": {
+      "symbol": "USAR",
+      "opened": "2026-11-09 05:54 UTC",
+      "cost_sol": 0.25,
+      "tokens": 117.51713134496916,
+      "entry_px": 0.17750369466360352,
+      "entry_mc": 177529316,
+      "peak_px": 0.17750369466360352,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unpaid rule",
+      "rugcheck": 54,
+      "risks": [
+        "High market cap per holder",
+        "High holder correlation"
+      ],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/59uzeyamanmjykn3lxqbaztxy6yfuvzqb2x29xdi1md4",
+      "v": 2,
+      "mev_sol": 0.005764353239566521,
+      "swaps": 1,
+      "entry_liq": 1041796.47,
+      "at_entry": {
+        "px": 0.1775,
+        "liq": 1041796.47,
+        "mc": 177529316,
+        "dex": "pumpswap",
+        "age_h": 28.55,
+        "vol_h1": 13822.67,
+        "vol_h24": 322991.7,
+        "buys_h1": 120,
+        "sells_h1": 119,
+        "buys_h24": 2924,
+        "sells_h24": 2878,
+        "trades_h24": 5802,
+        "avg_trade": 55.67,
+        "m5": 0.19,
+        "h1": 0.65,
+        "h6": 7.43,
+        "h24": 27.07,
+        "eligible": true,
+        "v": 3,
+        "pool": "59uZeyamaNMJYKn3LxqbAzTXy6YFUVZqB2x29xDi1Md4",
+        "m5_raw": 0.19,
+        "buys_m5": 9,
+        "sells_m5": 9,
+        "buys_h6": 743,
+        "sells_h6": 719,
+        "vol_m5": 1045.13,
+        "vol_h6": 80649.06,
+        "liq_base": 2934137,
+        "liq_quote": 5996.2558,
+        "fdv": 177529316,
+        "boosts": null,
+        "links": null,
+        "read": {
+          "swing": 0.009,
+          "paid": 0.11190803995336457,
+          "vs_paid": 0.4765,
+          "off_peak": -0.0163,
+          "accel": -0.0087,
+          "candles": 91,
+          "unease": 0,
+          "known": 5,
+          "signs": []
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 0.2
     }
   },
   "closed": [
@@ -1586,10 +1658,11 @@
     "2026-11-08 05:33 UTC BUY OMNI 0.25 SOL @ $0.00056884316 (mc $543,402): v-unpaid rule",
     "2026-11-08 13:19 UTC SELL 100% NADF -> 0.000 SOL @ $1.724e-05: event exit: liquidity down 99% since entry, -100% from entry",
     "2026-11-08 13:34 UTC BUY SPCX1K 0.25 SOL @ $0.0068497423 (mc $6,847,634): v-unpaid rule",
-    "2026-11-09 05:40 UTC SELL 100% UKOR -> 0.002 SOL @ $0.007543: event exit: liquidity down 83% since entry, -97% from entry"
+    "2026-11-09 05:40 UTC SELL 100% UKOR -> 0.002 SOL @ $0.007543: event exit: liquidity down 83% since entry, -97% from entry",
+    "2026-11-09 05:54 UTC BUY USAR 0.25 SOL @ $0.17750369 (mc $177,529,316): v-unpaid rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-09 05:48 UTC"
+  "last_mark": "2026-11-09 05:53 UTC"
 }
