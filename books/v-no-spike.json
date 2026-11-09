@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6780.029401144301,
+  "cash_sol": 6780.265279780567,
   "positions": {
     "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": {
       "symbol": "BAGEL",
@@ -308,22 +308,22 @@
       "symbol": "BRUH",
       "opened": "2026-11-08 07:25 UTC",
       "cost_sol": 0.25,
-      "tokens": 24159.475581251678,
+      "tokens": 12079.737790625839,
       "entry_px": 0.0008868611376907188,
       "entry_mc": 877865,
-      "peak_px": 0.001771,
+      "peak_px": 0.001776,
       "stop": -0.35,
       "tp1": 1.0,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-no-spike rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.2358786362657831,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/ehpzesdxtymvwz1iy5nt3lrnjy1xbc1kgqspl1kqnyiv",
       "v": 2,
-      "mev_sol": 0.005615453728661276,
-      "swaps": 1,
+      "mev_sol": 0.011333006616025484,
+      "swaps": 2,
       "entry_liq": 75575.9,
       "at_entry": {
         "px": 0.0008866,
@@ -1335,10 +1335,11 @@
     "2026-11-08 04:25 UTC SELL 100% NIO -> 0.149 SOL @ $0.0008964: stop-loss at -36%",
     "2026-11-08 07:25 UTC BUY BRUH 0.25 SOL @ $0.00088686114 (mc $877,865): v-no-spike rule",
     "2026-11-08 15:15 UTC SELL 100% PAWKET -> 0.150 SOL @ $0.0005519: stop-loss at -35%",
-    "2026-11-08 16:31 UTC BUY Rocco 0.25 SOL @ $0.0006921919 (mc $674,647): v-no-spike rule"
+    "2026-11-08 16:31 UTC BUY Rocco 0.25 SOL @ $0.0006921919 (mc $674,647): v-no-spike rule",
+    "2026-11-09 04:48 UTC SELL 50% BRUH -> 0.236 SOL @ $0.001776: take-profit at +100%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-09 04:44 UTC"
+  "last_mark": "2026-11-09 04:48 UTC"
 }
