@@ -1,9 +1,9 @@
 # Lessons
 
-201 closed trades labelled, every book. Written by the bot.
+202 closed trades labelled, every book. Written by the bot.
 
 - **other**: 64 trades, mean -33%. BTC (v-velocity): event exit: price -22% in 5 minutes, -20% from entry; three (v-swing): stop-loss at -11%
-- **slow-bleed**: 57 trades, mean -25%. GATO (claude): -6% over 48h; GATO (mech): -6% over 48h
+- **slow-bleed**: 58 trades, mean -25%. GATO (mech): -6% over 48h; JOB (v-tight): -16% over 48h
 - **won-held**: 39 trades, mean +50%. COGE (v-unease): +106%, peak +718%; COGE (v-velocity): +106%, peak +718%
 - **bought-spike**: 26 trades, mean -29%. DONNA (v-swing): up 174% in 24h at entry, peak +1%; DONNA (v-tight): up 174% in 24h at entry, peak +1%
 - **rug**: 11 trades, mean -100%. ORBIT (v-swing): event exit: liquidity down 97% since entry, -100% from entry; NADF (v-unpaid): event exit: liquidity down 99% since entry, -100% from entry
