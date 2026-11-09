@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.673209195503244,
+  "cash_sol": 7.423209195503244,
   "positions": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
       "symbol": "JOB",
@@ -85,7 +85,7 @@
       "tokens": 6890.723799693305,
       "entry_px": 0.0031154873020676726,
       "entry_mc": 2971417,
-      "peak_px": 0.003251,
+      "peak_px": 0.003291,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -373,6 +373,81 @@
       },
       "reentry": false,
       "since_loss_h": 0.9
+    },
+    "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": {
+      "symbol": "three",
+      "opened": "2026-11-09 19:30 UTC",
+      "cost_sol": 0.25,
+      "tokens": 47955.11200722381,
+      "entry_px": 0.0004325709321015701,
+      "entry_mc": 432396,
+      "peak_px": 0.0004325709321015701,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-low-bundle rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/5byl7mzolabynwmpzkpkjf4mgkz7febzranos19pre2z",
+      "v": 2,
+      "mev_sol": 0.00579575750550597,
+      "swaps": 1,
+      "entry_liq": 131505.25,
+      "at_entry": {
+        "px": 0.0004325,
+        "liq": 131505.25,
+        "mc": 432396,
+        "dex": "pumpswap",
+        "age_h": 4668.37,
+        "vol_h1": 92.14,
+        "vol_h24": 22274.37,
+        "buys_h1": 10,
+        "sells_h1": 5,
+        "buys_h24": 317,
+        "sells_h24": 247,
+        "trades_h24": 564,
+        "avg_trade": 39.49,
+        "m5": 0,
+        "h1": 0.61,
+        "h6": 8.7,
+        "h24": 0.65,
+        "eligible": true,
+        "v": 3,
+        "pool": "5ByL7MZoLABYnwMPZKPKjf4MGkZ7FeBzrAnos19Pre2z",
+        "m5_raw": null,
+        "buys_m5": 0,
+        "sells_m5": 0,
+        "buys_h6": 103,
+        "sells_h6": 136,
+        "vol_m5": 0,
+        "vol_h6": 10017.22,
+        "liq_base": 152746085,
+        "liq_quote": 757.4214,
+        "fdv": 432396,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0127,
+          "paid": 0.0004195755759601094,
+          "vs_paid": 0.0131,
+          "off_peak": -0.0699,
+          "accel": -0.0003,
+          "candles": 96,
+          "unease": 2,
+          "known": 5,
+          "signs": [
+            "failed_high",
+            "smaller_trades"
+          ]
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 0.2
     }
   },
   "closed": [
@@ -2139,10 +2214,11 @@
     "2026-11-09 06:42 UTC BUY BRUH 0.25 SOL @ $0.0019623766 (mc $1,943,502): v-low-bundle rule",
     "2026-11-09 08:04 UTC SELL 100% BAGEL -> 0.290 SOL @ $0.001183: time stop: 52h held, +19%, no take-profit",
     "2026-11-09 10:10 UTC BUY NIO 0.25 SOL @ $0.0014042337 (mc $1,338,581): v-low-bundle rule",
-    "2026-11-09 19:20 UTC SELL 100% NIO -> 0.148 SOL @ $0.0009123: stop-loss at -35%"
+    "2026-11-09 19:20 UTC SELL 100% NIO -> 0.148 SOL @ $0.0009123: stop-loss at -35%",
+    "2026-11-09 19:30 UTC BUY three 0.25 SOL @ $0.00043257093 (mc $432,396): v-low-bundle rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-09 19:20 UTC"
+  "last_mark": "2026-11-09 19:30 UTC"
 }
