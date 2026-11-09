@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.002057644171511,
+  "cash_sol": 7.752057644171511,
   "positions": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
       "symbol": "JOB",
@@ -370,6 +370,78 @@
       },
       "reentry": true,
       "since_loss_h": 5.2
+    },
+    "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": {
+      "symbol": "NIO",
+      "opened": "2026-11-09 11:30 UTC",
+      "cost_sol": 0.25,
+      "tokens": 13917.229931428858,
+      "entry_px": 0.0014942413183127558,
+      "entry_mc": 1424148,
+      "peak_px": 0.0014942413183127558,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-velocity rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/b4wmjc6pvjctu3qsvs3ett9mr4m5v5jbkrqctwantc71",
+      "v": 2,
+      "mev_sol": 0.00578168362627197,
+      "swaps": 1,
+      "entry_liq": 133849.27,
+      "at_entry": {
+        "px": 0.001494,
+        "liq": 133849.27,
+        "mc": 1424148,
+        "dex": "pumpswap",
+        "age_h": 451.54,
+        "vol_h1": 18383.26,
+        "vol_h24": 840171.55,
+        "buys_h1": 113,
+        "sells_h1": 105,
+        "buys_h24": 4475,
+        "sells_h24": 4423,
+        "trades_h24": 8898,
+        "avg_trade": 94.42,
+        "m5": 0.33,
+        "h1": 1.55,
+        "h6": 19.32,
+        "h24": 49.43,
+        "eligible": true,
+        "v": 3,
+        "pool": "B4Wmjc6PvjCtU3qSVS3eTT9Mr4M5V5jBkRQctWANTc71",
+        "m5_raw": 0.33,
+        "buys_m5": 7,
+        "sells_m5": 2,
+        "buys_h6": 985,
+        "sells_h6": 949,
+        "vol_m5": 140.24,
+        "vol_h6": 205320.73,
+        "liq_base": 45475620,
+        "liq_quote": 761.8502,
+        "fdv": 1424148,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0555,
+          "paid": 0.0013114291553710518,
+          "vs_paid": 0.1275,
+          "off_peak": -0.2867,
+          "accel": -0.0087,
+          "candles": 96,
+          "unease": 0,
+          "known": 5,
+          "signs": []
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 0.1
     }
   },
   "closed": [
@@ -1969,10 +2041,11 @@
     "2026-11-09 03:14 UTC BUY 0DAY 0.25 SOL @ $0.00097686487 (mc $965,624): v-velocity rule",
     "2026-11-09 08:04 UTC SELL 100% BAGEL -> 0.290 SOL @ $0.001183: time stop: 52h held, +19%, no take-profit",
     "2026-11-09 08:18 UTC BUY DESSA 0.25 SOL @ $0.041391481 (mc $40,534,613): v-velocity rule",
-    "2026-11-09 11:24 UTC SELL 100% 0DAY -> 0.074 SOL @ $0.0003262: event exit: liquidity down 42% since entry, -67% from entry"
+    "2026-11-09 11:24 UTC SELL 100% 0DAY -> 0.074 SOL @ $0.0003262: event exit: liquidity down 42% since entry, -67% from entry",
+    "2026-11-09 11:30 UTC BUY NIO 0.25 SOL @ $0.0014942413 (mc $1,424,148): v-velocity rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-09 11:24 UTC"
+  "last_mark": "2026-11-09 11:30 UTC"
 }
