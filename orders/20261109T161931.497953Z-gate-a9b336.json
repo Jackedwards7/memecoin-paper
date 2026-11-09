@@ -1,0 +1,54 @@
+{
+  "id": "20261109T161931.497953Z-gate-a9b336",
+  "kind": "gate",
+  "at": 1794241171.497953,
+  "by": "local",
+  "results": {
+    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": {
+      "symbol": "DESSA",
+      "px": 0.03269,
+      "fails": []
+    },
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "px": 0.01206,
+      "fails": []
+    },
+    "8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump": {
+      "symbol": "HODLER",
+      "px": 0.009484,
+      "fails": [
+        "RugCheck danger: Top 10 holders high ownership, Single holder ownership, High ownership",
+        "a wallet holds 87% of supply"
+      ]
+    },
+    "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
+      "symbol": "CBUCKS",
+      "px": 0.003898,
+      "fails": [
+        "a wallet holds 14% of supply"
+      ]
+    },
+    "H2ZViwA4dwxHd3bctARCUDUqTwTqfVrbmKQMrwBmpump": {
+      "symbol": "BAWSAQ",
+      "px": 0.001082,
+      "fails": [
+        "copycat: an earlier 'BAWSAQ' exists (33TdSo)"
+      ]
+    },
+    "GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump": {
+      "symbol": "WASTED",
+      "px": 0.001057,
+      "fails": [
+        "copycat: an earlier 'WASTED' exists (FsjgzA)"
+      ]
+    },
+    "AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump": {
+      "symbol": "Macca",
+      "px": 0.001032,
+      "fails": [
+        "copycat: an earlier 'Macca The Gator' exists (CeDVr5)"
+      ]
+    }
+  }
+}
