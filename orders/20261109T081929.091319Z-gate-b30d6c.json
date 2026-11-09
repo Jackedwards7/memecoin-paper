@@ -1,0 +1,41 @@
+{
+  "id": "20261109T081929.091319Z-gate-b30d6c",
+  "kind": "gate",
+  "at": 1794212369.091319,
+  "by": "local",
+  "results": {
+    "AWaBBNoVuwQ22B8Y5nEtLne2uEfk8UaYEFws7vT7pump": {
+      "symbol": "ELYSION",
+      "px": 0.00269,
+      "fails": [
+        "copycat: an earlier 'Elysion' exists (HW2Sz6)"
+      ]
+    },
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "px": 0.0128,
+      "fails": []
+    },
+    "H2ZViwA4dwxHd3bctARCUDUqTwTqfVrbmKQMrwBmpump": {
+      "symbol": "BAWSAQ",
+      "px": 0.00107,
+      "fails": [
+        "copycat: an earlier 'BAWSAQ' exists (33TdSo)"
+      ]
+    },
+    "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
+      "symbol": "CBUCKS",
+      "px": 0.003691,
+      "fails": [
+        "a wallet holds 14% of supply"
+      ]
+    },
+    "AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump": {
+      "symbol": "Macca",
+      "px": 0.0009055,
+      "fails": [
+        "copycat: an earlier 'Macca The Gator' exists (CeDVr5)"
+      ]
+    }
+  }
+}
