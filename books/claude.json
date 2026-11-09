@@ -639,9 +639,9 @@
     "2026-11-08 12:16 UTC SELL 100% HELL -> 0.211 SOL @ $0.002694: time stop: 48h held, -9%, no take-profit",
     "2026-11-08 20:15 UTC SELL 100% GATO -> 0.235 SOL @ $0.01197: time stop: 48h held, +0%, no take-profit"
   ],
-  "last_mark": "2026-11-09 15:41 UTC",
+  "last_mark": "2026-11-09 15:46 UTC",
   "gate_pass": {
-    "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": 1794235337,
+    "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": 1794239177,
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794236297,
     "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1794236297,
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794236297,
@@ -1105,6 +1105,16 @@
       "px": 0.0009678,
       "fails": [
         "a wallet holds 5% of supply"
+      ],
+      "moves": {}
+    },
+    "8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump": {
+      "symbol": "HODLER",
+      "at": 1794239177,
+      "px": 0.008778,
+      "fails": [
+        "RugCheck danger: Top 10 holders high ownership, Single holder ownership, High ownership",
+        "a wallet holds 87% of supply"
       ],
       "moves": {}
     }
