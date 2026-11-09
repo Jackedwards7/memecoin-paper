@@ -1,8 +1,8 @@
 # Lessons
 
-188 closed trades labelled, every book. Written by the bot.
+197 closed trades labelled, every book. Written by the bot.
 
-- **other**: 54 trades, mean -35%. GIGAHUG (v-unease): event exit: price -24% in 5 minutes, -18% from entry; GIGAHUG (v-velocity): event exit: price -24% in 5 minutes, -18% from entry
+- **other**: 63 trades, mean -33%. BTC (v-unease): event exit: price -22% in 5 minutes, -20% from entry; BTC (v-velocity): event exit: price -22% in 5 minutes, -20% from entry
 - **slow-bleed**: 54 trades, mean -25%. HELL (claude): -15% over 48h; HELL (mech): -15% over 48h
 - **won-held**: 39 trades, mean +50%. COGE (v-unease): +106%, peak +718%; COGE (v-velocity): +106%, peak +718%
 - **bought-spike**: 26 trades, mean -29%. DONNA (v-swing): up 174% in 24h at entry, peak +1%; DONNA (v-tight): up 174% in 24h at entry, peak +1%
