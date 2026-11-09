@@ -1,8 +1,8 @@
 # Lessons
 
-164 closed trades labelled, every book. Written by the bot.
+165 closed trades labelled, every book. Written by the bot.
 
-- **slow-bleed**: 51 trades, mean -25%. three (mech): -37% over 48h; NIO (v-no-spike): -40% over 35h
+- **slow-bleed**: 52 trades, mean -26%. NIO (v-no-spike): -40% over 35h; KILROY (v-unpaid): -41% over 25h
 - **other**: 45 trades, mean -37%. NIO (v-velocity): stop-loss at -35%; COGE (v-no-spike): event exit: price -49% in 5 minutes, -26% from entry
 - **won-held**: 39 trades, mean +50%. COGE (v-unease): +106%, peak +718%; COGE (v-velocity): +106%, peak +718%
 - **bought-spike**: 20 trades, mean -28%. PAWKET (v-velocity): up 1957% in 24h at entry, peak +1%; DONNA (v-unease): up 168% in 24h at entry, peak +0%
