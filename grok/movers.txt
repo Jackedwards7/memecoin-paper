@@ -1,12 +1,12 @@
-MOVERS 2026-11-09T08:49:58Z
-Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump BAGEL +8%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +9%
-6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx STONK +10%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +20%
-Hh3oTaqDCKKfdBgsQEvxp9sUwyNf8x9qmKqEMLBWpump HODL +24%
-AWaBBNoVuwQ22B8Y5nEtLne2uEfk8UaYEFws7vT7pump ELYSION -39%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -13%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -11%
+MOVERS 2026-11-09T09:05:58Z
+H2ZViwA4dwxHd3bctARCUDUqTwTqfVrbmKQMrwBmpump BAWSAQ +10%
+PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH +11%
+Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump BAGEL +13%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +14%
+Hh3oTaqDCKKfdBgsQEvxp9sUwyNf8x9qmKqEMLBWpump HODL +22%
+AWaBBNoVuwQ22B8Y5nEtLne2uEfk8UaYEFws7vT7pump ELYSION -47%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -14%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -9%
 8PzFWyLpCVEmbZmVJcaRTU5r69XKJx1rd7YGpWvnpump Percolator -8%
-DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS -4%
+DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS -5%
 END
