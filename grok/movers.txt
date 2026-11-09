@@ -1,12 +1,12 @@
-MOVERS 2026-11-09T20:34:20Z
-DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS +10%
-9RZeokzHNXoRyJkWDFdvcQTAzUhKpXm7RrqkUM3Fpump CHILL +11%
-8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER +16%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +22%
-8PzFWyLpCVEmbZmVJcaRTU5r69XKJx1rd7YGpWvnpump Percolator +60%
-FZcbX6uBkeACEg38cFBqvQgTJiL98aKovQT23AfCpump UCI -10%
-8Mi9E1V2bdPeAaRkR5yxUsAvpzP6UBUEEUrYmgKNpump WEALTH -8%
-A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL -5%
+MOVERS 2026-11-09T20:50:20Z
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +8%
+PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH +9%
+8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER +9%
+9RZeokzHNXoRyJkWDFdvcQTAzUhKpXm7RrqkUM3Fpump CHILL +10%
+8PzFWyLpCVEmbZmVJcaRTU5r69XKJx1rd7YGpWvnpump Percolator +34%
+8Mi9E1V2bdPeAaRkR5yxUsAvpzP6UBUEEUrYmgKNpump WEALTH -13%
 9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump ANSEM -5%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -5%
+FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump three -5%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -5%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -5%
 END
