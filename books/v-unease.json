@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.159871789516213,
+  "cash_sol": 8.40218745595833,
   "positions": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
       "symbol": "JOB",
@@ -81,22 +81,22 @@
       "symbol": "BRUH",
       "opened": "2026-11-08 07:41 UTC",
       "cost_sol": 0.25,
-      "tokens": 23174.369737501518,
+      "tokens": 11587.184868750759,
       "entry_px": 0.0009246664631109085,
       "entry_mc": 915318,
-      "peak_px": 0.001844,
+      "peak_px": 0.001897,
       "stop": -0.35,
       "tp1": 1.0,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-unease rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.24231566644211774,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/ehpzesdxtymvwz1iy5nt3lrnjy1xbc1kgqspl1kqnyiv",
       "v": 2,
-      "mev_sol": 0.005614823133071308,
-      "swaps": 1,
+      "mev_sol": 0.011344168841791373,
+      "swaps": 2,
       "entry_liq": 77231.91,
       "at_entry": {
         "px": 0.0009244,
@@ -2090,10 +2090,11 @@
     "2026-11-09 02:10 UTC SELL 100% Rocco -> 0.200 SOL @ $0.0005896: unease exit: 4 of 5 signs",
     "2026-11-09 02:42 UTC BUY 0DAY 0.25 SOL @ $0.00092865961 (mc $917,999): v-unease rule",
     "2026-11-09 04:34 UTC SELL 100% BAGEL -> 0.285 SOL @ $0.001228: unease exit: 4 of 5 signs",
-    "2026-11-09 04:34 UTC BUY NIO 0.25 SOL @ $0.001182217 (mc $1,126,412): v-unease rule"
+    "2026-11-09 04:34 UTC BUY NIO 0.25 SOL @ $0.001182217 (mc $1,126,412): v-unease rule",
+    "2026-11-09 04:57 UTC SELL 50% BRUH -> 0.242 SOL @ $0.001897: take-profit at +105%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-09 04:56 UTC"
+  "last_mark": "2026-11-09 04:57 UTC"
 }

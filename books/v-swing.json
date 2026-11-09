@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.182744106960088,
+  "cash_sol": 7.425059773402206,
   "positions": {
     "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": {
       "symbol": "BAGEL",
@@ -77,22 +77,22 @@
       "symbol": "BRUH",
       "opened": "2026-11-08 07:41 UTC",
       "cost_sol": 0.25,
-      "tokens": 23174.369737501518,
+      "tokens": 11587.184868750759,
       "entry_px": 0.0009246664631109085,
       "entry_mc": 915318,
-      "peak_px": 0.001844,
+      "peak_px": 0.001897,
       "stop": -0.3456,
       "tp1": 1.0,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-swing rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.24231566644211774,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/ehpzesdxtymvwz1iy5nt3lrnjy1xbc1kgqspl1kqnyiv",
       "v": 2,
-      "mev_sol": 0.005614823133071308,
-      "swaps": 1,
+      "mev_sol": 0.011344168841791373,
+      "swaps": 2,
       "entry_liq": 77231.91,
       "at_entry": {
         "px": 0.0009244,
@@ -2422,10 +2422,11 @@
     "2026-11-08 23:13 UTC BUY GATO 0.25 SOL @ $0.012880746 (mc $12,713,571): v-swing rule",
     "2026-11-09 02:33 UTC SELL 100% NIO -> 0.193 SOL @ $0.001116: event exit: price -21% in 5 minutes, -15% from entry",
     "2026-11-09 02:42 UTC BUY 0DAY 0.25 SOL @ $0.00092865961 (mc $917,999): v-swing rule",
-    "2026-11-09 02:58 UTC BUY Rocco 0.25 SOL @ $0.00063038009 (mc $614,416): v-swing rule"
+    "2026-11-09 02:58 UTC BUY Rocco 0.25 SOL @ $0.00063038009 (mc $614,416): v-swing rule",
+    "2026-11-09 04:57 UTC SELL 50% BRUH -> 0.242 SOL @ $0.001897: take-profit at +105%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-09 04:56 UTC"
+  "last_mark": "2026-11-09 04:57 UTC"
 }
