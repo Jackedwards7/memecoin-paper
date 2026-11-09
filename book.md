@@ -9,7 +9,7 @@ area: trading
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
 **Equity 9.530 SOL** (start 10.0 SOL, -4.7%) · cash 9.275 SOL ·
-open 1 · closed 14 (5 won) · SOL $86.80 · marked 2026-11-09 22:57 UTC
+open 1 · closed 14 (5 won) · SOL $86.82 · marked 2026-11-09 22:58 UTC
 
 **Benchmark (vs just holding SOL): -4.7%.** The book is counted in SOL, so its SOL
 return *is* its edge over holding SOL. In dollars: $827 vs $949 at the start
@@ -41,17 +41,17 @@ Same gate, size, costs and exit code as the picks; rules in `CLAUDE.md`. Judged 
 |---|---|---|---|---|---|
 | mech | 5 | 2 | 1 | +0.428 | +28.5% |
 | v-dip | 0 | 0 | 0 | +0.000 | +0.0% |
-| v-loose | 20 | 4 | 6 | -0.862 | -13.3% |
-| v-low-bundle | 22 | 5 | 6 | -1.294 | -18.5% |
-| v-mature | 8 | 4 | 2 | -0.020 | -0.8% |
-| v-momentum | 22 | 5 | 6 | -1.294 | -18.5% |
-| v-networks | 19 | 4 | 6 | -0.652 | -10.4% |
-| v-no-spike | 13 | 3 | 6 | +6771.576 | +142559.5% |
-| v-swing | 28 | 5 | 4 | -1.355 | -16.9% |
-| v-tight | 29 | 5 | 4 | -0.965 | -11.7% |
-| v-unease | 24 | 5 | 4 | -0.485 | -6.9% |
-| v-unpaid | 19 | 2 | 6 | -2.847 | -45.5% |
-| v-velocity | 22 | 5 | 6 | -0.898 | -12.8% |
+| v-loose | 20 | 4 | 6 | -0.853 | -13.1% |
+| v-low-bundle | 22 | 5 | 6 | -1.291 | -18.4% |
+| v-mature | 8 | 4 | 2 | -0.012 | -0.5% |
+| v-momentum | 22 | 5 | 6 | -1.291 | -18.4% |
+| v-networks | 19 | 4 | 6 | -0.648 | -10.4% |
+| v-no-spike | 13 | 3 | 6 | +6771.585 | +142559.7% |
+| v-swing | 28 | 5 | 4 | -1.350 | -16.9% |
+| v-tight | 29 | 5 | 4 | -0.968 | -11.7% |
+| v-unease | 24 | 5 | 4 | -0.474 | -6.8% |
+| v-unpaid | 19 | 2 | 6 | -2.847 | -45.6% |
+| v-velocity | 22 | 5 | 6 | -0.895 | -12.8% |
 | v-x-exit | 0 | 0 | 0 | +0.000 | +0.0% |
 | v-x-organic | 0 | 0 | 0 | +0.000 | +0.0% |
 
@@ -71,7 +71,7 @@ Each coin against its own normal. Information only: no rule on this book reads i
 
 Last check 2026-11-08: 89 of 96 snapshots, 13220 rows, 169 coins, 35.6 MB. No problems.
 
-GeckoTerminal: 18398 calls, 130 refused, 15 failed, 116 waiting. Insider flag fired on 0 of 79 coins where RugCheck's graph found insiders.
+GeckoTerminal: 18401 calls, 130 refused, 15 failed, 113 waiting. Insider flag fired on 0 of 79 coins where RugCheck's graph found insiders.
 
 Fills: a round trip on Jupiter returned -0.6% (median of 178 quotes, before priority fees); paper charged -7.4%.
 
