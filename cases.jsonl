@@ -404,3 +404,10 @@
 {"after": "v-tight:FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump:2026-11-08 11:50 UTC", "h": 24, "px": 0.0005583, "vs_exit": -0.5424}
 {"after": "claude:A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump:2026-11-08 12:16 UTC", "h": 24, "px": 0.002702, "vs_exit": 0.003}
 {"after": "mech:A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump:2026-11-08 12:16 UTC", "h": 24, "px": 0.002702, "vs_exit": 0.003}
+{"after": "v-loose:BWh8q5etuPwekJ2JEDkbMxMQWy4FysoJ8LEwE3rFpump:2026-11-08 12:29 UTC", "h": 24, "px": 2.184e-06, "vs_exit": -0.9978}
+{"after": "v-low-bundle:BWh8q5etuPwekJ2JEDkbMxMQWy4FysoJ8LEwE3rFpump:2026-11-08 12:29 UTC", "h": 24, "px": 2.184e-06, "vs_exit": -0.9978}
+{"after": "v-momentum:BWh8q5etuPwekJ2JEDkbMxMQWy4FysoJ8LEwE3rFpump:2026-11-08 12:29 UTC", "h": 24, "px": 2.184e-06, "vs_exit": -0.9978}
+{"after": "v-swing:BWh8q5etuPwekJ2JEDkbMxMQWy4FysoJ8LEwE3rFpump:2026-11-08 12:29 UTC", "h": 24, "px": 2.184e-06, "vs_exit": -0.9978}
+{"after": "v-tight:BWh8q5etuPwekJ2JEDkbMxMQWy4FysoJ8LEwE3rFpump:2026-11-08 12:29 UTC", "h": 24, "px": 2.184e-06, "vs_exit": -0.9978}
+{"after": "v-unease:BWh8q5etuPwekJ2JEDkbMxMQWy4FysoJ8LEwE3rFpump:2026-11-08 12:29 UTC", "h": 24, "px": 2.184e-06, "vs_exit": -0.9978}
+{"after": "v-velocity:BWh8q5etuPwekJ2JEDkbMxMQWy4FysoJ8LEwE3rFpump:2026-11-08 12:29 UTC", "h": 24, "px": 2.184e-06, "vs_exit": -0.9978}
