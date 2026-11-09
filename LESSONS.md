@@ -1,8 +1,8 @@
 # Lessons
 
-174 closed trades labelled, every book. Written by the bot.
+176 closed trades labelled, every book. Written by the bot.
 
-- **slow-bleed**: 52 trades, mean -26%. NIO (v-no-spike): -40% over 35h; KILROY (v-unpaid): -41% over 25h
+- **slow-bleed**: 54 trades, mean -25%. HELL (claude): -15% over 48h; HELL (mech): -15% over 48h
 - **other**: 47 trades, mean -36%. JOB (v-swing): stop-loss at -16%; HELL (v-tight): stop-loss at -22%
 - **won-held**: 39 trades, mean +50%. COGE (v-unease): +106%, peak +718%; COGE (v-velocity): +106%, peak +718%
 - **bought-spike**: 26 trades, mean -29%. DONNA (v-swing): up 174% in 24h at entry, peak +1%; DONNA (v-tight): up 174% in 24h at entry, peak +1%
