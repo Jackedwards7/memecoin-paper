@@ -1,9 +1,9 @@
 # Lessons
 
-172 closed trades labelled, every book. Written by the bot.
+173 closed trades labelled, every book. Written by the bot.
 
 - **slow-bleed**: 52 trades, mean -26%. NIO (v-no-spike): -40% over 35h; KILROY (v-unpaid): -41% over 25h
-- **other**: 46 trades, mean -36%. COGE (v-no-spike): event exit: price -49% in 5 minutes, -26% from entry; JOB (v-swing): stop-loss at -16%
+- **other**: 47 trades, mean -36%. JOB (v-swing): stop-loss at -16%; HELL (v-tight): stop-loss at -22%
 - **won-held**: 39 trades, mean +50%. COGE (v-unease): +106%, peak +718%; COGE (v-velocity): +106%, peak +718%
 - **bought-spike**: 25 trades, mean -29%. ORBIT (v-velocity): up 1659% in 24h at entry, peak +1%; DONNA (v-swing): up 174% in 24h at entry, peak +1%
 - **rug**: 6 trades, mean -100%. SPCX1K (v-unpaid): event exit: liquidity down 78% since entry, -95% from entry; GROKNAM (v-unpaid): event exit: liquidity down 99% since entry, -100% from entry
