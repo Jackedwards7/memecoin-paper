@@ -640,9 +640,9 @@
     "2026-11-08 20:15 UTC SELL 100% GATO -> 0.235 SOL @ $0.01197: time stop: 48h held, +0%, no take-profit",
     "2026-11-09 16:03 UTC SELL 50% BRUH -> 0.237 SOL @ $0.002204: take-profit at +102%: half sold, cost recovered"
   ],
-  "last_mark": "2026-11-09 19:57 UTC",
+  "last_mark": "2026-11-09 20:02 UTC",
   "gate_pass": {
-    "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": 1794250699,
+    "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": 1794254539,
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794251659,
     "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1794251659,
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794251659,
@@ -1119,6 +1119,15 @@
       "fails": [
         "RugCheck danger: Top 10 holders high ownership, Single holder ownership, High ownership",
         "a wallet holds 87% of supply"
+      ],
+      "moves": {}
+    },
+    "FZcbX6uBkeACEg38cFBqvQgTJiL98aKovQT23AfCpump": {
+      "symbol": "UCI",
+      "at": 1794254539,
+      "px": 0.0006704,
+      "fails": [
+        "a wallet holds 16% of supply"
       ],
       "moves": {}
     }
