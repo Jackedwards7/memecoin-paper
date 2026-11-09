@@ -1,27 +1,27 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 9.24501302083958,
+  "cash_sol": 9.488825200744024,
   "positions": {
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": {
       "symbol": "DESSA",
       "opened": "2026-11-07 04:44 UTC",
       "cost_sol": 0.25,
-      "tokens": 908.2431178450371,
+      "tokens": 454.12155892251855,
       "entry_px": 0.023821168666087706,
       "entry_mc": 23329560,
-      "peak_px": 0.04764,
+      "peak_px": 0.04848,
       "stop": -0.35,
       "tp1": 1.0,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-mature rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.24381217990444307,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/dextcer4k9dwbxtmu8znvvwgevvmvhmb183pf2xxzwvh",
       "v": 2,
-      "mev_sol": 0.00556235398820781,
-      "swaps": 1,
+      "mev_sol": 0.011316756105827788,
+      "swaps": 2,
       "entry_liq": 458039.26,
       "at_entry": {
         "px": 0.02382,
@@ -712,10 +712,11 @@
     "2026-11-07 16:40 UTC SELL 100% NIO -> 0.147 SOL @ $0.001201: stop-loss at -36%",
     "2026-11-08 01:15 UTC SELL 100% three -> 0.175 SOL @ $0.0004558: time stop: 48h held, -24%, no take-profit",
     "2026-11-08 03:25 UTC BUY GATO 0.25 SOL @ $0.012310741 (mc $12,152,378): v-mature rule",
-    "2026-11-08 03:41 UTC BUY JOB 0.25 SOL @ $0.0056825462 (mc $5,535,561): v-mature rule"
+    "2026-11-08 03:41 UTC BUY JOB 0.25 SOL @ $0.0056825462 (mc $5,535,561): v-mature rule",
+    "2026-11-09 00:47 UTC SELL 50% DESSA -> 0.244 SOL @ $0.04848: take-profit at +104%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-09 00:46 UTC"
+  "last_mark": "2026-11-09 00:47 UTC"
 }
