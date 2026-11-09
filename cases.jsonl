@@ -348,3 +348,6 @@
 {"after": "v-unease:HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump:2026-11-07 23:07 UTC", "h": 24, "px": 0.01288, "vs_exit": 0.0724}
 {"after": "v-velocity:HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump:2026-11-07 23:07 UTC", "h": 24, "px": 0.01288, "vs_exit": 0.0724}
 {"after": "v-unpaid:BcHEaaTCvycPwwsJ9yQTXdHP9X2gCLkznDbZ8VySpump:2026-11-08 00:59 UTC", "h": 24, "px": 0.001751, "vs_exit": -0.0681}
+{"after": "v-mature:FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump:2026-11-08 01:15 UTC", "h": 24, "px": 0.0004399, "vs_exit": -0.0349}
+{"after": "v-no-spike:FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump:2026-11-08 01:15 UTC", "h": 24, "px": 0.0004399, "vs_exit": -0.0349}
+{"after": "v-unease:FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump:2026-11-08 01:15 UTC", "h": 24, "px": 0.0004399, "vs_exit": -0.0349}
