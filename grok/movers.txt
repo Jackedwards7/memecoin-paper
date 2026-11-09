@@ -1,12 +1,12 @@
-MOVERS 2026-11-09T03:29:31Z
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +7%
-DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS +8%
-Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT +10%
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +12%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +19%
-AWaBBNoVuwQ22B8Y5nEtLne2uEfk8UaYEFws7vT7pump ELYSION -14%
+MOVERS 2026-11-09T03:45:31Z
+Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT +5%
+AWaBBNoVuwQ22B8Y5nEtLne2uEfk8UaYEFws7vT7pump ELYSION +9%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +9%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +10%
+DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS +21%
 GHichsGq8aPnqJyz6Jp1ASTK4PNLpB5KrD6XrfDjpump 1 -13%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -11%
-CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi -9%
-FZcbX6uBkeACEg38cFBqvQgTJiL98aKovQT23AfCpump UCI -8%
+A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL -10%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -10%
+CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi -7%
+npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -6%
 END
