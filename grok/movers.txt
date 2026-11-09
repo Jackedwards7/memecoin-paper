@@ -1,12 +1,12 @@
-MOVERS 2026-11-09T06:09:41Z
-8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH +2%
-DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS +3%
+MOVERS 2026-11-09T06:25:41Z
+61V8vBaqAGMpgDQi4JcAwo1dmBGHsyhzodcPqnEVpump arc +1%
+PreweJYECqtQwBtpxHL171nL2K6umo692gTm7Q3rpgF OPENAI +3%
 5GDX5fJTQns4arM1J94wjxdA8KXFsV5qW46MLFpHpump OMNI +4%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +9%
-AWaBBNoVuwQ22B8Y5nEtLne2uEfk8UaYEFws7vT7pump ELYSION +28%
+CZRtwCDJy4cKNvtVwtgGqeEGzLnCDJdTkexgpEsMpump BTC +9%
+AWaBBNoVuwQ22B8Y5nEtLne2uEfk8UaYEFws7vT7pump ELYSION +23%
 XvwtkBK5SuXnj54uXt2XBrTCbBwog63kodPvw73pump UKOR -98%
-nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity -6%
-Cm6fNnMk7NfzStP9CZpsQA2v3jjzbcYGAxdJySmHpump Buttcoin -5%
-CZRtwCDJy4cKNvtVwtgGqeEGzLnCDJdTkexgpEsMpump BTC -5%
-PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH -4%
+nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity -7%
+PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH -7%
+8PzFWyLpCVEmbZmVJcaRTU5r69XKJx1rd7YGpWvnpump Percolator -6%
+Cm6fNnMk7NfzStP9CZpsQA2v3jjzbcYGAxdJySmHpump Buttcoin -6%
 END
