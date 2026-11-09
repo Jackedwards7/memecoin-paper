@@ -1,0 +1,47 @@
+{
+  "id": "20261109T201517.260043Z-gate-46521b",
+  "kind": "gate",
+  "at": 1794255317.260043,
+  "by": "local",
+  "results": {
+    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": {
+      "symbol": "DESSA",
+      "px": 0.0345,
+      "fails": []
+    },
+    "8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump": {
+      "symbol": "HODLER",
+      "px": 0.01305,
+      "fails": [
+        "RugCheck danger: Top 10 holders high ownership, Single holder ownership, High ownership",
+        "a wallet holds 87% of supply"
+      ]
+    },
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "px": 0.01182,
+      "fails": []
+    },
+    "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
+      "symbol": "CBUCKS",
+      "px": 0.004304,
+      "fails": [
+        "a wallet holds 14% of supply"
+      ]
+    },
+    "GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump": {
+      "symbol": "WASTED",
+      "px": 0.001062,
+      "fails": [
+        "copycat: an earlier 'WASTED' exists (FsjgzA)"
+      ]
+    },
+    "FZcbX6uBkeACEg38cFBqvQgTJiL98aKovQT23AfCpump": {
+      "symbol": "UCI",
+      "px": 0.0006584,
+      "fails": [
+        "a wallet holds 16% of supply"
+      ]
+    }
+  }
+}
