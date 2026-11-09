@@ -1,12 +1,12 @@
-MOVERS 2026-11-09T12:50:15Z
-y1AZt42vceCmStjW4zetK3VoNarC1VxJ5iDjpiupump FARTBOY +8%
-PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH +11%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +13%
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +15%
-Hh3oTaqDCKKfdBgsQEvxp9sUwyNf8x9qmKqEMLBWpump HODL +20%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -11%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -11%
-MukLDtJ8Cx9DxLbeyLRSWPSposTMWuwHANbuaudpump OTC -10%
-8PzFWyLpCVEmbZmVJcaRTU5r69XKJx1rd7YGpWvnpump Percolator -7%
-8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH -6%
+MOVERS 2026-11-09T13:06:15Z
+Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump BAGEL +7%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +9%
+GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +13%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +14%
+y1AZt42vceCmStjW4zetK3VoNarC1VxJ5iDjpiupump FARTBOY +17%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -10%
+MukLDtJ8Cx9DxLbeyLRSWPSposTMWuwHANbuaudpump OTC -8%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -7%
+HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO -6%
+BcHEaaTCvycPwwsJ9yQTXdHP9X2gCLkznDbZ8VySpump Jotchua -6%
 END
