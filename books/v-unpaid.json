@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.082033504313544,
+  "cash_sol": 5.832033504313544,
   "positions": {
     "DitHyRMQiSDhn5cnKMJV2CDDt6sVct96YrECiM49pump": {
       "symbol": "House",
@@ -373,6 +373,79 @@
       },
       "reentry": false,
       "since_loss_h": 0.0
+    },
+    "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump": {
+      "symbol": "CATE",
+      "opened": "2026-11-09 14:42 UTC",
+      "cost_sol": 0.25,
+      "tokens": 660.5950771083312,
+      "entry_px": 0.03167036544017283,
+      "entry_mc": 30541437,
+      "peak_px": 0.03167036544017283,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unpaid rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/hmzvseemtzhhvznw9uwbag85hctmfnkbhzux16cy7ca3",
+      "v": 2,
+      "mev_sol": 0.005747787101965744,
+      "swaps": 1,
+      "entry_liq": 1884695.16,
+      "at_entry": {
+        "px": 0.03167,
+        "liq": 1884695.16,
+        "mc": 30541437,
+        "dex": "pumpswap",
+        "age_h": 2542.17,
+        "vol_h1": 11818.7,
+        "vol_h24": 723958.18,
+        "buys_h1": 83,
+        "sells_h1": 61,
+        "buys_h24": 2662,
+        "sells_h24": 2359,
+        "trades_h24": 5021,
+        "avg_trade": 144.19,
+        "m5": 0.06,
+        "h1": 0.53,
+        "h6": 5.15,
+        "h24": 1.3,
+        "eligible": true,
+        "v": 3,
+        "pool": "HMzvsEEmtzHhvZNw9uwbaG85HCTmFnkbhzUx16cy7ca3",
+        "m5_raw": 0.06,
+        "buys_m5": 16,
+        "sells_m5": 4,
+        "buys_h6": 460,
+        "sells_h6": 555,
+        "vol_m5": 936.89,
+        "vol_h6": 154321.15,
+        "liq_base": 29814311,
+        "liq_quote": 10799,
+        "fdv": 30540597,
+        "boosts": null,
+        "links": [
+          "telegram",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0115,
+          "paid": 0.03159132402074486,
+          "vs_paid": 0.0107,
+          "off_peak": -0.1046,
+          "accel": 0.0042,
+          "candles": 96,
+          "unease": 0,
+          "known": 5,
+          "signs": []
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 2.9
     }
   },
   "closed": [
@@ -1907,10 +1980,11 @@
     "2026-11-09 10:58 UTC BUY ALT 0.25 SOL @ $0.002486439 (mc $2,484,465): v-unpaid rule",
     "2026-11-09 11:38 UTC SELL 100% USAR -> 0.000 SOL @ $5.8e-07: event exit: liquidity down 100% since entry, -100% from entry",
     "2026-11-09 11:46 UTC SELL 100% ALT -> 0.007 SOL @ $0.0001312: event exit: liquidity down 78% since entry, -95% from entry",
-    "2026-11-09 11:46 UTC BUY Dacity 0.25 SOL @ $0.0086304119 (mc $8,473,135): v-unpaid rule"
+    "2026-11-09 11:46 UTC BUY Dacity 0.25 SOL @ $0.0086304119 (mc $8,473,135): v-unpaid rule",
+    "2026-11-09 14:42 UTC BUY CATE 0.25 SOL @ $0.031670365 (mc $30,541,437): v-unpaid rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-09 14:41 UTC"
+  "last_mark": "2026-11-09 14:42 UTC"
 }
