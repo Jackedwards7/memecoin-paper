@@ -8,12 +8,12 @@ area: trading
 *Paper only: simulated fills from live DexScreener prices, 1.50% fee each side plus a size/liquidity
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
-**Equity 9.454 SOL** (start 10.0 SOL, -5.5%) · cash 9.038 SOL ·
-open 1 · closed 14 (5 won) · SOL $85.85 · marked 2026-11-09 08:17 UTC
+**Equity 9.448 SOL** (start 10.0 SOL, -5.5%) · cash 9.038 SOL ·
+open 1 · closed 14 (5 won) · SOL $86.01 · marked 2026-11-09 08:19 UTC
 
 **Benchmark (vs just holding SOL): -5.5%.** The book is counted in SOL, so its SOL
-return *is* its edge over holding SOL. In dollars: $812 vs $949 at the start
-(-14.4%); SOL itself moved -9.5%.
+return *is* its edge over holding SOL. In dollars: $813 vs $949 at the start
+(-14.3%); SOL itself moved -9.3%.
 Review on 2026-11-30 or after 30 closed v2 trades (7/30), rules unchanged until then.
 
 ## v2 test (from 2026-11-03 01:30 UTC)
@@ -23,11 +23,11 @@ control position on a random gate pass (`control.json`, same mechanical exits, n
 
 | Arm | Closed | Won | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|
-| Picks | 7 | 3 | +0.299 | +15.0% |
+| Picks | 7 | 3 | +0.293 | +14.6% |
 | Control | 8 | 0 | -0.664 | -33.2% |
 
 Costs in every fill: 1.5% fee each side, size/liquidity slippage, and a $0.50 sandwich charge per swap.
-If every swap were sandwiched at the $5 median: picks -0.435 SOL, control -1.398 SOL.
+If every swap were sandwiched at the $5 median: picks -0.440 SOL, control -1.397 SOL.
 
 **Gate value** (raw price moves, no costs; the gate earns its keep if passes beat rejects):
 passes 28 tracked, median 1d -17%, 3d -85%, 7d n/a · rejects 39 tracked, median 1d -29%, 3d -56%, 7d n/a.
@@ -39,19 +39,19 @@ Same gate, size, costs and exit code as the picks; rules in `CLAUDE.md`. Judged 
 
 | Arm | Closed | Won | Open | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|---|
-| mech | 5 | 2 | 1 | +0.352 | +23.5% |
+| mech | 5 | 2 | 1 | +0.346 | +23.0% |
 | v-dip | 0 | 0 | 0 | +0.000 | +0.0% |
-| v-loose | 19 | 4 | 6 | -0.849 | -13.6% |
-| v-low-bundle | 21 | 5 | 5 | -1.089 | -16.8% |
-| v-mature | 6 | 3 | 3 | +0.176 | +7.8% |
-| v-momentum | 21 | 5 | 5 | -1.089 | -16.8% |
-| v-networks | 18 | 4 | 5 | -0.450 | -7.8% |
-| v-no-spike | 12 | 3 | 6 | +6771.630 | +150480.7% |
-| v-swing | 25 | 5 | 5 | -1.134 | -15.1% |
-| v-tight | 26 | 4 | 6 | -0.894 | -11.2% |
-| v-unease | 21 | 4 | 6 | -0.214 | -3.2% |
-| v-unpaid | 16 | 2 | 6 | -2.054 | -37.4% |
-| v-velocity | 19 | 5 | 5 | -0.568 | -9.5% |
+| v-loose | 19 | 4 | 6 | -0.857 | -13.7% |
+| v-low-bundle | 21 | 5 | 5 | -1.095 | -16.8% |
+| v-mature | 6 | 3 | 3 | +0.175 | +7.8% |
+| v-momentum | 21 | 5 | 5 | -1.095 | -16.8% |
+| v-networks | 18 | 4 | 5 | -0.456 | -7.9% |
+| v-no-spike | 12 | 3 | 6 | +6771.625 | +150480.6% |
+| v-swing | 25 | 5 | 5 | -1.139 | -15.2% |
+| v-tight | 26 | 4 | 6 | -0.899 | -11.2% |
+| v-unease | 21 | 4 | 6 | -0.220 | -3.3% |
+| v-unpaid | 16 | 2 | 6 | -2.060 | -37.5% |
+| v-velocity | 19 | 5 | 6 | -0.589 | -9.4% |
 | v-x-exit | 0 | 0 | 0 | +0.000 | +0.0% |
 | v-x-organic | 0 | 0 | 0 | +0.000 | +0.0% |
 
@@ -65,17 +65,17 @@ Each coin against its own normal. Information only: no rule on this book reads i
 
 | Coin | Normal 15m swing | vs average paid | Off peak | Unease | Stop, in swings |
 |---|---|---|---|---|---|
-| BRUH | 5.4% | +19% | -11% | 2 of 5 | 6.5 |
+| BRUH | 5.3% | +15% | -12% | 1 of 5 | 6.7 |
 
 ## Dataset
 
 Last check 2026-11-08: 89 of 96 snapshots, 13220 rows, 169 coins, 35.6 MB. No problems.
 
-GeckoTerminal: 15810 calls, 125 refused, 1 failed, 123 waiting. Insider flag fired on 0 of 79 coins where RugCheck's graph found insiders.
+GeckoTerminal: 15816 calls, 125 refused, 1 failed, 125 waiting. Insider flag fired on 0 of 79 coins where RugCheck's graph found insiders.
 
 Fills: a round trip on Jupiter returned -0.6% (median of 178 quotes, before priority fees); paper charged -7.4%.
 
-Launch feed: QUIET, 9370 launches and 637 graduations in the last day.
+Launch feed: QUIET, 9333 launches and 630 graduations in the last day.
 
 Learning run 2026-11-08: 2 of 14 arms have 15+ trades. Promoted: none. Proposes only until 2026-11-30. Detail: LEARNING.md on `state`. No rule on this book reads it.
 
@@ -83,7 +83,7 @@ Learning run 2026-11-08: 2 of 14 arms have 15+ trades. Promoted: none. Proposes 
 
 | Coin | Mint | Opened | Cost SOL | Entry mcap | Move | Value SOL (incl. realised) | Thesis |
 |---|---|---|---|---|---|---|---|
-| BRUH | `PgFtGGqu…` | 2026-11-08 08:15 UTC | 0.25 | $1,080,245 | +67% | 0.416 | Gate pass; 28h pumpswap coin, mc $1.07M, liq $84k (thin), 1h +42%, 24h +84%, 5m -2.2% (no spike now), 1h buys 163 vs sells 92. Other passes COGE (24h -92%) and GIGAHUG (11.7h, +1775% 24h vertical) skipped; GATO/HELL already held. |
+| BRUH | `PgFtGGqu…` | 2026-11-08 08:15 UTC | 0.25 | $1,080,245 | +64% | 0.410 | Gate pass; 28h pumpswap coin, mc $1.07M, liq $84k (thin), 1h +42%, 24h +84%, 5m -2.2% (no spike now), 1h buys 163 vs sells 92. Other passes COGE (24h -92%) and GIGAHUG (11.7h, +1775% 24h vertical) skipped; GATO/HELL already held. |
 
 ## Closed
 
@@ -140,7 +140,6 @@ Learning run 2026-11-08: 2 of 14 arms have 15+ trades. Promoted: none. Proposes 
 
 ## Orders (last 15)
 
-- 2026-11-07 08:15 UTC `20261107T081419.210777Z-gate-13ce25`: recorded 6 gate results, 3 passed
 - 2026-11-07 12:15 UTC `20261107T121430.920755Z-gate-4b19e1`: recorded 5 gate results, 1 passed
 - 2026-11-07 16:15 UTC `20261107T161507.231040Z-gate-3ee693`: recorded 5 gate results, 2 passed
 - 2026-11-07 20:15 UTC `20261107T201442.192745Z-gate-977080`: recorded 5 gate results, 2 passed
@@ -155,3 +154,4 @@ Learning run 2026-11-08: 2 of 14 arms have 15+ trades. Promoted: none. Proposes 
 - 2026-11-09 00:15 UTC `20261109T001443.965867Z-gate-552040`: recorded 7 gate results, 3 passed
 - 2026-11-09 04:15 UTC `20261109T041429.342019Z-gate-6718d9`: recorded 0 gate results, 0 passed
 - 2026-11-09 04:15 UTC `20261109T041438.569954Z-gate-51c1d5`: recorded 5 gate results, 2 passed
+- 2026-11-09 08:19 UTC `20261109T081929.091319Z-gate-b30d6c`: recorded 5 gate results, 1 passed
