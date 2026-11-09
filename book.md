@@ -9,7 +9,7 @@ area: trading
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
 **Equity 9.394 SOL** (start 10.0 SOL, -6.1%) · cash 9.038 SOL ·
-open 1 · closed 14 (5 won) · SOL $87.54 · marked 2026-11-09 04:12 UTC
+open 1 · closed 14 (5 won) · SOL $87.55 · marked 2026-11-09 04:15 UTC
 
 **Benchmark (vs just holding SOL): -6.1%.** The book is counted in SOL, so its SOL
 return *is* its edge over holding SOL. In dollars: $822 vs $949 at the start
@@ -41,17 +41,17 @@ Same gate, size, costs and exit code as the picks; rules in `CLAUDE.md`. Judged 
 |---|---|---|---|---|---|
 | mech | 5 | 2 | 1 | +0.291 | +19.4% |
 | v-dip | 0 | 0 | 0 | +0.000 | +0.0% |
-| v-loose | 18 | 4 | 6 | -0.856 | -14.3% |
-| v-low-bundle | 18 | 4 | 6 | -0.921 | -15.3% |
-| v-mature | 6 | 3 | 3 | +0.188 | +8.3% |
-| v-momentum | 18 | 4 | 6 | -0.921 | -15.3% |
-| v-networks | 16 | 3 | 6 | -0.440 | -8.0% |
-| v-no-spike | 11 | 3 | 6 | +6771.631 | +159332.5% |
-| v-swing | 24 | 4 | 6 | -1.197 | -16.0% |
-| v-tight | 25 | 4 | 6 | -0.887 | -11.4% |
-| v-unease | 19 | 3 | 6 | -0.303 | -4.8% |
-| v-unpaid | 14 | 1 | 6 | -1.726 | -34.5% |
-| v-velocity | 18 | 4 | 6 | -0.608 | -10.1% |
+| v-loose | 18 | 4 | 6 | -0.867 | -14.4% |
+| v-low-bundle | 18 | 4 | 6 | -0.928 | -15.5% |
+| v-mature | 6 | 3 | 3 | +0.190 | +8.4% |
+| v-momentum | 18 | 4 | 6 | -0.928 | -15.5% |
+| v-networks | 16 | 3 | 6 | -0.449 | -8.2% |
+| v-no-spike | 11 | 3 | 6 | +6771.620 | +159332.2% |
+| v-swing | 24 | 4 | 6 | -1.213 | -16.2% |
+| v-tight | 25 | 4 | 6 | -0.891 | -11.5% |
+| v-unease | 19 | 3 | 6 | -0.314 | -5.0% |
+| v-unpaid | 14 | 1 | 6 | -1.727 | -34.5% |
+| v-velocity | 18 | 4 | 6 | -0.623 | -10.4% |
 | v-x-exit | 0 | 0 | 0 | +0.000 | +0.0% |
 | v-x-organic | 0 | 0 | 0 | +0.000 | +0.0% |
 
@@ -71,7 +71,7 @@ Each coin against its own normal. Information only: no rule on this book reads i
 
 Last check 2026-11-08: 89 of 96 snapshots, 13220 rows, 169 coins, 35.6 MB. No problems.
 
-GeckoTerminal: 15155 calls, 114 refused, 1 failed, 143 waiting. Insider flag fired on 0 of 79 coins where RugCheck's graph found insiders.
+GeckoTerminal: 15164 calls, 114 refused, 1 failed, 143 waiting. Insider flag fired on 0 of 79 coins where RugCheck's graph found insiders.
 
 Fills: a round trip on Jupiter returned -0.6% (median of 178 quotes, before priority fees); paper charged -7.4%.
 
@@ -140,8 +140,6 @@ Learning run 2026-11-08: 2 of 14 arms have 15+ trades. Promoted: none. Proposes 
 
 ## Orders (last 15)
 
-- 2026-11-07 04:15 UTC `20261107T041449.762501Z-gate-6c8026`: recorded 5 gate results, 4 passed
-- 2026-11-07 08:15 UTC `20261107T081407.178625Z-gate-a254e1`: recorded 0 gate results, 0 passed
 - 2026-11-07 08:15 UTC `20261107T081419.210777Z-gate-13ce25`: recorded 6 gate results, 3 passed
 - 2026-11-07 12:15 UTC `20261107T121430.920755Z-gate-4b19e1`: recorded 5 gate results, 1 passed
 - 2026-11-07 16:15 UTC `20261107T161507.231040Z-gate-3ee693`: recorded 5 gate results, 2 passed
@@ -155,3 +153,5 @@ Learning run 2026-11-08: 2 of 14 arms have 15+ trades. Promoted: none. Proposes 
 - 2026-11-08 16:15 UTC `20261108T161508.976202Z-gate-82c830`: recorded 5 gate results, 3 passed
 - 2026-11-08 20:15 UTC `20261108T201439.844133Z-gate-4817a0`: recorded 5 gate results, 1 passed
 - 2026-11-09 00:15 UTC `20261109T001443.965867Z-gate-552040`: recorded 7 gate results, 3 passed
+- 2026-11-09 04:15 UTC `20261109T041429.342019Z-gate-6718d9`: recorded 0 gate results, 0 passed
+- 2026-11-09 04:15 UTC `20261109T041438.569954Z-gate-51c1d5`: recorded 5 gate results, 2 passed
