@@ -639,7 +639,7 @@
     "2026-11-08 12:16 UTC SELL 100% HELL -> 0.211 SOL @ $0.002694: time stop: 48h held, -9%, no take-profit",
     "2026-11-08 20:15 UTC SELL 100% GATO -> 0.235 SOL @ $0.01197: time stop: 48h held, +0%, no take-profit"
   ],
-  "last_mark": "2026-11-09 02:20 UTC",
+  "last_mark": "2026-11-09 02:25 UTC",
   "gate_pass": {
     "FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump": 1794188245,
     "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": 1794189205,
@@ -651,7 +651,8 @@
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794190165,
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": 1794188245,
     "CZRtwCDJy4cKNvtVwtgGqeEGzLnCDJdTkexgpEsMpump": 1794189205,
-    "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794188245
+    "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794188245,
+    "85mEALGuRCMmmMo7YD51pMfEjWisbHHRwZX8t7Bpump": 1794191131
   },
   "rejects": {
     "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
@@ -1328,6 +1329,13 @@
       "symbol": "BTC",
       "at": 1794143891,
       "px": 0.001018,
+      "fails": [],
+      "moves": {}
+    },
+    "85mEALGuRCMmmMo7YD51pMfEjWisbHHRwZX8t7Bpump": {
+      "symbol": "0DAY",
+      "at": 1794191131,
+      "px": 0.0009728,
       "fails": [],
       "moves": {}
     }
