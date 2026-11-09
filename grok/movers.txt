@@ -1,12 +1,12 @@
-MOVERS 2026-11-09T19:30:19Z
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +9%
-A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL +14%
-Hh3oTaqDCKKfdBgsQEvxp9sUwyNf8x9qmKqEMLBWpump HODL +17%
-33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump DOPE +23%
-8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER +31%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -19%
-8Mi9E1V2bdPeAaRkR5yxUsAvpzP6UBUEEUrYmgKNpump WEALTH -7%
-DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS -7%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -7%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -3%
+MOVERS 2026-11-09T19:46:19Z
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +6%
+8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +7%
+8Mi9E1V2bdPeAaRkR5yxUsAvpzP6UBUEEUrYmgKNpump WEALTH +10%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +12%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +29%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -8%
+FZcbX6uBkeACEg38cFBqvQgTJiL98aKovQT23AfCpump UCI -8%
+PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH -7%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -5%
+5GDX5fJTQns4arM1J94wjxdA8KXFsV5qW46MLFpHpump OMNI -4%
 END
