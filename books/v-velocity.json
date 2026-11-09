@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.752057644171511,
+  "cash_sol": 7.989299425450169,
   "positions": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
       "symbol": "JOB",
@@ -158,22 +158,22 @@
       "symbol": "BRUH",
       "opened": "2026-11-08 08:13 UTC",
       "cost_sol": 0.25,
-      "tokens": 19647.293976081368,
+      "tokens": 9823.646988040684,
       "entry_px": 0.001091288959492444,
       "entry_mc": 1080443,
-      "peak_px": 0.002111,
+      "peak_px": 0.002204,
       "stop": -0.35,
       "tp1": 1.0,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-velocity rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.23724178127865816,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/ehpzesdxtymvwz1iy5nt3lrnjy1xbc1kgqspl1kqnyiv",
       "v": 2,
-      "mev_sol": 0.0056116722783389455,
-      "swaps": 1,
+      "mev_sol": 0.01130837958151771,
+      "swaps": 2,
       "entry_liq": 84101.84,
       "at_entry": {
         "px": 0.001091,
@@ -2042,10 +2042,11 @@
     "2026-11-09 08:04 UTC SELL 100% BAGEL -> 0.290 SOL @ $0.001183: time stop: 52h held, +19%, no take-profit",
     "2026-11-09 08:18 UTC BUY DESSA 0.25 SOL @ $0.041391481 (mc $40,534,613): v-velocity rule",
     "2026-11-09 11:24 UTC SELL 100% 0DAY -> 0.074 SOL @ $0.0003262: event exit: liquidity down 42% since entry, -67% from entry",
-    "2026-11-09 11:30 UTC BUY NIO 0.25 SOL @ $0.0014942413 (mc $1,424,148): v-velocity rule"
+    "2026-11-09 11:30 UTC BUY NIO 0.25 SOL @ $0.0014942413 (mc $1,424,148): v-velocity rule",
+    "2026-11-09 16:03 UTC SELL 50% BRUH -> 0.237 SOL @ $0.002204: take-profit at +102%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-09 16:02 UTC"
+  "last_mark": "2026-11-09 16:03 UTC"
 }
