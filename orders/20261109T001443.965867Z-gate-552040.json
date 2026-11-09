@@ -1,0 +1,51 @@
+{
+  "id": "20261109T001443.965867Z-gate-552040",
+  "kind": "gate",
+  "at": 1794183283.965867,
+  "by": "local",
+  "results": {
+    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": {
+      "symbol": "DESSA",
+      "px": 0.04522,
+      "fails": []
+    },
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "px": 0.01235,
+      "fails": []
+    },
+    "AWaBBNoVuwQ22B8Y5nEtLne2uEfk8UaYEFws7vT7pump": {
+      "symbol": "ELYSION",
+      "px": 0.003718,
+      "fails": [
+        "copycat: an earlier 'Elysion' exists (HW2Sz6)"
+      ]
+    },
+    "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
+      "symbol": "CBUCKS",
+      "px": 0.002937,
+      "fails": [
+        "a wallet holds 14% of supply"
+      ]
+    },
+    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": {
+      "symbol": "HELL",
+      "px": 0.002763,
+      "fails": []
+    },
+    "483nprwoMSoGQgrojSHWiePMbKPre7ZRDy4f8YNSpump": {
+      "symbol": "HEREWEGO",
+      "px": 0.002056,
+      "fails": [
+        "copycat: an earlier 'Ah Shit, Here We Go Again' exists (7GWBnu)"
+      ]
+    },
+    "5yC9BM8KUsJTPbWPLfA2N8qH1s9V8DQ3Vcw1G6Jdpump": {
+      "symbol": "AgenC",
+      "px": 0.001758,
+      "fails": [
+        "a wallet holds 30% of supply"
+      ]
+    }
+  }
+}
