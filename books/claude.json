@@ -640,7 +640,7 @@
     "2026-11-08 20:15 UTC SELL 100% GATO -> 0.235 SOL @ $0.01197: time stop: 48h held, +0%, no take-profit",
     "2026-11-09 16:03 UTC SELL 50% BRUH -> 0.237 SOL @ $0.002204: take-profit at +102%: half sold, cost recovered"
   ],
-  "last_mark": "2026-11-10 13:01 UTC",
+  "last_mark": "2026-11-10 13:06 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794313089,
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794313164.146211,
@@ -648,9 +648,8 @@
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": 1794315009,
     "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794314049,
     "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump": 1794313164.146211,
-    "F22QdNn7VYrtTgYDHEYcqQKVtDH8msh2xs6tnGxepump": 1794308288,
     "tx41eAXzN6jHH22LSgF7eSxpTNvJXwcbrcGsbDrpump": 1794313089,
-    "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": 1794312128,
+    "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": 1794315969,
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1794313089,
     "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": 1794313089
   },
@@ -1189,6 +1188,15 @@
       "symbol": "Nothing",
       "at": 1794281407,
       "px": 0.001318,
+      "fails": [
+        "RugCheck danger: Low Liquidity"
+      ],
+      "moves": {}
+    },
+    "AmaENUv7SQowxEaWrZtT9gyR9HHJUBg9ULx6wce4pump": {
+      "symbol": "DINGA",
+      "at": 1794315969,
+      "px": 0.001304,
       "fails": [
         "RugCheck danger: Low Liquidity"
       ],
