@@ -1,12 +1,12 @@
-MOVERS 2026-11-10T02:10:22Z
-PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH +7%
-nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity +8%
-Hh3oTaqDCKKfdBgsQEvxp9sUwyNf8x9qmKqEMLBWpump HODL +15%
-8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER +30%
-4N1pRfEMnWAUE8rhyhqwnsWe6TNjuQFhgvNB3Nr9pump HODL +33%
-Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump BAGEL -10%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -9%
-EaxAUcXxNnVwcqm2BBocbows7D1XVY2Q63V38NEypump GTA6Coin -9%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -9%
-npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -8%
+MOVERS 2026-11-10T02:26:22Z
+PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH +14%
+Hh3oTaqDCKKfdBgsQEvxp9sUwyNf8x9qmKqEMLBWpump HODL +14%
+5GDX5fJTQns4arM1J94wjxdA8KXFsV5qW46MLFpHpump OMNI +19%
+8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER +28%
+4N1pRfEMnWAUE8rhyhqwnsWe6TNjuQFhgvNB3Nr9pump HODL +30%
+npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -15%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -8%
+Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump BAGEL -6%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -6%
+8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB -6%
 END
