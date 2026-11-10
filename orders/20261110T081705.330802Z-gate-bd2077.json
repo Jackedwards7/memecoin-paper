@@ -1,0 +1,44 @@
+{
+  "id": "20261110T081705.330802Z-gate-bd2077",
+  "kind": "gate",
+  "at": 1794298625.330802,
+  "by": "local",
+  "results": {
+    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": {
+      "symbol": "DESSA",
+      "px": 0.0207,
+      "fails": []
+    },
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "px": 0.009683,
+      "fails": []
+    },
+    "8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump": {
+      "symbol": "HODLER",
+      "px": 0.01573,
+      "fails": [
+        "a wallet holds 64% of supply"
+      ]
+    },
+    "BAftaSb1HVqBn5723w72WLcXU7YASSgmVxQxJJAJpump": {
+      "symbol": "OnlyCats",
+      "px": 0.001394,
+      "fails": []
+    },
+    "GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump": {
+      "symbol": "WASTED",
+      "px": 0.00126,
+      "fails": [
+        "RugCheck danger: Large Amount of LP Unlocked",
+        "LP only 0% locked",
+        "copycat: an earlier 'WASTED' exists (FsjgzA)"
+      ]
+    },
+    "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump": {
+      "symbol": "BIG",
+      "px": 0.0008515,
+      "fails": []
+    }
+  }
+}
