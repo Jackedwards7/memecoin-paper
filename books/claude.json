@@ -640,7 +640,7 @@
     "2026-11-08 20:15 UTC SELL 100% GATO -> 0.235 SOL @ $0.01197: time stop: 48h held, +0%, no take-profit",
     "2026-11-09 16:03 UTC SELL 50% BRUH -> 0.237 SOL @ $0.002204: take-profit at +102%: half sold, cost recovered"
   ],
-  "last_mark": "2026-11-10 00:41 UTC",
+  "last_mark": "2026-11-10 00:44 UTC",
   "gate_pass": {
     "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": 1794269902,
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794270862,
@@ -857,7 +857,8 @@
         "deepest pool is orca, not a graduation pool"
       ],
       "moves": {
-        "1d": -0.9990701754385964
+        "1d": -0.9990701754385964,
+        "3d": -0.9991061189559264
       }
     },
     "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": {
@@ -869,7 +870,8 @@
         "deepest pool is meteoraDlmm, not a graduation pool"
       ],
       "moves": {
-        "1d": -0.2218359727050342
+        "1d": -0.2218359727050342,
+        "3d": -0.07209990987511261
       }
     },
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
