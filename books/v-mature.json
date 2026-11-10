@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 9.67761765039422,
+  "cash_sol": 9.42761765039422,
   "positions": {
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": {
       "symbol": "DESSA",
@@ -76,6 +76,83 @@
       },
       "reentry": true,
       "since_loss_h": 10.8
+    },
+    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
+      "symbol": "JOB",
+      "opened": "2026-11-10 21:39 UTC",
+      "cost_sol": 0.25,
+      "tokens": 7684.203597137779,
+      "entry_px": 0.0026053464418169603,
+      "entry_mc": 2538428,
+      "peak_px": 0.0026053464418169603,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-mature rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/hauvbmnthcfmg9srxmvz1gaxnpu955hkpdsasc2cx4c8",
+      "v": 2,
+      "mev_sol": 0.006000240009600384,
+      "swaps": 1,
+      "entry_liq": 156645.82,
+      "at_entry": {
+        "px": 0.002605,
+        "liq": 156645.82,
+        "mc": 2538428,
+        "dex": "pumpswap",
+        "age_h": 338.44,
+        "vol_h1": 29041.13,
+        "vol_h24": 1489368.05,
+        "buys_h1": 179,
+        "sells_h1": 206,
+        "buys_h24": 4936,
+        "sells_h24": 5934,
+        "trades_h24": 10870,
+        "avg_trade": 137.02,
+        "m5": 0.2,
+        "h1": 2.17,
+        "h6": -25.24,
+        "h24": -28.83,
+        "eligible": true,
+        "v": 3,
+        "pool": "HAUVBmNthCFmG9SRXMvZ1GAXNpU955hkPdSAsC2cx4C8",
+        "m5_raw": 0.2,
+        "buys_m5": 13,
+        "sells_m5": 12,
+        "buys_h6": 1400,
+        "sells_h6": 1668,
+        "vol_m5": 1566.47,
+        "vol_h6": 376309.82,
+        "liq_base": 30451473,
+        "liq_quote": 925.4277,
+        "fdv": 2538428,
+        "boosts": null,
+        "links": [
+          "telegram",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0279,
+          "paid": 0.0036272258660801143,
+          "vs_paid": -0.2888,
+          "off_peak": -0.418,
+          "accel": 0.0227,
+          "candles": 96,
+          "unease": 3,
+          "known": 5,
+          "signs": [
+            "failed_high",
+            "smaller_trades",
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 18.2
     }
   },
   "closed": [
@@ -891,10 +968,11 @@
     "2026-11-09 21:32 UTC SELL 100% JOB -> 0.152 SOL @ $0.003676: stop-loss at -35%",
     "2026-11-10 01:04 UTC SELL 100% HELL -> 0.144 SOL @ $0.001964: stop-loss at -37%",
     "2026-11-10 03:25 UTC SELL 100% GATO -> 0.211 SOL @ $0.01082: time stop: 48h held, -12%, no take-profit",
-    "2026-11-10 14:10 UTC BUY DESSA 0.25 SOL @ $0.011550761 (mc $11,315,439): v-mature rule"
+    "2026-11-10 14:10 UTC BUY DESSA 0.25 SOL @ $0.011550761 (mc $11,315,439): v-mature rule",
+    "2026-11-10 21:39 UTC BUY JOB 0.25 SOL @ $0.0026053464 (mc $2,538,428): v-mature rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-10 21:34 UTC"
+  "last_mark": "2026-11-10 21:39 UTC"
 }
