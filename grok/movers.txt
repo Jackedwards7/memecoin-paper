@@ -1,12 +1,12 @@
-MOVERS 2026-11-10T19:14:58Z
-BBRgG2GifeKNB1hSmzD2BwHMPK8wnDtcuE4NzxgHpump BORLY +6%
-8Mi9E1V2bdPeAaRkR5yxUsAvpzP6UBUEEUrYmgKNpump WEALTH +6%
-4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao +7%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +17%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +20%
-7v8LoULtAhg3hT43YYQvKdF3LD3stdudBZAv5oTqpump MILES -16%
-FZcbX6uBkeACEg38cFBqvQgTJiL98aKovQT23AfCpump UCI -11%
-4N1pRfEMnWAUE8rhyhqwnsWe6TNjuQFhgvNB3Nr9pump HODL -11%
-Hh3oTaqDCKKfdBgsQEvxp9sUwyNf8x9qmKqEMLBWpump HODL -10%
-8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER -8%
+MOVERS 2026-11-10T19:30:58Z
+HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO +9%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +11%
+8Mi9E1V2bdPeAaRkR5yxUsAvpzP6UBUEEUrYmgKNpump WEALTH +11%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +14%
+4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao +21%
+FZcbX6uBkeACEg38cFBqvQgTJiL98aKovQT23AfCpump UCI -12%
+8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB -11%
+DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin -8%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -7%
+7v8LoULtAhg3hT43YYQvKdF3LD3stdudBZAv5oTqpump MILES -6%
 END
