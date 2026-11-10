@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 5.627098424133702,
+  "cash_sol": 5.703202568548135,
   "positions": {
     "nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump": {
       "symbol": "Dacity",
@@ -304,81 +304,6 @@
       },
       "reentry": true,
       "since_loss_h": 0.6
-    },
-    "C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump": {
-      "symbol": "BTC",
-      "opened": "2026-11-10 07:30 UTC",
-      "cost_sol": 0.25,
-      "tokens": 15068.213770222217,
-      "entry_px": 0.001375201156287711,
-      "entry_mc": 1363331,
-      "peak_px": 0.001405,
-      "stop": -0.35,
-      "tp1": 1.0,
-      "tp1_done": false,
-      "thesis": "v-unpaid rule",
-      "rugcheck": 1,
-      "risks": [],
-      "realised_sol": 0.0,
-      "dex": "pumpswap",
-      "url": "https://dexscreener.com/solana/3m9svgl4u6atkaiexf3xhqqnfmb6ijvzk3memcqaen1w",
-      "v": 2,
-      "mev_sol": 0.0058018101647714084,
-      "swaps": 1,
-      "entry_liq": 147270.44,
-      "at_entry": {
-        "px": 0.001375,
-        "liq": 147270.44,
-        "mc": 1363331,
-        "dex": "pumpswap",
-        "age_h": 1379.34,
-        "vol_h1": 3768.34,
-        "vol_h24": 431463.4,
-        "buys_h1": 74,
-        "sells_h1": 67,
-        "buys_h24": 4299,
-        "sells_h24": 3556,
-        "trades_h24": 7855,
-        "avg_trade": 54.93,
-        "m5": -0.28,
-        "h1": 6.08,
-        "h6": -10.62,
-        "h24": 8.87,
-        "eligible": true,
-        "v": 3,
-        "pool": "3M9sVgL4u6ATKaiExf3XhQqNfMB6ijvzk3meMcQaen1w",
-        "m5_raw": -0.28,
-        "buys_m5": 13,
-        "sells_m5": 4,
-        "buys_h6": 633,
-        "sells_h6": 606,
-        "vol_m5": 177.41,
-        "vol_h6": 60910.85,
-        "liq_base": 55283541,
-        "liq_quote": 0.953,
-        "fdv": 1363331,
-        "boosts": null,
-        "links": [
-          "website"
-        ],
-        "read": {
-          "swing": 0.0819,
-          "paid": 0.001468535729401419,
-          "vs_paid": -0.0506,
-          "off_peak": -0.3062,
-          "accel": 0.0637,
-          "candles": 96,
-          "unease": 3,
-          "known": 5,
-          "signs": [
-            "failed_high",
-            "smaller_trades",
-            "under_paid"
-          ]
-        }
-      },
-      "reentry": false,
-      "since_loss_h": 2.5
     }
   },
   "closed": [
@@ -2267,6 +2192,87 @@
       "pnl_pct": -1.0,
       "exit_reason": "event exit: liquidity down 87% since entry, -98% from entry",
       "exit_px": 4.632e-05
+    },
+    {
+      "symbol": "BTC",
+      "opened": "2026-11-10 07:30 UTC",
+      "cost_sol": 0.25,
+      "tokens": 0.0,
+      "entry_px": 0.001375201156287711,
+      "entry_mc": 1363331,
+      "peak_px": 0.001405,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unpaid rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0761041444144335,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/3m9svgl4u6atkaiexf3xhqqnfmb6ijvzk3memcqaen1w",
+      "v": 2,
+      "mev_sol": 0.011638158944974514,
+      "swaps": 2,
+      "entry_liq": 147270.44,
+      "at_entry": {
+        "px": 0.001375,
+        "liq": 147270.44,
+        "mc": 1363331,
+        "dex": "pumpswap",
+        "age_h": 1379.34,
+        "vol_h1": 3768.34,
+        "vol_h24": 431463.4,
+        "buys_h1": 74,
+        "sells_h1": 67,
+        "buys_h24": 4299,
+        "sells_h24": 3556,
+        "trades_h24": 7855,
+        "avg_trade": 54.93,
+        "m5": -0.28,
+        "h1": 6.08,
+        "h6": -10.62,
+        "h24": 8.87,
+        "eligible": true,
+        "v": 3,
+        "pool": "3M9sVgL4u6ATKaiExf3XhQqNfMB6ijvzk3meMcQaen1w",
+        "m5_raw": -0.28,
+        "buys_m5": 13,
+        "sells_m5": 4,
+        "buys_h6": 633,
+        "sells_h6": 606,
+        "vol_m5": 177.41,
+        "vol_h6": 60910.85,
+        "liq_base": 55283541,
+        "liq_quote": 0.953,
+        "fdv": 1363331,
+        "boosts": null,
+        "links": [
+          "website"
+        ],
+        "read": {
+          "swing": 0.0819,
+          "paid": 0.001468535729401419,
+          "vs_paid": -0.0506,
+          "off_peak": -0.3062,
+          "accel": 0.0637,
+          "candles": 96,
+          "unease": 3,
+          "known": 5,
+          "signs": [
+            "failed_high",
+            "smaller_trades",
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 2.5,
+      "mint": "C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump",
+      "closed": "2026-11-10 08:50 UTC",
+      "pnl_sol": -0.1738958555855665,
+      "pnl_pct": -0.695583422342266,
+      "exit_reason": "event exit: price -63% in 5 minutes, -66% from entry",
+      "exit_px": 0.000473
     }
   ],
   "log": [
@@ -2322,10 +2328,11 @@
     "2026-11-10 03:46 UTC BUY FARTBOY 0.25 SOL @ $0.018960674 (mc $18,950,343): v-unpaid rule",
     "2026-11-10 05:01 UTC SELL 100% TripleT -> 0.197 SOL @ $0.002968: time stop: 48h held, -17%, no take-profit",
     "2026-11-10 07:30 UTC BUY BTC 0.25 SOL @ $0.0013752012 (mc $1,363,331): v-unpaid rule",
-    "2026-11-10 08:19 UTC SELL 100% UODF -> 0.000 SOL @ $4.632e-05: event exit: liquidity down 87% since entry, -98% from entry"
+    "2026-11-10 08:19 UTC SELL 100% UODF -> 0.000 SOL @ $4.632e-05: event exit: liquidity down 87% since entry, -98% from entry",
+    "2026-11-10 08:50 UTC SELL 100% BTC -> 0.076 SOL @ $0.000473: event exit: price -63% in 5 minutes, -66% from entry"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-10 08:39 UTC"
+  "last_mark": "2026-11-10 08:50 UTC"
 }
