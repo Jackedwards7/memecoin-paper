@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 5.952043824814437,
+  "cash_sol": 5.702043824814437,
   "positions": {
     "GNggUoCrkgcshssMFn1AxRGEeiNpS7fFaLJMEbSWpump": {
       "symbol": "BTX",
@@ -367,6 +367,85 @@
       },
       "reentry": false,
       "since_loss_h": 0.1
+    },
+    "9AvytnUKsLxPxFHFqS6VLxaxt5p6BhYNr53SD2Chpump": {
+      "symbol": "67",
+      "opened": "2026-11-10 02:58 UTC",
+      "cost_sol": 0.25,
+      "tokens": 16138.20279696477,
+      "entry_px": 0.0012831075591573636,
+      "entry_mc": 1218733,
+      "peak_px": 0.0012831075591573636,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unpaid rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/dmafl613xtipua3jfnyczavwt7xsiyf9cr3qmrmzqhb6",
+      "v": 2,
+      "mev_sol": 0.0058058522991175105,
+      "swaps": 1,
+      "entry_liq": 256816.72,
+      "at_entry": {
+        "px": 0.001283,
+        "liq": 256816.72,
+        "mc": 1218733,
+        "dex": "pumpswap",
+        "age_h": 10001.45,
+        "vol_h1": 366.97,
+        "vol_h24": 16919.69,
+        "buys_h1": 10,
+        "sells_h1": 1,
+        "buys_h24": 110,
+        "sells_h24": 136,
+        "trades_h24": 246,
+        "avg_trade": 68.78,
+        "m5": 0,
+        "h1": 0.3,
+        "h6": -2.17,
+        "h24": 0.84,
+        "eligible": true,
+        "v": 3,
+        "pool": "DMAFL613XTipuA3jFNYczavWT7XsiYf9cR3qmRMZQhB6",
+        "m5_raw": null,
+        "buys_m5": 0,
+        "sells_m5": 0,
+        "buys_h6": 40,
+        "sells_h6": 10,
+        "vol_m5": 0,
+        "vol_h6": 3341.34,
+        "liq_base": 100503902,
+        "liq_quote": 1485.6127,
+        "fdv": 1282620,
+        "boosts": null,
+        "links": [
+          "discord",
+          "telegram",
+          "tiktok",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0078,
+          "paid": 0.0013208606466637233,
+          "vs_paid": -0.0341,
+          "off_peak": -0.073,
+          "accel": -0.0149,
+          "candles": 96,
+          "unease": 3,
+          "known": 5,
+          "signs": [
+            "failed_high",
+            "smaller_trades",
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 0.4
     }
   },
   "closed": [
@@ -2067,10 +2146,11 @@
     "2026-11-09 14:42 UTC BUY CATE 0.25 SOL @ $0.031670365 (mc $30,541,437): v-unpaid rule",
     "2026-11-10 00:59 UTC SELL 100% OMNI -> 0.160 SOL @ $0.0003844: event exit: price -23% in 5 minutes, -32% from entry",
     "2026-11-10 01:06 UTC BUY UODF 0.25 SOL @ $0.0028614712 (mc $2,857,078): v-unpaid rule",
-    "2026-11-10 02:37 UTC SELL 100% House -> 0.210 SOL @ $0.0006631: time stop: 48h held, -12%, no take-profit"
+    "2026-11-10 02:37 UTC SELL 100% House -> 0.210 SOL @ $0.0006631: time stop: 48h held, -12%, no take-profit",
+    "2026-11-10 02:58 UTC BUY 67 0.25 SOL @ $0.0012831076 (mc $1,218,733): v-unpaid rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-10 02:53 UTC"
+  "last_mark": "2026-11-10 02:58 UTC"
 }
