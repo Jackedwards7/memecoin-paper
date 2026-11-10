@@ -1,12 +1,12 @@
-MOVERS 2026-11-10T00:18:22Z
-5GDX5fJTQns4arM1J94wjxdA8KXFsV5qW46MLFpHpump OMNI +5%
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +10%
-A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL +11%
-3NZ9JMVBmGAqocybic2c7LQCJScmgsAZ6vQqTDzcqmJh WBTC +17%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +22%
-8PzFWyLpCVEmbZmVJcaRTU5r69XKJx1rd7YGpWvnpump Percolator -26%
-8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER -18%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -14%
-npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -14%
-5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat -13%
+MOVERS 2026-11-10T00:34:22Z
+8Mi9E1V2bdPeAaRkR5yxUsAvpzP6UBUEEUrYmgKNpump WEALTH +4%
+CARDSccUMFKoPRZxt5vt3ksUbxEFEcnZ3H2pd3dKxYjp CARDS +5%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +8%
+5GDX5fJTQns4arM1J94wjxdA8KXFsV5qW46MLFpHpump OMNI +13%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +20%
+8PzFWyLpCVEmbZmVJcaRTU5r69XKJx1rd7YGpWvnpump Percolator -33%
+4N1pRfEMnWAUE8rhyhqwnsWe6TNjuQFhgvNB3Nr9pump HODL -20%
+npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -16%
+8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER -15%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -11%
 END
