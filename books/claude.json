@@ -640,15 +640,15 @@
     "2026-11-08 20:15 UTC SELL 100% GATO -> 0.235 SOL @ $0.01197: time stop: 48h held, +0%, no take-profit",
     "2026-11-09 16:03 UTC SELL 50% BRUH -> 0.237 SOL @ $0.002204: take-profit at +102%: half sold, cost recovered"
   ],
-  "last_mark": "2026-11-10 16:16 UTC",
+  "last_mark": "2026-11-10 16:18 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794324621,
-    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794324621,
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794327463.473183,
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794324621,
-    "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": 1794326542,
+    "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": 1794327463.473183,
     "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794325582,
-    "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump": 1794324621,
-    "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": 1794323661,
+    "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump": 1794327463.473183,
+    "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": 1794327503,
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1794324621,
     "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": 1794324621
   },
@@ -1819,6 +1819,12 @@
       "kind": "gate",
       "result": "recorded 4 gate results, 3 passed",
       "at": "2026-11-10 12:20 UTC"
+    },
+    {
+      "id": "20261110T161743.473183Z-gate-cc4b89",
+      "kind": "gate",
+      "result": "recorded 4 gate results, 3 passed",
+      "at": "2026-11-10 16:18 UTC"
     }
   ]
 }
