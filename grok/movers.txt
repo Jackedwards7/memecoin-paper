@@ -1,12 +1,12 @@
-MOVERS 2026-11-10T17:38:34Z
-DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS +31%
-Hh3oTaqDCKKfdBgsQEvxp9sUwyNf8x9qmKqEMLBWpump HODL +34%
-8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER +42%
-4N1pRfEMnWAUE8rhyhqwnsWe6TNjuQFhgvNB3Nr9pump HODL +77%
-7v8LoULtAhg3hT43YYQvKdF3LD3stdudBZAv5oTqpump MILES +408%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -33%
-DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin -24%
-CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump fone -5%
-DQnkBM4eYYMnVE8Qy2K3BB7uts1fh2EwBVktEz6jpump DJI6930 -4%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -4%
+MOVERS 2026-11-10T17:54:36Z
+8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER +29%
+Hh3oTaqDCKKfdBgsQEvxp9sUwyNf8x9qmKqEMLBWpump HODL +33%
+FZcbX6uBkeACEg38cFBqvQgTJiL98aKovQT23AfCpump UCI +83%
+4N1pRfEMnWAUE8rhyhqwnsWe6TNjuQFhgvNB3Nr9pump HODL +89%
+7v8LoULtAhg3hT43YYQvKdF3LD3stdudBZAv5oTqpump MILES +287%
+98kfF7rmsg1QDUEoCqNE7g7M1FdrTt92TEp2CLzypump PAID -16%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -14%
+DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin -8%
+34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG -4%
+2JVEVXoRsskapZ8T56MjMNJq6Dk3feEUYSRmzkkipump RONIN -4%
 END
