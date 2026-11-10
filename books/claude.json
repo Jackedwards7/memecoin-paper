@@ -640,7 +640,7 @@
     "2026-11-08 20:15 UTC SELL 100% GATO -> 0.235 SOL @ $0.01197: time stop: 48h held, +0%, no take-profit",
     "2026-11-09 16:03 UTC SELL 50% BRUH -> 0.237 SOL @ $0.002204: take-profit at +102%: half sold, cost recovered"
   ],
-  "last_mark": "2026-11-10 16:34 UTC",
+  "last_mark": "2026-11-10 16:44 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794328462,
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794328462,
@@ -1051,7 +1051,8 @@
         "RugCheck danger: Low Liquidity"
       ],
       "moves": {
-        "1d": -0.9998256914566687
+        "1d": -0.9998256914566687,
+        "3d": -0.9998895513214505
       }
     },
     "ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump": {
