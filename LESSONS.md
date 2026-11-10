@@ -1,8 +1,8 @@
 # Lessons
 
-244 closed trades labelled, every book. Written by the bot.
+245 closed trades labelled, every book. Written by the bot.
 
-- **other**: 73 trades, mean -33%. NIO (v-momentum): stop-loss at -35%; NIO (v-networks): stop-loss at -35%
+- **other**: 74 trades, mean -33%. NIO (v-networks): stop-loss at -35%; three (v-unease): unease exit: 4 of 5 signs
 - **slow-bleed**: 72 trades, mean -27%. Rocco (v-velocity): -23% over 26h; JOB (v-mature): -39% over 42h
 - **won-held**: 47 trades, mean +45%. BAGEL (v-velocity): +16%, peak +38%; DESSA (v-unease): +74%, peak +126%
 - **bought-spike**: 28 trades, mean -30%. DONNA (v-velocity): up 173% in 24h at entry, peak +1%; DONNA (v-loose): up 168% in 24h at entry, peak +0%
