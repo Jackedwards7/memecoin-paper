@@ -640,7 +640,7 @@
     "2026-11-08 20:15 UTC SELL 100% GATO -> 0.235 SOL @ $0.01197: time stop: 48h held, +0%, no take-profit",
     "2026-11-09 16:03 UTC SELL 50% BRUH -> 0.237 SOL @ $0.002204: take-profit at +102%: half sold, cost recovered"
   ],
-  "last_mark": "2026-11-10 13:11 UTC",
+  "last_mark": "2026-11-10 13:17 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794313089,
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794313164.146211,
@@ -1014,7 +1014,8 @@
         "a wallet holds 10% of supply"
       ],
       "moves": {
-        "1d": -0.36751207729468593
+        "1d": -0.36751207729468593,
+        "3d": 0.26449275362318847
       }
     },
     "25YymNVsua1yZbapaiVuhCgS2w8KrFwt2p7hF3Aqpump": {
