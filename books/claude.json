@@ -640,7 +640,7 @@
     "2026-11-08 20:15 UTC SELL 100% GATO -> 0.235 SOL @ $0.01197: time stop: 48h held, +0%, no take-profit",
     "2026-11-09 16:03 UTC SELL 50% BRUH -> 0.237 SOL @ $0.002204: take-profit at +102%: half sold, cost recovered"
   ],
-  "last_mark": "2026-11-10 15:30 UTC",
+  "last_mark": "2026-11-10 15:40 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794324621,
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794324621,
@@ -1026,7 +1026,8 @@
         "copycat: an earlier 'Bitcoin Pizza' exists (G9ivB7)"
       ],
       "moves": {
-        "1d": -0.9966764595103578
+        "1d": -0.9966764595103578,
+        "3d": -0.9971389830508475
       }
     },
     "mV9kZc5WEcsupy9KYZo1c7x52Ys1A5CDK73Ysg6pump": {
