@@ -640,7 +640,7 @@
     "2026-11-08 20:15 UTC SELL 100% GATO -> 0.235 SOL @ $0.01197: time stop: 48h held, +0%, no take-profit",
     "2026-11-09 16:03 UTC SELL 50% BRUH -> 0.237 SOL @ $0.002204: take-profit at +102%: half sold, cost recovered"
   ],
-  "last_mark": "2026-11-10 05:06 UTC",
+  "last_mark": "2026-11-10 05:16 UTC",
   "gate_pass": {
     "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": 1794285248,
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794286208,
@@ -963,7 +963,8 @@
         "copycat: an earlier 'Diamond Hands' exists (6VhsEM)"
       ],
       "moves": {
-        "1d": -0.9994966658434181
+        "1d": -0.9994966658434181,
+        "3d": -0.9994897505556928
       }
     },
     "41WpXn15fxQXEGhiKnkqHcoJn14tNXXgmymLKE57pump": {
