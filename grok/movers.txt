@@ -1,12 +1,12 @@
-MOVERS 2026-11-10T10:42:09Z
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +7%
-PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH +7%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +10%
+MOVERS 2026-11-10T10:58:08Z
+PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH +9%
 ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +11%
 34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG +15%
+tx41eAXzN6jHH22LSgF7eSxpTNvJXwcbrcGsbDrpump MYWAY +17%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +23%
 GNggUoCrkgcshssMFn1AxRGEeiNpS7fFaLJMEbSWpump BTX -56%
-5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat -7%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -7%
-6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx STONK -3%
-GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED -2%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -21%
+F22QdNn7VYrtTgYDHEYcqQKVtDH8msh2xs6tnGxepump BORLY -11%
+5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat -6%
+Hh3oTaqDCKKfdBgsQEvxp9sUwyNf8x9qmKqEMLBWpump HODL -5%
 END
