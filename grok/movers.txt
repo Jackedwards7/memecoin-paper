@@ -1,12 +1,12 @@
-MOVERS 2026-11-10T13:38:13Z
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +19%
-AmaENUv7SQowxEaWrZtT9gyR9HHJUBg9ULx6wce4pump DINGA +22620%
-6r7D6ab6agnc5VcJxApia4HqbRikAeAEus2UYF9hpump PAIRLESS +58087%
-6GMjV5PHfeNMaXykCktvbdmXAx54TdKfRxSRaD5Spump Nothing +68582%
-BEd8GoJccoDA9gpfYdxqGupVFZwKrMWWMHnJYqnrpump shiken +328460%
-tx41eAXzN6jHH22LSgF7eSxpTNvJXwcbrcGsbDrpump MYWAY -40%
-HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO -16%
-4N1pRfEMnWAUE8rhyhqwnsWe6TNjuQFhgvNB3Nr9pump HODL -16%
-8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER -12%
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB -12%
+MOVERS 2026-11-10T13:54:13Z
+34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG +30%
+AmaENUv7SQowxEaWrZtT9gyR9HHJUBg9ULx6wce4pump DINGA +24202%
+6r7D6ab6agnc5VcJxApia4HqbRikAeAEus2UYF9hpump PAIRLESS +56867%
+6GMjV5PHfeNMaXykCktvbdmXAx54TdKfRxSRaD5Spump Nothing +72612%
+BEd8GoJccoDA9gpfYdxqGupVFZwKrMWWMHnJYqnrpump shiken +336319%
+npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -27%
+GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED -14%
+8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER -14%
+4N1pRfEMnWAUE8rhyhqwnsWe6TNjuQFhgvNB3Nr9pump HODL -12%
+Hh3oTaqDCKKfdBgsQEvxp9sUwyNf8x9qmKqEMLBWpump HODL -12%
 END
