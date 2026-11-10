@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 5.930358314477722,
+  "cash_sol": 5.680358314477722,
   "positions": {
     "J8PSdNP3QewKq2Z1JJJFDMaqF7KcaiJhR7gbr5KZpump": {
       "symbol": "TripleT",
@@ -373,6 +373,83 @@
       },
       "reentry": true,
       "since_loss_h": 0.4
+    },
+    "y1AZt42vceCmStjW4zetK3VoNarC1VxJ5iDjpiupump": {
+      "symbol": "FARTBOY",
+      "opened": "2026-11-10 03:46 UTC",
+      "cost_sol": 0.25,
+      "tokens": 1084.5724917940936,
+      "entry_px": 0.01896067358852406,
+      "entry_mc": 18950343,
+      "peak_px": 0.01896067358852406,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unpaid rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "raydium",
+      "url": "https://dexscreener.com/solana/dhhvd5s4hqbgntkfztsk98wgptyujjpucqnnwanlwb4f",
+      "v": 2,
+      "mev_sol": 0.005845218611176058,
+      "swaps": 1,
+      "entry_liq": 601939.59,
+      "at_entry": {
+        "px": 0.01896,
+        "liq": 601939.59,
+        "mc": 18950343,
+        "dex": "raydium",
+        "age_h": 16159.53,
+        "vol_h1": 554.16,
+        "vol_h24": 121090.54,
+        "buys_h1": 5,
+        "sells_h1": 0,
+        "buys_h24": 398,
+        "sells_h24": 386,
+        "trades_h24": 784,
+        "avg_trade": 154.45,
+        "m5": 0.42,
+        "h1": 0.28,
+        "h6": 0.8,
+        "h24": 3.29,
+        "eligible": true,
+        "v": 3,
+        "pool": "DhHVd5s4hqBGnTkFztsK98WGPtYUJjpUCqNnWaNLWb4F",
+        "m5_raw": 0.42,
+        "buys_m5": 2,
+        "sells_m5": 0,
+        "buys_h6": 13,
+        "sells_h6": 29,
+        "vol_m5": 552.47,
+        "vol_h6": 5162.82,
+        "liq_base": 15889606,
+        "liq_quote": 3508.6584,
+        "fdv": 18950343,
+        "boosts": null,
+        "links": [
+          "discord",
+          "telegram",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0082,
+          "paid": 0.019409062424935796,
+          "vs_paid": -0.0127,
+          "off_peak": -0.0824,
+          "accel": -0.006,
+          "candles": 96,
+          "unease": 2,
+          "known": 5,
+          "signs": [
+            "failed_high",
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 0.6
     }
   },
   "closed": [
@@ -2154,10 +2231,11 @@
     "2026-11-10 01:06 UTC BUY UODF 0.25 SOL @ $0.0028614712 (mc $2,857,078): v-unpaid rule",
     "2026-11-10 02:37 UTC SELL 100% House -> 0.210 SOL @ $0.0006631: time stop: 48h held, -12%, no take-profit",
     "2026-11-10 02:58 UTC BUY 67 0.25 SOL @ $0.0012831076 (mc $1,218,733): v-unpaid rule",
-    "2026-11-10 03:09 UTC SELL 100% BTX -> 0.228 SOL @ $0.006375: time stop: 48h held, -5%, no take-profit"
+    "2026-11-10 03:09 UTC SELL 100% BTX -> 0.228 SOL @ $0.006375: time stop: 48h held, -5%, no take-profit",
+    "2026-11-10 03:46 UTC BUY FARTBOY 0.25 SOL @ $0.018960674 (mc $18,950,343): v-unpaid rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-10 03:41 UTC"
+  "last_mark": "2026-11-10 03:46 UTC"
 }
