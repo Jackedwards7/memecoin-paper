@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.353019980164952,
+  "cash_sol": 8.103019980164952,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -369,6 +369,83 @@
       },
       "reentry": false,
       "since_loss_h": 10.1
+    },
+    "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump": {
+      "symbol": "BIG",
+      "opened": "2026-11-10 13:22 UTC",
+      "cost_sol": 0.25,
+      "tokens": 22761.898560422465,
+      "entry_px": 0.0008939291661451965,
+      "entry_mc": 848657,
+      "peak_px": 0.0008939291661451965,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unease rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/5tecgcpfldbnjvbrpjvk32uayabpra1hgefpeujqqkyk",
+      "v": 2,
+      "mev_sol": 0.005905976848570754,
+      "swaps": 1,
+      "entry_liq": 82539.07,
+      "at_entry": {
+        "px": 0.0008937,
+        "liq": 82539.07,
+        "mc": 848657,
+        "dex": "pumpswap",
+        "age_h": 45.18,
+        "vol_h1": 6783.69,
+        "vol_h24": 387275.19,
+        "buys_h1": 822,
+        "sells_h1": 814,
+        "buys_h24": 8476,
+        "sells_h24": 8658,
+        "trades_h24": 17134,
+        "avg_trade": 22.6,
+        "m5": 15.07,
+        "h1": 7.79,
+        "h6": 9.55,
+        "h24": 645,
+        "eligible": true,
+        "v": 3,
+        "pool": "5TecgcpFLdBnJvBrpjvk32UAYABPRA1HgeFPEUjQQkYK",
+        "m5_raw": 15.07,
+        "buys_m5": 73,
+        "sells_m5": 63,
+        "buys_h6": 4860,
+        "sells_h6": 5301,
+        "vol_m5": 3060.54,
+        "vol_h6": 46474.96,
+        "liq_base": 47652628,
+        "liq_quote": 184.5654,
+        "fdv": 848657,
+        "boosts": 100,
+        "links": [
+          "telegram",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0039,
+          "paid": 0.00013041388353080547,
+          "vs_paid": -0.0141,
+          "off_peak": -0.0241,
+          "accel": 0.0013,
+          "candles": 96,
+          "unease": 3,
+          "known": 5,
+          "signs": [
+            "failed_high",
+            "smaller_trades",
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 11.4
     }
   },
   "closed": [
@@ -2593,10 +2670,11 @@
     "2026-11-10 05:54 UTC BUY BORLY 0.25 SOL @ $0.0014743234 (mc $1,467,221): v-unease rule",
     "2026-11-10 11:52 UTC SELL 100% BORLY -> 0.324 SOL @ $0.002014: event exit: price -24% in 5 minutes, +37% from entry",
     "2026-11-10 12:02 UTC BUY MYWAY 0.25 SOL @ $0.001714344 (mc $1,691,979): v-unease rule",
-    "2026-11-10 12:25 UTC SELL 100% Rocco -> 0.263 SOL @ $0.0007144: event exit: price -20% in 5 minutes, +12% from entry"
+    "2026-11-10 12:25 UTC SELL 100% Rocco -> 0.263 SOL @ $0.0007144: event exit: price -20% in 5 minutes, +12% from entry",
+    "2026-11-10 13:22 UTC BUY BIG 0.25 SOL @ $0.00089392917 (mc $848,657): v-unease rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-10 13:17 UTC"
+  "last_mark": "2026-11-10 13:22 UTC"
 }
