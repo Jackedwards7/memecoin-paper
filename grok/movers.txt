@@ -1,12 +1,12 @@
-MOVERS 2026-11-10T06:42:07Z
-Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT +4%
-nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity +5%
-8PzFWyLpCVEmbZmVJcaRTU5r69XKJx1rd7YGpWvnpump Percolator +7%
-tx41eAXzN6jHH22LSgF7eSxpTNvJXwcbrcGsbDrpump MYWAY +12%
-6GMjV5PHfeNMaXykCktvbdmXAx54TdKfRxSRaD5Spump Nothing +30%
-F22QdNn7VYrtTgYDHEYcqQKVtDH8msh2xs6tnGxepump BORLY -22%
-34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG -19%
-5yC9BM8KUsJTPbWPLfA2N8qH1s9V8DQ3Vcw1G6Jdpump AgenC -10%
-4N1pRfEMnWAUE8rhyhqwnsWe6TNjuQFhgvNB3Nr9pump HODL -9%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -7%
+MOVERS 2026-11-10T06:58:07Z
+8PzFWyLpCVEmbZmVJcaRTU5r69XKJx1rd7YGpWvnpump Percolator +8%
+tx41eAXzN6jHH22LSgF7eSxpTNvJXwcbrcGsbDrpump MYWAY +10%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +12%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +14%
+6GMjV5PHfeNMaXykCktvbdmXAx54TdKfRxSRaD5Spump Nothing +29%
+34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG -22%
+F22QdNn7VYrtTgYDHEYcqQKVtDH8msh2xs6tnGxepump BORLY -19%
+Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump BAGEL -7%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -6%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -6%
 END
