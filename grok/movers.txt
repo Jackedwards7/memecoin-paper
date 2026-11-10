@@ -1,12 +1,12 @@
-MOVERS 2026-11-10T11:14:09Z
-npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA +6%
-34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG +7%
-GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +9%
+MOVERS 2026-11-10T11:30:08Z
+F22QdNn7VYrtTgYDHEYcqQKVtDH8msh2xs6tnGxepump BORLY +8%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +8%
+nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity +11%
 7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +12%
-tx41eAXzN6jHH22LSgF7eSxpTNvJXwcbrcGsbDrpump MYWAY +21%
-F22QdNn7VYrtTgYDHEYcqQKVtDH8msh2xs6tnGxepump BORLY -19%
-Hh3oTaqDCKKfdBgsQEvxp9sUwyNf8x9qmKqEMLBWpump HODL -8%
-8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER -7%
-4N1pRfEMnWAUE8rhyhqwnsWe6TNjuQFhgvNB3Nr9pump HODL -6%
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -6%
+GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +12%
+4N1pRfEMnWAUE8rhyhqwnsWe6TNjuQFhgvNB3Nr9pump HODL -13%
+pSo1f9nQXWgXibFtKf7NWYxb5enAM4qfP6UJSiXRQfL PSOL -10%
+34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG -10%
+8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER -8%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -6%
 END
