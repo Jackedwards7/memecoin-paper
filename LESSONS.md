@@ -1,10 +1,10 @@
 # Lessons
 
-219 closed trades labelled, every book. Written by the bot.
+224 closed trades labelled, every book. Written by the bot.
 
 - **other**: 67 trades, mean -33%. NIO (v-swing): event exit: price -21% in 5 minutes, -15% from entry; NIO (v-tight): event exit: price -21% in 5 minutes, -15% from entry
 - **slow-bleed**: 67 trades, mean -27%. DONNA (v-no-spike): -60% over 32h; Rocco (v-tight): -25% over 13h
-- **won-held**: 41 trades, mean +48%. BAGEL (v-unease): +14%, peak +33%; SPCX1K (v-unpaid): +9%, peak +62%
+- **won-held**: 46 trades, mean +44%. BAGEL (v-swing): +16%, peak +38%; BAGEL (v-velocity): +16%, peak +38%
 - **bought-spike**: 28 trades, mean -30%. DONNA (v-velocity): up 173% in 24h at entry, peak +1%; DONNA (v-loose): up 168% in 24h at entry, peak +0%
 - **rug**: 12 trades, mean -100%. NADF (v-unpaid): event exit: liquidity down 99% since entry, -100% from entry; UKOR (v-unpaid): event exit: liquidity down 83% since entry, -97% from entry
 - **won-trailed**: 3 trades, mean +902925%. Rocco (v-tight): +7%, peak +60%; Rocco (v-no-spike): +2708751%, peak +5722499%
