@@ -640,7 +640,7 @@
     "2026-11-08 20:15 UTC SELL 100% GATO -> 0.235 SOL @ $0.01197: time stop: 48h held, +0%, no take-profit",
     "2026-11-09 16:03 UTC SELL 50% BRUH -> 0.237 SOL @ $0.002204: take-profit at +102%: half sold, cost recovered"
   ],
-  "last_mark": "2026-11-10 00:59 UTC",
+  "last_mark": "2026-11-10 01:00 UTC",
   "gate_pass": {
     "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": 1794269902,
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794270862,
@@ -883,7 +883,8 @@
         "deepest pool is manifest, not a graduation pool"
       ],
       "moves": {
-        "1d": -0.09370529327610877
+        "1d": -0.09370529327610877,
+        "3d": -0.24123748211731033
       }
     },
     "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": {
@@ -895,7 +896,8 @@
         "deepest pool is meteoraDlmm, not a graduation pool"
       ],
       "moves": {
-        "1d": -0.02088325915782263
+        "1d": -0.02088325915782263,
+        "3d": -0.24649092776446424
       }
     },
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
@@ -907,7 +909,8 @@
         "deepest pool is meteoraDlmm, not a graduation pool"
       ],
       "moves": {
-        "1d": 0.058721934369602824
+        "1d": 0.058721934369602824,
+        "3d": -0.06217616580310881
       }
     },
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": {
@@ -918,7 +921,8 @@
         "deepest pool is orca, not a graduation pool"
       ],
       "moves": {
-        "1d": -0.1569531538177793
+        "1d": -0.1569531538177793,
+        "3d": -0.27296200663961634
       }
     },
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": {
@@ -930,7 +934,8 @@
         "deepest pool is meteoraDlmm, not a graduation pool"
       ],
       "moves": {
-        "1d": 0.11625874125874125
+        "1d": 0.11625874125874125,
+        "3d": 0.31162587412587395
       }
     },
     "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": {
@@ -942,7 +947,8 @@
         "deepest pool is meteoraDlmm, not a graduation pool"
       ],
       "moves": {
-        "1d": -0.3646341463414634
+        "1d": -0.3646341463414634,
+        "3d": -0.43310975609756097
       }
     },
     "DKtofLM6bhb54GQy5YFSWQjQmGiZqAkjzkQJ1LTopump": {
