@@ -491,3 +491,5 @@
 {"after": "v-networks:HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump:2026-11-09 05:48 UTC", "h": 24, "px": 0.0007317, "vs_exit": 0.3136}
 {"after": "v-no-spike:FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump:2026-11-09 05:41 UTC", "h": 24, "px": 0.0004651, "vs_exit": -0.3076}
 {"after": "v-unpaid:XvwtkBK5SuXnj54uXt2XBrTCbBwog63kodPvw73pump:2026-11-09 05:40 UTC", "h": 24, "px": 1.916e-06, "vs_exit": -0.9997}
+{"after": "v-tight:HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump:2026-11-09 05:57 UTC", "h": 24, "px": 0.0007651, "vs_exit": 0.3926}
+{"after": "v-unpaid:M4QXa2EDAeJz4ZBGYN1bkKWFWE3M47yMrDvwFTPpump:2026-11-09 05:59 UTC", "h": 24, "px": 1.69e-06, "vs_exit": -0.9998}
