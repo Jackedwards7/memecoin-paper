@@ -640,7 +640,7 @@
     "2026-11-08 20:15 UTC SELL 100% GATO -> 0.235 SOL @ $0.01197: time stop: 48h held, +0%, no take-profit",
     "2026-11-09 16:03 UTC SELL 50% BRUH -> 0.237 SOL @ $0.002204: take-profit at +102%: half sold, cost recovered"
   ],
-  "last_mark": "2026-11-10 03:09 UTC",
+  "last_mark": "2026-11-10 03:14 UTC",
   "gate_pass": {
     "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": 1794277582,
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794278542,
@@ -649,7 +649,7 @@
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1794278542,
     "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": 1794278542,
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794278542,
-    "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": 1794276622,
+    "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": 1794280447,
     "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794279502
   },
   "rejects": {
@@ -1150,6 +1150,24 @@
       "fails": [
         "RugCheck danger: Top 10 holders high ownership, Single holder ownership, High ownership",
         "a wallet holds 81% of supply"
+      ],
+      "moves": {}
+    },
+    "BEd8GoJccoDA9gpfYdxqGupVFZwKrMWWMHnJYqnrpump": {
+      "symbol": "shiken",
+      "at": 1794280447,
+      "px": 0.001722,
+      "fails": [
+        "RugCheck danger: Low Liquidity"
+      ],
+      "moves": {}
+    },
+    "2Tef3P9qRhUTEAKTyQDHCdn67RK3yTbaLU72fcn5pump": {
+      "symbol": "BMT",
+      "at": 1794280447,
+      "px": 0.001722,
+      "fails": [
+        "RugCheck danger: Low Liquidity"
       ],
       "moves": {}
     }
