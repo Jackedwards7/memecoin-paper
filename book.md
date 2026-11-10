@@ -9,7 +9,7 @@ area: trading
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
 **Equity 9.518 SOL** (start 10.0 SOL, -4.8%) · cash 9.275 SOL ·
-open 1 · closed 14 (5 won) · SOL $85.23 · marked 2026-11-10 09:37 UTC
+open 1 · closed 14 (5 won) · SOL $85.20 · marked 2026-11-10 09:38 UTC
 
 **Benchmark (vs just holding SOL): -4.8%.** The book is counted in SOL, so its SOL
 return *is* its edge over holding SOL. In dollars: $811 vs $949 at the start
@@ -41,16 +41,16 @@ Same gate, size, costs and exit code as the picks; rules in `CLAUDE.md`. Judged 
 |---|---|---|---|---|---|
 | mech | 5 | 2 | 1 | +0.416 | +27.7% |
 | v-dip | 0 | 0 | 0 | +0.000 | +0.0% |
-| v-loose | 24 | 4 | 5 | -1.294 | -17.9% |
+| v-loose | 24 | 4 | 5 | -1.298 | -17.9% |
 | v-low-bundle | 27 | 5 | 5 | -1.738 | -21.7% |
 | v-mature | 10 | 4 | 0 | -0.072 | -2.9% |
 | v-momentum | 27 | 5 | 5 | -1.738 | -21.7% |
-| v-networks | 23 | 4 | 5 | -1.041 | -14.9% |
-| v-no-spike | 15 | 3 | 5 | +6771.588 | +135431.8% |
+| v-networks | 23 | 4 | 5 | -1.042 | -14.9% |
+| v-no-spike | 15 | 3 | 5 | +6771.587 | +135431.7% |
 | v-swing | 32 | 5 | 3 | -1.561 | -17.8% |
-| v-tight | 34 | 5 | 4 | -1.321 | -13.9% |
-| v-unease | 25 | 5 | 6 | -0.551 | -7.1% |
-| v-unpaid | 25 | 2 | 5 | -3.345 | -44.6% |
+| v-tight | 34 | 5 | 4 | -1.322 | -13.9% |
+| v-unease | 25 | 5 | 6 | -0.554 | -7.1% |
+| v-unpaid | 25 | 2 | 5 | -3.343 | -44.6% |
 | v-velocity | 27 | 5 | 5 | -1.222 | -15.3% |
 | v-x-exit | 0 | 0 | 0 | +0.000 | +0.0% |
 | v-x-organic | 0 | 0 | 0 | +0.000 | +0.0% |
@@ -71,7 +71,7 @@ Each coin against its own normal. Information only: no rule on this book reads i
 
 Last check 2026-11-09: 90 of 96 snapshots, 14852 rows, 174 coins, 45.7 MB. No problems.
 
-GeckoTerminal: 20277 calls, 135 refused, 15 failed, 102 waiting. Insider flag fired on 0 of 79 coins where RugCheck's graph found insiders.
+GeckoTerminal: 20280 calls, 135 refused, 15 failed, 100 waiting. Insider flag fired on 0 of 79 coins where RugCheck's graph found insiders.
 
 Fills: a round trip on Jupiter returned -0.6% (median of 180 quotes, before priority fees); paper charged -7.6%.
 
