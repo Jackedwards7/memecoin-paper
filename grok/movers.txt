@@ -1,12 +1,12 @@
-MOVERS 2026-11-10T00:02:22Z
-FZcbX6uBkeACEg38cFBqvQgTJiL98aKovQT23AfCpump UCI +7%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +8%
-Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT +9%
-A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL +9%
-DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS +12%
-8PzFWyLpCVEmbZmVJcaRTU5r69XKJx1rd7YGpWvnpump Percolator -24%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -20%
+MOVERS 2026-11-10T00:18:22Z
+5GDX5fJTQns4arM1J94wjxdA8KXFsV5qW46MLFpHpump OMNI +5%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +10%
+A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump HELL +11%
+3NZ9JMVBmGAqocybic2c7LQCJScmgsAZ6vQqTDzcqmJh WBTC +17%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +22%
+8PzFWyLpCVEmbZmVJcaRTU5r69XKJx1rd7YGpWvnpump Percolator -26%
+8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER -18%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -14%
+npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -14%
 5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat -13%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -12%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -7%
 END
