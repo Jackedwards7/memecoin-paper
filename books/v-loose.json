@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.7042434623796,
+  "cash_sol": 7.4542434623796,
   "positions": {
     "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": {
       "symbol": "BAGEL",
@@ -293,6 +293,69 @@
       },
       "reentry": false,
       "since_loss_h": 0.7
+    },
+    "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump": {
+      "symbol": "BIG",
+      "opened": "2026-11-10 03:30 UTC",
+      "cost_sol": 0.25,
+      "tokens": 26575.71367229989,
+      "entry_px": 0.0007748169156963229,
+      "entry_mc": 735542,
+      "peak_px": 0.0007748169156963229,
+      "stop": -0.4,
+      "tp1": 1.5,
+      "tp1_done": false,
+      "thesis": "v-loose rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/5tecgcpfldbnjvbrpjvk32uayabpra1hgefpeujqqkyk",
+      "v": 2,
+      "mev_sol": 0.005837711617046118,
+      "swaps": 1,
+      "entry_liq": 76463.45,
+      "at_entry": {
+        "px": 0.0007746,
+        "liq": 76463.45,
+        "mc": 735542,
+        "dex": "pumpswap",
+        "age_h": 35.32,
+        "vol_h1": 69029.4,
+        "vol_h24": 235014.05,
+        "buys_h1": 183,
+        "sells_h1": 140,
+        "buys_h24": 1155,
+        "sells_h24": 711,
+        "trades_h24": 1866,
+        "avg_trade": 125.95,
+        "m5": 8.1,
+        "h1": 57.68,
+        "h6": 232,
+        "h24": 628,
+        "eligible": true,
+        "v": 3,
+        "pool": "5TecgcpFLdBnJvBrpjvk32UAYABPRA1HgeFPEUjQQkYK",
+        "m5_raw": 8.1,
+        "buys_m5": 21,
+        "sells_m5": 23,
+        "buys_h6": 739,
+        "sells_h6": 390,
+        "vol_m5": 9857.18,
+        "vol_h6": 167054.51,
+        "liq_base": 51560912,
+        "liq_quote": 168.8382,
+        "fdv": 735542,
+        "boosts": null,
+        "links": [
+          "telegram",
+          "twitter",
+          "website"
+        ],
+        "read": null
+      },
+      "reentry": false,
+      "since_loss_h": 0.4
     }
   },
   "closed": [
@@ -2063,10 +2126,11 @@
     "2026-11-09 18:47 UTC SELL 100% Rocco -> 0.193 SOL @ $0.0005629: event exit: price -25% in 5 minutes, -19% from entry",
     "2026-11-09 19:30 UTC BUY three 0.25 SOL @ $0.00043257093 (mc $432,396): v-loose rule",
     "2026-11-10 02:14 UTC SELL 100% HELL -> 0.136 SOL @ $0.001801: stop-loss at -42%",
-    "2026-11-10 03:09 UTC SELL 100% JOB -> 0.159 SOL @ $0.003722: time stop: 48h held, -33%, no take-profit"
+    "2026-11-10 03:09 UTC SELL 100% JOB -> 0.159 SOL @ $0.003722: time stop: 48h held, -33%, no take-profit",
+    "2026-11-10 03:30 UTC BUY BIG 0.25 SOL @ $0.00077481692 (mc $735,542): v-loose rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-10 03:25 UTC"
+  "last_mark": "2026-11-10 03:30 UTC"
 }
