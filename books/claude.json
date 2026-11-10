@@ -640,19 +640,20 @@
     "2026-11-08 20:15 UTC SELL 100% GATO -> 0.235 SOL @ $0.01197: time stop: 48h held, +0%, no take-profit",
     "2026-11-09 16:03 UTC SELL 50% BRUH -> 0.237 SOL @ $0.002204: take-profit at +102%: half sold, cost recovered"
   ],
-  "last_mark": "2026-11-10 05:49 UTC",
+  "last_mark": "2026-11-10 05:54 UTC",
   "gate_pass": {
     "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": 1794289088,
-    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794286208,
+    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794290047,
     "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1794285248,
-    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794286208,
-    "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1794286208,
-    "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": 1794286208,
-    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794286208,
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794290047,
+    "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1794290047,
+    "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": 1794290047,
+    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794290047,
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": 1794288127,
     "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794287167,
-    "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump": 1794286208,
-    "F22QdNn7VYrtTgYDHEYcqQKVtDH8msh2xs6tnGxepump": 1794289088
+    "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump": 1794290047,
+    "F22QdNn7VYrtTgYDHEYcqQKVtDH8msh2xs6tnGxepump": 1794289088,
+    "tx41eAXzN6jHH22LSgF7eSxpTNvJXwcbrcGsbDrpump": 1794290047
   },
   "rejects": {
     "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
@@ -1473,6 +1474,13 @@
       "symbol": "BORLY",
       "at": 1794289088,
       "px": 0.001445,
+      "fails": [],
+      "moves": {}
+    },
+    "tx41eAXzN6jHH22LSgF7eSxpTNvJXwcbrcGsbDrpump": {
+      "symbol": "MYWAY",
+      "at": 1794290047,
+      "px": 0.0008691,
       "fails": [],
       "moves": {}
     }

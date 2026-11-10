@@ -1,12 +1,12 @@
-MOVERS 2026-11-10T05:38:08Z
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +13%
-GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +20%
-34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG +39%
-BEd8GoJccoDA9gpfYdxqGupVFZwKrMWWMHnJYqnrpump shiken +47916%
-6GMjV5PHfeNMaXykCktvbdmXAx54TdKfRxSRaD5Spump Nothing +50372%
-4N1pRfEMnWAUE8rhyhqwnsWe6TNjuQFhgvNB3Nr9pump HODL -11%
+MOVERS 2026-11-10T05:54:07Z
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +16%
+34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG +24%
+tx41eAXzN6jHH22LSgF7eSxpTNvJXwcbrcGsbDrpump MYWAY +26%
+6GMjV5PHfeNMaXykCktvbdmXAx54TdKfRxSRaD5Spump Nothing +45127%
+BEd8GoJccoDA9gpfYdxqGupVFZwKrMWWMHnJYqnrpump shiken +48236%
+PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH -8%
 C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -8%
-8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER -7%
-DitHyRMQiSDhn5cnKMJV2CDDt6sVct96YrECiM49pump House -5%
-98kfF7rmsg1QDUEoCqNE7g7M1FdrTt92TEp2CLzypump PAID -5%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -7%
+5yC9BM8KUsJTPbWPLfA2N8qH1s9V8DQ3Vcw1G6Jdpump AgenC -5%
+8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH -5%
 END
