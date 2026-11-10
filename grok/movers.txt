@@ -1,12 +1,12 @@
-MOVERS 2026-11-10T06:58:07Z
-8PzFWyLpCVEmbZmVJcaRTU5r69XKJx1rd7YGpWvnpump Percolator +8%
-tx41eAXzN6jHH22LSgF7eSxpTNvJXwcbrcGsbDrpump MYWAY +10%
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +12%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +14%
-6GMjV5PHfeNMaXykCktvbdmXAx54TdKfRxSRaD5Spump Nothing +29%
-34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG -22%
-F22QdNn7VYrtTgYDHEYcqQKVtDH8msh2xs6tnGxepump BORLY -19%
-Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump BAGEL -7%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -6%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -6%
+MOVERS 2026-11-10T07:14:07Z
+GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +7%
+EaxAUcXxNnVwcqm2BBocbows7D1XVY2Q63V38NEypump GTA6Coin +9%
+BAftaSb1HVqBn5723w72WLcXU7YASSgmVxQxJJAJpump OnlyCats +9%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +12%
+tx41eAXzN6jHH22LSgF7eSxpTNvJXwcbrcGsbDrpump MYWAY +13%
+F22QdNn7VYrtTgYDHEYcqQKVtDH8msh2xs6tnGxepump BORLY -20%
+34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG -10%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -7%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -7%
+HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO -6%
 END
