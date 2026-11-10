@@ -1,12 +1,12 @@
-MOVERS 2026-11-10T10:10:08Z
-Hh3oTaqDCKKfdBgsQEvxp9sUwyNf8x9qmKqEMLBWpump HODL +5%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +7%
-Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump BAGEL +8%
-PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH +11%
-DitHyRMQiSDhn5cnKMJV2CDDt6sVct96YrECiM49pump House +16%
+MOVERS 2026-11-10T10:26:08Z
+34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG +9%
+8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +10%
+PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH +10%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +13%
+DitHyRMQiSDhn5cnKMJV2CDDt6sVct96YrECiM49pump House +14%
 GNggUoCrkgcshssMFn1AxRGEeiNpS7fFaLJMEbSWpump BTX -55%
-F22QdNn7VYrtTgYDHEYcqQKVtDH8msh2xs6tnGxepump BORLY -14%
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -11%
-CARDSccUMFKoPRZxt5vt3ksUbxEFEcnZ3H2pd3dKxYjp CARDS -4%
-MukLDtJ8Cx9DxLbeyLRSWPSposTMWuwHANbuaudpump OTC -3%
+F22QdNn7VYrtTgYDHEYcqQKVtDH8msh2xs6tnGxepump BORLY -12%
+8Mi9E1V2bdPeAaRkR5yxUsAvpzP6UBUEEUrYmgKNpump WEALTH -9%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -7%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -4%
 END

@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.761397558820547,
+  "cash_sol": 7.511397558820547,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -348,6 +348,80 @@
       },
       "reentry": true,
       "since_loss_h": 2.8
+    },
+    "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": {
+      "symbol": "BAGEL",
+      "opened": "2026-11-10 10:26 UTC",
+      "cost_sol": 0.25,
+      "tokens": 13627.709119848649,
+      "entry_px": 0.0015003273712542431,
+      "entry_mc": 1479071,
+      "peak_px": 0.0015003273712542431,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-networks rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/bujoy6wmmyaavcug7rura4xudx6xzje5zbsnqvxfbq7g",
+      "v": 2,
+      "mev_sol": 0.00587820362097343,
+      "swaps": 1,
+      "entry_liq": 97435.25,
+      "at_entry": {
+        "px": 0.0015,
+        "liq": 97435.25,
+        "mc": 1479071,
+        "dex": "pumpswap",
+        "age_h": 98.89,
+        "vol_h1": 5204.74,
+        "vol_h24": 128482.25,
+        "buys_h1": 11,
+        "sells_h1": 10,
+        "buys_h24": 503,
+        "sells_h24": 335,
+        "trades_h24": 838,
+        "avg_trade": 153.32,
+        "m5": -0.04,
+        "h1": 4.17,
+        "h6": 3.68,
+        "h24": 8.92,
+        "eligible": true,
+        "v": 3,
+        "pool": "Bujoy6WMmYaAVcUG7RUra4XudX6xZJe5ZbSnqVXFbQ7g",
+        "m5_raw": -0.04,
+        "buys_m5": 1,
+        "sells_m5": 1,
+        "buys_h6": 64,
+        "sells_h6": 66,
+        "vol_m5": 424.33,
+        "vol_h6": 31201.91,
+        "liq_base": 32855939,
+        "liq_quote": 565.5357,
+        "fdv": 1479071,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0339,
+          "paid": 0.0014230983402206828,
+          "vs_paid": 0.0112,
+          "off_peak": -0.0739,
+          "accel": 0.1193,
+          "candles": 96,
+          "unease": 1,
+          "known": 5,
+          "signs": [
+            "sellers"
+          ]
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 1.8
     }
   },
   "closed": [
@@ -2198,10 +2272,11 @@
     "2026-11-10 05:38 UTC BUY BORLY 0.25 SOL @ $0.0014453201 (mc $1,439,028): v-networks rule",
     "2026-11-10 05:54 UTC BUY Rocco 0.25 SOL @ $0.00073188875 (mc $713,359): v-networks rule",
     "2026-11-10 06:10 UTC BUY OnlyCats 0.25 SOL @ $0.0013023095 (mc $1,296,446): v-networks rule",
-    "2026-11-10 08:39 UTC SELL 100% OnlyCats -> 0.043 SOL @ $0.0002658: event exit: liquidity down 56% since entry, -80% from entry"
+    "2026-11-10 08:39 UTC SELL 100% OnlyCats -> 0.043 SOL @ $0.0002658: event exit: liquidity down 56% since entry, -80% from entry",
+    "2026-11-10 10:26 UTC BUY BAGEL 0.25 SOL @ $0.0015003274 (mc $1,479,071): v-networks rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-10 10:21 UTC"
+  "last_mark": "2026-11-10 10:26 UTC"
 }
