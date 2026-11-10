@@ -1,12 +1,12 @@
-MOVERS 2026-11-10T21:39:22Z
+MOVERS 2026-11-10T21:55:22Z
+4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao +6%
 BBRgG2GifeKNB1hSmzD2BwHMPK8wnDtcuE4NzxgHpump BORLY +8%
-34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG +9%
-4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao +10%
-PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH +11%
-FZcbX6uBkeACEg38cFBqvQgTJiL98aKovQT23AfCpump UCI +63%
-Cm6fNnMk7NfzStP9CZpsQA2v3jjzbcYGAxdJySmHpump Buttcoin -8%
-HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO -7%
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -6%
-Hh3oTaqDCKKfdBgsQEvxp9sUwyNf8x9qmKqEMLBWpump HODL -6%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -6%
+8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH +10%
+34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG +10%
+FZcbX6uBkeACEg38cFBqvQgTJiL98aKovQT23AfCpump UCI +52%
+8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER -10%
+4N1pRfEMnWAUE8rhyhqwnsWe6TNjuQFhgvNB3Nr9pump HODL -10%
+Hh3oTaqDCKKfdBgsQEvxp9sUwyNf8x9qmKqEMLBWpump HODL -10%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -9%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -8%
 END
