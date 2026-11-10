@@ -1,10 +1,10 @@
 # Lessons
 
-206 closed trades labelled, every book. Written by the bot.
+207 closed trades labelled, every book. Written by the bot.
 
 - **other**: 67 trades, mean -33%. NIO (v-swing): event exit: price -21% in 5 minutes, -15% from entry; NIO (v-tight): event exit: price -21% in 5 minutes, -15% from entry
 - **slow-bleed**: 58 trades, mean -25%. GATO (mech): -6% over 48h; JOB (v-tight): -16% over 48h
-- **won-held**: 39 trades, mean +50%. COGE (v-unease): +106%, peak +718%; COGE (v-velocity): +106%, peak +718%
+- **won-held**: 40 trades, mean +49%. COGE (v-velocity): +106%, peak +718%; BAGEL (v-unease): +14%, peak +33%
 - **bought-spike**: 27 trades, mean -29%. DONNA (v-tight): up 174% in 24h at entry, peak +1%; DONNA (v-velocity): up 173% in 24h at entry, peak +1%
 - **rug**: 11 trades, mean -100%. ORBIT (v-swing): event exit: liquidity down 97% since entry, -100% from entry; NADF (v-unpaid): event exit: liquidity down 99% since entry, -100% from entry
 - **won-trailed**: 3 trades, mean +902925%. Rocco (v-tight): +7%, peak +60%; Rocco (v-no-spike): +2708751%, peak +5722499%

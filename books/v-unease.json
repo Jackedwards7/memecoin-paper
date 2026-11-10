@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.766223812976206,
+  "cash_sol": 8.516223812976206,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -222,6 +222,80 @@
       },
       "reentry": true,
       "since_loss_h": 0.0
+    },
+    "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": {
+      "symbol": "BAGEL",
+      "opened": "2026-11-10 04:34 UTC",
+      "cost_sol": 0.25,
+      "tokens": 14366.412800742975,
+      "entry_px": 0.001440323015006911,
+      "entry_mc": 1419748,
+      "peak_px": 0.001440323015006911,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unease rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/bujoy6wmmyaavcug7rura4xudx6xzje5zbsnqvxfbq7g",
+      "v": 2,
+      "mev_sol": 0.005809900069718801,
+      "swaps": 1,
+      "entry_liq": 95913.81,
+      "at_entry": {
+        "px": 0.00144,
+        "liq": 95913.81,
+        "mc": 1419748,
+        "dex": "pumpswap",
+        "age_h": 93.03,
+        "vol_h1": 5254.79,
+        "vol_h24": 111234.13,
+        "buys_h1": 12,
+        "sells_h1": 10,
+        "buys_h24": 506,
+        "sells_h24": 309,
+        "trades_h24": 815,
+        "avg_trade": 136.48,
+        "m5": 0.15,
+        "h1": 1.77,
+        "h6": -0.3,
+        "h24": 19.09,
+        "eligible": true,
+        "v": 3,
+        "pool": "Bujoy6WMmYaAVcUG7RUra4XudX6xZJe5ZbSnqVXFbQ7g",
+        "m5_raw": 0.15,
+        "buys_m5": 1,
+        "sells_m5": 1,
+        "buys_h6": 126,
+        "sells_h6": 93,
+        "vol_m5": 260.77,
+        "vol_h6": 33450.09,
+        "liq_base": 33704966,
+        "liq_quote": 550.1241,
+        "fdv": 1419748,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0321,
+          "paid": 0.0014056333465660956,
+          "vs_paid": 0.0289,
+          "off_peak": -0.0693,
+          "accel": -0.0157,
+          "candles": 96,
+          "unease": 1,
+          "known": 5,
+          "signs": [
+            "failed_high"
+          ]
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 2.6
     }
   },
   "closed": [
@@ -2278,10 +2352,11 @@
     "2026-11-09 12:02 UTC SELL 100% DESSA -> 0.197 SOL @ $0.0447: unease exit: 4 of 5 signs",
     "2026-11-09 19:30 UTC BUY three 0.25 SOL @ $0.00043257093 (mc $432,396): v-unease rule",
     "2026-11-09 22:26 UTC SELL 100% three -> 0.217 SOL @ $0.0004071: unease exit: 4 of 5 signs",
-    "2026-11-10 01:59 UTC SELL 100% HELL -> 0.152 SOL @ $0.00191: stop-loss at -35%"
+    "2026-11-10 01:59 UTC SELL 100% HELL -> 0.152 SOL @ $0.00191: stop-loss at -35%",
+    "2026-11-10 04:34 UTC BUY BAGEL 0.25 SOL @ $0.001440323 (mc $1,419,748): v-unease rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-10 04:29 UTC"
+  "last_mark": "2026-11-10 04:34 UTC"
 }
