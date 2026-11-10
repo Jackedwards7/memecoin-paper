@@ -640,9 +640,9 @@
     "2026-11-08 20:15 UTC SELL 100% GATO -> 0.235 SOL @ $0.01197: time stop: 48h held, +0%, no take-profit",
     "2026-11-09 16:03 UTC SELL 50% BRUH -> 0.237 SOL @ $0.002204: take-profit at +102%: half sold, cost recovered"
   ],
-  "last_mark": "2026-11-10 05:33 UTC",
+  "last_mark": "2026-11-10 05:38 UTC",
   "gate_pass": {
-    "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": 1794285248,
+    "Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump": 1794289088,
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794286208,
     "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": 1794285248,
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794286208,
@@ -651,7 +651,8 @@
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794286208,
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": 1794288127,
     "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794287167,
-    "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump": 1794286208
+    "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump": 1794286208,
+    "F22QdNn7VYrtTgYDHEYcqQKVtDH8msh2xs6tnGxepump": 1794289088
   },
   "rejects": {
     "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
@@ -1465,6 +1466,13 @@
       "symbol": "BIG",
       "at": 1794281407,
       "px": 0.0007746,
+      "fails": [],
+      "moves": {}
+    },
+    "F22QdNn7VYrtTgYDHEYcqQKVtDH8msh2xs6tnGxepump": {
+      "symbol": "BORLY",
+      "at": 1794289088,
+      "px": 0.001445,
       "fails": [],
       "moves": {}
     }

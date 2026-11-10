@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.8098063702279115,
+  "cash_sol": 7.5598063702279115,
   "positions": {
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
       "symbol": "GATO",
@@ -224,6 +224,68 @@
       },
       "reentry": true,
       "since_loss_h": 0.2
+    },
+    "F22QdNn7VYrtTgYDHEYcqQKVtDH8msh2xs6tnGxepump": {
+      "symbol": "BORLY",
+      "opened": "2026-11-10 05:38 UTC",
+      "cost_sol": 0.25,
+      "tokens": 14335.48391515742,
+      "entry_px": 0.0014453200619263837,
+      "entry_mc": 1439028,
+      "peak_px": 0.0014453200619263837,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-momentum rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/7xwnpcwt4upj2hyuff4czvmmsvvws13k1w8ip6y4o5zq",
+      "v": 2,
+      "mev_sol": 0.005802483462922131,
+      "swaps": 1,
+      "entry_liq": 97259.03,
+      "at_entry": {
+        "px": 0.001445,
+        "liq": 97259.03,
+        "mc": 1439028,
+        "dex": "pumpswap",
+        "age_h": 6.03,
+        "vol_h1": 49365.24,
+        "vol_h24": 1760268.42,
+        "buys_h1": 5686,
+        "sells_h1": 5373,
+        "buys_h24": 43685,
+        "sells_h24": 25095,
+        "trades_h24": 68780,
+        "avg_trade": 25.59,
+        "m5": 2.06,
+        "h1": 10.61,
+        "h6": 355,
+        "h24": 2420,
+        "eligible": true,
+        "v": 3,
+        "pool": "7XwNpcwT4uPJ2hYuFf4czvmmsvVWs13k1W8iP6y4o5Zq",
+        "m5_raw": 2.06,
+        "buys_m5": 463,
+        "sells_m5": 327,
+        "buys_h6": 43522,
+        "sells_h6": 24991,
+        "vol_m5": 2841.61,
+        "vol_h6": 1677944.24,
+        "liq_base": 34189808,
+        "liq_quote": 555.7316,
+        "fdv": 1439028,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": null
+      },
+      "reentry": false,
+      "since_loss_h": 0.7
     }
   },
   "closed": [
@@ -2307,10 +2369,11 @@
     "2026-11-10 01:04 UTC SELL 100% HELL -> 0.148 SOL @ $0.001964: stop-loss at -37%",
     "2026-11-10 03:09 UTC SELL 100% JOB -> 0.159 SOL @ $0.003722: time stop: 48h held, -33%, no take-profit",
     "2026-11-10 03:30 UTC BUY BIG 0.25 SOL @ $0.00077481692 (mc $735,542): v-momentum rule",
-    "2026-11-10 04:55 UTC SELL 100% BIG -> 0.178 SOL @ $0.0006033: event exit: price -22% in 5 minutes, -22% from entry"
+    "2026-11-10 04:55 UTC SELL 100% BIG -> 0.178 SOL @ $0.0006033: event exit: price -22% in 5 minutes, -22% from entry",
+    "2026-11-10 05:38 UTC BUY BORLY 0.25 SOL @ $0.0014453201 (mc $1,439,028): v-momentum rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-10 05:33 UTC"
+  "last_mark": "2026-11-10 05:38 UTC"
 }
