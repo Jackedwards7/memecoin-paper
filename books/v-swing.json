@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.004817309104856,
+  "cash_sol": 7.7548173091048564,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -146,6 +146,79 @@
       },
       "reentry": false,
       "since_loss_h": 4.2
+    },
+    "tx41eAXzN6jHH22LSgF7eSxpTNvJXwcbrcGsbDrpump": {
+      "symbol": "MYWAY",
+      "opened": "2026-11-10 06:26 UTC",
+      "cost_sol": 0.25,
+      "tokens": 21060.479793351973,
+      "entry_px": 0.000981464463431873,
+      "entry_mc": 968515,
+      "peak_px": 0.000981464463431873,
+      "stop": -0.4172,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-swing rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/cv3mt2sz4kfzc6gpbhw9esoz2dcfkkz5zgs8uzp85p32",
+      "v": 2,
+      "mev_sol": 0.005815982319413749,
+      "swaps": 1,
+      "entry_liq": 79740.48,
+      "at_entry": {
+        "px": 0.0009812,
+        "liq": 79740.48,
+        "mc": 968515,
+        "dex": "pumpswap",
+        "age_h": 39.71,
+        "vol_h1": 23908.53,
+        "vol_h24": 710640.29,
+        "buys_h1": 142,
+        "sells_h1": 135,
+        "buys_h24": 5411,
+        "sells_h24": 5520,
+        "trades_h24": 10931,
+        "avg_trade": 65.01,
+        "m5": -2.4,
+        "h1": 40.08,
+        "h6": 30.63,
+        "h24": 68.9,
+        "eligible": true,
+        "v": 3,
+        "pool": "CV3MT2sZ4kfzc6GpBhw9esoz2dCfKkz5ZGS8uZP85p32",
+        "m5_raw": -2.4,
+        "buys_m5": 6,
+        "sells_m5": 14,
+        "buys_h6": 586,
+        "sells_h6": 893,
+        "vol_m5": 2177.4,
+        "vol_h6": 123712.78,
+        "liq_base": 41442878,
+        "liq_quote": 454.8846,
+        "fdv": 968515,
+        "boosts": null,
+        "links": [
+          "tiktok",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.1043,
+          "paid": 0.0007101824204079702,
+          "vs_paid": 0.3845,
+          "off_peak": -0.0109,
+          "accel": 0.3184,
+          "candles": 96,
+          "unease": 0,
+          "known": 2,
+          "signs": []
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 4.7
     }
   },
   "closed": [
@@ -2700,10 +2773,11 @@
     "2026-11-09 23:16 UTC SELL 100% GATO -> 0.201 SOL @ $0.01115: stop-loss at -13%",
     "2026-11-10 00:26 UTC SELL 100% three -> 0.191 SOL @ $0.0003608: stop-loss at -17%",
     "2026-11-10 01:43 UTC SELL 100% HELL -> 0.155 SOL @ $0.001948: stop-loss at -34%",
-    "2026-11-10 05:54 UTC BUY BORLY 0.25 SOL @ $0.0014743234 (mc $1,467,221): v-swing rule"
+    "2026-11-10 05:54 UTC BUY BORLY 0.25 SOL @ $0.0014743234 (mc $1,467,221): v-swing rule",
+    "2026-11-10 06:26 UTC BUY MYWAY 0.25 SOL @ $0.00098146446 (mc $968,515): v-swing rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-10 06:21 UTC"
+  "last_mark": "2026-11-10 06:26 UTC"
 }
