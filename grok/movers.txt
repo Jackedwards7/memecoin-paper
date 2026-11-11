@@ -1,12 +1,12 @@
-MOVERS 2026-11-11T16:52:00Z
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +5%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +6%
-GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +8%
+MOVERS 2026-11-11T17:08:02Z
+9AvytnUKsLxPxFHFqS6VLxaxt5p6BhYNr53SD2Chpump 67 +6%
+FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump three +7%
+CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi +7%
 7v8LoULtAhg3hT43YYQvKdF3LD3stdudBZAv5oTqpump MILES +9%
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +14%
-nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity -20%
-5tBXkPVh716zSXHNZSr8i1PX7e6Uuj46JnBLdYchpump DACITY -17%
-npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -10%
-HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO -9%
-9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump ANSEM -7%
+DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin +60%
+nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity -47%
+npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -12%
+5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat -11%
+HQNJhJyL1QJggnBSN434QVK1RsvcUMNNfkt1dskzpump HODL -7%
+8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER -7%
 END
