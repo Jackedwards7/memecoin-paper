@@ -1,12 +1,12 @@
-MOVERS 2026-11-11T17:40:07Z
-CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi +12%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +12%
-9AvytnUKsLxPxFHFqS6VLxaxt5p6BhYNr53SD2Chpump 67 +14%
-Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT +16%
-DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin +23%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -43%
-nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity -41%
-npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -16%
-PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH -8%
-HQNJhJyL1QJggnBSN434QVK1RsvcUMNNfkt1dskzpump HODL -7%
+MOVERS 2026-11-11T17:56:07Z
+GTBxUiw6wJdmmkCGZgRHLyYxqu1vG4KtRpeox6yDpump JEANPHIL +13%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +16%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +20%
+Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT +21%
+5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat +34%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -57%
+npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -11%
+DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin -11%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -7%
+a3W4qutoEJA4232T2gwZUfgYJTetr96pU4SJMwppump WhiteWhale -6%
 END

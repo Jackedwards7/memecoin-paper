@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 5.043895472152953,
+  "cash_sol": 4.793895472152953,
   "positions": {
     "9AvytnUKsLxPxFHFqS6VLxaxt5p6BhYNr53SD2Chpump": {
       "symbol": "67",
@@ -314,7 +314,7 @@
       "tokens": 4730.271003010809,
       "entry_px": 0.00427656787256461,
       "entry_mc": 4276498,
-      "peak_px": 0.004655,
+      "peak_px": 0.004656,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -379,6 +379,81 @@
       },
       "reentry": true,
       "since_loss_h": 0.0
+    },
+    "J8PSdNP3QewKq2Z1JJJFDMaqF7KcaiJhR7gbr5KZpump": {
+      "symbol": "TripleT",
+      "opened": "2026-11-11 17:56 UTC",
+      "cost_sol": 0.25,
+      "tokens": 6645.456680794293,
+      "entry_px": 0.0030881794112526035,
+      "entry_mc": 3088069,
+      "peak_px": 0.0030881794112526035,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unpaid rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/3kfcgj5r3zshw8htdbzjsrrksrymkvsmfhc4vo4iddxd",
+      "v": 2,
+      "mev_sol": 0.0058568583811643435,
+      "swaps": 1,
+      "entry_liq": 367343.96,
+      "at_entry": {
+        "px": 0.003088,
+        "liq": 367343.96,
+        "mc": 3088069,
+        "dex": "pumpswap",
+        "age_h": 6249.22,
+        "vol_h1": 4272.48,
+        "vol_h24": 231064.75,
+        "buys_h1": 33,
+        "sells_h1": 29,
+        "buys_h24": 921,
+        "sells_h24": 1001,
+        "trades_h24": 1922,
+        "avg_trade": 120.22,
+        "m5": -0.24,
+        "h1": 0.83,
+        "h6": 7.24,
+        "h24": 12.25,
+        "eligible": true,
+        "v": 3,
+        "pool": "3KFCgJ5R3zshW8hTDbzjSrrKSRYmKvsMfhc4Vo4iddxD",
+        "m5_raw": -0.24,
+        "buys_m5": 3,
+        "sells_m5": 1,
+        "buys_h6": 176,
+        "sells_h6": 286,
+        "vol_m5": 8.69,
+        "vol_h6": 33004.59,
+        "liq_base": 59669681,
+        "liq_quote": 2145.2688,
+        "fdv": 3088069,
+        "boosts": null,
+        "links": [
+          "telegram",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0165,
+          "paid": 0.00282263857004499,
+          "vs_paid": 0.0841,
+          "off_peak": -0.0276,
+          "accel": 0.0347,
+          "candles": 96,
+          "unease": 1,
+          "known": 5,
+          "signs": [
+            "smaller_trades"
+          ]
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 3.2
     }
   },
   "closed": [
@@ -2814,10 +2889,11 @@
     "2026-11-11 11:48 UTC BUY DacityCoin 0.25 SOL @ $0.0047083268 (mc $4,569,036): v-unpaid rule",
     "2026-11-11 14:42 UTC SELL 100% CATE -> 0.196 SOL @ $0.02613: time stop: 48h held, -17%, no take-profit",
     "2026-11-11 14:44 UTC BUY BTX 0.25 SOL @ $0.0042765679 (mc $4,276,498): v-unpaid rule",
-    "2026-11-11 17:43 UTC SELL 100% DacityCoin -> 0.252 SOL @ $0.005218: event exit: price -26% in 5 minutes, +11% from entry"
+    "2026-11-11 17:43 UTC SELL 100% DacityCoin -> 0.252 SOL @ $0.005218: event exit: price -26% in 5 minutes, +11% from entry",
+    "2026-11-11 17:56 UTC BUY TripleT 0.25 SOL @ $0.0030881794 (mc $3,088,069): v-unpaid rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-11 17:55 UTC"
+  "last_mark": "2026-11-11 17:56 UTC"
 }
