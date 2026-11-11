@@ -1,0 +1,44 @@
+{
+  "id": "20261111T081532.741490Z-gate-132085",
+  "kind": "gate",
+  "at": 1794384932.74149,
+  "by": "local",
+  "results": {
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "px": 0.007582,
+      "fails": []
+    },
+    "8yLBuP74RnFmjSRS8BGFebvyoTo8uiEjPB71h3Zgpump": {
+      "symbol": "NIHAO",
+      "px": 0.005455,
+      "fails": []
+    },
+    "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
+      "symbol": "CBUCKS",
+      "px": 0.004523,
+      "fails": [
+        "a wallet holds 14% of supply"
+      ]
+    },
+    "5tBXkPVh716zSXHNZSr8i1PX7e6Uuj46JnBLdYchpump": {
+      "symbol": "DACITY",
+      "px": 0.002267,
+      "fails": []
+    },
+    "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
+      "symbol": "GLITCH",
+      "px": 0.001951,
+      "fails": [
+        "copycat: an earlier 'Infinite Money Glitch' exists (znv3FZ)"
+      ]
+    },
+    "5yC9BM8KUsJTPbWPLfA2N8qH1s9V8DQ3Vcw1G6Jdpump": {
+      "symbol": "AgenC",
+      "px": 0.001545,
+      "fails": [
+        "a wallet holds 30% of supply"
+      ]
+    }
+  }
+}
