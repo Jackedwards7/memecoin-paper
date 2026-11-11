@@ -1,12 +1,12 @@
-MOVERS 2026-11-11T20:20:31Z
-5w3wVdJaESaJKyLmStM6Hv9UyUkmZ1b9DLQquAqqpump SID +6%
-DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD +6%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +6%
+MOVERS 2026-11-11T20:36:39Z
 MukLDtJ8Cx9DxLbeyLRSWPSposTMWuwHANbuaudpump OTC +8%
-nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity +10%
-4N1pRfEMnWAUE8rhyhqwnsWe6TNjuQFhgvNB3Nr9pump HODL -15%
-Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT -13%
-4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao -7%
-CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi -7%
-7v8LoULtAhg3hT43YYQvKdF3LD3stdudBZAv5oTqpump MILES -6%
+nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity +8%
+8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +10%
+DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD +18%
+BLVpn8ofkjnAzpWGaVpspZ5bHTeXDbXFgX4vn3fkpump woohao +84267%
+4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao -15%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -14%
+4N1pRfEMnWAUE8rhyhqwnsWe6TNjuQFhgvNB3Nr9pump HODL -12%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -12%
+Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump baton -6%
 END
