@@ -715,16 +715,16 @@
     "2026-11-09 16:03 UTC SELL 50% BRUH -> 0.237 SOL @ $0.002204: take-profit at +102%: half sold, cost recovered",
     "2026-11-10 20:16 UTC BUY NIO 0.25 SOL @ $0.0012452127 (mc $1,186,743): Gate pass; mature pumpswap coin (484h), mc $1.2M, liq $122k, 1h +4.7%, 24h +37%, 5m +4.1% (no spike), 1h buys 64 vs sells 67 roughly even. Other passes GATO (sellers lead, 24h -14%) and BIG (24h +438% vertical) skipped; CBUCKS failed gate."
   ],
-  "last_mark": "2026-11-11 04:14 UTC",
+  "last_mark": "2026-11-11 04:15 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794366919,
-    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794366919,
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794370496.839171,
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794366919,
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": 1794368843,
     "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794367883,
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1794366919,
     "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": 1794366919,
-    "5tBXkPVh716zSXHNZSr8i1PX7e6Uuj46JnBLdYchpump": 1794366919,
+    "5tBXkPVh716zSXHNZSr8i1PX7e6Uuj46JnBLdYchpump": 1794370496.839171,
     "4iJ7xEQrUvVUQH9KVStvw3FaY2PZDd7RtR4L9zx2pump": 1794366919,
     "tx41eAXzN6jHH22LSgF7eSxpTNvJXwcbrcGsbDrpump": 1794367883
   },
@@ -2000,6 +2000,12 @@
       "kind": "gate",
       "result": "recorded 6 gate results, 3 passed",
       "at": "2026-11-11 00:15 UTC"
+    },
+    {
+      "id": "20261111T041456.839171Z-gate-b9da11",
+      "kind": "gate",
+      "result": "recorded 5 gate results, 2 passed",
+      "at": "2026-11-11 04:15 UTC"
     }
   ]
 }
