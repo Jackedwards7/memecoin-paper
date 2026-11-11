@@ -1,9 +1,8 @@
-WATCHLIST 2026-11-11T17:08:02Z
+WATCHLIST 2026-11-11T17:24:07Z
 PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH
 7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO
 HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco
 FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump three
-npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA
 9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB
 HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO
 9AvytnUKsLxPxFHFqS6VLxaxt5p6BhYNr53SD2Chpump 67
@@ -12,4 +11,5 @@ y1AZt42vceCmStjW4zetK3VoNarC1VxJ5iDjpiupump FARTBOY
 33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump DOPE
 DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin
 GNggUoCrkgcshssMFn1AxRGEeiNpS7fFaLJMEbSWpump BTX
+npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA
 END

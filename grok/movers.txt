@@ -1,12 +1,12 @@
-MOVERS 2026-11-11T17:08:02Z
-9AvytnUKsLxPxFHFqS6VLxaxt5p6BhYNr53SD2Chpump 67 +6%
-FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump three +7%
-CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi +7%
-7v8LoULtAhg3hT43YYQvKdF3LD3stdudBZAv5oTqpump MILES +9%
-DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin +60%
-nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity -47%
-npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -12%
-5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat -11%
+MOVERS 2026-11-11T17:24:07Z
+FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump three +9%
+9AvytnUKsLxPxFHFqS6VLxaxt5p6BhYNr53SD2Chpump 67 +13%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +13%
+Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT +21%
+DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin +30%
+nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity -42%
+34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG -15%
+npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -15%
 HQNJhJyL1QJggnBSN434QVK1RsvcUMNNfkt1dskzpump HODL -7%
-8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER -7%
+5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat -7%
 END
