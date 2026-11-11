@@ -1,8 +1,8 @@
 # Lessons
 
-317 closed trades labelled, every book. Written by the bot.
+318 closed trades labelled, every book. Written by the bot.
 
-- **slow-bleed**: 104 trades, mean -29%. GATO (v-unease): -41% over 32h; GATO (v-velocity): -41% over 19h
+- **slow-bleed**: 105 trades, mean -29%. GATO (v-velocity): -41% over 19h; GATO (v-loose): -44% over 34h
 - **other**: 94 trades, mean -32%. MYWAY (v-unease): event exit: price -21% in 5 minutes, -29% from entry; BAGEL (v-swing): stop-loss at -14%
 - **won-held**: 59 trades, mean +41%. MYWAY (v-tight): +22%, peak +91%; MYWAY (v-velocity): +17%, peak +91%
 - **bought-spike**: 28 trades, mean -30%. DONNA (v-velocity): up 173% in 24h at entry, peak +1%; DONNA (v-loose): up 168% in 24h at entry, peak +0%
