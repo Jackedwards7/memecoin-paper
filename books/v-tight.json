@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.813905265647262,
+  "cash_sol": 7.977729500564817,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -77,22 +77,22 @@
       "symbol": "DACITY",
       "opened": "2026-11-11 01:40 UTC",
       "cost_sol": 0.25,
-      "tokens": 10440.840511293723,
+      "tokens": 5220.420255646862,
       "entry_px": 0.0019233676616626809,
       "entry_mc": 1911627,
-      "peak_px": 0.00261,
+      "peak_px": 0.002746,
       "stop": -0.2,
       "tp1": 0.4,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-tight rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.16382423491755535,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/89rsdzz3wncebojfruvi6omxbdytnrelfvqcvq1ophnq",
       "v": 2,
-      "mev_sol": 0.0059822924144532184,
-      "swaps": 1,
+      "mev_sol": 0.011996968223427114,
+      "swaps": 2,
       "entry_liq": 109288.21,
       "at_entry": {
         "px": 0.001923,
@@ -3320,10 +3320,11 @@
     "2026-11-11 03:15 UTC BUY HOLD 0.25 SOL @ $0.0011372585 (mc $1,070,993): v-tight rule",
     "2026-11-11 04:16 UTC SELL 100% HOLD -> 0.196 SOL @ $0.0009651: event exit: price -21% in 5 minutes, -15% from entry",
     "2026-11-11 05:07 UTC BUY X 0.25 SOL @ $0.0006798876 (mc $661,407): v-tight rule",
-    "2026-11-11 05:21 UTC SELL 100% X -> 0.181 SOL @ $0.0005382: stop-loss at -21%"
+    "2026-11-11 05:21 UTC SELL 100% X -> 0.181 SOL @ $0.0005382: stop-loss at -21%",
+    "2026-11-11 05:46 UTC SELL 50% DACITY -> 0.164 SOL @ $0.002746: take-profit at +43%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-11 05:43 UTC"
+  "last_mark": "2026-11-11 05:46 UTC"
 }
