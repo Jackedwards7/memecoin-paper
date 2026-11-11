@@ -655,3 +655,16 @@
 {"after": "v-networks:HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump:2026-11-10 12:25 UTC", "h": 24, "px": 0.0007723, "vs_exit": 0.081}
 {"after": "v-tight:HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump:2026-11-10 12:25 UTC", "h": 24, "px": 0.0007723, "vs_exit": 0.081}
 {"after": "v-unease:HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump:2026-11-10 12:25 UTC", "h": 24, "px": 0.0007723, "vs_exit": 0.081}
+{"after": "v-loose:tx41eAXzN6jHH22LSgF7eSxpTNvJXwcbrcGsbDrpump:2026-11-10 13:25 UTC", "h": 24, "px": 1.935e-06, "vs_exit": -0.9984}
+{"after": "v-low-bundle:tx41eAXzN6jHH22LSgF7eSxpTNvJXwcbrcGsbDrpump:2026-11-10 13:25 UTC", "h": 24, "px": 1.935e-06, "vs_exit": -0.9984}
+{"after": "v-low-bundle:HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump:2026-11-10 13:32 UTC", "h": 24, "px": 0.009295, "vs_exit": 0.1294}
+{"after": "v-momentum:tx41eAXzN6jHH22LSgF7eSxpTNvJXwcbrcGsbDrpump:2026-11-10 13:25 UTC", "h": 24, "px": 1.935e-06, "vs_exit": -0.9984}
+{"after": "v-momentum:HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump:2026-11-10 13:32 UTC", "h": 24, "px": 0.009295, "vs_exit": 0.1294}
+{"after": "v-networks:tx41eAXzN6jHH22LSgF7eSxpTNvJXwcbrcGsbDrpump:2026-11-10 13:25 UTC", "h": 24, "px": 1.935e-06, "vs_exit": -0.9984}
+{"after": "v-networks:HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump:2026-11-10 13:32 UTC", "h": 24, "px": 0.009295, "vs_exit": 0.1294}
+{"after": "v-no-spike:tx41eAXzN6jHH22LSgF7eSxpTNvJXwcbrcGsbDrpump:2026-11-10 13:25 UTC", "h": 24, "px": 1.935e-06, "vs_exit": -0.9984}
+{"after": "v-no-spike:HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump:2026-11-10 13:32 UTC", "h": 24, "px": 0.009295, "vs_exit": 0.1294}
+{"after": "v-swing:tx41eAXzN6jHH22LSgF7eSxpTNvJXwcbrcGsbDrpump:2026-11-10 13:25 UTC", "h": 24, "px": 1.935e-06, "vs_exit": -0.9984}
+{"after": "v-tight:tx41eAXzN6jHH22LSgF7eSxpTNvJXwcbrcGsbDrpump:2026-11-10 13:25 UTC", "h": 24, "px": 1.935e-06, "vs_exit": -0.9984}
+{"after": "v-unease:tx41eAXzN6jHH22LSgF7eSxpTNvJXwcbrcGsbDrpump:2026-11-10 13:25 UTC", "h": 24, "px": 1.935e-06, "vs_exit": -0.9984}
+{"after": "v-velocity:tx41eAXzN6jHH22LSgF7eSxpTNvJXwcbrcGsbDrpump:2026-11-10 13:25 UTC", "h": 24, "px": 1.935e-06, "vs_exit": -0.9984}
