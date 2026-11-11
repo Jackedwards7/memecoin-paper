@@ -1,0 +1,48 @@
+{
+  "id": "20261111T201530.597362Z-gate-fa188f",
+  "kind": "gate",
+  "at": 1794428130.597362,
+  "by": "local",
+  "results": {
+    "BLVpn8ofkjnAzpWGaVpspZ5bHTeXDbXFgX4vn3fkpump": {
+      "symbol": "woohao",
+      "px": 0.01696,
+      "fails": [
+        "RugCheck danger: Creator history of rugged tokens"
+      ]
+    },
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "px": 0.008442,
+      "fails": []
+    },
+    "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
+      "symbol": "CBUCKS",
+      "px": 0.004656,
+      "fails": [
+        "a wallet holds 14% of supply"
+      ]
+    },
+    "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
+      "symbol": "GLITCH",
+      "px": 0.001952,
+      "fails": [
+        "copycat: an earlier 'Infinite Money Glitch' exists (znv3FZ)"
+      ]
+    },
+    "GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump": {
+      "symbol": "WASTED",
+      "px": 0.001239,
+      "fails": [
+        "copycat: an earlier 'WASTED' exists (FsjgzA)"
+      ]
+    },
+    "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump": {
+      "symbol": "BIG",
+      "px": 0.0008547,
+      "fails": [
+        "a wallet holds 20% of supply"
+      ]
+    }
+  }
+}
