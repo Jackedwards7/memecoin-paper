@@ -1,12 +1,12 @@
-MOVERS 2026-11-11T19:16:22Z
-34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG +7%
-8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH +7%
-Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump baton +8%
-CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump fone +11%
-BLVpn8ofkjnAzpWGaVpspZ5bHTeXDbXFgX4vn3fkpump woohao +98035%
-DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -17%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -13%
-Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT -11%
-8ryRQD6jWfxnSdvvVbQ8Tzwo1NgGP7w1X1nQPpb4pump meowl -10%
-Hh3oTaqDCKKfdBgsQEvxp9sUwyNf8x9qmKqEMLBWpump HODL -10%
+MOVERS 2026-11-11T19:32:31Z
+8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +6%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +9%
+CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump fone +9%
+DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin +13%
+BLVpn8ofkjnAzpWGaVpspZ5bHTeXDbXFgX4vn3fkpump woohao +6581%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -14%
+7v8LoULtAhg3hT43YYQvKdF3LD3stdudBZAv5oTqpump MILES -11%
+Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT -10%
+34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG -7%
+4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao -7%
 END
