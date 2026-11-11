@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.379731592947371,
+  "cash_sol": 7.129731592947371,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -223,6 +223,79 @@
       },
       "reentry": true,
       "since_loss_h": 6.8
+    },
+    "5tBXkPVh716zSXHNZSr8i1PX7e6Uuj46JnBLdYchpump": {
+      "symbol": "DACITY",
+      "opened": "2026-11-11 01:40 UTC",
+      "cost_sol": 0.25,
+      "tokens": 10440.840511293723,
+      "entry_px": 0.0019233676616626809,
+      "entry_mc": 1911627,
+      "peak_px": 0.0019233676616626809,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-momentum rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/89rsdzz3wncebojfruvi6omxbdytnrelfvqcvq1ophnq",
+      "v": 2,
+      "mev_sol": 0.0059822924144532184,
+      "swaps": 1,
+      "entry_liq": 109288.21,
+      "at_entry": {
+        "px": 0.001923,
+        "liq": 109288.21,
+        "mc": 1911627,
+        "dex": "pumpswap",
+        "age_h": 6.62,
+        "vol_h1": 100732.75,
+        "vol_h24": 1401805.19,
+        "buys_h1": 6902,
+        "sells_h1": 3349,
+        "buys_h24": 86895,
+        "sells_h24": 30974,
+        "trades_h24": 117869,
+        "avg_trade": 11.89,
+        "m5": 0.71,
+        "h1": 9.24,
+        "h6": 304,
+        "h24": 4511,
+        "eligible": true,
+        "v": 3,
+        "pool": "89RSdzZ3WNCeBoJfruvi6oMxBDYtNreLFVQcVq1oPhNQ",
+        "m5_raw": 0.71,
+        "buys_m5": 425,
+        "sells_m5": 325,
+        "buys_h6": 76302,
+        "sells_h6": 27904,
+        "vol_m5": 5737.08,
+        "vol_h6": 1027287.5,
+        "liq_base": 28814671,
+        "liq_quote": 646.02526,
+        "fdv": 1911627,
+        "boosts": 100,
+        "links": [
+          "telegram",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.2626,
+          "paid": 0.0010846906764193425,
+          "vs_paid": 0.6009,
+          "off_peak": -0.2225,
+          "accel": 0.0999,
+          "candles": 25,
+          "unease": 0,
+          "known": 2,
+          "signs": []
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 0.6
     }
   },
   "closed": [
@@ -2775,10 +2848,11 @@
     "2026-11-10 13:25 UTC SELL 100% MYWAY -> 0.162 SOL @ $0.001217: event exit: price -21% in 5 minutes, -29% from entry",
     "2026-11-10 13:32 UTC SELL 100% GATO -> 0.153 SOL @ $0.00823: stop-loss at -35%",
     "2026-11-10 20:19 UTC BUY NIO 0.25 SOL @ $0.0012322119 (mc $1,174,186): v-momentum rule",
-    "2026-11-11 01:07 UTC SELL 100% BAGEL -> 0.152 SOL @ $0.0009778: event exit: price -21% in 5 minutes, -35% from entry"
+    "2026-11-11 01:07 UTC SELL 100% BAGEL -> 0.152 SOL @ $0.0009778: event exit: price -21% in 5 minutes, -35% from entry",
+    "2026-11-11 01:40 UTC BUY DACITY 0.25 SOL @ $0.0019233677 (mc $1,911,627): v-momentum rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-11 01:34 UTC"
+  "last_mark": "2026-11-11 01:39 UTC"
 }
