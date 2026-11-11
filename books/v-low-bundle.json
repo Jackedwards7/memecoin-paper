@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.493190568820419,
+  "cash_sol": 7.646283016271092,
   "positions": {
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": {
       "symbol": "three",
@@ -150,80 +150,6 @@
       },
       "reentry": true,
       "since_loss_h": 6.8
-    },
-    "8yLBuP74RnFmjSRS8BGFebvyoTo8uiEjPB71h3Zgpump": {
-      "symbol": "NIHAO",
-      "opened": "2026-11-11 06:28 UTC",
-      "cost_sol": 0.25,
-      "tokens": 2073.847012716386,
-      "entry_px": 0.004809564031888432,
-      "entry_mc": 4784311,
-      "peak_px": 0.02083,
-      "stop": -0.35,
-      "tp1": 1.0,
-      "tp1_done": true,
-      "thesis": "v-low-bundle rule",
-      "rugcheck": 1,
-      "risks": [],
-      "realised_sol": 0.23111855547821586,
-      "dex": "pumpswap",
-      "url": "https://dexscreener.com/solana/4rsluj8sbffmwm4ak6p4r5rbz7y2m9cgrefxvb29jbgn",
-      "v": 2,
-      "mev_sol": 0.01199205679751023,
-      "swaps": 2,
-      "entry_liq": 177002.12,
-      "at_entry": {
-        "px": 0.004809,
-        "liq": 177002.12,
-        "mc": 4784311,
-        "dex": "pumpswap",
-        "age_h": 6.48,
-        "vol_h1": 69518.64,
-        "vol_h24": 3309740.4,
-        "buys_h1": 3488,
-        "sells_h1": 3137,
-        "buys_h24": 62243,
-        "sells_h24": 36325,
-        "trades_h24": 98568,
-        "avg_trade": 33.58,
-        "m5": 1.49,
-        "h1": 6.65,
-        "h6": 116,
-        "h24": 10390,
-        "eligible": true,
-        "v": 3,
-        "pool": "4rsLuj8sBFFMwM4AK6p4R5RbZ7y2m9CGrefxVb29JbgN",
-        "m5_raw": 1.49,
-        "buys_m5": 242,
-        "sells_m5": 197,
-        "buys_h6": 56818,
-        "sells_h6": 34091,
-        "vol_m5": 3821.58,
-        "vol_h6": 1840966.13,
-        "liq_base": 18557212,
-        "liq_quote": 1057.9045,
-        "fdv": 4784311,
-        "boosts": 500,
-        "links": [
-          "twitter",
-          "website"
-        ],
-        "read": {
-          "swing": 0.1601,
-          "paid": 0.003112845106623457,
-          "vs_paid": 0.4455,
-          "off_peak": -0.349,
-          "accel": -0.0661,
-          "candles": 25,
-          "unease": 1,
-          "known": 2,
-          "signs": [
-            "failed_high"
-          ]
-        }
-      },
-      "reentry": false,
-      "since_loss_h": 0.8
     }
   },
   "closed": [
@@ -2998,6 +2924,86 @@
       "pnl_pct": 0.05305007669771644,
       "exit_reason": "event exit: price -23% in 5 minutes, +14% from entry",
       "exit_px": 0.002196
+    },
+    {
+      "symbol": "NIHAO",
+      "opened": "2026-11-11 06:28 UTC",
+      "cost_sol": 0.25,
+      "tokens": 0.0,
+      "entry_px": 0.004809564031888432,
+      "entry_mc": 4784311,
+      "peak_px": 0.02083,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": true,
+      "thesis": "v-low-bundle rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.3842110029288893,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/4rsluj8sbffmwm4ak6p4r5rbz7y2m9cgrefxvb29jbgn",
+      "v": 2,
+      "mev_sol": 0.017943020853687333,
+      "swaps": 3,
+      "entry_liq": 177002.12,
+      "at_entry": {
+        "px": 0.004809,
+        "liq": 177002.12,
+        "mc": 4784311,
+        "dex": "pumpswap",
+        "age_h": 6.48,
+        "vol_h1": 69518.64,
+        "vol_h24": 3309740.4,
+        "buys_h1": 3488,
+        "sells_h1": 3137,
+        "buys_h24": 62243,
+        "sells_h24": 36325,
+        "trades_h24": 98568,
+        "avg_trade": 33.58,
+        "m5": 1.49,
+        "h1": 6.65,
+        "h6": 116,
+        "h24": 10390,
+        "eligible": true,
+        "v": 3,
+        "pool": "4rsLuj8sBFFMwM4AK6p4R5RbZ7y2m9CGrefxVb29JbgN",
+        "m5_raw": 1.49,
+        "buys_m5": 242,
+        "sells_m5": 197,
+        "buys_h6": 56818,
+        "sells_h6": 34091,
+        "vol_m5": 3821.58,
+        "vol_h6": 1840966.13,
+        "liq_base": 18557212,
+        "liq_quote": 1057.9045,
+        "fdv": 4784311,
+        "boosts": 500,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.1601,
+          "paid": 0.003112845106623457,
+          "vs_paid": 0.4455,
+          "off_peak": -0.349,
+          "accel": -0.0661,
+          "candles": 25,
+          "unease": 1,
+          "known": 2,
+          "signs": [
+            "failed_high"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 0.8,
+      "mint": "8yLBuP74RnFmjSRS8BGFebvyoTo8uiEjPB71h3Zgpump",
+      "closed": "2026-11-11 14:16 UTC",
+      "pnl_sol": 0.13421100292888932,
+      "pnl_pct": 0.5368440117155573,
+      "exit_reason": "event exit: price -66% in 5 minutes, +36% from entry",
+      "exit_px": 0.006542
     }
   ],
   "log": [
@@ -3078,10 +3084,11 @@
     "2026-11-11 06:28 UTC BUY NIHAO 0.25 SOL @ $0.004809564 (mc $4,784,311): v-low-bundle rule",
     "2026-11-11 06:42 UTC SELL 100% BRUH -> 0.283 SOL @ $0.002306: time stop: 48h held, +18%, no take-profit",
     "2026-11-11 10:56 UTC SELL 50% NIHAO -> 0.231 SOL @ $0.00972: take-profit at +102%: half sold, cost recovered",
-    "2026-11-11 11:28 UTC SELL 100% DACITY -> 0.263 SOL @ $0.002196: event exit: price -23% in 5 minutes, +14% from entry"
+    "2026-11-11 11:28 UTC SELL 100% DACITY -> 0.263 SOL @ $0.002196: event exit: price -23% in 5 minutes, +14% from entry",
+    "2026-11-11 14:16 UTC SELL 100% NIHAO -> 0.153 SOL @ $0.006542: event exit: price -66% in 5 minutes, +36% from entry"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-11 14:15 UTC"
+  "last_mark": "2026-11-11 14:16 UTC"
 }
