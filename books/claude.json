@@ -715,7 +715,7 @@
     "2026-11-09 16:03 UTC SELL 50% BRUH -> 0.237 SOL @ $0.002204: take-profit at +102%: half sold, cost recovered",
     "2026-11-10 20:16 UTC BUY NIO 0.25 SOL @ $0.0012452127 (mc $1,186,743): Gate pass; mature pumpswap coin (484h), mc $1.2M, liq $122k, 1h +4.7%, 24h +37%, 5m +4.1% (no spike), 1h buys 64 vs sells 67 roughly even. Other passes GATO (sellers lead, 24h -14%) and BIG (24h +438% vertical) skipped; CBUCKS failed gate."
   ],
-  "last_mark": "2026-11-11 07:17 UTC",
+  "last_mark": "2026-11-11 07:19 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794378442,
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794378442,
@@ -817,7 +817,8 @@
       ],
       "moves": {
         "1d": -0.5885832187070151,
-        "3d": -0.6262723521320495
+        "3d": -0.6262723521320495,
+        "7d": -0.759353507565337
       }
     },
     "8muc9DdhqWfAPcvmEebNQCG89bLiwi12T2KtBtzVpump": {
@@ -829,7 +830,8 @@
       ],
       "moves": {
         "1d": -0.996205393625715,
-        "3d": -0.9966426041950422
+        "3d": -0.9966426041950422,
+        "7d": -0.996870062653228
       }
     },
     "5tdWkbqhTqVyPmksqX8WVKrHbjjqmvQfrMGwZoZPpump": {
@@ -1398,7 +1400,8 @@
       "fails": [],
       "moves": {
         "1d": 0.0917327293318233,
-        "3d": -0.028690071725179234
+        "3d": -0.028690071725179234,
+        "7d": -0.3671196677991694
       }
     },
     "HMYd9tosnUXuNHmq7pXmoePRVBLBBjA3JBfydq6upump": {
