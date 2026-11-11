@@ -1,12 +1,12 @@
-MOVERS 2026-11-11T08:35:27Z
-BBRgG2GifeKNB1hSmzD2BwHMPK8wnDtcuE4NzxgHpump BORLY +8%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +8%
+MOVERS 2026-11-11T08:51:26Z
+5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat +5%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +6%
+npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA +6%
 HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO +10%
-8yLBuP74RnFmjSRS8BGFebvyoTo8uiEjPB71h3Zgpump NIHAO +20%
-FZcbX6uBkeACEg38cFBqvQgTJiL98aKovQT23AfCpump UCI +71%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -15%
+8yLBuP74RnFmjSRS8BGFebvyoTo8uiEjPB71h3Zgpump NIHAO +34%
+BBRgG2GifeKNB1hSmzD2BwHMPK8wnDtcuE4NzxgHpump BORLY -58%
 4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao -12%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -11%
-34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG -7%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -6%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -10%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -10%
+PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH -5%
 END

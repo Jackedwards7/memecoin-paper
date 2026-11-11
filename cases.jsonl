@@ -625,3 +625,11 @@
 {"after": "v-tight:F22QdNn7VYrtTgYDHEYcqQKVtDH8msh2xs6tnGxepump:2026-11-10 07:16 UTC", "h": 24, "px": 1.754e-06, "vs_exit": -0.9985}
 {"after": "v-tight:HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump:2026-11-10 08:09 UTC", "h": 24, "px": 0.007585, "vs_exit": -0.2297}
 {"after": "v-unpaid:AGJBned5JQWkSYP2Ee6GaTVgn7CGdF6mNRG5rL6Upump:2026-11-10 08:19 UTC", "h": 24, "px": 1.62e-06, "vs_exit": -0.965}
+{"after": "v-loose:BAftaSb1HVqBn5723w72WLcXU7YASSgmVxQxJJAJpump:2026-11-10 08:39 UTC", "h": 24, "px": 3.014e-06, "vs_exit": -0.9887}
+{"after": "v-low-bundle:BAftaSb1HVqBn5723w72WLcXU7YASSgmVxQxJJAJpump:2026-11-10 08:39 UTC", "h": 24, "px": 3.014e-06, "vs_exit": -0.9887}
+{"after": "v-momentum:BAftaSb1HVqBn5723w72WLcXU7YASSgmVxQxJJAJpump:2026-11-10 08:39 UTC", "h": 24, "px": 3.014e-06, "vs_exit": -0.9887}
+{"after": "v-networks:BAftaSb1HVqBn5723w72WLcXU7YASSgmVxQxJJAJpump:2026-11-10 08:39 UTC", "h": 24, "px": 3.014e-06, "vs_exit": -0.9887}
+{"after": "v-swing:BAftaSb1HVqBn5723w72WLcXU7YASSgmVxQxJJAJpump:2026-11-10 08:39 UTC", "h": 24, "px": 3.014e-06, "vs_exit": -0.9887}
+{"after": "v-tight:BAftaSb1HVqBn5723w72WLcXU7YASSgmVxQxJJAJpump:2026-11-10 08:39 UTC", "h": 24, "px": 3.014e-06, "vs_exit": -0.9887}
+{"after": "v-unpaid:C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump:2026-11-10 08:50 UTC", "h": 24, "px": 0.00107, "vs_exit": 1.2622}
+{"after": "v-velocity:BAftaSb1HVqBn5723w72WLcXU7YASSgmVxQxJJAJpump:2026-11-10 08:39 UTC", "h": 24, "px": 3.014e-06, "vs_exit": -0.9887}

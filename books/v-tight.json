@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.727729500564817,
+  "cash_sol": 7.893682268109415,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -150,22 +150,22 @@
       "symbol": "NIHAO",
       "opened": "2026-11-11 06:28 UTC",
       "cost_sol": 0.25,
-      "tokens": 4147.694025432772,
+      "tokens": 2073.847012716386,
       "entry_px": 0.004809564031888432,
       "entry_mc": 4784311,
-      "peak_px": 0.006317,
+      "peak_px": 0.006989,
       "stop": -0.2,
       "tp1": 0.4,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-tight rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.16595276754459712,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/4rsluj8sbffmwm4ak6p4r5rbz7y2m9cgrefxvb29jbgn",
       "v": 2,
-      "mev_sol": 0.006021194605009633,
-      "swaps": 1,
+      "mev_sol": 0.01204456528324117,
+      "swaps": 2,
       "entry_liq": 177002.12,
       "at_entry": {
         "px": 0.004809,
@@ -3396,10 +3396,11 @@
     "2026-11-11 05:07 UTC BUY X 0.25 SOL @ $0.0006798876 (mc $661,407): v-tight rule",
     "2026-11-11 05:21 UTC SELL 100% X -> 0.181 SOL @ $0.0005382: stop-loss at -21%",
     "2026-11-11 05:46 UTC SELL 50% DACITY -> 0.164 SOL @ $0.002746: take-profit at +43%: half sold, cost recovered",
-    "2026-11-11 06:28 UTC BUY NIHAO 0.25 SOL @ $0.004809564 (mc $4,784,311): v-tight rule"
+    "2026-11-11 06:28 UTC BUY NIHAO 0.25 SOL @ $0.004809564 (mc $4,784,311): v-tight rule",
+    "2026-11-11 08:51 UTC SELL 50% NIHAO -> 0.166 SOL @ $0.006989: take-profit at +45%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-11 08:46 UTC"
+  "last_mark": "2026-11-11 08:51 UTC"
 }
