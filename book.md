@@ -8,12 +8,12 @@ area: trading
 *Paper only: simulated fills from live DexScreener prices, 1.50% fee each side plus a size/liquidity
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
-**Equity 9.485 SOL** (start 10.0 SOL, -5.1%) · cash 9.025 SOL ·
-open 2 · closed 14 (5 won) · SOL $82.78 · marked 2026-11-11 07:25 UTC
+**Equity 9.488 SOL** (start 10.0 SOL, -5.1%) · cash 9.025 SOL ·
+open 2 · closed 14 (5 won) · SOL $82.89 · marked 2026-11-11 07:31 UTC
 
 **Benchmark (vs just holding SOL): -5.1%.** The book is counted in SOL, so its SOL
-return *is* its edge over holding SOL. In dollars: $785 vs $949 at the start
-(-17.2%); SOL itself moved -12.7%.
+return *is* its edge over holding SOL. In dollars: $786 vs $949 at the start
+(-17.1%); SOL itself moved -12.6%.
 Review on 2026-11-30 or after 30 closed v2 trades (7/30), rules unchanged until then.
 
 ## v2 test (from 2026-11-03 01:30 UTC)
@@ -23,11 +23,11 @@ control position on a random gate pass (`control.json`, same mechanical exits, n
 
 | Arm | Closed | Won | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|
-| Picks | 7 | 3 | +0.331 | +14.7% |
-| Control | 8 | 0 | -0.686 | -30.5% |
+| Picks | 7 | 3 | +0.334 | +14.8% |
+| Control | 8 | 0 | -0.690 | -30.7% |
 
 Costs in every fill: 1.5% fee each side, size/liquidity slippage, and a $0.50 sandwich charge per swap.
-If every swap were sandwiched at the $5 median: picks -0.539 SOL, control -1.501 SOL.
+If every swap were sandwiched at the $5 median: picks -0.535 SOL, control -1.504 SOL.
 
 **Gate value** (raw price moves, no costs; the gate earns its keep if passes beat rejects):
 passes 36 tracked, median 1d -53%, 3d -88%, 7d -57% · rejects 53 tracked, median 1d -29%, 3d -56%, 7d -57%.
@@ -39,19 +39,19 @@ Same gate, size, costs and exit code as the picks; rules in `CLAUDE.md`. Judged 
 
 | Arm | Closed | Won | Open | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|---|
-| mech | 5 | 2 | 2 | +0.383 | +21.9% |
+| mech | 5 | 2 | 2 | +0.386 | +22.1% |
 | v-dip | 0 | 0 | 0 | +0.000 | +0.0% |
-| v-loose | 30 | 6 | 6 | -1.612 | -17.9% |
-| v-low-bundle | 35 | 7 | 4 | -2.067 | -21.2% |
-| v-mature | 10 | 4 | 3 | -0.215 | -6.6% |
-| v-momentum | 35 | 7 | 4 | -2.067 | -21.2% |
-| v-networks | 29 | 5 | 5 | -1.234 | -14.5% |
-| v-no-spike | 18 | 5 | 4 | +6771.295 | +123114.4% |
-| v-swing | 38 | 7 | 4 | -1.650 | -15.7% |
-| v-tight | 40 | 7 | 3 | -1.535 | -14.3% |
-| v-unease | 33 | 7 | 3 | -0.664 | -7.4% |
-| v-unpaid | 27 | 2 | 5 | -3.733 | -46.7% |
-| v-velocity | 33 | 7 | 6 | -1.546 | -15.9% |
+| v-loose | 30 | 6 | 6 | -1.596 | -17.7% |
+| v-low-bundle | 35 | 7 | 4 | -2.056 | -21.1% |
+| v-mature | 10 | 4 | 3 | -0.219 | -6.7% |
+| v-momentum | 35 | 7 | 4 | -2.056 | -21.1% |
+| v-networks | 29 | 5 | 5 | -1.217 | -14.3% |
+| v-no-spike | 18 | 5 | 4 | +6771.294 | +123114.4% |
+| v-swing | 38 | 7 | 4 | -1.635 | -15.6% |
+| v-tight | 40 | 7 | 3 | -1.523 | -14.2% |
+| v-unease | 33 | 7 | 3 | -0.644 | -7.2% |
+| v-unpaid | 27 | 2 | 5 | -3.726 | -46.6% |
+| v-velocity | 33 | 7 | 6 | -1.535 | -15.7% |
 | v-x-exit | 0 | 0 | 0 | +0.000 | +0.0% |
 | v-x-organic | 0 | 0 | 0 | +0.000 | +0.0% |
 
@@ -72,7 +72,7 @@ Each coin against its own normal. Information only: no rule on this book reads i
 
 Last check 2026-11-10: 90 of 96 snapshots, 14463 rows, 186 coins, 55.7 MB. No problems.
 
-GeckoTerminal: 23895 calls, 177 refused, 15 failed, 141 waiting. Insider flag fired on 0 of 82 coins where RugCheck's graph found insiders.
+GeckoTerminal: 23913 calls, 177 refused, 15 failed, 136 waiting. Insider flag fired on 0 of 82 coins where RugCheck's graph found insiders.
 
 Fills: a round trip on Jupiter returned -0.6% (median of 180 quotes, before priority fees); paper charged -7.7%.
 
@@ -84,8 +84,8 @@ Learning run 2026-11-08: 2 of 14 arms have 15+ trades. Promoted: none. Proposes 
 
 | Coin | Mint | Opened | Cost SOL | Entry mcap | Move | Value SOL (incl. realised) | Thesis |
 |---|---|---|---|---|---|---|---|
-| BRUH | `PgFtGGqu…` | 2026-11-08 08:15 UTC | 0.25 | $1,080,245 | +118% | 0.520 | Gate pass; 28h pumpswap coin, mc $1.07M, liq $84k (thin), 1h +42%, 24h +84%, 5m -2.2% (no spike now), 1h buys 163 vs sells 92. Other passes COGE (24h -92%) and GIGAHUG (11.7h, +1775% 24h vertical) skipped; GATO/HELL already held. |
-| NIO | `7SL2VnfY…` | 2026-11-10 20:16 UTC | 0.25 | $1,186,743 | -26% | 0.178 | Gate pass; mature pumpswap coin (484h), mc $1.2M, liq $122k, 1h +4.7%, 24h +37%, 5m +4.1% (no spike), 1h buys 64 vs sells 67 roughly even. Other passes GATO (sellers lead, 24h -14%) and BIG (24h +438% vertical) skipped; CBUCKS failed gate. |
+| BRUH | `PgFtGGqu…` | 2026-11-08 08:15 UTC | 0.25 | $1,080,245 | +122% | 0.525 | Gate pass; 28h pumpswap coin, mc $1.07M, liq $84k (thin), 1h +42%, 24h +84%, 5m -2.2% (no spike now), 1h buys 163 vs sells 92. Other passes COGE (24h -92%) and GIGAHUG (11.7h, +1775% 24h vertical) skipped; GATO/HELL already held. |
+| NIO | `7SL2VnfY…` | 2026-11-10 20:16 UTC | 0.25 | $1,186,743 | -27% | 0.176 | Gate pass; mature pumpswap coin (484h), mc $1.2M, liq $122k, 1h +4.7%, 24h +37%, 5m +4.1% (no spike), 1h buys 64 vs sells 67 roughly even. Other passes GATO (sellers lead, 24h -14%) and BIG (24h +438% vertical) skipped; CBUCKS failed gate. |
 
 ## Closed
 
