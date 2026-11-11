@@ -8,12 +8,12 @@ area: trading
 *Paper only: simulated fills from live DexScreener prices, 1.50% fee each side plus a size/liquidity
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
-**Equity 9.454 SOL** (start 10.0 SOL, -5.5%) · cash 9.025 SOL ·
-open 2 · closed 14 (5 won) · SOL $83.81 · marked 2026-11-11 13:02 UTC
+**Equity 9.455 SOL** (start 10.0 SOL, -5.4%) · cash 9.025 SOL ·
+open 2 · closed 14 (5 won) · SOL $83.76 · marked 2026-11-11 13:06 UTC
 
-**Benchmark (vs just holding SOL): -5.5%.** The book is counted in SOL, so its SOL
+**Benchmark (vs just holding SOL): -5.4%.** The book is counted in SOL, so its SOL
 return *is* its edge over holding SOL. In dollars: $792 vs $949 at the start
-(-16.5%); SOL itself moved -11.6%.
+(-16.5%); SOL itself moved -11.7%.
 Review on 2026-11-30 or after 30 closed v2 trades (7/30), rules unchanged until then.
 
 ## v2 test (from 2026-11-03 01:30 UTC)
@@ -23,14 +23,14 @@ control position on a random gate pass (`control.json`, same mechanical exits, n
 
 | Arm | Closed | Won | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|
-| Picks | 7 | 3 | +0.299 | +13.3% |
-| Control | 8 | 0 | -0.681 | -30.3% |
+| Picks | 7 | 3 | +0.300 | +13.4% |
+| Control | 8 | 0 | -0.686 | -30.5% |
 
 Costs in every fill: 1.5% fee each side, size/liquidity slippage, and a $0.50 sandwich charge per swap.
-If every swap were sandwiched at the $5 median: picks -0.560 SOL, control -1.487 SOL.
+If every swap were sandwiched at the $5 median: picks -0.559 SOL, control -1.491 SOL.
 
 **Gate value** (raw price moves, no costs; the gate earns its keep if passes beat rejects):
-passes 37 tracked, median 1d -53%, 3d -88%, 7d -88% · rejects 53 tracked, median 1d -29%, 3d -63%, 7d -57%.
+passes 37 tracked, median 1d -53%, 3d -88%, 7d -88% · rejects 53 tracked, median 1d -36%, 3d -63%, 7d -57%.
 Legacy v1 positions (opened before v2, 1.25% fee model, sizes to 1 SOL) stay under the same exits and are left out of this table.
 
 ## Mechanical arms
@@ -39,19 +39,19 @@ Same gate, size, costs and exit code as the picks; rules in `CLAUDE.md`. Judged 
 
 | Arm | Closed | Won | Open | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|---|
-| mech | 5 | 2 | 2 | +0.352 | +20.1% |
+| mech | 5 | 2 | 2 | +0.353 | +20.2% |
 | v-dip | 0 | 0 | 0 | +0.000 | +0.0% |
-| v-loose | 31 | 7 | 5 | -1.531 | -17.0% |
-| v-low-bundle | 36 | 8 | 3 | -1.885 | -19.3% |
-| v-mature | 10 | 4 | 3 | -0.201 | -6.2% |
-| v-momentum | 36 | 8 | 3 | -1.885 | -19.3% |
-| v-networks | 30 | 6 | 4 | -1.115 | -13.1% |
-| v-no-spike | 18 | 5 | 4 | +6771.254 | +123113.7% |
-| v-swing | 39 | 8 | 3 | -1.543 | -14.7% |
-| v-tight | 42 | 9 | 1 | -1.602 | -14.9% |
-| v-unease | 34 | 8 | 2 | -0.560 | -6.2% |
-| v-unpaid | 28 | 2 | 6 | -3.790 | -44.6% |
-| v-velocity | 34 | 8 | 5 | -1.412 | -14.5% |
+| v-loose | 31 | 7 | 5 | -1.516 | -16.8% |
+| v-low-bundle | 36 | 8 | 3 | -1.878 | -19.3% |
+| v-mature | 10 | 4 | 3 | -0.202 | -6.2% |
+| v-momentum | 36 | 8 | 3 | -1.878 | -19.3% |
+| v-networks | 30 | 6 | 4 | -1.107 | -13.0% |
+| v-no-spike | 18 | 5 | 4 | +6771.249 | +123113.6% |
+| v-swing | 39 | 8 | 3 | -1.537 | -14.6% |
+| v-tight | 42 | 9 | 1 | -1.601 | -14.9% |
+| v-unease | 34 | 8 | 2 | -0.550 | -6.1% |
+| v-unpaid | 28 | 2 | 6 | -3.799 | -44.7% |
+| v-velocity | 34 | 8 | 5 | -1.407 | -14.4% |
 | v-x-exit | 0 | 0 | 0 | +0.000 | +0.0% |
 | v-x-organic | 0 | 0 | 0 | +0.000 | +0.0% |
 
@@ -72,7 +72,7 @@ Each coin against its own normal. Information only: no rule on this book reads i
 
 Last check 2026-11-10: 90 of 96 snapshots, 14463 rows, 186 coins, 55.7 MB. No problems.
 
-GeckoTerminal: 24798 calls, 192 refused, 15 failed, 140 waiting. Insider flag fired on 0 of 82 coins where RugCheck's graph found insiders.
+GeckoTerminal: 24810 calls, 192 refused, 15 failed, 140 waiting. Insider flag fired on 0 of 82 coins where RugCheck's graph found insiders.
 
 Fills: a round trip on Jupiter returned -0.6% (median of 180 quotes, before priority fees); paper charged -7.7%.
 
