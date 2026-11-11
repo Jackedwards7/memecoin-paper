@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 5.042161701617656,
+  "cash_sol": 4.792161701617656,
   "positions": {
     "9AvytnUKsLxPxFHFqS6VLxaxt5p6BhYNr53SD2Chpump": {
       "symbol": "67",
@@ -383,6 +383,79 @@
         }
       },
       "reentry": false,
+      "since_loss_h": 0.0
+    },
+    "GNggUoCrkgcshssMFn1AxRGEeiNpS7fFaLJMEbSWpump": {
+      "symbol": "BTX",
+      "opened": "2026-11-11 14:44 UTC",
+      "cost_sol": 0.25,
+      "tokens": 4730.271003010809,
+      "entry_px": 0.00427656787256461,
+      "entry_mc": 4276498,
+      "peak_px": 0.00427656787256461,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unpaid rule",
+      "rugcheck": 31,
+      "risks": [
+        "High holder correlation"
+      ],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/ayqr8jmffl8kmxoejcgcx2vmths7hmxuurg22kytayfb",
+      "v": 2,
+      "mev_sol": 0.005939653124257543,
+      "swaps": 1,
+      "entry_liq": 158465.87,
+      "at_entry": {
+        "px": 0.004276,
+        "liq": 158465.87,
+        "mc": 4276498,
+        "dex": "pumpswap",
+        "age_h": 148.51,
+        "vol_h1": 855.81,
+        "vol_h24": 14094.62,
+        "buys_h1": 217,
+        "sells_h1": 0,
+        "buys_h24": 14175,
+        "sells_h24": 1159,
+        "trades_h24": 15334,
+        "avg_trade": 0.92,
+        "m5": 0.79,
+        "h1": 2.5,
+        "h6": 17.34,
+        "h24": 48.51,
+        "eligible": true,
+        "v": 3,
+        "pool": "AyqR8jMfFL8KMXoEJcGcX2VMThs7hMXUurG22KytaYfB",
+        "m5_raw": 0.79,
+        "buys_m5": 18,
+        "sells_m5": 0,
+        "buys_h6": 1348,
+        "sells_h6": 1,
+        "vol_m5": 60.52,
+        "vol_h6": 5502.25,
+        "liq_base": 18718146,
+        "liq_quote": 929.9338,
+        "fdv": 4276498,
+        "boosts": null,
+        "links": null,
+        "read": {
+          "swing": 0.034,
+          "paid": 0.00414630530783763,
+          "vs_paid": -0.1809,
+          "off_peak": -0.4748,
+          "accel": 0.0112,
+          "candles": 96,
+          "unease": 1,
+          "known": 5,
+          "signs": [
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": true,
       "since_loss_h": 0.0
     }
   },
@@ -2733,10 +2806,11 @@
     "2026-11-11 07:32 UTC BUY DOPE 0.25 SOL @ $0.001018167 (mc $1,005,549): v-unpaid rule",
     "2026-11-11 11:46 UTC SELL 100% Dacity -> 0.162 SOL @ $0.005963: time stop: 48h held, -31%, no take-profit",
     "2026-11-11 11:48 UTC BUY DacityCoin 0.25 SOL @ $0.0047083268 (mc $4,569,036): v-unpaid rule",
-    "2026-11-11 14:42 UTC SELL 100% CATE -> 0.196 SOL @ $0.02613: time stop: 48h held, -17%, no take-profit"
+    "2026-11-11 14:42 UTC SELL 100% CATE -> 0.196 SOL @ $0.02613: time stop: 48h held, -17%, no take-profit",
+    "2026-11-11 14:44 UTC BUY BTX 0.25 SOL @ $0.0042765679 (mc $4,276,498): v-unpaid rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-11 14:42 UTC"
+  "last_mark": "2026-11-11 14:43 UTC"
 }
