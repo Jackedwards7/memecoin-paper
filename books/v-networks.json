@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.484318558308032,
+  "cash_sol": 7.715437113786248,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -289,22 +289,22 @@
       "symbol": "NIHAO",
       "opened": "2026-11-11 06:28 UTC",
       "cost_sol": 0.25,
-      "tokens": 4147.694025432772,
+      "tokens": 2073.847012716386,
       "entry_px": 0.004809564031888432,
       "entry_mc": 4784311,
-      "peak_px": 0.009065,
+      "peak_px": 0.00972,
       "stop": -0.35,
       "tp1": 1.0,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-networks rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.23111855547821586,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/4rsluj8sbffmwm4ak6p4r5rbz7y2m9cgrefxvb29jbgn",
       "v": 2,
-      "mev_sol": 0.006021194605009633,
-      "swaps": 1,
+      "mev_sol": 0.01199205679751023,
+      "swaps": 2,
       "entry_liq": 177002.12,
       "at_entry": {
         "px": 0.004809,
@@ -2676,10 +2676,11 @@
     "2026-11-11 01:40 UTC BUY DACITY 0.25 SOL @ $0.0019233677 (mc $1,911,627): v-networks rule",
     "2026-11-11 03:16 UTC BUY HOLD 0.25 SOL @ $0.0011372585 (mc $1,070,993): v-networks rule",
     "2026-11-11 04:16 UTC SELL 100% HOLD -> 0.196 SOL @ $0.0009651: event exit: price -21% in 5 minutes, -15% from entry",
-    "2026-11-11 06:28 UTC BUY NIHAO 0.25 SOL @ $0.004809564 (mc $4,784,311): v-networks rule"
+    "2026-11-11 06:28 UTC BUY NIHAO 0.25 SOL @ $0.004809564 (mc $4,784,311): v-networks rule",
+    "2026-11-11 10:56 UTC SELL 50% NIHAO -> 0.231 SOL @ $0.00972: take-profit at +102%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-11 10:54 UTC"
+  "last_mark": "2026-11-11 10:56 UTC"
 }
