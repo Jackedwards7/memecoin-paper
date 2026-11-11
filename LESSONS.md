@@ -1,9 +1,9 @@
 # Lessons
 
-320 closed trades labelled, every book. Written by the bot.
+322 closed trades labelled, every book. Written by the bot.
 
 - **slow-bleed**: 105 trades, mean -29%. GATO (v-velocity): -41% over 19h; GATO (v-loose): -44% over 34h
-- **other**: 96 trades, mean -31%. BIG (v-swing): event exit: price -22% in 5 minutes, -5% from entry; BIG (v-unease): event exit: price -22% in 5 minutes, -5% from entry
+- **other**: 98 trades, mean -31%. NIO (v-swing): stop-loss at -20%; NIO (v-tight): stop-loss at -20%
 - **won-held**: 59 trades, mean +41%. MYWAY (v-tight): +22%, peak +91%; MYWAY (v-velocity): +17%, peak +91%
 - **bought-spike**: 28 trades, mean -30%. DONNA (v-velocity): up 173% in 24h at entry, peak +1%; DONNA (v-loose): up 168% in 24h at entry, peak +0%
 - **rug**: 16 trades, mean -100%. ALT (v-unpaid): event exit: liquidity down 78% since entry, -95% from entry; UODF (v-unpaid): event exit: liquidity down 87% since entry, -98% from entry

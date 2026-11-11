@@ -1,12 +1,12 @@
-MOVERS 2026-11-11T23:32:52Z
+MOVERS 2026-11-11T23:48:59Z
+DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin +11%
+9AvytnUKsLxPxFHFqS6VLxaxt5p6BhYNr53SD2Chpump 67 +12%
+8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +12%
 BcHEaaTCvycPwwsJ9yQTXdHP9X2gCLkznDbZ8VySpump Jotchua +16%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +19%
-DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin +27%
-DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD +47%
 FZcbX6uBkeACEg38cFBqvQgTJiL98aKovQT23AfCpump UCI +76%
 Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT -40%
-5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat -26%
 HQNJhJyL1QJggnBSN434QVK1RsvcUMNNfkt1dskzpump HODL -18%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -11%
-HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO -10%
+5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat -15%
+HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO -8%
+5yC9BM8KUsJTPbWPLfA2N8qH1s9V8DQ3Vcw1G6Jdpump AgenC -8%
 END
