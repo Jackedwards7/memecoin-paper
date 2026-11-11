@@ -1,8 +1,8 @@
 # Lessons
 
-258 closed trades labelled, every book. Written by the bot.
+259 closed trades labelled, every book. Written by the bot.
 
-- **slow-bleed**: 82 trades, mean -28%. HELL (v-velocity): -41% over 45h; HELL (v-swing): -38% over 42h
+- **slow-bleed**: 83 trades, mean -28%. HELL (v-swing): -38% over 42h; HELL (v-unease): -39% over 42h
 - **other**: 77 trades, mean -32%. three (v-swing): stop-loss at -17%; HELL (v-mature): stop-loss at -37%
 - **won-held**: 47 trades, mean +45%. BAGEL (v-velocity): +16%, peak +38%; DESSA (v-unease): +74%, peak +126%
 - **bought-spike**: 28 trades, mean -30%. DONNA (v-velocity): up 173% in 24h at entry, peak +1%; DONNA (v-loose): up 168% in 24h at entry, peak +0%
