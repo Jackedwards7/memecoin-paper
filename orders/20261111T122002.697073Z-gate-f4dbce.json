@@ -1,0 +1,44 @@
+{
+  "id": "20261111T122002.697073Z-gate-f4dbce",
+  "kind": "gate",
+  "at": 1794399602.697073,
+  "by": "local",
+  "results": {
+    "8yLBuP74RnFmjSRS8BGFebvyoTo8uiEjPB71h3Zgpump": {
+      "symbol": "NIHAO",
+      "px": 0.008505,
+      "fails": []
+    },
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "px": 0.008368,
+      "fails": []
+    },
+    "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
+      "symbol": "CBUCKS",
+      "px": 0.00408,
+      "fails": [
+        "a wallet holds 14% of supply"
+      ]
+    },
+    "5tBXkPVh716zSXHNZSr8i1PX7e6Uuj46JnBLdYchpump": {
+      "symbol": "DACITY",
+      "px": 0.002219,
+      "fails": []
+    },
+    "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
+      "symbol": "GLITCH",
+      "px": 0.002002,
+      "fails": [
+        "copycat: an earlier 'Infinite Money Glitch' exists (znv3FZ)"
+      ]
+    },
+    "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump": {
+      "symbol": "BIG",
+      "px": 0.0009051,
+      "fails": [
+        "a wallet holds 21% of supply"
+      ]
+    }
+  }
+}
