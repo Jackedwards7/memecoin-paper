@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.882704185452515,
+  "cash_sol": 7.632704185452515,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -145,6 +145,67 @@
       },
       "reentry": false,
       "since_loss_h": 2.1
+    },
+    "9VZerdNL1x6EjetDqRnh5bYcdmk1y8sLAGs1ybzGpump": {
+      "symbol": "X",
+      "opened": "2026-11-11 05:07 UTC",
+      "cost_sol": 0.25,
+      "tokens": 29272.209867025245,
+      "entry_px": 0.0006798875995494664,
+      "entry_mc": 661407,
+      "peak_px": 0.0006798875995494664,
+      "stop": -0.2,
+      "tp1": 0.4,
+      "tp1_done": false,
+      "thesis": "v-tight rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/6mdmwvcsrmabtqjc7gbbu5fbuflbc6djxgxm5vtnrdzq",
+      "v": 2,
+      "mev_sol": 0.0060350030175015095,
+      "swaps": 1,
+      "entry_liq": 75044.35,
+      "at_entry": {
+        "px": 0.0006797,
+        "liq": 75044.35,
+        "mc": 661407,
+        "dex": "pumpswap",
+        "age_h": 20.35,
+        "vol_h1": 166535.95,
+        "vol_h24": 4240461.2,
+        "buys_h1": 1115,
+        "sells_h1": 1066,
+        "buys_h24": 47448,
+        "sells_h24": 37403,
+        "trades_h24": 84851,
+        "avg_trade": 49.98,
+        "m5": 21.8,
+        "h1": 161,
+        "h6": 150,
+        "h24": 1816,
+        "eligible": true,
+        "v": 3,
+        "pool": "6MdmwvCsrMAbTqJC7GBBu5FBUFLbC6dJXGxm5VtnrDzQ",
+        "m5_raw": 21.8,
+        "buys_m5": 279,
+        "sells_m5": 262,
+        "buys_h6": 3068,
+        "sells_h6": 2916,
+        "vol_m5": 47166.99,
+        "vol_h6": 343682.84,
+        "liq_base": 55599715,
+        "liq_quote": 449.9237,
+        "fdv": 661407,
+        "boosts": null,
+        "links": [
+          "twitter"
+        ],
+        "read": null
+      },
+      "reentry": false,
+      "since_loss_h": 0.9
     }
   },
   "closed": [
@@ -3251,10 +3312,11 @@
     "2026-11-11 01:07 UTC SELL 100% BAGEL -> 0.133 SOL @ $0.0009778: event exit: price -21% in 5 minutes, +7% from entry",
     "2026-11-11 01:40 UTC BUY DACITY 0.25 SOL @ $0.0019233677 (mc $1,911,627): v-tight rule",
     "2026-11-11 03:15 UTC BUY HOLD 0.25 SOL @ $0.0011372585 (mc $1,070,993): v-tight rule",
-    "2026-11-11 04:16 UTC SELL 100% HOLD -> 0.196 SOL @ $0.0009651: event exit: price -21% in 5 minutes, -15% from entry"
+    "2026-11-11 04:16 UTC SELL 100% HOLD -> 0.196 SOL @ $0.0009651: event exit: price -21% in 5 minutes, -15% from entry",
+    "2026-11-11 05:07 UTC BUY X 0.25 SOL @ $0.0006798876 (mc $661,407): v-tight rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-11 05:02 UTC"
+  "last_mark": "2026-11-11 05:07 UTC"
 }

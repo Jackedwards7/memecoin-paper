@@ -1,12 +1,12 @@
-MOVERS 2026-11-11T04:51:22Z
-34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG +6%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +6%
-Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT +6%
+MOVERS 2026-11-11T05:07:22Z
 HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +7%
-DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin +26%
-4iJ7xEQrUvVUQH9KVStvw3FaY2PZDd7RtR4L9zx2pump HOLD -28%
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB -15%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -11%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -10%
-8Mi9E1V2bdPeAaRkR5yxUsAvpzP6UBUEEUrYmgKNpump WEALTH -7%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +8%
+5tBXkPVh716zSXHNZSr8i1PX7e6Uuj46JnBLdYchpump DACITY +9%
+DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin +53%
+9VZerdNL1x6EjetDqRnh5bYcdmk1y8sLAGs1ybzGpump X +161%
+nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity -10%
+BBRgG2GifeKNB1hSmzD2BwHMPK8wnDtcuE4NzxgHpump BORLY -9%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -9%
+33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump DOPE -8%
+Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump baton -5%
 END
