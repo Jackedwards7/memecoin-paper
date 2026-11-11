@@ -585,3 +585,6 @@
 {"after": "v-velocity:A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump:2026-11-10 01:04 UTC", "h": 24, "px": 0.0002744, "vs_exit": -0.8603}
 {"after": "v-swing:A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump:2026-11-10 01:43 UTC", "h": 24, "px": 0.0002662, "vs_exit": -0.8633}
 {"after": "v-unease:A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump:2026-11-10 01:59 UTC", "h": 24, "px": 0.0002539, "vs_exit": -0.8671}
+{"after": "v-loose:A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump:2026-11-10 02:14 UTC", "h": 24, "px": 0.0002742, "vs_exit": -0.8478}
+{"after": "v-networks:A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump:2026-11-10 02:14 UTC", "h": 24, "px": 0.0002742, "vs_exit": -0.8478}
+{"after": "v-no-spike:A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump:2026-11-10 02:14 UTC", "h": 24, "px": 0.0002742, "vs_exit": -0.8478}
