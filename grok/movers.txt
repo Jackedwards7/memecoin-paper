@@ -1,12 +1,12 @@
-MOVERS 2026-11-11T20:52:39Z
-nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity +4%
+MOVERS 2026-11-11T21:08:39Z
 33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump DOPE +5%
-DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD +7%
-34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG +10%
-MukLDtJ8Cx9DxLbeyLRSWPSposTMWuwHANbuaudpump OTC +10%
-4N1pRfEMnWAUE8rhyhqwnsWe6TNjuQFhgvNB3Nr9pump HODL -15%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -11%
-Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT -9%
-DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin -8%
-4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao -7%
+CFYhdWXsYfS7swnJgHRwb5toTHMEQD7Ljd5gGwKLpump KILROY +6%
+nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity +6%
+J8PSdNP3QewKq2Z1JJJFDMaqF7KcaiJhR7gbr5KZpump TripleT +7%
+BLVpn8ofkjnAzpWGaVpspZ5bHTeXDbXFgX4vn3fkpump woohao +86565%
+Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT -23%
+DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin -12%
+DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -9%
+HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO -9%
+PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH -6%
 END
