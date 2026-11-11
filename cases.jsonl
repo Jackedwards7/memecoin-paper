@@ -588,3 +588,5 @@
 {"after": "v-loose:A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump:2026-11-10 02:14 UTC", "h": 24, "px": 0.0002742, "vs_exit": -0.8478}
 {"after": "v-networks:A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump:2026-11-10 02:14 UTC", "h": 24, "px": 0.0002742, "vs_exit": -0.8478}
 {"after": "v-no-spike:A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump:2026-11-10 02:14 UTC", "h": 24, "px": 0.0002742, "vs_exit": -0.8478}
+{"after": "v-unpaid:DitHyRMQiSDhn5cnKMJV2CDDt6sVct96YrECiM49pump:2026-11-10 02:37 UTC", "h": 24, "px": 0.0005731, "vs_exit": -0.1357}
+{"after": "v-velocity:npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump:2026-11-10 02:34 UTC", "h": 24, "px": 0.008525, "vs_exit": -0.6805}
