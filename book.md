@@ -8,12 +8,12 @@ area: trading
 *Paper only: simulated fills from live DexScreener prices, 1.50% fee each side plus a size/liquidity
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
-**Equity 9.494 SOL** (start 10.0 SOL, -5.1%) · cash 9.025 SOL ·
-open 2 · closed 14 (5 won) · SOL $83.17 · marked 2026-11-11 08:14 UTC
+**Equity 9.493 SOL** (start 10.0 SOL, -5.1%) · cash 9.025 SOL ·
+open 2 · closed 14 (5 won) · SOL $83.25 · marked 2026-11-11 08:16 UTC
 
 **Benchmark (vs just holding SOL): -5.1%.** The book is counted in SOL, so its SOL
 return *is* its edge over holding SOL. In dollars: $790 vs $949 at the start
-(-16.8%); SOL itself moved -12.3%.
+(-16.7%); SOL itself moved -12.2%.
 Review on 2026-11-30 or after 30 closed v2 trades (7/30), rules unchanged until then.
 
 ## v2 test (from 2026-11-03 01:30 UTC)
@@ -24,10 +24,10 @@ control position on a random gate pass (`control.json`, same mechanical exits, n
 | Arm | Closed | Won | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|
 | Picks | 7 | 3 | +0.339 | +15.1% |
-| Control | 8 | 0 | -0.701 | -31.1% |
+| Control | 8 | 0 | -0.701 | -31.2% |
 
 Costs in every fill: 1.5% fee each side, size/liquidity slippage, and a $0.50 sandwich charge per swap.
-If every swap were sandwiched at the $5 median: picks -0.527 SOL, control -1.512 SOL.
+If every swap were sandwiched at the $5 median: picks -0.526 SOL, control -1.512 SOL.
 
 **Gate value** (raw price moves, no costs; the gate earns its keep if passes beat rejects):
 passes 36 tracked, median 1d -53%, 3d -88%, 7d -57% · rejects 53 tracked, median 1d -29%, 3d -59%, 7d -57%.
@@ -39,19 +39,19 @@ Same gate, size, costs and exit code as the picks; rules in `CLAUDE.md`. Judged 
 
 | Arm | Closed | Won | Open | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|---|
-| mech | 5 | 2 | 2 | +0.392 | +22.4% |
+| mech | 5 | 2 | 2 | +0.391 | +22.4% |
 | v-dip | 0 | 0 | 0 | +0.000 | +0.0% |
-| v-loose | 30 | 6 | 6 | -1.600 | -17.8% |
-| v-low-bundle | 35 | 7 | 4 | -2.052 | -21.0% |
-| v-mature | 10 | 4 | 3 | -0.223 | -6.9% |
-| v-momentum | 35 | 7 | 4 | -2.052 | -21.0% |
-| v-networks | 29 | 5 | 5 | -1.211 | -14.2% |
-| v-no-spike | 18 | 5 | 4 | +6771.291 | +123114.4% |
-| v-swing | 38 | 7 | 4 | -1.646 | -15.7% |
-| v-tight | 40 | 7 | 3 | -1.508 | -14.0% |
-| v-unease | 33 | 7 | 3 | -0.644 | -7.2% |
-| v-unpaid | 27 | 2 | 6 | -3.693 | -44.8% |
-| v-velocity | 33 | 7 | 6 | -1.540 | -15.8% |
+| v-loose | 30 | 6 | 6 | -1.609 | -17.9% |
+| v-low-bundle | 35 | 7 | 4 | -2.059 | -21.1% |
+| v-mature | 10 | 4 | 3 | -0.218 | -6.7% |
+| v-momentum | 35 | 7 | 4 | -2.059 | -21.1% |
+| v-networks | 29 | 5 | 5 | -1.219 | -14.3% |
+| v-no-spike | 18 | 5 | 4 | +6771.290 | +123114.4% |
+| v-swing | 38 | 7 | 4 | -1.654 | -15.8% |
+| v-tight | 40 | 7 | 3 | -1.512 | -14.1% |
+| v-unease | 33 | 7 | 3 | -0.652 | -7.2% |
+| v-unpaid | 27 | 2 | 6 | -3.695 | -44.8% |
+| v-velocity | 33 | 7 | 6 | -1.548 | -15.9% |
 | v-x-exit | 0 | 0 | 0 | +0.000 | +0.0% |
 | v-x-organic | 0 | 0 | 0 | +0.000 | +0.0% |
 
@@ -72,7 +72,7 @@ Each coin against its own normal. Information only: no rule on this book reads i
 
 Last check 2026-11-10: 90 of 96 snapshots, 14463 rows, 186 coins, 55.7 MB. No problems.
 
-GeckoTerminal: 24028 calls, 179 refused, 15 failed, 136 waiting. Insider flag fired on 0 of 82 coins where RugCheck's graph found insiders.
+GeckoTerminal: 24034 calls, 179 refused, 15 failed, 139 waiting. Insider flag fired on 0 of 82 coins where RugCheck's graph found insiders.
 
 Fills: a round trip on Jupiter returned -0.6% (median of 180 quotes, before priority fees); paper charged -7.7%.
 
@@ -144,7 +144,6 @@ Learning run 2026-11-08: 2 of 14 arms have 15+ trades. Promoted: none. Proposes 
 
 ## Orders (last 15)
 
-- 2026-11-09 08:19 UTC `20261109T081929.091319Z-gate-b30d6c`: recorded 5 gate results, 1 passed
 - 2026-11-09 12:21 UTC `20261109T122057.454043Z-gate-4f4bad`: recorded 4 gate results, 2 passed
 - 2026-11-09 16:19 UTC `20261109T161907.239088Z-gate-e43522`: recorded 7 gate results, 2 passed
 - 2026-11-09 16:20 UTC `20261109T161931.497953Z-gate-a9b336`: recorded 7 gate results, 2 passed
@@ -159,3 +158,4 @@ Learning run 2026-11-08: 2 of 14 arms have 15+ trades. Promoted: none. Proposes 
 - 2026-11-10 20:16 UTC `20261110T201517.036395Z-buy-89f992`: bought NIO 0.25 SOL @ $0.0012452127; control opened
 - 2026-11-11 00:15 UTC `20261111T001444.559378Z-gate-a4b51d`: recorded 6 gate results, 3 passed
 - 2026-11-11 04:15 UTC `20261111T041456.839171Z-gate-b9da11`: recorded 5 gate results, 2 passed
+- 2026-11-11 08:16 UTC `20261111T081532.741490Z-gate-132085`: recorded 6 gate results, 3 passed
