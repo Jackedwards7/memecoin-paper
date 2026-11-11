@@ -1,8 +1,8 @@
 # Lessons
 
-264 closed trades labelled, every book. Written by the bot.
+271 closed trades labelled, every book. Written by the bot.
 
-- **slow-bleed**: 88 trades, mean -29%. House (v-unpaid): -16% over 48h; DESSA (v-velocity): -41% over 18h
+- **slow-bleed**: 95 trades, mean -29%. BTX (v-unpaid): -9% over 48h; JOB (v-velocity): -36% over 48h
 - **other**: 77 trades, mean -32%. three (v-swing): stop-loss at -17%; HELL (v-mature): stop-loss at -37%
 - **won-held**: 47 trades, mean +45%. BAGEL (v-velocity): +16%, peak +38%; DESSA (v-unease): +74%, peak +126%
 - **bought-spike**: 28 trades, mean -30%. DONNA (v-velocity): up 173% in 24h at entry, peak +1%; DONNA (v-loose): up 168% in 24h at entry, peak +0%
