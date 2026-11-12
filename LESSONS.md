@@ -1,9 +1,9 @@
 # Lessons
 
-380 closed trades labelled, every book. Written by the bot.
+381 closed trades labelled, every book. Written by the bot.
 
 - **slow-bleed**: 122 trades, mean -30%. JOB (v-mature): -42% over 24h; DOPE (v-unpaid): -37% over 14h
-- **other**: 116 trades, mean -30%. GATO (v-unease): unease exit: 4 of 5 signs; meowl (v-swing): stop-loss at -10%
+- **other**: 117 trades, mean -30%. meowl (v-swing): stop-loss at -10%; meowl (v-tight): stop-loss at -20%
 - **won-held**: 80 trades, mean +37%. NIHAO (v-velocity): +54%, peak +333%; DacityCoin (v-unpaid): +1%, peak +73%
 - **bought-spike**: 28 trades, mean -30%. DONNA (v-velocity): up 173% in 24h at entry, peak +1%; DONNA (v-loose): up 168% in 24h at entry, peak +0%
 - **rug**: 17 trades, mean -100%. UODF (v-unpaid): event exit: liquidity down 87% since entry, -98% from entry; UODF (v-unpaid): event exit: liquidity down 49% since entry, -100% from entry
