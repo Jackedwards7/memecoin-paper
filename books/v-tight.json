@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.111569602004418,
+  "cash_sol": 7.277627053627336,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -227,22 +227,22 @@
       "symbol": "inuhao",
       "opened": "2026-11-12 17:46 UTC",
       "cost_sol": 0.25,
-      "tokens": 18368.978453256746,
+      "tokens": 9184.489226628373,
       "entry_px": 0.0010622657950007267,
       "entry_mc": 1058741,
-      "peak_px": 0.001399,
+      "peak_px": 0.00155,
       "stop": -0.2,
       "tp1": 0.4,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-tight rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.16605745162291796,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/aqfc3qfatjggpqeuqgs65ruaqq5u2pin6myjz1eu4s31",
       "v": 2,
-      "mev_sol": 0.006152331733727083,
-      "swaps": 1,
+      "mev_sol": 0.012293329031688272,
+      "swaps": 2,
       "entry_liq": 81179.8,
       "at_entry": {
         "px": 0.001062,
@@ -4428,10 +4428,11 @@
     "2026-11-12 15:03 UTC SELL 50% RAMBO -> 0.161 SOL @ $0.01245: take-profit at +41%: half sold, cost recovered",
     "2026-11-12 15:06 UTC SELL 100% Rocco -> 0.187 SOL @ $0.0005715: stop-loss at -22%",
     "2026-11-12 16:47 UTC SELL 100% RAMBO -> 0.156 SOL @ $0.01218: event exit: price -23% in 5 minutes, +38% from entry",
-    "2026-11-12 17:46 UTC BUY inuhao 0.25 SOL @ $0.0010622658 (mc $1,058,741): v-tight rule"
+    "2026-11-12 17:46 UTC BUY inuhao 0.25 SOL @ $0.0010622658 (mc $1,058,741): v-tight rule",
+    "2026-11-12 19:14 UTC SELL 50% inuhao -> 0.166 SOL @ $0.00155: take-profit at +46%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-12 19:05 UTC"
+  "last_mark": "2026-11-12 19:14 UTC"
 }
