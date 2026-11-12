@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.011649504965929,
+  "cash_sol": 8.18208015783952,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -296,79 +296,6 @@
       },
       "reentry": true,
       "since_loss_h": 16.3
-    },
-    "4xgqefa5WcdHWKXzqvM9MRJqWYGaHVEUnpUL4Vq5pump": {
-      "symbol": "HUNG",
-      "opened": "2026-11-12 00:53 UTC",
-      "cost_sol": 0.25,
-      "tokens": 23435.488250008588,
-      "entry_px": 0.0008570975686837946,
-      "entry_mc": 823355,
-      "peak_px": 0.0008570975686837946,
-      "stop": -0.35,
-      "tp1": 1.0,
-      "tp1_done": false,
-      "thesis": "v-unease rule",
-      "rugcheck": 1,
-      "risks": [],
-      "realised_sol": 0.0,
-      "dex": "pumpswap",
-      "url": "https://dexscreener.com/solana/2ulaeauqwkid31cvkyfeujx9ref7cdgeppxuoptz57m5",
-      "v": 2,
-      "mev_sol": 0.005980861244019139,
-      "swaps": 1,
-      "entry_liq": 90648.02,
-      "at_entry": {
-        "px": 0.0008569,
-        "liq": 90648.02,
-        "mc": 823355,
-        "dex": "pumpswap",
-        "age_h": 68.69,
-        "vol_h1": 694914.55,
-        "vol_h24": 3035192.63,
-        "buys_h1": 3712,
-        "sells_h1": 3011,
-        "buys_h24": 15379,
-        "sells_h24": 12557,
-        "trades_h24": 27936,
-        "avg_trade": 108.65,
-        "m5": 24.68,
-        "h1": 35.24,
-        "h6": 7820,
-        "h24": 7335,
-        "eligible": true,
-        "v": 3,
-        "pool": "2ULaeaUQWkid31cVKyFEujx9ReF7cdGepPxuoptz57m5",
-        "m5_raw": 24.68,
-        "buys_m5": 242,
-        "sells_m5": 167,
-        "buys_h6": 15188,
-        "sells_h6": 12352,
-        "vol_m5": 47372.12,
-        "vol_h6": 3020803.68,
-        "liq_base": 57559638,
-        "liq_quote": 258.7125,
-        "fdv": 823355,
-        "boosts": null,
-        "links": [
-          "twitter"
-        ],
-        "read": {
-          "swing": 0.0313,
-          "paid": 0.0005459669071705854,
-          "vs_paid": 0.5028,
-          "off_peak": -0.1751,
-          "accel": -19.9182,
-          "candles": 96,
-          "unease": 1,
-          "known": 3,
-          "signs": [
-            "failed_high"
-          ]
-        }
-      },
-      "reentry": false,
-      "since_loss_h": 1.9
     }
   },
   "closed": [
@@ -3249,6 +3176,85 @@
       "pnl_pct": -0.31547791763961885,
       "exit_reason": "unease exit: 4 of 5 signs",
       "exit_px": 0.006091
+    },
+    {
+      "symbol": "HUNG",
+      "opened": "2026-11-12 00:53 UTC",
+      "cost_sol": 0.25,
+      "tokens": 0.0,
+      "entry_px": 0.0008570975686837946,
+      "entry_mc": 823355,
+      "peak_px": 0.0008570975686837946,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unease rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.17043065287359113,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/2ulaeauqwkid31cvkyfeujx9ref7cdgeppxuoptz57m5",
+      "v": 2,
+      "mev_sol": 0.011972472987578156,
+      "swaps": 2,
+      "entry_liq": 90648.02,
+      "at_entry": {
+        "px": 0.0008569,
+        "liq": 90648.02,
+        "mc": 823355,
+        "dex": "pumpswap",
+        "age_h": 68.69,
+        "vol_h1": 694914.55,
+        "vol_h24": 3035192.63,
+        "buys_h1": 3712,
+        "sells_h1": 3011,
+        "buys_h24": 15379,
+        "sells_h24": 12557,
+        "trades_h24": 27936,
+        "avg_trade": 108.65,
+        "m5": 24.68,
+        "h1": 35.24,
+        "h6": 7820,
+        "h24": 7335,
+        "eligible": true,
+        "v": 3,
+        "pool": "2ULaeaUQWkid31cVKyFEujx9ReF7cdGepPxuoptz57m5",
+        "m5_raw": 24.68,
+        "buys_m5": 242,
+        "sells_m5": 167,
+        "buys_h6": 15188,
+        "sells_h6": 12352,
+        "vol_m5": 47372.12,
+        "vol_h6": 3020803.68,
+        "liq_base": 57559638,
+        "liq_quote": 258.7125,
+        "fdv": 823355,
+        "boosts": null,
+        "links": [
+          "twitter"
+        ],
+        "read": {
+          "swing": 0.0313,
+          "paid": 0.0005459669071705854,
+          "vs_paid": 0.5028,
+          "off_peak": -0.1751,
+          "accel": -19.9182,
+          "candles": 96,
+          "unease": 1,
+          "known": 3,
+          "signs": [
+            "failed_high"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 1.9,
+      "mint": "4xgqefa5WcdHWKXzqvM9MRJqWYGaHVEUnpUL4Vq5pump",
+      "closed": "2026-11-12 00:58 UTC",
+      "pnl_sol": -0.07956934712640887,
+      "pnl_pct": -0.3182773885056355,
+      "exit_reason": "event exit: price -24% in 5 minutes, -26% from entry",
+      "exit_px": 0.0006379
     }
   ],
   "log": [
@@ -3333,10 +3339,11 @@
     "2026-11-11 18:12 UTC BUY GATO 0.25 SOL @ $0.0083125738 (mc $8,203,471): v-unease rule",
     "2026-11-11 20:53 UTC BUY three 0.25 SOL @ $0.00035516379 (mc $355,005): v-unease rule",
     "2026-11-11 23:01 UTC SELL 100% GATO -> 0.171 SOL @ $0.006091: unease exit: 4 of 5 signs",
-    "2026-11-12 00:53 UTC BUY HUNG 0.25 SOL @ $0.00085709757 (mc $823,355): v-unease rule"
+    "2026-11-12 00:53 UTC BUY HUNG 0.25 SOL @ $0.00085709757 (mc $823,355): v-unease rule",
+    "2026-11-12 00:58 UTC SELL 100% HUNG -> 0.170 SOL @ $0.0006379: event exit: price -24% in 5 minutes, -26% from entry"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-12 00:56 UTC"
+  "last_mark": "2026-11-12 00:58 UTC"
 }
