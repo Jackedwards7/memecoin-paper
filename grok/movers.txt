@@ -1,12 +1,12 @@
-MOVERS 2026-11-12T02:29:09Z
-34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG +19%
-4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao +23%
-89iRVoDVPd8tuRrMyhgPfe58eDneasPsdEVu5AUMpump LuckyCoin +34%
-Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump BAGEL +53%
-8nytata1aMp19E6FtCf4Sy2iCV9hY6M5Y49JHPJQpump NATF +75%
-DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -21%
-4xgqefa5WcdHWKXzqvM9MRJqWYGaHVEUnpUL4Vq5pump HUNG -19%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -14%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -13%
-nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity -9%
+MOVERS 2026-11-12T02:45:12Z
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +12%
+DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin +13%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +20%
+34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG +22%
+Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump BAGEL +27%
+8nytata1aMp19E6FtCf4Sy2iCV9hY6M5Y49JHPJQpump NATF -38%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -21%
+4N1pRfEMnWAUE8rhyhqwnsWe6TNjuQFhgvNB3Nr9pump HODL -10%
+nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity -8%
+BcHEaaTCvycPwwsJ9yQTXdHP9X2gCLkznDbZ8VySpump Jotchua -8%
 END
