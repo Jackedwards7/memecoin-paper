@@ -1,12 +1,12 @@
-MOVERS 2026-11-12T05:41:51Z
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +5%
+MOVERS 2026-11-12T05:58:02Z
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +8%
+HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO +9%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +9%
 7v8LoULtAhg3hT43YYQvKdF3LD3stdudBZAv5oTqpump MILES +11%
-34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG +13%
-HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO +16%
-5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max +55%
-8AAVuQpJcqpvCuutxyBTVvgBEXZJSkZoNv1sExpBpump NOBUSHIBA -28%
-HQNJhJyL1QJggnBSN434QVK1RsvcUMNNfkt1dskzpump HODL -20%
-4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao -9%
-4N1pRfEMnWAUE8rhyhqwnsWe6TNjuQFhgvNB3Nr9pump HODL -9%
-8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER -8%
+5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max +31%
+HQNJhJyL1QJggnBSN434QVK1RsvcUMNNfkt1dskzpump HODL -17%
+DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -16%
+8AAVuQpJcqpvCuutxyBTVvgBEXZJSkZoNv1sExpBpump NOBUSHIBA -15%
+4N1pRfEMnWAUE8rhyhqwnsWe6TNjuQFhgvNB3Nr9pump HODL -14%
+8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB -13%
 END
