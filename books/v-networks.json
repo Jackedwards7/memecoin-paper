@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.252604142194075,
+  "cash_sol": 7.501353100148513,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -361,24 +361,24 @@
       "symbol": "NOBUSHIBA",
       "opened": "2026-11-12 03:17 UTC",
       "cost_sol": 0.25,
-      "tokens": 19288.100921725123,
+      "tokens": 9644.050460862562,
       "entry_px": 0.0010352652177129961,
       "entry_mc": 1022562,
-      "peak_px": 0.001921,
+      "peak_px": 0.002222,
       "stop": -0.35,
       "tp1": 1.0,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-networks rule",
       "rugcheck": 29,
       "risks": [
         "High holder correlation"
       ],
-      "realised_sol": 0.0,
+      "realised_sol": 0.24874895795443797,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/dagau7g32pmkjf8ng2372xo2hygfgenx5yn7mwmkhfgf",
       "v": 2,
-      "mev_sol": 0.006015399422521655,
-      "swaps": 1,
+      "mev_sol": 0.012051859642248808,
+      "swaps": 2,
       "entry_liq": 81093,
       "at_entry": {
         "px": 0.001035,
@@ -3065,10 +3065,11 @@
     "2026-11-12 00:09 UTC SELL 100% HUNG -> 0.179 SOL @ $0.0006891: event exit: price -25% in 5 minutes, -22% from entry",
     "2026-11-12 02:46 UTC BUY BAGEL 0.25 SOL @ $0.001080274 (mc $1,065,177): v-networks rule",
     "2026-11-12 03:02 UTC BUY DESSA 0.25 SOL @ $0.0088326554 (mc $8,647,890): v-networks rule",
-    "2026-11-12 03:17 UTC BUY NOBUSHIBA 0.25 SOL @ $0.0010352652 (mc $1,022,562): v-networks rule"
+    "2026-11-12 03:17 UTC BUY NOBUSHIBA 0.25 SOL @ $0.0010352652 (mc $1,022,562): v-networks rule",
+    "2026-11-12 04:36 UTC SELL 50% NOBUSHIBA -> 0.249 SOL @ $0.002222: take-profit at +115%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-12 04:35 UTC"
+  "last_mark": "2026-11-12 04:36 UTC"
 }
