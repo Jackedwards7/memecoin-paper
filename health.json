@@ -4,12 +4,13 @@
   "started": "2026-11-12 03:06 UTC",
   "shadow": false,
   "errors_in_a_row": 0,
-  "last_ok": "2026-11-12 22:34 UTC",
-  "last_ok_ts": 1794522855.359001,
-  "last_tick": "2026-11-12 22:35 UTC",
-  "last_tick_ts": 1794522909.0509934,
-  "ticks": 11246,
+  "last_ok": "2026-11-12 22:45 UTC",
+  "last_ok_ts": 1794523517.102373,
+  "last_tick": "2026-11-12 22:45 UTC",
+  "last_tick_ts": 1794523528.2525032,
+  "ticks": 11257,
   "last_cycle": "2026-11-12 22:34 UTC",
   "last_cycle_ts": 1794522898.025139,
-  "cycle_errors": 0
+  "cycle_errors": 0,
+  "last_error": "2026-11-12 22:40 UTC CalledProcessError: Command '['curl', '-sf', '-m', '20', '-A', 'memepaper/1.0', 'https://api.dexscreener.com/tokens/v1/solana/PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump,8ryRQD6jWfxnSdvvVbQ8Tzwo1NgGP7w1X1nQPpb4pump,5qaP7"
 }

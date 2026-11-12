@@ -80,7 +80,7 @@
       "tokens": 57498.54253728371,
       "entry_px": 0.0003551637850082578,
       "entry_mc": 355005,
-      "peak_px": 0.0004344,
+      "peak_px": 0.0004405,
       "stop": -0.1,
       "tp1": 1.0,
       "tp1_done": false,
@@ -4320,5 +4320,5 @@
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-12 22:34 UTC"
+  "last_mark": "2026-11-12 22:45 UTC"
 }
