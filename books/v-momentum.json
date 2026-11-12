@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.301235513519595,
+  "cash_sol": 6.536776453641981,
   "positions": {
     "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": {
       "symbol": "NIO",
@@ -375,24 +375,24 @@
       "symbol": "Max",
       "opened": "2026-11-12 16:41 UTC",
       "cost_sol": 0.25,
-      "tokens": 11430.562815640485,
+      "tokens": 5715.281407820243,
       "entry_px": 0.001706205356162701,
       "entry_mc": 1702587,
-      "peak_px": 0.003304,
+      "peak_px": 0.003502,
       "stop": -0.35,
       "tp1": 1.0,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-momentum rule",
       "rugcheck": 29,
       "risks": [
         "Copycat token"
       ],
-      "realised_sol": 0.0,
+      "realised_sol": 0.2355409401223859,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/eoe22hdca9rhtbwkl6nnzmzxfuzf35xkxobcvfaf1vwq",
       "v": 2,
-      "mev_sol": 0.006155361319709467,
-      "swaps": 1,
+      "mev_sol": 0.012285065867950242,
+      "swaps": 2,
       "entry_liq": 168704.92,
       "at_entry": {
         "px": 0.001706,
@@ -3786,10 +3786,11 @@
     "2026-11-12 14:44 UTC SELL 100% BAGEL -> 0.204 SOL @ $0.000934: event exit: price -31% in 5 minutes, -14% from entry",
     "2026-11-12 14:48 UTC BUY NOBUSHIBA 0.25 SOL @ $0.0009102408 (mc $898,296): v-momentum rule",
     "2026-11-12 16:17 UTC SELL 100% NOBUSHIBA -> 0.176 SOL @ $0.0007058: event exit: price -43% in 5 minutes, -22% from entry",
-    "2026-11-12 16:41 UTC BUY Max 0.25 SOL @ $0.0017062054 (mc $1,702,587): v-momentum rule"
+    "2026-11-12 16:41 UTC BUY Max 0.25 SOL @ $0.0017062054 (mc $1,702,587): v-momentum rule",
+    "2026-11-12 19:23 UTC SELL 50% Max -> 0.236 SOL @ $0.003502: take-profit at +105%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-12 19:21 UTC"
+  "last_mark": "2026-11-12 19:23 UTC"
 }
