@@ -1,12 +1,12 @@
-MOVERS 2026-11-12T13:28:20Z
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +7%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +9%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +18%
-77HqxiDCgYfXUsDXDD6YVefPhTTz1Z2n8jX4gTxipump updog +46%
-HngZXdHcBiDEX8uhqexnFqUzHsf4y9Y8a4n1F6q8pump SCAMSON +30011%
-5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -22%
-8AAVuQpJcqpvCuutxyBTVvgBEXZJSkZoNv1sExpBpump NOBUSHIBA -14%
-4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao -11%
-GMzuntWYJLpNuCizrSR7ZXggiMdDzTNiEmSNHHunpump dreams -11%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -9%
+MOVERS 2026-11-12T13:44:20Z
+BcHEaaTCvycPwwsJ9yQTXdHP9X2gCLkznDbZ8VySpump Jotchua +6%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +8%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +10%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +12%
+HngZXdHcBiDEX8uhqexnFqUzHsf4y9Y8a4n1F6q8pump SCAMSON +28758%
+5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -21%
+8AAVuQpJcqpvCuutxyBTVvgBEXZJSkZoNv1sExpBpump NOBUSHIBA -16%
+4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao -16%
+GMzuntWYJLpNuCizrSR7ZXggiMdDzTNiEmSNHHunpump dreams -10%
+nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity -7%
 END
