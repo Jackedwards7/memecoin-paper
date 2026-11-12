@@ -1,8 +1,8 @@
 # Lessons
 
-366 closed trades labelled, every book. Written by the bot.
+367 closed trades labelled, every book. Written by the bot.
 
-- **slow-bleed**: 113 trades, mean -30%. Dacity (v-unpaid): -35% over 48h; CATE (v-unpaid): -22% over 48h
+- **slow-bleed**: 114 trades, mean -30%. CATE (v-unpaid): -22% over 48h; DESSA (v-mature): -42% over 27h
 - **other**: 112 trades, mean -31%. X (v-velocity): stop-loss at -38%; BORLY (v-unpaid): event exit: price -22% in 5 minutes, -1% from entry
 - **won-held**: 79 trades, mean +37%. NIHAO (v-unease): +54%, peak +333%; NIHAO (v-velocity): +54%, peak +333%
 - **bought-spike**: 28 trades, mean -30%. DONNA (v-velocity): up 173% in 24h at entry, peak +1%; DONNA (v-loose): up 168% in 24h at entry, peak +0%
