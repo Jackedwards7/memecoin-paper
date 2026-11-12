@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.502604142194075,
+  "cash_sol": 7.252604142194075,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -356,6 +356,80 @@
       },
       "reentry": true,
       "since_loss_h": 2.9
+    },
+    "8AAVuQpJcqpvCuutxyBTVvgBEXZJSkZoNv1sExpBpump": {
+      "symbol": "NOBUSHIBA",
+      "opened": "2026-11-12 03:17 UTC",
+      "cost_sol": 0.25,
+      "tokens": 19288.100921725123,
+      "entry_px": 0.0010352652177129961,
+      "entry_mc": 1022562,
+      "peak_px": 0.0010352652177129961,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-networks rule",
+      "rugcheck": 29,
+      "risks": [
+        "High holder correlation"
+      ],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/dagau7g32pmkjf8ng2372xo2hygfgenx5yn7mwmkhfgf",
+      "v": 2,
+      "mev_sol": 0.006015399422521655,
+      "swaps": 1,
+      "entry_liq": 81093,
+      "at_entry": {
+        "px": 0.001035,
+        "liq": 81093,
+        "mc": 1022562,
+        "dex": "pumpswap",
+        "age_h": 25.85,
+        "vol_h1": 268459.04,
+        "vol_h24": 875023.86,
+        "buys_h1": 3356,
+        "sells_h1": 1655,
+        "buys_h24": 15239,
+        "sells_h24": 10899,
+        "trades_h24": 26138,
+        "avg_trade": 33.48,
+        "m5": -0.08,
+        "h1": 137,
+        "h6": 384,
+        "h24": 474,
+        "eligible": true,
+        "v": 3,
+        "pool": "Dagau7G32pmkjf8ng2372xo2hyGfgenx5Yn7mWMkHfGF",
+        "m5_raw": -0.08,
+        "buys_m5": 336,
+        "sells_m5": 300,
+        "buys_h6": 4712,
+        "sells_h6": 3223,
+        "vol_m5": 9655.73,
+        "vol_h6": 388716.64,
+        "liq_base": 39879151,
+        "liq_quote": 478.8845,
+        "fdv": 1022562,
+        "boosts": 100,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.1274,
+          "paid": 0.0005267768891502906,
+          "vs_paid": 0.8304,
+          "off_peak": 0.0,
+          "accel": 1.3586,
+          "candles": 96,
+          "unease": 0,
+          "known": 2,
+          "signs": []
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 3.1
     }
   },
   "closed": [
@@ -2990,10 +3064,11 @@
     "2026-11-12 00:05 UTC BUY HUNG 0.25 SOL @ $0.00088250248 (mc $847,775): v-networks rule",
     "2026-11-12 00:09 UTC SELL 100% HUNG -> 0.179 SOL @ $0.0006891: event exit: price -25% in 5 minutes, -22% from entry",
     "2026-11-12 02:46 UTC BUY BAGEL 0.25 SOL @ $0.001080274 (mc $1,065,177): v-networks rule",
-    "2026-11-12 03:02 UTC BUY DESSA 0.25 SOL @ $0.0088326554 (mc $8,647,890): v-networks rule"
+    "2026-11-12 03:02 UTC BUY DESSA 0.25 SOL @ $0.0088326554 (mc $8,647,890): v-networks rule",
+    "2026-11-12 03:17 UTC BUY NOBUSHIBA 0.25 SOL @ $0.0010352652 (mc $1,022,562): v-networks rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-12 03:16 UTC"
+  "last_mark": "2026-11-12 03:17 UTC"
 }
