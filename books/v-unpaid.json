@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 5.16557486051072,
+  "cash_sol": 4.91557486051072,
   "positions": {
     "8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump": {
       "symbol": "BLOB",
@@ -84,7 +84,7 @@
       "tokens": 4730.271003010809,
       "entry_px": 0.00427656787256461,
       "entry_mc": 4276498,
-      "peak_px": 0.005577,
+      "peak_px": 0.005585,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -288,6 +288,81 @@
           "vs_paid": -0.0443,
           "off_peak": -0.1555,
           "accel": -0.0146,
+          "candles": 96,
+          "unease": 2,
+          "known": 5,
+          "signs": [
+            "failed_high",
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 0.1
+    },
+    "5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump": {
+      "symbol": "swordcat",
+      "opened": "2026-11-12 03:50 UTC",
+      "cost_sol": 0.25,
+      "tokens": 20292.756680482715,
+      "entry_px": 0.0009848606482933788,
+      "entry_mc": 945258,
+      "peak_px": 0.0009848606482933788,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unpaid rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/8ewuf2o8acro7fqwepz3tkhkbbjndzu4ldk9scrpw83d",
+      "v": 2,
+      "mev_sol": 0.006010337780983291,
+      "swaps": 1,
+      "entry_liq": 127479.09,
+      "at_entry": {
+        "px": 0.0009847,
+        "liq": 127479.09,
+        "mc": 945258,
+        "dex": "pumpswap",
+        "age_h": 1074.61,
+        "vol_h1": 2474.79,
+        "vol_h24": 225463.33,
+        "buys_h1": 29,
+        "sells_h1": 20,
+        "buys_h24": 1513,
+        "sells_h24": 1266,
+        "trades_h24": 2779,
+        "avg_trade": 81.13,
+        "m5": 2.5,
+        "h1": 0.94,
+        "h6": -25.75,
+        "h24": 35.91,
+        "eligible": true,
+        "v": 3,
+        "pool": "8ewuF2o8ACro7fqWepZ3tKhkbBjndZU4Ldk9scRPw83d",
+        "m5_raw": 2.5,
+        "buys_m5": 8,
+        "sells_m5": 3,
+        "buys_h6": 500,
+        "sells_h6": 258,
+        "vol_m5": 1241.97,
+        "vol_h6": 58198.19,
+        "liq_base": 65504580,
+        "liq_quote": 757.6218,
+        "fdv": 945258,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0292,
+          "paid": 0.0010481403183726931,
+          "vs_paid": -0.0893,
+          "off_peak": -0.4055,
+          "accel": -0.0034,
           "candles": 96,
           "unease": 2,
           "known": 5,
@@ -2987,10 +3062,11 @@
     "2026-11-11 21:32 UTC SELL 100% DOPE -> 0.157 SOL @ $0.0007168: event exit: price -24% in 5 minutes, -30% from entry",
     "2026-11-12 02:58 UTC SELL 100% 67 -> 0.243 SOL @ $0.001303: time stop: 48h held, +2%, no take-profit",
     "2026-11-12 03:02 UTC BUY fone 0.25 SOL @ $0.0013391104 (mc $1,326,508): v-unpaid rule",
-    "2026-11-12 03:46 UTC SELL 100% FARTBOY -> 0.222 SOL @ $0.01777: time stop: 48h held, -6%, no take-profit"
+    "2026-11-12 03:46 UTC SELL 100% FARTBOY -> 0.222 SOL @ $0.01777: time stop: 48h held, -6%, no take-profit",
+    "2026-11-12 03:50 UTC BUY swordcat 0.25 SOL @ $0.00098486065 (mc $945,258): v-unpaid rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-12 03:46 UTC"
+  "last_mark": "2026-11-12 03:49 UTC"
 }
