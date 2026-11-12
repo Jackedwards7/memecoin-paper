@@ -1,27 +1,27 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.747995257173199,
+  "cash_sol": 7.060541646863255,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
       "opened": "2026-11-08 07:57 UTC",
       "cost_sol": 0.25,
-      "tokens": 19613.7484664358,
+      "tokens": 9806.8742332179,
       "entry_px": 0.0010952897421297372,
       "entry_mc": 1084865,
-      "peak_px": 0.002735,
+      "peak_px": 0.002743,
       "stop": -0.4,
       "tp1": 1.5,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-loose rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.3125463896900568,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/ehpzesdxtymvwz1iy5nt3lrnjy1xbc1kgqspl1kqnyiv",
       "v": 2,
-      "mev_sol": 0.005600985773496135,
-      "swaps": 1,
+      "mev_sol": 0.011613491786002149,
+      "swaps": 2,
       "entry_liq": 84342.8,
       "at_entry": {
         "px": 0.001095,
@@ -374,7 +374,7 @@
       "tokens": 18530.067686066723,
       "entry_px": 0.0010802739816785317,
       "entry_mc": 1065177,
-      "peak_px": 0.001096,
+      "peak_px": 0.001099,
       "stop": -0.4,
       "tp1": 1.5,
       "tp1_done": false,
@@ -3122,10 +3122,11 @@
     "2026-11-11 19:30 UTC SELL 100% three -> 0.192 SOL @ $0.0003553: time stop: 48h held, -18%, no take-profit",
     "2026-11-12 00:05 UTC BUY HUNG 0.25 SOL @ $0.00088250248 (mc $847,775): v-loose rule",
     "2026-11-12 00:09 UTC SELL 100% HUNG -> 0.179 SOL @ $0.0006891: event exit: price -25% in 5 minutes, -22% from entry",
-    "2026-11-12 02:46 UTC BUY BAGEL 0.25 SOL @ $0.001080274 (mc $1,065,177): v-loose rule"
+    "2026-11-12 02:46 UTC BUY BAGEL 0.25 SOL @ $0.001080274 (mc $1,065,177): v-loose rule",
+    "2026-11-12 03:21 UTC SELL 50% BRUH -> 0.313 SOL @ $0.002743: take-profit at +150%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-12 03:17 UTC"
+  "last_mark": "2026-11-12 03:21 UTC"
 }
