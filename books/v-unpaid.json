@@ -9,7 +9,7 @@
       "tokens": 3749.234384146735,
       "entry_px": 0.005418576279440444,
       "entry_mc": 5371264,
-      "peak_px": 0.006713,
+      "peak_px": 0.006752,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -84,7 +84,7 @@
       "tokens": 4730.271003010809,
       "entry_px": 0.00427656787256461,
       "entry_mc": 4276498,
-      "peak_px": 0.006226,
+      "peak_px": 0.006255,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -3068,5 +3068,5 @@
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-12 09:43 UTC"
+  "last_mark": "2026-11-12 09:52 UTC"
 }
