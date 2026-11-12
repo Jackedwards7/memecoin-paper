@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.716096541242895,
+  "cash_sol": 6.878877255770495,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -376,24 +376,24 @@
       "symbol": "Max",
       "opened": "2026-11-12 05:42 UTC",
       "cost_sol": 0.25,
-      "tokens": 7672.205030944071,
+      "tokens": 3836.1025154720355,
       "entry_px": 0.002596261429362367,
       "entry_mc": 2590256,
-      "peak_px": 0.00353,
+      "peak_px": 0.0037,
       "stop": -0.2,
       "tp1": 0.4,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-tight rule",
       "rugcheck": 29,
       "risks": [
         "Copycat token"
       ],
-      "realised_sol": 0.0,
+      "realised_sol": 0.16278071452759982,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/eoe22hdca9rhtbwkl6nnzmzxfuzf35xkxobcvfaf1vwq",
       "v": 2,
-      "mev_sol": 0.0060299083453931495,
-      "swaps": 1,
+      "mev_sol": 0.012067826471223363,
+      "swaps": 2,
       "entry_liq": 205849.41,
       "at_entry": {
         "px": 0.002596,
@@ -4186,10 +4186,11 @@
     "2026-11-12 03:49 UTC BUY NOBUSHIBA 0.25 SOL @ $0.0011242758 (mc $1,110,372): v-tight rule",
     "2026-11-12 04:33 UTC SELL 50% NOBUSHIBA -> 0.181 SOL @ $0.001771: take-profit at +58%: half sold, cost recovered",
     "2026-11-12 04:40 UTC SELL 100% NOBUSHIBA -> 0.182 SOL @ $0.001784: event exit: price -22% in 5 minutes, +59% from entry",
-    "2026-11-12 05:42 UTC BUY Max 0.25 SOL @ $0.0025962614 (mc $2,590,256): v-tight rule"
+    "2026-11-12 05:42 UTC BUY Max 0.25 SOL @ $0.0025962614 (mc $2,590,256): v-tight rule",
+    "2026-11-12 06:42 UTC SELL 50% Max -> 0.163 SOL @ $0.0037: take-profit at +43%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-12 06:41 UTC"
+  "last_mark": "2026-11-12 06:42 UTC"
 }
