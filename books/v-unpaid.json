@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 5.193273354142615,
+  "cash_sol": 4.943273354142615,
   "positions": {
     "GNggUoCrkgcshssMFn1AxRGEeiNpS7fFaLJMEbSWpump": {
       "symbol": "BTX",
@@ -299,6 +299,78 @@
       },
       "reentry": false,
       "since_loss_h": 0.1
+    },
+    "98kfF7rmsg1QDUEoCqNE7g7M1FdrTt92TEp2CLzypump": {
+      "symbol": "PAID",
+      "opened": "2026-11-12 11:52 UTC",
+      "cost_sol": 0.25,
+      "tokens": 13189.59315291914,
+      "entry_px": 0.0015001277727524837,
+      "entry_mc": 1247952,
+      "peak_px": 0.0015001277727524837,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unpaid rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/6e3jzltf4tqbwzm3f7a66jf8tfzn6mrqvrbdfgcnwara",
+      "v": 2,
+      "mev_sol": 0.006069434328720563,
+      "swaps": 1,
+      "entry_liq": 241776.9,
+      "at_entry": {
+        "px": 0.0015,
+        "liq": 241776.9,
+        "mc": 1247952,
+        "dex": "pumpswap",
+        "age_h": 1384.51,
+        "vol_h1": 12599.07,
+        "vol_h24": 313573.38,
+        "buys_h1": 68,
+        "sells_h1": 65,
+        "buys_h24": 1941,
+        "sells_h24": 1606,
+        "trades_h24": 3547,
+        "avg_trade": 88.41,
+        "m5": 0.94,
+        "h1": 1.57,
+        "h6": 20.46,
+        "h24": 26.38,
+        "eligible": true,
+        "v": 3,
+        "pool": "6e3jZLtf4tQbWZm3f7A66jF8tfZn6MRQVrbDFgcNWarA",
+        "m5_raw": 0.94,
+        "buys_m5": 7,
+        "sells_m5": 5,
+        "buys_h6": 1214,
+        "sells_h6": 999,
+        "vol_m5": 507.85,
+        "vol_h6": 193706.77,
+        "liq_base": 81329591,
+        "liq_quote": 1452.9791,
+        "fdv": 1247952,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0193,
+          "paid": 0.0014265617789945013,
+          "vs_paid": 0.1695,
+          "off_peak": -0.128,
+          "accel": 0.1807,
+          "candles": 96,
+          "unease": 0,
+          "known": 5,
+          "signs": []
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 8.1
     }
   },
   "closed": [
@@ -3070,10 +3142,11 @@
     "2026-11-12 03:02 UTC BUY fone 0.25 SOL @ $0.0013391104 (mc $1,326,508): v-unpaid rule",
     "2026-11-12 03:46 UTC SELL 100% FARTBOY -> 0.222 SOL @ $0.01777: time stop: 48h held, -6%, no take-profit",
     "2026-11-12 03:50 UTC BUY swordcat 0.25 SOL @ $0.00098486065 (mc $945,258): v-unpaid rule",
-    "2026-11-12 11:46 UTC SELL 100% BLOB -> 0.278 SOL @ $0.006336: time stop: 48h held, +17%, no take-profit"
+    "2026-11-12 11:46 UTC SELL 100% BLOB -> 0.278 SOL @ $0.006336: time stop: 48h held, +17%, no take-profit",
+    "2026-11-12 11:52 UTC BUY PAID 0.25 SOL @ $0.0015001278 (mc $1,247,952): v-unpaid rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-12 11:46 UTC"
+  "last_mark": "2026-11-12 11:52 UTC"
 }
