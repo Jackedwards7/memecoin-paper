@@ -1,12 +1,12 @@
-MOVERS 2026-11-12T13:12:17Z
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +7%
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +8%
-DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin +19%
-77HqxiDCgYfXUsDXDD6YVefPhTTz1Z2n8jX4gTxipump updog +49%
-HngZXdHcBiDEX8uhqexnFqUzHsf4y9Y8a4n1F6q8pump SCAMSON +26108%
+MOVERS 2026-11-12T13:28:20Z
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +7%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +9%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +18%
+77HqxiDCgYfXUsDXDD6YVefPhTTz1Z2n8jX4gTxipump updog +46%
+HngZXdHcBiDEX8uhqexnFqUzHsf4y9Y8a4n1F6q8pump SCAMSON +30011%
 5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -22%
-5w3wVdJaESaJKyLmStM6Hv9UyUkmZ1b9DLQquAqqpump SID -18%
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB -12%
+8AAVuQpJcqpvCuutxyBTVvgBEXZJSkZoNv1sExpBpump NOBUSHIBA -14%
 4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao -11%
-GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED -10%
+GMzuntWYJLpNuCizrSR7ZXggiMdDzTNiEmSNHHunpump dreams -11%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -9%
 END
