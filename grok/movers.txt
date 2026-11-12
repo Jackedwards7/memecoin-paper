@@ -1,12 +1,12 @@
-MOVERS 2026-11-12T00:20:59Z
-nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity +6%
-9AvytnUKsLxPxFHFqS6VLxaxt5p6BhYNr53SD2Chpump 67 +8%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +23%
-8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH +23%
-FZcbX6uBkeACEg38cFBqvQgTJiL98aKovQT23AfCpump UCI +77%
-HQNJhJyL1QJggnBSN434QVK1RsvcUMNNfkt1dskzpump HODL -18%
-5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat -10%
-DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin -9%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -8%
-4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao -8%
+MOVERS 2026-11-12T00:36:59Z
+5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat +7%
+34As1e1Kop9zBvu5e84kjg452Uigq8krcoGEJiWRpump UHI +8%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +13%
+nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity +17%
+8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH +18%
+34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG -21%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -19%
+DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -17%
+8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB -9%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -9%
 END
