@@ -1,12 +1,12 @@
-MOVERS 2026-11-12T04:05:21Z
-4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao +15%
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +20%
-8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER +31%
+MOVERS 2026-11-12T04:21:20Z
+4N1pRfEMnWAUE8rhyhqwnsWe6TNjuQFhgvNB3Nr9pump HODL +16%
+8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER +26%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +32%
 HQNJhJyL1QJggnBSN434QVK1RsvcUMNNfkt1dskzpump HODL +72%
-77HqxiDCgYfXUsDXDD6YVefPhTTz1Z2n8jX4gTxipump updog +711%
-npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -23%
-DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin -21%
-5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -12%
-8AAVuQpJcqpvCuutxyBTVvgBEXZJSkZoNv1sExpBpump NOBUSHIBA -10%
-CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi -8%
+77HqxiDCgYfXUsDXDD6YVefPhTTz1Z2n8jX4gTxipump updog +517%
+npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -25%
+DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin -17%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -10%
+Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT -7%
+8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH -7%
 END
