@@ -1,12 +1,12 @@
-MOVERS 2026-11-12T14:32:37Z
-Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT +14%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +15%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +16%
-DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD +78%
-4xgqefa5WcdHWKXzqvM9MRJqWYGaHVEUnpUL4Vq5pump HUNG +174%
-nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity -20%
-HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO -18%
-DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin -12%
-5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -12%
-CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump fone -11%
+MOVERS 2026-11-12T14:48:41Z
+Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT +6%
+PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH +9%
+4xgqefa5WcdHWKXzqvM9MRJqWYGaHVEUnpUL4Vq5pump HUNG +17%
+KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump RAMBO +19%
+DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD +54%
+4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao -16%
+DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin -15%
+HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO -13%
+nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity -13%
+CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump fone -13%
 END
