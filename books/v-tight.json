@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.681751532528456,
+  "cash_sol": 6.857060865923107,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -227,22 +227,22 @@
       "symbol": "NIO",
       "opened": "2026-11-12 01:25 UTC",
       "cost_sol": 0.25,
-      "tokens": 20599.841281637226,
+      "tokens": 10299.920640818613,
       "entry_px": 0.0009683861019736233,
       "entry_mc": 922545,
-      "peak_px": 0.00128,
+      "peak_px": 0.001451,
       "stop": -0.2,
       "tp1": 0.4,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-tight rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.175309333394651,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/b4wmjc6pvjctu3qsvs3ett9mr4m5v5jbkrqctwantc71",
       "v": 2,
-      "mev_sol": 0.006021194605009633,
-      "swaps": 1,
+      "mev_sol": 0.01218566261142068,
+      "swaps": 2,
       "entry_liq": 108004.4,
       "at_entry": {
         "px": 0.0009682,
@@ -305,7 +305,7 @@
       "tokens": 2198.011999207137,
       "entry_px": 0.008814709613500225,
       "entry_mc": 8689286,
-      "peak_px": 0.01205,
+      "peak_px": 0.01213,
       "stop": -0.2,
       "tp1": 0.4,
       "tp1_done": false,
@@ -4349,10 +4349,11 @@
     "2026-11-12 09:44 UTC BUY SCAMSON 0.25 SOL @ $0.0016580425 (mc $1,621,575): v-tight rule",
     "2026-11-12 09:57 UTC SELL 100% SCAMSON -> 0.000 SOL @ $6.913e-06: event exit: liquidity down 99% since entry, -100% from entry",
     "2026-11-12 14:33 UTC BUY RAMBO 0.25 SOL @ $0.0088147096 (mc $8,689,286): v-tight rule",
-    "2026-11-12 14:44 UTC SELL 100% BAGEL -> 0.204 SOL @ $0.000934: event exit: price -31% in 5 minutes, -14% from entry"
+    "2026-11-12 14:44 UTC SELL 100% BAGEL -> 0.204 SOL @ $0.000934: event exit: price -31% in 5 minutes, -14% from entry",
+    "2026-11-12 15:01 UTC SELL 50% NIO -> 0.175 SOL @ $0.001451: take-profit at +50%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-12 14:59 UTC"
+  "last_mark": "2026-11-12 15:01 UTC"
 }
