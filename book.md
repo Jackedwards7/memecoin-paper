@@ -8,8 +8,8 @@ area: trading
 *Paper only: simulated fills from live DexScreener prices, 1.50% fee each side plus a size/liquidity
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
-**Equity 9.610 SOL** (start 10.0 SOL, -3.9%) · cash 9.231 SOL ·
-open 1 · closed 15 (5 won) · SOL $81.37 · marked 2026-11-12 20:35 UTC
+**Equity 9.606 SOL** (start 10.0 SOL, -3.9%) · cash 9.231 SOL ·
+open 1 · closed 15 (5 won) · SOL $81.38 · marked 2026-11-12 20:39 UTC
 
 **Benchmark (vs just holding SOL): -3.9%.** The book is counted in SOL, so its SOL
 return *is* its edge over holding SOL. In dollars: $782 vs $949 at the start
@@ -23,11 +23,11 @@ control position on a random gate pass (`control.json`, same mechanical exits, n
 
 | Arm | Closed | Won | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|
-| Picks | 8 | 3 | +0.455 | +20.2% |
+| Picks | 8 | 3 | +0.452 | +20.1% |
 | Control | 9 | 0 | -0.750 | -33.3% |
 
 Costs in every fill: 1.5% fee each side, size/liquidity slippage, and a $0.50 sandwich charge per swap.
-If every swap were sandwiched at the $5 median: picks -0.485 SOL, control -1.635 SOL.
+If every swap were sandwiched at the $5 median: picks -0.488 SOL, control -1.635 SOL.
 
 **Gate value** (raw price moves, no costs; the gate earns its keep if passes beat rejects):
 passes 44 tracked, median 1d -65%, 3d -93%, 7d -98% · rejects 57 tracked, median 1d -37%, 3d -51%, 7d -76%.
@@ -39,19 +39,19 @@ Same gate, size, costs and exit code as the picks; rules in `CLAUDE.md`. Judged 
 
 | Arm | Closed | Won | Open | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|---|
-| mech | 6 | 2 | 1 | +0.508 | +29.0% |
+| mech | 6 | 2 | 1 | +0.504 | +28.8% |
 | v-dip | 0 | 0 | 0 | +0.000 | +0.0% |
-| v-loose | 39 | 9 | 6 | -1.496 | -13.3% |
+| v-loose | 39 | 9 | 6 | -1.537 | -13.7% |
 | v-low-bundle | 44 | 9 | 5 | -2.302 | -18.8% |
-| v-mature | 14 | 5 | 1 | -0.377 | -10.0% |
+| v-mature | 14 | 5 | 1 | -0.384 | -10.3% |
 | v-momentum | 44 | 9 | 5 | -2.302 | -18.8% |
-| v-networks | 40 | 9 | 3 | -1.040 | -9.7% |
-| v-no-spike | 23 | 6 | 5 | +6771.136 | +96730.5% |
-| v-swing | 48 | 11 | 5 | -1.447 | -10.9% |
-| v-tight | 52 | 12 | 4 | -1.693 | -12.1% |
-| v-unease | 44 | 10 | 4 | -0.829 | -6.9% |
-| v-unpaid | 34 | 4 | 5 | -3.811 | -39.1% |
-| v-velocity | 42 | 10 | 6 | -1.409 | -11.7% |
+| v-networks | 40 | 9 | 3 | -1.078 | -10.0% |
+| v-no-spike | 24 | 6 | 4 | +6771.122 | +96730.3% |
+| v-swing | 48 | 11 | 5 | -1.485 | -11.2% |
+| v-tight | 52 | 12 | 4 | -1.715 | -12.2% |
+| v-unease | 44 | 10 | 4 | -0.858 | -7.1% |
+| v-unpaid | 34 | 4 | 5 | -3.819 | -39.2% |
+| v-velocity | 42 | 10 | 6 | -1.443 | -12.0% |
 | v-x-exit | 0 | 0 | 0 | +0.000 | +0.0% |
 | v-x-organic | 0 | 0 | 0 | +0.000 | +0.0% |
 
@@ -71,7 +71,7 @@ Each coin against its own normal. Information only: no rule on this book reads i
 
 Last check 2026-11-11: 90 of 96 snapshots, 14968 rows, 184 coins, 65.7 MB. No problems.
 
-GeckoTerminal: 30129 calls, 239 refused, 16 failed, 139 waiting. Insider flag fired on 0 of 79 coins where RugCheck's graph found insiders.
+GeckoTerminal: 30141 calls, 239 refused, 16 failed, 137 waiting. Insider flag fired on 0 of 79 coins where RugCheck's graph found insiders.
 
 Fills: a round trip on Jupiter returned -0.7% (median of 180 quotes, before priority fees); paper charged -7.7%.
 
@@ -83,7 +83,7 @@ Learning run 2026-11-08: 2 of 14 arms have 15+ trades. Promoted: none. Proposes 
 
 | Coin | Mint | Opened | Cost SOL | Entry mcap | Move | Value SOL (incl. realised) | Thesis |
 |---|---|---|---|---|---|---|---|
-| BRUH | `PgFtGGqu…` | 2026-11-08 08:15 UTC | 0.25 | $1,080,245 | +187% | 0.616 | Gate pass; 28h pumpswap coin, mc $1.07M, liq $84k (thin), 1h +42%, 24h +84%, 5m -2.2% (no spike now), 1h buys 163 vs sells 92. Other passes COGE (24h -92%) and GIGAHUG (11.7h, +1775% 24h vertical) skipped; GATO/HELL already held. |
+| BRUH | `PgFtGGqu…` | 2026-11-08 08:15 UTC | 0.25 | $1,080,245 | +185% | 0.612 | Gate pass; 28h pumpswap coin, mc $1.07M, liq $84k (thin), 1h +42%, 24h +84%, 5m -2.2% (no spike now), 1h buys 163 vs sells 92. Other passes COGE (24h -92%) and GIGAHUG (11.7h, +1775% 24h vertical) skipped; GATO/HELL already held. |
 
 ## Closed
 
