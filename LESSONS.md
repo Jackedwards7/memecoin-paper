@@ -1,8 +1,8 @@
 # Lessons
 
-347 closed trades labelled, every book. Written by the bot.
+348 closed trades labelled, every book. Written by the bot.
 
-- **other**: 111 trades, mean -31%. X (v-momentum): stop-loss at -38%; X (v-velocity): stop-loss at -38%
+- **other**: 112 trades, mean -31%. X (v-velocity): stop-loss at -38%; BORLY (v-unpaid): event exit: price -22% in 5 minutes, -1% from entry
 - **slow-bleed**: 111 trades, mean -30%. BAGEL (v-velocity): -39% over 15h; NIO (v-unease): -28% over 48h
 - **won-held**: 64 trades, mean +39%. BRUH (v-low-bundle): +13%, peak +39%; BRUH (v-momentum): +13%, peak +39%
 - **bought-spike**: 28 trades, mean -30%. DONNA (v-velocity): up 173% in 24h at entry, peak +1%; DONNA (v-loose): up 168% in 24h at entry, peak +0%
