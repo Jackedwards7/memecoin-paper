@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.446137174762581,
+  "cash_sol": 6.196137174762581,
   "positions": {
     "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": {
       "symbol": "Rocco",
@@ -375,6 +375,79 @@
       },
       "reentry": false,
       "since_loss_h": 3.0
+    },
+    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
+      "symbol": "JOB",
+      "opened": "2026-11-13 03:38 UTC",
+      "cost_sol": 0.25,
+      "tokens": 11639.393346264409,
+      "entry_px": 0.0016292601715437558,
+      "entry_mc": 1587409,
+      "peak_px": 0.0016292601715437558,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-low-bundle rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/hauvbmnthcfmg9srxmvz1gaxnpu955hkpdsasc2cx4c8",
+      "v": 2,
+      "mev_sol": 0.006325910931174089,
+      "swaps": 1,
+      "entry_liq": 123722.37,
+      "at_entry": {
+        "px": 0.001629,
+        "liq": 123722.37,
+        "mc": 1587409,
+        "dex": "pumpswap",
+        "age_h": 392.42,
+        "vol_h1": 38234.27,
+        "vol_h24": 854127.03,
+        "buys_h1": 165,
+        "sells_h1": 155,
+        "buys_h24": 4204,
+        "sells_h24": 5148,
+        "trades_h24": 9352,
+        "avg_trade": 91.33,
+        "m5": -0.33,
+        "h1": 7.23,
+        "h6": 3.76,
+        "h24": 33.49,
+        "eligible": true,
+        "v": 3,
+        "pool": "HAUVBmNthCFmG9SRXMvZ1GAXNpU955hkPdSAsC2cx4C8",
+        "m5_raw": -0.33,
+        "buys_m5": 9,
+        "sells_m5": 12,
+        "buys_h6": 956,
+        "sells_h6": 1103,
+        "vol_m5": 2898.8,
+        "vol_h6": 229106.76,
+        "liq_base": 38227616,
+        "liq_quote": 776.3659,
+        "fdv": 1587409,
+        "boosts": null,
+        "links": [
+          "telegram",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0285,
+          "paid": 0.0014029737723931345,
+          "vs_paid": 0.1129,
+          "off_peak": -0.1233,
+          "accel": 0.0689,
+          "candles": 96,
+          "unease": 0,
+          "known": 5,
+          "signs": []
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 0.2
     }
   },
   "closed": [
@@ -4043,10 +4116,11 @@
     "2026-11-12 20:42 UTC BUY three 0.25 SOL @ $0.00035916282 (mc $358,980): v-low-bundle rule",
     "2026-11-12 21:19 UTC SELL 100% Max -> 0.142 SOL @ $0.002146: trailing stop: 40% off peak, +26% from entry",
     "2026-11-12 23:22 UTC BUY inuhao 0.25 SOL @ $0.0013903004 (mc $1,385,646): v-low-bundle rule",
-    "2026-11-13 03:28 UTC SELL 100% meowl -> 0.159 SOL @ $0.0002615: stop-loss at -35%"
+    "2026-11-13 03:28 UTC SELL 100% meowl -> 0.159 SOL @ $0.0002615: stop-loss at -35%",
+    "2026-11-13 03:38 UTC BUY JOB 0.25 SOL @ $0.0016292602 (mc $1,587,409): v-low-bundle rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-13 03:33 UTC"
+  "last_mark": "2026-11-13 03:38 UTC"
 }

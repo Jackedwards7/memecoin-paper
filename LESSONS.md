@@ -1,9 +1,9 @@
 # Lessons
 
-390 closed trades labelled, every book. Written by the bot.
+391 closed trades labelled, every book. Written by the bot.
 
 - **slow-bleed**: 123 trades, mean -29%. DOPE (v-unpaid): -37% over 14h; 67 (v-unpaid): -3% over 48h
-- **other**: 117 trades, mean -30%. meowl (v-swing): stop-loss at -10%; meowl (v-tight): stop-loss at -20%
+- **other**: 118 trades, mean -30%. meowl (v-tight): stop-loss at -20%; DESSA (v-swing): stop-loss at -18%
 - **won-held**: 80 trades, mean +37%. NIHAO (v-velocity): +54%, peak +333%; DacityCoin (v-unpaid): +1%, peak +73%
 - **bought-spike**: 36 trades, mean -30%. HUNG (v-swing): up 7335% in 24h at entry, peak +0%; HUNG (v-unease): up 7335% in 24h at entry, peak +0%
 - **rug**: 17 trades, mean -100%. UODF (v-unpaid): event exit: liquidity down 87% since entry, -98% from entry; UODF (v-unpaid): event exit: liquidity down 49% since entry, -100% from entry

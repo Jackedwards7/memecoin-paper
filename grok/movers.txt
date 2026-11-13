@@ -1,12 +1,12 @@
-MOVERS 2026-11-13T03:22:38Z
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +9%
-34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG +10%
-FyHakvZH3L4UABSQYK7e9ECEzWV37u7GTkmAbHXspump inuhao +14%
+MOVERS 2026-11-13T03:38:38Z
+5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max +9%
+FyHakvZH3L4UABSQYK7e9ECEzWV37u7GTkmAbHXspump inuhao +17%
 ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +17%
 7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +18%
-Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump CATE -24%
-5w3wVdJaESaJKyLmStM6Hv9UyUkmZ1b9DLQquAqqpump SID -15%
-5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat -11%
-Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT -9%
-DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -9%
+DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS +19%
+BcHEaaTCvycPwwsJ9yQTXdHP9X2gCLkznDbZ8VySpump Jotchua -23%
+Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump CATE -16%
+Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT -15%
+4N1pRfEMnWAUE8rhyhqwnsWe6TNjuQFhgvNB3Nr9pump HODL -14%
+5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat -12%
 END
