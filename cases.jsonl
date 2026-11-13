@@ -902,3 +902,11 @@
 {"after": "v-low-bundle:8AAVuQpJcqpvCuutxyBTVvgBEXZJSkZoNv1sExpBpump:2026-11-12 16:17 UTC", "h": 24, "px": 2.673e-06, "vs_exit": -0.9962}
 {"after": "v-momentum:8AAVuQpJcqpvCuutxyBTVvgBEXZJSkZoNv1sExpBpump:2026-11-12 16:17 UTC", "h": 24, "px": 2.673e-06, "vs_exit": -0.9962}
 {"after": "v-velocity:8AAVuQpJcqpvCuutxyBTVvgBEXZJSkZoNv1sExpBpump:2026-11-12 16:17 UTC", "h": 24, "px": 2.673e-06, "vs_exit": -0.9962}
+{"after": "v-loose:KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump:2026-11-12 16:47 UTC", "h": 24, "px": 0.01276, "vs_exit": 0.0476}
+{"after": "v-mature:KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump:2026-11-12 16:47 UTC", "h": 24, "px": 0.01276, "vs_exit": 0.0476}
+{"after": "v-networks:KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump:2026-11-12 16:47 UTC", "h": 24, "px": 0.01276, "vs_exit": 0.0476}
+{"after": "v-no-spike:KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump:2026-11-12 16:47 UTC", "h": 24, "px": 0.01276, "vs_exit": 0.0476}
+{"after": "v-swing:KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump:2026-11-12 16:47 UTC", "h": 24, "px": 0.01276, "vs_exit": 0.0476}
+{"after": "v-tight:KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump:2026-11-12 16:47 UTC", "h": 24, "px": 0.01276, "vs_exit": 0.0476}
+{"after": "v-unease:KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump:2026-11-12 16:47 UTC", "h": 24, "px": 0.01276, "vs_exit": 0.0476}
+{"after": "v-velocity:KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump:2026-11-12 16:47 UTC", "h": 24, "px": 0.01276, "vs_exit": 0.0476}
