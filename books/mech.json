@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 9.64123643664512,
+  "cash_sol": 9.39123643664512,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -146,6 +146,78 @@
       },
       "reentry": false,
       "since_loss_h": 4.0
+    },
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "opened": "2026-11-13 16:37 UTC",
+      "cost_sol": 0.25,
+      "tokens": 2378.3132914840035,
+      "entry_px": 0.008031532291559947,
+      "entry_mc": 7926891,
+      "peak_px": 0.008031532291559947,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "Gate pass; mature pumpswap coin (1924h), mc $7.8M, liq $298k, 1h +30.8%, 24h +37%, 5m +4.2% (no spike), 1h buys 1257 vs sells 915, vol1h $220k. Other universe coins CBUCKS (14% wallet) and WASTED (copycat) failed gate.",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/5e3dxlxgwmtdcoka51wyyakttjfzbwqcoyuhbui5gt2m",
+      "v": 2,
+      "mev_sol": 0.00628140703517588,
+      "swaps": 1,
+      "entry_liq": 300243.16,
+      "at_entry": {
+        "px": 0.008031,
+        "liq": 300243.16,
+        "mc": 7926891,
+        "dex": "pumpswap",
+        "age_h": 1924.16,
+        "vol_h1": 221532.13,
+        "vol_h24": 1494016.99,
+        "buys_h1": 1246,
+        "sells_h1": 915,
+        "buys_h24": 37106,
+        "sells_h24": 18204,
+        "trades_h24": 55310,
+        "avg_trade": 27.01,
+        "m5": 1.67,
+        "h1": 33.29,
+        "h6": 56.77,
+        "h24": 37.76,
+        "eligible": true,
+        "v": 3,
+        "pool": "5E3dXLXGwmTDCokA51WYYaKttjFZBwqCoyUHBUi5gt2m",
+        "m5_raw": 1.67,
+        "buys_m5": 60,
+        "sells_m5": 63,
+        "buys_h6": 7745,
+        "sells_h6": 4371,
+        "vol_m5": 24099.25,
+        "vol_h6": 634206.52,
+        "liq_base": 18801099,
+        "liq_quote": 1874.1229,
+        "fdv": 7926588,
+        "boosts": 100,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0443,
+          "paid": 0.005374527817940916,
+          "vs_paid": 0.4017,
+          "off_peak": -0.0086,
+          "accel": 0.3284,
+          "candles": 96,
+          "unease": 0,
+          "known": 5,
+          "signs": []
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 20.4
     }
   },
   "closed": [
@@ -542,5 +614,5 @@
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-13 16:35 UTC"
+  "last_mark": "2026-11-13 16:37 UTC"
 }
