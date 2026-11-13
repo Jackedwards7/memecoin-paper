@@ -883,3 +883,12 @@
 {"after": "v-velocity:HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump:2026-11-12 14:06 UTC", "h": 24, "px": 0.005514, "vs_exit": 0.0228}
 {"after": "v-mature:HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump:2026-11-12 14:07 UTC", "h": 24, "px": 0.00563, "vs_exit": 0.0877}
 {"after": "v-loose:HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump:2026-11-12 14:22 UTC", "h": 24, "px": 0.00563, "vs_exit": 0.1544}
+{"after": "v-loose:Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump:2026-11-12 14:44 UTC", "h": 24, "px": 1.89e-06, "vs_exit": -0.998}
+{"after": "v-low-bundle:Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump:2026-11-12 14:44 UTC", "h": 24, "px": 1.89e-06, "vs_exit": -0.998}
+{"after": "v-momentum:Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump:2026-11-12 14:44 UTC", "h": 24, "px": 1.89e-06, "vs_exit": -0.998}
+{"after": "v-networks:Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump:2026-11-12 14:44 UTC", "h": 24, "px": 1.89e-06, "vs_exit": -0.998}
+{"after": "v-no-spike:Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump:2026-11-12 14:44 UTC", "h": 24, "px": 1.89e-06, "vs_exit": -0.998}
+{"after": "v-swing:Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump:2026-11-12 14:44 UTC", "h": 24, "px": 1.89e-06, "vs_exit": -0.998}
+{"after": "v-tight:Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump:2026-11-12 14:44 UTC", "h": 24, "px": 1.89e-06, "vs_exit": -0.998}
+{"after": "v-unease:Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump:2026-11-12 14:44 UTC", "h": 24, "px": 1.89e-06, "vs_exit": -0.998}
+{"after": "v-velocity:Gb7gExpwNdth2iq3Ppio6c423jEP6TYkWPkRkAUpump:2026-11-12 14:44 UTC", "h": 24, "px": 1.89e-06, "vs_exit": -0.998}

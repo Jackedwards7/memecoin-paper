@@ -1,9 +1,9 @@
 # Lessons
 
-409 closed trades labelled, every book. Written by the bot.
+418 closed trades labelled, every book. Written by the bot.
 
 - **slow-bleed**: 133 trades, mean -30%. GATO (v-mature): -41% over 35h; GATO (v-loose): -44% over 20h
-- **other**: 120 trades, mean -30%. DESSA (v-tight): stop-loss at -23%; NOBUSHIBA (v-unease): event exit: price -23% in 5 minutes, -5% from entry
+- **other**: 129 trades, mean -29%. BAGEL (v-unease): event exit: price -31% in 5 minutes, -14% from entry; BAGEL (v-velocity): event exit: price -31% in 5 minutes, -14% from entry
 - **won-held**: 84 trades, mean +37%. NOBUSHIBA (v-tight): +45%, peak +108%; BLOB (v-unpaid): +11%, peak +25%
 - **bought-spike**: 36 trades, mean -30%. HUNG (v-swing): up 7335% in 24h at entry, peak +0%; HUNG (v-unease): up 7335% in 24h at entry, peak +0%
 - **rug**: 18 trades, mean -100%. UODF (v-unpaid): event exit: liquidity down 49% since entry, -100% from entry; SCAMSON (v-tight): event exit: liquidity down 99% since entry, -100% from entry
