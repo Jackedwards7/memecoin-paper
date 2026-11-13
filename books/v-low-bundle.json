@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.196137174762581,
+  "cash_sol": 6.436613830559379,
   "positions": {
     "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": {
       "symbol": "Rocco",
@@ -158,7 +158,7 @@
       "tokens": 1552.240619500273,
       "entry_px": 0.012600833114583085,
       "entry_mc": 12428103,
-      "peak_px": 0.01363,
+      "peak_px": 0.01373,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -305,22 +305,22 @@
       "symbol": "inuhao",
       "opened": "2026-11-12 23:22 UTC",
       "cost_sol": 0.25,
-      "tokens": 14070.331840322324,
+      "tokens": 7035.165920161162,
       "entry_px": 0.0013903003654782225,
       "entry_mc": 1385646,
-      "peak_px": 0.002763,
+      "peak_px": 0.002787,
       "stop": -0.35,
       "tp1": 1.0,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-low-bundle rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.24047665579679833,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/aqfc3qfatjggpqeuqgs65ruaqq5u2pin6myjz1eu4s31",
       "v": 2,
-      "mev_sol": 0.006137228427642077,
-      "swaps": 1,
+      "mev_sol": 0.01252945547954696,
+      "swaps": 2,
       "entry_liq": 94254.59,
       "at_entry": {
         "px": 0.00139,
@@ -4117,10 +4117,11 @@
     "2026-11-12 21:19 UTC SELL 100% Max -> 0.142 SOL @ $0.002146: trailing stop: 40% off peak, +26% from entry",
     "2026-11-12 23:22 UTC BUY inuhao 0.25 SOL @ $0.0013903004 (mc $1,385,646): v-low-bundle rule",
     "2026-11-13 03:28 UTC SELL 100% meowl -> 0.159 SOL @ $0.0002615: stop-loss at -35%",
-    "2026-11-13 03:38 UTC BUY JOB 0.25 SOL @ $0.0016292602 (mc $1,587,409): v-low-bundle rule"
+    "2026-11-13 03:38 UTC BUY JOB 0.25 SOL @ $0.0016292602 (mc $1,587,409): v-low-bundle rule",
+    "2026-11-13 04:46 UTC SELL 50% inuhao -> 0.240 SOL @ $0.002787: take-profit at +100%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-13 04:45 UTC"
+  "last_mark": "2026-11-13 04:46 UTC"
 }
