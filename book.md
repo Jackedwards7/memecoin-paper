@@ -8,12 +8,12 @@ area: trading
 *Paper only: simulated fills from live DexScreener prices, 1.50% fee each side plus a size/liquidity
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
-**Equity 9.579 SOL** (start 10.0 SOL, -4.2%) · cash 8.981 SOL ·
-open 2 · closed 15 (5 won) · SOL $79.60 · marked 2026-11-13 03:22 UTC
+**Equity 9.584 SOL** (start 10.0 SOL, -4.2%) · cash 8.981 SOL ·
+open 2 · closed 15 (5 won) · SOL $79.04 · marked 2026-11-13 03:28 UTC
 
 **Benchmark (vs just holding SOL): -4.2%.** The book is counted in SOL, so its SOL
-return *is* its edge over holding SOL. In dollars: $762 vs $949 at the start
-(-19.6%); SOL itself moved -16.1%.
+return *is* its edge over holding SOL. In dollars: $758 vs $949 at the start
+(-20.1%); SOL itself moved -16.7%.
 Review on 2026-11-30 or after 30 closed v2 trades (8/30), rules unchanged until then.
 
 ## v2 test (from 2026-11-03 01:30 UTC)
@@ -23,14 +23,14 @@ control position on a random gate pass (`control.json`, same mechanical exits, n
 
 | Arm | Closed | Won | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|
-| Picks | 8 | 3 | +0.424 | +17.0% |
+| Picks | 8 | 3 | +0.430 | +17.2% |
 | Control | 9 | 0 | -0.753 | -30.1% |
 
 Costs in every fill: 1.5% fee each side, size/liquidity slippage, and a $0.50 sandwich charge per swap.
-If every swap were sandwiched at the $5 median: picks -0.594 SOL, control -1.714 SOL.
+If every swap were sandwiched at the $5 median: picks -0.595 SOL, control -1.720 SOL.
 
 **Gate value** (raw price moves, no costs; the gate earns its keep if passes beat rejects):
-passes 44 tracked, median 1d -63%, 3d -93%, 7d -98% · rejects 57 tracked, median 1d -37%, 3d -56%, 7d -76%.
+passes 45 tracked, median 1d -63%, 3d -93%, 7d -98% · rejects 57 tracked, median 1d -37%, 3d -56%, 7d -76%.
 Legacy v1 positions (opened before v2, 1.25% fee model, sizes to 1 SOL) stay under the same exits and are left out of this table.
 
 ## Mechanical arms
@@ -39,19 +39,19 @@ Same gate, size, costs and exit code as the picks; rules in `CLAUDE.md`. Judged 
 
 | Arm | Closed | Won | Open | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|---|
-| mech | 6 | 2 | 2 | +0.477 | +23.8% |
+| mech | 6 | 2 | 2 | +0.482 | +24.1% |
 | v-dip | 0 | 0 | 0 | +0.000 | +0.0% |
-| v-loose | 40 | 9 | 6 | -1.503 | -13.1% |
-| v-low-bundle | 45 | 10 | 6 | -2.226 | -17.5% |
-| v-mature | 14 | 5 | 1 | -0.373 | -9.9% |
-| v-momentum | 45 | 10 | 6 | -2.226 | -17.5% |
-| v-networks | 40 | 9 | 4 | -0.981 | -8.9% |
-| v-no-spike | 25 | 6 | 5 | +6771.128 | +90281.7% |
-| v-swing | 49 | 11 | 5 | -1.338 | -9.9% |
-| v-tight | 52 | 12 | 5 | -1.573 | -11.0% |
-| v-unease | 44 | 10 | 5 | -0.622 | -5.1% |
-| v-unpaid | 34 | 4 | 5 | -3.823 | -39.2% |
-| v-velocity | 44 | 11 | 5 | -1.373 | -11.2% |
+| v-loose | 40 | 9 | 6 | -1.456 | -12.7% |
+| v-low-bundle | 46 | 10 | 5 | -2.205 | -17.3% |
+| v-mature | 14 | 5 | 1 | -0.371 | -9.9% |
+| v-momentum | 46 | 10 | 5 | -2.205 | -17.3% |
+| v-networks | 40 | 9 | 4 | -0.932 | -8.5% |
+| v-no-spike | 26 | 6 | 4 | +6771.133 | +90281.8% |
+| v-swing | 49 | 11 | 5 | -1.285 | -9.5% |
+| v-tight | 52 | 12 | 5 | -1.536 | -10.8% |
+| v-unease | 44 | 10 | 5 | -0.569 | -4.6% |
+| v-unpaid | 34 | 4 | 5 | -3.821 | -39.2% |
+| v-velocity | 45 | 11 | 4 | -1.335 | -10.9% |
 | v-x-exit | 0 | 0 | 0 | +0.000 | +0.0% |
 | v-x-organic | 0 | 0 | 0 | +0.000 | +0.0% |
 
@@ -65,18 +65,18 @@ Each coin against its own normal. Information only: no rule on this book reads i
 
 | Coin | Normal 15m swing | vs average paid | Off peak | Unease | Stop, in swings |
 |---|---|---|---|---|---|
-| BRUH | 4.1% | +2% | -9% | 1 of 5 | 8.5 |
+| BRUH | 4.1% | +2% | -10% | 1 of 5 | 8.5 |
 | RAMBO | 4.3% | -6% | -29% | 2 of 5 | 8.1 |
 
 ## Dataset
 
 Last check 2026-11-12: 90 of 96 snapshots, 15801 rows, 191 coins, 76.2 MB. No problems.
 
-GeckoTerminal: 31260 calls, 251 refused, 16 failed, 130 waiting. Insider flag fired on 0 of 75 coins where RugCheck's graph found insiders.
+GeckoTerminal: 31271 calls, 252 refused, 16 failed, 133 waiting. Insider flag fired on 0 of 75 coins where RugCheck's graph found insiders.
 
 Fills: a round trip on Jupiter returned -0.9% (median of 180 quotes, before priority fees); paper charged -7.8%.
 
-Launch feed: running, 10284 launches and 712 graduations in the last day.
+Launch feed: running, 10354 launches and 716 graduations in the last day.
 
 Learning run 2026-11-08: 2 of 14 arms have 15+ trades. Promoted: none. Proposes only until 2026-11-30. Detail: LEARNING.md on `state`. No rule on this book reads it.
 
@@ -84,8 +84,8 @@ Learning run 2026-11-08: 2 of 14 arms have 15+ trades. Promoted: none. Proposes 
 
 | Coin | Mint | Opened | Cost SOL | Entry mcap | Move | Value SOL (incl. realised) | Thesis |
 |---|---|---|---|---|---|---|---|
-| BRUH | `PgFtGGqu…` | 2026-11-08 08:15 UTC | 0.25 | $1,080,245 | +172% | 0.603 | Gate pass; 28h pumpswap coin, mc $1.07M, liq $84k (thin), 1h +42%, 24h +84%, 5m -2.2% (no spike now), 1h buys 163 vs sells 92. Other passes COGE (24h -92%) and GIGAHUG (11.7h, +1775% 24h vertical) skipped; GATO/HELL already held. |
-| RAMBO | `KMifrkYm…` | 2026-11-13 00:15 UTC | 0.25 | $12,486,694 | -6% | 0.231 | Gate pass; mature pumpswap coin (225h), mc $12.5M, liq $309k, 1h +12%, 24h +108%, 5m +0.5% (no spike), 1h buys 212 vs sells 61. Other passes DESSA/GATO skipped (24h negative, 1h negative); CBUCKS failed gate (14% wallet). |
+| BRUH | `PgFtGGqu…` | 2026-11-08 08:15 UTC | 0.25 | $1,080,245 | +174% | 0.609 | Gate pass; 28h pumpswap coin, mc $1.07M, liq $84k (thin), 1h +42%, 24h +84%, 5m -2.2% (no spike now), 1h buys 163 vs sells 92. Other passes COGE (24h -92%) and GIGAHUG (11.7h, +1775% 24h vertical) skipped; GATO/HELL already held. |
+| RAMBO | `KMifrkYm…` | 2026-11-13 00:15 UTC | 0.25 | $12,486,694 | -7% | 0.231 | Gate pass; mature pumpswap coin (225h), mc $12.5M, liq $309k, 1h +12%, 24h +108%, 5m +0.5% (no spike), 1h buys 212 vs sells 61. Other passes DESSA/GATO skipped (24h negative, 1h negative); CBUCKS failed gate (14% wallet). |
 
 ## Closed
 
