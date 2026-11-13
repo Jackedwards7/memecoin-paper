@@ -1,0 +1,20 @@
+{
+  "id": "20261113T041456.346403Z-gate-2a886d",
+  "kind": "gate",
+  "at": 1794543296.346403,
+  "by": "local",
+  "results": {
+    "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
+      "symbol": "CBUCKS",
+      "px": 0.003232,
+      "fails": [
+        "RugCheck unavailable (CalledProcessError)"
+      ]
+    },
+    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": {
+      "symbol": "DESSA",
+      "px": 0.005432,
+      "fails": []
+    }
+  }
+}
