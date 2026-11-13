@@ -1,12 +1,12 @@
-MOVERS 2026-11-13T18:23:23Z
-8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER +11%
-mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS +15%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +16%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +18%
-4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao +24%
-FTu55MyigXns96jz4nTCDDiTCjYJjyrHSceCgG9Upump FOOD -30%
+MOVERS 2026-11-13T18:39:36Z
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +10%
+4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao +11%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +12%
+CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi +19%
+BWJfBNeXpapG7uoqByp5KSwWgCQba8QcDmA2DQiEpump Leonida +31%
+FTu55MyigXns96jz4nTCDDiTCjYJjyrHSceCgG9Upump FOOD -29%
+npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -21%
 GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED -19%
-npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -17%
-FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump three -15%
-MukLDtJ8Cx9DxLbeyLRSWPSposTMWuwHANbuaudpump OTC -11%
+FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump three -17%
+FyHakvZH3L4UABSQYK7e9ECEzWV37u7GTkmAbHXspump inuhao -15%
 END
