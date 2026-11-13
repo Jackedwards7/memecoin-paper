@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.528198145859669,
+  "cash_sol": 6.69326769938013,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -227,22 +227,22 @@
       "symbol": "GATO",
       "opened": "2026-11-13 14:07 UTC",
       "cost_sol": 0.25,
-      "tokens": 3543.387486838308,
+      "tokens": 1771.693743419154,
       "entry_px": 0.005514447706489753,
       "entry_mc": 5442136,
-      "peak_px": 0.007482,
+      "peak_px": 0.007802,
       "stop": -0.2,
       "tp1": 0.4,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-tight rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.16506955352046138,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/5e3dxlxgwmtdcoka51wyyakttjfzbwqcoyuhbui5gt2m",
       "v": 2,
-      "mev_sol": 0.0061440157286802655,
-      "swaps": 1,
+      "mev_sol": 0.012437281933840742,
+      "swaps": 2,
       "entry_liq": 250571.15,
       "at_entry": {
         "px": 0.005514,
@@ -4914,10 +4914,11 @@
     "2026-11-13 11:31 UTC SELL 100% inuhao -> 0.249 SOL @ $0.002273: trailing stop: 40% off peak, +114% from entry",
     "2026-11-13 14:07 UTC BUY GATO 0.25 SOL @ $0.0055144477 (mc $5,442,136): v-tight rule",
     "2026-11-13 15:27 UTC BUY Rocco 0.25 SOL @ $0.00066855875 (mc $651,704): v-tight rule",
-    "2026-11-13 15:42 UTC BUY Max 0.25 SOL @ $0.0017722013 (mc $1,770,768): v-tight rule"
+    "2026-11-13 15:42 UTC BUY Max 0.25 SOL @ $0.0017722013 (mc $1,770,768): v-tight rule",
+    "2026-11-13 16:18 UTC SELL 50% GATO -> 0.165 SOL @ $0.007802: take-profit at +41%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-13 16:14 UTC"
+  "last_mark": "2026-11-13 16:18 UTC"
 }
