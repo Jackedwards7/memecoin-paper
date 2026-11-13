@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.316573971343842,
+  "cash_sol": 7.599540225614156,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -77,22 +77,22 @@
       "symbol": "inuhao",
       "opened": "2026-11-12 17:46 UTC",
       "cost_sol": 0.25,
-      "tokens": 18368.978453256746,
+      "tokens": 9184.489226628373,
       "entry_px": 0.0010622657950007267,
       "entry_mc": 1058741,
-      "peak_px": 0.002071,
+      "peak_px": 0.002502,
       "stop": -0.35,
       "tp1": 1.0,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-velocity rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.2829662542703145,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/aqfc3qfatjggpqeuqgs65ruaqq5u2pin6myjz1eu4s31",
       "v": 2,
-      "mev_sol": 0.006152331733727083,
-      "swaps": 1,
+      "mev_sol": 0.012545376101454996,
+      "swaps": 2,
       "entry_liq": 81179.8,
       "at_entry": {
         "px": 0.001062,
@@ -3855,10 +3855,11 @@
     "2026-11-12 21:08 UTC SELL 100% Rocco -> 0.188 SOL @ $0.0006112: time stop: 48h held, -20%, no take-profit",
     "2026-11-12 21:19 UTC SELL 100% Max -> 0.142 SOL @ $0.002146: trailing stop: 40% off peak, +26% from entry",
     "2026-11-12 23:55 UTC BUY JOB 0.25 SOL @ $0.0016122638 (mc $1,570,680): v-velocity rule",
-    "2026-11-13 03:28 UTC SELL 100% meowl -> 0.159 SOL @ $0.0002615: stop-loss at -35%"
+    "2026-11-13 03:28 UTC SELL 100% meowl -> 0.159 SOL @ $0.0002615: stop-loss at -35%",
+    "2026-11-13 03:57 UTC SELL 50% inuhao -> 0.283 SOL @ $0.002502: take-profit at +136%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-13 03:54 UTC"
+  "last_mark": "2026-11-13 03:57 UTC"
 }
