@@ -1,12 +1,12 @@
-MOVERS 2026-11-13T19:11:36Z
-8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER +6%
-8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH +8%
-5w3wVdJaESaJKyLmStM6Hv9UyUkmZ1b9DLQquAqqpump SID +12%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +16%
-5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max +22%
-FyHakvZH3L4UABSQYK7e9ECEzWV37u7GTkmAbHXspump inuhao -52%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -19%
+MOVERS 2026-11-13T19:27:44Z
+98kfF7rmsg1QDUEoCqNE7g7M1FdrTt92TEp2CLzypump PAID +5%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +5%
+5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max +14%
+8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH +16%
+FTu55MyigXns96jz4nTCDDiTCjYJjyrHSceCgG9Upump FOOD +21%
 npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -19%
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -13%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -16%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -12%
+KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump RAMBO -8%
 mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS -7%
 END
