@@ -1,12 +1,12 @@
-MOVERS 2026-11-13T23:12:45Z
-HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO +8%
-CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi +8%
-34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG +9%
-GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +25%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +56%
-DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS -14%
-8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH -11%
-mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS -11%
-5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -10%
-DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -6%
+MOVERS 2026-11-13T23:28:45Z
+CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi +6%
+33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump DOPE +8%
+34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG +8%
+GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +15%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +67%
+Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT -12%
+mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS -12%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -12%
+GMzuntWYJLpNuCizrSR7ZXggiMdDzTNiEmSNHHunpump dreams -9%
+8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH -9%
 END
