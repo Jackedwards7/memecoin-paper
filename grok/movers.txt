@@ -1,12 +1,12 @@
-MOVERS 2026-11-13T08:28:49Z
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +7%
-CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi +7%
-FyHakvZH3L4UABSQYK7e9ECEzWV37u7GTkmAbHXspump inuhao +8%
-KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump RAMBO +10%
-34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG +14%
-FTu55MyigXns96jz4nTCDDiTCjYJjyrHSceCgG9Upump FOOD -12%
-CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump fone -11%
-5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -10%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -7%
-PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH -7%
+MOVERS 2026-11-13T08:45:00Z
+npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA +3%
+34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG +4%
+J8PSdNP3QewKq2Z1JJJFDMaqF7KcaiJhR7gbr5KZpump TripleT +5%
+DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS +8%
+CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi +10%
+FTu55MyigXns96jz4nTCDDiTCjYJjyrHSceCgG9Upump FOOD -20%
+CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump fone -12%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -9%
+DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -8%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -6%
 END
