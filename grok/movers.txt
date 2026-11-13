@@ -1,12 +1,12 @@
-MOVERS 2026-11-13T22:56:45Z
-FTu55MyigXns96jz4nTCDDiTCjYJjyrHSceCgG9Upump FOOD +9%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +10%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +15%
-GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +21%
-HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO +24%
-DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS -18%
-8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH -14%
-5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -11%
+MOVERS 2026-11-13T23:12:45Z
+HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO +8%
+CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi +8%
+34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG +9%
+GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +25%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +56%
+DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS -14%
+8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH -11%
+mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS -11%
+5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -10%
 DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -6%
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -5%
 END
