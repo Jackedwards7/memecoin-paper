@@ -80,7 +80,7 @@
       "tokens": 1547.0236676059612,
       "entry_px": 0.012660835713205686,
       "entry_mc": 12486694,
-      "peak_px": 0.01731,
+      "peak_px": 0.0183,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -797,19 +797,19 @@
     "2026-11-12 20:16 UTC SELL 100% NIO -> 0.207 SOL @ $0.001098: time stop: 48h held, -12%, no take-profit",
     "2026-11-13 00:15 UTC BUY RAMBO 0.25 SOL @ $0.012660836 (mc $12,486,694): Gate pass; mature pumpswap coin (225h), mc $12.5M, liq $309k, 1h +12%, 24h +108%, 5m +0.5% (no spike), 1h buys 212 vs sells 61. Other passes DESSA/GATO skipped (24h negative, 1h negative); CBUCKS failed gate (14% wallet)."
   ],
-  "last_mark": "2026-11-13 05:28 UTC",
+  "last_mark": "2026-11-13 05:31 UTC",
   "gate_pass": {
-    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794544023,
-    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794544023,
-    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794544023,
+    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794547894,
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794547894,
+    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794547894,
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": 1794545970,
     "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794545970,
-    "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1794544023,
-    "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": 1794544023,
+    "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1794547894,
+    "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": 1794547894,
     "5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump": 1794545009,
-    "KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump": 1794544023,
-    "FyHakvZH3L4UABSQYK7e9ECEzWV37u7GTkmAbHXspump": 1794544023,
-    "2T56GBrvcyeWWyhUAzsTFW4AcFag1nr7xyzrtZn7pump": 1794540158
+    "KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump": 1794547894,
+    "FyHakvZH3L4UABSQYK7e9ECEzWV37u7GTkmAbHXspump": 1794547894,
+    "FTu55MyigXns96jz4nTCDDiTCjYJjyrHSceCgG9Upump": 1794547894
   },
   "rejects": {
     "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
@@ -1957,6 +1957,13 @@
       "symbol": "AI",
       "at": 1794540158,
       "px": 0.0006585,
+      "fails": [],
+      "moves": {}
+    },
+    "FTu55MyigXns96jz4nTCDDiTCjYJjyrHSceCgG9Upump": {
+      "symbol": "FOOD",
+      "at": 1794547894,
+      "px": 0.001664,
       "fails": [],
       "moves": {}
     }
