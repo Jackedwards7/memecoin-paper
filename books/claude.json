@@ -797,18 +797,19 @@
     "2026-11-12 20:16 UTC SELL 100% NIO -> 0.207 SOL @ $0.001098: time stop: 48h held, -12%, no take-profit",
     "2026-11-13 00:15 UTC BUY RAMBO 0.25 SOL @ $0.012660836 (mc $12,486,694): Gate pass; mature pumpswap coin (225h), mc $12.5M, liq $309k, 1h +12%, 24h +108%, 5m +0.5% (no spike), 1h buys 212 vs sells 61. Other passes DESSA/GATO skipped (24h negative, 1h negative); CBUCKS failed gate (14% wallet)."
   ],
-  "last_mark": "2026-11-13 03:14 UTC",
+  "last_mark": "2026-11-13 03:22 UTC",
   "gate_pass": {
-    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794536332,
-    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794536332,
-    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794536332,
+    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794540158,
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794540158,
+    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794540158,
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": 1794538252,
     "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794538252,
-    "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1794536332,
-    "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": 1794536332,
+    "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1794540158,
+    "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": 1794540158,
     "5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump": 1794537292,
-    "KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump": 1794536332,
-    "FyHakvZH3L4UABSQYK7e9ECEzWV37u7GTkmAbHXspump": 1794536332
+    "KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump": 1794540158,
+    "FyHakvZH3L4UABSQYK7e9ECEzWV37u7GTkmAbHXspump": 1794540158,
+    "2T56GBrvcyeWWyhUAzsTFW4AcFag1nr7xyzrtZn7pump": 1794540158
   },
   "rejects": {
     "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
@@ -1945,6 +1946,13 @@
       "symbol": "inuhao",
       "at": 1794505524,
       "px": 0.001062,
+      "fails": [],
+      "moves": {}
+    },
+    "2T56GBrvcyeWWyhUAzsTFW4AcFag1nr7xyzrtZn7pump": {
+      "symbol": "AI",
+      "at": 1794540158,
+      "px": 0.0006585,
       "fails": [],
       "moves": {}
     }
