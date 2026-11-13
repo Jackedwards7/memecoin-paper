@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.859965866458215,
+  "cash_sol": 7.609965866458215,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -370,6 +370,81 @@
       },
       "reentry": true,
       "since_loss_h": 3.5
+    },
+    "2T56GBrvcyeWWyhUAzsTFW4AcFag1nr7xyzrtZn7pump": {
+      "symbol": "AI",
+      "opened": "2026-11-13 04:11 UTC",
+      "cost_sol": 0.25,
+      "tokens": 30146.376691413323,
+      "entry_px": 0.0006236595260668643,
+      "entry_mc": 607339,
+      "peak_px": 0.0006236595260668643,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unease rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/crnk5nh5kqja4fqaykqj9y9kgfnh99u6hhyrtujpnkaw",
+      "v": 2,
+      "mev_sol": 0.006379178361826997,
+      "swaps": 1,
+      "entry_liq": 76586.12,
+      "at_entry": {
+        "px": 0.0006235,
+        "liq": 76586.12,
+        "mc": 607339,
+        "dex": "pumpswap",
+        "age_h": 7.3,
+        "vol_h1": 62244.27,
+        "vol_h24": 4309076.78,
+        "buys_h1": 519,
+        "sells_h1": 413,
+        "buys_h24": 41130,
+        "sells_h24": 30881,
+        "trades_h24": 72011,
+        "avg_trade": 59.84,
+        "m5": 1.58,
+        "h1": 7.67,
+        "h6": -14.23,
+        "h24": 960,
+        "eligible": true,
+        "v": 3,
+        "pool": "CRnK5Nh5kQjA4FqaYkqJ9y9KGfNh99U6HHyRtUjPNKAW",
+        "m5_raw": 1.58,
+        "buys_m5": 40,
+        "sells_m5": 29,
+        "buys_h6": 13098,
+        "sells_h6": 9548,
+        "vol_m5": 3479.99,
+        "vol_h6": 1412412.76,
+        "liq_base": 63351740,
+        "liq_quote": 226.2454,
+        "fdv": 607339,
+        "boosts": null,
+        "links": [
+          "telegram",
+          "website"
+        ],
+        "read": {
+          "swing": 0.3133,
+          "paid": 0.0006691426541254731,
+          "vs_paid": -0.0227,
+          "off_peak": -0.4526,
+          "accel": -0.3445,
+          "candles": 26,
+          "unease": 2,
+          "known": 3,
+          "signs": [
+            "failed_high",
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 7.8
     }
   },
   "closed": [
@@ -3992,10 +4067,11 @@
     "2026-11-12 18:01 UTC BUY inuhao 0.25 SOL @ $0.0012242853 (mc $1,219,919): v-unease rule",
     "2026-11-12 20:25 UTC SELL 100% DESSA -> 0.151 SOL @ $0.00573: stop-loss at -35%",
     "2026-11-12 23:55 UTC BUY JOB 0.25 SOL @ $0.0016122638 (mc $1,570,680): v-unease rule",
-    "2026-11-13 03:57 UTC SELL 50% inuhao -> 0.246 SOL @ $0.002502: take-profit at +104%: half sold, cost recovered"
+    "2026-11-13 03:57 UTC SELL 50% inuhao -> 0.246 SOL @ $0.002502: take-profit at +104%: half sold, cost recovered",
+    "2026-11-13 04:11 UTC BUY AI 0.25 SOL @ $0.00062365953 (mc $607,339): v-unease rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-13 04:01 UTC"
+  "last_mark": "2026-11-13 04:10 UTC"
 }
