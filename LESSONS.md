@@ -1,8 +1,8 @@
 # Lessons
 
-389 closed trades labelled, every book. Written by the bot.
+390 closed trades labelled, every book. Written by the bot.
 
-- **slow-bleed**: 122 trades, mean -30%. JOB (v-mature): -42% over 24h; DOPE (v-unpaid): -37% over 14h
+- **slow-bleed**: 123 trades, mean -29%. DOPE (v-unpaid): -37% over 14h; 67 (v-unpaid): -3% over 48h
 - **other**: 117 trades, mean -30%. meowl (v-swing): stop-loss at -10%; meowl (v-tight): stop-loss at -20%
 - **won-held**: 80 trades, mean +37%. NIHAO (v-velocity): +54%, peak +333%; DacityCoin (v-unpaid): +1%, peak +73%
 - **bought-spike**: 36 trades, mean -30%. HUNG (v-swing): up 7335% in 24h at entry, peak +0%; HUNG (v-unease): up 7335% in 24h at entry, peak +0%
