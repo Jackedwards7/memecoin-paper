@@ -1,12 +1,12 @@
-MOVERS 2026-11-13T07:07:55Z
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +13%
-DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin +13%
-PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH +14%
-5w3wVdJaESaJKyLmStM6Hv9UyUkmZ1b9DLQquAqqpump SID +18%
-FyHakvZH3L4UABSQYK7e9ECEzWV37u7GTkmAbHXspump inuhao +38%
-FTu55MyigXns96jz4nTCDDiTCjYJjyrHSceCgG9Upump FOOD -23%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -14%
-5yC9BM8KUsJTPbWPLfA2N8qH1s9V8DQ3Vcw1G6Jdpump AgenC -8%
-npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -7%
-nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity -4%
+MOVERS 2026-11-13T07:24:03Z
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +12%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +14%
+DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin +17%
+FyHakvZH3L4UABSQYK7e9ECEzWV37u7GTkmAbHXspump inuhao +20%
+5w3wVdJaESaJKyLmStM6Hv9UyUkmZ1b9DLQquAqqpump SID +20%
+5yC9BM8KUsJTPbWPLfA2N8qH1s9V8DQ3Vcw1G6Jdpump AgenC -10%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -9%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -8%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -7%
+FTu55MyigXns96jz4nTCDDiTCjYJjyrHSceCgG9Upump FOOD -6%
 END
