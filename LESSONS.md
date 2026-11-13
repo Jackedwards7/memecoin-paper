@@ -1,10 +1,10 @@
 # Lessons
 
-393 closed trades labelled, every book. Written by the bot.
+396 closed trades labelled, every book. Written by the bot.
 
 - **slow-bleed**: 124 trades, mean -29%. 67 (v-unpaid): -3% over 48h; FARTBOY (v-unpaid): -11% over 48h
 - **other**: 119 trades, mean -30%. DESSA (v-swing): stop-loss at -18%; DESSA (v-tight): stop-loss at -23%
-- **won-held**: 80 trades, mean +37%. NIHAO (v-velocity): +54%, peak +333%; DacityCoin (v-unpaid): +1%, peak +73%
+- **won-held**: 83 trades, mean +38%. NOBUSHIBA (v-swing): +69%, peak +108%; NOBUSHIBA (v-tight): +45%, peak +108%
 - **bought-spike**: 36 trades, mean -30%. HUNG (v-swing): up 7335% in 24h at entry, peak +0%; HUNG (v-unease): up 7335% in 24h at entry, peak +0%
 - **rug**: 17 trades, mean -100%. UODF (v-unpaid): event exit: liquidity down 87% since entry, -98% from entry; UODF (v-unpaid): event exit: liquidity down 49% since entry, -100% from entry
 - **liquidity-pulled**: 10 trades, mean -79%. OnlyCats (v-tight): event exit: liquidity down 56% since entry, -80% from entry; OnlyCats (v-velocity): event exit: liquidity down 56% since entry, -80% from entry
