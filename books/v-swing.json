@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.947619562971206,
+  "cash_sol": 7.205820164174646,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -152,22 +152,22 @@
       "symbol": "NIO",
       "opened": "2026-11-12 01:25 UTC",
       "cost_sol": 0.25,
-      "tokens": 20599.841281637226,
+      "tokens": 10299.920640818613,
       "entry_px": 0.0009683861019736233,
       "entry_mc": 922545,
-      "peak_px": 0.001864,
+      "peak_px": 0.00204,
       "stop": -0.1608,
       "tp1": 1.0,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-swing rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.2582006012034401,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/b4wmjc6pvjctu3qsvs3ett9mr4m5v5jbkrqctwantc71",
       "v": 2,
-      "mev_sol": 0.006021194605009633,
-      "swaps": 1,
+      "mev_sol": 0.012414238972737546,
+      "swaps": 2,
       "entry_liq": 108004.4,
       "at_entry": {
         "px": 0.0009682,
@@ -4475,10 +4475,11 @@
     "2026-11-12 23:55 UTC BUY JOB 0.25 SOL @ $0.0016122638 (mc $1,570,680): v-swing rule",
     "2026-11-13 01:05 UTC SELL 100% JOB -> 0.202 SOL @ $0.00141: stop-loss at -13%",
     "2026-11-13 03:57 UTC SELL 50% inuhao -> 0.246 SOL @ $0.002502: take-profit at +104%: half sold, cost recovered",
-    "2026-11-13 04:11 UTC BUY AI 0.25 SOL @ $0.00062365953 (mc $607,339): v-swing rule"
+    "2026-11-13 04:11 UTC BUY AI 0.25 SOL @ $0.00062365953 (mc $607,339): v-swing rule",
+    "2026-11-13 04:45 UTC SELL 50% NIO -> 0.258 SOL @ $0.00204: take-profit at +111%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-13 04:43 UTC"
+  "last_mark": "2026-11-13 04:45 UTC"
 }
