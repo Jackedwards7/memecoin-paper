@@ -1,12 +1,12 @@
-MOVERS 2026-11-13T17:35:16Z
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +13%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +22%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +31%
-GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +45%
-mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS +51%
-HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO -18%
-CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi -14%
-5w3wVdJaESaJKyLmStM6Hv9UyUkmZ1b9DLQquAqqpump SID -7%
-DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin -6%
-8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH -6%
+MOVERS 2026-11-13T17:51:16Z
+FyHakvZH3L4UABSQYK7e9ECEzWV37u7GTkmAbHXspump inuhao +13%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +13%
+DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD +14%
+mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS +17%
+GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +26%
+FTu55MyigXns96jz4nTCDDiTCjYJjyrHSceCgG9Upump FOOD -18%
+MukLDtJ8Cx9DxLbeyLRSWPSposTMWuwHANbuaudpump OTC -10%
+HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO -9%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -7%
+DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin -7%
 END
