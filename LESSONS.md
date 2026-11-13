@@ -1,8 +1,8 @@
 # Lessons
 
-397 closed trades labelled, every book. Written by the bot.
+398 closed trades labelled, every book. Written by the bot.
 
-- **slow-bleed**: 125 trades, mean -29%. FARTBOY (v-unpaid): -11% over 48h; Rocco (v-unease): -16% over 14h
+- **slow-bleed**: 126 trades, mean -29%. Rocco (v-unease): -16% over 14h; meowl (v-unease): -13% over 13h
 - **other**: 119 trades, mean -30%. DESSA (v-swing): stop-loss at -18%; DESSA (v-tight): stop-loss at -23%
 - **won-held**: 83 trades, mean +38%. NOBUSHIBA (v-swing): +69%, peak +108%; NOBUSHIBA (v-tight): +45%, peak +108%
 - **bought-spike**: 36 trades, mean -30%. HUNG (v-swing): up 7335% in 24h at entry, peak +0%; HUNG (v-unease): up 7335% in 24h at entry, peak +0%
