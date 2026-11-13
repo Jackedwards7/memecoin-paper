@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 9.231476705871483,
+  "cash_sol": 8.981476705871483,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -72,6 +72,80 @@
       },
       "reentry": false,
       "since_loss_h": 28.0
+    },
+    "KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump": {
+      "symbol": "RAMBO",
+      "opened": "2026-11-13 00:15 UTC",
+      "cost_sol": 0.25,
+      "tokens": 1547.0236676059612,
+      "entry_px": 0.012660835713205686,
+      "entry_mc": 12486694,
+      "peak_px": 0.012660835713205686,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "Gate pass; mature pumpswap coin (225h), mc $12.5M, liq $309k, 1h +12%, 24h +108%, 5m +0.5% (no spike), 1h buys 212 vs sells 61. Other passes DESSA/GATO skipped (24h negative, 1h negative); CBUCKS failed gate (14% wallet).",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/gz15vwspy9kfynkrmpkokp2h9yygvbovoxjsgwsjcvfk",
+      "v": 2,
+      "mev_sol": 0.006129704548240775,
+      "swaps": 1,
+      "entry_liq": 308920.63,
+      "at_entry": {
+        "px": 0.01266,
+        "liq": 308920.63,
+        "mc": 12486694,
+        "dex": "pumpswap",
+        "age_h": 225.44,
+        "vol_h1": 23734.95,
+        "vol_h24": 3555356.67,
+        "buys_h1": 212,
+        "sells_h1": 61,
+        "buys_h24": 13805,
+        "sells_h24": 16445,
+        "trades_h24": 30250,
+        "avg_trade": 117.53,
+        "m5": 0.5,
+        "h1": 12.16,
+        "h6": 3.33,
+        "h24": 108,
+        "eligible": true,
+        "v": 3,
+        "pool": "Gz15vwSPY9KFYNkrMPkoKp2h9yygVBovoXJsGwSJcvFk",
+        "m5_raw": 0.5,
+        "buys_m5": 12,
+        "sells_m5": 1,
+        "buys_h6": 1043,
+        "sells_h6": 329,
+        "vol_m5": 482.11,
+        "vol_h6": 117234.63,
+        "liq_base": 12262809,
+        "liq_quote": 1882.9023,
+        "fdv": 12486694,
+        "boosts": 50,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0408,
+          "paid": 0.012413558041737341,
+          "vs_paid": -0.0011,
+          "off_peak": -0.2503,
+          "accel": 0.0251,
+          "candles": 96,
+          "unease": 1,
+          "known": 5,
+          "signs": [
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 4.0
     }
   },
   "closed": [
@@ -720,19 +794,20 @@
     "2026-11-08 20:15 UTC SELL 100% GATO -> 0.235 SOL @ $0.01197: time stop: 48h held, +0%, no take-profit",
     "2026-11-09 16:03 UTC SELL 50% BRUH -> 0.237 SOL @ $0.002204: take-profit at +102%: half sold, cost recovered",
     "2026-11-10 20:16 UTC BUY NIO 0.25 SOL @ $0.0012452127 (mc $1,186,743): Gate pass; mature pumpswap coin (484h), mc $1.2M, liq $122k, 1h +4.7%, 24h +37%, 5m +4.1% (no spike), 1h buys 64 vs sells 67 roughly even. Other passes GATO (sellers lead, 24h -14%) and BIG (24h +438% vertical) skipped; CBUCKS failed gate.",
-    "2026-11-12 20:16 UTC SELL 100% NIO -> 0.207 SOL @ $0.001098: time stop: 48h held, -12%, no take-profit"
+    "2026-11-12 20:16 UTC SELL 100% NIO -> 0.207 SOL @ $0.001098: time stop: 48h held, -12%, no take-profit",
+    "2026-11-13 00:15 UTC BUY RAMBO 0.25 SOL @ $0.012660836 (mc $12,486,694): Gate pass; mature pumpswap coin (225h), mc $12.5M, liq $309k, 1h +12%, 24h +108%, 5m +0.5% (no spike), 1h buys 212 vs sells 61. Other passes DESSA/GATO skipped (24h negative, 1h negative); CBUCKS failed gate (14% wallet)."
   ],
-  "last_mark": "2026-11-13 00:10 UTC",
+  "last_mark": "2026-11-13 00:15 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794528638,
-    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794528638,
-    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794528638,
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794528914.20174,
+    "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794528914.20174,
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": 1794526707,
     "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794526707,
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1794528638,
     "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": 1794528638,
     "5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump": 1794525747,
-    "KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump": 1794528638,
+    "KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump": 1794528914.20174,
     "FyHakvZH3L4UABSQYK7e9ECEzWV37u7GTkmAbHXspump": 1794528638
   },
   "rejects": {
@@ -2249,6 +2324,18 @@
       "kind": "gate",
       "result": "recorded 4 gate results, 3 passed",
       "at": "2026-11-12 20:15 UTC"
+    },
+    {
+      "id": "20261113T001514.201740Z-gate-f405f7",
+      "kind": "gate",
+      "result": "recorded 4 gate results, 3 passed",
+      "at": "2026-11-13 00:15 UTC"
+    },
+    {
+      "id": "20261113T001519.593257Z-buy-085d02",
+      "kind": "buy",
+      "result": "bought RAMBO 0.25 SOL @ $0.012660836; control opened",
+      "at": "2026-11-13 00:15 UTC"
     }
   ]
 }

@@ -1,7 +1,83 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 9.249872258693038,
-  "positions": {},
+  "cash_sol": 8.999872258693038,
+  "positions": {
+    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
+      "symbol": "JOB",
+      "opened": "2026-11-13 00:15 UTC",
+      "cost_sol": 0.25,
+      "tokens": 12402.393684893092,
+      "entry_px": 0.0015792606651293245,
+      "entry_mc": 1538139,
+      "peak_px": 0.0015792606651293245,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "control for RAMBO: random pick from 9 other gate passes",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/hauvbmnthcfmg9srxmvz1gaxnpu955hkpdsasc2cx4c8",
+      "v": 2,
+      "mev_sol": 0.006129704548240775,
+      "swaps": 1,
+      "entry_liq": 123529.21,
+      "at_entry": {
+        "px": 0.001579,
+        "liq": 123529.21,
+        "mc": 1538139,
+        "dex": "pumpswap",
+        "age_h": 389.04,
+        "vol_h1": 41830.66,
+        "vol_h24": 878480.3,
+        "buys_h1": 177,
+        "sells_h1": 169,
+        "buys_h24": 4391,
+        "sells_h24": 5409,
+        "trades_h24": 9800,
+        "avg_trade": 89.64,
+        "m5": -0.71,
+        "h1": -4.18,
+        "h6": 17.84,
+        "h24": 29.89,
+        "eligible": true,
+        "v": 3,
+        "pool": "HAUVBmNthCFmG9SRXMvZ1GAXNpU955hkPdSAsC2cx4C8",
+        "m5_raw": -0.71,
+        "buys_m5": 9,
+        "sells_m5": 12,
+        "buys_h6": 950,
+        "sells_h6": 1020,
+        "vol_m5": 2612.89,
+        "vol_h6": 234555.92,
+        "liq_base": 39441824,
+        "liq_quote": 750.8789,
+        "fdv": 1538139,
+        "boosts": null,
+        "links": [
+          "telegram",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0312,
+          "paid": 0.0013785990439969364,
+          "vs_paid": 0.1618,
+          "off_peak": -0.1007,
+          "accel": 0.024,
+          "candles": 96,
+          "unease": 1,
+          "known": 5,
+          "signs": [
+            "failed_high"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 4.0
+    }
+  },
   "closed": [
     {
       "symbol": "Ahsoka",
@@ -540,10 +616,11 @@
     "2026-11-08 08:15 UTC BUY DONNA 0.25 SOL @ $0.0015213442 (mc $1,454,375): control for BRUH: random pick from 12 other gate passes",
     "2026-11-09 05:41 UTC SELL 100% DONNA -> 0.102 SOL @ $0.0006717: event exit: price -40% in 5 minutes, -56% from entry",
     "2026-11-10 20:16 UTC BUY Rocco 0.25 SOL @ $0.00074497876 (mc $726,192): control for NIO: random pick from 8 other gate passes",
-    "2026-11-12 20:16 UTC SELL 100% Rocco -> 0.164 SOL @ $0.0005262: time stop: 48h held, -29%, no take-profit"
+    "2026-11-12 20:16 UTC SELL 100% Rocco -> 0.164 SOL @ $0.0005262: time stop: 48h held, -29%, no take-profit",
+    "2026-11-13 00:15 UTC BUY JOB 0.25 SOL @ $0.0015792607 (mc $1,538,139): control for RAMBO: random pick from 9 other gate passes"
   ],
   "gate_pass": {},
   "rejects": {},
-  "last_mark": "2026-11-13 00:10 UTC",
+  "last_mark": "2026-11-13 00:15 UTC",
   "passes": {}
 }
