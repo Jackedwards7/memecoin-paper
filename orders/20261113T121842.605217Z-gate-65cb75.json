@@ -1,0 +1,20 @@
+{
+  "id": "20261113T121842.605217Z-gate-65cb75",
+  "kind": "gate",
+  "at": 1794572322.605217,
+  "by": "local",
+  "results": {
+    "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
+      "symbol": "CBUCKS",
+      "px": 0.003279,
+      "fails": [
+        "a wallet holds 14% of supply"
+      ]
+    },
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "px": 0.005096,
+      "fails": []
+    }
+  }
+}
