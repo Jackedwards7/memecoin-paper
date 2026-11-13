@@ -1,12 +1,12 @@
-MOVERS 2026-11-13T20:32:07Z
-8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH +5%
-EaxAUcXxNnVwcqm2BBocbows7D1XVY2Q63V38NEypump GTA6Coin +8%
-DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin +8%
-mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS +9%
-GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +10%
-FTu55MyigXns96jz4nTCDDiTCjYJjyrHSceCgG9Upump FOOD -13%
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB -6%
-34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG -6%
-PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH -5%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -4%
+MOVERS 2026-11-13T20:48:12Z
+EaxAUcXxNnVwcqm2BBocbows7D1XVY2Q63V38NEypump GTA6Coin +10%
+mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS +11%
+2qEHjDLDLbuBgRYvsxhc5D6uDWAivNFZGan56P1tpump Pnut +11%
+5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max +12%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +15%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -13%
+4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao -6%
+7sGdNQSvUGpahh6qyXB3g5gsdK9FAzZM299KyCXspump https -3%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -3%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -3%
 END
