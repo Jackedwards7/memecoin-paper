@@ -797,7 +797,7 @@
     "2026-11-12 20:16 UTC SELL 100% NIO -> 0.207 SOL @ $0.001098: time stop: 48h held, -12%, no take-profit",
     "2026-11-13 00:15 UTC BUY RAMBO 0.25 SOL @ $0.012660836 (mc $12,486,694): Gate pass; mature pumpswap coin (225h), mc $12.5M, liq $309k, 1h +12%, 24h +108%, 5m +0.5% (no spike), 1h buys 212 vs sells 61. Other passes DESSA/GATO skipped (24h negative, 1h negative); CBUCKS failed gate (14% wallet)."
   ],
-  "last_mark": "2026-11-13 04:49 UTC",
+  "last_mark": "2026-11-13 04:58 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794544023,
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794544023,
