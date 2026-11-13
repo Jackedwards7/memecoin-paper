@@ -1,12 +1,12 @@
-MOVERS 2026-11-13T18:55:36Z
-8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH +9%
-mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS +10%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +11%
-4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao +20%
-5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max +27%
-npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -25%
-FyHakvZH3L4UABSQYK7e9ECEzWV37u7GTkmAbHXspump inuhao -19%
+MOVERS 2026-11-13T19:11:36Z
+8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER +6%
+8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH +8%
+5w3wVdJaESaJKyLmStM6Hv9UyUkmZ1b9DLQquAqqpump SID +12%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +16%
+5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max +22%
+FyHakvZH3L4UABSQYK7e9ECEzWV37u7GTkmAbHXspump inuhao -52%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -19%
+npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -19%
 HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -13%
-nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity -11%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -10%
+mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS -7%
 END
