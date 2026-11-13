@@ -1,12 +1,12 @@
-MOVERS 2026-11-13T19:59:55Z
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +4%
-DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD +6%
-8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER +7%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +8%
+MOVERS 2026-11-13T20:15:56Z
+DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS +5%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +7%
+DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin +7%
+npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA +7%
 8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH +11%
-5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -15%
+5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -14%
 AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -9%
-mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS -9%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -8%
-npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -7%
+34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG -9%
+FTu55MyigXns96jz4nTCDDiTCjYJjyrHSceCgG9Upump FOOD -8%
+Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT -7%
 END
