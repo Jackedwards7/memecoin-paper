@@ -1,0 +1,34 @@
+{
+  "id": "20261114T161540.600155Z-gate-af21cc",
+  "kind": "gate",
+  "at": 1794672940.600155,
+  "by": "local",
+  "results": {
+    "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump": {
+      "symbol": "BIG",
+      "px": 0.001121,
+      "fails": [
+        "a wallet holds 8% of supply"
+      ]
+    },
+    "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
+      "symbol": "GLITCH",
+      "px": 0.001444,
+      "fails": [
+        "copycat: an earlier 'Infinite Money Glitch' exists (znv3FZ)"
+      ]
+    },
+    "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
+      "symbol": "CBUCKS",
+      "px": 0.003309,
+      "fails": [
+        "a wallet holds 14% of supply"
+      ]
+    },
+    "HWya5CpQiQWLnJfJVRDF9o8AHaUPnPMRa3vfQRczpump": {
+      "symbol": "AMC",
+      "px": 0.002605,
+      "fails": []
+    }
+  }
+}
