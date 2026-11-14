@@ -1,10 +1,10 @@
 # Lessons
 
-484 closed trades labelled, every book. Written by the bot.
+488 closed trades labelled, every book. Written by the bot.
 
-- **slow-bleed**: 160 trades, mean -29%. TripleT (v-unpaid): -19% over 48h; DESSA (v-mature): -41% over 26h
+- **slow-bleed**: 161 trades, mean -29%. DESSA (v-mature): -41% over 26h; JOB (v-tight): -27% over 21h
 - **other**: 139 trades, mean -30%. FOOD (v-tight): stop-loss at -22%; FOOD (control): stop-loss at -36%
-- **won-held**: 92 trades, mean +36%. RAMBO (v-unease): +14%, peak +64%; RAMBO (v-velocity): +28%, peak +85%
+- **won-held**: 95 trades, mean +35%. three (v-tight): +8%, peak +33%; three (v-unease): +8%, peak +33%
 - **bought-spike**: 41 trades, mean -32%. AI (v-unease): up 960% in 24h at entry, peak +0%; AI (v-velocity): up 960% in 24h at entry, peak +0%
 - **won-trailed**: 21 trades, mean +129044%. inuhao (v-unease): +85%, peak +215%; inuhao (v-velocity): +113%, peak +263%
 - **rug**: 18 trades, mean -100%. UODF (v-unpaid): event exit: liquidity down 49% since entry, -100% from entry; SCAMSON (v-tight): event exit: liquidity down 99% since entry, -100% from entry
