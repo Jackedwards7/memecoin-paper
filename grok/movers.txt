@@ -1,12 +1,12 @@
-MOVERS 2026-11-14T15:46:47Z
-CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi +4%
-mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS +9%
-5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max +11%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +14%
-HWya5CpQiQWLnJfJVRDF9o8AHaUPnPMRa3vfQRczpump AMC +63%
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB -21%
-NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump Punch -11%
-DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -10%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -9%
-Cm6fNnMk7NfzStP9CZpsQA2v3jjzbcYGAxdJySmHpump Buttcoin -8%
+MOVERS 2026-11-14T16:02:48Z
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +7%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +9%
+Ce2gx9KGXJ6C9Mp5b5x1sn9Mg87JwEbrQby4Zqo3pump neet +10%
+HWya5CpQiQWLnJfJVRDF9o8AHaUPnPMRa3vfQRczpump AMC +11%
+mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS +34%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -13%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -10%
+DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -9%
+3tjPCXfx3KrgMY53yo7pa67D2QQZMbLTRaqQckJmpump VTC -8%
+DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS -7%
 END
