@@ -1,11 +1,11 @@
 # Lessons
 
-459 closed trades labelled, every book. Written by the bot.
+460 closed trades labelled, every book. Written by the bot.
 
 - **slow-bleed**: 155 trades, mean -29%. meowl (v-no-spike): -36% over 34h; meowl (v-velocity): -36% over 34h
 - **other**: 137 trades, mean -30%. DESSA (v-no-spike): stop-loss at -36%; JOB (v-swing): stop-loss at -13%
 - **won-held**: 92 trades, mean +36%. RAMBO (v-unease): +14%, peak +64%; RAMBO (v-velocity): +28%, peak +85%
-- **bought-spike**: 36 trades, mean -30%. HUNG (v-swing): up 7335% in 24h at entry, peak +0%; HUNG (v-unease): up 7335% in 24h at entry, peak +0%
+- **bought-spike**: 37 trades, mean -30%. HUNG (v-unease): up 7335% in 24h at entry, peak +0%; AI (v-tight): up 960% in 24h at entry, peak +0%
 - **rug**: 18 trades, mean -100%. UODF (v-unpaid): event exit: liquidity down 49% since entry, -100% from entry; SCAMSON (v-tight): event exit: liquidity down 99% since entry, -100% from entry
 - **liquidity-pulled**: 10 trades, mean -79%. OnlyCats (v-tight): event exit: liquidity down 56% since entry, -80% from entry; OnlyCats (v-velocity): event exit: liquidity down 56% since entry, -80% from entry
 - **won-trailed**: 10 trades, mean +270904%. Max (v-momentum): +51%, peak +110%; Max (v-velocity): +51%, peak +110%
