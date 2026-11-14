@@ -1,12 +1,12 @@
-MOVERS 2026-11-13T23:44:53Z
-GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +12%
-FTu55MyigXns96jz4nTCDDiTCjYJjyrHSceCgG9Upump FOOD +13%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +62%
-98sMhvDwXj1RQi5c5Mndm3vPe9cBqPrbLaufMXFNMh5g HYPE +487277%
-A7bdiYdS5GjqGFtxf17ppRHtDKPkkRqbKtR27dxvQXaS ZEC +491050%
-mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS -13%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -11%
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB -9%
-GMzuntWYJLpNuCizrSR7ZXggiMdDzTNiEmSNHHunpump dreams -9%
-DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -8%
+MOVERS 2026-11-14T00:00:56Z
+DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin +6%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +21%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +58%
+98sMhvDwXj1RQi5c5Mndm3vPe9cBqPrbLaufMXFNMh5g HYPE +492770%
+A7bdiYdS5GjqGFtxf17ppRHtDKPkkRqbKtR27dxvQXaS ZEC +492905%
+FTu55MyigXns96jz4nTCDDiTCjYJjyrHSceCgG9Upump FOOD -18%
+8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB -16%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -14%
+HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO -11%
+4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao -11%
 END
