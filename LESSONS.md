@@ -1,9 +1,9 @@
 # Lessons
 
-489 closed trades labelled, every book. Written by the bot.
+490 closed trades labelled, every book. Written by the bot.
 
 - **slow-bleed**: 161 trades, mean -29%. DESSA (v-mature): -41% over 26h; JOB (v-tight): -27% over 21h
-- **other**: 140 trades, mean -30%. FOOD (control): stop-loss at -36%; Rocco (v-swing): stop-loss at -17%
+- **other**: 141 trades, mean -30%. Rocco (v-swing): stop-loss at -17%; Rocco (v-tight): stop-loss at -21%
 - **won-held**: 95 trades, mean +35%. three (v-tight): +8%, peak +33%; three (v-unease): +8%, peak +33%
 - **bought-spike**: 41 trades, mean -32%. AI (v-unease): up 960% in 24h at entry, peak +0%; AI (v-velocity): up 960% in 24h at entry, peak +0%
 - **won-trailed**: 21 trades, mean +129044%. inuhao (v-unease): +85%, peak +215%; inuhao (v-velocity): +113%, peak +263%
