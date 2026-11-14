@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.071211046657475,
+  "cash_sol": 7.247469382960937,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -144,81 +144,6 @@
       },
       "reentry": true,
       "since_loss_h": 5.4
-    },
-    "FTu55MyigXns96jz4nTCDDiTCjYJjyrHSceCgG9Upump": {
-      "symbol": "FOOD",
-      "opened": "2026-11-14 10:58 UTC",
-      "cost_sol": 0.25,
-      "tokens": 18179.589572952053,
-      "entry_px": 0.0009986969137638125,
-      "entry_mc": 998582,
-      "peak_px": 0.001118,
-      "stop": -0.2,
-      "tp1": 0.4,
-      "tp1_done": false,
-      "thesis": "v-tight rule",
-      "rugcheck": 1,
-      "risks": [],
-      "realised_sol": 0.0,
-      "dex": "pumpswap",
-      "url": "https://dexscreener.com/solana/2xhqqp1vdvxtaa21bpsekqf5gjts9euqrpsz6urs41qk",
-      "v": 2,
-      "mev_sol": 0.006599788806758183,
-      "swaps": 1,
-      "entry_liq": 96039.96,
-      "at_entry": {
-        "px": 0.0009985,
-        "liq": 96039.96,
-        "mc": 998582,
-        "dex": "pumpswap",
-        "age_h": 35.69,
-        "vol_h1": 26446.53,
-        "vol_h24": 3065753.39,
-        "buys_h1": 157,
-        "sells_h1": 156,
-        "buys_h24": 24824,
-        "sells_h24": 21425,
-        "trades_h24": 46249,
-        "avg_trade": 66.29,
-        "m5": -0.02,
-        "h1": 2.23,
-        "h6": 0.65,
-        "h24": 20.94,
-        "eligible": true,
-        "v": 3,
-        "pool": "2XhQqp1vDVxtaa21bPsekQF5gjts9euqRPSZ6Urs41qk",
-        "m5_raw": -0.02,
-        "buys_m5": 25,
-        "sells_m5": 18,
-        "buys_h6": 1615,
-        "sells_h6": 1369,
-        "vol_m5": 4166.82,
-        "vol_h6": 185560.2,
-        "liq_base": 48953776,
-        "liq_quote": 622.6807,
-        "fdv": 968148,
-        "boosts": null,
-        "links": [
-          "twitter",
-          "website"
-        ],
-        "read": {
-          "swing": 0.144,
-          "paid": 0.0011587803973200663,
-          "vs_paid": -0.1666,
-          "off_peak": -0.4602,
-          "accel": -0.1322,
-          "candles": 96,
-          "unease": 2,
-          "known": 5,
-          "signs": [
-            "failed_high",
-            "under_paid"
-          ]
-        }
-      },
-      "reentry": true,
-      "since_loss_h": 2.1
     }
   },
   "closed": [
@@ -5186,6 +5111,87 @@
       "pnl_pct": -0.2575242397854881,
       "exit_reason": "stop-loss at -22%",
       "exit_px": 0.01054
+    },
+    {
+      "symbol": "FOOD",
+      "opened": "2026-11-14 10:58 UTC",
+      "cost_sol": 0.25,
+      "tokens": 0.0,
+      "entry_px": 0.0009986969137638125,
+      "entry_mc": 998582,
+      "peak_px": 0.001118,
+      "stop": -0.2,
+      "tp1": 0.4,
+      "tp1_done": false,
+      "thesis": "v-tight rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.17625833630346213,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/2xhqqp1vdvxtaa21bpsekqf5gjts9euqrpsz6urs41qk",
+      "v": 2,
+      "mev_sol": 0.013222305363049573,
+      "swaps": 2,
+      "entry_liq": 96039.96,
+      "at_entry": {
+        "px": 0.0009985,
+        "liq": 96039.96,
+        "mc": 998582,
+        "dex": "pumpswap",
+        "age_h": 35.69,
+        "vol_h1": 26446.53,
+        "vol_h24": 3065753.39,
+        "buys_h1": 157,
+        "sells_h1": 156,
+        "buys_h24": 24824,
+        "sells_h24": 21425,
+        "trades_h24": 46249,
+        "avg_trade": 66.29,
+        "m5": -0.02,
+        "h1": 2.23,
+        "h6": 0.65,
+        "h24": 20.94,
+        "eligible": true,
+        "v": 3,
+        "pool": "2XhQqp1vDVxtaa21bPsekQF5gjts9euqRPSZ6Urs41qk",
+        "m5_raw": -0.02,
+        "buys_m5": 25,
+        "sells_m5": 18,
+        "buys_h6": 1615,
+        "sells_h6": 1369,
+        "vol_m5": 4166.82,
+        "vol_h6": 185560.2,
+        "liq_base": 48953776,
+        "liq_quote": 622.6807,
+        "fdv": 968148,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.144,
+          "paid": 0.0011587803973200663,
+          "vs_paid": -0.1666,
+          "off_peak": -0.4602,
+          "accel": -0.1322,
+          "candles": 96,
+          "unease": 2,
+          "known": 5,
+          "signs": [
+            "failed_high",
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 2.1,
+      "mint": "FTu55MyigXns96jz4nTCDDiTCjYJjyrHSceCgG9Upump",
+      "closed": "2026-11-14 13:57 UTC",
+      "pnl_sol": -0.07374166369653787,
+      "pnl_pct": -0.29496665478615147,
+      "exit_reason": "stop-loss at -23%",
+      "exit_px": 0.0007712
     }
   ],
   "log": [
@@ -5336,10 +5342,11 @@
     "2026-11-14 08:18 UTC BUY WOHAIHAO 0.25 SOL @ $0.001540312 (mc $1,474,202): v-tight rule",
     "2026-11-14 08:52 UTC SELL 100% WOHAIHAO -> 0.177 SOL @ $0.001199: stop-loss at -22%",
     "2026-11-14 10:58 UTC BUY FOOD 0.25 SOL @ $0.00099869691 (mc $998,582): v-tight rule",
-    "2026-11-14 13:16 UTC SELL 100% RAMBO -> 0.186 SOL @ $0.01054: stop-loss at -22%"
+    "2026-11-14 13:16 UTC SELL 100% RAMBO -> 0.186 SOL @ $0.01054: stop-loss at -22%",
+    "2026-11-14 13:57 UTC SELL 100% FOOD -> 0.176 SOL @ $0.0007712: stop-loss at -23%"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-14 13:54 UTC"
+  "last_mark": "2026-11-14 13:57 UTC"
 }
