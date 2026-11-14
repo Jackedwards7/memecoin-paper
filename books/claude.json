@@ -870,7 +870,7 @@
     "2026-11-13 00:15 UTC BUY RAMBO 0.25 SOL @ $0.012660836 (mc $12,486,694): Gate pass; mature pumpswap coin (225h), mc $12.5M, liq $309k, 1h +12%, 24h +108%, 5m +0.5% (no spike), 1h buys 212 vs sells 61. Other passes DESSA/GATO skipped (24h negative, 1h negative); CBUCKS failed gate (14% wallet).",
     "2026-11-13 16:37 UTC BUY GATO 0.25 SOL @ $0.0080315323 (mc $7,926,891): Gate pass; mature pumpswap coin (1924h), mc $7.8M, liq $298k, 1h +30.8%, 24h +37%, 5m +4.2% (no spike), 1h buys 1257 vs sells 915, vol1h $220k. Other universe coins CBUCKS (14% wallet) and WASTED (copycat) failed gate."
   ],
-  "last_mark": "2026-11-14 00:54 UTC",
+  "last_mark": "2026-11-14 01:01 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794617341,
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794617341,
@@ -1134,7 +1134,8 @@
       ],
       "moves": {
         "1d": -0.09370529327610877,
-        "3d": -0.24123748211731033
+        "3d": -0.24123748211731033,
+        "7d": -0.7635908440629471
       }
     },
     "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump": {
@@ -1147,7 +1148,8 @@
       ],
       "moves": {
         "1d": -0.02088325915782263,
-        "3d": -0.24649092776446424
+        "3d": -0.24649092776446424,
+        "7d": -0.9824888736733995
       }
     },
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
@@ -1160,7 +1162,8 @@
       ],
       "moves": {
         "1d": 0.058721934369602824,
-        "3d": -0.06217616580310881
+        "3d": -0.06217616580310881,
+        "7d": -0.30025906735751284
       }
     },
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": {
@@ -1172,7 +1175,8 @@
       ],
       "moves": {
         "1d": -0.1569531538177793,
-        "3d": -0.27296200663961634
+        "3d": -0.27296200663961634,
+        "7d": -0.28661010697159706
       }
     },
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": {
@@ -1185,7 +1189,8 @@
       ],
       "moves": {
         "1d": 0.11625874125874125,
-        "3d": 0.31162587412587395
+        "3d": 0.31162587412587395,
+        "7d": -0.8100087412587412
       }
     },
     "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": {
@@ -1198,7 +1203,8 @@
       ],
       "moves": {
         "1d": -0.3646341463414634,
-        "3d": -0.43310975609756097
+        "3d": -0.43310975609756097,
+        "7d": 0.5304878048780488
       }
     },
     "DKtofLM6bhb54GQy5YFSWQjQmGiZqAkjzkQJ1LTopump": {
