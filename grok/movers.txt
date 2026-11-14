@@ -1,12 +1,12 @@
-MOVERS 2026-11-14T02:41:05Z
-HWya5CpQiQWLnJfJVRDF9o8AHaUPnPMRa3vfQRczpump AMC +9%
-NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump Punch +9%
-mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS +11%
-FTu55MyigXns96jz4nTCDDiTCjYJjyrHSceCgG9Upump FOOD +16%
-7sGdNQSvUGpahh6qyXB3g5gsdK9FAzZM299KyCXspump https +16%
-DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -17%
-Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT -9%
-PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH -9%
-5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat -8%
-5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -7%
+MOVERS 2026-11-14T02:57:08Z
+7sGdNQSvUGpahh6qyXB3g5gsdK9FAzZM299KyCXspump https +9%
+8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +13%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +16%
+FTu55MyigXns96jz4nTCDDiTCjYJjyrHSceCgG9Upump FOOD +25%
+98sMhvDwXj1RQi5c5Mndm3vPe9cBqPrbLaufMXFNMh5g HYPE +479426%
+DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -16%
+Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT -10%
+5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -8%
+8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER -6%
+PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH -6%
 END
