@@ -1,12 +1,12 @@
-MOVERS 2026-11-14T02:57:08Z
-7sGdNQSvUGpahh6qyXB3g5gsdK9FAzZM299KyCXspump https +9%
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +13%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +16%
-FTu55MyigXns96jz4nTCDDiTCjYJjyrHSceCgG9Upump FOOD +25%
-98sMhvDwXj1RQi5c5Mndm3vPe9cBqPrbLaufMXFNMh5g HYPE +479426%
-DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -16%
-Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT -10%
-5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -8%
-8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER -6%
-PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH -6%
+MOVERS 2026-11-14T03:13:08Z
+7sGdNQSvUGpahh6qyXB3g5gsdK9FAzZM299KyCXspump https +11%
+DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin +12%
+8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +14%
+FTu55MyigXns96jz4nTCDDiTCjYJjyrHSceCgG9Upump FOOD +18%
+98sMhvDwXj1RQi5c5Mndm3vPe9cBqPrbLaufMXFNMh5g HYPE +485455%
+HWya5CpQiQWLnJfJVRDF9o8AHaUPnPMRa3vfQRczpump AMC -18%
+DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -10%
+Hh3oTaqDCKKfdBgsQEvxp9sUwyNf8x9qmKqEMLBWpump HODL -10%
+8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER -8%
+PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH -7%
 END
