@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.024819159712614,
+  "cash_sol": 7.208153748930435,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -220,80 +220,6 @@
       },
       "reentry": true,
       "since_loss_h": 1.4
-    },
-    "HWya5CpQiQWLnJfJVRDF9o8AHaUPnPMRa3vfQRczpump": {
-      "symbol": "AMC",
-      "opened": "2026-11-14 02:09 UTC",
-      "cost_sol": 0.25,
-      "tokens": 4037.281457706371,
-      "entry_px": 0.0045635442297023,
-      "entry_mc": 4536125,
-      "peak_px": 0.005211,
-      "stop": -0.2,
-      "tp1": 0.4,
-      "tp1_done": false,
-      "thesis": "v-tight rule",
-      "rugcheck": 1,
-      "risks": [],
-      "realised_sol": 0.0,
-      "dex": "pumpswap",
-      "url": "https://dexscreener.com/solana/dxbqyptjckqtsuwyuqjb11hpuppylgjz5x4z7ufhp3gh",
-      "v": 2,
-      "mev_sol": 0.0065061808718282375,
-      "swaps": 1,
-      "entry_liq": 161083.89,
-      "at_entry": {
-        "px": 0.004563,
-        "liq": 161083.89,
-        "mc": 4536125,
-        "dex": "pumpswap",
-        "age_h": 7.49,
-        "vol_h1": 72319.6,
-        "vol_h24": 1502429.12,
-        "buys_h1": 9346,
-        "sells_h1": 7501,
-        "buys_h24": 63946,
-        "sells_h24": 53790,
-        "trades_h24": 117736,
-        "avg_trade": 12.76,
-        "m5": -3.16,
-        "h1": 5.96,
-        "h6": 157,
-        "h24": 11287,
-        "eligible": true,
-        "v": 3,
-        "pool": "DxbQyPTjckQTSUWyUqJB11HpupPyLGJZ5x4z7ufHp3Gh",
-        "m5_raw": -3.16,
-        "buys_m5": 630,
-        "sells_m5": 624,
-        "buys_h6": 53903,
-        "sells_h6": 47115,
-        "vol_m5": 6748.53,
-        "vol_h6": 914492.77,
-        "liq_base": 17752216,
-        "liq_quote": 1043.2482,
-        "fdv": 4536125,
-        "boosts": 100,
-        "links": [
-          "twitter",
-          "website"
-        ],
-        "read": {
-          "swing": 0.1475,
-          "paid": 0.002931689263549832,
-          "vs_paid": 0.5279,
-          "off_peak": -0.1944,
-          "accel": 0.0864,
-          "candles": 30,
-          "unease": 1,
-          "known": 3,
-          "signs": [
-            "failed_high"
-          ]
-        }
-      },
-      "reentry": false,
-      "since_loss_h": 0.5
     }
   },
   "closed": [
@@ -5031,6 +4957,86 @@
       "pnl_pct": -0.24946242261202223,
       "exit_reason": "stop-loss at -20%",
       "exit_px": 0.001174
+    },
+    {
+      "symbol": "AMC",
+      "opened": "2026-11-14 02:09 UTC",
+      "cost_sol": 0.25,
+      "tokens": 0.0,
+      "entry_px": 0.0045635442297023,
+      "entry_mc": 4536125,
+      "peak_px": 0.005211,
+      "stop": -0.2,
+      "tp1": 0.4,
+      "tp1_done": false,
+      "thesis": "v-tight rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.1833345892178215,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/dxbqyptjckqtsuwyuqjb11hpuppylgjz5x4z7ufhp3gh",
+      "v": 2,
+      "mev_sol": 0.013077346596627817,
+      "swaps": 2,
+      "entry_liq": 161083.89,
+      "at_entry": {
+        "px": 0.004563,
+        "liq": 161083.89,
+        "mc": 4536125,
+        "dex": "pumpswap",
+        "age_h": 7.49,
+        "vol_h1": 72319.6,
+        "vol_h24": 1502429.12,
+        "buys_h1": 9346,
+        "sells_h1": 7501,
+        "buys_h24": 63946,
+        "sells_h24": 53790,
+        "trades_h24": 117736,
+        "avg_trade": 12.76,
+        "m5": -3.16,
+        "h1": 5.96,
+        "h6": 157,
+        "h24": 11287,
+        "eligible": true,
+        "v": 3,
+        "pool": "DxbQyPTjckQTSUWyUqJB11HpupPyLGJZ5x4z7ufHp3Gh",
+        "m5_raw": -3.16,
+        "buys_m5": 630,
+        "sells_m5": 624,
+        "buys_h6": 53903,
+        "sells_h6": 47115,
+        "vol_m5": 6748.53,
+        "vol_h6": 914492.77,
+        "liq_base": 17752216,
+        "liq_quote": 1043.2482,
+        "fdv": 4536125,
+        "boosts": 100,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.1475,
+          "paid": 0.002931689263549832,
+          "vs_paid": 0.5279,
+          "off_peak": -0.1944,
+          "accel": 0.0864,
+          "candles": 30,
+          "unease": 1,
+          "known": 3,
+          "signs": [
+            "failed_high"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 0.5,
+      "mint": "HWya5CpQiQWLnJfJVRDF9o8AHaUPnPMRa3vfQRczpump",
+      "closed": "2026-11-14 03:15 UTC",
+      "pnl_sol": -0.0666654107821785,
+      "pnl_pct": -0.266661643128714,
+      "exit_reason": "stop-loss at -20%",
+      "exit_px": 0.003634
     }
   ],
   "log": [
@@ -5176,10 +5182,11 @@
     "2026-11-13 22:44 UTC SELL 100% Rocco -> 0.184 SOL @ $0.0005285: stop-loss at -21%",
     "2026-11-14 00:54 UTC SELL 100% Max -> 0.096 SOL @ $0.001517: trailing stop: 40% off peak, -14% from entry",
     "2026-11-14 01:38 UTC SELL 100% MEVS -> 0.188 SOL @ $0.001174: stop-loss at -20%",
-    "2026-11-14 02:09 UTC BUY AMC 0.25 SOL @ $0.0045635442 (mc $4,536,125): v-tight rule"
+    "2026-11-14 02:09 UTC BUY AMC 0.25 SOL @ $0.0045635442 (mc $4,536,125): v-tight rule",
+    "2026-11-14 03:15 UTC SELL 100% AMC -> 0.183 SOL @ $0.003634: stop-loss at -20%"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-14 03:13 UTC"
+  "last_mark": "2026-11-14 03:15 UTC"
 }
