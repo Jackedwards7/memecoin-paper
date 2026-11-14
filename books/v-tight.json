@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.1355921066038475,
+  "cash_sol": 6.8855921066038475,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -220,6 +220,81 @@
       },
       "reentry": true,
       "since_loss_h": 1.4
+    },
+    "FTu55MyigXns96jz4nTCDDiTCjYJjyrHSceCgG9Upump": {
+      "symbol": "FOOD",
+      "opened": "2026-11-14 10:58 UTC",
+      "cost_sol": 0.25,
+      "tokens": 18179.589572952053,
+      "entry_px": 0.0009986969137638125,
+      "entry_mc": 998582,
+      "peak_px": 0.0009986969137638125,
+      "stop": -0.2,
+      "tp1": 0.4,
+      "tp1_done": false,
+      "thesis": "v-tight rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/2xhqqp1vdvxtaa21bpsekqf5gjts9euqrpsz6urs41qk",
+      "v": 2,
+      "mev_sol": 0.006599788806758183,
+      "swaps": 1,
+      "entry_liq": 96039.96,
+      "at_entry": {
+        "px": 0.0009985,
+        "liq": 96039.96,
+        "mc": 998582,
+        "dex": "pumpswap",
+        "age_h": 35.69,
+        "vol_h1": 26446.53,
+        "vol_h24": 3065753.39,
+        "buys_h1": 157,
+        "sells_h1": 156,
+        "buys_h24": 24824,
+        "sells_h24": 21425,
+        "trades_h24": 46249,
+        "avg_trade": 66.29,
+        "m5": -0.02,
+        "h1": 2.23,
+        "h6": 0.65,
+        "h24": 20.94,
+        "eligible": true,
+        "v": 3,
+        "pool": "2XhQqp1vDVxtaa21bPsekQF5gjts9euqRPSZ6Urs41qk",
+        "m5_raw": -0.02,
+        "buys_m5": 25,
+        "sells_m5": 18,
+        "buys_h6": 1615,
+        "sells_h6": 1369,
+        "vol_m5": 4166.82,
+        "vol_h6": 185560.2,
+        "liq_base": 48953776,
+        "liq_quote": 622.6807,
+        "fdv": 968148,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.144,
+          "paid": 0.0011587803973200663,
+          "vs_paid": -0.1666,
+          "off_peak": -0.4602,
+          "accel": -0.1322,
+          "candles": 96,
+          "unease": 2,
+          "known": 5,
+          "signs": [
+            "failed_high",
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 2.1
     }
   },
   "closed": [
@@ -5253,10 +5328,11 @@
     "2026-11-14 02:09 UTC BUY AMC 0.25 SOL @ $0.0045635442 (mc $4,536,125): v-tight rule",
     "2026-11-14 03:15 UTC SELL 100% AMC -> 0.183 SOL @ $0.003634: stop-loss at -20%",
     "2026-11-14 08:18 UTC BUY WOHAIHAO 0.25 SOL @ $0.001540312 (mc $1,474,202): v-tight rule",
-    "2026-11-14 08:52 UTC SELL 100% WOHAIHAO -> 0.177 SOL @ $0.001199: stop-loss at -22%"
+    "2026-11-14 08:52 UTC SELL 100% WOHAIHAO -> 0.177 SOL @ $0.001199: stop-loss at -22%",
+    "2026-11-14 10:58 UTC BUY FOOD 0.25 SOL @ $0.00099869691 (mc $998,582): v-tight rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-14 10:52 UTC"
+  "last_mark": "2026-11-14 10:57 UTC"
 }
