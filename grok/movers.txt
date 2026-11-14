@@ -1,12 +1,12 @@
-MOVERS 2026-11-14T21:40:06Z
-3tjPCXfx3KrgMY53yo7pa67D2QQZMbLTRaqQckJmpump VTC +8%
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +9%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +10%
-GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +31%
-Cmf39V6XDhnWf4C7VMwyACBZgJX8K3ztVJ4GeUF4pump COA +23754%
-5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -20%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -15%
-DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -14%
+MOVERS 2026-11-14T21:56:06Z
+MukLDtJ8Cx9DxLbeyLRSWPSposTMWuwHANbuaudpump OTC +6%
+8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH +7%
+5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat +10%
+GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +17%
+Cmf39V6XDhnWf4C7VMwyACBZgJX8K3ztVJ4GeUF4pump COA +18113%
 Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT -14%
-FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump three -10%
+5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -14%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -13%
+Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump CATE -9%
+FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump three -9%
 END
