@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.208153748930435,
+  "cash_sol": 6.958153748930435,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -220,6 +220,68 @@
       },
       "reentry": true,
       "since_loss_h": 1.4
+    },
+    "4B1mCGeSjTadzH7okALwdFm8taxoHbZBFCTA1nZRpump": {
+      "symbol": "WOHAIHAO",
+      "opened": "2026-11-14 08:18 UTC",
+      "cost_sol": 0.25,
+      "tokens": 11729.603903921792,
+      "entry_px": 0.0015403120299705276,
+      "entry_mc": 1474202,
+      "peak_px": 0.0015403120299705276,
+      "stop": -0.2,
+      "tp1": 0.4,
+      "tp1_done": false,
+      "thesis": "v-tight rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/9xvu6bt8nvkceejkx15cu6f5t8szwxyl1x13y6glhqe8",
+      "v": 2,
+      "mev_sol": 0.00663129973474801,
+      "swaps": 1,
+      "entry_liq": 93032.73,
+      "at_entry": {
+        "px": 0.00154,
+        "liq": 93032.73,
+        "mc": 1474202,
+        "dex": "pumpswap",
+        "age_h": 6.95,
+        "vol_h1": 117414.53,
+        "vol_h24": 981557.54,
+        "buys_h1": 1005,
+        "sells_h1": 917,
+        "buys_h24": 13631,
+        "sells_h24": 11495,
+        "trades_h24": 25126,
+        "avg_trade": 39.07,
+        "m5": 7.75,
+        "h1": 50.72,
+        "h6": 540,
+        "h24": 4725,
+        "eligible": true,
+        "v": 3,
+        "pool": "9Xvu6Bt8nVKcEeJKx15cU6f5t8szWxyL1X13y6gLHQe8",
+        "m5_raw": 7.75,
+        "buys_m5": 90,
+        "sells_m5": 72,
+        "buys_h6": 13047,
+        "sells_h6": 11073,
+        "vol_m5": 9505.14,
+        "vol_h6": 799845.65,
+        "liq_base": 30327003,
+        "liq_quote": 614.3969,
+        "fdv": 1474202,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": null
+      },
+      "reentry": false,
+      "since_loss_h": 5.1
     }
   },
   "closed": [
@@ -5183,10 +5245,11 @@
     "2026-11-14 00:54 UTC SELL 100% Max -> 0.096 SOL @ $0.001517: trailing stop: 40% off peak, -14% from entry",
     "2026-11-14 01:38 UTC SELL 100% MEVS -> 0.188 SOL @ $0.001174: stop-loss at -20%",
     "2026-11-14 02:09 UTC BUY AMC 0.25 SOL @ $0.0045635442 (mc $4,536,125): v-tight rule",
-    "2026-11-14 03:15 UTC SELL 100% AMC -> 0.183 SOL @ $0.003634: stop-loss at -20%"
+    "2026-11-14 03:15 UTC SELL 100% AMC -> 0.183 SOL @ $0.003634: stop-loss at -20%",
+    "2026-11-14 08:18 UTC BUY WOHAIHAO 0.25 SOL @ $0.001540312 (mc $1,474,202): v-tight rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-14 08:15 UTC"
+  "last_mark": "2026-11-14 08:17 UTC"
 }
