@@ -1,12 +1,12 @@
-MOVERS 2026-11-14T18:59:30Z
-BcHEaaTCvycPwwsJ9yQTXdHP9X2gCLkznDbZ8VySpump Jotchua +4%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +5%
-CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi +9%
-KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump RAMBO +12%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +18%
-HWya5CpQiQWLnJfJVRDF9o8AHaUPnPMRa3vfQRczpump AMC -36%
-5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -11%
+MOVERS 2026-11-14T19:15:37Z
+KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump RAMBO +6%
+Hh3oTaqDCKKfdBgsQEvxp9sUwyNf8x9qmKqEMLBWpump HODL +8%
+CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi +10%
+8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER +11%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +15%
+HWya5CpQiQWLnJfJVRDF9o8AHaUPnPMRa3vfQRczpump AMC -35%
+mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS -18%
 nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity -9%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -8%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -7%
+33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump DOPE -7%
+DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -6%
 END
