@@ -1,12 +1,12 @@
-MOVERS 2026-11-14T16:18:48Z
-y1AZt42vceCmStjW4zetK3VoNarC1VxJ5iDjpiupump FARTBOY +3%
+MOVERS 2026-11-14T16:34:48Z
 EsP4kJfKUDLfX274WoBSiiEy74Sh4tZKUCDjfULHpump FRIC +4%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +4%
-HWya5CpQiQWLnJfJVRDF9o8AHaUPnPMRa3vfQRczpump AMC +5%
-mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS +33%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -16%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -16%
-3tjPCXfx3KrgMY53yo7pa67D2QQZMbLTRaqQckJmpump VTC -13%
-EaxAUcXxNnVwcqm2BBocbows7D1XVY2Q63V38NEypump GTA6Coin -9%
-4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao -8%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +7%
+y1AZt42vceCmStjW4zetK3VoNarC1VxJ5iDjpiupump FARTBOY +7%
+8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +10%
+mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS +28%
+3tjPCXfx3KrgMY53yo7pa67D2QQZMbLTRaqQckJmpump VTC -18%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -17%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -14%
+nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity -7%
+DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -7%
 END
