@@ -1,12 +1,12 @@
-MOVERS 2026-11-14T12:02:07Z
-CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi +4%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +4%
-FTu55MyigXns96jz4nTCDDiTCjYJjyrHSceCgG9Upump FOOD +7%
+MOVERS 2026-11-14T12:18:06Z
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +5%
+4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao +6%
 33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump DOPE +8%
-HWya5CpQiQWLnJfJVRDF9o8AHaUPnPMRa3vfQRczpump AMC +13%
-NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump Punch -11%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -10%
-mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS -10%
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB -8%
-CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump fone -6%
+5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max +8%
+KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump RAMBO +9%
+NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump Punch -12%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -12%
+8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB -9%
+FTu55MyigXns96jz4nTCDDiTCjYJjyrHSceCgG9Upump FOOD -7%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -6%
 END
