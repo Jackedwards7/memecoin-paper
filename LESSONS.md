@@ -1,8 +1,8 @@
 # Lessons
 
-480 closed trades labelled, every book. Written by the bot.
+482 closed trades labelled, every book. Written by the bot.
 
-- **slow-bleed**: 157 trades, mean -29%. Rocco (v-low-bundle): -14% over 48h; Rocco (v-momentum): -14% over 48h
+- **slow-bleed**: 159 trades, mean -29%. meowl (v-loose): -22% over 48h; TripleT (v-unpaid): -19% over 48h
 - **other**: 138 trades, mean -30%. JOB (v-swing): stop-loss at -13%; FOOD (v-tight): stop-loss at -22%
 - **won-held**: 92 trades, mean +36%. RAMBO (v-unease): +14%, peak +64%; RAMBO (v-velocity): +28%, peak +85%
 - **bought-spike**: 41 trades, mean -32%. AI (v-unease): up 960% in 24h at entry, peak +0%; AI (v-velocity): up 960% in 24h at entry, peak +0%
