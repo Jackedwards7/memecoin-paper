@@ -1,12 +1,12 @@
-MOVERS 2026-11-14T07:29:29Z
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +6%
-PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH +6%
-FyHakvZH3L4UABSQYK7e9ECEzWV37u7GTkmAbHXspump inuhao +10%
-GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +15%
-HWya5CpQiQWLnJfJVRDF9o8AHaUPnPMRa3vfQRczpump AMC +21%
-mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS -19%
-DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -11%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -11%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -9%
-B2YpP21vQBESJ2jtnuhPujEUT61KVRxZ2X5gsDcUpump JENSEN -8%
+MOVERS 2026-11-14T07:45:29Z
+4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao +4%
+5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max +6%
+EaxAUcXxNnVwcqm2BBocbows7D1XVY2Q63V38NEypump GTA6Coin +6%
+8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +10%
+GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +22%
+FyHakvZH3L4UABSQYK7e9ECEzWV37u7GTkmAbHXspump inuhao -19%
+B2YpP21vQBESJ2jtnuhPujEUT61KVRxZ2X5gsDcUpump JENSEN -15%
+mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS -14%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -9%
+DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -8%
 END
