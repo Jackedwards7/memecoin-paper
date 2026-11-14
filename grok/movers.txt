@@ -1,12 +1,12 @@
-MOVERS 2026-11-14T02:25:05Z
-8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH +8%
-HWya5CpQiQWLnJfJVRDF9o8AHaUPnPMRa3vfQRczpump AMC +8%
-CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi +9%
-mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS +13%
-5w3wVdJaESaJKyLmStM6Hv9UyUkmZ1b9DLQquAqqpump SID +15%
-FTu55MyigXns96jz4nTCDDiTCjYJjyrHSceCgG9Upump FOOD -9%
-DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -9%
-DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin -9%
+MOVERS 2026-11-14T02:41:05Z
+HWya5CpQiQWLnJfJVRDF9o8AHaUPnPMRa3vfQRczpump AMC +9%
+NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump Punch +9%
+mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS +11%
+FTu55MyigXns96jz4nTCDDiTCjYJjyrHSceCgG9Upump FOOD +16%
+7sGdNQSvUGpahh6qyXB3g5gsdK9FAzZM299KyCXspump https +16%
+DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD -17%
+Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT -9%
+PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH -9%
 5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat -8%
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB -6%
+5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -7%
 END
