@@ -1,9 +1,9 @@
 # Lessons
 
-464 closed trades labelled, every book. Written by the bot.
+465 closed trades labelled, every book. Written by the bot.
 
 - **slow-bleed**: 155 trades, mean -29%. meowl (v-no-spike): -36% over 34h; meowl (v-velocity): -36% over 34h
-- **other**: 137 trades, mean -30%. DESSA (v-no-spike): stop-loss at -36%; JOB (v-swing): stop-loss at -13%
+- **other**: 138 trades, mean -30%. JOB (v-swing): stop-loss at -13%; FOOD (v-tight): stop-loss at -22%
 - **won-held**: 92 trades, mean +36%. RAMBO (v-unease): +14%, peak +64%; RAMBO (v-velocity): +28%, peak +85%
 - **bought-spike**: 41 trades, mean -32%. AI (v-unease): up 960% in 24h at entry, peak +0%; AI (v-velocity): up 960% in 24h at entry, peak +0%
 - **rug**: 18 trades, mean -100%. UODF (v-unpaid): event exit: liquidity down 49% since entry, -100% from entry; SCAMSON (v-tight): event exit: liquidity down 99% since entry, -100% from entry
