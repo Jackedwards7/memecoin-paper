@@ -1,12 +1,12 @@
-MOVERS 2026-11-14T05:05:19Z
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +7%
-nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity +8%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +11%
-NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump Punch +14%
+MOVERS 2026-11-14T05:21:27Z
+8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +10%
+DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump AMD +12%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +14%
 GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +17%
-34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG -13%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -11%
-HWya5CpQiQWLnJfJVRDF9o8AHaUPnPMRa3vfQRczpump AMC -9%
-mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS -8%
-5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -4%
+NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump Punch +18%
+mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS -16%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -10%
+34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG -9%
+FTu55MyigXns96jz4nTCDDiTCjYJjyrHSceCgG9Upump FOOD -7%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -5%
 END
