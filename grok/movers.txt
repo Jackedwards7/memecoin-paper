@@ -1,12 +1,12 @@
-MOVERS 2026-11-15T21:33:32Z
-98kfF7rmsg1QDUEoCqNE7g7M1FdrTt92TEp2CLzypump PAID +11%
-DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS +11%
-HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO +12%
-8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH +13%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +41%
-mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS -7%
-nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity -6%
-KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump RAMBO -5%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -4%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -4%
+MOVERS 2026-11-15T21:49:42Z
+DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS +6%
+GTBxUiw6wJdmmkCGZgRHLyYxqu1vG4KtRpeox6yDpump JEANPHIL +7%
+8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH +7%
+9HFUEab7sompLDPTAaTGkryMNGbtBaFMhHMVpJEBpump rockstar +14%
+98kfF7rmsg1QDUEoCqNE7g7M1FdrTt92TEp2CLzypump PAID +17%
+4B8CdHPZ8ng1CtMP2Jk2W8wGAwJ5nJnap1deVsz2pump BUTTHOLE -20%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -8%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -2%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -2%
+npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -2%
 END

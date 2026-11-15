@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.466477285230029,
+  "cash_sol": 7.216477285230029,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -357,6 +357,68 @@
       },
       "reentry": true,
       "since_loss_h": 8.5
+    },
+    "9HFUEab7sompLDPTAaTGkryMNGbtBaFMhHMVpJEBpump": {
+      "symbol": "rockstar",
+      "opened": "2026-11-15 21:50 UTC",
+      "cost_sol": 0.25,
+      "tokens": 23944.82639249216,
+      "entry_px": 0.0007191595260594302,
+      "entry_mc": 684019,
+      "peak_px": 0.0007191595260594302,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-networks rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/5pynpptnpdg5resu3vqejkqhepij1uwp5l7a2cchmxdy",
+      "v": 2,
+      "mev_sol": 0.006948304613674264,
+      "swaps": 1,
+      "entry_liq": 81082.74,
+      "at_entry": {
+        "px": 0.000719,
+        "liq": 81082.74,
+        "mc": 684019,
+        "dex": "pumpswap",
+        "age_h": 10.83,
+        "vol_h1": 230316.92,
+        "vol_h24": 2403744.69,
+        "buys_h1": 3299,
+        "sells_h1": 2008,
+        "buys_h24": 27446,
+        "sells_h24": 18429,
+        "trades_h24": 45875,
+        "avg_trade": 52.4,
+        "m5": 11.6,
+        "h1": 14.44,
+        "h6": 462,
+        "h24": 1480,
+        "eligible": true,
+        "v": 3,
+        "pool": "5PYNPPTNpdG5REsu3VqeJKqHePiJ1uwP5L7A2CcHMxdY",
+        "m5_raw": 11.6,
+        "buys_m5": 655,
+        "sells_m5": 186,
+        "buys_h6": 18478,
+        "sells_h6": 12520,
+        "vol_m5": 17893.11,
+        "vol_h6": 1823188.34,
+        "liq_base": 57487305,
+        "liq_quote": 168.3441,
+        "fdv": 684019,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": null
+      },
+      "reentry": false,
+      "since_loss_h": 10.4
     }
   },
   "closed": [
@@ -4278,10 +4340,11 @@
     "2026-11-15 11:25 UTC SELL 100% WANTED -> 0.145 SOL @ $0.000899: event exit: price -26% in 5 minutes, -33% from entry",
     "2026-11-15 14:20 UTC SELL 100% GATO -> 0.311 SOL @ $0.006609: time stop: 48h held, +20%, no take-profit",
     "2026-11-15 16:08 UTC BUY Punch 0.25 SOL @ $0.00028354306 (mc $283,488): v-networks rule",
-    "2026-11-15 19:57 UTC BUY three 0.25 SOL @ $0.00039596181 (mc $395,830): v-networks rule"
+    "2026-11-15 19:57 UTC BUY three 0.25 SOL @ $0.00039596181 (mc $395,830): v-networks rule",
+    "2026-11-15 21:50 UTC BUY rockstar 0.25 SOL @ $0.00071915953 (mc $684,019): v-networks rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-15 21:40 UTC"
+  "last_mark": "2026-11-15 21:49 UTC"
 }
