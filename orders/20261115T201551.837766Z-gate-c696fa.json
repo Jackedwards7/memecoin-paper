@@ -1,0 +1,22 @@
+{
+  "id": "20261115T201551.837766Z-gate-c696fa",
+  "kind": "gate",
+  "at": 1794773751.837766,
+  "by": "local",
+  "results": {
+    "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
+      "symbol": "CBUCKS",
+      "px": 0.003577,
+      "fails": [
+        "a wallet holds 14% of supply"
+      ]
+    },
+    "FL3LnVeZTtn7uvcpytRLyAYsqUJtznskjdE4p1HSpump": {
+      "symbol": "UM",
+      "px": 0.001435,
+      "fails": [
+        "RugCheck danger: Low Liquidity"
+      ]
+    }
+  }
+}
