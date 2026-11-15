@@ -1,12 +1,12 @@
-MOVERS 2026-11-15T04:21:23Z
-5yC9BM8KUsJTPbWPLfA2N8qH1s9V8DQ3Vcw1G6Jdpump AgenC +3%
-CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump fone +7%
-4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao +7%
-KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump RAMBO +11%
-4B1mCGeSjTadzH7okALwdFm8taxoHbZBFCTA1nZRpump WOHAIHAO +45%
-85RhcSEMy15SNhFLmSArNm7udPKXVagVgsq4YmSopump bill -41%
-3tjPCXfx3KrgMY53yo7pa67D2QQZMbLTRaqQckJmpump VTC -16%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -11%
-34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG -8%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -7%
+MOVERS 2026-11-15T04:37:28Z
+8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER +4%
+GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +5%
+CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump fone +6%
+5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max +25%
+4B1mCGeSjTadzH7okALwdFm8taxoHbZBFCTA1nZRpump WOHAIHAO +107%
+85RhcSEMy15SNhFLmSArNm7udPKXVagVgsq4YmSopump bill -27%
+mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS -9%
+98kfF7rmsg1QDUEoCqNE7g7M1FdrTt92TEp2CLzypump PAID -8%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -7%
+5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat -6%
 END
