@@ -1,8 +1,8 @@
 # Lessons
 
-521 closed trades labelled, every book. Written by the bot.
+522 closed trades labelled, every book. Written by the bot.
 
-- **slow-bleed**: 183 trades, mean -29%. RAMBO (v-no-spike): -21% over 23h; RAMBO (v-velocity): -21% over 23h
+- **slow-bleed**: 184 trades, mean -29%. RAMBO (v-velocity): -21% over 23h; FOOD (v-loose): -44% over 28h
 - **other**: 149 trades, mean -30%. AMC (v-swing): stop-loss at -51%; RAMBO (v-unease): event exit: price -20% in 5 minutes, -18% from entry
 - **won-held**: 95 trades, mean +35%. three (v-tight): +8%, peak +33%; three (v-unease): +8%, peak +33%
 - **bought-spike**: 41 trades, mean -32%. AI (v-unease): up 960% in 24h at entry, peak +0%; AI (v-velocity): up 960% in 24h at entry, peak +0%
