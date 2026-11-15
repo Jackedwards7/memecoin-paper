@@ -1,12 +1,12 @@
-MOVERS 2026-11-15T07:02:12Z
-33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump DOPE +3%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +6%
-85RhcSEMy15SNhFLmSArNm7udPKXVagVgsq4YmSopump bill +6%
-DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS +8%
-4B1mCGeSjTadzH7okALwdFm8taxoHbZBFCTA1nZRpump WOHAIHAO +46%
-KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump RAMBO -24%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -15%
-NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump Punch -8%
-3NZ9JMVBmGAqocybic2c7LQCJScmgsAZ6vQqTDzcqmJh WBTC -8%
-8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER -8%
+MOVERS 2026-11-15T07:18:12Z
+34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG +5%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +5%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +8%
+5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max +12%
+6N5NiqqEzBxxmbD2FHbHNhozt1VXvf22TvbbpQK6pump Tampons +515915%
+4B1mCGeSjTadzH7okALwdFm8taxoHbZBFCTA1nZRpump WOHAIHAO -30%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -11%
+85RhcSEMy15SNhFLmSArNm7udPKXVagVgsq4YmSopump bill -10%
+Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump baton -6%
+NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump Punch -5%
 END
