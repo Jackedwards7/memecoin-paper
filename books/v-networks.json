@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.760065601264111,
+  "cash_sol": 7.510065601264111,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -280,6 +280,69 @@
       },
       "reentry": true,
       "since_loss_h": 2.3
+    },
+    "CiMyaPC9icicJxkFqvqpgL2YT2FjEQmGx1YVdG78pump": {
+      "symbol": "WANTED",
+      "opened": "2026-11-15 08:06 UTC",
+      "cost_sol": 0.25,
+      "tokens": 12423.23237655082,
+      "entry_px": 0.0013462830761798543,
+      "entry_mc": 1342397,
+      "peak_px": 0.0013462830761798543,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-networks rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/2fivk3qnhbagz2pk9ldfhwfjvstnzjmpcrl469vzhuyf",
+      "v": 2,
+      "mev_sol": 0.007147962830593281,
+      "swaps": 1,
+      "entry_liq": 83151.38,
+      "at_entry": {
+        "px": 0.001346,
+        "liq": 83151.38,
+        "mc": 1342397,
+        "dex": "pumpswap",
+        "age_h": 6.25,
+        "vol_h1": 47997.14,
+        "vol_h24": 1040130.07,
+        "buys_h1": 5612,
+        "sells_h1": 2485,
+        "buys_h24": 53508,
+        "sells_h24": 20721,
+        "trades_h24": 74229,
+        "avg_trade": 14.01,
+        "m5": -0.08,
+        "h1": 1.27,
+        "h6": 259,
+        "h24": 3503,
+        "eligible": true,
+        "v": 3,
+        "pool": "2FivK3QNhBAGz2pK9LdfHWFJvSTnzjMpCrL469VZhUyf",
+        "m5_raw": -0.08,
+        "buys_m5": 382,
+        "sells_m5": 169,
+        "buys_h6": 49388,
+        "sells_h6": 18970,
+        "vol_m5": 3219.1,
+        "vol_h6": 824746.17,
+        "liq_base": 31354993,
+        "liq_quote": 586.03009,
+        "fdv": 1342397,
+        "boosts": null,
+        "links": [
+          "telegram",
+          "twitter",
+          "website"
+        ],
+        "read": null
+      },
+      "reentry": false,
+      "since_loss_h": 8.2
     }
   },
   "closed": [
@@ -4049,10 +4112,11 @@
     "2026-11-15 02:13 UTC BUY RAMBO 0.25 SOL @ $0.013840798 (mc $13,660,025): v-networks rule",
     "2026-11-15 02:45 UTC BUY WOHAIHAO 0.25 SOL @ $0.0011732629 (mc $1,122,444): v-networks rule",
     "2026-11-15 04:12 UTC SELL 50% WOHAIHAO -> 0.232 SOL @ $0.002384: take-profit at +103%: half sold, cost recovered",
-    "2026-11-15 05:35 UTC SELL 100% WOHAIHAO -> 0.182 SOL @ $0.001877: trailing stop: 40% off peak, +60% from entry"
+    "2026-11-15 05:35 UTC SELL 100% WOHAIHAO -> 0.182 SOL @ $0.001877: trailing stop: 40% off peak, +60% from entry",
+    "2026-11-15 08:06 UTC BUY WANTED 0.25 SOL @ $0.0013462831 (mc $1,342,397): v-networks rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-15 07:57 UTC"
+  "last_mark": "2026-11-15 08:06 UTC"
 }
