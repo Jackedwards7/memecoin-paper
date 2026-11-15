@@ -1,10 +1,10 @@
 # Lessons
 
-523 closed trades labelled, every book. Written by the bot.
+525 closed trades labelled, every book. Written by the bot.
 
-- **slow-bleed**: 184 trades, mean -29%. RAMBO (v-velocity): -21% over 23h; FOOD (v-loose): -44% over 28h
+- **slow-bleed**: 185 trades, mean -29%. FOOD (v-loose): -44% over 28h; FOOD (v-swing): -55% over 33h
 - **other**: 150 trades, mean -30%. RAMBO (v-unease): event exit: price -20% in 5 minutes, -18% from entry; JOB (v-swing): stop-loss at -17%
-- **won-held**: 95 trades, mean +35%. three (v-tight): +8%, peak +33%; three (v-unease): +8%, peak +33%
+- **won-held**: 96 trades, mean +35%. three (v-unease): +8%, peak +33%; Max (v-loose): +12%, peak +110%
 - **bought-spike**: 41 trades, mean -32%. AI (v-unease): up 960% in 24h at entry, peak +0%; AI (v-velocity): up 960% in 24h at entry, peak +0%
 - **won-trailed**: 22 trades, mean +123178%. inuhao (v-velocity): +113%, peak +263%; Max (v-tight): +3%, peak +44%
 - **rug**: 18 trades, mean -100%. UODF (v-unpaid): event exit: liquidity down 49% since entry, -100% from entry; SCAMSON (v-tight): event exit: liquidity down 99% since entry, -100% from entry
