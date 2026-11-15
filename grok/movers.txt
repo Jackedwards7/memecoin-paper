@@ -1,12 +1,12 @@
-MOVERS 2026-11-15T17:29:24Z
-KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump RAMBO +6%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +8%
-mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS +13%
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +25%
-FL3LnVeZTtn7uvcpytRLyAYsqUJtznskjdE4p1HSpump UM +66677%
-85RhcSEMy15SNhFLmSArNm7udPKXVagVgsq4YmSopump bill -14%
-8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH -10%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -7%
-CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump fone -5%
+MOVERS 2026-11-15T17:45:42Z
+mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS +10%
+Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT +14%
+8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER +14%
+Hh3oTaqDCKKfdBgsQEvxp9sUwyNf8x9qmKqEMLBWpump HODL +18%
+FL3LnVeZTtn7uvcpytRLyAYsqUJtznskjdE4p1HSpump UM +66085%
+85RhcSEMy15SNhFLmSArNm7udPKXVagVgsq4YmSopump bill -16%
+8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH -12%
 MukLDtJ8Cx9DxLbeyLRSWPSposTMWuwHANbuaudpump OTC -5%
+NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump Punch -5%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -5%
 END
