@@ -152,7 +152,7 @@
       "tokens": 13338.676142866305,
       "entry_px": 0.0013002246110664741,
       "entry_mc": 1234475,
-      "peak_px": 0.001322,
+      "peak_px": 0.001337,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -951,7 +951,7 @@
     "2026-11-14 16:08 UTC SELL 100% RAMBO -> 0.204 SOL @ $0.01015: event exit: price -20% in 5 minutes, -20% from entry",
     "2026-11-15 12:16 UTC BUY BIG 0.25 SOL @ $0.0013002246 (mc $1,234,475): Gate pass; 164h pumpswap coin, mc $1.19M, liq $103k, 1h +0.7%, 24h +4.8% (cooled from earlier +438% spike), 5m -4.8% (no spike), 1h buys 1071 vs sells 1009; volume modest. Only unheld pass; CBUCKS failed gate (14% wallet); GATO/BRUH held."
   ],
-  "last_mark": "2026-11-15 12:49 UTC",
+  "last_mark": "2026-11-15 12:54 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794744409,
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794744933.588539,
@@ -960,9 +960,9 @@
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1794744409,
     "5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump": 1794745379,
     "KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump": 1794744409,
-    "mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump": 1794743432,
+    "mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump": 1794747299,
     "NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump": 1794746339,
-    "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794743432,
+    "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794747299,
     "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump": 1794744933.588539,
     "4B1mCGeSjTadzH7okALwdFm8taxoHbZBFCTA1nZRpump": 1794745379,
     "CiMyaPC9icicJxkFqvqpgL2YT2FjEQmGx1YVdG78pump": 1794741512
@@ -1794,6 +1794,16 @@
       "px": 0.01408,
       "fails": [
         "RugCheck danger: Low Liquidity"
+      ],
+      "moves": {}
+    },
+    "FL3LnVeZTtn7uvcpytRLyAYsqUJtznskjdE4p1HSpump": {
+      "symbol": "UM",
+      "at": 1794747299,
+      "px": 0.001453,
+      "fails": [
+        "RugCheck danger: Low Liquidity",
+        "a wallet holds 7% of supply"
       ],
       "moves": {}
     }
