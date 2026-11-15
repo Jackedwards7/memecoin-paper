@@ -1,0 +1,25 @@
+{
+  "id": "20261115T161452.492388Z-gate-6b751b",
+  "kind": "gate",
+  "at": 1794759292.492388,
+  "by": "local",
+  "results": {
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "px": 0.006573,
+      "fails": []
+    },
+    "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
+      "symbol": "CBUCKS",
+      "px": 0.003259,
+      "fails": [
+        "a wallet holds 14% of supply"
+      ]
+    },
+    "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump": {
+      "symbol": "BIG",
+      "px": 0.001449,
+      "fails": []
+    }
+  }
+}
