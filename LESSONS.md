@@ -1,8 +1,8 @@
 # Lessons
 
-507 closed trades labelled, every book. Written by the bot.
+512 closed trades labelled, every book. Written by the bot.
 
-- **slow-bleed**: 170 trades, mean -29%. MEVS (v-swing): -25% over 18h; MEVS (v-unease): -25% over 18h
+- **slow-bleed**: 175 trades, mean -29%. FOOD (v-unease): -39% over 28h; FOOD (v-velocity): -39% over 32h
 - **other**: 148 trades, mean -30%. FOOD (v-tight): stop-loss at -23%; AMC (v-swing): stop-loss at -51%
 - **won-held**: 95 trades, mean +35%. three (v-tight): +8%, peak +33%; three (v-unease): +8%, peak +33%
 - **bought-spike**: 41 trades, mean -32%. AI (v-unease): up 960% in 24h at entry, peak +0%; AI (v-velocity): up 960% in 24h at entry, peak +0%

@@ -1,12 +1,12 @@
-MOVERS 2026-11-15T15:19:48Z
-NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump Punch +6%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +9%
-MukLDtJ8Cx9DxLbeyLRSWPSposTMWuwHANbuaudpump OTC +9%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +18%
-85RhcSEMy15SNhFLmSArNm7udPKXVagVgsq4YmSopump bill +36%
-mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS -17%
-KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump RAMBO -14%
-4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao -10%
-GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED -9%
-PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH -8%
+MOVERS 2026-11-15T15:35:53Z
+Pren1FvFX6J3E4kXhJuCiAD5aDmGEb7qJRncwA8Lkhw ANTHROPIC +9%
+y1AZt42vceCmStjW4zetK3VoNarC1VxJ5iDjpiupump FARTBOY +10%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +13%
+MukLDtJ8Cx9DxLbeyLRSWPSposTMWuwHANbuaudpump OTC +27%
+85RhcSEMy15SNhFLmSArNm7udPKXVagVgsq4YmSopump bill +48%
+Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT -19%
+mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS -10%
+PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH -10%
+5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -7%
+33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump DOPE -7%
 END
