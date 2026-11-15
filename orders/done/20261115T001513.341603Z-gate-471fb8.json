@@ -23,5 +23,7 @@
         "a wallet holds 14% of supply"
       ]
     }
-  }
+  },
+  "result": "recorded 3 gate results, 1 passed",
+  "applied_at": "2026-11-15 00:15 UTC"
 }
