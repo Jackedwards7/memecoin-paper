@@ -1,12 +1,12 @@
-MOVERS 2026-11-15T13:43:30Z
-Cjrrc595e9R47EZ3gkbUmL6ZZpLSxiXg16v2Y3Aapump FARTGIRL +5%
-PreweJYECqtQwBtpxHL171nL2K6umo692gTm7Q3rpgF OPENAI +6%
-NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump Punch +12%
-mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS +19%
-3NZ9JMVBmGAqocybic2c7LQCJScmgsAZ6vQqTDzcqmJh WBTC +20%
+MOVERS 2026-11-15T13:59:30Z
+PreweJYECqtQwBtpxHL171nL2K6umo692gTm7Q3rpgF OPENAI +7%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +9%
+NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump Punch +10%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +13%
+mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS +13%
+CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi -12%
+85RhcSEMy15SNhFLmSArNm7udPKXVagVgsq4YmSopump bill -9%
 AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -8%
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB -5%
-HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO -5%
-CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi -5%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -4%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -8%
+KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump RAMBO -7%
 END
