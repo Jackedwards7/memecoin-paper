@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 5.089961268730752,
+  "cash_sol": 4.839961268730752,
   "positions": {
     "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump": {
       "symbol": "CATE",
@@ -151,6 +151,83 @@
       },
       "reentry": true,
       "since_loss_h": 7.3
+    },
+    "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump": {
+      "symbol": "baton",
+      "opened": "2026-11-15 09:59 UTC",
+      "cost_sol": 0.25,
+      "tokens": 5084.541081740862,
+      "entry_px": 0.0033732051180767955,
+      "entry_mc": 3369455,
+      "peak_px": 0.0033732051180767955,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unpaid rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/cb7zrgplhji3th7htxykeqbxvnjppetvckxuwakbuhxu",
+      "v": 2,
+      "mev_sol": 0.006975446428571428,
+      "swaps": 1,
+      "entry_liq": 294679.83,
+      "at_entry": {
+        "px": 0.003373,
+        "liq": 294679.83,
+        "mc": 3369455,
+        "dex": "pumpswap",
+        "age_h": 1597.45,
+        "vol_h1": 7884.02,
+        "vol_h24": 92017.6,
+        "buys_h1": 26,
+        "sells_h1": 9,
+        "buys_h24": 398,
+        "sells_h24": 282,
+        "trades_h24": 680,
+        "avg_trade": 135.32,
+        "m5": -0.24,
+        "h1": 12.29,
+        "h6": 3.26,
+        "h24": 0.52,
+        "eligible": true,
+        "v": 3,
+        "pool": "Cb7ZRgPLhji3Th7htXyKEqbXvNjPpeTvckXuWakBUhXu",
+        "m5_raw": -0.24,
+        "buys_m5": 2,
+        "sells_m5": 0,
+        "buys_h6": 64,
+        "sells_h6": 58,
+        "vol_m5": 20.2,
+        "vol_h6": 18828.44,
+        "liq_base": 44191407,
+        "liq_quote": 49726350,
+        "fdv": 3369455,
+        "boosts": null,
+        "links": [
+          "instagram",
+          "telegram",
+          "tiktok",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0168,
+          "paid": 0.003095828313633092,
+          "vs_paid": 0.0496,
+          "off_peak": -0.0557,
+          "accel": -0.028,
+          "candles": 96,
+          "unease": 1,
+          "known": 5,
+          "signs": [
+            "failed_high"
+          ]
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 14.0
     }
   },
   "closed": [
@@ -3580,10 +3657,11 @@
     "2026-11-14 12:06 UTC SELL 100% BTC -> 0.077 SOL @ $0.0006924: event exit: price -64% in 5 minutes, -64% from entry",
     "2026-11-14 20:02 UTC SELL 100% DacityCoin -> 0.180 SOL @ $0.003433: event exit: price -20% in 5 minutes, -25% from entry",
     "2026-11-15 03:18 UTC BUY FARTBOY 0.25 SOL @ $0.016240571 (mc $16,240,602): v-unpaid rule",
-    "2026-11-15 09:50 UTC SELL 100% Dacity -> 0.258 SOL @ $0.00189: time stop: 48h held, +1%, no take-profit"
+    "2026-11-15 09:50 UTC SELL 100% Dacity -> 0.258 SOL @ $0.00189: time stop: 48h held, +1%, no take-profit",
+    "2026-11-15 09:59 UTC BUY baton 0.25 SOL @ $0.0033732051 (mc $3,369,455): v-unpaid rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-15 09:50 UTC"
+  "last_mark": "2026-11-15 09:58 UTC"
 }
