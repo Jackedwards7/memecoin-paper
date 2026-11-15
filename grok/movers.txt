@@ -1,12 +1,12 @@
-MOVERS 2026-11-15T13:59:30Z
-PreweJYECqtQwBtpxHL171nL2K6umo692gTm7Q3rpgF OPENAI +7%
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +9%
-NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump Punch +10%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +13%
-mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS +13%
-CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi -12%
-85RhcSEMy15SNhFLmSArNm7udPKXVagVgsq4YmSopump bill -9%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -8%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -8%
-KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump RAMBO -7%
+MOVERS 2026-11-15T14:15:30Z
+CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi +10%
+mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS +11%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +14%
+NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump Punch +21%
+CiMyaPC9icicJxkFqvqpgL2YT2FjEQmGx1YVdG78pump WANTED +28%
+8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER -8%
+4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao -6%
+Hh3oTaqDCKKfdBgsQEvxp9sUwyNf8x9qmKqEMLBWpump HODL -5%
+Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT -4%
+MukLDtJ8Cx9DxLbeyLRSWPSposTMWuwHANbuaudpump OTC -4%
 END
