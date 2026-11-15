@@ -1,0 +1,23 @@
+{
+  "id": "20261115T201544.802799Z-gate-a9d869",
+  "kind": "gate",
+  "at": 1794773744.802799,
+  "by": "local",
+  "results": {
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "px": 0.007173,
+      "fails": []
+    },
+    "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump": {
+      "symbol": "BIG",
+      "px": 0.001492,
+      "fails": []
+    },
+    "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
+      "symbol": "BRUH",
+      "px": 0.004237,
+      "fails": []
+    }
+  }
+}
