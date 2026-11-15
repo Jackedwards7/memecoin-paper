@@ -1,9 +1,9 @@
 # Lessons
 
-498 closed trades labelled, every book. Written by the bot.
+499 closed trades labelled, every book. Written by the bot.
 
 - **slow-bleed**: 165 trades, mean -29%. Rocco (v-unease): -19% over 23h; Max (v-swing): -34% over 48h
-- **other**: 144 trades, mean -30%. AMC (v-tight): stop-loss at -20%; WOHAIHAO (v-tight): stop-loss at -22%
+- **other**: 145 trades, mean -30%. WOHAIHAO (v-tight): stop-loss at -22%; AMC (v-unease): unease exit: 4 of 5 signs
 - **won-held**: 95 trades, mean +35%. three (v-tight): +8%, peak +33%; three (v-unease): +8%, peak +33%
 - **bought-spike**: 41 trades, mean -32%. AI (v-unease): up 960% in 24h at entry, peak +0%; AI (v-velocity): up 960% in 24h at entry, peak +0%
 - **won-trailed**: 22 trades, mean +123178%. inuhao (v-velocity): +113%, peak +263%; Max (v-tight): +3%, peak +44%

@@ -1,12 +1,12 @@
-MOVERS 2026-11-15T10:14:31Z
-GTBxUiw6wJdmmkCGZgRHLyYxqu1vG4KtRpeox6yDpump JEANPHIL +7%
-mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS +7%
-J8PSdNP3QewKq2Z1JJJFDMaqF7KcaiJhR7gbr5KZpump TripleT +7%
-Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump baton +8%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +24%
-4B1mCGeSjTadzH7okALwdFm8taxoHbZBFCTA1nZRpump WOHAIHAO -17%
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB -16%
-85RhcSEMy15SNhFLmSArNm7udPKXVagVgsq4YmSopump bill -16%
-GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED -11%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -7%
+MOVERS 2026-11-15T10:30:30Z
+nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity +6%
+5w3wVdJaESaJKyLmStM6Hv9UyUkmZ1b9DLQquAqqpump SID +6%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +7%
+KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump RAMBO +9%
+mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS +12%
+8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB -14%
+85RhcSEMy15SNhFLmSArNm7udPKXVagVgsq4YmSopump bill -13%
+CiMyaPC9icicJxkFqvqpgL2YT2FjEQmGx1YVdG78pump WANTED -10%
+8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER -9%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -9%
 END
