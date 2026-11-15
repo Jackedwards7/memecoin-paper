@@ -1,12 +1,12 @@
-MOVERS 2026-11-15T15:03:48Z
-NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump Punch +12%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +14%
-CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi +18%
-85RhcSEMy15SNhFLmSArNm7udPKXVagVgsq4YmSopump bill +24%
-CiMyaPC9icicJxkFqvqpgL2YT2FjEQmGx1YVdG78pump WANTED +40%
-mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS -16%
-KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump RAMBO -10%
-5w3wVdJaESaJKyLmStM6Hv9UyUkmZ1b9DLQquAqqpump SID -8%
-PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH -7%
-DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin -7%
+MOVERS 2026-11-15T15:19:48Z
+NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump Punch +6%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +9%
+MukLDtJ8Cx9DxLbeyLRSWPSposTMWuwHANbuaudpump OTC +9%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +18%
+85RhcSEMy15SNhFLmSArNm7udPKXVagVgsq4YmSopump bill +36%
+mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS -17%
+KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump RAMBO -14%
+4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao -10%
+GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED -9%
+PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH -8%
 END
