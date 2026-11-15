@@ -1,12 +1,12 @@
-MOVERS 2026-11-15T20:28:33Z
-PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH +5%
-KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump RAMBO +6%
-GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +10%
-9HFUEab7sompLDPTAaTGkryMNGbtBaFMhHMVpJEBpump rockstar +11%
-mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS +11%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -15%
-8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH -9%
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -6%
-nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity -5%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -5%
+MOVERS 2026-11-15T20:44:42Z
+5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max +6%
+mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS +7%
+PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH +7%
+8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +14%
+GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +21%
+34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG -13%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -10%
+Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT -10%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -9%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -7%
 END

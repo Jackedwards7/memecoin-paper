@@ -1113,3 +1113,5 @@
 {"after": "v-unpaid:DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump:2026-11-14 20:02 UTC", "h": 24, "px": 0.003949, "vs_exit": 0.1503}
 {"after": "v-loose:FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump:2026-11-14 20:26 UTC", "h": 24, "px": 0.0003885, "vs_exit": 0.0175}
 {"after": "v-velocity:FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump:2026-11-14 20:26 UTC", "h": 24, "px": 0.0003885, "vs_exit": 0.0175}
+{"after": "v-low-bundle:FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump:2026-11-14 20:42 UTC", "h": 24, "px": 0.0003949, "vs_exit": 0.0389}
+{"after": "v-momentum:FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump:2026-11-14 20:42 UTC", "h": 24, "px": 0.0003949, "vs_exit": 0.0389}
