@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.935732763295032,
+  "cash_sol": 8.685732763295032,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -144,6 +144,79 @@
       },
       "reentry": true,
       "since_loss_h": 20.4
+    },
+    "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump": {
+      "symbol": "BIG",
+      "opened": "2026-11-15 12:16 UTC",
+      "cost_sol": 0.25,
+      "tokens": 13338.676142866305,
+      "entry_px": 0.0013002246110664741,
+      "entry_mc": 1234475,
+      "peak_px": 0.0013002246110664741,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "Gate pass; 164h pumpswap coin, mc $1.19M, liq $103k, 1h +0.7%, 24h +4.8% (cooled from earlier +438% spike), 5m -4.8% (no spike), 1h buys 1071 vs sells 1009; volume modest. Only unheld pass; CBUCKS failed gate (14% wallet); GATO/BRUH held.",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/5tecgcpfldbnjvbrpjvk32uayabpra1hgefpeujqqkyk",
+      "v": 2,
+      "mev_sol": 0.006900358818658571,
+      "swaps": 1,
+      "entry_liq": 104845.68,
+      "at_entry": {
+        "px": 0.0013,
+        "liq": 104845.68,
+        "mc": 1234475,
+        "dex": "pumpswap",
+        "age_h": 164.07,
+        "vol_h1": 1965.53,
+        "vol_h24": 49717.58,
+        "buys_h1": 1087,
+        "sells_h1": 1021,
+        "buys_h24": 22704,
+        "sells_h24": 22164,
+        "trades_h24": 44868,
+        "avg_trade": 1.11,
+        "m5": -0.92,
+        "h1": 4.84,
+        "h6": 6.21,
+        "h24": 9.09,
+        "eligible": true,
+        "v": 3,
+        "pool": "5TecgcpFLdBnJvBrpjvk32UAYABPRA1HgeFPEUjQQkYK",
+        "m5_raw": -0.92,
+        "buys_m5": 87,
+        "sells_m5": 83,
+        "buys_h6": 6563,
+        "sells_h6": 6166,
+        "vol_m5": 118.62,
+        "vol_h6": 8948.18,
+        "liq_base": 41491850,
+        "liq_quote": 219.6062,
+        "fdv": 1234475,
+        "boosts": 10,
+        "links": [
+          "telegram",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0168,
+          "paid": 0.001222978116868195,
+          "vs_paid": 0.0559,
+          "off_peak": -0.0685,
+          "accel": 0.0174,
+          "candles": 96,
+          "unease": 0,
+          "known": 5,
+          "signs": []
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 20.1
     }
   },
   "closed": [
@@ -875,21 +948,22 @@
     "2026-11-12 20:16 UTC SELL 100% NIO -> 0.207 SOL @ $0.001098: time stop: 48h held, -12%, no take-profit",
     "2026-11-13 00:15 UTC BUY RAMBO 0.25 SOL @ $0.012660836 (mc $12,486,694): Gate pass; mature pumpswap coin (225h), mc $12.5M, liq $309k, 1h +12%, 24h +108%, 5m +0.5% (no spike), 1h buys 212 vs sells 61. Other passes DESSA/GATO skipped (24h negative, 1h negative); CBUCKS failed gate (14% wallet).",
     "2026-11-13 16:37 UTC BUY GATO 0.25 SOL @ $0.0080315323 (mc $7,926,891): Gate pass; mature pumpswap coin (1924h), mc $7.8M, liq $298k, 1h +30.8%, 24h +37%, 5m +4.2% (no spike), 1h buys 1257 vs sells 915, vol1h $220k. Other universe coins CBUCKS (14% wallet) and WASTED (copycat) failed gate.",
-    "2026-11-14 16:08 UTC SELL 100% RAMBO -> 0.204 SOL @ $0.01015: event exit: price -20% in 5 minutes, -20% from entry"
+    "2026-11-14 16:08 UTC SELL 100% RAMBO -> 0.204 SOL @ $0.01015: event exit: price -20% in 5 minutes, -20% from entry",
+    "2026-11-15 12:16 UTC BUY BIG 0.25 SOL @ $0.0013002246 (mc $1,234,475): Gate pass; 164h pumpswap coin, mc $1.19M, liq $103k, 1h +0.7%, 24h +4.8% (cooled from earlier +438% spike), 5m -4.8% (no spike), 1h buys 1071 vs sells 1009; volume modest. Only unheld pass; CBUCKS failed gate (14% wallet); GATO/BRUH held."
   ],
-  "last_mark": "2026-11-15 12:06 UTC",
+  "last_mark": "2026-11-15 12:16 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794744409,
-    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794744409,
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794744933.588539,
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794744409,
-    "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": 1794742472,
+    "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": 1794744933.588539,
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1794744409,
     "5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump": 1794741512,
     "KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump": 1794744409,
     "mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump": 1794743432,
     "NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump": 1794742472,
     "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794743432,
-    "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump": 1794744409,
+    "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump": 1794744933.588539,
     "4B1mCGeSjTadzH7okALwdFm8taxoHbZBFCTA1nZRpump": 1794741512,
     "CiMyaPC9icicJxkFqvqpgL2YT2FjEQmGx1YVdG78pump": 1794741512
   },
@@ -2755,6 +2829,18 @@
       "kind": "gate",
       "result": "recorded 4 gate results, 3 passed",
       "at": "2026-11-15 08:19 UTC"
+    },
+    {
+      "id": "20261115T121533.588539Z-gate-3a5e45",
+      "kind": "gate",
+      "result": "recorded 4 gate results, 3 passed",
+      "at": "2026-11-15 12:15 UTC"
+    },
+    {
+      "id": "20261115T121540.270320Z-buy-c91ca0",
+      "kind": "buy",
+      "result": "bought BIG 0.25 SOL @ $0.0013002246; control opened",
+      "at": "2026-11-15 12:16 UTC"
     }
   ]
 }

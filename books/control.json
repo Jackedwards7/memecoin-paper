@@ -1,7 +1,84 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 9.113884662377206,
-  "positions": {},
+  "cash_sol": 8.863884662377206,
+  "positions": {
+    "NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump": {
+      "symbol": "Punch",
+      "opened": "2026-11-15 12:16 UTC",
+      "cost_sol": 0.25,
+      "tokens": 75261.797022455,
+      "entry_px": 0.00023043928907019699,
+      "entry_mc": 230405,
+      "peak_px": 0.00023043928907019699,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "control for BIG: random pick from 12 other gate passes",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/a6khmifzn9am7vkbtvp4fzny9bco2jp63r9dphaw1vrq",
+      "v": 2,
+      "mev_sol": 0.006900358818658571,
+      "swaps": 1,
+      "entry_liq": 106230.46,
+      "at_entry": {
+        "px": 0.0002304,
+        "liq": 106230.46,
+        "mc": 230405,
+        "dex": "pumpswap",
+        "age_h": 6795.25,
+        "vol_h1": 448.65,
+        "vol_h24": 55415.44,
+        "buys_h1": 6,
+        "sells_h1": 11,
+        "buys_h24": 655,
+        "sells_h24": 588,
+        "trades_h24": 1243,
+        "avg_trade": 44.58,
+        "m5": 0,
+        "h1": 1.23,
+        "h6": -0.6,
+        "h24": -16.02,
+        "eligible": true,
+        "v": 3,
+        "pool": "A6KHMiFzn9AM7VKBtVP4fZNY9bCo2jP63R9dphaW1vrq",
+        "m5_raw": null,
+        "buys_m5": 0,
+        "sells_m5": 0,
+        "buys_h6": 99,
+        "sells_h6": 96,
+        "vol_m5": 0,
+        "vol_h6": 10214.46,
+        "liq_base": 231589548,
+        "liq_quote": 733.3229,
+        "fdv": 230405,
+        "boosts": null,
+        "links": [
+          "telegram",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0201,
+          "paid": 0.0002414832432993848,
+          "vs_paid": -0.0516,
+          "off_peak": -0.1796,
+          "accel": -0.0029,
+          "candles": 96,
+          "unease": 2,
+          "known": 5,
+          "signs": [
+            "failed_high",
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 12.0
+    }
+  },
   "closed": [
     {
       "symbol": "Ahsoka",
@@ -705,10 +782,11 @@
     "2026-11-13 00:15 UTC BUY JOB 0.25 SOL @ $0.0015792607 (mc $1,538,139): control for RAMBO: random pick from 9 other gate passes",
     "2026-11-13 16:37 UTC BUY FOOD 0.25 SOL @ $0.001535259 (mc $1,488,874): control for GATO: random pick from 9 other gate passes",
     "2026-11-13 18:38 UTC SELL 100% FOOD -> 0.145 SOL @ $0.0009877: stop-loss at -36%",
-    "2026-11-15 00:15 UTC SELL 100% JOB -> 0.219 SOL @ $0.001304: time stop: 48h held, -17%, no take-profit"
+    "2026-11-15 00:15 UTC SELL 100% JOB -> 0.219 SOL @ $0.001304: time stop: 48h held, -17%, no take-profit",
+    "2026-11-15 12:16 UTC BUY Punch 0.25 SOL @ $0.00023043929 (mc $230,405): control for BIG: random pick from 12 other gate passes"
   ],
   "gate_pass": {},
   "rejects": {},
-  "last_mark": "2026-11-15 12:06 UTC",
+  "last_mark": "2026-11-15 12:16 UTC",
   "passes": {}
 }
