@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.055218884478723,
+  "cash_sol": 6.285612334720147,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -369,22 +369,22 @@
       "symbol": "WOHAIHAO",
       "opened": "2026-11-15 03:49 UTC",
       "cost_sol": 0.25,
-      "tokens": 12458.491831279003,
+      "tokens": 6229.245915639502,
       "entry_px": 0.001375283841097242,
       "entry_mc": 1315866,
-      "peak_px": 0.002532,
+      "peak_px": 0.002764,
       "stop": -0.35,
       "tp1": 1.0,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-momentum rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.23039345024142355,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/9xvu6bt8nvkceejkx15cu6f5t8szwxyl1x13y6glhqe8",
       "v": 2,
-      "mev_sol": 0.006982265046781176,
-      "swaps": 1,
+      "mev_sol": 0.013982125049581118,
+      "swaps": 2,
       "entry_liq": 86724.36,
       "at_entry": {
         "px": 0.001375,
@@ -4685,10 +4685,11 @@
     "2026-11-14 20:42 UTC SELL 100% three -> 0.277 SOL @ $0.0003801: time stop: 48h held, +6%, no take-profit",
     "2026-11-15 02:29 UTC BUY BIG 0.25 SOL @ $0.0014112289 (mc $1,340,515): v-momentum rule",
     "2026-11-15 03:38 UTC SELL 100% JOB -> 0.215 SOL @ $0.001387: time stop: 48h held, -15%, no take-profit",
-    "2026-11-15 03:49 UTC BUY WOHAIHAO 0.25 SOL @ $0.0013752838 (mc $1,315,866): v-momentum rule"
+    "2026-11-15 03:49 UTC BUY WOHAIHAO 0.25 SOL @ $0.0013752838 (mc $1,315,866): v-momentum rule",
+    "2026-11-15 04:32 UTC SELL 50% WOHAIHAO -> 0.230 SOL @ $0.002764: take-profit at +101%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-15 04:21 UTC"
+  "last_mark": "2026-11-15 04:32 UTC"
 }
