@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6779.526464631994,
+  "cash_sol": 6779.276464631994,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -351,6 +351,80 @@
       },
       "reentry": false,
       "since_loss_h": 2.6
+    },
+    "4B1mCGeSjTadzH7okALwdFm8taxoHbZBFCTA1nZRpump": {
+      "symbol": "WOHAIHAO",
+      "opened": "2026-11-15 06:30 UTC",
+      "cost_sol": 0.25,
+      "tokens": 6680.525715701439,
+      "entry_px": 0.002536379728346107,
+      "entry_mc": 2426906,
+      "peak_px": 0.002536379728346107,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-no-spike rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/9xvu6bt8nvkceejkx15cu6f5t8szwxyl1x13y6glhqe8",
+      "v": 2,
+      "mev_sol": 0.007058159232072275,
+      "swaps": 1,
+      "entry_liq": 118275.5,
+      "at_entry": {
+        "px": 0.002536,
+        "liq": 118275.5,
+        "mc": 2426906,
+        "dex": "pumpswap",
+        "age_h": 29.15,
+        "vol_h1": 140597.52,
+        "vol_h24": 1105175.77,
+        "buys_h1": 1015,
+        "sells_h1": 920,
+        "buys_h24": 18910,
+        "sells_h24": 8161,
+        "trades_h24": 27071,
+        "avg_trade": 40.83,
+        "m5": -7.66,
+        "h1": 25.85,
+        "h6": 224,
+        "h24": 52.84,
+        "eligible": true,
+        "v": 3,
+        "pool": "9Xvu6Bt8nVKcEeJKx15cU6f5t8szWxyL1X13y6gLHQe8",
+        "m5_raw": -7.66,
+        "buys_m5": 63,
+        "sells_m5": 50,
+        "buys_h6": 15722,
+        "sells_h6": 5157,
+        "vol_m5": 11034.91,
+        "vol_h6": 690560.92,
+        "liq_base": 23629270,
+        "liq_quote": 825.2006,
+        "fdv": 2426906,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.2041,
+          "paid": 0.0016754256569497387,
+          "vs_paid": 0.0119,
+          "off_peak": -0.4757,
+          "accel": 0.0027,
+          "candles": 96,
+          "unease": 1,
+          "known": 5,
+          "signs": [
+            "failed_high"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 6.6
     }
   },
   "closed": [
@@ -2807,10 +2881,11 @@
     "2026-11-14 19:54 UTC SELL 100% three -> 0.274 SOL @ $0.0003806: time stop: 48h held, +5%, no take-profit",
     "2026-11-14 20:20 UTC BUY Rocco 0.25 SOL @ $0.00060073482 (mc $585,566): v-no-spike rule",
     "2026-11-14 23:55 UTC SELL 100% JOB -> 0.225 SOL @ $0.001358: time stop: 48h held, -16%, no take-profit",
-    "2026-11-15 02:29 UTC BUY BIG 0.25 SOL @ $0.0014112289 (mc $1,340,515): v-no-spike rule"
+    "2026-11-15 02:29 UTC BUY BIG 0.25 SOL @ $0.0014112289 (mc $1,340,515): v-no-spike rule",
+    "2026-11-15 06:30 UTC BUY WOHAIHAO 0.25 SOL @ $0.0025363797 (mc $2,426,906): v-no-spike rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-15 06:24 UTC"
+  "last_mark": "2026-11-15 06:29 UTC"
 }
