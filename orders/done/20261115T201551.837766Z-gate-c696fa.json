@@ -18,5 +18,7 @@
         "RugCheck danger: Low Liquidity"
       ]
     }
-  }
+  },
+  "result": "recorded 2 gate results, 0 passed",
+  "applied_at": "2026-11-15 20:16 UTC"
 }
