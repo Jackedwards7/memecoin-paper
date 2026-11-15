@@ -1,12 +1,12 @@
-MOVERS 2026-11-15T15:52:11Z
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +5%
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +8%
-Pren1FvFX6J3E4kXhJuCiAD5aDmGEb7qJRncwA8Lkhw ANTHROPIC +11%
-MukLDtJ8Cx9DxLbeyLRSWPSposTMWuwHANbuaudpump OTC +15%
-85RhcSEMy15SNhFLmSArNm7udPKXVagVgsq4YmSopump bill +54%
-Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT -16%
-GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED -13%
-33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump DOPE -11%
-mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS -10%
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB -6%
+MOVERS 2026-11-15T16:08:11Z
+BcHEaaTCvycPwwsJ9yQTXdHP9X2gCLkznDbZ8VySpump Jotchua +2%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +6%
+MukLDtJ8Cx9DxLbeyLRSWPSposTMWuwHANbuaudpump OTC +7%
+85RhcSEMy15SNhFLmSArNm7udPKXVagVgsq4YmSopump bill +8%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +11%
+mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS -20%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -16%
+8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB -14%
+Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT -13%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -8%
 END

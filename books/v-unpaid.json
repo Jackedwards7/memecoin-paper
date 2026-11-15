@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 5.069566136290477,
+  "cash_sol": 4.819566136290477,
   "positions": {
     "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump": {
       "symbol": "CATE",
@@ -154,6 +154,81 @@
       },
       "reentry": true,
       "since_loss_h": 14.0
+    },
+    "BcHEaaTCvycPwwsJ9yQTXdHP9X2gCLkznDbZ8VySpump": {
+      "symbol": "Jotchua",
+      "opened": "2026-11-15 16:08 UTC",
+      "cost_sol": 0.25,
+      "tokens": 9384.706348417707,
+      "entry_px": 0.0018131374459967957,
+      "entry_mc": 1813452,
+      "peak_px": 0.0018131374459967957,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unpaid rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/akqyqgeifbbhqmanukzrrurgokskkbv8nvdccc87frr8",
+      "v": 2,
+      "mev_sol": 0.0070293828201883875,
+      "swaps": 1,
+      "entry_liq": 234562.47,
+      "at_entry": {
+        "px": 0.001813,
+        "liq": 234562.47,
+        "mc": 1813452,
+        "dex": "pumpswap",
+        "age_h": 3874.89,
+        "vol_h1": 470.81,
+        "vol_h24": 49453.59,
+        "buys_h1": 5,
+        "sells_h1": 3,
+        "buys_h24": 234,
+        "sells_h24": 172,
+        "trades_h24": 406,
+        "avg_trade": 121.81,
+        "m5": 2.16,
+        "h1": 2.2,
+        "h6": 1.48,
+        "h24": 5.56,
+        "eligible": true,
+        "v": 3,
+        "pool": "AKQyQgEifBBhQmANuKzrRuRGoKSkKBv8NVdccc87FrR8",
+        "m5_raw": 2.16,
+        "buys_m5": 2,
+        "sells_m5": 0,
+        "buys_h6": 15,
+        "sells_h6": 15,
+        "vol_m5": 161.97,
+        "vol_h6": 3107.4,
+        "liq_base": 64953507,
+        "liq_quote": 116751,
+        "fdv": 1813452,
+        "boosts": null,
+        "links": [
+          "telegram",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0126,
+          "paid": 0.0016122027148932007,
+          "vs_paid": 0.0799,
+          "off_peak": -0.0642,
+          "accel": 0.005,
+          "candles": 96,
+          "unease": 1,
+          "known": 5,
+          "signs": [
+            "smaller_trades"
+          ]
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 0.2
     }
   },
   "closed": [
@@ -3665,10 +3740,11 @@
     "2026-11-15 03:18 UTC BUY FARTBOY 0.25 SOL @ $0.016240571 (mc $16,240,602): v-unpaid rule",
     "2026-11-15 09:50 UTC SELL 100% Dacity -> 0.258 SOL @ $0.00189: time stop: 48h held, +1%, no take-profit",
     "2026-11-15 09:59 UTC BUY baton 0.25 SOL @ $0.0033732051 (mc $3,369,455): v-unpaid rule",
-    "2026-11-15 15:54 UTC SELL 100% FARTBOY -> 0.230 SOL @ $0.01614: event exit: price -20% in 5 minutes, -1% from entry"
+    "2026-11-15 15:54 UTC SELL 100% FARTBOY -> 0.230 SOL @ $0.01614: event exit: price -20% in 5 minutes, -1% from entry",
+    "2026-11-15 16:08 UTC BUY Jotchua 0.25 SOL @ $0.0018131374 (mc $1,813,452): v-unpaid rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-15 15:59 UTC"
+  "last_mark": "2026-11-15 16:08 UTC"
 }
