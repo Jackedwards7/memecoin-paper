@@ -1,12 +1,12 @@
-MOVERS 2026-11-15T19:06:59Z
-8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH +9%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +11%
-8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER +12%
-85RhcSEMy15SNhFLmSArNm7udPKXVagVgsq4YmSopump bill +23%
-FL3LnVeZTtn7uvcpytRLyAYsqUJtznskjdE4p1HSpump UM +71471%
-KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump RAMBO -10%
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -8%
-GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED -7%
-5w3wVdJaESaJKyLmStM6Hv9UyUkmZ1b9DLQquAqqpump SID -7%
-npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA -3%
+MOVERS 2026-11-15T19:23:09Z
+34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG +10%
+5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat +10%
+8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH +16%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +18%
+FL3LnVeZTtn7uvcpytRLyAYsqUJtznskjdE4p1HSpump UM +75463%
+8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER -16%
+GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED -14%
+85RhcSEMy15SNhFLmSArNm7udPKXVagVgsq4YmSopump bill -10%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -8%
+Hh3oTaqDCKKfdBgsQEvxp9sUwyNf8x9qmKqEMLBWpump HODL -8%
 END
