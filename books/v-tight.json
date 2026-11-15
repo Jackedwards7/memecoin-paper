@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.997469382960937,
+  "cash_sol": 6.747469382960937,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -219,6 +219,78 @@
       },
       "reentry": true,
       "since_loss_h": 10.4
+    },
+    "mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump": {
+      "symbol": "MEVS",
+      "opened": "2026-11-15 01:57 UTC",
+      "cost_sol": 0.25,
+      "tokens": 8517.943117951541,
+      "entry_px": 0.001897321310580269,
+      "entry_mc": 1877747,
+      "peak_px": 0.001897321310580269,
+      "stop": -0.2,
+      "tp1": 0.4,
+      "tp1_done": false,
+      "thesis": "v-tight rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/2nk8aqscrntgj76ixrstt3dxgtbz9rrfbctphb499psf",
+      "v": 2,
+      "mev_sol": 0.007389890629618682,
+      "swaps": 1,
+      "entry_liq": 99865.23,
+      "at_entry": {
+        "px": 0.001897,
+        "liq": 99865.23,
+        "mc": 1877747,
+        "dex": "pumpswap",
+        "age_h": 69.63,
+        "vol_h1": 6538.77,
+        "vol_h24": 269788.64,
+        "buys_h1": 33,
+        "sells_h1": 24,
+        "buys_h24": 1193,
+        "sells_h24": 1231,
+        "trades_h24": 2424,
+        "avg_trade": 111.3,
+        "m5": 10.44,
+        "h1": 7.68,
+        "h6": 31.89,
+        "h24": 34.06,
+        "eligible": true,
+        "v": 3,
+        "pool": "2NK8aqscRntGJ76ixrsTT3DXGtbz9rRFbCtphb499Psf",
+        "m5_raw": 10.44,
+        "buys_m5": 3,
+        "sells_m5": 1,
+        "buys_h6": 183,
+        "sells_h6": 201,
+        "vol_m5": 2284.49,
+        "vol_h6": 42512,
+        "liq_base": 26663998,
+        "liq_quote": 724.5552,
+        "fdv": 1877747,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0499,
+          "paid": 0.0013527217644135967,
+          "vs_paid": 0.2501,
+          "off_peak": -0.0748,
+          "accel": -0.0597,
+          "candles": 96,
+          "unease": 0,
+          "known": 5,
+          "signs": []
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 12.0
     }
   },
   "closed": [
@@ -5419,10 +5491,11 @@
     "2026-11-14 10:58 UTC BUY FOOD 0.25 SOL @ $0.00099869691 (mc $998,582): v-tight rule",
     "2026-11-14 13:16 UTC SELL 100% RAMBO -> 0.186 SOL @ $0.01054: stop-loss at -22%",
     "2026-11-14 13:57 UTC SELL 100% FOOD -> 0.176 SOL @ $0.0007712: stop-loss at -23%",
-    "2026-11-15 00:21 UTC BUY Rocco 0.25 SOL @ $0.0005647284 (mc $550,469): v-tight rule"
+    "2026-11-15 00:21 UTC BUY Rocco 0.25 SOL @ $0.0005647284 (mc $550,469): v-tight rule",
+    "2026-11-15 01:57 UTC BUY MEVS 0.25 SOL @ $0.0018973213 (mc $1,877,747): v-tight rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-15 01:52 UTC"
+  "last_mark": "2026-11-15 01:57 UTC"
 }
