@@ -1,12 +1,12 @@
-MOVERS 2026-11-15T02:29:12Z
-34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG +17%
-CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi +18%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +20%
-85RhcSEMy15SNhFLmSArNm7udPKXVagVgsq4YmSopump bill +33%
+MOVERS 2026-11-15T02:45:19Z
+33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump DOPE +14%
+KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump RAMBO +18%
+Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT +18%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +28%
 98sMhvDwXj1RQi5c5Mndm3vPe9cBqPrbLaufMXFNMh5g HYPE +508703%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -7%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -7%
-AUc7hszwXTyRXAkHjjrytyT7sB7r85sc3FxPW5tepump OTC -4%
-5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat -4%
-HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO -3%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -10%
+85RhcSEMy15SNhFLmSArNm7udPKXVagVgsq4YmSopump bill -9%
+DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS -7%
+mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS -4%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -4%
 END
