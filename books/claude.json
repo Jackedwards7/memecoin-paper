@@ -958,7 +958,7 @@
     "2026-11-15 12:16 UTC BUY BIG 0.25 SOL @ $0.0013002246 (mc $1,234,475): Gate pass; 164h pumpswap coin, mc $1.19M, liq $103k, 1h +0.7%, 24h +4.8% (cooled from earlier +438% spike), 5m -4.8% (no spike), 1h buys 1071 vs sells 1009; volume modest. Only unheld pass; CBUCKS failed gate (14% wallet); GATO/BRUH held.",
     "2026-11-15 16:37 UTC SELL 100% GATO -> 0.218 SOL @ $0.006857: time stop: 48h held, -15%, no take-profit"
   ],
-  "last_mark": "2026-11-15 21:33 UTC",
+  "last_mark": "2026-11-15 21:40 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794775482,
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794775482,
@@ -1790,7 +1790,9 @@
         "RugCheck danger: Top 10 holders high ownership, Single holder ownership, High ownership",
         "a wallet holds 43% of supply"
       ],
-      "moves": {}
+      "moves": {
+        "1d": -0.98348
+      }
     },
     "85RhcSEMy15SNhFLmSArNm7udPKXVagVgsq4YmSopump": {
       "symbol": "bill",
