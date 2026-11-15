@@ -1,9 +1,9 @@
 # Lessons
 
-537 closed trades labelled, every book. Written by the bot.
+539 closed trades labelled, every book. Written by the bot.
 
-- **slow-bleed**: 187 trades, mean -29%. Max (v-no-spike): -35% over 40h; DacityCoin (v-unpaid): -28% over 17h
-- **other**: 154 trades, mean -31%. AMC (v-momentum): event exit: price -47% in 5 minutes, -49% from entry; AMC (v-velocity): event exit: price -47% in 5 minutes, -49% from entry
+- **slow-bleed**: 188 trades, mean -29%. DacityCoin (v-unpaid): -28% over 17h; Max (v-networks): -35% over 29h
+- **other**: 155 trades, mean -31%. AMC (v-velocity): event exit: price -47% in 5 minutes, -49% from entry; Max (v-unease): stop-loss at -36%
 - **won-held**: 102 trades, mean +34%. three (v-low-bundle): +11%, peak +31%; three (v-momentum): +11%, peak +31%
 - **bought-spike**: 41 trades, mean -32%. AI (v-unease): up 960% in 24h at entry, peak +0%; AI (v-velocity): up 960% in 24h at entry, peak +0%
 - **won-trailed**: 22 trades, mean +123178%. inuhao (v-velocity): +113%, peak +263%; Max (v-tight): +3%, peak +44%

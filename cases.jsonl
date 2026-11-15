@@ -1115,3 +1115,5 @@
 {"after": "v-velocity:FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump:2026-11-14 20:26 UTC", "h": 24, "px": 0.0003885, "vs_exit": 0.0175}
 {"after": "v-low-bundle:FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump:2026-11-14 20:42 UTC", "h": 24, "px": 0.0003949, "vs_exit": 0.0389}
 {"after": "v-momentum:FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump:2026-11-14 20:42 UTC", "h": 24, "px": 0.0003949, "vs_exit": 0.0389}
+{"after": "v-networks:5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump:2026-11-14 20:59 UTC", "h": 24, "px": 0.001036, "vs_exit": -0.0848}
+{"after": "v-unease:5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump:2026-11-14 20:59 UTC", "h": 24, "px": 0.001036, "vs_exit": -0.0848}
