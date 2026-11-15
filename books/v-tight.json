@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.447758887414838,
+  "cash_sol": 6.197758887414838,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -227,7 +227,7 @@
       "tokens": 11973.650697627545,
       "entry_px": 0.0014112289498597183,
       "entry_mc": 1340515,
-      "peak_px": 0.001648,
+      "peak_px": 0.00165,
       "stop": -0.2,
       "tp1": 0.4,
       "tp1_done": false,
@@ -364,6 +364,84 @@
       },
       "reentry": true,
       "since_loss_h": 0.2
+    },
+    "NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump": {
+      "symbol": "Punch",
+      "opened": "2026-11-15 19:40 UTC",
+      "cost_sol": 0.25,
+      "tokens": 61698.80364686607,
+      "entry_px": 0.00027794278796961815,
+      "entry_mc": 277862,
+      "peak_px": 0.00027794278796961815,
+      "stop": -0.2,
+      "tp1": 0.4,
+      "tp1_done": false,
+      "thesis": "v-tight rule",
+      "rugcheck": null,
+      "risks": [
+        "rugcheck error Command '['curl', '-sf', '-m', '20', '-A', 'memepaper/1.0', 'https://api.rugcheck.xyz/v1/tokens/NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump/report/summary']' returned non-zero exit status 22."
+      ],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/a6khmifzn9am7vkbtvp4fzny9bco2jp63r9dphaw1vrq",
+      "v": 2,
+      "mev_sol": 0.0069764197014092364,
+      "swaps": 1,
+      "entry_liq": 116370.87,
+      "at_entry": {
+        "px": 0.0002779,
+        "liq": 116370.87,
+        "mc": 277862,
+        "dex": "pumpswap",
+        "age_h": 6802.66,
+        "vol_h1": 367.81,
+        "vol_h24": 50501.64,
+        "buys_h1": 15,
+        "sells_h1": 2,
+        "buys_h24": 430,
+        "sells_h24": 479,
+        "trades_h24": 909,
+        "avg_trade": 55.56,
+        "m5": 0,
+        "h1": 2.28,
+        "h6": 14.71,
+        "h24": 15.25,
+        "eligible": true,
+        "v": 3,
+        "pool": "A6KHMiFzn9AM7VKBtVP4fZNY9bCo2jP63R9dphaW1vrq",
+        "m5_raw": null,
+        "buys_m5": 0,
+        "sells_m5": 0,
+        "buys_h6": 171,
+        "sells_h6": 212,
+        "vol_m5": 0,
+        "vol_h6": 23531.8,
+        "liq_base": 210418103,
+        "liq_quote": 807.8329,
+        "fdv": 277862,
+        "boosts": null,
+        "links": [
+          "telegram",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0168,
+          "paid": 0.00026220006684124345,
+          "vs_paid": 0.0501,
+          "off_peak": -0.1349,
+          "accel": 0.0352,
+          "candles": 96,
+          "unease": 2,
+          "known": 5,
+          "signs": [
+            "failed_high",
+            "smaller_trades"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 3.1
     }
   },
   "closed": [
@@ -5882,10 +5960,11 @@
     "2026-11-15 16:32 UTC SELL 100% JOB -> 0.178 SOL @ $0.001163: stop-loss at -21%",
     "2026-11-15 16:41 UTC BUY WOHAIHAO 0.25 SOL @ $0.0011282532 (mc $1,079,578): v-tight rule",
     "2026-11-15 19:24 UTC SELL 50% WOHAIHAO -> 0.188 SOL @ $0.001873: take-profit at +66%: half sold, cost recovered",
-    "2026-11-15 19:29 UTC SELL 100% WOHAIHAO -> 0.111 SOL @ $0.001133: event exit: price -39% in 5 minutes, +0% from entry"
+    "2026-11-15 19:29 UTC SELL 100% WOHAIHAO -> 0.111 SOL @ $0.001133: event exit: price -39% in 5 minutes, +0% from entry",
+    "2026-11-15 19:40 UTC BUY Punch 0.25 SOL @ $0.00027794279 (mc $277,862): v-tight rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-15 19:33 UTC"
+  "last_mark": "2026-11-15 19:39 UTC"
 }
