@@ -1,8 +1,8 @@
 # Lessons
 
-494 closed trades labelled, every book. Written by the bot.
+495 closed trades labelled, every book. Written by the bot.
 
-- **slow-bleed**: 162 trades, mean -29%. JOB (v-tight): -27% over 21h; fone (v-unpaid): -22% over 48h
+- **slow-bleed**: 163 trades, mean -29%. fone (v-unpaid): -22% over 48h; swordcat (v-unpaid): -26% over 48h
 - **other**: 143 trades, mean -30%. MEVS (v-tight): stop-loss at -20%; AMC (v-tight): stop-loss at -20%
 - **won-held**: 95 trades, mean +35%. three (v-tight): +8%, peak +33%; three (v-unease): +8%, peak +33%
 - **bought-spike**: 41 trades, mean -32%. AI (v-unease): up 960% in 24h at entry, peak +0%; AI (v-velocity): up 960% in 24h at entry, peak +0%
