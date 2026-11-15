@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.149188018418723,
+  "cash_sol": 6.336922555888584,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -369,22 +369,22 @@
       "symbol": "WOHAIHAO",
       "opened": "2026-11-15 16:41 UTC",
       "cost_sol": 0.25,
-      "tokens": 15107.701605438995,
+      "tokens": 7553.850802719498,
       "entry_px": 0.0011282531880205682,
       "entry_mc": 1079578,
-      "peak_px": 0.00114,
+      "peak_px": 0.001873,
       "stop": -0.2,
       "tp1": 0.4,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-tight rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.18773453746986168,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/9xvu6bt8nvkceejkx15cu6f5t8szwxyl1x13y6glhqe8",
       "v": 2,
-      "mev_sol": 0.007017543859649123,
-      "swaps": 1,
+      "mev_sol": 0.014004687515322682,
+      "swaps": 2,
       "entry_liq": 79358.02,
       "at_entry": {
         "px": 0.001128,
@@ -5874,10 +5874,11 @@
     "2026-11-15 11:25 UTC SELL 100% WANTED -> 0.145 SOL @ $0.000899: event exit: price -26% in 5 minutes, -33% from entry",
     "2026-11-15 11:34 UTC BUY three 0.25 SOL @ $0.00041516377 (mc $414,947): v-tight rule",
     "2026-11-15 16:32 UTC SELL 100% JOB -> 0.178 SOL @ $0.001163: stop-loss at -21%",
-    "2026-11-15 16:41 UTC BUY WOHAIHAO 0.25 SOL @ $0.0011282532 (mc $1,079,578): v-tight rule"
+    "2026-11-15 16:41 UTC BUY WOHAIHAO 0.25 SOL @ $0.0011282532 (mc $1,079,578): v-tight rule",
+    "2026-11-15 19:24 UTC SELL 50% WOHAIHAO -> 0.188 SOL @ $0.001873: take-profit at +66%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-15 19:23 UTC"
+  "last_mark": "2026-11-15 19:24 UTC"
 }
