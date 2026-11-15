@@ -1,8 +1,8 @@
 # Lessons
 
-532 closed trades labelled, every book. Written by the bot.
+533 closed trades labelled, every book. Written by the bot.
 
-- **slow-bleed**: 186 trades, mean -29%. FOOD (v-swing): -55% over 33h; Max (v-no-spike): -35% over 40h
+- **slow-bleed**: 187 trades, mean -29%. Max (v-no-spike): -35% over 40h; DacityCoin (v-unpaid): -28% over 17h
 - **other**: 154 trades, mean -31%. AMC (v-momentum): event exit: price -47% in 5 minutes, -49% from entry; AMC (v-velocity): event exit: price -47% in 5 minutes, -49% from entry
 - **won-held**: 98 trades, mean +34%. three (v-networks): +10%, peak +30%; three (v-no-spike): +10%, peak +30%
 - **bought-spike**: 41 trades, mean -32%. AI (v-unease): up 960% in 24h at entry, peak +0%; AI (v-velocity): up 960% in 24h at entry, peak +0%
