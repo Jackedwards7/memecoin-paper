@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 9.563424101772057,
+  "cash_sol": 9.313424101772057,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -145,6 +145,78 @@
       },
       "reentry": false,
       "since_loss_h": 20.1
+    },
+    "8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump": {
+      "symbol": "BLOB",
+      "opened": "2026-11-16 08:15 UTC",
+      "cost_sol": 0.25,
+      "tokens": 1313.1825332001076,
+      "entry_px": 0.012940775231443359,
+      "entry_mc": 12832050,
+      "peak_px": 0.012940775231443359,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "Gate pass; 377h pumpswap coin, mc $12.8M, liq $296k, 1h +27.9%, 24h +254% (extended, risk noted), 5m +1.2% (no spike now), 1h buys 1901 vs sells 1506, vol1h $395k. Other pass GATO skipped (sellers lead, flat); CBUCKS (13% wallet), WASTED/Anthropig (copycat) failed gate.",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/hr9qopjxcuak38rxdpzduufhdak2bfjtoxbfqzvn2ewu",
+      "v": 2,
+      "mev_sol": 0.0070382882882882875,
+      "swaps": 1,
+      "entry_liq": 296446.18,
+      "at_entry": {
+        "px": 0.01294,
+        "liq": 296446.18,
+        "mc": 12832050,
+        "dex": "pumpswap",
+        "age_h": 376.66,
+        "vol_h1": 386494.95,
+        "vol_h24": 2320969.31,
+        "buys_h1": 1876,
+        "sells_h1": 1488,
+        "buys_h24": 10968,
+        "sells_h24": 8671,
+        "trades_h24": 19639,
+        "avg_trade": 118.18,
+        "m5": 1.16,
+        "h1": 23.22,
+        "h6": 198,
+        "h24": 255,
+        "eligible": true,
+        "v": 3,
+        "pool": "Hr9qopJXCuak38rxDpZduUFhdAK2BfjtoXbfQZVn2EwU",
+        "m5_raw": 1.16,
+        "buys_m5": 97,
+        "sells_m5": 80,
+        "buys_h6": 10186,
+        "sells_h6": 7752,
+        "vol_m5": 13858.65,
+        "vol_h6": 2119403,
+        "liq_base": 11519216,
+        "liq_quote": 2075.2117,
+        "fdv": 12832050,
+        "boosts": 50,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0453,
+          "paid": 0.007871608144666517,
+          "vs_paid": 0.7333,
+          "off_peak": -0.0097,
+          "accel": 0.4365,
+          "candles": 96,
+          "unease": 0,
+          "known": 5,
+          "signs": []
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 15.6
     }
   },
   "closed": [
@@ -701,5 +773,5 @@
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-16 08:13 UTC"
+  "last_mark": "2026-11-16 08:15 UTC"
 }
