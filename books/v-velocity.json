@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.830662080831962,
+  "cash_sol": 6.580662080831962,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -370,6 +370,78 @@
       },
       "reentry": true,
       "since_loss_h": 0.0
+    },
+    "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": {
+      "symbol": "NIO",
+      "opened": "2026-11-16 22:39 UTC",
+      "cost_sol": 0.25,
+      "tokens": 9924.016363872423,
+      "entry_px": 0.0017332145947095412,
+      "entry_mc": 1651208,
+      "peak_px": 0.0017332145947095412,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-velocity rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/b4wmjc6pvjctu3qsvs3ett9mr4m5v5jbkrqctwantc71",
+      "v": 2,
+      "mev_sol": 0.006956037840845855,
+      "swaps": 1,
+      "entry_liq": 145120.12,
+      "at_entry": {
+        "px": 0.001733,
+        "liq": 145120.12,
+        "mc": 1651208,
+        "dex": "pumpswap",
+        "age_h": 630.68,
+        "vol_h1": 15608.63,
+        "vol_h24": 286525.42,
+        "buys_h1": 135,
+        "sells_h1": 130,
+        "buys_h24": 2109,
+        "sells_h24": 2643,
+        "trades_h24": 4752,
+        "avg_trade": 60.3,
+        "m5": 1.28,
+        "h1": 4.07,
+        "h6": 13.08,
+        "h24": 27.08,
+        "eligible": true,
+        "v": 3,
+        "pool": "B4Wmjc6PvjCtU3qSVS3eTT9Mr4M5V5jBkRQctWANTc71",
+        "m5_raw": 1.28,
+        "buys_m5": 9,
+        "sells_m5": 8,
+        "buys_h6": 658,
+        "sells_h6": 724,
+        "vol_m5": 642.07,
+        "vol_h6": 90160.89,
+        "liq_base": 42423478,
+        "liq_quote": 996.5164,
+        "fdv": 1651208,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0337,
+          "paid": 0.0015118248568645445,
+          "vs_paid": 0.1408,
+          "off_peak": -0.0167,
+          "accel": -0.0228,
+          "candles": 96,
+          "unease": 0,
+          "known": 5,
+          "signs": []
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 3.0
     }
   },
   "closed": [
@@ -5233,10 +5305,11 @@
     "2026-11-16 12:30 UTC BUY rockstar 0.25 SOL @ $0.0012271957 (mc $1,168,107): v-velocity rule",
     "2026-11-16 19:41 UTC SELL 100% rockstar -> 0.145 SOL @ $0.0007954: stop-loss at -35%",
     "2026-11-16 19:43 UTC BUY DESSA 0.25 SOL @ $0.0044504203 (mc $4,357,470): v-velocity rule",
-    "2026-11-16 21:29 UTC SELL 100% Rocco -> 0.171 SOL @ $0.0009082: trailing stop: 40% off peak, +51% from entry"
+    "2026-11-16 21:29 UTC SELL 100% Rocco -> 0.171 SOL @ $0.0009082: trailing stop: 40% off peak, +51% from entry",
+    "2026-11-16 22:39 UTC BUY NIO 0.25 SOL @ $0.0017332146 (mc $1,651,208): v-velocity rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-16 22:37 UTC"
+  "last_mark": "2026-11-16 22:38 UTC"
 }
