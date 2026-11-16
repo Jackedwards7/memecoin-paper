@@ -1,12 +1,12 @@
-MOVERS 2026-11-16T15:57:57Z
-nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity +7%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +7%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +13%
-8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH +19%
-FvQ2Ld7m6pV4e5m7jymJtgKEvjp8S7n6L3WTANDvpump LMAO +729519%
-DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin -13%
-9HFUEab7sompLDPTAaTGkryMNGbtBaFMhHMVpJEBpump rockstar -9%
-HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO -9%
-mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS -7%
-DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS -6%
+MOVERS 2026-11-16T16:13:57Z
+7sGdNQSvUGpahh6qyXB3g5gsdK9FAzZM299KyCXspump https +8%
+5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max +9%
+nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity +11%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +12%
+FvQ2Ld7m6pV4e5m7jymJtgKEvjp8S7n6L3WTANDvpump LMAO +726968%
+9HFUEab7sompLDPTAaTGkryMNGbtBaFMhHMVpJEBpump rockstar -15%
+DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin -11%
+DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS -10%
+8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB -7%
+CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump fone -6%
 END
