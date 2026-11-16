@@ -1,12 +1,12 @@
-MOVERS 2026-11-16T14:05:50Z
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +7%
-9HFUEab7sompLDPTAaTGkryMNGbtBaFMhHMVpJEBpump rockstar +9%
-CARDSccUMFKoPRZxt5vt3ksUbxEFEcnZ3H2pd3dKxYjp CARDS +9%
-mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS +12%
-4B8CdHPZ8ng1CtMP2Jk2W8wGAwJ5nJnap1deVsz2pump BUTTHOLE +34%
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -13%
+MOVERS 2026-11-16T14:21:50Z
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +13%
+8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +14%
+mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS +15%
+4B8CdHPZ8ng1CtMP2Jk2W8wGAwJ5nJnap1deVsz2pump BUTTHOLE +18%
+Ed87eQeDX8yFscuNRgNRSZf7TpEwgNjdRfMxhtGppump JAG +40677469%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -13%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -7%
 8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER -7%
-5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat -4%
-5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -4%
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB -4%
+KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump RAMBO -3%
+Hh3oTaqDCKKfdBgsQEvxp9sUwyNf8x9qmKqEMLBWpump HODL -3%
 END
