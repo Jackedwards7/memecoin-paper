@@ -1,12 +1,12 @@
-MOVERS 2026-11-16T07:09:44Z
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +5%
+MOVERS 2026-11-16T07:25:44Z
+5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat +6%
 ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +7%
-2NUaS6Gfrm5rBuPBn7svHka8t33SrSkpXGQiUvZLpump Anthropig +7%
+2NUaS6Gfrm5rBuPBn7svHka8t33SrSkpXGQiUvZLpump Anthropig +8%
 8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH +10%
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +21%
-4B1mCGeSjTadzH7okALwdFm8taxoHbZBFCTA1nZRpump WOHAIHAO -24%
-4B8CdHPZ8ng1CtMP2Jk2W8wGAwJ5nJnap1deVsz2pump BUTTHOLE -13%
-GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED -8%
-5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -7%
-BcHEaaTCvycPwwsJ9yQTXdHP9X2gCLkznDbZ8VySpump Jotchua -3%
+8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +27%
+4B1mCGeSjTadzH7okALwdFm8taxoHbZBFCTA1nZRpump WOHAIHAO -27%
+5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -9%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -7%
+4B8CdHPZ8ng1CtMP2Jk2W8wGAwJ5nJnap1deVsz2pump BUTTHOLE -4%
+DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin -4%
 END
