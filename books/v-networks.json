@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.505842960961196,
+  "cash_sol": 7.255842960961196,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -283,6 +283,81 @@
       },
       "reentry": false,
       "since_loss_h": 2.0
+    },
+    "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": {
+      "symbol": "NIO",
+      "opened": "2026-11-16 13:50 UTC",
+      "cost_sol": 0.25,
+      "tokens": 10895.073114347835,
+      "entry_px": 0.0015602029304066318,
+      "entry_mc": 1486563,
+      "peak_px": 0.0015602029304066318,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-networks rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/b4wmjc6pvjctu3qsvs3ett9mr4m5v5jbkrqctwantc71",
+      "v": 2,
+      "mev_sol": 0.007036307345904869,
+      "swaps": 1,
+      "entry_liq": 136566.03,
+      "at_entry": {
+        "px": 0.00156,
+        "liq": 136566.03,
+        "mc": 1486563,
+        "dex": "pumpswap",
+        "age_h": 621.86,
+        "vol_h1": 25872.35,
+        "vol_h24": 327578.68,
+        "buys_h1": 212,
+        "sells_h1": 208,
+        "buys_h24": 2381,
+        "sells_h24": 3086,
+        "trades_h24": 5467,
+        "avg_trade": 59.92,
+        "m5": 0.11,
+        "h1": 4.14,
+        "h6": 14.97,
+        "h24": 9.42,
+        "eligible": true,
+        "v": 3,
+        "pool": "B4Wmjc6PvjCtU3qSVS3eTT9Mr4M5V5jBkRQctWANTc71",
+        "m5_raw": 0.11,
+        "buys_m5": 1,
+        "sells_m5": 4,
+        "buys_h6": 419,
+        "sells_h6": 733,
+        "vol_m5": 337.84,
+        "vol_h6": 50652.02,
+        "liq_base": 43991807,
+        "liq_quote": 955.9469,
+        "fdv": 1486563,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0336,
+          "paid": 0.0014705734779944316,
+          "vs_paid": -0.057,
+          "off_peak": -0.2301,
+          "accel": -0.0243,
+          "candles": 96,
+          "unease": 2,
+          "known": 5,
+          "signs": [
+            "failed_high",
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 2.3
     }
   },
   "closed": [
@@ -4599,10 +4674,11 @@
     "2026-11-16 05:34 UTC BUY BLOB 0.25 SOL @ $0.0065085618 (mc $6,451,325): v-networks rule",
     "2026-11-16 07:47 UTC SELL 50% BLOB -> 0.232 SOL @ $0.01309: take-profit at +101%: half sold, cost recovered",
     "2026-11-16 10:55 UTC SELL 100% Anthropig -> 0.142 SOL @ $0.0006846: stop-loss at -37%",
-    "2026-11-16 11:31 UTC SELL 100% BJB -> 0.110 SOL @ $0.0009279: event exit: price -47% in 5 minutes, -51% from entry"
+    "2026-11-16 11:31 UTC SELL 100% BJB -> 0.110 SOL @ $0.0009279: event exit: price -47% in 5 minutes, -51% from entry",
+    "2026-11-16 13:50 UTC BUY NIO 0.25 SOL @ $0.0015602029 (mc $1,486,563): v-networks rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-16 13:48 UTC"
+  "last_mark": "2026-11-16 13:49 UTC"
 }
