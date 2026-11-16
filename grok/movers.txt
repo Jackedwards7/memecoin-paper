@@ -1,12 +1,12 @@
-MOVERS 2026-11-16T11:09:44Z
-8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER +4%
-5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat +5%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +5%
+MOVERS 2026-11-16T11:25:50Z
+DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS +5%
+8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH +5%
+5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat +7%
 CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi +7%
-4B8CdHPZ8ng1CtMP2Jk2W8wGAwJ5nJnap1deVsz2pump BUTTHOLE +12%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -16%
-9HFUEab7sompLDPTAaTGkryMNGbtBaFMhHMVpJEBpump rockstar -6%
-5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -4%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -4%
-GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED -3%
+mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS +8%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -18%
+9HFUEab7sompLDPTAaTGkryMNGbtBaFMhHMVpJEBpump rockstar -10%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -8%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -7%
+KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump RAMBO -4%
 END

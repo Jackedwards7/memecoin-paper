@@ -1,9 +1,9 @@
 # Lessons
 
-560 closed trades labelled, every book. Written by the bot.
+568 closed trades labelled, every book. Written by the bot.
 
 - **slow-bleed**: 196 trades, mean -28%. JOB (v-low-bundle): -14% over 48h; JOB (v-momentum): -14% over 48h
-- **other**: 159 trades, mean -30%. WOHAIHAO (v-no-spike): event exit: price -20% in 5 minutes, -35% from entry; Rocco (v-unease): unease exit: 4 of 5 signs
+- **other**: 167 trades, mean -31%. WANTED (v-unease): event exit: price -26% in 5 minutes, -33% from entry; WANTED (v-velocity): event exit: price -26% in 5 minutes, -33% from entry
 - **won-held**: 103 trades, mean +33%. three (v-momentum): +11%, peak +31%; Dacity (v-unpaid): +3%, peak +46%
 - **bought-spike**: 41 trades, mean -32%. AI (v-unease): up 960% in 24h at entry, peak +0%; AI (v-velocity): up 960% in 24h at entry, peak +0%
 - **won-trailed**: 29 trades, mean +93462%. WOHAIHAO (v-unease): +66%, peak +172%; WOHAIHAO (v-velocity): +66%, peak +172%
