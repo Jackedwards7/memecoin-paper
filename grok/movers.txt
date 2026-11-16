@@ -1,12 +1,12 @@
-MOVERS 2026-11-16T20:14:23Z
-33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump DOPE +7%
-Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT +7%
-CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi +7%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +20%
-98sMhvDwXj1RQi5c5Mndm3vPe9cBqPrbLaufMXFNMh5g HYPE +504380%
-9HFUEab7sompLDPTAaTGkryMNGbtBaFMhHMVpJEBpump rockstar -35%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -23%
+MOVERS 2026-11-16T20:30:23Z
+nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity +7%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +10%
+8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH +11%
+33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump DOPE +17%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +31%
+9HFUEab7sompLDPTAaTGkryMNGbtBaFMhHMVpJEBpump rockstar -26%
+DitHyRMQiSDhn5cnKMJV2CDDt6sVct96YrECiM49pump House -18%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -18%
+5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -14%
 mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS -12%
-5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -12%
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB -8%
 END
