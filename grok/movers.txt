@@ -1,12 +1,12 @@
-MOVERS 2026-11-16T05:49:58Z
-5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max +6%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +6%
-nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity +8%
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +12%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +19%
+MOVERS 2026-11-16T06:05:59Z
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +8%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +10%
+KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump RAMBO +11%
+5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max +20%
+8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +26%
 4B1mCGeSjTadzH7okALwdFm8taxoHbZBFCTA1nZRpump WOHAIHAO -20%
-GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED -5%
-5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat -4%
-MukLDtJ8Cx9DxLbeyLRSWPSposTMWuwHANbuaudpump OTC -4%
-3NZ9JMVBmGAqocybic2c7LQCJScmgsAZ6vQqTDzcqmJh WBTC -4%
+4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao -8%
+5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat -6%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -6%
+Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump baton -4%
 END
