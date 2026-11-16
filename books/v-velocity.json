@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.359208444520659,
+  "cash_sol": 7.109208444520659,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -366,6 +366,80 @@
       },
       "reentry": true,
       "since_loss_h": 6.6
+    },
+    "2NUaS6Gfrm5rBuPBn7svHka8t33SrSkpXGQiUvZLpump": {
+      "symbol": "Anthropig",
+      "opened": "2026-11-16 03:10 UTC",
+      "cost_sol": 0.25,
+      "tokens": 16187.073030232646,
+      "entry_px": 0.0010662551511174557,
+      "entry_mc": 1056249,
+      "peak_px": 0.0010662551511174557,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-velocity rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/4rm7lq7udxmmmgv88qjk1ck22xuq3cxg9qqiymbhksnq",
+      "v": 2,
+      "mev_sol": 0.006932889628397116,
+      "swaps": 1,
+      "entry_liq": 75327.83,
+      "at_entry": {
+        "px": 0.001066,
+        "liq": 75327.83,
+        "mc": 1056249,
+        "dex": "pumpswap",
+        "age_h": 9.39,
+        "vol_h1": 66897.02,
+        "vol_h24": 882836.76,
+        "buys_h1": 2270,
+        "sells_h1": 800,
+        "buys_h24": 18244,
+        "sells_h24": 11578,
+        "trades_h24": 29822,
+        "avg_trade": 29.6,
+        "m5": -12.01,
+        "h1": 0.61,
+        "h6": 54.34,
+        "h24": 3145,
+        "eligible": true,
+        "v": 3,
+        "pool": "4rm7LQ7uDXMmMGV88QJK1ck22xUq3cxg9QqiyMBhKsnq",
+        "m5_raw": -12.01,
+        "buys_m5": 174,
+        "sells_m5": 93,
+        "buys_h6": 12171,
+        "sells_h6": 9164,
+        "vol_m5": 9095.47,
+        "vol_h6": 381433.26,
+        "liq_base": 35744312,
+        "liq_quote": 516.09137,
+        "fdv": 1056249,
+        "boosts": 100,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.1288,
+          "paid": 0.0005673108851826397,
+          "vs_paid": 1.0285,
+          "off_peak": -0.1282,
+          "accel": -0.0483,
+          "candles": 36,
+          "unease": 1,
+          "known": 3,
+          "signs": [
+            "failed_high"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 15.8
     }
   },
   "closed": [
@@ -4822,10 +4896,11 @@
     "2026-11-15 16:08 UTC BUY Punch 0.25 SOL @ $0.00028354306 (mc $283,488): v-velocity rule",
     "2026-11-15 18:03 UTC BUY RAMBO 0.25 SOL @ $0.012470759 (mc $12,293,090): v-velocity rule",
     "2026-11-15 23:47 UTC SELL 50% Rocco -> 0.278 SOL @ $0.00147: take-profit at +145%: half sold, cost recovered",
-    "2026-11-16 02:24 UTC SELL 100% MEVS -> 0.282 SOL @ $0.001879: event exit: price -21% in 5 minutes, +22% from entry"
+    "2026-11-16 02:24 UTC SELL 100% MEVS -> 0.282 SOL @ $0.001879: event exit: price -21% in 5 minutes, +22% from entry",
+    "2026-11-16 03:10 UTC BUY Anthropig 0.25 SOL @ $0.0010662552 (mc $1,056,249): v-velocity rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-16 03:04 UTC"
+  "last_mark": "2026-11-16 03:10 UTC"
 }
