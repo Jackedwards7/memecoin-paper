@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.996974273558769,
+  "cash_sol": 7.286051256542542,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -152,22 +152,22 @@
       "symbol": "Rocco",
       "opened": "2026-11-14 20:20 UTC",
       "cost_sol": 0.25,
-      "tokens": 28583.160901160638,
+      "tokens": 14291.580450580319,
       "entry_px": 0.0006007348193356308,
       "entry_mc": 585566,
-      "peak_px": 0.001496,
+      "peak_px": 0.001503,
       "stop": -0.4,
       "tp1": 1.5,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-loose rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.28907698298377293,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/3jw1ykkqutngnudgbrwxpvzktmff4pwytotp3texhkbq",
       "v": 2,
-      "mev_sol": 0.006967670011148271,
-      "swaps": 1,
+      "mev_sol": 0.013965570640959327,
+      "swaps": 2,
       "entry_liq": 79920.02,
       "at_entry": {
         "px": 0.0006006,
@@ -4507,10 +4507,11 @@
     "2026-11-15 16:08 UTC BUY Punch 0.25 SOL @ $0.00028354306 (mc $283,488): v-loose rule",
     "2026-11-16 02:24 UTC SELL 100% MEVS -> 0.282 SOL @ $0.001879: event exit: price -21% in 5 minutes, +22% from entry",
     "2026-11-16 03:10 UTC BUY Anthropig 0.25 SOL @ $0.0010662552 (mc $1,056,249): v-loose rule",
-    "2026-11-16 11:20 UTC SELL 100% Anthropig -> 0.134 SOL @ $0.0006319: stop-loss at -41%"
+    "2026-11-16 11:20 UTC SELL 100% Anthropig -> 0.134 SOL @ $0.0006319: stop-loss at -41%",
+    "2026-11-16 11:55 UTC SELL 50% Rocco -> 0.289 SOL @ $0.001503: take-profit at +150%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-16 11:52 UTC"
+  "last_mark": "2026-11-16 11:55 UTC"
 }
