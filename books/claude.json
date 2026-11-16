@@ -1031,21 +1031,21 @@
     "2026-11-15 16:37 UTC SELL 100% GATO -> 0.218 SOL @ $0.006857: time stop: 48h held, -15%, no take-profit",
     "2026-11-16 08:15 UTC BUY BLOB 0.25 SOL @ $0.012940775 (mc $12,832,050): Gate pass; 377h pumpswap coin, mc $12.8M, liq $296k, 1h +27.9%, 24h +254% (extended, risk noted), 5m +1.2% (no spike now), 1h buys 1901 vs sells 1506, vol1h $395k. Other pass GATO skipped (sellers lead, flat); CBUCKS (13% wallet), WASTED/Anthropig (copycat) failed gate."
   ],
-  "last_mark": "2026-11-16 15:20 UTC",
+  "last_mark": "2026-11-16 15:25 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794840832,
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794840832,
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794840832,
-    "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": 1794838910,
+    "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": 1794842752,
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1794840832,
     "5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump": 1794841792,
     "KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump": 1794840832,
     "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794839872,
     "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump": 1794840832,
-    "NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump": 1794838910,
-    "8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump": 1794838910,
-    "9HFUEab7sompLDPTAaTGkryMNGbtBaFMhHMVpJEBpump": 1794838910,
-    "mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump": 1794838910,
+    "NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump": 1794842752,
+    "8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump": 1794842752,
+    "9HFUEab7sompLDPTAaTGkryMNGbtBaFMhHMVpJEBpump": 1794842752,
+    "mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump": 1794842752,
     "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": 1794840832
   },
   "rejects": {
@@ -1940,6 +1940,15 @@
       "fails": [
         "RugCheck danger: Low Liquidity",
         "a wallet holds 15% of supply"
+      ],
+      "moves": {}
+    },
+    "FvQ2Ld7m6pV4e5m7jymJtgKEvjp8S7n6L3WTANDvpump": {
+      "symbol": "LMAO",
+      "at": 1794842752,
+      "px": 0.01402,
+      "fails": [
+        "RugCheck danger: Low Liquidity"
       ],
       "moves": {}
     }
