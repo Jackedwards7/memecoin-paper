@@ -1031,21 +1031,21 @@
     "2026-11-15 16:37 UTC SELL 100% GATO -> 0.218 SOL @ $0.006857: time stop: 48h held, -15%, no take-profit",
     "2026-11-16 08:15 UTC BUY BLOB 0.25 SOL @ $0.012940775 (mc $12,832,050): Gate pass; 377h pumpswap coin, mc $12.8M, liq $296k, 1h +27.9%, 24h +254% (extended, risk noted), 5m +1.2% (no spike now), 1h buys 1901 vs sells 1506, vol1h $395k. Other pass GATO skipped (sellers lead, flat); CBUCKS (13% wallet), WASTED/Anthropig (copycat) failed gate."
   ],
-  "last_mark": "2026-11-16 08:56 UTC",
+  "last_mark": "2026-11-16 09:01 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794817784,
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794817784,
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794817784,
-    "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": 1794815864,
+    "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": 1794819704,
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1794817784,
     "5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump": 1794818744,
     "KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump": 1794817784,
     "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794816824,
     "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump": 1794817784,
-    "NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump": 1794815864,
+    "NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump": 1794819704,
     "CHuLmJXz8F3YXUyv984PRxeECfSvqD5MZ3W1FoDmpump": 1794818744,
-    "8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump": 1794816919.374696,
-    "9HFUEab7sompLDPTAaTGkryMNGbtBaFMhHMVpJEBpump": 1794815864
+    "8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump": 1794819704,
+    "9HFUEab7sompLDPTAaTGkryMNGbtBaFMhHMVpJEBpump": 1794819704
   },
   "rejects": {
     "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
@@ -1927,6 +1927,16 @@
       "px": 0.001067,
       "fails": [
         "copycat: an earlier 'Anthropig' exists (25DeVA)"
+      ],
+      "moves": {}
+    },
+    "Ed87eQeDX8yFscuNRgNRSZf7TpEwgNjdRfMxhtGppump": {
+      "symbol": "JAG",
+      "at": 1794819704,
+      "px": 0.01415,
+      "fails": [
+        "RugCheck danger: Low Liquidity",
+        "a wallet holds 15% of supply"
       ],
       "moves": {}
     }
