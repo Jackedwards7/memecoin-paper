@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.077841435733239,
+  "cash_sol": 6.309736966277323,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -298,22 +298,22 @@
       "symbol": "BLOB",
       "opened": "2026-11-16 05:34 UTC",
       "cost_sol": 0.25,
-      "tokens": 2635.9317920558865,
+      "tokens": 1317.9658960279432,
       "entry_px": 0.006508561811692075,
       "entry_mc": 6451325,
-      "peak_px": 0.01284,
+      "peak_px": 0.01309,
       "stop": -0.1684,
       "tp1": 1.0,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-swing rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.23189553054408393,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/hr9qopjxcuak38rxdpzduufhdak2bfjtoxbfqzvn2ewu",
       "v": 2,
-      "mev_sol": 0.00697350069735007,
-      "swaps": 1,
+      "mev_sol": 0.014003871900949618,
+      "swaps": 2,
       "entry_liq": 207642.35,
       "at_entry": {
         "px": 0.006508,
@@ -6118,10 +6118,11 @@
     "2026-11-16 03:32 UTC SELL 100% RAMBO -> 0.175 SOL @ $0.009544: stop-loss at -22%",
     "2026-11-16 04:14 UTC BUY BJB 0.25 SOL @ $0.0018783356 (mc $1,873,454): v-swing rule",
     "2026-11-16 05:34 UTC BUY BLOB 0.25 SOL @ $0.0065085618 (mc $6,451,325): v-swing rule",
-    "2026-11-16 06:06 UTC BUY BIG 0.25 SOL @ $0.0016272462 (mc $1,545,142): v-swing rule"
+    "2026-11-16 06:06 UTC BUY BIG 0.25 SOL @ $0.0016272462 (mc $1,545,142): v-swing rule",
+    "2026-11-16 07:47 UTC SELL 50% BLOB -> 0.232 SOL @ $0.01309: take-profit at +101%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-16 07:42 UTC"
+  "last_mark": "2026-11-16 07:47 UTC"
 }
