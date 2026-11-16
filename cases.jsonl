@@ -1194,3 +1194,6 @@
 {"after": "v-unpaid:y1AZt42vceCmStjW4zetK3VoNarC1VxJ5iDjpiupump:2026-11-15 15:54 UTC", "h": 24, "px": 0.01527, "vs_exit": -0.0539}
 {"after": "v-low-bundle:HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump:2026-11-15 15:59 UTC", "h": 24, "px": 0.005902, "vs_exit": -0.1126}
 {"after": "v-momentum:HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump:2026-11-15 15:59 UTC", "h": 24, "px": 0.005902, "vs_exit": -0.1126}
+{"after": "claude:HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump:2026-11-15 16:37 UTC", "h": 24, "px": 0.005854, "vs_exit": -0.1463}
+{"after": "mech:HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump:2026-11-15 16:37 UTC", "h": 24, "px": 0.005854, "vs_exit": -0.1463}
+{"after": "v-tight:9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump:2026-11-15 16:32 UTC", "h": 24, "px": 0.001425, "vs_exit": 0.2253}
