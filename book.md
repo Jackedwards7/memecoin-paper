@@ -8,12 +8,12 @@ area: trading
 *Paper only: simulated fills from live DexScreener prices, 1.50% fee each side plus a size/liquidity
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
-**Equity 9.908 SOL** (start 10.0 SOL, -0.9%) · cash 8.654 SOL ·
-open 3 · closed 17 (5 won) · SOL $71.70 · marked 2026-11-16 17:26 UTC
+**Equity 9.899 SOL** (start 10.0 SOL, -1.0%) · cash 8.654 SOL ·
+open 3 · closed 17 (5 won) · SOL $71.25 · marked 2026-11-16 17:34 UTC
 
-**Benchmark (vs just holding SOL): -0.9%.** The book is counted in SOL, so its SOL
-return *is* its edge over holding SOL. In dollars: $710 vs $949 at the start
-(-25.1%); SOL itself moved -24.4%.
+**Benchmark (vs just holding SOL): -1.0%.** The book is counted in SOL, so its SOL
+return *is* its edge over holding SOL. In dollars: $705 vs $949 at the start
+(-25.6%); SOL itself moved -24.9%.
 Review on 2026-11-30 or after 30 closed v2 trades (10/30), rules unchanged until then.
 
 ## v2 test (from 2026-11-03 01:30 UTC)
@@ -23,11 +23,11 @@ control position on a random gate pass (`control.json`, same mechanical exits, n
 
 | Arm | Closed | Won | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|
-| Picks | 10 | 3 | +0.753 | +23.2% |
-| Control | 12 | 0 | -0.999 | -30.7% |
+| Picks | 10 | 3 | +0.744 | +22.9% |
+| Control | 12 | 0 | -0.998 | -30.7% |
 
 Costs in every fill: 1.5% fee each side, size/liquidity slippage, and a $0.50 sandwich charge per swap.
-If every swap were sandwiched at the $5 median: picks -0.691 SOL, control -2.442 SOL.
+If every swap were sandwiched at the $5 median: picks -0.709 SOL, control -2.451 SOL.
 
 **Gate value** (raw price moves, no costs; the gate earns its keep if passes beat rejects):
 passes 54 tracked, median 1d -61%, 3d -95%, 7d -99% · rejects 72 tracked, median 1d -58%, 3d -76%, 7d -86%.
@@ -39,19 +39,19 @@ Same gate, size, costs and exit code as the picks; rules in `CLAUDE.md`. Judged 
 
 | Arm | Closed | Won | Open | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|---|
-| mech | 8 | 2 | 3 | +0.805 | +29.3% |
+| mech | 8 | 2 | 3 | +0.797 | +29.0% |
 | v-dip | 0 | 0 | 0 | +0.000 | +0.0% |
-| v-loose | 52 | 14 | 6 | -1.166 | -8.0% |
-| v-low-bundle | 60 | 15 | 6 | -2.258 | -13.7% |
-| v-mature | 21 | 7 | 4 | -0.461 | -7.4% |
-| v-momentum | 60 | 15 | 6 | -2.258 | -13.7% |
-| v-networks | 54 | 14 | 6 | -0.928 | -6.2% |
-| v-no-spike | 34 | 9 | 6 | +6771.742 | +67717.4% |
-| v-swing | 73 | 16 | 5 | -2.110 | -10.8% |
-| v-tight | 70 | 18 | 6 | -1.959 | -10.3% |
-| v-unease | 65 | 15 | 6 | -0.948 | -5.3% |
-| v-unpaid | 44 | 5 | 4 | -4.239 | -35.3% |
-| v-velocity | 59 | 16 | 6 | -1.370 | -8.4% |
+| v-loose | 52 | 14 | 6 | -1.179 | -8.1% |
+| v-low-bundle | 60 | 15 | 6 | -2.275 | -13.8% |
+| v-mature | 21 | 7 | 4 | -0.475 | -7.6% |
+| v-momentum | 60 | 15 | 6 | -2.275 | -13.8% |
+| v-networks | 54 | 14 | 6 | -0.942 | -6.3% |
+| v-no-spike | 34 | 9 | 6 | +6771.730 | +67717.3% |
+| v-swing | 73 | 16 | 5 | -2.126 | -10.9% |
+| v-tight | 70 | 18 | 6 | -1.961 | -10.3% |
+| v-unease | 65 | 15 | 6 | -0.973 | -5.5% |
+| v-unpaid | 44 | 5 | 4 | -4.236 | -35.3% |
+| v-velocity | 59 | 16 | 6 | -1.387 | -8.5% |
 | v-x-exit | 0 | 0 | 0 | +0.000 | +0.0% |
 | v-x-organic | 0 | 0 | 0 | +0.000 | +0.0% |
 
@@ -73,7 +73,7 @@ Each coin against its own normal. Information only: no rule on this book reads i
 
 Last check 2026-11-15: 90 of 96 snapshots, 15328 rows, 188 coins, 107.8 MB. No problems.
 
-GeckoTerminal: 45686 calls, 393 refused, 16 failed, 119 waiting. Insider flag fired on 0 of 68 coins where RugCheck's graph found insiders.
+GeckoTerminal: 45710 calls, 393 refused, 16 failed, 117 waiting. Insider flag fired on 0 of 68 coins where RugCheck's graph found insiders.
 
 Fills: a round trip on Jupiter returned -0.6% (median of 180 quotes, before priority fees); paper charged -8.6%.
 
@@ -85,9 +85,9 @@ Learning run 2026-11-15: 11 of 14 arms have 15+ trades. Promoted: none. Proposes
 
 | Coin | Mint | Opened | Cost SOL | Entry mcap | Move | Value SOL (incl. realised) | Thesis |
 |---|---|---|---|---|---|---|---|
-| BRUH | `PgFtGGqu…` | 2026-11-08 08:15 UTC | 0.25 | $1,080,245 | +368% | 0.937 | Gate pass; 28h pumpswap coin, mc $1.07M, liq $84k (thin), 1h +42%, 24h +84%, 5m -2.2% (no spike now), 1h buys 163 vs sells 92. Other passes COGE (24h -92%) and GIGAHUG (11.7h, +1775% 24h vertical) skipped; GATO/HELL already held. |
-| BIG | `34DXEU2t…` | 2026-11-15 12:16 UTC | 0.25 | $1,234,475 | +7% | 0.258 | Gate pass; 164h pumpswap coin, mc $1.19M, liq $103k, 1h +0.7%, 24h +4.8% (cooled from earlier +438% spike), 5m -4.8% (no spike), 1h buys 1071 vs sells 1009; volume modest. Only unheld pass; CBUCKS failed gate (14% wallet); GATO/BRUH held. |
-| BLOB | `8s11PkgQ…` | 2026-11-16 08:15 UTC | 0.25 | $12,832,050 | +25% | 0.296 | Gate pass; 377h pumpswap coin, mc $12.8M, liq $296k, 1h +27.9%, 24h +254% (extended, risk noted), 5m +1.2% (no spike now), 1h buys 1901 vs sells 1506, vol1h $395k. Other pass GATO skipped (sellers lead, flat); CBUCKS (13% wallet), WASTED/Anthropig (copycat) failed gate. |
+| BRUH | `PgFtGGqu…` | 2026-11-08 08:15 UTC | 0.25 | $1,080,245 | +361% | 0.931 | Gate pass; 28h pumpswap coin, mc $1.07M, liq $84k (thin), 1h +42%, 24h +84%, 5m -2.2% (no spike now), 1h buys 163 vs sells 92. Other passes COGE (24h -92%) and GIGAHUG (11.7h, +1775% 24h vertical) skipped; GATO/HELL already held. |
+| BIG | `34DXEU2t…` | 2026-11-15 12:16 UTC | 0.25 | $1,234,475 | +7% | 0.260 | Gate pass; 164h pumpswap coin, mc $1.19M, liq $103k, 1h +0.7%, 24h +4.8% (cooled from earlier +438% spike), 5m -4.8% (no spike), 1h buys 1071 vs sells 1009; volume modest. Only unheld pass; CBUCKS failed gate (14% wallet); GATO/BRUH held. |
+| BLOB | `8s11PkgQ…` | 2026-11-16 08:15 UTC | 0.25 | $12,832,050 | +22% | 0.292 | Gate pass; 377h pumpswap coin, mc $12.8M, liq $296k, 1h +27.9%, 24h +254% (extended, risk noted), 5m +1.2% (no spike now), 1h buys 1901 vs sells 1506, vol1h $395k. Other pass GATO skipped (sellers lead, flat); CBUCKS (13% wallet), WASTED/Anthropig (copycat) failed gate. |
 
 ## Closed
 
