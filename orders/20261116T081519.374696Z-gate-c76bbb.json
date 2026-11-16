@@ -1,0 +1,39 @@
+{
+  "id": "20261116T081519.374696Z-gate-c76bbb",
+  "kind": "gate",
+  "at": 1794816919.374696,
+  "by": "local",
+  "results": {
+    "8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump": {
+      "symbol": "BLOB",
+      "px": 0.01298,
+      "fails": []
+    },
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "px": 0.007002,
+      "fails": []
+    },
+    "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
+      "symbol": "CBUCKS",
+      "px": 0.005113,
+      "fails": [
+        "a wallet holds 13% of supply"
+      ]
+    },
+    "GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump": {
+      "symbol": "WASTED",
+      "px": 0.003711,
+      "fails": [
+        "copycat: an earlier 'WASTED' exists (FsjgzA)"
+      ]
+    },
+    "2NUaS6Gfrm5rBuPBn7svHka8t33SrSkpXGQiUvZLpump": {
+      "symbol": "Anthropig",
+      "px": 0.001107,
+      "fails": [
+        "copycat: an earlier 'Anthropig' exists (25DeVA)"
+      ]
+    }
+  }
+}
