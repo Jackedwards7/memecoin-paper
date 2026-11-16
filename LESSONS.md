@@ -1,10 +1,10 @@
 # Lessons
 
-574 closed trades labelled, every book. Written by the bot.
+575 closed trades labelled, every book. Written by the bot.
 
 - **slow-bleed**: 196 trades, mean -28%. JOB (v-low-bundle): -14% over 48h; JOB (v-momentum): -14% over 48h
 - **other**: 167 trades, mean -31%. WANTED (v-unease): event exit: price -26% in 5 minutes, -33% from entry; WANTED (v-velocity): event exit: price -26% in 5 minutes, -33% from entry
-- **won-held**: 109 trades, mean +33%. GATO (v-velocity): +24%, peak +71%; GATO (v-mature): +24%, peak +68%
+- **won-held**: 110 trades, mean +32%. GATO (v-mature): +24%, peak +68%; BRUH (v-mature): +3%, peak +10%
 - **bought-spike**: 41 trades, mean -32%. AI (v-unease): up 960% in 24h at entry, peak +0%; AI (v-velocity): up 960% in 24h at entry, peak +0%
 - **won-trailed**: 29 trades, mean +93462%. WOHAIHAO (v-unease): +66%, peak +172%; WOHAIHAO (v-velocity): +66%, peak +172%
 - **rug**: 18 trades, mean -100%. UODF (v-unpaid): event exit: liquidity down 49% since entry, -100% from entry; SCAMSON (v-tight): event exit: liquidity down 99% since entry, -100% from entry
