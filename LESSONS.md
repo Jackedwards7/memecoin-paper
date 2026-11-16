@@ -1,8 +1,8 @@
 # Lessons
 
-575 closed trades labelled, every book. Written by the bot.
+576 closed trades labelled, every book. Written by the bot.
 
-- **slow-bleed**: 196 trades, mean -28%. JOB (v-low-bundle): -14% over 48h; JOB (v-momentum): -14% over 48h
+- **slow-bleed**: 197 trades, mean -28%. JOB (v-momentum): -14% over 48h; FARTBOY (v-unpaid): -8% over 13h
 - **other**: 167 trades, mean -31%. WANTED (v-unease): event exit: price -26% in 5 minutes, -33% from entry; WANTED (v-velocity): event exit: price -26% in 5 minutes, -33% from entry
 - **won-held**: 110 trades, mean +32%. GATO (v-mature): +24%, peak +68%; BRUH (v-mature): +3%, peak +10%
 - **bought-spike**: 41 trades, mean -32%. AI (v-unease): up 960% in 24h at entry, peak +0%; AI (v-velocity): up 960% in 24h at entry, peak +0%
