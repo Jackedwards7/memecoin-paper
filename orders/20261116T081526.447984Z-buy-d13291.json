@@ -1,0 +1,11 @@
+{
+  "id": "20261116T081526.447984Z-buy-d13291",
+  "kind": "buy",
+  "at": 1794816926.447984,
+  "by": "local",
+  "mint": "8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump",
+  "sol": 0.25,
+  "thesis": "Gate pass; 377h pumpswap coin, mc $12.8M, liq $296k, 1h +27.9%, 24h +254% (extended, risk noted), 5m +1.2% (no spike now), 1h buys 1901 vs sells 1506, vol1h $395k. Other pass GATO skipped (sellers lead, flat); CBUCKS (13% wallet), WASTED/Anthropig (copycat) failed gate.",
+  "stop": -0.35,
+  "tp1": 1.0
+}
