@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.451874097884511,
+  "cash_sol": 6.201874097884511,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -370,6 +370,81 @@
       },
       "reentry": false,
       "since_loss_h": 0.7
+    },
+    "8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump": {
+      "symbol": "BLOB",
+      "opened": "2026-11-16 11:10 UTC",
+      "cost_sol": 0.25,
+      "tokens": 1216.1846646496099,
+      "entry_px": 0.014130810476015413,
+      "entry_mc": 14006048,
+      "peak_px": 0.014130810476015413,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-momentum rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/hr9qopjxcuak38rxdpzduufhdak2bfjtoxbfqzvn2ewu",
+      "v": 2,
+      "mev_sol": 0.0069618490671122255,
+      "swaps": 1,
+      "entry_liq": 313031.04,
+      "at_entry": {
+        "px": 0.01413,
+        "liq": 313031.04,
+        "mc": 14006048,
+        "dex": "pumpswap",
+        "age_h": 379.57,
+        "vol_h1": 182536.97,
+        "vol_h24": 3007932.28,
+        "buys_h1": 1074,
+        "sells_h1": 1011,
+        "buys_h24": 14991,
+        "sells_h24": 11816,
+        "trades_h24": 26807,
+        "avg_trade": 112.21,
+        "m5": 0.08,
+        "h1": 1.37,
+        "h6": 156,
+        "h24": 282,
+        "eligible": true,
+        "v": 3,
+        "pool": "Hr9qopJXCuak38rxDpZduUFhdAK2BfjtoXbfQZVn2EwU",
+        "m5_raw": 0.08,
+        "buys_m5": 62,
+        "sells_m5": 63,
+        "buys_h6": 13715,
+        "sells_h6": 10533,
+        "vol_m5": 11072.2,
+        "vol_h6": 2698218.53,
+        "liq_base": 11122418,
+        "liq_quote": 2170.553,
+        "fdv": 14006048,
+        "boosts": 50,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0494,
+          "paid": 0.009132214877408746,
+          "vs_paid": 0.4515,
+          "off_peak": -0.1132,
+          "accel": 0.0888,
+          "candles": 96,
+          "unease": 2,
+          "known": 5,
+          "signs": [
+            "failed_high",
+            "smaller_trades"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 0.3
     }
   },
   "closed": [
@@ -5095,10 +5170,11 @@
     "2026-11-16 03:10 UTC BUY Anthropig 0.25 SOL @ $0.0010662552 (mc $1,056,249): v-momentum rule",
     "2026-11-16 03:35 UTC SELL 100% RAMBO -> 0.149 SOL @ $0.008329: event exit: price -28% in 5 minutes, -33% from entry",
     "2026-11-16 04:14 UTC BUY BJB 0.25 SOL @ $0.0018783356 (mc $1,873,454): v-momentum rule",
-    "2026-11-16 10:55 UTC SELL 100% Anthropig -> 0.146 SOL @ $0.0006846: stop-loss at -36%"
+    "2026-11-16 10:55 UTC SELL 100% Anthropig -> 0.146 SOL @ $0.0006846: stop-loss at -36%",
+    "2026-11-16 11:10 UTC BUY BLOB 0.25 SOL @ $0.01413081 (mc $14,006,048): v-momentum rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-16 11:05 UTC"
+  "last_mark": "2026-11-16 11:09 UTC"
 }
