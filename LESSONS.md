@@ -1,9 +1,9 @@
 # Lessons
 
-548 closed trades labelled, every book. Written by the bot.
+549 closed trades labelled, every book. Written by the bot.
 
 - **slow-bleed**: 196 trades, mean -28%. JOB (v-low-bundle): -14% over 48h; JOB (v-momentum): -14% over 48h
-- **other**: 156 trades, mean -31%. Max (v-unease): stop-loss at -36%; MEVS (v-tight): stop-loss at -20%
+- **other**: 157 trades, mean -31%. MEVS (v-tight): stop-loss at -20%; BIG (v-swing): stop-loss at -11%
 - **won-held**: 102 trades, mean +34%. three (v-low-bundle): +11%, peak +31%; three (v-momentum): +11%, peak +31%
 - **bought-spike**: 41 trades, mean -32%. AI (v-unease): up 960% in 24h at entry, peak +0%; AI (v-velocity): up 960% in 24h at entry, peak +0%
 - **won-trailed**: 22 trades, mean +123178%. inuhao (v-velocity): +113%, peak +263%; Max (v-tight): +3%, peak +44%
