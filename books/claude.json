@@ -958,10 +958,10 @@
     "2026-11-15 12:16 UTC BUY BIG 0.25 SOL @ $0.0013002246 (mc $1,234,475): Gate pass; 164h pumpswap coin, mc $1.19M, liq $103k, 1h +0.7%, 24h +4.8% (cooled from earlier +438% spike), 5m -4.8% (no spike), 1h buys 1071 vs sells 1009; volume modest. Only unheld pass; CBUCKS failed gate (14% wallet); GATO/BRUH held.",
     "2026-11-15 16:37 UTC SELL 100% GATO -> 0.218 SOL @ $0.006857: time stop: 48h held, -15%, no take-profit"
   ],
-  "last_mark": "2026-11-16 04:13 UTC",
+  "last_mark": "2026-11-16 04:15 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794802439,
-    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794802439,
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1794802515.375048,
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794802439,
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": 1794800518,
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1794802439,
@@ -969,7 +969,7 @@
     "KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump": 1794802439,
     "mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump": 1794801478,
     "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794801478,
-    "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump": 1794802439,
+    "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump": 1794802515.375048,
     "4B1mCGeSjTadzH7okALwdFm8taxoHbZBFCTA1nZRpump": 1794799558,
     "NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump": 1794800518,
     "2NUaS6Gfrm5rBuPBn7svHka8t33SrSkpXGQiUvZLpump": 1794800518,
@@ -2931,6 +2931,12 @@
       "kind": "gate",
       "result": "recorded 3 gate results, 1 passed",
       "at": "2026-11-16 00:15 UTC"
+    },
+    {
+      "id": "20261116T041515.375048Z-gate-aaa8b9",
+      "kind": "gate",
+      "result": "recorded 5 gate results, 2 passed",
+      "at": "2026-11-16 04:15 UTC"
     }
   ]
 }
