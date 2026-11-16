@@ -1,12 +1,12 @@
-MOVERS 2026-11-16T05:17:58Z
-2NUaS6Gfrm5rBuPBn7svHka8t33SrSkpXGQiUvZLpump Anthropig +6%
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +6%
-8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH +7%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +13%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +26%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -20%
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB -13%
-GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED -10%
-KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump RAMBO -7%
+MOVERS 2026-11-16T05:33:58Z
+4B8CdHPZ8ng1CtMP2Jk2W8wGAwJ5nJnap1deVsz2pump BUTTHOLE +4%
+nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity +4%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +4%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +9%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +19%
+DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin -11%
+CHuLmJXz8F3YXUyv984PRxeECfSvqD5MZ3W1FoDmpump BJB -7%
+MukLDtJ8Cx9DxLbeyLRSWPSposTMWuwHANbuaudpump OTC -6%
 Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT -6%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -5%
 END
