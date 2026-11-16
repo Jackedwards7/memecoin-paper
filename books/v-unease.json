@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.087761936775156,
+  "cash_sol": 7.336149417097653,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -224,22 +224,22 @@
       "symbol": "rockstar",
       "opened": "2026-11-16 04:30 UTC",
       "cost_sol": 0.25,
-      "tokens": 28386.534057670648,
+      "tokens": 14193.267028835324,
       "entry_px": 0.0006065441968019133,
       "entry_mc": 576970,
-      "peak_px": 0.00109,
+      "peak_px": 0.001296,
       "stop": -0.35,
       "tp1": 1.0,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-unease rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.24838748032249722,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/5pynpptnpdg5resu3vqejkqhepij1uwp5l7a2cchmxdy",
       "v": 2,
-      "mev_sol": 0.006949270326615705,
-      "swaps": 1,
+      "mev_sol": 0.01399946773214306,
+      "swaps": 2,
       "entry_liq": 75643.98,
       "at_entry": {
         "px": 0.0006064,
@@ -5637,10 +5637,11 @@
     "2026-11-16 04:30 UTC BUY rockstar 0.25 SOL @ $0.0006065442 (mc $576,970): v-unease rule",
     "2026-11-16 10:55 UTC SELL 100% Anthropig -> 0.142 SOL @ $0.0006846: stop-loss at -37%",
     "2026-11-16 11:10 UTC BUY BLOB 0.25 SOL @ $0.01413081 (mc $14,006,048): v-unease rule",
-    "2026-11-16 11:31 UTC SELL 100% BJB -> 0.110 SOL @ $0.0009279: event exit: price -47% in 5 minutes, -51% from entry"
+    "2026-11-16 11:31 UTC SELL 100% BJB -> 0.110 SOL @ $0.0009279: event exit: price -47% in 5 minutes, -51% from entry",
+    "2026-11-16 12:11 UTC SELL 50% rockstar -> 0.248 SOL @ $0.001296: take-profit at +114%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-16 12:06 UTC"
+  "last_mark": "2026-11-16 12:11 UTC"
 }
