@@ -1,12 +1,12 @@
-MOVERS 2026-11-17T22:57:59Z
-DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS +6%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +8%
-5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max +8%
+MOVERS 2026-11-17T23:14:00Z
+5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max +11%
+5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat +12%
+8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +14%
 5w3wVdJaESaJKyLmStM6Hv9UyUkmZ1b9DLQquAqqpump SID +22%
 4B8CdHPZ8ng1CtMP2Jk2W8wGAwJ5nJnap1deVsz2pump BUTTHOLE +25%
-GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED -10%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -8%
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -8%
-HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO -8%
-8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH -4%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -9%
+EaxAUcXxNnVwcqm2BBocbows7D1XVY2Q63V38NEypump GTA6Coin -8%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -5%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -4%
+SQQQAa3gUxgnqcEsdjPA4RQNQBgB97TnG2hJhk2WaGE SQQQ -4%
 END
