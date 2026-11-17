@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 5.814481241662827,
+  "cash_sol": 5.564481241662827,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -369,6 +369,78 @@
       },
       "reentry": true,
       "since_loss_h": 1.7
+    },
+    "2cMcMEX3Eqo86tUrVe5dgHp5GZNwqQ6crqm22UeZpump": {
+      "symbol": "LEOSTAR",
+      "opened": "2026-11-17 07:59 UTC",
+      "cost_sol": 0.25,
+      "tokens": 14813.339554012327,
+      "entry_px": 0.0011782682383239098,
+      "entry_mc": 1164883,
+      "peak_px": 0.0011782682383239098,
+      "stop": -0.2,
+      "tp1": 0.4,
+      "tp1_done": false,
+      "thesis": "v-tight rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/hm7nvb4bxsdyzhtbm2yhemhcmc6lq4xtedy4q1we9r7q",
+      "v": 2,
+      "mev_sol": 0.006857769853243725,
+      "swaps": 1,
+      "entry_liq": 80048.2,
+      "at_entry": {
+        "px": 0.001178,
+        "liq": 80048.2,
+        "mc": 1164883,
+        "dex": "pumpswap",
+        "age_h": 8.95,
+        "vol_h1": 42204.7,
+        "vol_h24": 1241695.36,
+        "buys_h1": 9225,
+        "sells_h1": 6267,
+        "buys_h24": 97483,
+        "sells_h24": 62247,
+        "trades_h24": 159730,
+        "avg_trade": 7.77,
+        "m5": -0.34,
+        "h1": 8.64,
+        "h6": -20.32,
+        "h24": 3652,
+        "eligible": true,
+        "v": 3,
+        "pool": "Hm7Nvb4bxSDYZhtbm2yHEMHCMC6Lq4XTedY4q1we9r7Q",
+        "m5_raw": -0.34,
+        "buys_m5": 501,
+        "sells_m5": 393,
+        "buys_h6": 66956,
+        "sells_h6": 38213,
+        "vol_m5": 2469,
+        "vol_h6": 374850.96,
+        "liq_base": 34655685,
+        "liq_quote": 537.737,
+        "fdv": 1164883,
+        "boosts": 100,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.1676,
+          "paid": 0.000870314906902015,
+          "vs_paid": 0.3508,
+          "off_peak": -0.2686,
+          "accel": -0.0086,
+          "candles": 35,
+          "unease": 0,
+          "known": 3,
+          "signs": []
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 0.1
     }
   },
   "closed": [
@@ -6697,10 +6769,11 @@
     "2026-11-17 05:19 UTC BUY HOGE 0.25 SOL @ $0.00057772 (mc $551,883): v-tight rule",
     "2026-11-17 05:49 UTC SELL 50% BLOB -> 0.161 SOL @ $0.01911: take-profit at +42%: half sold, cost recovered",
     "2026-11-17 06:24 UTC BUY RAMBO 0.25 SOL @ $0.0093516572 (mc $9,218,687): v-tight rule",
-    "2026-11-17 07:55 UTC SELL 100% GTA -> 0.175 SOL @ $0.0008736: stop-loss at -21%"
+    "2026-11-17 07:55 UTC SELL 100% GTA -> 0.175 SOL @ $0.0008736: stop-loss at -21%",
+    "2026-11-17 07:59 UTC BUY LEOSTAR 0.25 SOL @ $0.0011782682 (mc $1,164,883): v-tight rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-17 07:55 UTC"
+  "last_mark": "2026-11-17 07:59 UTC"
 }
