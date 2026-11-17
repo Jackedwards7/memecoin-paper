@@ -45,5 +45,7 @@
       "px": 0.002123,
       "fails": []
     }
-  }
+  },
+  "result": "recorded 7 gate results, 4 passed",
+  "applied_at": "2026-11-17 00:16 UTC"
 }
