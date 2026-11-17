@@ -1,9 +1,9 @@
 # Lessons
 
-629 closed trades labelled, every book. Written by the bot.
+631 closed trades labelled, every book. Written by the bot.
 
 - **slow-bleed**: 207 trades, mean -28%. GATO (v-loose): -18% over 48h; DESSA (v-mature): -10% over 48h
-- **other**: 191 trades, mean -32%. rockstar (v-velocity): stop-loss at -35%; rockstar (v-loose): stop-loss at -40%
+- **other**: 193 trades, mean -32%. Max (v-swing): stop-loss at -23%; Max (v-tight): stop-loss at -23%
 - **won-held**: 119 trades, mean +31%. MEVS (v-no-spike): +13%, peak +66%; MEVS (v-velocity): +13%, peak +66%
 - **bought-spike**: 48 trades, mean -35%. BJB (v-unease): up 4646% in 24h at entry, peak +5%; BJB (v-velocity): up 4646% in 24h at entry, peak +5%
 - **won-trailed**: 31 trades, mean +87434%. GATO (v-tight): +17%, peak +71%; rockstar (v-unease): +61%, peak +132%
