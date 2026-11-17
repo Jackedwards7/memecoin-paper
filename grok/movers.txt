@@ -1,12 +1,12 @@
-MOVERS 2026-11-17T11:43:56Z
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +5%
-4B8CdHPZ8ng1CtMP2Jk2W8wGAwJ5nJnap1deVsz2pump BUTTHOLE +9%
-2cMcMEX3Eqo86tUrVe5dgHp5GZNwqQ6crqm22UeZpump LEOSTAR +15%
-5w3wVdJaESaJKyLmStM6Hv9UyUkmZ1b9DLQquAqqpump SID +16%
-GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +21%
-PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH -6%
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -6%
+MOVERS 2026-11-17T11:59:56Z
+34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG +9%
+GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +15%
+5w3wVdJaESaJKyLmStM6Hv9UyUkmZ1b9DLQquAqqpump SID +15%
+2cMcMEX3Eqo86tUrVe5dgHp5GZNwqQ6crqm22UeZpump LEOSTAR +21%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +102%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -13%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -6%
 5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -6%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -5%
-DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin -5%
+D9EcoQZeAytCrF1kQFSpRNpoPhibJUvJcmRHXhubpump BAWSAQ -5%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -3%
 END
