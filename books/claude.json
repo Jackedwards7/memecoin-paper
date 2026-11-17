@@ -1031,7 +1031,7 @@
     "2026-11-15 16:37 UTC SELL 100% GATO -> 0.218 SOL @ $0.006857: time stop: 48h held, -15%, no take-profit",
     "2026-11-16 08:15 UTC BUY BLOB 0.25 SOL @ $0.012940775 (mc $12,832,050): Gate pass; 377h pumpswap coin, mc $12.8M, liq $296k, 1h +27.9%, 24h +254% (extended, risk noted), 5m +1.2% (no spike now), 1h buys 1901 vs sells 1506, vol1h $395k. Other pass GATO skipped (sellers lead, flat); CBUCKS (13% wallet), WASTED/Anthropig (copycat) failed gate."
   ],
-  "last_mark": "2026-11-17 03:11 UTC",
+  "last_mark": "2026-11-17 03:14 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794883145,
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794883145,
@@ -1634,7 +1634,8 @@
       ],
       "moves": {
         "1d": -0.9983815331010453,
-        "3d": -0.9988002322880372
+        "3d": -0.9988002322880372,
+        "7d": -0.9989854819976771
       }
     },
     "2Tef3P9qRhUTEAKTyQDHCdn67RK3yTbaLU72fcn5pump": {
@@ -1646,7 +1647,8 @@
       ],
       "moves": {
         "1d": -0.9985307781649245,
-        "3d": -0.9987787456445993
+        "3d": -0.9987787456445993,
+        "7d": -0.9989703832752613
       }
     },
     "6GMjV5PHfeNMaXykCktvbdmXAx54TdKfRxSRaD5Spump": {
