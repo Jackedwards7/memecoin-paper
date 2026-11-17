@@ -9,11 +9,11 @@ area: trading
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
 **Equity 9.617 SOL** (start 10.0 SOL, -3.8%) · cash 9.076 SOL ·
-open 1 · closed 19 (6 won) · SOL $75.08 · marked 2026-11-17 23:40 UTC
+open 1 · closed 19 (6 won) · SOL $74.99 · marked 2026-11-17 23:45 UTC
 
 **Benchmark (vs just holding SOL): -3.8%.** The book is counted in SOL, so its SOL
-return *is* its edge over holding SOL. In dollars: $722 vs $949 at the start
-(-23.9%); SOL itself moved -20.9%.
+return *is* its edge over holding SOL. In dollars: $721 vs $949 at the start
+(-24.0%); SOL itself moved -20.9%.
 Review on 2026-11-30 or after 30 closed v2 trades (12/30), rules unchanged until then.
 
 ## v2 test (from 2026-11-03 01:30 UTC)
@@ -27,7 +27,7 @@ control position on a random gate pass (`control.json`, same mechanical exits, n
 | Control | 13 | 0 | -1.057 | -32.5% |
 
 Costs in every fill: 1.5% fee each side, size/liquidity slippage, and a $0.50 sandwich charge per swap.
-If every swap were sandwiched at the $5 median: picks -1.036 SOL, control -2.495 SOL.
+If every swap were sandwiched at the $5 median: picks -1.038 SOL, control -2.497 SOL.
 
 **Gate value** (raw price moves, no costs; the gate earns its keep if passes beat rejects):
 passes 58 tracked, median 1d -62%, 3d -96%, 7d -100% · rejects 74 tracked, median 1d -58%, 3d -76%, 7d -98%.
@@ -40,18 +40,18 @@ Same gate, size, costs and exit code as the picks; rules in `CLAUDE.md`. Judged 
 | Arm | Closed | Won | Open | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|---|
 | mech | 10 | 3 | 1 | +0.515 | +18.7% |
-| v-dip | 1 | 0 | 3 | -0.084 | -8.4% |
-| v-loose | 61 | 15 | 6 | -2.050 | -12.2% |
+| v-dip | 1 | 0 | 3 | -0.076 | -7.6% |
+| v-loose | 61 | 15 | 6 | -2.055 | -12.3% |
 | v-low-bundle | 68 | 16 | 6 | -3.045 | -16.5% |
-| v-mature | 23 | 8 | 6 | -0.725 | -10.0% |
+| v-mature | 23 | 8 | 6 | -0.730 | -10.1% |
 | v-momentum | 68 | 16 | 6 | -3.045 | -16.5% |
 | v-networks | 61 | 15 | 5 | -1.676 | -10.2% |
-| v-no-spike | 38 | 11 | 6 | +6771.336 | +61557.6% |
-| v-swing | 81 | 17 | 6 | -2.889 | -13.3% |
+| v-no-spike | 38 | 11 | 6 | +6771.328 | +61557.5% |
+| v-swing | 81 | 17 | 6 | -2.892 | -13.3% |
 | v-tight | 82 | 21 | 6 | -2.703 | -12.3% |
 | v-unease | 72 | 16 | 6 | -1.758 | -9.0% |
-| v-unpaid | 47 | 6 | 3 | -4.316 | -34.5% |
-| v-velocity | 67 | 17 | 6 | -2.236 | -12.3% |
+| v-unpaid | 47 | 6 | 3 | -4.310 | -34.5% |
+| v-velocity | 67 | 17 | 6 | -2.239 | -12.3% |
 | v-x-exit | 0 | 0 | 0 | +0.000 | +0.0% |
 | v-x-organic | 0 | 0 | 0 | +0.000 | +0.0% |
 
@@ -71,7 +71,7 @@ Each coin against its own normal. Information only: no rule on this book reads i
 
 Last check 2026-11-16: 90 of 96 snapshots, 14946 rows, 181 coins, 118.9 MB. No problems.
 
-GeckoTerminal: 50913 calls, 422 refused, 16 failed, 108 waiting. Insider flag fired on 0 of 64 coins where RugCheck's graph found insiders.
+GeckoTerminal: 50928 calls, 422 refused, 16 failed, 97 waiting. Insider flag fired on 0 of 64 coins where RugCheck's graph found insiders.
 
 Fills: a round trip on Jupiter returned -0.6% (median of 180 quotes, before priority fees); paper charged -8.6%.
 
@@ -83,7 +83,7 @@ Learning run 2026-11-15: 11 of 14 arms have 15+ trades. Promoted: none. Proposes
 
 | Coin | Mint | Opened | Cost SOL | Entry mcap | Move | Value SOL (incl. realised) | Thesis |
 |---|---|---|---|---|---|---|---|
-| BRUH | `PgFtGGqu…` | 2026-11-08 08:15 UTC | 0.25 | $1,080,245 | +279% | 0.779 | Gate pass; 28h pumpswap coin, mc $1.07M, liq $84k (thin), 1h +42%, 24h +84%, 5m -2.2% (no spike now), 1h buys 163 vs sells 92. Other passes COGE (24h -92%) and GIGAHUG (11.7h, +1775% 24h vertical) skipped; GATO/HELL already held. |
+| BRUH | `PgFtGGqu…` | 2026-11-08 08:15 UTC | 0.25 | $1,080,245 | +279% | 0.778 | Gate pass; 28h pumpswap coin, mc $1.07M, liq $84k (thin), 1h +42%, 24h +84%, 5m -2.2% (no spike now), 1h buys 163 vs sells 92. Other passes COGE (24h -92%) and GIGAHUG (11.7h, +1775% 24h vertical) skipped; GATO/HELL already held. |
 
 ## Closed
 
