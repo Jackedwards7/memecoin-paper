@@ -1,8 +1,8 @@
 # Lessons
 
-603 closed trades labelled, every book. Written by the bot.
+604 closed trades labelled, every book. Written by the bot.
 
-- **slow-bleed**: 202 trades, mean -28%. Max (v-mature): -44% over 20h; RAMBO (v-networks): -48% over 25h
+- **slow-bleed**: 203 trades, mean -28%. RAMBO (v-networks): -48% over 25h; CATE (v-unpaid): -9% over 48h
 - **other**: 180 trades, mean -31%. RAMBO (v-unease): event exit: price -28% in 5 minutes, -33% from entry; RAMBO (v-velocity): event exit: price -28% in 5 minutes, -33% from entry
 - **won-held**: 119 trades, mean +31%. MEVS (v-no-spike): +13%, peak +66%; MEVS (v-velocity): +13%, peak +66%
 - **bought-spike**: 41 trades, mean -32%. AI (v-unease): up 960% in 24h at entry, peak +0%; AI (v-velocity): up 960% in 24h at entry, peak +0%
