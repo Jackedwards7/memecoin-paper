@@ -1,0 +1,49 @@
+{
+  "id": "20261117T001605.758942Z-gate-7d4b07",
+  "kind": "gate",
+  "at": 1794874565.758942,
+  "by": "local",
+  "results": {
+    "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": {
+      "symbol": "Rocco",
+      "px": 0.001005,
+      "fails": []
+    },
+    "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
+      "symbol": "CBUCKS",
+      "px": 0.004813,
+      "fails": [
+        "a wallet holds 13% of supply"
+      ]
+    },
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "px": 0.006006,
+      "fails": []
+    },
+    "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
+      "symbol": "GLITCH",
+      "px": 0.001305,
+      "fails": [
+        "copycat: an earlier 'Infinite Money Glitch' exists (znv3FZ)"
+      ]
+    },
+    "GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump": {
+      "symbol": "WASTED",
+      "px": 0.002987,
+      "fails": [
+        "copycat: an earlier 'WASTED' exists (FsjgzA)"
+      ]
+    },
+    "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump": {
+      "symbol": "BIG",
+      "px": 0.001493,
+      "fails": []
+    },
+    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
+      "symbol": "JOB",
+      "px": 0.002123,
+      "fails": []
+    }
+  }
+}
