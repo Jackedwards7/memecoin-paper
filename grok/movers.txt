@@ -1,12 +1,12 @@
-MOVERS 2026-11-17T04:47:12Z
-GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +7%
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +8%
+MOVERS 2026-11-17T05:03:12Z
+8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER +7%
+HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO +9%
 GHichsGq8aPnqJyz6Jp1ASTK4PNLpB5KrD6XrfDjpump 1 +12%
-HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO +15%
-5w3wVdJaESaJKyLmStM6Hv9UyUkmZ1b9DLQquAqqpump SID +43%
-D9EcoQZeAytCrF1kQFSpRNpoPhibJUvJcmRHXhubpump BAWSAQ -30%
-FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump HOGE -18%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -13%
+GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +13%
+5w3wVdJaESaJKyLmStM6Hv9UyUkmZ1b9DLQquAqqpump SID +16%
+D9EcoQZeAytCrF1kQFSpRNpoPhibJUvJcmRHXhubpump BAWSAQ -18%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -11%
+Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT -9%
 5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -7%
-CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump fone -4%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -6%
 END
