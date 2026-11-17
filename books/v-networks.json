@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.005842960961196,
+  "cash_sol": 7.149119979831156,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -358,81 +358,6 @@
       },
       "reentry": true,
       "since_loss_h": 2.3
-    },
-    "5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump": {
-      "symbol": "Max",
-      "opened": "2026-11-16 17:02 UTC",
-      "cost_sol": 0.25,
-      "tokens": 14454.320243782413,
-      "entry_px": 0.0011821500224024801,
-      "entry_mc": 1179503,
-      "peak_px": 0.001219,
-      "stop": -0.35,
-      "tp1": 1.0,
-      "tp1_done": false,
-      "thesis": "v-networks rule",
-      "rugcheck": 29,
-      "risks": [
-        "Copycat token"
-      ],
-      "realised_sol": 0.0,
-      "dex": "pumpswap",
-      "url": "https://dexscreener.com/solana/eoe22hdca9rhtbwkl6nnzmzxfuzf35xkxobcvfaf1vwq",
-      "v": 2,
-      "mev_sol": 0.007000840100812097,
-      "swaps": 1,
-      "entry_liq": 140676.39,
-      "at_entry": {
-        "px": 0.001182,
-        "liq": 140676.39,
-        "mc": 1179503,
-        "dex": "pumpswap",
-        "age_h": 116.03,
-        "vol_h1": 47883.99,
-        "vol_h24": 712165.71,
-        "buys_h1": 236,
-        "sells_h1": 215,
-        "buys_h24": 4244,
-        "sells_h24": 4122,
-        "trades_h24": 8366,
-        "avg_trade": 85.13,
-        "m5": 0.41,
-        "h1": 4.12,
-        "h6": 18.43,
-        "h24": 2.86,
-        "eligible": true,
-        "v": 3,
-        "pool": "Eoe22HdCa9rhtBwKL6nNZmZxfuzF35xkxobcvfaF1vWQ",
-        "m5_raw": 0.41,
-        "buys_m5": 10,
-        "sells_m5": 10,
-        "buys_h6": 882,
-        "sells_h6": 838,
-        "vol_m5": 1487.36,
-        "vol_h6": 141918.34,
-        "liq_base": 60244049,
-        "liq_quote": 974.6849,
-        "fdv": 1179503,
-        "boosts": null,
-        "links": [
-          "instagram",
-          "telegram",
-          "website"
-        ],
-        "read": {
-          "swing": 0.0527,
-          "paid": 0.0010490999566261853,
-          "vs_paid": 0.0484,
-          "off_peak": -0.1813,
-          "accel": 0.0072,
-          "candles": 96,
-          "unease": 0,
-          "known": 5,
-          "signs": []
-        }
-      },
-      "reentry": true,
-      "since_loss_h": 5.5
     }
   },
   "closed": [
@@ -4627,6 +4552,87 @@
       "pnl_pct": -0.5606876753865273,
       "exit_reason": "event exit: price -47% in 5 minutes, -51% from entry",
       "exit_px": 0.0009279
+    },
+    {
+      "symbol": "Max",
+      "opened": "2026-11-16 17:02 UTC",
+      "cost_sol": 0.25,
+      "tokens": 0.0,
+      "entry_px": 0.0011821500224024801,
+      "entry_mc": 1179503,
+      "peak_px": 0.001219,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-networks rule",
+      "rugcheck": 29,
+      "risks": [
+        "Copycat token"
+      ],
+      "realised_sol": 0.1432770188699598,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/eoe22hdca9rhtbwkl6nnzmzxfuzf35xkxobcvfaf1vwq",
+      "v": 2,
+      "mev_sol": 0.013875582297979703,
+      "swaps": 2,
+      "entry_liq": 140676.39,
+      "at_entry": {
+        "px": 0.001182,
+        "liq": 140676.39,
+        "mc": 1179503,
+        "dex": "pumpswap",
+        "age_h": 116.03,
+        "vol_h1": 47883.99,
+        "vol_h24": 712165.71,
+        "buys_h1": 236,
+        "sells_h1": 215,
+        "buys_h24": 4244,
+        "sells_h24": 4122,
+        "trades_h24": 8366,
+        "avg_trade": 85.13,
+        "m5": 0.41,
+        "h1": 4.12,
+        "h6": 18.43,
+        "h24": 2.86,
+        "eligible": true,
+        "v": 3,
+        "pool": "Eoe22HdCa9rhtBwKL6nNZmZxfuzF35xkxobcvfaF1vWQ",
+        "m5_raw": 0.41,
+        "buys_m5": 10,
+        "sells_m5": 10,
+        "buys_h6": 882,
+        "sells_h6": 838,
+        "vol_m5": 1487.36,
+        "vol_h6": 141918.34,
+        "liq_base": 60244049,
+        "liq_quote": 974.6849,
+        "fdv": 1179503,
+        "boosts": null,
+        "links": [
+          "instagram",
+          "telegram",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0527,
+          "paid": 0.0010490999566261853,
+          "vs_paid": 0.0484,
+          "off_peak": -0.1813,
+          "accel": 0.0072,
+          "candles": 96,
+          "unease": 0,
+          "known": 5,
+          "signs": []
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 5.5,
+      "mint": "5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump",
+      "closed": "2026-11-17 05:12 UTC",
+      "pnl_sol": -0.1067229811300402,
+      "pnl_pct": -0.4268919245201608,
+      "exit_reason": "stop-loss at -35%",
+      "exit_px": 0.0007671
     }
   ],
   "log": [
@@ -4751,10 +4757,11 @@
     "2026-11-16 10:55 UTC SELL 100% Anthropig -> 0.142 SOL @ $0.0006846: stop-loss at -37%",
     "2026-11-16 11:31 UTC SELL 100% BJB -> 0.110 SOL @ $0.0009279: event exit: price -47% in 5 minutes, -51% from entry",
     "2026-11-16 13:50 UTC BUY NIO 0.25 SOL @ $0.0015602029 (mc $1,486,563): v-networks rule",
-    "2026-11-16 17:02 UTC BUY Max 0.25 SOL @ $0.00118215 (mc $1,179,503): v-networks rule"
+    "2026-11-16 17:02 UTC BUY Max 0.25 SOL @ $0.00118215 (mc $1,179,503): v-networks rule",
+    "2026-11-17 05:12 UTC SELL 100% Max -> 0.143 SOL @ $0.0007671: stop-loss at -35%"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-17 05:03 UTC"
+  "last_mark": "2026-11-17 05:12 UTC"
 }
