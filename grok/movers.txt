@@ -1,12 +1,12 @@
-MOVERS 2026-11-17T03:27:09Z
-34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG +7%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +10%
-2NWgu4fqN2AxS5pp5v3f3SH54qArP9JepQFJm58gpump GTA +14%
-FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump HOGE +24%
-D9EcoQZeAytCrF1kQFSpRNpoPhibJUvJcmRHXhubpump BAWSAQ +69%
-GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED -14%
-DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump CBUCKS -3%
-9AvytnUKsLxPxFHFqS6VLxaxt5p6BhYNr53SD2Chpump 67 -2%
-KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump RAMBO -2%
-mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS -2%
+MOVERS 2026-11-17T03:43:09Z
+CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump fone +7%
+PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH +9%
+mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS +12%
+Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT +15%
+2NWgu4fqN2AxS5pp5v3f3SH54qArP9JepQFJm58gpump GTA +21%
+FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump HOGE -32%
+4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao -3%
+4B8CdHPZ8ng1CtMP2Jk2W8wGAwJ5nJnap1deVsz2pump BUTTHOLE -3%
+5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -2%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -2%
 END
