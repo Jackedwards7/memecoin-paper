@@ -1,27 +1,27 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 5.721326061964944,
+  "cash_sol": 5.977801673750872,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
       "opened": "2026-11-12 14:17 UTC",
       "cost_sol": 0.25,
-      "tokens": 7209.527819614111,
+      "tokens": 3604.7639098070554,
       "entry_px": 0.002702422126313792,
       "entry_mc": 2676027,
-      "peak_px": 0.005372,
+      "peak_px": 0.005405,
       "stop": -0.35,
       "tp1": 1.0,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-momentum rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.2564756117859287,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/ehpzesdxtymvwz1iy5nt3lrnjy1xbc1kgqspl1kqnyiv",
       "v": 2,
-      "mev_sol": 0.0061614294516327784,
-      "swaps": 1,
+      "mev_sol": 0.01302296369068863,
+      "swaps": 2,
       "entry_liq": 129858.82,
       "at_entry": {
         "px": 0.002702,
@@ -5578,10 +5578,11 @@
     "2026-11-17 02:29 UTC SELL 100% BIG -> 0.217 SOL @ $0.001362: time stop: 48h held, -3%, no take-profit",
     "2026-11-17 02:39 UTC BUY BAWSAQ 0.25 SOL @ $0.0015853042 (mc $1,577,711): v-momentum rule",
     "2026-11-17 02:55 UTC SELL 100% BAWSAQ -> 0.126 SOL @ $0.0008961: event exit: price -48% in 5 minutes, -43% from entry",
-    "2026-11-17 03:11 UTC BUY GTA 0.25 SOL @ $0.001103261 (mc $1,092,748): v-momentum rule"
+    "2026-11-17 03:11 UTC BUY GTA 0.25 SOL @ $0.001103261 (mc $1,092,748): v-momentum rule",
+    "2026-11-17 04:42 UTC SELL 50% BRUH -> 0.256 SOL @ $0.005405: take-profit at +100%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-17 04:41 UTC"
+  "last_mark": "2026-11-17 04:42 UTC"
 }
