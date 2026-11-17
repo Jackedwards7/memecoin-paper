@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.484057205195615,
+  "cash_sol": 8.234057205195615,
   "positions": {
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
       "symbol": "GATO",
@@ -296,6 +296,78 @@
       },
       "reentry": true,
       "since_loss_h": 8.7
+    },
+    "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": {
+      "symbol": "NIO",
+      "opened": "2026-11-17 17:53 UTC",
+      "cost_sol": 0.25,
+      "tokens": 9314.248285326685,
+      "entry_px": 0.0018612223948668307,
+      "entry_mc": 1773408,
+      "peak_px": 0.0018612223948668307,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-mature rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/b4wmjc6pvjctu3qsvs3ett9mr4m5v5jbkrqctwantc71",
+      "v": 2,
+      "mev_sol": 0.006903216899074968,
+      "swaps": 1,
+      "entry_liq": 151523.54,
+      "at_entry": {
+        "px": 0.001861,
+        "liq": 151523.54,
+        "mc": 1773408,
+        "dex": "pumpswap",
+        "age_h": 649.92,
+        "vol_h1": 34749.86,
+        "vol_h24": 336048.33,
+        "buys_h1": 176,
+        "sells_h1": 191,
+        "buys_h24": 2371,
+        "sells_h24": 2698,
+        "trades_h24": 5069,
+        "avg_trade": 66.29,
+        "m5": -0.86,
+        "h1": 1.62,
+        "h6": 27.77,
+        "h24": 22.5,
+        "eligible": true,
+        "v": 3,
+        "pool": "B4Wmjc6PvjCtU3qSVS3eTT9Mr4M5V5jBkRQctWANTc71",
+        "m5_raw": -0.86,
+        "buys_m5": 17,
+        "sells_m5": 34,
+        "buys_h6": 683,
+        "sells_h6": 1012,
+        "vol_m5": 4311.81,
+        "vol_h6": 123410.35,
+        "liq_base": 40872043,
+        "liq_quote": 1043.2766,
+        "fdv": 1773408,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0336,
+          "paid": 0.0015719482844216582,
+          "vs_paid": 0.1402,
+          "off_peak": -0.0295,
+          "accel": -0.1434,
+          "candles": 96,
+          "unease": 0,
+          "known": 5,
+          "signs": []
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 22.9
     }
   },
   "closed": [
@@ -2176,10 +2248,11 @@
     "2026-11-16 18:38 UTC BUY JOB 0.25 SOL @ $0.0024472856 (mc $2,384,152): v-mature rule",
     "2026-11-16 19:00 UTC SELL 100% DESSA -> 0.226 SOL @ $0.004332: time stop: 48h held, -2%, no take-profit",
     "2026-11-17 03:43 UTC BUY RAMBO 0.25 SOL @ $0.0098646751 (mc $9,724,502): v-mature rule",
-    "2026-11-17 09:16 UTC SELL 100% BLOB -> 0.230 SOL @ $0.01319: trailing stop: 40% off peak, +103% from entry"
+    "2026-11-17 09:16 UTC SELL 100% BLOB -> 0.230 SOL @ $0.01319: trailing stop: 40% off peak, +103% from entry",
+    "2026-11-17 17:53 UTC BUY NIO 0.25 SOL @ $0.0018612224 (mc $1,773,408): v-mature rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-17 17:48 UTC"
+  "last_mark": "2026-11-17 17:53 UTC"
 }
