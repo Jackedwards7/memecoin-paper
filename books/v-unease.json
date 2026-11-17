@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.669908728206424,
+  "cash_sol": 6.419908728206424,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -230,7 +230,7 @@
       "tokens": 1855.093655458763,
       "entry_px": 0.009351657232480699,
       "entry_mc": 9218687,
-      "peak_px": 0.01127,
+      "peak_px": 0.01167,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -371,6 +371,81 @@
       },
       "reentry": true,
       "since_loss_h": 0.7
+    },
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "opened": "2026-11-17 20:50 UTC",
+      "cost_sol": 0.25,
+      "tokens": 3068.6724650108254,
+      "entry_px": 0.005681410348868398,
+      "entry_mc": 5607197,
+      "peak_px": 0.005681410348868398,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unease rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/5e3dxlxgwmtdcoka51wyyakttjfzbwqcoyuhbui5gt2m",
+      "v": 2,
+      "mev_sol": 0.0068653027598517095,
+      "swaps": 1,
+      "entry_liq": 252070.41,
+      "at_entry": {
+        "px": 0.005681,
+        "liq": 252070.41,
+        "mc": 5607197,
+        "dex": "pumpswap",
+        "age_h": 2024.38,
+        "vol_h1": 78881.53,
+        "vol_h24": 1735628.2,
+        "buys_h1": 1389,
+        "sells_h1": 839,
+        "buys_h24": 17615,
+        "sells_h24": 12505,
+        "trades_h24": 30120,
+        "avg_trade": 57.62,
+        "m5": -2.39,
+        "h1": 4.99,
+        "h6": -1.91,
+        "h24": 0.92,
+        "eligible": true,
+        "v": 3,
+        "pool": "5E3dXLXGwmTDCokA51WYYaKttjFZBwqCoyUHBUi5gt2m",
+        "m5_raw": -2.39,
+        "buys_m5": 88,
+        "sells_m5": 39,
+        "buys_h6": 8991,
+        "sells_h6": 5111,
+        "vol_m5": 4708.2,
+        "vol_h6": 513437.71,
+        "liq_base": 22377875,
+        "liq_quote": 1717.2857,
+        "fdv": 5606866,
+        "boosts": 100,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0436,
+          "paid": 0.005938276518505375,
+          "vs_paid": -0.0498,
+          "off_peak": -0.2492,
+          "accel": 0.0701,
+          "candles": 96,
+          "unease": 2,
+          "known": 5,
+          "signs": [
+            "smaller_trades",
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 0.5
     }
   },
   "closed": [
@@ -6298,10 +6373,11 @@
     "2026-11-17 15:29 UTC BUY HOGE 0.25 SOL @ $0.00094895362 (mc $906,495): v-unease rule",
     "2026-11-17 19:38 UTC SELL 100% HOGE -> 0.145 SOL @ $0.0006015: stop-loss at -37%",
     "2026-11-17 20:17 UTC BUY three 0.25 SOL @ $0.00035595896 (mc $355,842): v-unease rule",
-    "2026-11-17 20:23 UTC SELL 100% GTA -> 0.168 SOL @ $0.0008284: event exit: price -21% in 5 minutes, -25% from entry"
+    "2026-11-17 20:23 UTC SELL 100% GTA -> 0.168 SOL @ $0.0008284: event exit: price -21% in 5 minutes, -25% from entry",
+    "2026-11-17 20:50 UTC BUY GATO 0.25 SOL @ $0.0056814103 (mc $5,607,197): v-unease rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-17 20:44 UTC"
+  "last_mark": "2026-11-17 20:49 UTC"
 }
