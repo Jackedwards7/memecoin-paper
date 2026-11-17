@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.1293769657086035,
+  "cash_sol": 6.8793769657086035,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -362,6 +362,81 @@
       },
       "reentry": false,
       "since_loss_h": 0.1
+    },
+    "2NWgu4fqN2AxS5pp5v3f3SH54qArP9JepQFJm58gpump": {
+      "symbol": "GTA",
+      "opened": "2026-11-17 09:19 UTC",
+      "cost_sol": 0.25,
+      "tokens": 13638.993135947796,
+      "entry_px": 0.0012652757669124508,
+      "entry_mc": 1253171,
+      "peak_px": 0.0012652757669124508,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-networks rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/7ticdhje5yhwgras8v1exxxvajy9etbzvq97nfgqdhyt",
+      "v": 2,
+      "mev_sol": 0.006933851060879213,
+      "swaps": 1,
+      "entry_liq": 82695.88,
+      "at_entry": {
+        "px": 0.001265,
+        "liq": 82695.88,
+        "mc": 1253171,
+        "dex": "pumpswap",
+        "age_h": 15.38,
+        "vol_h1": 59409.87,
+        "vol_h24": 1134633.22,
+        "buys_h1": 2320,
+        "sells_h1": 798,
+        "buys_h24": 18620,
+        "sells_h24": 14524,
+        "trades_h24": 33144,
+        "avg_trade": 34.23,
+        "m5": 3.12,
+        "h1": 23.49,
+        "h6": 26.7,
+        "h24": 3853,
+        "eligible": true,
+        "v": 3,
+        "pool": "7TiCdhJE5YHWgrAs8v1EXxxvAJy9eTbzVq97nFgqDhYt",
+        "m5_raw": 3.12,
+        "buys_m5": 175,
+        "sells_m5": 62,
+        "buys_h6": 9611,
+        "sells_h6": 9555,
+        "vol_m5": 5386.65,
+        "vol_h6": 342975.5,
+        "liq_base": 33118588,
+        "liq_quote": 565.4442,
+        "fdv": 1253171,
+        "boosts": 100,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.1242,
+          "paid": 0.0007068521959667505,
+          "vs_paid": 0.8626,
+          "off_peak": -0.0172,
+          "accel": 0.1345,
+          "candles": 61,
+          "unease": 2,
+          "known": 5,
+          "signs": [
+            "sellers",
+            "smaller_trades"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 4.1
     }
   },
   "closed": [
@@ -4842,10 +4917,11 @@
     "2026-11-16 17:02 UTC BUY Max 0.25 SOL @ $0.00118215 (mc $1,179,503): v-networks rule",
     "2026-11-17 05:12 UTC SELL 100% Max -> 0.143 SOL @ $0.0007671: stop-loss at -35%",
     "2026-11-17 05:19 UTC BUY BAWSAQ 0.25 SOL @ $0.0012582715 (mc $1,252,572): v-networks rule",
-    "2026-11-17 09:16 UTC SELL 100% BLOB -> 0.230 SOL @ $0.01319: trailing stop: 40% off peak, +103% from entry"
+    "2026-11-17 09:16 UTC SELL 100% BLOB -> 0.230 SOL @ $0.01319: trailing stop: 40% off peak, +103% from entry",
+    "2026-11-17 09:19 UTC BUY GTA 0.25 SOL @ $0.0012652758 (mc $1,253,171): v-networks rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-17 09:16 UTC"
+  "last_mark": "2026-11-17 09:19 UTC"
 }
