@@ -1,9 +1,9 @@
 # Lessons
 
-584 closed trades labelled, every book. Written by the bot.
+585 closed trades labelled, every book. Written by the bot.
 
 - **slow-bleed**: 201 trades, mean -28%. JOB (v-tight): -29% over 14h; Max (v-mature): -44% over 20h
-- **other**: 168 trades, mean -31%. WANTED (v-velocity): event exit: price -26% in 5 minutes, -33% from entry; Punch (v-swing): stop-loss at -11%
+- **other**: 169 trades, mean -31%. Punch (v-swing): stop-loss at -11%; rockstar (v-networks): stop-loss at -36%
 - **won-held**: 113 trades, mean +32%. GATO (v-momentum): +4%, peak +43%; WOHAIHAO (v-tight): +19%, peak +66%
 - **bought-spike**: 41 trades, mean -32%. AI (v-unease): up 960% in 24h at entry, peak +0%; AI (v-velocity): up 960% in 24h at entry, peak +0%
 - **won-trailed**: 29 trades, mean +93462%. WOHAIHAO (v-unease): +66%, peak +172%; WOHAIHAO (v-velocity): +66%, peak +172%
