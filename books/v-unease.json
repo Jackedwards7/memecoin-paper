@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.958435668764567,
+  "cash_sol": 6.708435668764567,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -370,6 +370,81 @@
         }
       },
       "reentry": false,
+      "since_loss_h": 0.3
+    },
+    "KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump": {
+      "symbol": "RAMBO",
+      "opened": "2026-11-17 06:24 UTC",
+      "cost_sol": 0.25,
+      "tokens": 1855.093655458763,
+      "entry_px": 0.009351657232480699,
+      "entry_mc": 9218687,
+      "peak_px": 0.009351657232480699,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unease rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/gz15vwspy9kfynkrmpkokp2h9yygvbovoxjsgwsjcvfk",
+      "v": 2,
+      "mev_sol": 0.006898454746136865,
+      "swaps": 1,
+      "entry_liq": 257808.5,
+      "at_entry": {
+        "px": 0.009351,
+        "liq": 257808.5,
+        "mc": 9218687,
+        "dex": "pumpswap",
+        "age_h": 327.58,
+        "vol_h1": 14985.97,
+        "vol_h24": 447641.38,
+        "buys_h1": 55,
+        "sells_h1": 34,
+        "buys_h24": 1263,
+        "sells_h24": 1419,
+        "trades_h24": 2682,
+        "avg_trade": 166.91,
+        "m5": 0.03,
+        "h1": 0.66,
+        "h6": 0.3,
+        "h24": 3.41,
+        "eligible": true,
+        "v": 3,
+        "pool": "Gz15vwSPY9KFYNkrMPkoKp2h9yygVBovoXJsGwSJcvFk",
+        "m5_raw": 0.03,
+        "buys_m5": 1,
+        "sells_m5": 1,
+        "buys_h6": 211,
+        "sells_h6": 243,
+        "vol_m5": 5.78,
+        "vol_h6": 93131.35,
+        "liq_base": 13831556,
+        "liq_quote": 1769.4091,
+        "fdv": 9218687,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0391,
+          "paid": 0.009719314563678886,
+          "vs_paid": -0.0376,
+          "off_peak": -0.1254,
+          "accel": 0.0462,
+          "candles": 96,
+          "unease": 2,
+          "known": 5,
+          "signs": [
+            "failed_high",
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": true,
       "since_loss_h": 0.3
     }
   },
@@ -6051,10 +6126,11 @@
     "2026-11-17 02:39 UTC BUY BAWSAQ 0.25 SOL @ $0.0015853042 (mc $1,577,711): v-unease rule",
     "2026-11-17 02:55 UTC SELL 100% BAWSAQ -> 0.126 SOL @ $0.0008961: event exit: price -48% in 5 minutes, -43% from entry",
     "2026-11-17 03:11 UTC BUY GTA 0.25 SOL @ $0.001103261 (mc $1,092,748): v-unease rule",
-    "2026-11-17 06:07 UTC SELL 100% Rocco -> 0.162 SOL @ $0.0009106: unease exit: 4 of 5 signs"
+    "2026-11-17 06:07 UTC SELL 100% Rocco -> 0.162 SOL @ $0.0009106: unease exit: 4 of 5 signs",
+    "2026-11-17 06:24 UTC BUY RAMBO 0.25 SOL @ $0.0093516572 (mc $9,218,687): v-unease rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-17 06:21 UTC"
+  "last_mark": "2026-11-17 06:23 UTC"
 }
