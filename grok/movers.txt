@@ -1,12 +1,12 @@
-MOVERS 2026-11-17T11:11:56Z
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +9%
-2cMcMEX3Eqo86tUrVe5dgHp5GZNwqQ6crqm22UeZpump LEOSTAR +12%
-2NWgu4fqN2AxS5pp5v3f3SH54qArP9JepQFJm58gpump GTA +13%
-GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +18%
-5w3wVdJaESaJKyLmStM6Hv9UyUkmZ1b9DLQquAqqpump SID +21%
-PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH -13%
-FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump HOGE -9%
-33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump DOPE -7%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -6%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -5%
+MOVERS 2026-11-17T11:27:56Z
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +7%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +7%
+5w3wVdJaESaJKyLmStM6Hv9UyUkmZ1b9DLQquAqqpump SID +15%
+2cMcMEX3Eqo86tUrVe5dgHp5GZNwqQ6crqm22UeZpump LEOSTAR +17%
+GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +28%
+FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump HOGE -8%
+D9EcoQZeAytCrF1kQFSpRNpoPhibJUvJcmRHXhubpump BAWSAQ -8%
+PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH -5%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -4%
+DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin -4%
 END
