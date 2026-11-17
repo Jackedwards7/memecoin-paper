@@ -1045,7 +1045,7 @@
     "2026-11-17 12:16 UTC SELL 100% BIG -> 0.262 SOL @ $0.001496: time stop: 48h held, +15%, no take-profit",
     "2026-11-17 14:46 UTC SELL 100% BLOB -> 0.160 SOL @ $0.00954: event exit: price -31% in 5 minutes, -26% from entry"
   ],
-  "last_mark": "2026-11-17 21:37 UTC",
+  "last_mark": "2026-11-17 21:40 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794948568,
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794948568,
@@ -1899,7 +1899,8 @@
         "a wallet holds 43% of supply"
       ],
       "moves": {
-        "1d": -0.98348
+        "1d": -0.98348,
+        "3d": -0.98764
       }
     },
     "85RhcSEMy15SNhFLmSArNm7udPKXVagVgsq4YmSopump": {
