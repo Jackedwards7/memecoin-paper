@@ -1,12 +1,12 @@
-MOVERS 2026-11-17T09:35:06Z
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +6%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO +8%
-HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO +9%
-2NWgu4fqN2AxS5pp5v3f3SH54qArP9JepQFJm58gpump GTA +10%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +10%
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB -12%
-4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao -11%
-nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity -9%
-5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat -8%
-D9EcoQZeAytCrF1kQFSpRNpoPhibJUvJcmRHXhubpump BAWSAQ -6%
+MOVERS 2026-11-17T09:51:14Z
+GTBxUiw6wJdmmkCGZgRHLyYxqu1vG4KtRpeox6yDpump JEANPHIL +6%
+FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump HOGE +7%
+8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump GLITCH +7%
+HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO +7%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +12%
+8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB -15%
+KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump RAMBO -9%
+4B8CdHPZ8ng1CtMP2Jk2W8wGAwJ5nJnap1deVsz2pump BUTTHOLE -7%
+4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao -5%
+8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER -5%
 END
