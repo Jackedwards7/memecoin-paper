@@ -1,12 +1,12 @@
-MOVERS 2026-11-17T01:18:58Z
-4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao +6%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +10%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS +11%
-8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER +22%
-2NWgu4fqN2AxS5pp5v3f3SH54qArP9JepQFJm58gpump GTA +32%
-mBjWbrkGosa8RZopsghLZTF6KELiMUmEZh4mijqpump MEVS -10%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -10%
-98kfF7rmsg1QDUEoCqNE7g7M1FdrTt92TEp2CLzypump PAID -7%
-5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat -5%
-Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump baton -5%
+MOVERS 2026-11-17T01:34:58Z
+2NWgu4fqN2AxS5pp5v3f3SH54qArP9JepQFJm58gpump GTA +5%
+nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity +7%
+Hh3oTaqDCKKfdBgsQEvxp9sUwyNf8x9qmKqEMLBWpump HODL +11%
+8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER +45%
+C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC +101%
+98kfF7rmsg1QDUEoCqNE7g7M1FdrTt92TEp2CLzypump PAID -17%
+4B8CdHPZ8ng1CtMP2Jk2W8wGAwJ5nJnap1deVsz2pump BUTTHOLE -12%
+5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat -9%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -9%
+pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn PUMP -8%
 END
