@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.277024859025016,
+  "cash_sol": 6.724794054415699,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -149,22 +149,22 @@
       "symbol": "HOGE",
       "opened": "2026-11-17 10:08 UTC",
       "cost_sol": 0.25,
-      "tokens": 27911.032266276514,
+      "tokens": 13955.516133138257,
       "entry_px": 0.0006225240017723629,
       "entry_mc": 594633,
-      "peak_px": 0.001383,
+      "peak_px": 0.00246,
       "stop": -0.4,
       "tp1": 1.5,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-loose rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.44776919539068266,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/7cnc9ggegzeffk8flxiyuhdtmeefpqzond56u1mxhnor",
       "v": 2,
-      "mev_sol": 0.006888001102080176,
-      "swaps": 1,
+      "mev_sol": 0.01360933461464907,
+      "swaps": 2,
       "entry_liq": 91087.44,
       "at_entry": {
         "px": 0.0006224,
@@ -5306,10 +5306,11 @@
     "2026-11-17 16:08 UTC SELL 100% Punch -> 0.184 SOL @ $0.0002344: time stop: 48h held, -17%, no take-profit",
     "2026-11-17 18:41 UTC BUY RAMBO 0.25 SOL @ $0.010580698 (mc $10,438,775): v-loose rule",
     "2026-11-17 20:23 UTC SELL 100% GTA -> 0.166 SOL @ $0.0008284: event exit: price -21% in 5 minutes, -25% from entry",
-    "2026-11-17 20:50 UTC BUY GATO 0.25 SOL @ $0.0056814103 (mc $5,607,197): v-loose rule"
+    "2026-11-17 20:50 UTC BUY GATO 0.25 SOL @ $0.0056814103 (mc $5,607,197): v-loose rule",
+    "2026-11-18 12:32 UTC SELL 50% HOGE -> 0.448 SOL @ $0.00246: take-profit at +295%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-18 12:31 UTC"
+  "last_mark": "2026-11-18 12:32 UTC"
 }
