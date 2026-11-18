@@ -9,11 +9,11 @@ area: trading
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
 **Equity 9.678 SOL** (start 10.0 SOL, -3.2%) · cash 9.076 SOL ·
-open 1 · closed 19 (6 won) · SOL $74.23 · marked 2026-11-18 02:10 UTC
+open 1 · closed 19 (6 won) · SOL $74.45 · marked 2026-11-18 02:12 UTC
 
 **Benchmark (vs just holding SOL): -3.2%.** The book is counted in SOL, so its SOL
-return *is* its edge over holding SOL. In dollars: $718 vs $949 at the start
-(-24.3%); SOL itself moved -21.7%.
+return *is* its edge over holding SOL. In dollars: $721 vs $949 at the start
+(-24.0%); SOL itself moved -21.5%.
 Review on 2026-11-30 or after 30 closed v2 trades (12/30), rules unchanged until then.
 
 ## v2 test (from 2026-11-03 01:30 UTC)
@@ -27,7 +27,7 @@ control position on a random gate pass (`control.json`, same mechanical exits, n
 | Control | 13 | 0 | -1.057 | -32.5% |
 
 Costs in every fill: 1.5% fee each side, size/liquidity slippage, and a $0.50 sandwich charge per swap.
-If every swap were sandwiched at the $5 median: picks -0.992 SOL, control -2.512 SOL.
+If every swap were sandwiched at the $5 median: picks -0.988 SOL, control -2.508 SOL.
 
 **Gate value** (raw price moves, no costs; the gate earns its keep if passes beat rejects):
 passes 58 tracked, median 1d -63%, 3d -96%, 7d -100% · rejects 74 tracked, median 1d -58%, 3d -77%, 7d -98%.
@@ -39,19 +39,19 @@ Same gate, size, costs and exit code as the picks; rules in `CLAUDE.md`. Judged 
 
 | Arm | Closed | Won | Open | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|---|
-| mech | 10 | 3 | 1 | +0.576 | +21.0% |
-| v-dip | 1 | 0 | 3 | -0.045 | -4.5% |
-| v-loose | 61 | 15 | 6 | -1.944 | -11.6% |
-| v-low-bundle | 68 | 16 | 6 | -2.999 | -16.2% |
-| v-mature | 23 | 8 | 6 | -0.664 | -9.2% |
-| v-momentum | 68 | 16 | 6 | -2.999 | -16.2% |
-| v-networks | 61 | 15 | 5 | -1.568 | -9.5% |
-| v-no-spike | 38 | 11 | 6 | +6771.457 | +61558.7% |
-| v-swing | 81 | 17 | 6 | -2.795 | -12.9% |
-| v-tight | 82 | 21 | 6 | -2.598 | -11.8% |
-| v-unease | 72 | 16 | 6 | -1.658 | -8.5% |
-| v-unpaid | 47 | 6 | 3 | -4.329 | -34.6% |
-| v-velocity | 67 | 17 | 6 | -2.152 | -11.8% |
+| mech | 10 | 3 | 1 | +0.576 | +20.9% |
+| v-dip | 1 | 0 | 3 | -0.044 | -4.4% |
+| v-loose | 61 | 15 | 6 | -1.950 | -11.6% |
+| v-low-bundle | 68 | 16 | 6 | -3.008 | -16.3% |
+| v-mature | 23 | 8 | 6 | -0.668 | -9.2% |
+| v-momentum | 68 | 16 | 6 | -3.008 | -16.3% |
+| v-networks | 61 | 15 | 5 | -1.572 | -9.5% |
+| v-no-spike | 38 | 11 | 6 | +6771.453 | +61558.7% |
+| v-swing | 81 | 17 | 6 | -2.811 | -12.9% |
+| v-tight | 82 | 21 | 6 | -2.604 | -11.8% |
+| v-unease | 72 | 16 | 6 | -1.667 | -8.6% |
+| v-unpaid | 47 | 6 | 3 | -4.330 | -34.6% |
+| v-velocity | 67 | 17 | 6 | -2.160 | -11.8% |
 | v-x-exit | 0 | 0 | 0 | +0.000 | +0.0% |
 | v-x-organic | 0 | 0 | 0 | +0.000 | +0.0% |
 
@@ -65,17 +65,17 @@ Each coin against its own normal. Information only: no rule on this book reads i
 
 | Coin | Normal 15m swing | vs average paid | Off peak | Unease | Stop, in swings |
 |---|---|---|---|---|---|
-| BRUH | 2.7% | +0% | -19% | 0 of 5 | 12.9 |
+| BRUH | 2.7% | +2% | -17% | 0 of 5 | 12.9 |
 
 ## Dataset
 
 Last check 2026-11-17: 89 of 96 snapshots, 14536 rows, 170 coins, 129.7 MB. No problems.
 
-GeckoTerminal: 51332 calls, 426 refused, 16 failed, 107 waiting. Insider flag fired on 0 of 63 coins where RugCheck's graph found insiders.
+GeckoTerminal: 51337 calls, 427 refused, 16 failed, 108 waiting. Insider flag fired on 0 of 63 coins where RugCheck's graph found insiders.
 
 Fills: a round trip on Jupiter returned -1.4% (median of 178 quotes, before priority fees); paper charged -8.5%.
 
-Launch feed: running, 12039 launches and 863 graduations in the last day.
+Launch feed: running, 12051 launches and 872 graduations in the last day.
 
 Learning run 2026-11-15: 11 of 14 arms have 15+ trades. Promoted: none. Proposes only until 2026-11-30. Detail: LEARNING.md on `state`. No rule on this book reads it.
 
@@ -83,7 +83,7 @@ Learning run 2026-11-15: 11 of 14 arms have 15+ trades. Promoted: none. Proposes
 
 | Coin | Mint | Opened | Cost SOL | Entry mcap | Move | Value SOL (incl. realised) | Thesis |
 |---|---|---|---|---|---|---|---|
-| BRUH | `PgFtGGqu…` | 2026-11-08 08:15 UTC | 0.25 | $1,080,245 | +317% | 0.840 | Gate pass; 28h pumpswap coin, mc $1.07M, liq $84k (thin), 1h +42%, 24h +84%, 5m -2.2% (no spike now), 1h buys 163 vs sells 92. Other passes COGE (24h -92%) and GIGAHUG (11.7h, +1775% 24h vertical) skipped; GATO/HELL already held. |
+| BRUH | `PgFtGGqu…` | 2026-11-08 08:15 UTC | 0.25 | $1,080,245 | +318% | 0.839 | Gate pass; 28h pumpswap coin, mc $1.07M, liq $84k (thin), 1h +42%, 24h +84%, 5m -2.2% (no spike now), 1h buys 163 vs sells 92. Other passes COGE (24h -92%) and GIGAHUG (11.7h, +1775% 24h vertical) skipped; GATO/HELL already held. |
 
 ## Closed
 
