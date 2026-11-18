@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6779.897784099661,
+  "cash_sol": 6779.647784099661,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -358,6 +358,80 @@
       },
       "reentry": true,
       "since_loss_h": 21.3
+    },
+    "VAYMVikuYQpWz5sXCeCsQDeho2QcGqDSNq9rhCspump": {
+      "symbol": "JESTER",
+      "opened": "2026-11-18 21:09 UTC",
+      "cost_sol": 0.25,
+      "tokens": 12147.55180783335,
+      "entry_px": 0.0014412996772493526,
+      "entry_mc": 1421229,
+      "peak_px": 0.0014412996772493526,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-no-spike rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/ejhur4fvts85xqwskjuaoaubmavccedxutuppze9guen",
+      "v": 2,
+      "mev_sol": 0.006837139340899768,
+      "swaps": 1,
+      "entry_liq": 87911.52,
+      "at_entry": {
+        "px": 0.001441,
+        "liq": 87911.52,
+        "mc": 1421229,
+        "dex": "pumpswap",
+        "age_h": 30.47,
+        "vol_h1": 5981.38,
+        "vol_h24": 613328.4,
+        "buys_h1": 72,
+        "sells_h1": 39,
+        "buys_h24": 3879,
+        "sells_h24": 3594,
+        "trades_h24": 7473,
+        "avg_trade": 82.07,
+        "m5": -1.07,
+        "h1": 0.52,
+        "h6": 63.69,
+        "h24": 145,
+        "eligible": true,
+        "v": 3,
+        "pool": "EJHur4FVts85xqWskjUAoaUBMAvccEDXUTUpPZe9gUEn",
+        "m5_raw": -1.07,
+        "buys_m5": 4,
+        "sells_m5": 1,
+        "buys_h6": 1124,
+        "sells_h6": 940,
+        "vol_m5": 361.94,
+        "vol_h6": 236562.38,
+        "liq_base": 30954395,
+        "liq_quote": 592.4019,
+        "fdv": 1421229,
+        "boosts": null,
+        "links": [
+          "twitter"
+        ],
+        "read": {
+          "swing": 0.0883,
+          "paid": 0.0011174821986135407,
+          "vs_paid": 0.3089,
+          "off_peak": -0.1699,
+          "accel": -0.0302,
+          "candles": 96,
+          "unease": 2,
+          "known": 5,
+          "signs": [
+            "failed_high",
+            "smaller_trades"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 5.1
     }
   },
   "closed": [
@@ -3714,10 +3788,11 @@
     "2026-11-18 13:23 UTC BUY Max 0.25 SOL @ $0.0012611549 (mc $1,258,655): v-no-spike rule",
     "2026-11-18 13:50 UTC SELL 100% NIO -> 0.224 SOL @ $0.001598: time stop: 48h held, +2%, no take-profit",
     "2026-11-18 14:12 UTC BUY Rocco 0.25 SOL @ $0.00090287041 (mc $880,031): v-no-spike rule",
-    "2026-11-18 16:02 UTC SELL 100% Rocco -> 0.143 SOL @ $0.0005661: stop-loss at -37%"
+    "2026-11-18 16:02 UTC SELL 100% Rocco -> 0.143 SOL @ $0.0005661: stop-loss at -37%",
+    "2026-11-18 21:09 UTC BUY JESTER 0.25 SOL @ $0.0014412997 (mc $1,421,229): v-no-spike rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-18 21:03 UTC"
+  "last_mark": "2026-11-18 21:08 UTC"
 }
