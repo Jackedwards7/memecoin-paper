@@ -1,9 +1,9 @@
 # Lessons
 
-675 closed trades labelled, every book. Written by the bot.
+683 closed trades labelled, every book. Written by the bot.
 
-- **slow-bleed**: 220 trades, mean -27%. baton (v-unpaid): -13% over 48h; Punch (control): -14% over 48h
-- **other**: 208 trades, mean -32%. LEOSTAR (v-swing): event exit: price -46% in 5 minutes, -37% from entry; LEOSTAR (v-tight): event exit: price -46% in 5 minutes, -27% from entry
+- **slow-bleed**: 226 trades, mean -28%. BLOB (v-unease): -41% over 28h; BLOB (v-velocity): -41% over 28h
+- **other**: 210 trades, mean -32%. BLOB (v-dip): event exit: price -31% in 5 minutes, -24% from entry; BLOB (v-loose): event exit: price -31% in 5 minutes, -29% from entry
 - **won-held**: 121 trades, mean +30%. BIG (claude): +5%, peak +29%; BIG (mech): +5%, peak +29%
 - **bought-spike**: 48 trades, mean -35%. BJB (v-unease): up 4646% in 24h at entry, peak +5%; BJB (v-velocity): up 4646% in 24h at entry, peak +5%
 - **won-trailed**: 43 trades, mean +63054%. BLOB (v-tight): +8%, peak +74%; BLOB (v-unpaid): +88%, peak +270%
