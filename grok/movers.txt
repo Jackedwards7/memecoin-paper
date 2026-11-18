@@ -1,12 +1,12 @@
-MOVERS 2026-11-18T23:17:09Z
-nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity +16%
-HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO +19%
-GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED +21%
-Hh3oTaqDCKKfdBgsQEvxp9sUwyNf8x9qmKqEMLBWpump HODL +24%
-8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER +28%
-3tjPCXfx3KrgMY53yo7pa67D2QQZMbLTRaqQckJmpump VTC -28%
-9hjBLBrc7WZW2H8UQvBAvG5WiTZotXUv2Bdcn4f4pump DCTY -10%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -9%
-CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi -8%
-5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -8%
+MOVERS 2026-11-18T23:33:09Z
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +13%
+Fn95NtGXWPaJXc4N5y9rVkUq1NwZbjBNJzPVvNRLpump SHIT +16%
+Hh3oTaqDCKKfdBgsQEvxp9sUwyNf8x9qmKqEMLBWpump HODL +23%
+8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER +27%
+FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump HOGE +33%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -12%
+3tjPCXfx3KrgMY53yo7pa67D2QQZMbLTRaqQckJmpump VTC -9%
+9hjBLBrc7WZW2H8UQvBAvG5WiTZotXUv2Bdcn4f4pump DCTY -9%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -8%
+5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -7%
 END
