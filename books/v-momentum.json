@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 5.711917615025491,
+  "cash_sol": 5.461917615025491,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -365,6 +365,80 @@
       },
       "reentry": false,
       "since_loss_h": 0.2
+    },
+    "9rbKkz2BDQBVgZmrHY6d7PTq2ge91gkpEyE4y9PPpump": {
+      "symbol": "Leonida",
+      "opened": "2026-11-18 19:49 UTC",
+      "cost_sol": 0.25,
+      "tokens": 10346.03166876836,
+      "entry_px": 0.001691316348162995,
+      "entry_mc": 1684629,
+      "peak_px": 0.001691316348162995,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-momentum rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/6ecx5lm5dinvma1xwmeumj6abzl3g1xx4t5rxqxelzdn",
+      "v": 2,
+      "mev_sol": 0.006840881105486386,
+      "swaps": 1,
+      "entry_liq": 97673.39,
+      "at_entry": {
+        "px": 0.001691,
+        "liq": 97673.39,
+        "mc": 1684629,
+        "dex": "pumpswap",
+        "age_h": 18.45,
+        "vol_h1": 66075.79,
+        "vol_h24": 1743815.28,
+        "buys_h1": 2488,
+        "sells_h1": 675,
+        "buys_h24": 22760,
+        "sells_h24": 16074,
+        "trades_h24": 38834,
+        "avg_trade": 44.9,
+        "m5": -0.45,
+        "h1": 16.66,
+        "h6": 27.34,
+        "h24": 4740,
+        "eligible": true,
+        "v": 3,
+        "pool": "6Ecx5Lm5dinVma1xWMEumj6ABZL3g1Xx4t5rxQxELzdn",
+        "m5_raw": -0.45,
+        "buys_m5": 156,
+        "sells_m5": 46,
+        "buys_h6": 13274,
+        "sells_h6": 9173,
+        "vol_m5": 3478.67,
+        "vol_h6": 401219.68,
+        "liq_base": 29260083,
+        "liq_quote": 658.2442,
+        "fdv": 1684629,
+        "boosts": 100,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.1402,
+          "paid": 0.0008705622832278177,
+          "vs_paid": 0.8829,
+          "off_peak": -0.2607,
+          "accel": 0.3518,
+          "candles": 73,
+          "unease": 1,
+          "known": 5,
+          "signs": [
+            "failed_high"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 0.8
     }
   },
   "closed": [
@@ -6077,10 +6151,11 @@
     "2026-11-18 16:20 UTC BUY GTA 0.25 SOL @ $0.0014542977 (mc $1,449,371): v-momentum rule",
     "2026-11-18 19:03 UTC SELL 100% GTA -> 0.184 SOL @ $0.001187: event exit: price -22% in 5 minutes, -18% from entry",
     "2026-11-18 19:17 UTC BUY DCTY 0.25 SOL @ $0.012900566 (mc $12,206,164): v-momentum rule",
-    "2026-11-18 19:43 UTC SELL 100% DESSA -> 0.260 SOL @ $0.005191: time stop: 48h held, +17%, no take-profit"
+    "2026-11-18 19:43 UTC SELL 100% DESSA -> 0.260 SOL @ $0.005191: time stop: 48h held, +17%, no take-profit",
+    "2026-11-18 19:49 UTC BUY Leonida 0.25 SOL @ $0.0016913163 (mc $1,684,629): v-momentum rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-18 19:43 UTC"
+  "last_mark": "2026-11-18 19:48 UTC"
 }
