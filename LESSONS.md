@@ -1,9 +1,9 @@
 # Lessons
 
-648 closed trades labelled, every book. Written by the bot.
+654 closed trades labelled, every book. Written by the bot.
 
 - **slow-bleed**: 216 trades, mean -27%. BIG (v-unease): -13% over 48h; BIG (v-velocity): -13% over 48h
-- **other**: 195 trades, mean -32%. Rocco (v-swing): stop-loss at -26%; rockstar (v-tight): stop-loss at -21%
+- **other**: 201 trades, mean -32%. BAWSAQ (v-unease): event exit: price -48% in 5 minutes, -43% from entry; BAWSAQ (v-velocity): event exit: price -48% in 5 minutes, -43% from entry
 - **won-held**: 119 trades, mean +31%. MEVS (v-no-spike): +13%, peak +66%; MEVS (v-velocity): +13%, peak +66%
 - **bought-spike**: 48 trades, mean -35%. BJB (v-unease): up 4646% in 24h at entry, peak +5%; BJB (v-velocity): up 4646% in 24h at entry, peak +5%
 - **won-trailed**: 37 trades, mean +73268%. Rocco (v-tight): +35%, peak +168%; Rocco (v-velocity): +80%, peak +152%

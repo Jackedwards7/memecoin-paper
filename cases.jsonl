@@ -1347,3 +1347,9 @@
 {"after": "v-tight:34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump:2026-11-17 02:29 UTC", "h": 24, "px": 0.001556, "vs_exit": 0.1424}
 {"after": "v-unease:34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump:2026-11-17 02:29 UTC", "h": 24, "px": 0.001556, "vs_exit": 0.1424}
 {"after": "v-velocity:34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump:2026-11-17 02:29 UTC", "h": 24, "px": 0.001556, "vs_exit": 0.1424}
+{"after": "v-loose:D9EcoQZeAytCrF1kQFSpRNpoPhibJUvJcmRHXhubpump:2026-11-17 02:55 UTC", "h": 24, "px": 2.317e-06, "vs_exit": -0.9974}
+{"after": "v-low-bundle:D9EcoQZeAytCrF1kQFSpRNpoPhibJUvJcmRHXhubpump:2026-11-17 02:55 UTC", "h": 24, "px": 2.317e-06, "vs_exit": -0.9974}
+{"after": "v-momentum:D9EcoQZeAytCrF1kQFSpRNpoPhibJUvJcmRHXhubpump:2026-11-17 02:55 UTC", "h": 24, "px": 2.317e-06, "vs_exit": -0.9974}
+{"after": "v-tight:D9EcoQZeAytCrF1kQFSpRNpoPhibJUvJcmRHXhubpump:2026-11-17 02:55 UTC", "h": 24, "px": 2.317e-06, "vs_exit": -0.9974}
+{"after": "v-unease:D9EcoQZeAytCrF1kQFSpRNpoPhibJUvJcmRHXhubpump:2026-11-17 02:55 UTC", "h": 24, "px": 2.317e-06, "vs_exit": -0.9974}
+{"after": "v-velocity:D9EcoQZeAytCrF1kQFSpRNpoPhibJUvJcmRHXhubpump:2026-11-17 02:55 UTC", "h": 24, "px": 2.317e-06, "vs_exit": -0.9974}
