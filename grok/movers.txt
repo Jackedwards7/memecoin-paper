@@ -1,12 +1,12 @@
-MOVERS 2026-11-18T15:47:30Z
-nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity +16%
-3tjPCXfx3KrgMY53yo7pa67D2QQZMbLTRaqQckJmpump VTC +27%
-6wiaCq8oQiupFfeDU4ouAuYnCKXCch581HAmpvrxpump GTAVI +35%
-VAYMVikuYQpWz5sXCeCsQDeho2QcGqDSNq9rhCspump JESTER +51%
-9hjBLBrc7WZW2H8UQvBAvG5WiTZotXUv2Bdcn4f4pump DCTY +1157%
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -24%
-FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump HOGE -22%
-5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -18%
-7KBFymfGAe8MmKEuNersoM59TvpiHzZ76jP7rSLrpump GTA -15%
-5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat -10%
+MOVERS 2026-11-18T16:03:30Z
+npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump DESSA +11%
+VAYMVikuYQpWz5sXCeCsQDeho2QcGqDSNq9rhCspump JESTER +22%
+Fn95NtGXWPaJXc4N5y9rVkUq1NwZbjBNJzPVvNRLpump SHIT +31%
+3tjPCXfx3KrgMY53yo7pa67D2QQZMbLTRaqQckJmpump VTC +57%
+9hjBLBrc7WZW2H8UQvBAvG5WiTZotXUv2Bdcn4f4pump DCTY +5463%
+DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin -83%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco -36%
+nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity -29%
+34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG -21%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -18%
 END
