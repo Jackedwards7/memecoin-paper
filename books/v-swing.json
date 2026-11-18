@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 5.639726620512036,
+  "cash_sol": 5.389726620512036,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -227,7 +227,7 @@
       "tokens": 14103.36277995621,
       "entry_px": 0.001261154894581477,
       "entry_mc": 1258655,
-      "peak_px": 0.001317,
+      "peak_px": 0.001384,
       "stop": -0.2268,
       "tp1": 1.0,
       "tp1_done": false,
@@ -296,6 +296,81 @@
       },
       "reentry": true,
       "since_loss_h": 0.3
+    },
+    "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": {
+      "symbol": "NIO",
+      "opened": "2026-11-18 13:39 UTC",
+      "cost_sol": 0.25,
+      "tokens": 11043.827950432855,
+      "entry_px": 0.0016112087746986842,
+      "entry_mc": 1534992,
+      "peak_px": 0.0016112087746986842,
+      "stop": -0.1504,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-swing rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/b4wmjc6pvjctu3qsvs3ett9mr4m5v5jbkrqctwantc71",
+      "v": 2,
+      "mev_sol": 0.006730380939561178,
+      "swaps": 1,
+      "entry_liq": 143313.81,
+      "at_entry": {
+        "px": 0.001611,
+        "liq": 143313.81,
+        "mc": 1534992,
+        "dex": "pumpswap",
+        "age_h": 669.69,
+        "vol_h1": 9038.35,
+        "vol_h24": 356448.45,
+        "buys_h1": 152,
+        "sells_h1": 86,
+        "buys_h24": 2623,
+        "sells_h24": 2799,
+        "trades_h24": 5422,
+        "avg_trade": 65.74,
+        "m5": 1.55,
+        "h1": 9.66,
+        "h6": 15.53,
+        "h24": 11.93,
+        "eligible": true,
+        "v": 3,
+        "pool": "B4Wmjc6PvjCtU3qSVS3eTT9Mr4M5V5jBkRQctWANTc71",
+        "m5_raw": 1.55,
+        "buys_m5": 5,
+        "sells_m5": 24,
+        "buys_h6": 485,
+        "sells_h6": 357,
+        "vol_m5": 1352.97,
+        "vol_h6": 34995.75,
+        "liq_base": 44688757,
+        "liq_quote": 959.2259,
+        "fdv": 1534992,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0376,
+          "paid": 0.0015702535666445474,
+          "vs_paid": -0.0109,
+          "off_peak": -0.2147,
+          "accel": 0.0241,
+          "candles": 96,
+          "unease": 2,
+          "known": 5,
+          "signs": [
+            "smaller_trades",
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 0.6
     }
   },
   "closed": [
@@ -7620,10 +7695,11 @@
     "2026-11-18 12:56 UTC SELL 100% HOGE -> 0.263 SOL @ $0.001455: trailing stop: 40% off peak, +134% from entry",
     "2026-11-18 13:06 UTC SELL 100% GTA -> 0.245 SOL @ $0.001646: event exit: price -43% in 5 minutes, +6% from entry",
     "2026-11-18 13:07 UTC BUY Leonida 0.25 SOL @ $0.0014753007 (mc $1,469,881): v-swing rule",
-    "2026-11-18 13:23 UTC BUY Max 0.25 SOL @ $0.0012611549 (mc $1,258,655): v-swing rule"
+    "2026-11-18 13:23 UTC BUY Max 0.25 SOL @ $0.0012611549 (mc $1,258,655): v-swing rule",
+    "2026-11-18 13:39 UTC BUY NIO 0.25 SOL @ $0.0016112088 (mc $1,534,992): v-swing rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-18 13:36 UTC"
+  "last_mark": "2026-11-18 13:39 UTC"
 }
