@@ -1,10 +1,10 @@
 # Lessons
 
-669 closed trades labelled, every book. Written by the bot.
+672 closed trades labelled, every book. Written by the bot.
 
-- **slow-bleed**: 219 trades, mean -27%. Rocco (v-unease): -35% over 15h; baton (v-unpaid): -13% over 48h
+- **slow-bleed**: 220 trades, mean -27%. baton (v-unpaid): -13% over 48h; Punch (control): -14% over 48h
 - **other**: 205 trades, mean -32%. BAWSAQ (v-networks): event exit: price -24% in 5 minutes, -15% from entry; BAWSAQ (v-swing): event exit: price -24% in 5 minutes, -15% from entry
-- **won-held**: 119 trades, mean +31%. MEVS (v-no-spike): +13%, peak +66%; MEVS (v-velocity): +13%, peak +66%
+- **won-held**: 121 trades, mean +30%. BIG (claude): +5%, peak +29%; BIG (mech): +5%, peak +29%
 - **bought-spike**: 48 trades, mean -35%. BJB (v-unease): up 4646% in 24h at entry, peak +5%; BJB (v-velocity): up 4646% in 24h at entry, peak +5%
 - **won-trailed**: 43 trades, mean +63054%. BLOB (v-tight): +8%, peak +74%; BLOB (v-unpaid): +88%, peak +270%
 - **rug**: 19 trades, mean -100%. SCAMSON (v-tight): event exit: liquidity down 99% since entry, -100% from entry; Anthropig (v-swing): event exit: liquidity down 98% since entry, -100% from entry
