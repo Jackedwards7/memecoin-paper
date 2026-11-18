@@ -1045,13 +1045,13 @@
     "2026-11-17 12:16 UTC SELL 100% BIG -> 0.262 SOL @ $0.001496: time stop: 48h held, +15%, no take-profit",
     "2026-11-17 14:46 UTC SELL 100% BLOB -> 0.160 SOL @ $0.00954: event exit: price -31% in 5 minutes, -26% from entry"
   ],
-  "last_mark": "2026-11-18 07:41 UTC",
+  "last_mark": "2026-11-18 07:46 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794987016,
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794987016,
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": 1794985096,
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1794987016,
-    "5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump": 1794984150,
+    "5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump": 1794987976,
     "KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump": 1794987016,
     "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794986056,
     "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump": 1794987016,
@@ -2022,6 +2022,15 @@
       "px": 0.001081,
       "fails": [
         "copycat: an earlier 'Ah Shit, Here We Go Again' exists (7GWBnu)"
+      ],
+      "moves": {}
+    },
+    "HCNhQCu5nrmWhSE3mo7fRU9eGiGLmi2fnE8omgLpump": {
+      "symbol": "DCI",
+      "at": 1794987976,
+      "px": 0.0007335,
+      "fails": [
+        "copycat: an earlier 'DacityCoin' exists (39wVWd)"
       ],
       "moves": {}
     }
