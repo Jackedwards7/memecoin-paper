@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 4.994129051463393,
+  "cash_sol": 5.242764139619026,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -152,22 +152,22 @@
       "symbol": "HOGE",
       "opened": "2026-11-17 10:08 UTC",
       "cost_sol": 0.25,
-      "tokens": 27911.032266276514,
+      "tokens": 13955.516133138257,
       "entry_px": 0.0006225240017723629,
       "entry_mc": 594633,
-      "peak_px": 0.001092,
+      "peak_px": 0.001383,
       "stop": -0.5,
       "tp1": 1.0,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-swing rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.24863508815563307,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/7cnc9ggegzeffk8flxiyuhdtmeefpqzond56u1mxhnor",
       "v": 2,
-      "mev_sol": 0.006888001102080176,
-      "swaps": 1,
+      "mev_sol": 0.01360482001664224,
+      "swaps": 2,
       "entry_liq": 91087.44,
       "at_entry": {
         "px": 0.0006224,
@@ -7440,10 +7440,11 @@
     "2026-11-18 11:30 UTC SELL 100% GTAVI -> 0.185 SOL @ $0.001931: event exit: price -41% in 5 minutes, -19% from entry",
     "2026-11-18 11:31 UTC BUY Rocco 0.25 SOL @ $0.0010401835 (mc $1,014,519): v-swing rule",
     "2026-11-18 11:49 UTC SELL 100% Rocco -> 0.148 SOL @ $0.0006802: event exit: price -21% in 5 minutes, -35% from entry",
-    "2026-11-18 12:19 UTC BUY GTA 0.25 SOL @ $0.001548313 (mc $1,543,300): v-swing rule"
+    "2026-11-18 12:19 UTC BUY GTA 0.25 SOL @ $0.001548313 (mc $1,543,300): v-swing rule",
+    "2026-11-18 12:31 UTC SELL 50% HOGE -> 0.249 SOL @ $0.001383: take-profit at +122%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-18 12:29 UTC"
+  "last_mark": "2026-11-18 12:31 UTC"
 }
