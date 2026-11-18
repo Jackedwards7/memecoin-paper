@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.059742211858312,
+  "cash_sol": 7.809742211858312,
   "positions": {
     "KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump": {
       "symbol": "RAMBO",
@@ -374,6 +374,68 @@
       },
       "reentry": true,
       "since_loss_h": 0.6
+    },
+    "9hjBLBrc7WZW2H8UQvBAvG5WiTZotXUv2Bdcn4f4pump": {
+      "symbol": "DCTY",
+      "opened": "2026-11-18 18:44 UTC",
+      "cost_sol": 0.25,
+      "tokens": 1527.985781262913,
+      "entry_px": 0.011590544700855888,
+      "entry_mc": 10962346,
+      "peak_px": 0.011590544700855888,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-mature rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/dchxq4qfppnpedfzlniwvphrvuufgfqedlaazbizhuwf",
+      "v": 2,
+      "mev_sol": 0.0067613252197430695,
+      "swaps": 1,
+      "entry_liq": 393372.11,
+      "at_entry": {
+        "px": 0.01159,
+        "liq": 393372.11,
+        "mc": 10962346,
+        "dex": "pumpswap",
+        "age_h": 711.69,
+        "vol_h1": 1257817.75,
+        "vol_h24": 26006880.31,
+        "buys_h1": 7552,
+        "sells_h1": 5858,
+        "buys_h24": 93766,
+        "sells_h24": 78158,
+        "trades_h24": 171924,
+        "avg_trade": 151.27,
+        "m5": 0.23,
+        "h1": -3.9,
+        "h6": 33652,
+        "h24": 24696,
+        "eligible": true,
+        "v": 3,
+        "pool": "DChXQ4qFPpNPEDfZLNiwvPhrVuuFGfqEDLAAZbiZHUWf",
+        "m5_raw": 0.23,
+        "buys_m5": 599,
+        "sells_m5": 365,
+        "buys_h6": 92553,
+        "sells_h6": 77131,
+        "vol_m5": 78126.93,
+        "vol_h6": 25772908.41,
+        "liq_base": 17055933,
+        "liq_quote": 888.4975,
+        "fdv": 10962346,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": null
+      },
+      "reentry": false,
+      "since_loss_h": 0.1
     }
   },
   "closed": [
@@ -2582,10 +2644,11 @@
     "2026-11-18 14:54 UTC SELL 100% BRUH -> 0.236 SOL @ $0.004876: time stop: 48h held, +6%, no take-profit",
     "2026-11-18 15:00 UTC BUY Max 0.25 SOL @ $0.0014941678 (mc $1,490,199): v-mature rule",
     "2026-11-18 15:32 UTC BUY BLOB 0.25 SOL @ $0.0032643697 (mc $3,235,528): v-mature rule",
-    "2026-11-18 18:38 UTC SELL 100% JOB -> 0.231 SOL @ $0.002564: time stop: 48h held, +5%, no take-profit"
+    "2026-11-18 18:38 UTC SELL 100% JOB -> 0.231 SOL @ $0.002564: time stop: 48h held, +5%, no take-profit",
+    "2026-11-18 18:44 UTC BUY DCTY 0.25 SOL @ $0.011590545 (mc $10,962,346): v-mature rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-18 18:38 UTC"
+  "last_mark": "2026-11-18 18:44 UTC"
 }
