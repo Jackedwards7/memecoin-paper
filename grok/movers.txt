@@ -1,12 +1,12 @@
-MOVERS 2026-11-18T08:34:16Z
-FSkyjfqB26u6c2GSgpACrjbxp9yQAR8rutxprVNppump 3 +7%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +7%
-DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin +7%
-HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +12%
-Dfh5DzRgSvvCFDoYc2ciTkMrbDfRKybA4SoFbPmApump pippin +40%
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB -38%
-34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG -14%
+MOVERS 2026-11-18T08:50:16Z
+6wiaCq8oQiupFfeDU4ouAuYnCKXCch581HAmpvrxpump GTAVI +8%
+Fn95NtGXWPaJXc4N5y9rVkUq1NwZbjBNJzPVvNRLpump SHIT +11%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +15%
+Dfh5DzRgSvvCFDoYc2ciTkMrbDfRKybA4SoFbPmApump pippin +17%
+7KBFymfGAe8MmKEuNersoM59TvpiHzZ76jP7rSLrpump GTA +47%
+8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB -33%
+GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED -9%
+FSkyjfqB26u6c2GSgpACrjbxp9yQAR8rutxprVNppump 3 -9%
+34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump BIG -6%
 FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump HOGE -6%
-HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO -5%
-6wiaCq8oQiupFfeDU4ouAuYnCKXCch581HAmpvrxpump GTAVI -4%
 END

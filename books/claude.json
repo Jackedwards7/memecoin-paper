@@ -1045,13 +1045,13 @@
     "2026-11-17 12:16 UTC SELL 100% BIG -> 0.262 SOL @ $0.001496: time stop: 48h held, +15%, no take-profit",
     "2026-11-17 14:46 UTC SELL 100% BLOB -> 0.160 SOL @ $0.00954: event exit: price -31% in 5 minutes, -26% from entry"
   ],
-  "last_mark": "2026-11-18 08:45 UTC",
+  "last_mark": "2026-11-18 08:50 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794990856,
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794990856,
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": 1794988936,
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1794990856,
-    "5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump": 1794987976,
+    "5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump": 1794991816,
     "KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump": 1794990856,
     "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1794989896,
     "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump": 1794990856,
@@ -1060,7 +1060,8 @@
     "FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump": 1794988936,
     "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": 1794990856,
     "8ryRQD6jWfxnSdvvVbQ8Tzwo1NgGP7w1X1nQPpb4pump": 1794988936,
-    "6wiaCq8oQiupFfeDU4ouAuYnCKXCch581HAmpvrxpump": 1794989896
+    "6wiaCq8oQiupFfeDU4ouAuYnCKXCch581HAmpvrxpump": 1794989896,
+    "7KBFymfGAe8MmKEuNersoM59TvpiHzZ76jP7rSLrpump": 1794991816
   },
   "rejects": {
     "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
@@ -2649,6 +2650,13 @@
       "symbol": "GTAVI",
       "at": 1794982225,
       "px": 0.002581,
+      "fails": [],
+      "moves": {}
+    },
+    "7KBFymfGAe8MmKEuNersoM59TvpiHzZ76jP7rSLrpump": {
+      "symbol": "GTA",
+      "at": 1794991816,
+      "px": 0.001388,
       "fails": [],
       "moves": {}
     }
