@@ -1,0 +1,25 @@
+{
+  "id": "20261118T081529.535533Z-gate-f504b8",
+  "kind": "gate",
+  "at": 1794989729.535533,
+  "by": "local",
+  "results": {
+    "HCNhQCu5nrmWhSE3mo7fRU9eGiGLmi2fnE8omgLpump": {
+      "symbol": "DCI",
+      "px": 0.0006573,
+      "fails": [
+        "copycat: an earlier 'DacityCoin' exists (39wVWd)"
+      ]
+    },
+    "6wiaCq8oQiupFfeDU4ouAuYnCKXCch581HAmpvrxpump": {
+      "symbol": "GTAVI",
+      "px": 0.002408,
+      "fails": []
+    },
+    "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump": {
+      "symbol": "BIG",
+      "px": 0.00138,
+      "fails": []
+    }
+  }
+}
