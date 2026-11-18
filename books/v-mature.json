@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 7.873794875716824,
+  "cash_sol": 8.092913155313685,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -367,80 +367,6 @@
       },
       "reentry": true,
       "since_loss_h": 24.2
-    },
-    "FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump": {
-      "symbol": "HOGE",
-      "opened": "2026-11-18 12:51 UTC",
-      "cost_sol": 0.25,
-      "tokens": 11092.143885621903,
-      "entry_px": 0.0016001944874703396,
-      "entry_mc": 1529406,
-      "peak_px": 0.002075,
-      "stop": -0.35,
-      "tp1": 1.0,
-      "tp1_done": false,
-      "thesis": "v-mature rule",
-      "rugcheck": 1,
-      "risks": [],
-      "realised_sol": 0.0,
-      "dex": "pumpswap",
-      "url": "https://dexscreener.com/solana/7cnc9ggegzeffk8flxiyuhdtmeefpqzond56u1mxhnor",
-      "v": 2,
-      "mev_sol": 0.006746727836999055,
-      "swaps": 1,
-      "entry_liq": 152421.13,
-      "at_entry": {
-        "px": 0.0016,
-        "liq": 152421.13,
-        "mc": 1529406,
-        "dex": "pumpswap",
-        "age_h": 77.92,
-        "vol_h1": 919414.99,
-        "vol_h24": 1743606.76,
-        "buys_h1": 4659,
-        "sells_h1": 4094,
-        "buys_h24": 10520,
-        "sells_h24": 9104,
-        "trades_h24": 19624,
-        "avg_trade": 88.85,
-        "m5": -3.27,
-        "h1": 279,
-        "h6": 216,
-        "h24": 150,
-        "eligible": true,
-        "v": 3,
-        "pool": "7CNC9gGegzEfFK8fLXiYUhdtMEeFPQZoND56U1Mxhnor",
-        "m5_raw": -3.27,
-        "buys_m5": 297,
-        "sells_m5": 208,
-        "buys_h6": 5221,
-        "sells_h6": 4474,
-        "vol_m5": 41603.91,
-        "vol_h6": 980266.1,
-        "liq_base": 49939285,
-        "liq_quote": 72474,
-        "fdv": 1529406,
-        "boosts": null,
-        "links": [
-          "twitter",
-          "website"
-        ],
-        "read": {
-          "swing": 0.0874,
-          "paid": 0.0007928523352917011,
-          "vs_paid": 0.1409,
-          "off_peak": -0.224,
-          "accel": 1.3801,
-          "candles": 96,
-          "unease": 1,
-          "known": 5,
-          "signs": [
-            "sol_leaving"
-          ]
-        }
-      },
-      "reentry": false,
-      "since_loss_h": 0.0
     }
   },
   "closed": [
@@ -2348,6 +2274,86 @@
       "pnl_pct": -0.4410493179151679,
       "exit_reason": "stop-loss at -36%",
       "exit_px": 0.004263
+    },
+    {
+      "symbol": "HOGE",
+      "opened": "2026-11-18 12:51 UTC",
+      "cost_sol": 0.25,
+      "tokens": 0.0,
+      "entry_px": 0.0016001944874703396,
+      "entry_mc": 1529406,
+      "peak_px": 0.002075,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-mature rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.21911827959686125,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/7cnc9ggegzeffk8flxiyuhdtmeefpqzond56u1mxhnor",
+      "v": 2,
+      "mev_sol": 0.013535594096333745,
+      "swaps": 2,
+      "entry_liq": 152421.13,
+      "at_entry": {
+        "px": 0.0016,
+        "liq": 152421.13,
+        "mc": 1529406,
+        "dex": "pumpswap",
+        "age_h": 77.92,
+        "vol_h1": 919414.99,
+        "vol_h24": 1743606.76,
+        "buys_h1": 4659,
+        "sells_h1": 4094,
+        "buys_h24": 10520,
+        "sells_h24": 9104,
+        "trades_h24": 19624,
+        "avg_trade": 88.85,
+        "m5": -3.27,
+        "h1": 279,
+        "h6": 216,
+        "h24": 150,
+        "eligible": true,
+        "v": 3,
+        "pool": "7CNC9gGegzEfFK8fLXiYUhdtMEeFPQZoND56U1Mxhnor",
+        "m5_raw": -3.27,
+        "buys_m5": 297,
+        "sells_m5": 208,
+        "buys_h6": 5221,
+        "sells_h6": 4474,
+        "vol_m5": 41603.91,
+        "vol_h6": 980266.1,
+        "liq_base": 49939285,
+        "liq_quote": 72474,
+        "fdv": 1529406,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0874,
+          "paid": 0.0007928523352917011,
+          "vs_paid": 0.1409,
+          "off_peak": -0.224,
+          "accel": 1.3801,
+          "candles": 96,
+          "unease": 1,
+          "known": 5,
+          "signs": [
+            "sol_leaving"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 0.0,
+      "mint": "FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump",
+      "closed": "2026-11-18 14:52 UTC",
+      "pnl_sol": -0.030881720403138746,
+      "pnl_pct": -0.12352688161255498,
+      "exit_reason": "event exit: price -20% in 5 minutes, -5% from entry",
+      "exit_px": 0.001523
     }
   ],
   "log": [
@@ -2407,10 +2413,11 @@
     "2026-11-17 17:53 UTC BUY NIO 0.25 SOL @ $0.0018612224 (mc $1,773,408): v-mature rule",
     "2026-11-17 19:13 UTC BUY DESSA 0.25 SOL @ $0.0043604205 (mc $4,269,555): v-mature rule",
     "2026-11-18 12:49 UTC SELL 100% GATO -> 0.140 SOL @ $0.004263: stop-loss at -36%",
-    "2026-11-18 12:51 UTC BUY HOGE 0.25 SOL @ $0.0016001945 (mc $1,529,406): v-mature rule"
+    "2026-11-18 12:51 UTC BUY HOGE 0.25 SOL @ $0.0016001945 (mc $1,529,406): v-mature rule",
+    "2026-11-18 14:52 UTC SELL 100% HOGE -> 0.219 SOL @ $0.001523: event exit: price -20% in 5 minutes, -5% from entry"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-18 14:43 UTC"
+  "last_mark": "2026-11-18 14:52 UTC"
 }
