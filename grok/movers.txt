@@ -1,12 +1,12 @@
-MOVERS 2026-11-18T02:10:23Z
-5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max +9%
-PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump BRUH +10%
-FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump HOGE +13%
-8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +36%
-FSkyjfqB26u6c2GSgpACrjbxp9yQAR8rutxprVNppump 3 +76%
-4B8CdHPZ8ng1CtMP2Jk2W8wGAwJ5nJnap1deVsz2pump BUTTHOLE -12%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -6%
-CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump fone -6%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -6%
-HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO -5%
+MOVERS 2026-11-18T02:26:23Z
+FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump HOGE +14%
+8ryRQD6jWfxnSdvvVbQ8Tzwo1NgGP7w1X1nQPpb4pump meowl +15%
+5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max +19%
+8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump BLOB +20%
+FSkyjfqB26u6c2GSgpACrjbxp9yQAR8rutxprVNppump 3 +42%
+nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity -16%
+4B8CdHPZ8ng1CtMP2Jk2W8wGAwJ5nJnap1deVsz2pump BUTTHOLE -8%
+DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin -7%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -7%
+8ctbRatrLwS6m35mNajbDimiaM4x7bmfGTprBmZnpump HODLER -6%
 END
