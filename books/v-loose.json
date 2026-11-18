@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.801234186086384,
+  "cash_sol": 6.551234186086384,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -363,6 +363,67 @@
       },
       "reentry": false,
       "since_loss_h": 0.3
+    },
+    "9hjBLBrc7WZW2H8UQvBAvG5WiTZotXUv2Bdcn4f4pump": {
+      "symbol": "DCTY",
+      "opened": "2026-11-18 16:52 UTC",
+      "cost_sol": 0.25,
+      "tokens": 1696.6945075510541,
+      "entry_px": 0.010230509925475013,
+      "entry_mc": 9682925,
+      "peak_px": 0.010230509925475013,
+      "stop": -0.4,
+      "tp1": 1.5,
+      "tp1_done": false,
+      "thesis": "v-loose rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/dchxq4qfppnpedfzlniwvphrvuufgfqedlaazbizhuwf",
+      "v": 2,
+      "mev_sol": 0.006894649751792609,
+      "swaps": 1,
+      "entry_liq": 363719.62,
+      "at_entry": {
+        "px": 0.01023,
+        "liq": 363719.62,
+        "mc": 9682925,
+        "dex": "pumpswap",
+        "age_h": 709.81,
+        "vol_h1": 19560393.89,
+        "vol_h24": 20728639.37,
+        "buys_h1": 61804,
+        "sells_h1": 53353,
+        "buys_h24": 68880,
+        "sells_h24": 58309,
+        "trades_h24": 127189,
+        "avg_trade": 162.98,
+        "m5": -14.07,
+        "h1": 1237,
+        "h6": 15223,
+        "h24": 20355,
+        "eligible": true,
+        "v": 3,
+        "pool": "DChXQ4qFPpNPEDfZLNiwvPhrVuuFGfqEDLAAZbiZHUWf",
+        "m5_raw": -14.07,
+        "buys_m5": 2996,
+        "sells_m5": 2060,
+        "buys_h6": 68710,
+        "sells_h6": 58178,
+        "vol_m5": 622511.6,
+        "vol_h6": 20703858.19,
+        "liq_base": 17751277,
+        "liq_quote": 825.7846,
+        "fdv": 9682925,
+        "boosts": null,
+        "links": [
+          "twitter"
+        ],
+        "read": null
+      },
+      "reentry": false,
+      "since_loss_h": 0.0
     }
   },
   "closed": [
@@ -5477,10 +5538,11 @@
     "2026-11-18 13:07 UTC BUY GTAVI 0.25 SOL @ $0.0023643837 (mc $2,356,889): v-loose rule",
     "2026-11-18 13:08 UTC SELL 100% GTAVI -> 0.181 SOL @ $0.001887: event exit: price -22% in 5 minutes, -20% from entry",
     "2026-11-18 13:23 UTC BUY GTA 0.25 SOL @ $0.0019323466 (mc $1,926,468): v-loose rule",
-    "2026-11-18 16:50 UTC SELL 100% GATO -> 0.132 SOL @ $0.00334: stop-loss at -41%"
+    "2026-11-18 16:50 UTC SELL 100% GATO -> 0.132 SOL @ $0.00334: stop-loss at -41%",
+    "2026-11-18 16:52 UTC BUY DCTY 0.25 SOL @ $0.01023051 (mc $9,682,925): v-loose rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-18 16:50 UTC"
+  "last_mark": "2026-11-18 16:51 UTC"
 }
