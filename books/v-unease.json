@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.358507158304735,
+  "cash_sol": 6.108507158304735,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -370,6 +370,77 @@
       },
       "reentry": false,
       "since_loss_h": 0.0
+    },
+    "VAYMVikuYQpWz5sXCeCsQDeho2QcGqDSNq9rhCspump": {
+      "symbol": "JESTER",
+      "opened": "2026-11-18 16:20 UTC",
+      "cost_sol": 0.25,
+      "tokens": 15661.211795004569,
+      "entry_px": 0.001115264912359542,
+      "entry_mc": 1099202,
+      "peak_px": 0.001115264912359542,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-unease rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/ejhur4fvts85xqwskjuaoaubmavccedxutuppze9guen",
+      "v": 2,
+      "mev_sol": 0.006853070175438597,
+      "swaps": 1,
+      "entry_liq": 76771.05,
+      "at_entry": {
+        "px": 0.001115,
+        "liq": 76771.05,
+        "mc": 1099202,
+        "dex": "pumpswap",
+        "age_h": 25.65,
+        "vol_h1": 57066.94,
+        "vol_h24": 725642.46,
+        "buys_h1": 294,
+        "sells_h1": 206,
+        "buys_h24": 5543,
+        "sells_h24": 4873,
+        "trades_h24": 10416,
+        "avg_trade": 69.67,
+        "m5": -1.84,
+        "h1": 10.6,
+        "h6": 180,
+        "h24": 2226,
+        "eligible": true,
+        "v": 3,
+        "pool": "EJHur4FVts85xqWskjUAoaUBMAvccEDXUTUpPZe9gUEn",
+        "m5_raw": -1.84,
+        "buys_m5": 7,
+        "sells_m5": 6,
+        "buys_h6": 1168,
+        "sells_h6": 1081,
+        "vol_m5": 404.01,
+        "vol_h6": 221341.71,
+        "liq_base": 34779519,
+        "liq_quote": 521.3764,
+        "fdv": 1099202,
+        "boosts": null,
+        "links": [
+          "twitter"
+        ],
+        "read": {
+          "swing": 0.1129,
+          "paid": 0.0005852996129301639,
+          "vs_paid": 0.9607,
+          "off_peak": -0.1392,
+          "accel": 0.1751,
+          "candles": 96,
+          "unease": 0,
+          "known": 3,
+          "signs": []
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 0.2
     }
   },
   "closed": [
@@ -6627,10 +6698,11 @@
     "2026-11-18 15:48 UTC BUY GTAVI 0.25 SOL @ $0.0024703878 (mc $2,462,093): v-unease rule",
     "2026-11-18 16:03 UTC SELL 100% GTAVI -> 0.150 SOL @ $0.001641: event exit: price -22% in 5 minutes, -34% from entry",
     "2026-11-18 16:04 UTC BUY Leonida 0.25 SOL @ $0.0016873173 (mc $1,680,720): v-unease rule",
-    "2026-11-18 16:11 UTC SELL 100% GATO -> 0.145 SOL @ $0.003691: stop-loss at -35%"
+    "2026-11-18 16:11 UTC SELL 100% GATO -> 0.145 SOL @ $0.003691: stop-loss at -35%",
+    "2026-11-18 16:20 UTC BUY JESTER 0.25 SOL @ $0.0011152649 (mc $1,099,202): v-unease rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-18 16:16 UTC"
+  "last_mark": "2026-11-18 16:19 UTC"
 }
