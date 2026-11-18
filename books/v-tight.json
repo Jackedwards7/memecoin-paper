@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 5.574433483663307,
+  "cash_sol": 5.737166214149575,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -230,7 +230,7 @@
       "tokens": 3851.586613715687,
       "entry_px": 0.004560432300146267,
       "entry_mc": 4465098,
-      "peak_px": 0.005143,
+      "peak_px": 0.005158,
       "stop": -0.2,
       "tp1": 0.4,
       "tp1_done": false,
@@ -299,22 +299,22 @@
       "symbol": "Leonida",
       "opened": "2026-11-18 13:07 UTC",
       "cost_sol": 0.25,
-      "tokens": 12041.18062957389,
+      "tokens": 6020.590314786945,
       "entry_px": 0.0014753007239480837,
       "entry_mc": 1469881,
-      "peak_px": 0.001759,
+      "peak_px": 0.002099,
       "stop": -0.2,
       "tp1": 0.4,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-tight rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.16273273048626796,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/6ecx5lm5dinvma1xwmeumj6abzl3g1xx4t5rxqxelzdn",
       "v": 2,
-      "mev_sol": 0.006741270055278414,
-      "swaps": 1,
+      "mev_sol": 0.01355233121860766,
+      "swaps": 2,
       "entry_liq": 90947.82,
       "at_entry": {
         "px": 0.001475,
@@ -7349,10 +7349,11 @@
     "2026-11-18 13:06 UTC SELL 100% GTA -> 0.119 SOL @ $0.001646: event exit: price -43% in 5 minutes, +6% from entry",
     "2026-11-18 13:07 UTC BUY Leonida 0.25 SOL @ $0.0014753007 (mc $1,469,881): v-tight rule",
     "2026-11-18 13:23 UTC BUY Max 0.25 SOL @ $0.0012611549 (mc $1,258,655): v-tight rule",
-    "2026-11-18 14:00 UTC SELL 50% Max -> 0.160 SOL @ $0.001779: take-profit at +41%: half sold, cost recovered"
+    "2026-11-18 14:00 UTC SELL 50% Max -> 0.160 SOL @ $0.001779: take-profit at +41%: half sold, cost recovered",
+    "2026-11-18 16:11 UTC SELL 50% Leonida -> 0.163 SOL @ $0.002099: take-profit at +42%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-18 16:03 UTC"
+  "last_mark": "2026-11-18 16:11 UTC"
 }
