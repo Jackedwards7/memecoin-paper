@@ -1,0 +1,50 @@
+{
+  "id": "20261118T161555.293740Z-gate-d8edee",
+  "kind": "gate",
+  "at": 1795018555.29374,
+  "by": "local",
+  "results": {
+    "9hjBLBrc7WZW2H8UQvBAvG5WiTZotXUv2Bdcn4f4pump": {
+      "symbol": "DCTY",
+      "px": 0.00844,
+      "fails": []
+    },
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "px": 0.00361,
+      "fails": []
+    },
+    "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
+      "symbol": "CBUCKS",
+      "px": 0.00358,
+      "fails": [
+        "a wallet holds 13% of supply"
+      ]
+    },
+    "9rbKkz2BDQBVgZmrHY6d7PTq2ge91gkpEyE4y9PPpump": {
+      "symbol": "Leonida",
+      "px": 0.001933,
+      "fails": []
+    },
+    "7KBFymfGAe8MmKEuNersoM59TvpiHzZ76jP7rSLrpump": {
+      "symbol": "GTA",
+      "px": 0.001477,
+      "fails": []
+    },
+    "FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump": {
+      "symbol": "HOGE",
+      "px": 0.001426,
+      "fails": []
+    },
+    "6wiaCq8oQiupFfeDU4ouAuYnCKXCch581HAmpvrxpump": {
+      "symbol": "GTAVI",
+      "px": 0.00131,
+      "fails": []
+    },
+    "VAYMVikuYQpWz5sXCeCsQDeho2QcGqDSNq9rhCspump": {
+      "symbol": "JESTER",
+      "px": 0.001136,
+      "fails": []
+    }
+  }
+}
