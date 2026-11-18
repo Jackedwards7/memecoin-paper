@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.745749598125948,
+  "cash_sol": 6.495749598125948,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -145,7 +145,7 @@
       "tokens": 3965.020128794319,
       "entry_px": 0.00445542820116069,
       "entry_mc": 4362977,
-      "peak_px": 0.004603,
+      "peak_px": 0.004605,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -359,6 +359,69 @@
       },
       "reentry": true,
       "since_loss_h": 0.5
+    },
+    "6wiaCq8oQiupFfeDU4ouAuYnCKXCch581HAmpvrxpump": {
+      "symbol": "GTAVI",
+      "opened": "2026-11-18 06:11 UTC",
+      "cost_sol": 0.25,
+      "tokens": 6958.927226913015,
+      "entry_px": 0.002581407221866978,
+      "entry_mc": 2573017,
+      "peak_px": 0.002581407221866978,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-networks rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/2yp3bw83yqhdnd9h2tqx77zw6zvfqujta9chbbsvrjaj",
+      "v": 2,
+      "mev_sol": 0.006668444918644972,
+      "swaps": 1,
+      "entry_liq": 118807.09,
+      "at_entry": {
+        "px": 0.002581,
+        "liq": 118807.09,
+        "mc": 2573017,
+        "dex": "pumpswap",
+        "age_h": 6.02,
+        "vol_h1": 77905.53,
+        "vol_h24": 1230875.09,
+        "buys_h1": 5425,
+        "sells_h1": 2635,
+        "buys_h24": 54337,
+        "sells_h24": 21916,
+        "trades_h24": 76253,
+        "avg_trade": 16.14,
+        "m5": -0.78,
+        "h1": 0.41,
+        "h6": 668,
+        "h24": 6155,
+        "eligible": true,
+        "v": 3,
+        "pool": "2YP3Bw83YQHdnd9H2TqX77ZW6zVFqUjta9CHbBsvRJAJ",
+        "m5_raw": -0.78,
+        "buys_m5": 370,
+        "sells_m5": 183,
+        "buys_h6": 54180,
+        "sells_h6": 21871,
+        "vol_m5": 3136.59,
+        "vol_h6": 1204627.34,
+        "liq_base": 23109315,
+        "liq_quote": 788.5838,
+        "fdv": 2573017,
+        "boosts": 100,
+        "links": [
+          "telegram",
+          "twitter",
+          "website"
+        ],
+        "read": null
+      },
+      "reentry": false,
+      "since_loss_h": 9.8
     }
   },
   "closed": [
@@ -5251,10 +5314,11 @@
     "2026-11-17 18:42 UTC BUY RAMBO 0.25 SOL @ $0.010580698 (mc $10,438,775): v-networks rule",
     "2026-11-17 19:57 UTC SELL 100% three -> 0.202 SOL @ $0.0003555: time stop: 48h held, -10%, no take-profit",
     "2026-11-17 20:23 UTC SELL 100% GTA -> 0.146 SOL @ $0.0008284: event exit: price -21% in 5 minutes, -35% from entry",
-    "2026-11-17 20:50 UTC BUY GATO 0.25 SOL @ $0.0056814103 (mc $5,607,197): v-networks rule"
+    "2026-11-17 20:50 UTC BUY GATO 0.25 SOL @ $0.0056814103 (mc $5,607,197): v-networks rule",
+    "2026-11-18 06:11 UTC BUY GTAVI 0.25 SOL @ $0.0025814072 (mc $2,573,017): v-networks rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-18 06:05 UTC"
+  "last_mark": "2026-11-18 06:10 UTC"
 }
