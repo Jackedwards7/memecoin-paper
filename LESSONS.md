@@ -1,9 +1,9 @@
 # Lessons
 
-667 closed trades labelled, every book. Written by the bot.
+669 closed trades labelled, every book. Written by the bot.
 
 - **slow-bleed**: 219 trades, mean -27%. Rocco (v-unease): -35% over 15h; baton (v-unpaid): -13% over 48h
-- **other**: 203 trades, mean -32%. NIO (v-tight): stop-loss at -21%; GTA (v-tight): stop-loss at -21%
+- **other**: 205 trades, mean -32%. BAWSAQ (v-networks): event exit: price -24% in 5 minutes, -15% from entry; BAWSAQ (v-swing): event exit: price -24% in 5 minutes, -15% from entry
 - **won-held**: 119 trades, mean +31%. MEVS (v-no-spike): +13%, peak +66%; MEVS (v-velocity): +13%, peak +66%
 - **bought-spike**: 48 trades, mean -35%. BJB (v-unease): up 4646% in 24h at entry, peak +5%; BJB (v-velocity): up 4646% in 24h at entry, peak +5%
 - **won-trailed**: 43 trades, mean +63054%. BLOB (v-tight): +8%, peak +74%; BLOB (v-unpaid): +88%, peak +270%
