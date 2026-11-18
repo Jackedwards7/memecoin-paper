@@ -1045,7 +1045,7 @@
     "2026-11-17 12:16 UTC SELL 100% BIG -> 0.262 SOL @ $0.001496: time stop: 48h held, +15%, no take-profit",
     "2026-11-17 14:46 UTC SELL 100% BLOB -> 0.160 SOL @ $0.00954: event exit: price -31% in 5 minutes, -26% from entry"
   ],
-  "last_mark": "2026-11-18 06:10 UTC",
+  "last_mark": "2026-11-18 06:11 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1794979345,
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1794979345,
@@ -2418,7 +2418,8 @@
       "fails": [],
       "moves": {
         "1d": -0.9990176258228923,
-        "3d": -0.9990885538330856
+        "3d": -0.9990885538330856,
+        "7d": -0.9993622849861966
       }
     },
     "Hg3w7GdPViZ5URuCNnK6EwXLzSTmVwX6UXLeD6Pbpump": {
