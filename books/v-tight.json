@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 5.625245686112514,
+  "cash_sol": 5.795271243166913,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -299,22 +299,22 @@
       "symbol": "GTA",
       "opened": "2026-11-18 12:19 UTC",
       "cost_sol": 0.25,
-      "tokens": 11529.031625898258,
+      "tokens": 5764.515812949129,
       "entry_px": 0.0015483130395705905,
       "entry_mc": 1543300,
-      "peak_px": 0.00178,
+      "peak_px": 0.002312,
       "stop": -0.2,
       "tp1": 0.4,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-tight rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.17002555705439934,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/gqhhvhakqmrmzm8bhk9kscfn93xa7cbmowh4dupzs2a",
       "v": 2,
-      "mev_sol": 0.0067096081588835215,
-      "swaps": 1,
+      "mev_sol": 0.013442708078086323,
+      "swaps": 2,
       "entry_liq": 92126.5,
       "at_entry": {
         "px": 0.001548,
@@ -7189,10 +7189,11 @@
     "2026-11-18 11:47 UTC BUY GTAVI 0.25 SOL @ $0.002457393 (mc $2,449,313): v-tight rule",
     "2026-11-18 11:50 UTC SELL 100% GTAVI -> 0.167 SOL @ $0.001807: event exit: price -27% in 5 minutes, -26% from entry",
     "2026-11-18 12:19 UTC BUY GTA 0.25 SOL @ $0.001548313 (mc $1,543,300): v-tight rule",
-    "2026-11-18 12:47 UTC SELL 100% GATO -> 0.178 SOL @ $0.004538: stop-loss at -20%"
+    "2026-11-18 12:47 UTC SELL 100% GATO -> 0.178 SOL @ $0.004538: stop-loss at -20%",
+    "2026-11-18 13:00 UTC SELL 50% GTA -> 0.170 SOL @ $0.002312: take-profit at +49%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-18 12:56 UTC"
+  "last_mark": "2026-11-18 13:00 UTC"
 }
