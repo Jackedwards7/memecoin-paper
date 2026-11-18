@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.600563694012901,
+  "cash_sol": 6.350563694012901,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -152,7 +152,7 @@
       "tokens": 3965.020128794319,
       "entry_px": 0.00445542820116069,
       "entry_mc": 4362977,
-      "peak_px": 0.005268,
+      "peak_px": 0.005276,
       "stop": -0.4,
       "tp1": 1.5,
       "tp1_done": false,
@@ -366,6 +366,79 @@
       },
       "reentry": false,
       "since_loss_h": 0.4
+    },
+    "VAYMVikuYQpWz5sXCeCsQDeho2QcGqDSNq9rhCspump": {
+      "symbol": "JESTER",
+      "opened": "2026-11-18 19:33 UTC",
+      "cost_sol": 0.25,
+      "tokens": 11938.580304643496,
+      "entry_px": 0.001472303410579176,
+      "entry_mc": 1451474,
+      "peak_px": 0.001472303410579176,
+      "stop": -0.4,
+      "tp1": 1.5,
+      "tp1_done": false,
+      "thesis": "v-loose rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/ejhur4fvts85xqwskjuaoaubmavccedxutuppze9guen",
+      "v": 2,
+      "mev_sol": 0.006811061163329247,
+      "swaps": 1,
+      "entry_liq": 89037.37,
+      "at_entry": {
+        "px": 0.001472,
+        "liq": 89037.37,
+        "mc": 1451474,
+        "dex": "pumpswap",
+        "age_h": 28.86,
+        "vol_h1": 15043.41,
+        "vol_h24": 690759.66,
+        "buys_h1": 96,
+        "sells_h1": 71,
+        "buys_h24": 4392,
+        "sells_h24": 4070,
+        "trades_h24": 8462,
+        "avg_trade": 81.63,
+        "m5": 0.93,
+        "h1": 0.21,
+        "h6": 161,
+        "h24": 167,
+        "eligible": true,
+        "v": 3,
+        "pool": "EJHur4FVts85xqWskjUAoaUBMAvccEDXUTUpPZe9gUEn",
+        "m5_raw": 0.93,
+        "buys_m5": 3,
+        "sells_m5": 3,
+        "buys_h6": 1433,
+        "sells_h6": 1460,
+        "vol_m5": 68.38,
+        "vol_h6": 332997.19,
+        "liq_base": 30695072,
+        "liq_quote": 597.2588,
+        "fdv": 1451474,
+        "boosts": null,
+        "links": [
+          "twitter"
+        ],
+        "read": {
+          "swing": 0.0983,
+          "paid": 0.0011083013227803573,
+          "vs_paid": 0.3118,
+          "off_peak": -0.1748,
+          "accel": 0.069,
+          "candles": 96,
+          "unease": 1,
+          "known": 5,
+          "signs": [
+            "failed_high"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 0.5
     }
   },
   "closed": [
@@ -5629,10 +5702,11 @@
     "2026-11-18 16:52 UTC BUY DCTY 0.25 SOL @ $0.01023051 (mc $9,682,925): v-loose rule",
     "2026-11-18 17:30 UTC SELL 100% DCTY -> 0.160 SOL @ $0.007374: event exit: price -40% in 5 minutes, -28% from entry",
     "2026-11-18 17:56 UTC BUY Leonida 0.25 SOL @ $0.0018243301 (mc $1,817,328): v-loose rule",
-    "2026-11-18 19:03 UTC SELL 100% GTA -> 0.139 SOL @ $0.001187: event exit: price -22% in 5 minutes, -39% from entry"
+    "2026-11-18 19:03 UTC SELL 100% GTA -> 0.139 SOL @ $0.001187: event exit: price -22% in 5 minutes, -39% from entry",
+    "2026-11-18 19:33 UTC BUY JESTER 0.25 SOL @ $0.0014723034 (mc $1,451,474): v-loose rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-18 19:27 UTC"
+  "last_mark": "2026-11-18 19:32 UTC"
 }
