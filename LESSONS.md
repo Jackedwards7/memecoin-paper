@@ -1,9 +1,9 @@
 # Lessons
 
-707 closed trades labelled, every book. Written by the bot.
+709 closed trades labelled, every book. Written by the bot.
 
 - **slow-bleed**: 243 trades, mean -28%. RAMBO (v-swing): -25% over 13h; BIG (v-swing): -22% over 17h
-- **other**: 211 trades, mean -32%. BLOB (v-loose): event exit: price -31% in 5 minutes, -29% from entry; GTA (v-networks): event exit: price -21% in 5 minutes, -35% from entry
+- **other**: 213 trades, mean -32%. GTAVI (v-networks): event exit: price -41% in 5 minutes, -25% from entry; GTAVI (v-swing): event exit: price -41% in 5 minutes, -19% from entry
 - **won-held**: 121 trades, mean +30%. BIG (claude): +5%, peak +29%; BIG (mech): +5%, peak +29%
 - **bought-spike**: 48 trades, mean -35%. BJB (v-unease): up 4646% in 24h at entry, peak +5%; BJB (v-velocity): up 4646% in 24h at entry, peak +5%
 - **won-trailed**: 44 trades, mean +61622%. BLOB (v-unpaid): +88%, peak +270%; HOGE (v-tight): +16%, peak +89%
