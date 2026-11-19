@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.958240713419704,
+  "cash_sol": 8.708240713419704,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -72,6 +72,78 @@
       },
       "reentry": false,
       "since_loss_h": 28.0
+    },
+    "2bCCHQadi4QeHWPKG3w13siCyWWQPgkFtniouTqVpump": {
+      "symbol": "1",
+      "opened": "2026-11-19 12:16 UTC",
+      "cost_sol": 0.25,
+      "tokens": 25581.257012811846,
+      "entry_px": 0.0006986643576994211,
+      "entry_mc": 681476,
+      "peak_px": 0.0006986643576994211,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "Gate pass; 832h pumpswap coin, mc $681k, liq $79k (thin, near floor), 1h +17.5%, 24h +66%, 5m flat, 1h buys 86 vs sells 60; vol1h only $4k (modest). Other passes: GTASZN (12h, +1691% 24h vertical), HOGE (1h -12.6%, 5m -5.8%), Leonida (just stopped out) skipped; ANTS failed gate (copycat).",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/aqn7ukkysnazns61dvw2q6hqmm7wifsayjbon6fvwhgf",
+      "v": 2,
+      "mev_sol": 0.006701514542286557,
+      "swaps": 1,
+      "entry_liq": 79270.83,
+      "at_entry": {
+        "px": 0.0006985,
+        "liq": 79270.83,
+        "mc": 681476,
+        "dex": "pumpswap",
+        "age_h": 831.95,
+        "vol_h1": 4108.75,
+        "vol_h24": 217049.57,
+        "buys_h1": 87,
+        "sells_h1": 58,
+        "buys_h24": 2274,
+        "sells_h24": 2003,
+        "trades_h24": 4277,
+        "avg_trade": 50.75,
+        "m5": 0.68,
+        "h1": 18.92,
+        "h6": 0.85,
+        "h24": 67.33,
+        "eligible": true,
+        "v": 3,
+        "pool": "AQN7UkKYSnaZns61dVW2Q6hQmm7WiFSAyjBon6FVwhGf",
+        "m5_raw": 0.68,
+        "buys_m5": 8,
+        "sells_m5": 3,
+        "buys_h6": 407,
+        "sells_h6": 341,
+        "vol_m5": 69.38,
+        "vol_h6": 24772.33,
+        "liq_base": 57516696,
+        "liq_quote": 40247,
+        "fdv": 681476,
+        "boosts": 10,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.03,
+          "paid": 0.0006330146990284227,
+          "vs_paid": 0.0817,
+          "off_peak": -0.2985,
+          "accel": 0.0611,
+          "candles": 96,
+          "unease": 0,
+          "known": 2,
+          "signs": []
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 3.1
     }
   },
   "closed": [
@@ -1126,9 +1198,10 @@
     "2026-11-17 12:16 UTC SELL 100% BIG -> 0.262 SOL @ $0.001496: time stop: 48h held, +15%, no take-profit",
     "2026-11-17 14:46 UTC SELL 100% BLOB -> 0.160 SOL @ $0.00954: event exit: price -31% in 5 minutes, -26% from entry",
     "2026-11-19 08:16 UTC BUY Leonida 0.25 SOL @ $0.0013972868 (mc $1,391,536): Gate pass; 31h pumpswap coin, mc $1.38M, liq $91k (thin), 1h +0.4%, 24h +76%, 5m -2.5% (no spike), 1h buys 1461 vs sells 628, vol1h $49k. Other passes GATO (24h -53%), GTASZN (8.5h, +1384% vertical), HOGE (sellers lead) skipped; ANTS (copycat), CBUCKS (13% wallet) failed gate.",
-    "2026-11-19 09:12 UTC SELL 100% Leonida -> 0.132 SOL @ $0.0008238: event exit: price -28% in 5 minutes, -41% from entry"
+    "2026-11-19 09:12 UTC SELL 100% Leonida -> 0.132 SOL @ $0.0008238: event exit: price -28% in 5 minutes, -41% from entry",
+    "2026-11-19 12:16 UTC BUY 1 0.25 SOL @ $0.00069866436 (mc $681,476): Gate pass; 832h pumpswap coin, mc $681k, liq $79k (thin, near floor), 1h +17.5%, 24h +66%, 5m flat, 1h buys 86 vs sells 60; vol1h only $4k (modest). Other passes: GTASZN (12h, +1691% 24h vertical), HOGE (1h -12.6%, 5m -5.8%), Leonida (just stopped out) skipped; ANTS failed gate (copycat)."
   ],
-  "last_mark": "2026-11-19 12:06 UTC",
+  "last_mark": "2026-11-19 12:16 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1795087102,
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1795087102,
@@ -1138,13 +1211,13 @@
     "KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump": 1795087102,
     "NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump": 1795089031,
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1795087102,
-    "FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump": 1795089031,
+    "FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump": 1795090537.98267,
     "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": 1795087102,
-    "9rbKkz2BDQBVgZmrHY6d7PTq2ge91gkpEyE4y9PPpump": 1795087102,
+    "9rbKkz2BDQBVgZmrHY6d7PTq2ge91gkpEyE4y9PPpump": 1795090537.98267,
     "VAYMVikuYQpWz5sXCeCsQDeho2QcGqDSNq9rhCspump": 1795089031,
     "8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump": 1795089031,
-    "A4jXnWk1rDRDth6HmDASi45c89n1AguTHivAQPTVpump": 1795089031,
-    "2bCCHQadi4QeHWPKG3w13siCyWWQPgkFtniouTqVpump": 1795088071
+    "A4jXnWk1rDRDth6HmDASi45c89n1AguTHivAQPTVpump": 1795090537.98267,
+    "2bCCHQadi4QeHWPKG3w13siCyWWQPgkFtniouTqVpump": 1795090537.98267
   },
   "rejects": {
     "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
@@ -3502,6 +3575,18 @@
       "kind": "buy",
       "result": "bought Leonida 0.25 SOL @ $0.0013972868; control opened",
       "at": "2026-11-19 08:16 UTC"
+    },
+    {
+      "id": "20261119T121537.982670Z-gate-aa889b",
+      "kind": "gate",
+      "result": "recorded 5 gate results, 4 passed",
+      "at": "2026-11-19 12:16 UTC"
+    },
+    {
+      "id": "20261119T121546.566081Z-buy-486736",
+      "kind": "buy",
+      "result": "bought 1 0.25 SOL @ $0.00069866436; control opened",
+      "at": "2026-11-19 12:16 UTC"
     }
   ]
 }

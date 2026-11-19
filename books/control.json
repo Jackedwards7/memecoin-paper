@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.693110612607871,
+  "cash_sol": 8.443110612607871,
   "positions": {
     "8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump": {
       "symbol": "BLOB",
@@ -9,7 +9,7 @@
       "tokens": 5146.330485629984,
       "entry_px": 0.0034733826461228186,
       "entry_mc": 3442781,
-      "peak_px": 0.003839,
+      "peak_px": 0.003841,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -76,6 +76,79 @@
       },
       "reentry": false,
       "since_loss_h": 44.0
+    },
+    "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
+      "symbol": "JOB",
+      "opened": "2026-11-19 12:16 UTC",
+      "cost_sol": 0.25,
+      "tokens": 6451.546898691645,
+      "entry_px": 0.0027702987796034673,
+      "entry_mc": 2698354,
+      "peak_px": 0.0027702987796034673,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "control for 1: random pick from 13 other gate passes",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/hauvbmnthcfmg9srxmvz1gaxnpu955hkpdsasc2cx4c8",
+      "v": 2,
+      "mev_sol": 0.006701514542286557,
+      "swaps": 1,
+      "entry_liq": 172928.22,
+      "at_entry": {
+        "px": 0.00277,
+        "liq": 172928.22,
+        "mc": 2698354,
+        "dex": "pumpswap",
+        "age_h": 545.05,
+        "vol_h1": 35359.67,
+        "vol_h24": 981219.37,
+        "buys_h1": 157,
+        "sells_h1": 144,
+        "buys_h24": 3762,
+        "sells_h24": 4811,
+        "trades_h24": 8573,
+        "avg_trade": 114.45,
+        "m5": -1.43,
+        "h1": -0.81,
+        "h6": 1.53,
+        "h24": -11.47,
+        "eligible": true,
+        "v": 3,
+        "pool": "HAUVBmNthCFmG9SRXMvZ1GAXNpU955hkPdSAsC2cx4C8",
+        "m5_raw": -1.43,
+        "buys_m5": 10,
+        "sells_m5": 12,
+        "buys_h6": 886,
+        "sells_h6": 1035,
+        "vol_m5": 2311.05,
+        "vol_h6": 235046.94,
+        "liq_base": 31346573,
+        "liq_quote": 1154.3994,
+        "fdv": 2698354,
+        "boosts": null,
+        "links": [
+          "telegram",
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0233,
+          "paid": 0.002649274870629534,
+          "vs_paid": 0.1,
+          "off_peak": -0.1016,
+          "accel": 0.0498,
+          "candles": 96,
+          "unease": 0,
+          "known": 5,
+          "signs": []
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 48.0
     }
   },
   "closed": [
@@ -949,10 +1022,11 @@
     "2026-11-16 08:15 UTC BUY BJB 0.25 SOL @ $0.0018033259 (mc $1,798,435): control for BLOB: random pick from 12 other gate passes",
     "2026-11-16 11:31 UTC SELL 100% BJB -> 0.113 SOL @ $0.0009279: event exit: price -47% in 5 minutes, -49% from entry",
     "2026-11-17 12:16 UTC SELL 100% Punch -> 0.216 SOL @ $0.0002195: time stop: 48h held, -5%, no take-profit",
-    "2026-11-19 08:16 UTC BUY BLOB 0.25 SOL @ $0.0034733826 (mc $3,442,781): control for Leonida: random pick from 13 other gate passes"
+    "2026-11-19 08:16 UTC BUY BLOB 0.25 SOL @ $0.0034733826 (mc $3,442,781): control for Leonida: random pick from 13 other gate passes",
+    "2026-11-19 12:16 UTC BUY JOB 0.25 SOL @ $0.0027702988 (mc $2,698,354): control for 1: random pick from 13 other gate passes"
   ],
   "gate_pass": {},
   "rejects": {},
-  "last_mark": "2026-11-19 12:06 UTC",
+  "last_mark": "2026-11-19 12:16 UTC",
   "passes": {}
 }

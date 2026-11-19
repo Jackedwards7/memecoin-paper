@@ -7,5 +7,7 @@
   "sol": 0.25,
   "thesis": "Gate pass; 832h pumpswap coin, mc $681k, liq $79k (thin, near floor), 1h +17.5%, 24h +66%, 5m flat, 1h buys 86 vs sells 60; vol1h only $4k (modest). Other passes: GTASZN (12h, +1691% 24h vertical), HOGE (1h -12.6%, 5m -5.8%), Leonida (just stopped out) skipped; ANTS failed gate (copycat).",
   "stop": -0.35,
-  "tp1": 1.0
+  "tp1": 1.0,
+  "result": "bought 1 0.25 SOL @ $0.00069866436; control opened",
+  "applied_at": "2026-11-19 12:16 UTC"
 }
