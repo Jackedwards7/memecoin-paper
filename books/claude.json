@@ -1045,7 +1045,7 @@
     "2026-11-17 12:16 UTC SELL 100% BIG -> 0.262 SOL @ $0.001496: time stop: 48h held, +15%, no take-profit",
     "2026-11-17 14:46 UTC SELL 100% BLOB -> 0.160 SOL @ $0.00954: event exit: price -31% in 5 minutes, -26% from entry"
   ],
-  "last_mark": "2026-11-19 02:24 UTC",
+  "last_mark": "2026-11-19 02:29 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1795052496,
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1795052496,
@@ -1060,7 +1060,7 @@
     "9rbKkz2BDQBVgZmrHY6d7PTq2ge91gkpEyE4y9PPpump": 1795052496,
     "VAYMVikuYQpWz5sXCeCsQDeho2QcGqDSNq9rhCspump": 1795054424,
     "8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump": 1795054424,
-    "9hjBLBrc7WZW2H8UQvBAvG5WiTZotXUv2Bdcn4f4pump": 1795051536,
+    "9hjBLBrc7WZW2H8UQvBAvG5WiTZotXUv2Bdcn4f4pump": 1795055384,
     "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": 1795052496
   },
   "rejects": {
@@ -1795,7 +1795,8 @@
       ],
       "moves": {
         "1d": -0.8207960199004976,
-        "3d": -0.7696517412935324
+        "3d": -0.7696517412935324,
+        "7d": -0.9749452736318408
       }
     },
     "77HqxiDCgYfXUsDXDD6YVefPhTTz1Z2n8jX4gTxipump": {
@@ -2058,6 +2059,15 @@
       "px": 0.03895,
       "fails": [
         "copycat: an earlier 'VICE 6' exists (S2uBAP)"
+      ],
+      "moves": {}
+    },
+    "2NDTHcREyKhoJp3YCTHSm1bmPor15UJn65U4muAHpump": {
+      "symbol": "GTV",
+      "at": 1795055384,
+      "px": 0.0006019,
+      "fails": [
+        "a wallet holds 19% of supply"
       ],
       "moves": {}
     }
