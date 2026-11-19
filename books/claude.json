@@ -1201,7 +1201,7 @@
     "2026-11-19 09:12 UTC SELL 100% Leonida -> 0.132 SOL @ $0.0008238: event exit: price -28% in 5 minutes, -41% from entry",
     "2026-11-19 12:16 UTC BUY 1 0.25 SOL @ $0.00069866436 (mc $681,476): Gate pass; 832h pumpswap coin, mc $681k, liq $79k (thin, near floor), 1h +17.5%, 24h +66%, 5m flat, 1h buys 86 vs sells 60; vol1h only $4k (modest). Other passes: GTASZN (12h, +1691% 24h vertical), HOGE (1h -12.6%, 5m -5.8%), Leonida (just stopped out) skipped; ANTS failed gate (copycat)."
   ],
-  "last_mark": "2026-11-19 14:09 UTC",
+  "last_mark": "2026-11-19 14:14 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1795094806,
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1795094806,
@@ -1218,7 +1218,7 @@
     "8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump": 1795096734,
     "A4jXnWk1rDRDth6HmDASi45c89n1AguTHivAQPTVpump": 1795092883,
     "2bCCHQadi4QeHWPKG3w13siCyWWQPgkFtniouTqVpump": 1795095774,
-    "9hjBLBrc7WZW2H8UQvBAvG5WiTZotXUv2Bdcn4f4pump": 1795093846
+    "9hjBLBrc7WZW2H8UQvBAvG5WiTZotXUv2Bdcn4f4pump": 1795097699
   },
   "rejects": {
     "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump": {
@@ -2231,6 +2231,17 @@
       "px": 0.0006019,
       "fails": [
         "a wallet holds 19% of supply"
+      ],
+      "moves": {}
+    },
+    "8HXsCMy8ma8QP2yVZXG5SZYyaTZw5AUrUDha1G4upump": {
+      "symbol": "Founder",
+      "at": 1795097699,
+      "px": 0.0004712,
+      "fails": [
+        "RugCheck danger: Large Amount of LP Unlocked, Low Liquidity",
+        "deepest pool is meteoraDlmm, not a graduation pool",
+        "a wallet holds 10% of supply"
       ],
       "moves": {}
     }
