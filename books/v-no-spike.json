@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6779.911867934048,
+  "cash_sol": 6780.142253828082,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -288,22 +288,22 @@
       "symbol": "JESTER",
       "opened": "2026-11-18 21:09 UTC",
       "cost_sol": 0.25,
-      "tokens": 12147.55180783335,
+      "tokens": 6073.775903916675,
       "entry_px": 0.0014412996772493526,
       "entry_mc": 1421229,
-      "peak_px": 0.00259,
+      "peak_px": 0.002914,
       "stop": -0.35,
       "tp1": 1.0,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-no-spike rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.23038589403405393,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/ejhur4fvts85xqwskjuaoaubmavccedxutuppze9guen",
       "v": 2,
-      "mev_sol": 0.006837139340899768,
-      "swaps": 1,
+      "mev_sol": 0.013640786095560267,
+      "swaps": 2,
       "entry_liq": 87911.52,
       "at_entry": {
         "px": 0.001441,
@@ -3796,10 +3796,11 @@
     "2026-11-18 14:12 UTC BUY Rocco 0.25 SOL @ $0.00090287041 (mc $880,031): v-no-spike rule",
     "2026-11-18 16:02 UTC SELL 100% Rocco -> 0.143 SOL @ $0.0005661: stop-loss at -37%",
     "2026-11-18 21:09 UTC BUY JESTER 0.25 SOL @ $0.0014412997 (mc $1,421,229): v-no-spike rule",
-    "2026-11-19 01:03 UTC SELL 100% JOB -> 0.264 SOL @ $0.002489: time stop: 48h held, +18%, no take-profit"
+    "2026-11-19 01:03 UTC SELL 100% JOB -> 0.264 SOL @ $0.002489: time stop: 48h held, +18%, no take-profit",
+    "2026-11-19 02:01 UTC SELL 50% JESTER -> 0.230 SOL @ $0.002914: take-profit at +102%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-19 02:00 UTC"
+  "last_mark": "2026-11-19 02:01 UTC"
 }
