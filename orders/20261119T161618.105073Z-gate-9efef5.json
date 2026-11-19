@@ -1,0 +1,27 @@
+{
+  "id": "20261119T161618.105073Z-gate-9efef5",
+  "kind": "gate",
+  "at": 1795104978.105073,
+  "by": "local",
+  "results": {
+    "ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump": {
+      "symbol": "ANTS",
+      "px": 0.007216,
+      "fails": [
+        "copycat: an earlier 'Anthropic' exists (BTZK1B)"
+      ]
+    },
+    "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
+      "symbol": "CBUCKS",
+      "px": 0.003626,
+      "fails": [
+        "a wallet holds 13% of supply"
+      ]
+    },
+    "FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump": {
+      "symbol": "HOGE",
+      "px": 0.001401,
+      "fails": []
+    }
+  }
+}
