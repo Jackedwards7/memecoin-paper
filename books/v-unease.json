@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.04015660746481,
+  "cash_sol": 6.274544122074202,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -300,22 +300,22 @@
       "symbol": "JESTER",
       "opened": "2026-11-18 16:20 UTC",
       "cost_sol": 0.25,
-      "tokens": 15661.211795004569,
+      "tokens": 7830.605897502284,
       "entry_px": 0.001115264912359542,
       "entry_mc": 1099202,
-      "peak_px": 0.002172,
+      "peak_px": 0.002282,
       "stop": -0.35,
       "tp1": 1.0,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-unease rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.23438751460939272,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/ejhur4fvts85xqwskjuaoaubmavccedxutuppze9guen",
       "v": 2,
-      "mev_sol": 0.006853070175438597,
-      "swaps": 1,
+      "mev_sol": 0.013707079771052032,
+      "swaps": 2,
       "entry_liq": 76771.05,
       "at_entry": {
         "px": 0.001115,
@@ -6864,10 +6864,11 @@
     "2026-11-18 19:43 UTC SELL 100% DESSA -> 0.260 SOL @ $0.005191: time stop: 48h held, +17%, no take-profit",
     "2026-11-18 20:21 UTC BUY DCTY 0.25 SOL @ $0.013510575 (mc $12,784,082): v-unease rule",
     "2026-11-18 20:32 UTC SELL 100% DCTY -> 0.172 SOL @ $0.01021: event exit: price -23% in 5 minutes, -24% from entry",
-    "2026-11-18 21:41 UTC BUY HOGE 0.25 SOL @ $0.0013941757 (mc $1,332,576): v-unease rule"
+    "2026-11-18 21:41 UTC BUY HOGE 0.25 SOL @ $0.0013941757 (mc $1,332,576): v-unease rule",
+    "2026-11-19 01:38 UTC SELL 50% JESTER -> 0.234 SOL @ $0.002282: take-profit at +105%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-19 01:34 UTC"
+  "last_mark": "2026-11-19 01:38 UTC"
 }
