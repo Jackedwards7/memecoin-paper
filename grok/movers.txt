@@ -1,12 +1,12 @@
-MOVERS 2026-11-19T13:10:46Z
-6EU6nYprvP15NrWHMkCnLcC1pvpnSj9pxSVLP1Ppump EXEN +7%
-Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT +7%
-5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump swordcat +8%
-FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump HOGE +8%
-9rbKkz2BDQBVgZmrHY6d7PTq2ge91gkpEyE4y9PPpump Leonida +78%
-DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin -43%
-A4jXnWk1rDRDth6HmDASi45c89n1AguTHivAQPTVpump GTASZN -31%
-ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -24%
-4B8CdHPZ8ng1CtMP2Jk2W8wGAwJ5nJnap1deVsz2pump BUTTHOLE -19%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -15%
+MOVERS 2026-11-19T13:26:46Z
+Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT +6%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +14%
+HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO +14%
+FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump HOGE +19%
+9rbKkz2BDQBVgZmrHY6d7PTq2ge91gkpEyE4y9PPpump Leonida +53%
+DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin -27%
+4B8CdHPZ8ng1CtMP2Jk2W8wGAwJ5nJnap1deVsz2pump BUTTHOLE -17%
+ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump ANTS -9%
+5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -9%
+Fn95NtGXWPaJXc4N5y9rVkUq1NwZbjBNJzPVvNRLpump SHIT -9%
 END
