@@ -1,11 +1,11 @@
 # Lessons
 
-709 closed trades labelled, every book. Written by the bot.
+713 closed trades labelled, every book. Written by the bot.
 
-- **slow-bleed**: 243 trades, mean -28%. RAMBO (v-swing): -25% over 13h; BIG (v-swing): -22% over 17h
-- **other**: 213 trades, mean -32%. GTAVI (v-networks): event exit: price -41% in 5 minutes, -25% from entry; GTAVI (v-swing): event exit: price -41% in 5 minutes, -19% from entry
+- **slow-bleed**: 245 trades, mean -28%. Rocco (v-tight): -28% over 14h; Rocco (v-dip): -36% over 36h
+- **other**: 214 trades, mean -32%. GTAVI (v-swing): event exit: price -41% in 5 minutes, -19% from entry; Rocco (v-swing): event exit: price -21% in 5 minutes, -35% from entry
 - **won-held**: 121 trades, mean +30%. BIG (claude): +5%, peak +29%; BIG (mech): +5%, peak +29%
-- **bought-spike**: 48 trades, mean -35%. BJB (v-unease): up 4646% in 24h at entry, peak +5%; BJB (v-velocity): up 4646% in 24h at entry, peak +5%
+- **bought-spike**: 49 trades, mean -35%. BJB (v-velocity): up 4646% in 24h at entry, peak +5%; GTAVI (v-tight): up 5854% in 24h at entry, peak +0%
 - **won-trailed**: 44 trades, mean +61622%. BLOB (v-unpaid): +88%, peak +270%; HOGE (v-tight): +16%, peak +89%
 - **rug**: 19 trades, mean -100%. SCAMSON (v-tight): event exit: liquidity down 99% since entry, -100% from entry; Anthropig (v-swing): event exit: liquidity down 98% since entry, -100% from entry
 - **liquidity-pulled**: 11 trades, mean -78%. OnlyCats (v-velocity): event exit: liquidity down 56% since entry, -80% from entry; BTX (v-unpaid): event exit: liquidity down 42% since entry, -65% from entry

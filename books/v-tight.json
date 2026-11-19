@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 5.605010382231747,
+  "cash_sol": 5.355010382231747,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -368,6 +368,78 @@
       },
       "reentry": true,
       "since_loss_h": 0.9
+    },
+    "2bCCHQadi4QeHWPKG3w13siCyWWQPgkFtniouTqVpump": {
+      "symbol": "1",
+      "opened": "2026-11-19 11:51 UTC",
+      "cost_sol": 0.25,
+      "tokens": 26166.42605536998,
+      "entry_px": 0.0006858631538760307,
+      "entry_mc": 668996,
+      "peak_px": 0.0006858631538760307,
+      "stop": -0.2,
+      "tp1": 0.4,
+      "tp1_done": false,
+      "thesis": "v-tight rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/aqn7ukkysnazns61dvw2q6hqmm7wifsayjbon6fvwhgf",
+      "v": 2,
+      "mev_sol": 0.006674676278200508,
+      "swaps": 1,
+      "entry_liq": 78707.58,
+      "at_entry": {
+        "px": 0.0006857,
+        "liq": 78707.58,
+        "mc": 668996,
+        "dex": "pumpswap",
+        "age_h": 831.53,
+        "vol_h1": 4243.77,
+        "vol_h24": 216755.03,
+        "buys_h1": 73,
+        "sells_h1": 65,
+        "buys_h24": 2251,
+        "sells_h24": 1992,
+        "trades_h24": 4243,
+        "avg_trade": 51.09,
+        "m5": 0.72,
+        "h1": 11.1,
+        "h6": 1.91,
+        "h24": 63.17,
+        "eligible": true,
+        "v": 3,
+        "pool": "AQN7UkKYSnaZns61dVW2Q6hQmm7WiFSAyjBon6FVwhGf",
+        "m5_raw": 0.72,
+        "buys_m5": 9,
+        "sells_m5": 2,
+        "buys_h6": 412,
+        "sells_h6": 367,
+        "vol_m5": 269.22,
+        "vol_h6": 25631.17,
+        "liq_base": 58201801,
+        "liq_quote": 39759,
+        "fdv": 668996,
+        "boosts": 10,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0287,
+          "paid": 0.0006328417793782561,
+          "vs_paid": 0.0299,
+          "off_peak": -0.3323,
+          "accel": 0.0018,
+          "candles": 96,
+          "unease": 0,
+          "known": 2,
+          "signs": []
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 3.4
     }
   },
   "closed": [
@@ -7770,10 +7842,11 @@
     "2026-11-19 07:02 UTC BUY HOGE 0.25 SOL @ $0.0011331627 (mc $1,083,303): v-tight rule",
     "2026-11-19 08:30 UTC SELL 100% GTASZN -> 0.181 SOL @ $0.001181: stop-loss at -20%",
     "2026-11-19 09:26 UTC BUY BLOB 0.25 SOL @ $0.0035223845 (mc $3,491,976): v-tight rule",
-    "2026-11-19 11:48 UTC SELL 100% JESTER -> 0.129 SOL @ $0.001739: trailing stop: 40% off peak, +18% from entry"
+    "2026-11-19 11:48 UTC SELL 100% JESTER -> 0.129 SOL @ $0.001739: trailing stop: 40% off peak, +18% from entry",
+    "2026-11-19 11:51 UTC BUY 1 0.25 SOL @ $0.00068586315 (mc $668,996): v-tight rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-19 11:48 UTC"
+  "last_mark": "2026-11-19 11:50 UTC"
 }
