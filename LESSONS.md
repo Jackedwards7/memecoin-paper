@@ -1,8 +1,8 @@
 # Lessons
 
-757 closed trades labelled, every book. Written by the bot.
+761 closed trades labelled, every book. Written by the bot.
 
-- **slow-bleed**: 259 trades, mean -28%. GATO (v-loose): -47% over 20h; JOB (v-mature): -8% over 48h
+- **slow-bleed**: 263 trades, mean -28%. NIO (v-momentum): -18% over 48h; NIO (v-velocity): -18% over 48h
 - **other**: 229 trades, mean -32%. DCTY (v-mature): event exit: price -23% in 5 minutes, -12% from entry; DCTY (v-momentum): event exit: price -23% in 5 minutes, -21% from entry
 - **won-held**: 127 trades, mean +29%. DESSA (v-unease): +4%, peak +19%; DESSA (v-velocity): +4%, peak +19%
 - **bought-spike**: 54 trades, mean -35%. DCTY (v-tight): up 32854% in 24h at entry, peak +4%; DCTY (v-unease): up 32854% in 24h at entry, peak +4%
