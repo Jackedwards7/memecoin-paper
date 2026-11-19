@@ -1,12 +1,12 @@
-MOVERS 2026-11-19T01:25:36Z
-DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin +15%
-VAYMVikuYQpWz5sXCeCsQDeho2QcGqDSNq9rhCspump JESTER +15%
-nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity +22%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca +23%
-pSo1f9nQXWgXibFtKf7NWYxb5enAM4qfP6UJSiXRQfL PSOL +24%
-Fn95NtGXWPaJXc4N5y9rVkUq1NwZbjBNJzPVvNRLpump SHIT -17%
-9rbKkz2BDQBVgZmrHY6d7PTq2ge91gkpEyE4y9PPpump Leonida -9%
-9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB -7%
-CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump Kimchi -7%
-C5xph2yL6gMdxmuLGxJBkGpmuDFfyi5fqkBNhvL6pump BTC -7%
+MOVERS 2026-11-19T01:41:36Z
+Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT +7%
+nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity +13%
+DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin +20%
+HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump Rocco +20%
+VAYMVikuYQpWz5sXCeCsQDeho2QcGqDSNq9rhCspump JESTER +65%
+Fn95NtGXWPaJXc4N5y9rVkUq1NwZbjBNJzPVvNRLpump SHIT -14%
+FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump HOGE -12%
+5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -9%
+Dfh5DzRgSvvCFDoYc2ciTkMrbDfRKybA4SoFbPmApump pippin -8%
+4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao -7%
 END
