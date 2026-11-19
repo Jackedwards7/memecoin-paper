@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.014002817182762,
+  "cash_sol": 8.16049841075688,
   "positions": {
     "KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump": {
       "symbol": "RAMBO",
@@ -223,83 +223,6 @@
       "reentry": true,
       "since_loss_h": 24.2
     },
-    "5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump": {
-      "symbol": "Max",
-      "opened": "2026-11-18 15:00 UTC",
-      "cost_sol": 0.25,
-      "tokens": 11852.877112890605,
-      "entry_px": 0.001494167815233592,
-      "entry_mc": 1490199,
-      "peak_px": 0.001516,
-      "stop": -0.35,
-      "tp1": 1.0,
-      "tp1_done": false,
-      "thesis": "v-mature rule",
-      "rugcheck": 29,
-      "risks": [
-        "Copycat token"
-      ],
-      "realised_sol": 0.0,
-      "dex": "pumpswap",
-      "url": "https://dexscreener.com/solana/eoe22hdca9rhtbwkl6nnzmzxfuzf35xkxobcvfaf1vwq",
-      "v": 2,
-      "mev_sol": 0.0067613252197430695,
-      "swaps": 1,
-      "entry_liq": 164587.71,
-      "at_entry": {
-        "px": 0.001494,
-        "liq": 164587.71,
-        "mc": 1490199,
-        "dex": "pumpswap",
-        "age_h": 161.99,
-        "vol_h1": 51098.78,
-        "vol_h24": 844083.8,
-        "buys_h1": 175,
-        "sells_h1": 221,
-        "buys_h24": 4147,
-        "sells_h24": 4485,
-        "trades_h24": 8632,
-        "avg_trade": 97.79,
-        "m5": -3.94,
-        "h1": -17.12,
-        "h6": 10.97,
-        "h24": 112,
-        "eligible": true,
-        "v": 3,
-        "pool": "Eoe22HdCa9rhtBwKL6nNZmZxfuzF35xkxobcvfaF1vWQ",
-        "m5_raw": -3.94,
-        "buys_m5": 19,
-        "sells_m5": 16,
-        "buys_h6": 491,
-        "sells_h6": 690,
-        "vol_m5": 4976.47,
-        "vol_h6": 137281.66,
-        "liq_base": 55300545,
-        "liq_quote": 1108.1246,
-        "fdv": 1490199,
-        "boosts": null,
-        "links": [
-          "instagram",
-          "telegram",
-          "website"
-        ],
-        "read": {
-          "swing": 0.058,
-          "paid": 0.001226021468373778,
-          "vs_paid": 0.3301,
-          "off_peak": -0.1457,
-          "accel": 0.1558,
-          "candles": 96,
-          "unease": 1,
-          "known": 5,
-          "signs": [
-            "sellers"
-          ]
-        }
-      },
-      "reentry": true,
-      "since_loss_h": 0.1
-    },
     "8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump": {
       "symbol": "BLOB",
       "opened": "2026-11-18 15:32 UTC",
@@ -307,7 +230,7 @@
       "tokens": 5416.24844510529,
       "entry_px": 0.0032643697347336685,
       "entry_mc": 3235528,
-      "peak_px": 0.004478,
+      "peak_px": 0.004656,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -2586,6 +2509,89 @@
       "pnl_pct": -0.1829575787021983,
       "exit_reason": "event exit: price -23% in 5 minutes, -12% from entry",
       "exit_px": 0.01021
+    },
+    {
+      "symbol": "Max",
+      "opened": "2026-11-18 15:00 UTC",
+      "cost_sol": 0.25,
+      "tokens": 0.0,
+      "entry_px": 0.001494167815233592,
+      "entry_mc": 1490199,
+      "peak_px": 0.001516,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-mature rule",
+      "rugcheck": 29,
+      "risks": [
+        "Copycat token"
+      ],
+      "realised_sol": 0.1464955935741174,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/eoe22hdca9rhtbwkl6nnzmzxfuzf35xkxobcvfaf1vwq",
+      "v": 2,
+      "mev_sol": 0.013548348431362454,
+      "swaps": 2,
+      "entry_liq": 164587.71,
+      "at_entry": {
+        "px": 0.001494,
+        "liq": 164587.71,
+        "mc": 1490199,
+        "dex": "pumpswap",
+        "age_h": 161.99,
+        "vol_h1": 51098.78,
+        "vol_h24": 844083.8,
+        "buys_h1": 175,
+        "sells_h1": 221,
+        "buys_h24": 4147,
+        "sells_h24": 4485,
+        "trades_h24": 8632,
+        "avg_trade": 97.79,
+        "m5": -3.94,
+        "h1": -17.12,
+        "h6": 10.97,
+        "h24": 112,
+        "eligible": true,
+        "v": 3,
+        "pool": "Eoe22HdCa9rhtBwKL6nNZmZxfuzF35xkxobcvfaF1vWQ",
+        "m5_raw": -3.94,
+        "buys_m5": 19,
+        "sells_m5": 16,
+        "buys_h6": 491,
+        "sells_h6": 690,
+        "vol_m5": 4976.47,
+        "vol_h6": 137281.66,
+        "liq_base": 55300545,
+        "liq_quote": 1108.1246,
+        "fdv": 1490199,
+        "boosts": null,
+        "links": [
+          "instagram",
+          "telegram",
+          "website"
+        ],
+        "read": {
+          "swing": 0.058,
+          "paid": 0.001226021468373778,
+          "vs_paid": 0.3301,
+          "off_peak": -0.1457,
+          "accel": 0.1558,
+          "candles": 96,
+          "unease": 1,
+          "known": 5,
+          "signs": [
+            "sellers"
+          ]
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 0.1,
+      "mint": "5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump",
+      "closed": "2026-11-19 01:00 UTC",
+      "pnl_sol": -0.1035044064258826,
+      "pnl_pct": -0.4140176257035304,
+      "exit_reason": "stop-loss at -35%",
+      "exit_px": 0.0009673
     }
   ],
   "log": [
@@ -2652,10 +2658,11 @@
     "2026-11-18 15:32 UTC BUY BLOB 0.25 SOL @ $0.0032643697 (mc $3,235,528): v-mature rule",
     "2026-11-18 18:38 UTC SELL 100% JOB -> 0.231 SOL @ $0.002564: time stop: 48h held, +5%, no take-profit",
     "2026-11-18 18:44 UTC BUY DCTY 0.25 SOL @ $0.011590545 (mc $10,962,346): v-mature rule",
-    "2026-11-18 20:32 UTC SELL 100% DCTY -> 0.204 SOL @ $0.01021: event exit: price -23% in 5 minutes, -12% from entry"
+    "2026-11-18 20:32 UTC SELL 100% DCTY -> 0.204 SOL @ $0.01021: event exit: price -23% in 5 minutes, -12% from entry",
+    "2026-11-19 01:00 UTC SELL 100% Max -> 0.146 SOL @ $0.0009673: stop-loss at -35%"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-19 00:53 UTC"
+  "last_mark": "2026-11-19 01:00 UTC"
 }
