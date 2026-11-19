@@ -1,0 +1,35 @@
+{
+  "id": "20261119T121537.982670Z-gate-aa889b",
+  "kind": "gate",
+  "at": 1795090537.98267,
+  "by": "local",
+  "results": {
+    "ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump": {
+      "symbol": "ANTS",
+      "px": 0.01754,
+      "fails": [
+        "copycat: an earlier 'Anthropic' exists (BTZK1B)"
+      ]
+    },
+    "2bCCHQadi4QeHWPKG3w13siCyWWQPgkFtniouTqVpump": {
+      "symbol": "1",
+      "px": 0.0006975,
+      "fails": []
+    },
+    "A4jXnWk1rDRDth6HmDASi45c89n1AguTHivAQPTVpump": {
+      "symbol": "GTASZN",
+      "px": 0.001821,
+      "fails": []
+    },
+    "9rbKkz2BDQBVgZmrHY6d7PTq2ge91gkpEyE4y9PPpump": {
+      "symbol": "Leonida",
+      "px": 0.001423,
+      "fails": []
+    },
+    "FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump": {
+      "symbol": "HOGE",
+      "px": 0.001168,
+      "fails": []
+    }
+  }
+}
