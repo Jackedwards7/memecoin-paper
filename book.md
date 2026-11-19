@@ -8,12 +8,12 @@ area: trading
 *Paper only: simulated fills from live DexScreener prices, 1.50% fee each side plus a size/liquidity
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
-**Equity 9.514 SOL** (start 10.0 SOL, -4.9%) · cash 8.708 SOL ·
-open 2 · closed 20 (6 won) · SOL $74.38 · marked 2026-11-19 15:35 UTC
+**Equity 9.512 SOL** (start 10.0 SOL, -4.9%) · cash 8.708 SOL ·
+open 2 · closed 20 (6 won) · SOL $73.70 · marked 2026-11-19 15:46 UTC
 
 **Benchmark (vs just holding SOL): -4.9%.** The book is counted in SOL, so its SOL
-return *is* its edge over holding SOL. In dollars: $708 vs $949 at the start
-(-25.4%); SOL itself moved -21.6%.
+return *is* its edge over holding SOL. In dollars: $701 vs $949 at the start
+(-26.1%); SOL itself moved -22.3%.
 Review on 2026-11-30 or after 30 closed v2 trades (13/30), rules unchanged until then.
 
 ## v2 test (from 2026-11-03 01:30 UTC)
@@ -23,11 +23,11 @@ control position on a random gate pass (`control.json`, same mechanical exits, n
 
 | Arm | Closed | Won | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|
-| Picks | 13 | 4 | +0.359 | +9.6% |
-| Control | 13 | 0 | -1.044 | -27.8% |
+| Picks | 13 | 4 | +0.357 | +9.5% |
+| Control | 13 | 0 | -1.030 | -27.5% |
 
 Costs in every fill: 1.5% fee each side, size/liquidity slippage, and a $0.50 sandwich charge per swap.
-If every swap were sandwiched at the $5 median: picks -1.335 SOL, control -2.617 SOL.
+If every swap were sandwiched at the $5 median: picks -1.353 SOL, control -2.617 SOL.
 
 **Gate value** (raw price moves, no costs; the gate earns its keep if passes beat rejects):
 passes 65 tracked, median 1d -63%, 3d -96%, 7d -100% · rejects 80 tracked, median 1d -58%, 3d -82%, 7d -98%.
@@ -39,19 +39,19 @@ Same gate, size, costs and exit code as the picks; rules in `CLAUDE.md`. Judged 
 
 | Arm | Closed | Won | Open | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|---|
-| mech | 11 | 3 | 2 | +0.412 | +12.7% |
-| v-dip | 3 | 0 | 2 | -0.215 | -17.2% |
-| v-loose | 71 | 17 | 5 | -2.134 | -11.2% |
-| v-low-bundle | 75 | 17 | 6 | -3.331 | -16.4% |
-| v-mature | 32 | 8 | 2 | -0.999 | -11.8% |
-| v-momentum | 75 | 17 | 6 | -3.331 | -16.4% |
-| v-networks | 71 | 18 | 4 | -1.901 | -10.1% |
-| v-no-spike | 46 | 15 | 4 | +6771.519 | +54172.2% |
-| v-swing | 96 | 20 | 5 | -3.264 | -12.9% |
-| v-tight | 93 | 27 | 5 | -2.755 | -11.2% |
-| v-unease | 82 | 19 | 6 | -2.058 | -9.4% |
-| v-unpaid | 49 | 6 | 2 | -4.547 | -35.7% |
-| v-velocity | 72 | 18 | 6 | -2.365 | -12.1% |
+| mech | 11 | 3 | 2 | +0.409 | +12.6% |
+| v-dip | 3 | 0 | 2 | -0.214 | -17.1% |
+| v-loose | 71 | 17 | 6 | -2.134 | -11.1% |
+| v-low-bundle | 75 | 17 | 6 | -3.309 | -16.3% |
+| v-mature | 32 | 8 | 2 | -0.994 | -11.7% |
+| v-momentum | 75 | 17 | 6 | -3.309 | -16.3% |
+| v-networks | 71 | 18 | 4 | -1.888 | -10.1% |
+| v-no-spike | 46 | 15 | 4 | +6771.531 | +54172.3% |
+| v-swing | 96 | 20 | 5 | -3.250 | -12.9% |
+| v-tight | 93 | 27 | 5 | -2.736 | -11.2% |
+| v-unease | 82 | 19 | 6 | -2.040 | -9.3% |
+| v-unpaid | 49 | 6 | 2 | -4.557 | -35.7% |
+| v-velocity | 72 | 18 | 6 | -2.347 | -12.0% |
 | v-x-exit | 0 | 0 | 0 | +0.000 | +0.0% |
 | v-x-organic | 0 | 0 | 0 | +0.000 | +0.0% |
 
@@ -65,18 +65,18 @@ Each coin against its own normal. Information only: no rule on this book reads i
 
 | Coin | Normal 15m swing | vs average paid | Off peak | Unease | Stop, in swings |
 |---|---|---|---|---|---|
-| BRUH | 2.5% | -0% | -14% | 2 of 5 | 13.8 |
-| 1 | 3.1% | +10% | -27% | 0 of 3 | 11.4 |
+| BRUH | 2.5% | -1% | -15% | 2 of 5 | 13.9 |
+| 1 | 3.1% | +13% | -24% | 0 of 5 | 11.4 |
 
 ## Dataset
 
 Last check 2026-11-18: 90 of 96 snapshots, 14389 rows, 172 coins, 139.9 MB. No problems.
 
-GeckoTerminal: 57631 calls, 486 refused, 17 failed, 108 waiting. Insider flag fired on 0 of 67 coins where RugCheck's graph found insiders.
+GeckoTerminal: 57657 calls, 487 refused, 17 failed, 121 waiting. Insider flag fired on 0 of 67 coins where RugCheck's graph found insiders.
 
 Fills: a round trip on Jupiter returned -1.5% (median of 180 quotes, before priority fees); paper charged -8.3%.
 
-Launch feed: running, 9685 launches and 812 graduations in the last day.
+Launch feed: running, 9644 launches and 819 graduations in the last day.
 
 Learning run 2026-11-15: 11 of 14 arms have 15+ trades. Promoted: none. Proposes only until 2026-11-30. Detail: LEARNING.md on `state`. No rule on this book reads it.
 
@@ -84,8 +84,8 @@ Learning run 2026-11-15: 11 of 14 arms have 15+ trades. Promoted: none. Proposes
 
 | Coin | Mint | Opened | Cost SOL | Entry mcap | Move | Value SOL (incl. realised) | Thesis |
 |---|---|---|---|---|---|---|---|
-| BRUH | `PgFtGGqu…` | 2026-11-08 08:15 UTC | 0.25 | $1,080,245 | +305% | 0.822 | Gate pass; 28h pumpswap coin, mc $1.07M, liq $84k (thin), 1h +42%, 24h +84%, 5m -2.2% (no spike now), 1h buys 163 vs sells 92. Other passes COGE (24h -92%) and GIGAHUG (11.7h, +1775% 24h vertical) skipped; GATO/HELL already held. |
-| 1 | `2bCCHQad…` | 2026-11-19 12:16 UTC | 0.25 | $681,476 | -8% | 0.221 | Gate pass; 832h pumpswap coin, mc $681k, liq $79k (thin, near floor), 1h +17.5%, 24h +66%, 5m flat, 1h buys 86 vs sells 60; vol1h only $4k (modest). Other passes: GTASZN (12h, +1691% 24h vertical), HOGE (1h -12.6%, 5m -5.8%), Leonida (just stopped out) skipped; ANTS failed gate (copycat). |
+| BRUH | `PgFtGGqu…` | 2026-11-08 08:15 UTC | 0.25 | $1,080,245 | +304% | 0.825 | Gate pass; 28h pumpswap coin, mc $1.07M, liq $84k (thin), 1h +42%, 24h +84%, 5m -2.2% (no spike now), 1h buys 163 vs sells 92. Other passes COGE (24h -92%) and GIGAHUG (11.7h, +1775% 24h vertical) skipped; GATO/HELL already held. |
+| 1 | `2bCCHQad…` | 2026-11-19 12:16 UTC | 0.25 | $681,476 | -11% | 0.216 | Gate pass; 832h pumpswap coin, mc $681k, liq $79k (thin, near floor), 1h +17.5%, 24h +66%, 5m flat, 1h buys 86 vs sells 60; vol1h only $4k (modest). Other passes: GTASZN (12h, +1691% 24h vertical), HOGE (1h -12.6%, 5m -5.8%), Leonida (just stopped out) skipped; ANTS failed gate (copycat). |
 
 ## Closed
 
