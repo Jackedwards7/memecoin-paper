@@ -1201,7 +1201,7 @@
     "2026-11-19 09:12 UTC SELL 100% Leonida -> 0.132 SOL @ $0.0008238: event exit: price -28% in 5 minutes, -41% from entry",
     "2026-11-19 12:16 UTC BUY 1 0.25 SOL @ $0.00069866436 (mc $681,476): Gate pass; 832h pumpswap coin, mc $681k, liq $79k (thin, near floor), 1h +17.5%, 24h +66%, 5m flat, 1h buys 86 vs sells 60; vol1h only $4k (modest). Other passes: GTASZN (12h, +1691% 24h vertical), HOGE (1h -12.6%, 5m -5.8%), Leonida (just stopped out) skipped; ANTS failed gate (copycat)."
   ],
-  "last_mark": "2026-11-19 16:07 UTC",
+  "last_mark": "2026-11-19 16:16 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1795102518,
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1795102518,
@@ -1211,7 +1211,7 @@
     "KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump": 1795102518,
     "NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump": 1795104450,
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1795102518,
-    "FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump": 1795104450,
+    "FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump": 1795104978.105073,
     "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": 1795102518,
     "9rbKkz2BDQBVgZmrHY6d7PTq2ge91gkpEyE4y9PPpump": 1795102518,
     "VAYMVikuYQpWz5sXCeCsQDeho2QcGqDSNq9rhCspump": 1795104450,
@@ -3607,6 +3607,12 @@
       "kind": "buy",
       "result": "bought 1 0.25 SOL @ $0.00069866436; control opened",
       "at": "2026-11-19 12:16 UTC"
+    },
+    {
+      "id": "20261119T161618.105073Z-gate-9efef5",
+      "kind": "gate",
+      "result": "recorded 3 gate results, 1 passed",
+      "at": "2026-11-19 16:16 UTC"
     }
   ]
 }
