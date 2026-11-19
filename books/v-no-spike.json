@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6780.287911999797,
+  "cash_sol": 6780.037911999797,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -280,6 +280,82 @@
       },
       "reentry": false,
       "since_loss_h": 5.1
+    },
+    "9rbKkz2BDQBVgZmrHY6d7PTq2ge91gkpEyE4y9PPpump": {
+      "symbol": "Leonida",
+      "opened": "2026-11-19 07:34 UTC",
+      "cost_sol": 0.25,
+      "tokens": 12335.408987694786,
+      "entry_px": 0.0014502924076409756,
+      "entry_mc": 1444731,
+      "peak_px": 0.0014502924076409756,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-no-spike rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/6ecx5lm5dinvma1xwmeumj6abzl3g1xx4t5rxqxelzdn",
+      "v": 2,
+      "mev_sol": 0.006695232994108194,
+      "swaps": 1,
+      "entry_liq": 92581.37,
+      "at_entry": {
+        "px": 0.00145,
+        "liq": 92581.37,
+        "mc": 1444731,
+        "dex": "pumpswap",
+        "age_h": 30.21,
+        "vol_h1": 51472.23,
+        "vol_h24": 1431168.12,
+        "buys_h1": 1492,
+        "sells_h1": 615,
+        "buys_h24": 30371,
+        "sells_h24": 26468,
+        "trades_h24": 56839,
+        "avg_trade": 25.18,
+        "m5": -0.54,
+        "h1": 13.43,
+        "h6": -10.86,
+        "h24": 60.19,
+        "eligible": true,
+        "v": 3,
+        "pool": "6Ecx5Lm5dinVma1xWMEumj6ABZL3g1Xx4t5rxQxELzdn",
+        "m5_raw": -0.54,
+        "buys_m5": 111,
+        "sells_m5": 59,
+        "buys_h6": 6680,
+        "sells_h6": 5095,
+        "vol_m5": 3669.71,
+        "vol_h6": 401818.66,
+        "liq_base": 32395433,
+        "liq_quote": 610.8934,
+        "fdv": 1444731,
+        "boosts": 100,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.1216,
+          "paid": 0.001610018993507134,
+          "vs_paid": -0.134,
+          "off_peak": -0.3991,
+          "accel": 0.271,
+          "candles": 96,
+          "unease": 3,
+          "known": 5,
+          "signs": [
+            "failed_high",
+            "sol_leaving",
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 5.5
     }
   },
   "closed": [
@@ -3804,10 +3880,11 @@
     "2026-11-18 21:09 UTC BUY JESTER 0.25 SOL @ $0.0014412997 (mc $1,421,229): v-no-spike rule",
     "2026-11-19 01:03 UTC SELL 100% JOB -> 0.264 SOL @ $0.002489: time stop: 48h held, +18%, no take-profit",
     "2026-11-19 02:01 UTC SELL 50% JESTER -> 0.230 SOL @ $0.002914: take-profit at +102%: half sold, cost recovered",
-    "2026-11-19 02:04 UTC SELL 100% Max -> 0.146 SOL @ $0.0008061: stop-loss at -36%"
+    "2026-11-19 02:04 UTC SELL 100% Max -> 0.146 SOL @ $0.0008061: stop-loss at -36%",
+    "2026-11-19 07:34 UTC BUY Leonida 0.25 SOL @ $0.0014502924 (mc $1,444,731): v-no-spike rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-19 07:29 UTC"
+  "last_mark": "2026-11-19 07:34 UTC"
 }
