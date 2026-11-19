@@ -1,8 +1,8 @@
 # Lessons
 
-715 closed trades labelled, every book. Written by the bot.
+717 closed trades labelled, every book. Written by the bot.
 
-- **slow-bleed**: 246 trades, mean -28%. Rocco (v-dip): -36% over 36h; GATO (v-swing): -27% over 16h
+- **slow-bleed**: 248 trades, mean -28%. GATO (v-mature): -44% over 46h; GATO (v-tight): -29% over 16h
 - **other**: 215 trades, mean -32%. Rocco (v-swing): event exit: price -21% in 5 minutes, -35% from entry; meowl (v-swing): stop-loss at -11%
 - **won-held**: 121 trades, mean +30%. BIG (claude): +5%, peak +29%; BIG (mech): +5%, peak +29%
 - **bought-spike**: 49 trades, mean -35%. BJB (v-velocity): up 4646% in 24h at entry, peak +5%; GTAVI (v-tight): up 5854% in 24h at entry, peak +0%
