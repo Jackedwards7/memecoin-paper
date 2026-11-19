@@ -1,12 +1,12 @@
-MOVERS 2026-11-19T01:57:44Z
-4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao +8%
-nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity +8%
-DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin +14%
-3tjPCXfx3KrgMY53yo7pa67D2QQZMbLTRaqQckJmpump VTC +28%
-VAYMVikuYQpWz5sXCeCsQDeho2QcGqDSNq9rhCspump JESTER +59%
-Fn95NtGXWPaJXc4N5y9rVkUq1NwZbjBNJzPVvNRLpump SHIT -14%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -14%
-FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump HOGE -12%
-9hjBLBrc7WZW2H8UQvBAvG5WiTZotXUv2Bdcn4f4pump DCTY -9%
-Dfh5DzRgSvvCFDoYc2ciTkMrbDfRKybA4SoFbPmApump pippin -8%
+MOVERS 2026-11-19T02:13:44Z
+5w3wVdJaESaJKyLmStM6Hv9UyUkmZ1b9DLQquAqqpump SID +7%
+DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin +13%
+4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao +16%
+3tjPCXfx3KrgMY53yo7pa67D2QQZMbLTRaqQckJmpump VTC +34%
+VAYMVikuYQpWz5sXCeCsQDeho2QcGqDSNq9rhCspump JESTER +89%
+5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -22%
+AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -21%
+9hjBLBrc7WZW2H8UQvBAvG5WiTZotXUv2Bdcn4f4pump DCTY -13%
+Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT -12%
+GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump WASTED -10%
 END

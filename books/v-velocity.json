@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.178512995446215,
+  "cash_sol": 5.928512995446215,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -364,6 +364,82 @@
       },
       "reentry": false,
       "since_loss_h": 23.4
+    },
+    "9rbKkz2BDQBVgZmrHY6d7PTq2ge91gkpEyE4y9PPpump": {
+      "symbol": "Leonida",
+      "opened": "2026-11-19 02:14 UTC",
+      "cost_sol": 0.25,
+      "tokens": 9346.620753678264,
+      "entry_px": 0.0018803319898353255,
+      "entry_mc": 1872541,
+      "peak_px": 0.0018803319898353255,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-velocity rule",
+      "rugcheck": 30,
+      "risks": [
+        "High holder correlation"
+      ],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/6ecx5lm5dinvma1xwmeumj6abzl3g1xx4t5rxqxelzdn",
+      "v": 2,
+      "mev_sol": 0.006811989100817438,
+      "swaps": 1,
+      "entry_liq": 103912.82,
+      "at_entry": {
+        "px": 0.00188,
+        "liq": 103912.82,
+        "mc": 1872541,
+        "dex": "pumpswap",
+        "age_h": 24.87,
+        "vol_h1": 75189.93,
+        "vol_h24": 1336713.78,
+        "buys_h1": 976,
+        "sells_h1": 903,
+        "buys_h24": 26037,
+        "sells_h24": 24347,
+        "trades_h24": 50384,
+        "avg_trade": 26.53,
+        "m5": -2.99,
+        "h1": 7.45,
+        "h6": 22.38,
+        "h24": 240,
+        "eligible": true,
+        "v": 3,
+        "pool": "6Ecx5Lm5dinVma1xWMEumj6ABZL3g1Xx4t5rxQxELzdn",
+        "m5_raw": -2.99,
+        "buys_m5": 61,
+        "sells_m5": 64,
+        "buys_h6": 6260,
+        "sells_h6": 9364,
+        "vol_m5": 5227.28,
+        "vol_h6": 348577.07,
+        "liq_base": 28023037,
+        "liq_quote": 699.07514,
+        "fdv": 1872541,
+        "boosts": 100,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.1121,
+          "paid": 0.0013334263958852666,
+          "vs_paid": 0.2435,
+          "off_peak": -0.2522,
+          "accel": -0.1672,
+          "candles": 96,
+          "unease": 1,
+          "known": 5,
+          "signs": [
+            "sellers"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 0.5
     }
   },
   "closed": [
@@ -5963,10 +6039,11 @@
     "2026-11-18 19:49 UTC BUY JESTER 0.25 SOL @ $0.0014913044 (mc $1,470,294): v-velocity rule",
     "2026-11-18 22:39 UTC SELL 100% NIO -> 0.206 SOL @ $0.001587: time stop: 48h held, -8%, no take-profit",
     "2026-11-18 22:45 UTC BUY DCTY 0.25 SOL @ $0.014890578 (mc $14,084,071): v-velocity rule",
-    "2026-11-19 01:45 UTC SELL 100% DCTY -> 0.144 SOL @ $0.009573: event exit: price -35% in 5 minutes, -36% from entry"
+    "2026-11-19 01:45 UTC SELL 100% DCTY -> 0.144 SOL @ $0.009573: event exit: price -35% in 5 minutes, -36% from entry",
+    "2026-11-19 02:14 UTC BUY Leonida 0.25 SOL @ $0.001880332 (mc $1,872,541): v-velocity rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-19 02:07 UTC"
+  "last_mark": "2026-11-19 02:13 UTC"
 }
