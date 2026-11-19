@@ -1201,7 +1201,7 @@
     "2026-11-19 09:12 UTC SELL 100% Leonida -> 0.132 SOL @ $0.0008238: event exit: price -28% in 5 minutes, -41% from entry",
     "2026-11-19 12:16 UTC BUY 1 0.25 SOL @ $0.00069866436 (mc $681,476): Gate pass; 832h pumpswap coin, mc $681k, liq $79k (thin, near floor), 1h +17.5%, 24h +66%, 5m flat, 1h buys 86 vs sells 60; vol1h only $4k (modest). Other passes: GTASZN (12h, +1691% 24h vertical), HOGE (1h -12.6%, 5m -5.8%), Leonida (just stopped out) skipped; ANTS failed gate (copycat)."
   ],
-  "last_mark": "2026-11-19 15:46 UTC",
+  "last_mark": "2026-11-19 15:48 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1795102518,
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1795102518,
@@ -2217,7 +2217,9 @@
       "fails": [
         "copycat: an earlier 'DacityCoin' exists (5xA4di)"
       ],
-      "moves": {}
+      "moves": {
+        "1d": 17.424000995891948
+      }
     },
     "DngzJTHeVRD7JftRLQFCcdW9UvKL1n9hhyoc8ojEpump": {
       "symbol": "VTC",
