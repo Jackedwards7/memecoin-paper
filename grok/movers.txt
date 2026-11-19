@@ -1,12 +1,12 @@
-MOVERS 2026-11-19T02:45:46Z
-4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump mihao +6%
-y1AZt42vceCmStjW4zetK3VoNarC1VxJ5iDjpiupump FARTBOY +7%
-5w3wVdJaESaJKyLmStM6Hv9UyUkmZ1b9DLQquAqqpump SID +7%
-9hjBLBrc7WZW2H8UQvBAvG5WiTZotXUv2Bdcn4f4pump DCTY +8%
-3tjPCXfx3KrgMY53yo7pa67D2QQZMbLTRaqQckJmpump VTC +16%
-7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -20%
-9rbKkz2BDQBVgZmrHY6d7PTq2ge91gkpEyE4y9PPpump Leonida -14%
-Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr FLOAT -13%
+MOVERS 2026-11-19T03:01:54Z
+5w3wVdJaESaJKyLmStM6Hv9UyUkmZ1b9DLQquAqqpump SID +6%
+DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump DacityCoin +6%
+9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump JOB +8%
+9rbKkz2BDQBVgZmrHY6d7PTq2ge91gkpEyE4y9PPpump Leonida +10%
+9hjBLBrc7WZW2H8UQvBAvG5WiTZotXUv2Bdcn4f4pump DCTY +22%
+7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump NIO -37%
+VAYMVikuYQpWz5sXCeCsQDeho2QcGqDSNq9rhCspump JESTER -14%
 5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump Max -13%
-AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump Macca -13%
+HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump GATO -10%
+nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump Dacity -7%
 END

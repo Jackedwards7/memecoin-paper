@@ -1045,13 +1045,13 @@
     "2026-11-17 12:16 UTC SELL 100% BIG -> 0.262 SOL @ $0.001496: time stop: 48h held, +15%, no take-profit",
     "2026-11-17 14:46 UTC SELL 100% BLOB -> 0.160 SOL @ $0.00954: event exit: price -31% in 5 minutes, -26% from entry"
   ],
-  "last_mark": "2026-11-19 02:56 UTC",
+  "last_mark": "2026-11-19 03:01 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1795056346,
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1795056346,
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": 1795054424,
     "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump": 1795056346,
-    "5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump": 1795053464,
+    "5qaP7oKUqKffwwo5DaEqDoTtsBLMpdbQTxEkCDaTpump": 1795057314,
     "KMifrkYmDdAKtVXAVBEPEQxJ7qP2iLgUcfZjUZipump": 1795056346,
     "NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump": 1795054424,
     "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": 1795056346,
@@ -2509,7 +2509,8 @@
       "fails": [],
       "moves": {
         "1d": 0.09435797665369638,
-        "3d": -0.38229571984435795
+        "3d": -0.38229571984435795,
+        "7d": -0.5949416342412452
       }
     },
     "8AAVuQpJcqpvCuutxyBTVvgBEXZJSkZoNv1sExpBpump": {
@@ -2519,7 +2520,8 @@
       "fails": [],
       "moves": {
         "1d": -0.6367112810707457,
-        "3d": -0.9982629063097515
+        "3d": -0.9982629063097515,
+        "7d": -0.9982495219885277
       }
     },
     "HngZXdHcBiDEX8uhqexnFqUzHsf4y9Y8a4n1F6q8pump": {
