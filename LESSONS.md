@@ -1,11 +1,11 @@
 # Lessons
 
-751 closed trades labelled, every book. Written by the bot.
+757 closed trades labelled, every book. Written by the bot.
 
 - **slow-bleed**: 259 trades, mean -28%. GATO (v-loose): -47% over 20h; JOB (v-mature): -8% over 48h
-- **other**: 226 trades, mean -32%. GTA (v-low-bundle): event exit: price -22% in 5 minutes, -18% from entry; GTA (v-momentum): event exit: price -22% in 5 minutes, -18% from entry
+- **other**: 229 trades, mean -32%. DCTY (v-mature): event exit: price -23% in 5 minutes, -12% from entry; DCTY (v-momentum): event exit: price -23% in 5 minutes, -21% from entry
 - **won-held**: 127 trades, mean +29%. DESSA (v-unease): +4%, peak +19%; DESSA (v-velocity): +4%, peak +19%
-- **bought-spike**: 51 trades, mean -35%. GTAVI (v-loose): up 5629% in 24h at entry, peak +0%; GTAVI (v-unease): up 5885% in 24h at entry, peak +0%
+- **bought-spike**: 54 trades, mean -35%. DCTY (v-tight): up 32854% in 24h at entry, peak +4%; DCTY (v-unease): up 32854% in 24h at entry, peak +4%
 - **won-trailed**: 48 trades, mean +56495%. HOGE (v-swing): +105%, peak +295%; Max (v-tight): +2%, peak +44%
 - **rug**: 19 trades, mean -100%. SCAMSON (v-tight): event exit: liquidity down 99% since entry, -100% from entry; Anthropig (v-swing): event exit: liquidity down 98% since entry, -100% from entry
 - **liquidity-pulled**: 11 trades, mean -78%. OnlyCats (v-velocity): event exit: liquidity down 56% since entry, -80% from entry; BTX (v-unpaid): event exit: liquidity down 42% since entry, -65% from entry
