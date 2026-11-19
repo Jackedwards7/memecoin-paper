@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.5616009641574236,
+  "cash_sol": 6.3116009641574236,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -342,6 +342,68 @@
       },
       "reentry": false,
       "since_loss_h": 1.7
+    },
+    "A4jXnWk1rDRDth6HmDASi45c89n1AguTHivAQPTVpump": {
+      "symbol": "GTASZN",
+      "opened": "2026-11-19 05:58 UTC",
+      "cost_sol": 0.25,
+      "tokens": 12024.855278578236,
+      "entry_px": 0.0014852902248077393,
+      "entry_mc": 1480461,
+      "peak_px": 0.0014852902248077393,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-networks rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/c3ai5bk7q9jttvcbwqeexsta99bmmlcnvyasdd7mnqbt",
+      "v": 2,
+      "mev_sol": 0.006706008583690987,
+      "swaps": 1,
+      "entry_liq": 95375.72,
+      "at_entry": {
+        "px": 0.001485,
+        "liq": 95375.72,
+        "mc": 1480461,
+        "dex": "pumpswap",
+        "age_h": 6.26,
+        "vol_h1": 65275.11,
+        "vol_h24": 3905962.78,
+        "buys_h1": 4863,
+        "sells_h1": 2944,
+        "buys_h24": 50014,
+        "sells_h24": 25805,
+        "trades_h24": 75819,
+        "avg_trade": 51.52,
+        "m5": 0.79,
+        "h1": 21.07,
+        "h6": -15.37,
+        "h24": 1361,
+        "eligible": true,
+        "v": 3,
+        "pool": "C3ai5bk7q9jTtVcbWQeEXSta99BMmLCNVyasDD7mnQBt",
+        "m5_raw": 0.79,
+        "buys_m5": 320,
+        "sells_m5": 205,
+        "buys_h6": 47162,
+        "sells_h6": 23798,
+        "vol_m5": 5778.96,
+        "vol_h6": 2883004.08,
+        "liq_base": 32393761,
+        "liq_quote": 634.1608,
+        "fdv": 1480461,
+        "boosts": 500,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": null
+      },
+      "reentry": false,
+      "since_loss_h": 3.9
     }
   },
   "closed": [
@@ -5709,10 +5771,11 @@
     "2026-11-18 17:30 UTC SELL 100% DCTY -> 0.160 SOL @ $0.007374: event exit: price -40% in 5 minutes, -28% from entry",
     "2026-11-18 21:41 UTC BUY Max 0.25 SOL @ $0.0011961489 (mc $1,193,208): v-networks rule",
     "2026-11-19 01:39 UTC SELL 50% JESTER -> 0.236 SOL @ $0.002366: take-profit at +103%: half sold, cost recovered",
-    "2026-11-19 02:07 UTC SELL 100% Max -> 0.135 SOL @ $0.0007211: event exit: price -25% in 5 minutes, -40% from entry"
+    "2026-11-19 02:07 UTC SELL 100% Max -> 0.135 SOL @ $0.0007211: event exit: price -25% in 5 minutes, -40% from entry",
+    "2026-11-19 05:58 UTC BUY GTASZN 0.25 SOL @ $0.0014852902 (mc $1,480,461): v-networks rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-19 05:55 UTC"
+  "last_mark": "2026-11-19 05:58 UTC"
 }
