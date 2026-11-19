@@ -1,8 +1,8 @@
 # Lessons
 
-704 closed trades labelled, every book. Written by the bot.
+705 closed trades labelled, every book. Written by the bot.
 
-- **slow-bleed**: 240 trades, mean -28%. GTA (v-unease): -33% over 17h; GTA (v-velocity): -33% over 17h
+- **slow-bleed**: 241 trades, mean -28%. GTA (v-velocity): -33% over 17h; DJI6930 (v-unpaid): -83% over 44h
 - **other**: 211 trades, mean -32%. BLOB (v-loose): event exit: price -31% in 5 minutes, -29% from entry; GTA (v-networks): event exit: price -21% in 5 minutes, -35% from entry
 - **won-held**: 121 trades, mean +30%. BIG (claude): +5%, peak +29%; BIG (mech): +5%, peak +29%
 - **bought-spike**: 48 trades, mean -35%. BJB (v-unease): up 4646% in 24h at entry, peak +5%; BJB (v-velocity): up 4646% in 24h at entry, peak +5%
