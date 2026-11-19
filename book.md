@@ -8,12 +8,12 @@ area: trading
 *Paper only: simulated fills from live DexScreener prices, 1.50% fee each side plus a size/liquidity
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
-**Equity 9.608 SOL** (start 10.0 SOL, -3.9%) · cash 9.076 SOL ·
-open 1 · closed 19 (6 won) · SOL $74.77 · marked 2026-11-19 08:06 UTC
+**Equity 9.602 SOL** (start 10.0 SOL, -4.0%) · cash 8.826 SOL ·
+open 2 · closed 19 (6 won) · SOL $74.62 · marked 2026-11-19 08:16 UTC
 
-**Benchmark (vs just holding SOL): -3.9%.** The book is counted in SOL, so its SOL
-return *is* its edge over holding SOL. In dollars: $718 vs $949 at the start
-(-24.3%); SOL itself moved -21.2%.
+**Benchmark (vs just holding SOL): -4.0%.** The book is counted in SOL, so its SOL
+return *is* its edge over holding SOL. In dollars: $716 vs $949 at the start
+(-24.5%); SOL itself moved -21.3%.
 Review on 2026-11-30 or after 30 closed v2 trades (12/30), rules unchanged until then.
 
 ## v2 test (from 2026-11-03 01:30 UTC)
@@ -23,11 +23,11 @@ control position on a random gate pass (`control.json`, same mechanical exits, n
 
 | Arm | Closed | Won | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|
-| Picks | 12 | 4 | +0.453 | +13.9% |
-| Control | 13 | 0 | -1.057 | -32.5% |
+| Picks | 12 | 4 | +0.447 | +12.8% |
+| Control | 13 | 0 | -1.067 | -30.5% |
 
 Costs in every fill: 1.5% fee each side, size/liquidity slippage, and a $0.50 sandwich charge per swap.
-If every swap were sandwiched at the $5 median: picks -1.051 SOL, control -2.501 SOL.
+If every swap were sandwiched at the $5 median: picks -1.121 SOL, control -2.575 SOL.
 
 **Gate value** (raw price moves, no costs; the gate earns its keep if passes beat rejects):
 passes 63 tracked, median 1d -64%, 3d -96%, 7d -100% · rejects 79 tracked, median 1d -58%, 3d -80%, 7d -98%.
@@ -39,19 +39,19 @@ Same gate, size, costs and exit code as the picks; rules in `CLAUDE.md`. Judged 
 
 | Arm | Closed | Won | Open | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|---|
-| mech | 10 | 3 | 1 | +0.506 | +18.4% |
-| v-dip | 3 | 0 | 2 | -0.247 | -19.8% |
-| v-loose | 69 | 16 | 6 | -1.926 | -10.3% |
-| v-low-bundle | 74 | 17 | 6 | -3.186 | -15.9% |
-| v-mature | 32 | 8 | 1 | -1.002 | -12.1% |
-| v-momentum | 74 | 17 | 6 | -3.186 | -15.9% |
-| v-networks | 68 | 16 | 5 | -1.786 | -9.8% |
-| v-no-spike | 43 | 13 | 5 | +6771.625 | +56430.2% |
-| v-swing | 95 | 20 | 4 | -3.078 | -12.4% |
-| v-tight | 90 | 25 | 6 | -2.753 | -11.5% |
-| v-unease | 80 | 18 | 6 | -1.974 | -9.2% |
-| v-unpaid | 49 | 6 | 2 | -4.568 | -35.8% |
-| v-velocity | 71 | 18 | 6 | -2.209 | -11.5% |
+| mech | 10 | 3 | 2 | +0.500 | +16.7% |
+| v-dip | 3 | 0 | 2 | -0.245 | -19.6% |
+| v-loose | 69 | 16 | 6 | -1.894 | -10.1% |
+| v-low-bundle | 74 | 17 | 6 | -3.135 | -15.7% |
+| v-mature | 32 | 8 | 1 | -1.006 | -12.2% |
+| v-momentum | 74 | 17 | 6 | -3.135 | -15.7% |
+| v-networks | 68 | 16 | 5 | -1.758 | -9.6% |
+| v-no-spike | 43 | 13 | 5 | +6771.635 | +56430.3% |
+| v-swing | 95 | 20 | 4 | -3.039 | -12.3% |
+| v-tight | 90 | 25 | 6 | -2.709 | -11.3% |
+| v-unease | 80 | 18 | 6 | -1.927 | -9.0% |
+| v-unpaid | 49 | 6 | 2 | -4.564 | -35.8% |
+| v-velocity | 71 | 18 | 6 | -2.172 | -11.3% |
 | v-x-exit | 0 | 0 | 0 | +0.000 | +0.0% |
 | v-x-organic | 0 | 0 | 0 | +0.000 | +0.0% |
 
@@ -65,17 +65,18 @@ Each coin against its own normal. Information only: no rule on this book reads i
 
 | Coin | Normal 15m swing | vs average paid | Off peak | Unease | Stop, in swings |
 |---|---|---|---|---|---|
-| BRUH | 2.4% | -8% | -18% | 2 of 5 | 14.5 |
+| BRUH | 2.4% | -9% | -18% | 2 of 5 | 14.5 |
+| Leonida | 12.2% | -14% | -41% | 2 of 5 | 2.9 |
 
 ## Dataset
 
 Last check 2026-11-18: 90 of 96 snapshots, 14389 rows, 172 coins, 139.9 MB. No problems.
 
-GeckoTerminal: 56386 calls, 472 refused, 16 failed, 84 waiting. Insider flag fired on 0 of 67 coins where RugCheck's graph found insiders.
+GeckoTerminal: 56409 calls, 473 refused, 16 failed, 102 waiting. Insider flag fired on 0 of 67 coins where RugCheck's graph found insiders.
 
 Fills: a round trip on Jupiter returned -1.5% (median of 180 quotes, before priority fees); paper charged -8.3%.
 
-Launch feed: running, 10601 launches and 822 graduations in the last day.
+Launch feed: running, 10573 launches and 821 graduations in the last day.
 
 Learning run 2026-11-15: 11 of 14 arms have 15+ trades. Promoted: none. Proposes only until 2026-11-30. Detail: LEARNING.md on `state`. No rule on this book reads it.
 
@@ -83,7 +84,8 @@ Learning run 2026-11-15: 11 of 14 arms have 15+ trades. Promoted: none. Proposes
 
 | Coin | Mint | Opened | Cost SOL | Entry mcap | Move | Value SOL (incl. realised) | Thesis |
 |---|---|---|---|---|---|---|---|
-| BRUH | `PgFtGGqu…` | 2026-11-08 08:15 UTC | 0.25 | $1,080,245 | +271% | 0.769 | Gate pass; 28h pumpswap coin, mc $1.07M, liq $84k (thin), 1h +42%, 24h +84%, 5m -2.2% (no spike now), 1h buys 163 vs sells 92. Other passes COGE (24h -92%) and GIGAHUG (11.7h, +1775% 24h vertical) skipped; GATO/HELL already held. |
+| BRUH | `PgFtGGqu…` | 2026-11-08 08:15 UTC | 0.25 | $1,080,245 | +274% | 0.774 | Gate pass; 28h pumpswap coin, mc $1.07M, liq $84k (thin), 1h +42%, 24h +84%, 5m -2.2% (no spike now), 1h buys 163 vs sells 92. Other passes COGE (24h -92%) and GIGAHUG (11.7h, +1775% 24h vertical) skipped; GATO/HELL already held. |
+| Leonida | `9rbKkz2B…` | 2026-11-19 08:16 UTC | 0.25 | $1,391,536 | -0% | 0.240 | Gate pass; 31h pumpswap coin, mc $1.38M, liq $91k (thin), 1h +0.4%, 24h +76%, 5m -2.5% (no spike), 1h buys 1461 vs sells 628, vol1h $49k. Other passes GATO (24h -53%), GTASZN (8.5h, +1384% vertical), HOGE (sellers lead) skipped; ANTS (copycat), CBUCKS (13% wallet) failed gate. |
 
 ## Closed
 
@@ -111,7 +113,6 @@ Learning run 2026-11-15: 11 of 14 arms have 15+ trades. Promoted: none. Proposes
 
 ## Log
 
-- 2026-11-02 05:44 UTC BUY GATO 0.75 SOL @ $0.0087410867 (mc $8,625,571): Mature 68-day coin, $8.7M cap, deepest pool on the board, 96% LP locked; +38% 24h
 - 2026-11-02 05:44 UTC BUY ANAKIN 0.50 SOL @ $0.0030809492 (mc $3,066,672): Momentum: 7h old, +5,969% 24h, 2:1 buys/sells, $138k/h volume; small size because it is vertical and has an 11-wallet bundle (~0.9% supply)
 - 2026-11-02 08:30 UTC BUY CBUCKS 0.50 SOL @ $0.0019096153 (mc $1,799,967): CBUCKS: 26-day coin, $1.8M cap, liq $146k, 1h buys 28>20, 1h +2% and 24h +48%, RugCheck no risks, LP 99.99% locked; distinct theme; modest volume noted
 - 2026-11-02 15:45 UTC SELL 100% ANAKIN -> 0.324 SOL @ $0.00203: stop-loss at -34%
@@ -151,11 +152,10 @@ Learning run 2026-11-15: 11 of 14 arms have 15+ trades. Promoted: none. Proposes
 - 2026-11-16 08:15 UTC BUY BLOB 0.25 SOL @ $0.012940775 (mc $12,832,050): Gate pass; 377h pumpswap coin, mc $12.8M, liq $296k, 1h +27.9%, 24h +254% (extended, risk noted), 5m +1.2% (no spike now), 1h buys 1901 vs sells 1506, vol1h $395k. Other pass GATO skipped (sellers lead, flat); CBUCKS (13% wallet), WASTED/Anthropig (copycat) failed gate.
 - 2026-11-17 12:16 UTC SELL 100% BIG -> 0.262 SOL @ $0.001496: time stop: 48h held, +15%, no take-profit
 - 2026-11-17 14:46 UTC SELL 100% BLOB -> 0.160 SOL @ $0.00954: event exit: price -31% in 5 minutes, -26% from entry
+- 2026-11-19 08:16 UTC BUY Leonida 0.25 SOL @ $0.0013972868 (mc $1,391,536): Gate pass; 31h pumpswap coin, mc $1.38M, liq $91k (thin), 1h +0.4%, 24h +76%, 5m -2.5% (no spike), 1h buys 1461 vs sells 628, vol1h $49k. Other passes GATO (24h -53%), GTASZN (8.5h, +1384% vertical), HOGE (sellers lead) skipped; ANTS (copycat), CBUCKS (13% wallet) failed gate.
 
 ## Orders (last 15)
 
-- 2026-11-16 16:15 UTC `20261116T161504.502743Z-gate-eed3dc`: recorded 6 gate results, 4 passed
-- 2026-11-16 20:16 UTC `20261116T201544.717764Z-gate-87b779`: recorded 8 gate results, 6 passed
 - 2026-11-17 00:16 UTC `20261117T001605.758942Z-gate-7d4b07`: recorded 7 gate results, 4 passed
 - 2026-11-17 04:16 UTC `20261117T041515.475262Z-gate-7d6bba`: recorded 8 gate results, 6 passed
 - 2026-11-17 08:16 UTC `20261117T081530.755954Z-gate-50a94b`: recorded 10 gate results, 8 passed
@@ -169,3 +169,5 @@ Learning run 2026-11-15: 11 of 14 arms have 15+ trades. Promoted: none. Proposes
 - 2026-11-18 12:16 UTC `20261118T121619.057713Z-gate-44244b`: recorded 5 gate results, 4 passed
 - 2026-11-18 16:16 UTC `20261118T161555.293740Z-gate-d8edee`: recorded 8 gate results, 7 passed
 - 2026-11-18 20:15 UTC `20261118T201515.897489Z-gate-c608fd`: recorded 5 gate results, 4 passed
+- 2026-11-19 08:16 UTC `20261119T081602.722167Z-gate-81f368`: recorded 6 gate results, 4 passed
+- 2026-11-19 08:16 UTC `20261119T081608.934900Z-buy-82c08a`: bought Leonida 0.25 SOL @ $0.0013972868; control opened

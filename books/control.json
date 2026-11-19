@@ -1,7 +1,83 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 8.943110612607871,
-  "positions": {},
+  "cash_sol": 8.693110612607871,
+  "positions": {
+    "8s11PkgQt4ZzdZ7oo84hK5t9HG1EvdgAjcg4W7Lpump": {
+      "symbol": "BLOB",
+      "opened": "2026-11-19 08:16 UTC",
+      "cost_sol": 0.25,
+      "tokens": 5146.330485629984,
+      "entry_px": 0.0034733826461228186,
+      "entry_mc": 3442781,
+      "peak_px": 0.0034733826461228186,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "control for Leonida: random pick from 13 other gate passes",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/hr9qopjxcuak38rxdpzduufhdak2bfjtoxbfqzvn2ewu",
+      "v": 2,
+      "mev_sol": 0.006700616456714018,
+      "swaps": 1,
+      "entry_liq": 169317.84,
+      "at_entry": {
+        "px": 0.003473,
+        "liq": 169317.84,
+        "mc": 3442781,
+        "dex": "pumpswap",
+        "age_h": 448.67,
+        "vol_h1": 7367.38,
+        "vol_h24": 374609.46,
+        "buys_h1": 28,
+        "sells_h1": 46,
+        "buys_h24": 1722,
+        "sells_h24": 1828,
+        "trades_h24": 3550,
+        "avg_trade": 105.52,
+        "m5": 0.61,
+        "h1": 3.55,
+        "h6": -20.16,
+        "h24": 62.51,
+        "eligible": true,
+        "v": 3,
+        "pool": "Hr9qopJXCuak38rxDpZduUFhdAK2BfjtoXbfQZVn2EwU",
+        "m5_raw": 0.61,
+        "buys_m5": 2,
+        "sells_m5": 3,
+        "buys_h6": 363,
+        "sells_h6": 266,
+        "vol_m5": 77.41,
+        "vol_h6": 68923.36,
+        "liq_base": 24587544,
+        "liq_quote": 1125.3462,
+        "fdv": 3442781,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0363,
+          "paid": 0.003347527844400673,
+          "vs_paid": -0.0392,
+          "off_peak": -0.3217,
+          "accel": -0.0807,
+          "candles": 96,
+          "unease": 2,
+          "known": 5,
+          "signs": [
+            "failed_high",
+            "under_paid"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 44.0
+    }
+  },
   "closed": [
     {
       "symbol": "Ahsoka",
@@ -872,10 +948,11 @@
     "2026-11-15 12:16 UTC BUY Punch 0.25 SOL @ $0.00023043929 (mc $230,405): control for BIG: random pick from 12 other gate passes",
     "2026-11-16 08:15 UTC BUY BJB 0.25 SOL @ $0.0018033259 (mc $1,798,435): control for BLOB: random pick from 12 other gate passes",
     "2026-11-16 11:31 UTC SELL 100% BJB -> 0.113 SOL @ $0.0009279: event exit: price -47% in 5 minutes, -49% from entry",
-    "2026-11-17 12:16 UTC SELL 100% Punch -> 0.216 SOL @ $0.0002195: time stop: 48h held, -5%, no take-profit"
+    "2026-11-17 12:16 UTC SELL 100% Punch -> 0.216 SOL @ $0.0002195: time stop: 48h held, -5%, no take-profit",
+    "2026-11-19 08:16 UTC BUY BLOB 0.25 SOL @ $0.0034733826 (mc $3,442,781): control for Leonida: random pick from 13 other gate passes"
   ],
   "gate_pass": {},
   "rejects": {},
-  "last_mark": "2026-11-19 08:06 UTC",
+  "last_mark": "2026-11-19 08:16 UTC",
   "passes": {}
 }
