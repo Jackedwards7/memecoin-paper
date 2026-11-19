@@ -1,8 +1,8 @@
 # Lessons
 
-741 closed trades labelled, every book. Written by the bot.
+742 closed trades labelled, every book. Written by the bot.
 
-- **slow-bleed**: 258 trades, mean -28%. GATO (v-unease): -42% over 19h; GATO (v-loose): -47% over 20h
+- **slow-bleed**: 259 trades, mean -28%. GATO (v-loose): -47% over 20h; JOB (v-mature): -8% over 48h
 - **other**: 223 trades, mean -32%. DCTY (v-loose): event exit: price -40% in 5 minutes, -28% from entry; DCTY (v-networks): event exit: price -40% in 5 minutes, -28% from entry
 - **won-held**: 122 trades, mean +30%. BIG (mech): +5%, peak +29%; GTA (v-tight): +16%, peak +94%
 - **bought-spike**: 51 trades, mean -35%. GTAVI (v-loose): up 5629% in 24h at entry, peak +0%; GTAVI (v-unease): up 5885% in 24h at entry, peak +0%
