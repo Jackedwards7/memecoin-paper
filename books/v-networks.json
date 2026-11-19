@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.191359517722285,
+  "cash_sol": 6.427005801007706,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -286,22 +286,22 @@
       "symbol": "JESTER",
       "opened": "2026-11-18 15:32 UTC",
       "cost_sol": 0.25,
-      "tokens": 15185.998149780708,
+      "tokens": 7592.999074890354,
       "entry_px": 0.0011642723333438122,
       "entry_mc": 1148059,
-      "peak_px": 0.002282,
+      "peak_px": 0.002366,
       "stop": -0.35,
       "tp1": 1.0,
-      "tp1_done": false,
+      "tp1_done": true,
       "thesis": "v-networks rule",
       "rugcheck": 1,
       "risks": [],
-      "realised_sol": 0.0,
+      "realised_sol": 0.2356462832854209,
       "dex": "pumpswap",
       "url": "https://dexscreener.com/solana/ejhur4fvts85xqwskjuaoaubmavccedxutuppze9guen",
       "v": 2,
-      "mev_sol": 0.0067723147771908436,
-      "swaps": 1,
+      "mev_sol": 0.013625384952629441,
+      "swaps": 2,
       "entry_liq": 78890.56,
       "at_entry": {
         "px": 0.001164,
@@ -5701,10 +5701,11 @@
     "2026-11-18 16:11 UTC SELL 100% GATO -> 0.145 SOL @ $0.003691: stop-loss at -35%",
     "2026-11-18 16:52 UTC BUY DCTY 0.25 SOL @ $0.01023051 (mc $9,682,925): v-networks rule",
     "2026-11-18 17:30 UTC SELL 100% DCTY -> 0.160 SOL @ $0.007374: event exit: price -40% in 5 minutes, -28% from entry",
-    "2026-11-18 21:41 UTC BUY Max 0.25 SOL @ $0.0011961489 (mc $1,193,208): v-networks rule"
+    "2026-11-18 21:41 UTC BUY Max 0.25 SOL @ $0.0011961489 (mc $1,193,208): v-networks rule",
+    "2026-11-19 01:39 UTC SELL 50% JESTER -> 0.236 SOL @ $0.002366: take-profit at +103%: half sold, cost recovered"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-19 01:38 UTC"
+  "last_mark": "2026-11-19 01:39 UTC"
 }
