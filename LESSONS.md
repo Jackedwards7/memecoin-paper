@@ -1,9 +1,9 @@
 # Lessons
 
-728 closed trades labelled, every book. Written by the bot.
+730 closed trades labelled, every book. Written by the bot.
 
-- **slow-bleed**: 252 trades, mean -28%. NIO (v-no-spike): -10% over 48h; NIO (v-unease): -10% over 48h
-- **other**: 217 trades, mean -32%. GTA (v-networks): event exit: price -43% in 5 minutes, +6% from entry; GTA (v-swing): event exit: price -43% in 5 minutes, +6% from entry
+- **slow-bleed**: 253 trades, mean -28%. NIO (v-unease): -10% over 48h; BRUH (v-mature): -6% over 48h
+- **other**: 218 trades, mean -32%. GTA (v-swing): event exit: price -43% in 5 minutes, +6% from entry; HOGE (v-mature): event exit: price -20% in 5 minutes, -5% from entry
 - **won-held**: 122 trades, mean +30%. BIG (mech): +5%, peak +29%; GTA (v-tight): +16%, peak +94%
 - **bought-spike**: 50 trades, mean -35%. GTAVI (v-tight): up 5854% in 24h at entry, peak +0%; GTAVI (v-loose): up 5629% in 24h at entry, peak +0%
 - **won-trailed**: 47 trades, mean +57697%. HOGE (v-no-spike): +121%, peak +326%; HOGE (v-swing): +105%, peak +295%
