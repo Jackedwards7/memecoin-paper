@@ -1208,7 +1208,7 @@
     "2026-11-19 12:16 UTC BUY 1 0.25 SOL @ $0.00069866436 (mc $681,476): Gate pass; 832h pumpswap coin, mc $681k, liq $79k (thin, near floor), 1h +17.5%, 24h +66%, 5m flat, 1h buys 86 vs sells 60; vol1h only $4k (modest). Other passes: GTASZN (12h, +1691% 24h vertical), HOGE (1h -12.6%, 5m -5.8%), Leonida (just stopped out) skipped; ANTS failed gate (copycat).",
     "2026-11-19 16:54 UTC SELL 100% 1 -> 0.248 SOL @ $0.0007418: event exit: price -23% in 5 minutes, +6% from entry"
   ],
-  "last_mark": "2026-11-19 18:48 UTC",
+  "last_mark": "2026-11-19 18:55 UTC",
   "gate_pass": {
     "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": 1795114082,
     "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump": 1795114082,
