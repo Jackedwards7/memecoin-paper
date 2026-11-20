@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 5.799805347347711,
+  "cash_sol": 5.549805347347711,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -295,6 +295,68 @@
       },
       "reentry": true,
       "since_loss_h": 0.2
+    },
+    "7bCiddGLe5aM8HE2pigT9jsqkmC1HSPxyXN6GkHEpump": {
+      "symbol": "OGTA",
+      "opened": "2026-11-20 00:42 UTC",
+      "cost_sol": 0.25,
+      "tokens": 16775.995767273,
+      "entry_px": 0.001039246059778544,
+      "entry_mc": 1034902,
+      "peak_px": 0.001039246059778544,
+      "stop": -0.2,
+      "tp1": 0.4,
+      "tp1_done": false,
+      "thesis": "v-tight rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/2rdx58tndmemzcqy9qgafwhq9icrrmbduatruofrjyzu",
+      "v": 2,
+      "mev_sol": 0.0068653027598517095,
+      "swaps": 1,
+      "entry_liq": 76882.1,
+      "at_entry": {
+        "px": 0.001039,
+        "liq": 76882.1,
+        "mc": 1034902,
+        "dex": "pumpswap",
+        "age_h": 6.17,
+        "vol_h1": 89489.15,
+        "vol_h24": 2200333.33,
+        "buys_h1": 9455,
+        "sells_h1": 5278,
+        "buys_h24": 76499,
+        "sells_h24": 30609,
+        "trades_h24": 107108,
+        "avg_trade": 20.54,
+        "m5": 0.6,
+        "h1": 7.68,
+        "h6": 279,
+        "h24": 1043,
+        "eligible": true,
+        "v": 3,
+        "pool": "2RDx58tnDMEmZcQy9qGAfwhq9iCRRMbDuAtruofrjyZU",
+        "m5_raw": 0.6,
+        "buys_m5": 923,
+        "sells_m5": 399,
+        "buys_h6": 73070,
+        "sells_h6": 29664,
+        "vol_m5": 5119.24,
+        "vol_h6": 1935713.75,
+        "liq_base": 37529856,
+        "liq_quote": 520.1676,
+        "fdv": 1034902,
+        "boosts": 500,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": null
+      },
+      "reentry": false,
+      "since_loss_h": 8.0
     }
   },
   "closed": [
@@ -7940,10 +8002,11 @@
     "2026-11-19 15:52 UTC SELL 50% HOGE -> 0.164 SOL @ $0.001604: take-profit at +42%: half sold, cost recovered",
     "2026-11-19 16:44 UTC SELL 100% 1 -> 0.182 SOL @ $0.0005418: stop-loss at -21%",
     "2026-11-19 16:56 UTC BUY three 0.25 SOL @ $0.00031515557 (mc $315,079): v-tight rule",
-    "2026-11-19 18:40 UTC SELL 100% HOGE -> 0.092 SOL @ $0.0009458: trailing stop: 40% off peak, -17% from entry"
+    "2026-11-19 18:40 UTC SELL 100% HOGE -> 0.092 SOL @ $0.0009458: trailing stop: 40% off peak, -17% from entry",
+    "2026-11-20 00:42 UTC BUY OGTA 0.25 SOL @ $0.0010392461 (mc $1,034,902): v-tight rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-20 00:31 UTC"
+  "last_mark": "2026-11-20 00:41 UTC"
 }
