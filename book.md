@@ -9,11 +9,11 @@ area: trading
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
 **Equity 9.668 SOL** (start 10.0 SOL, -3.3%) · cash 8.956 SOL ·
-open 1 · closed 21 (6 won) · SOL $73.17 · marked 2026-11-20 00:09 UTC
+open 1 · closed 21 (6 won) · SOL $73.12 · marked 2026-11-20 00:16 UTC
 
 **Benchmark (vs just holding SOL): -3.3%.** The book is counted in SOL, so its SOL
 return *is* its edge over holding SOL. In dollars: $707 vs $949 at the start
-(-25.4%); SOL itself moved -22.9%.
+(-25.5%); SOL itself moved -22.9%.
 Review on 2026-11-30 or after 30 closed v2 trades (14/30), rules unchanged until then.
 
 ## v2 test (from 2026-11-03 01:30 UTC)
@@ -23,11 +23,11 @@ control position on a random gate pass (`control.json`, same mechanical exits, n
 
 | Arm | Closed | Won | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|
-| Picks | 14 | 4 | +0.514 | +13.7% |
-| Control | 13 | 0 | -1.036 | -27.6% |
+| Picks | 14 | 4 | +0.513 | +13.7% |
+| Control | 13 | 0 | -1.037 | -27.7% |
 
 Costs in every fill: 1.5% fee each side, size/liquidity slippage, and a $0.50 sandwich charge per swap.
-If every swap were sandwiched at the $5 median: picks -1.270 SOL, control -2.635 SOL.
+If every swap were sandwiched at the $5 median: picks -1.271 SOL, control -2.637 SOL.
 
 **Gate value** (raw price moves, no costs; the gate earns its keep if passes beat rejects):
 passes 65 tracked, median 1d -63%, 3d -96%, 7d -100% · rejects 80 tracked, median 1d -58%, 3d -82%, 7d -98%.
@@ -40,18 +40,18 @@ Same gate, size, costs and exit code as the picks; rules in `CLAUDE.md`. Judged 
 | Arm | Closed | Won | Open | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|---|
 | mech | 12 | 3 | 1 | +0.566 | +17.4% |
-| v-dip | 3 | 0 | 4 | -0.178 | -10.2% |
-| v-loose | 73 | 18 | 5 | -1.842 | -9.4% |
-| v-low-bundle | 78 | 17 | 4 | -3.293 | -16.1% |
-| v-mature | 34 | 8 | 5 | -1.200 | -12.3% |
-| v-momentum | 78 | 17 | 4 | -3.293 | -16.1% |
-| v-networks | 73 | 19 | 3 | -1.715 | -9.0% |
-| v-no-spike | 48 | 16 | 3 | +6771.706 | +53111.4% |
-| v-swing | 97 | 20 | 5 | -2.986 | -11.7% |
-| v-tight | 95 | 28 | 4 | -2.676 | -10.8% |
-| v-unease | 85 | 20 | 3 | -1.980 | -9.0% |
-| v-unpaid | 50 | 6 | 2 | -4.568 | -35.1% |
-| v-velocity | 75 | 19 | 3 | -2.130 | -10.9% |
+| v-dip | 3 | 0 | 4 | -0.164 | -9.4% |
+| v-loose | 73 | 18 | 5 | -1.812 | -9.3% |
+| v-low-bundle | 78 | 17 | 4 | -3.289 | -16.0% |
+| v-mature | 34 | 8 | 5 | -1.192 | -12.2% |
+| v-momentum | 78 | 17 | 4 | -3.289 | -16.0% |
+| v-networks | 73 | 19 | 3 | -1.688 | -8.9% |
+| v-no-spike | 48 | 16 | 3 | +6771.732 | +53111.6% |
+| v-swing | 97 | 20 | 5 | -2.953 | -11.6% |
+| v-tight | 95 | 28 | 4 | -2.650 | -10.7% |
+| v-unease | 85 | 20 | 3 | -1.981 | -9.0% |
+| v-unpaid | 50 | 6 | 2 | -4.567 | -35.1% |
+| v-velocity | 75 | 19 | 3 | -2.124 | -10.9% |
 | v-x-exit | 0 | 0 | 0 | +0.000 | +0.0% |
 | v-x-organic | 0 | 0 | 0 | +0.000 | +0.0% |
 
@@ -65,17 +65,17 @@ Each coin against its own normal. Information only: no rule on this book reads i
 
 | Coin | Normal 15m swing | vs average paid | Off peak | Unease | Stop, in swings |
 |---|---|---|---|---|---|
-| BRUH | 2.7% | +5% | -9% | 0 of 5 | 12.8 |
+| BRUH | 2.7% | +6% | -8% | 1 of 5 | 12.9 |
 
 ## Dataset
 
-Last check 2026-11-18: 90 of 96 snapshots, 14389 rows, 172 coins, 139.9 MB. No problems.
+Last check 2026-11-19: 90 of 96 snapshots, 14046 rows, 167 coins, 150.2 MB. No problems.
 
-GeckoTerminal: 59066 calls, 500 refused, 17 failed, 97 waiting. Insider flag fired on 0 of 67 coins where RugCheck's graph found insiders.
+GeckoTerminal: 59077 calls, 501 refused, 17 failed, 110 waiting. Insider flag fired on 0 of 71 coins where RugCheck's graph found insiders.
 
-Fills: a round trip on Jupiter returned -1.5% (median of 180 quotes, before priority fees); paper charged -8.3%.
+Fills: a round trip on Jupiter returned -1.6% (median of 180 quotes, before priority fees); paper charged -8.4%.
 
-Launch feed: running, 8453 launches and 648 graduations in the last day.
+Launch feed: running, 8557 launches and 653 graduations in the last day.
 
 Learning run 2026-11-15: 11 of 14 arms have 15+ trades. Promoted: none. Proposes only until 2026-11-30. Detail: LEARNING.md on `state`. No rule on this book reads it.
 
@@ -83,7 +83,7 @@ Learning run 2026-11-15: 11 of 14 arms have 15+ trades. Promoted: none. Proposes
 
 | Coin | Mint | Opened | Cost SOL | Entry mcap | Move | Value SOL (incl. realised) | Thesis |
 |---|---|---|---|---|---|---|---|
-| BRUH | `PgFtGGqu…` | 2026-11-08 08:15 UTC | 0.25 | $1,080,245 | +386% | 0.949 | Gate pass; 28h pumpswap coin, mc $1.07M, liq $84k (thin), 1h +42%, 24h +84%, 5m -2.2% (no spike now), 1h buys 163 vs sells 92. Other passes COGE (24h -92%) and GIGAHUG (11.7h, +1775% 24h vertical) skipped; GATO/HELL already held. |
+| BRUH | `PgFtGGqu…` | 2026-11-08 08:15 UTC | 0.25 | $1,080,245 | +385% | 0.949 | Gate pass; 28h pumpswap coin, mc $1.07M, liq $84k (thin), 1h +42%, 24h +84%, 5m -2.2% (no spike now), 1h buys 163 vs sells 92. Other passes COGE (24h -92%) and GIGAHUG (11.7h, +1775% 24h vertical) skipped; GATO/HELL already held. |
 
 ## Closed
 
@@ -156,7 +156,6 @@ Learning run 2026-11-15: 11 of 14 arms have 15+ trades. Promoted: none. Proposes
 
 ## Orders (last 15)
 
-- 2026-11-17 12:16 UTC `20261117T121515.723220Z-gate-28a21d`: recorded 10 gate results, 9 passed
 - 2026-11-17 16:15 UTC `20261117T161504.970872Z-gate-031789`: recorded 9 gate results, 7 passed
 - 2026-11-17 20:16 UTC `20261117T201535.533397Z-gate-4f0267`: recorded 4 gate results, 3 passed
 - 2026-11-18 00:18 UTC `20261118T001726.900929Z-gate-6c739f`: recorded 2 gate results, 1 passed
@@ -171,3 +170,4 @@ Learning run 2026-11-15: 11 of 14 arms have 15+ trades. Promoted: none. Proposes
 - 2026-11-19 12:16 UTC `20261119T121546.566081Z-buy-486736`: bought 1 0.25 SOL @ $0.00069866436; control opened
 - 2026-11-19 16:16 UTC `20261119T161618.105073Z-gate-9efef5`: recorded 3 gate results, 1 passed
 - 2026-11-19 20:16 UTC `20261119T201529.165003Z-gate-0641bf`: recorded 5 gate results, 4 passed
+- 2026-11-20 00:16 UTC `20261120T001614.722030Z-gate-a37dc0`: recorded 5 gate results, 4 passed
