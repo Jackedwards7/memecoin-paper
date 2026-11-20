@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 5.977916583683533,
+  "cash_sol": 5.727916583683533,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -290,7 +290,7 @@
       "tokens": 13309.063794534388,
       "entry_px": 0.001312183769618107,
       "entry_mc": 1250204,
-      "peak_px": 0.001313,
+      "peak_px": 0.001372,
       "stop": -0.35,
       "tp1": 1.0,
       "tp1_done": false,
@@ -356,6 +356,80 @@
       },
       "reentry": true,
       "since_loss_h": 7.1
+    },
+    "B34nXKzCgsJb9ChLuSHPRpXLE3WFSWyeT8Cqkzzmpump": {
+      "symbol": "FIONA",
+      "opened": "2026-11-20 03:38 UTC",
+      "cost_sol": 0.25,
+      "tokens": 8589.464134823316,
+      "entry_px": 0.0020242939171848185,
+      "entry_mc": 1992661,
+      "peak_px": 0.0020242939171848185,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-velocity rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.0,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/djbltx1hrgzzrjgj7cwtx6sn3d7tbliytkgwombuwtvb",
+      "v": 2,
+      "mev_sol": 0.006883259911894273,
+      "swaps": 1,
+      "entry_liq": 125055.09,
+      "at_entry": {
+        "px": 0.002024,
+        "liq": 125055.09,
+        "mc": 1992661,
+        "dex": "pumpswap",
+        "age_h": 6.75,
+        "vol_h1": 292672.48,
+        "vol_h24": 7360053.19,
+        "buys_h1": 1912,
+        "sells_h1": 1655,
+        "buys_h24": 57474,
+        "sells_h24": 49005,
+        "trades_h24": 106479,
+        "avg_trade": 69.12,
+        "m5": -3.2,
+        "h1": 39.92,
+        "h6": 352,
+        "h24": 6286,
+        "eligible": true,
+        "v": 3,
+        "pool": "DjbLtX1HRGZZrJgJ7CwTX6SN3D7tBLiytkGwomBUwTVB",
+        "m5_raw": -3.2,
+        "buys_m5": 161,
+        "sells_m5": 130,
+        "buys_h6": 43474,
+        "sells_h6": 37019,
+        "vol_m5": 15425.93,
+        "vol_h6": 5866581.32,
+        "liq_base": 31038307,
+        "liq_quote": 856.8959,
+        "fdv": 1992661,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.3995,
+          "paid": 0.0011602999251717884,
+          "vs_paid": 0.4036,
+          "off_peak": -0.5054,
+          "accel": -0.2001,
+          "candles": 26,
+          "unease": 1,
+          "known": 2,
+          "signs": [
+            "failed_high"
+          ]
+        }
+      },
+      "reentry": false,
+      "since_loss_h": 7.4
     }
   },
   "closed": [
@@ -6365,10 +6439,11 @@
     "2026-11-19 20:17 UTC SELL 100% three -> 0.199 SOL @ $0.0003119: time stop: 48h held, -12%, no take-profit",
     "2026-11-19 23:19 UTC SELL 100% JOB -> 0.275 SOL @ $0.002666: time stop: 50h held, +20%, no take-profit",
     "2026-11-20 00:42 UTC BUY OGTA 0.25 SOL @ $0.0010392461 (mc $1,034,902): v-velocity rule",
-    "2026-11-20 03:22 UTC BUY NIO 0.25 SOL @ $0.0013121838 (mc $1,250,204): v-velocity rule"
+    "2026-11-20 03:22 UTC BUY NIO 0.25 SOL @ $0.0013121838 (mc $1,250,204): v-velocity rule",
+    "2026-11-20 03:38 UTC BUY FIONA 0.25 SOL @ $0.0020242939 (mc $1,992,661): v-velocity rule"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-20 03:33 UTC"
+  "last_mark": "2026-11-20 03:37 UTC"
 }
