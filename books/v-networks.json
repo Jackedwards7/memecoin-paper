@@ -1,6 +1,6 @@
 {
   "start_sol": 10.0,
-  "cash_sol": 6.532409402413498,
+  "cash_sol": 6.776149906549045,
   "positions": {
     "PgFtGGquvnv2zEkjG2N2QPvBTBrafuExGYEqahRpump": {
       "symbol": "BRUH",
@@ -210,80 +210,6 @@
       },
       "reentry": true,
       "since_loss_h": 7.0
-    },
-    "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump": {
-      "symbol": "NIO",
-      "opened": "2026-11-20 03:22 UTC",
-      "cost_sol": 0.25,
-      "tokens": 13309.063794534388,
-      "entry_px": 0.001312183769618107,
-      "entry_mc": 1250204,
-      "peak_px": 0.001782,
-      "stop": -0.35,
-      "tp1": 1.0,
-      "tp1_done": false,
-      "thesis": "v-networks rule",
-      "rugcheck": 1,
-      "risks": [],
-      "realised_sol": 0.0,
-      "dex": "pumpswap",
-      "url": "https://dexscreener.com/solana/b4wmjc6pvjctu3qsvs3ett9mr4m5v5jbkrqctwantc71",
-      "v": 2,
-      "mev_sol": 0.006854009595613434,
-      "swaps": 1,
-      "entry_liq": 130204.33,
-      "at_entry": {
-        "px": 0.001312,
-        "liq": 130204.33,
-        "mc": 1250204,
-        "dex": "pumpswap",
-        "age_h": 707.4,
-        "vol_h1": 27083.43,
-        "vol_h24": 709040.54,
-        "buys_h1": 181,
-        "sells_h1": 138,
-        "buys_h24": 4441,
-        "sells_h24": 4860,
-        "trades_h24": 9301,
-        "avg_trade": 76.23,
-        "m5": 1.49,
-        "h1": 1.93,
-        "h6": 13.43,
-        "h24": 27.3,
-        "eligible": true,
-        "v": 3,
-        "pool": "B4Wmjc6PvjCtU3qSVS3eTT9Mr4M5V5jBkRQctWANTc71",
-        "m5_raw": 1.49,
-        "buys_m5": 14,
-        "sells_m5": 3,
-        "buys_h6": 1242,
-        "sells_h6": 1171,
-        "vol_m5": 1177.95,
-        "vol_h6": 204366.49,
-        "liq_base": 50208763,
-        "liq_quote": 885.01484,
-        "fdv": 1250204,
-        "boosts": null,
-        "links": [
-          "twitter",
-          "website"
-        ],
-        "read": {
-          "swing": 0.0673,
-          "paid": 0.000996207675772686,
-          "vs_paid": 0.2948,
-          "off_peak": -0.1128,
-          "accel": -0.1778,
-          "candles": 96,
-          "unease": 1,
-          "known": 5,
-          "signs": [
-            "failed_high"
-          ]
-        }
-      },
-      "reentry": true,
-      "since_loss_h": 8.7
     }
   },
   "closed": [
@@ -6009,6 +5935,86 @@
       "pnl_pct": -0.38108558033714623,
       "exit_reason": "event exit: price -20% in 5 minutes, -32% from entry",
       "exit_px": 0.0007101
+    },
+    {
+      "symbol": "NIO",
+      "opened": "2026-11-20 03:22 UTC",
+      "cost_sol": 0.25,
+      "tokens": 0.0,
+      "entry_px": 0.001312183769618107,
+      "entry_mc": 1250204,
+      "peak_px": 0.001782,
+      "stop": -0.35,
+      "tp1": 1.0,
+      "tp1_done": false,
+      "thesis": "v-networks rule",
+      "rugcheck": 1,
+      "risks": [],
+      "realised_sol": 0.24374050413554607,
+      "dex": "pumpswap",
+      "url": "https://dexscreener.com/solana/b4wmjc6pvjctu3qsvs3ett9mr4m5v5jbkrqctwantc71",
+      "v": 2,
+      "mev_sol": 0.013716485576947499,
+      "swaps": 2,
+      "entry_liq": 130204.33,
+      "at_entry": {
+        "px": 0.001312,
+        "liq": 130204.33,
+        "mc": 1250204,
+        "dex": "pumpswap",
+        "age_h": 707.4,
+        "vol_h1": 27083.43,
+        "vol_h24": 709040.54,
+        "buys_h1": 181,
+        "sells_h1": 138,
+        "buys_h24": 4441,
+        "sells_h24": 4860,
+        "trades_h24": 9301,
+        "avg_trade": 76.23,
+        "m5": 1.49,
+        "h1": 1.93,
+        "h6": 13.43,
+        "h24": 27.3,
+        "eligible": true,
+        "v": 3,
+        "pool": "B4Wmjc6PvjCtU3qSVS3eTT9Mr4M5V5jBkRQctWANTc71",
+        "m5_raw": 1.49,
+        "buys_m5": 14,
+        "sells_m5": 3,
+        "buys_h6": 1242,
+        "sells_h6": 1171,
+        "vol_m5": 1177.95,
+        "vol_h6": 204366.49,
+        "liq_base": 50208763,
+        "liq_quote": 885.01484,
+        "fdv": 1250204,
+        "boosts": null,
+        "links": [
+          "twitter",
+          "website"
+        ],
+        "read": {
+          "swing": 0.0673,
+          "paid": 0.000996207675772686,
+          "vs_paid": 0.2948,
+          "off_peak": -0.1128,
+          "accel": -0.1778,
+          "candles": 96,
+          "unease": 1,
+          "known": 5,
+          "signs": [
+            "failed_high"
+          ]
+        }
+      },
+      "reentry": true,
+      "since_loss_h": 8.7,
+      "mint": "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump",
+      "closed": "2026-11-20 03:53 UTC",
+      "pnl_sol": -0.006259495864453929,
+      "pnl_pct": -0.025037983457815716,
+      "exit_reason": "event exit: price -23% in 5 minutes, +6% from entry",
+      "exit_px": 0.001393
     }
   ],
   "log": [
@@ -6172,10 +6178,11 @@
     "2026-11-19 18:42 UTC SELL 100% RAMBO -> 0.231 SOL @ $0.01095: time stop: 48h held, +3%, no take-profit",
     "2026-11-20 00:42 UTC BUY OGTA 0.25 SOL @ $0.0010392461 (mc $1,034,902): v-networks rule",
     "2026-11-20 03:22 UTC BUY NIO 0.25 SOL @ $0.0013121838 (mc $1,250,204): v-networks rule",
-    "2026-11-20 03:41 UTC SELL 100% OGTA -> 0.155 SOL @ $0.0007101: event exit: price -20% in 5 minutes, -32% from entry"
+    "2026-11-20 03:41 UTC SELL 100% OGTA -> 0.155 SOL @ $0.0007101: event exit: price -20% in 5 minutes, -32% from entry",
+    "2026-11-20 03:53 UTC SELL 100% NIO -> 0.244 SOL @ $0.001393: event exit: price -23% in 5 minutes, +6% from entry"
   ],
   "gate_pass": {},
   "rejects": {},
   "passes": {},
-  "last_mark": "2026-11-20 03:52 UTC"
+  "last_mark": "2026-11-20 03:53 UTC"
 }
