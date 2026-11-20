@@ -9,7 +9,7 @@ area: trading
 slippage charge. No wallet, nothing reaches the market. Written by `memepaper.py` (repo memecoin-paper); do not hand-edit.*
 
 **Equity 9.701 SOL** (start 10.0 SOL, -3.0%) · cash 8.956 SOL ·
-open 1 · closed 21 (6 won) · SOL $72.24 · marked 2026-11-20 05:41 UTC
+open 1 · closed 21 (6 won) · SOL $72.30 · marked 2026-11-20 05:45 UTC
 
 **Benchmark (vs just holding SOL): -3.0%.** The book is counted in SOL, so its SOL
 return *is* its edge over holding SOL. In dollars: $701 vs $949 at the start
@@ -23,11 +23,11 @@ control position on a random gate pass (`control.json`, same mechanical exits, n
 
 | Arm | Closed | Won | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|
-| Picks | 14 | 4 | +0.547 | +14.6% |
-| Control | 13 | 0 | -1.076 | -28.7% |
+| Picks | 14 | 4 | +0.546 | +14.6% |
+| Control | 13 | 0 | -1.074 | -28.6% |
 
 Costs in every fill: 1.5% fee each side, size/liquidity slippage, and a $0.50 sandwich charge per swap.
-If every swap were sandwiched at the $5 median: picks -1.260 SOL, control -2.695 SOL.
+If every swap were sandwiched at the $5 median: picks -1.259 SOL, control -2.692 SOL.
 
 **Gate value** (raw price moves, no costs; the gate earns its keep if passes beat rejects):
 passes 68 tracked, median 1d -63%, 3d -98%, 7d -99% · rejects 80 tracked, median 1d -58%, 3d -82%, 7d -98%.
@@ -40,18 +40,18 @@ Same gate, size, costs and exit code as the picks; rules in `CLAUDE.md`. Judged 
 | Arm | Closed | Won | Open | P&L SOL (incl. open) | Return on SOL deployed |
 |---|---|---|---|---|---|
 | mech | 12 | 3 | 1 | +0.599 | +18.4% |
-| v-dip | 4 | 0 | 3 | -0.192 | -11.0% |
-| v-loose | 74 | 18 | 6 | -1.952 | -9.8% |
-| v-low-bundle | 80 | 17 | 5 | -3.439 | -16.2% |
-| v-mature | 36 | 8 | 5 | -1.349 | -13.2% |
-| v-momentum | 80 | 17 | 5 | -3.439 | -16.2% |
+| v-dip | 4 | 0 | 3 | -0.198 | -11.3% |
+| v-loose | 74 | 18 | 6 | -1.948 | -9.7% |
+| v-low-bundle | 80 | 17 | 5 | -3.435 | -16.2% |
+| v-mature | 36 | 8 | 5 | -1.352 | -13.2% |
+| v-momentum | 80 | 17 | 5 | -3.435 | -16.2% |
 | v-networks | 75 | 19 | 3 | -1.753 | -9.0% |
-| v-no-spike | 49 | 16 | 3 | +6771.763 | +52090.5% |
-| v-swing | 97 | 20 | 5 | -2.867 | -11.2% |
-| v-tight | 98 | 28 | 4 | -2.796 | -11.0% |
-| v-unease | 87 | 20 | 4 | -2.137 | -9.4% |
+| v-no-spike | 49 | 16 | 3 | +6771.762 | +52090.5% |
+| v-swing | 97 | 20 | 5 | -2.880 | -11.3% |
+| v-tight | 98 | 28 | 4 | -2.795 | -11.0% |
+| v-unease | 87 | 20 | 4 | -2.126 | -9.3% |
 | v-unpaid | 51 | 6 | 1 | -4.840 | -37.2% |
-| v-velocity | 77 | 19 | 4 | -2.223 | -11.0% |
+| v-velocity | 77 | 19 | 4 | -2.221 | -11.0% |
 | v-x-exit | 0 | 0 | 0 | +0.000 | +0.0% |
 | v-x-organic | 0 | 0 | 0 | +0.000 | +0.0% |
 
@@ -71,7 +71,7 @@ Each coin against its own normal. Information only: no rule on this book reads i
 
 Last check 2026-11-19: 90 of 96 snapshots, 14046 rows, 167 coins, 150.2 MB. No problems.
 
-GeckoTerminal: 59906 calls, 521 refused, 17 failed, 129 waiting. Insider flag fired on 0 of 71 coins where RugCheck's graph found insiders.
+GeckoTerminal: 59918 calls, 521 refused, 17 failed, 122 waiting. Insider flag fired on 0 of 71 coins where RugCheck's graph found insiders.
 
 Fills: a round trip on Jupiter returned -1.6% (median of 180 quotes, before priority fees); paper charged -8.4%.
 
