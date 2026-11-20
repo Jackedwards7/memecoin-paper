@@ -1,0 +1,30 @@
+{
+  "id": "20261120T161602.575791Z-gate-8044a7",
+  "kind": "gate",
+  "at": 1795191362.575791,
+  "by": "local",
+  "results": {
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "px": 0.003483,
+      "fails": []
+    },
+    "HF2RBPrfNBk9TxggL2cYZFEKSgirzh5HKCngLENTpump": {
+      "symbol": "LOOSY",
+      "px": 0.002837,
+      "fails": [
+        "copycat: an earlier 'Cool Dog' exists (5tAB1D)"
+      ]
+    },
+    "FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump": {
+      "symbol": "HOGE",
+      "px": 0.0009729,
+      "fails": []
+    },
+    "GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump": {
+      "symbol": "WASTED",
+      "px": 0.0008944,
+      "fails": []
+    }
+  }
+}
