@@ -1,0 +1,35 @@
+{
+  "id": "20261120T001614.722030Z-gate-a37dc0",
+  "kind": "gate",
+  "at": 1795133774.72203,
+  "by": "local",
+  "results": {
+    "ejrz94zR4A2ScS8LdvRaQih2xUxaE2ydreqUNKmpump": {
+      "symbol": "ANTS",
+      "px": 0.007458,
+      "fails": []
+    },
+    "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
+      "symbol": "CBUCKS",
+      "px": 0.003807,
+      "fails": [
+        "a wallet holds 13% of supply"
+      ]
+    },
+    "FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump": {
+      "symbol": "HOGE",
+      "px": 0.0009104,
+      "fails": []
+    },
+    "GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump": {
+      "symbol": "WASTED",
+      "px": 0.001163,
+      "fails": []
+    },
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "px": 0.001807,
+      "fails": []
+    }
+  }
+}
