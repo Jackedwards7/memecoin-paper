@@ -1,9 +1,9 @@
 # Lessons
 
-784 closed trades labelled, every book. Written by the bot.
+787 closed trades labelled, every book. Written by the bot.
 
 - **slow-bleed**: 271 trades, mean -27%. Leonida (v-loose): -18% over 12h; Leonida (v-unease): -11% over 14h
-- **other**: 238 trades, mean -32%. Leonida (v-velocity): event exit: price -20% in 5 minutes, -12% from entry; GTASZN (v-tight): stop-loss at -20%
+- **other**: 241 trades, mean -32%. Leonida (mech): event exit: price -28% in 5 minutes, -41% from entry; Leonida (v-no-spike): event exit: price -28% in 5 minutes, -43% from entry
 - **won-held**: 133 trades, mean +28%. RAMBO (v-tight): +2%, peak +35%; RAMBO (v-unease): +2%, peak +35%
 - **bought-spike**: 54 trades, mean -35%. DCTY (v-tight): up 32854% in 24h at entry, peak +4%; DCTY (v-unease): up 32854% in 24h at entry, peak +4%
 - **won-trailed**: 48 trades, mean +56495%. HOGE (v-swing): +105%, peak +295%; Max (v-tight): +2%, peak +44%
