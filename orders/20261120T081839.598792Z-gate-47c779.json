@@ -1,0 +1,42 @@
+{
+  "id": "20261120T081839.598792Z-gate-47c779",
+  "kind": "gate",
+  "at": 1795162719.598792,
+  "by": "local",
+  "results": {
+    "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
+      "symbol": "CBUCKS",
+      "px": 0.004539,
+      "fails": [
+        "a wallet holds 13% of supply"
+      ]
+    },
+    "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump": {
+      "symbol": "GATO",
+      "px": 0.002589,
+      "fails": []
+    },
+    "44DZsPNJUtUyTkELAFYdwCpe82sEt12HZKrMgK1Spump": {
+      "symbol": "iAgent",
+      "px": 0.0016,
+      "fails": []
+    },
+    "FVzqGqRmr4UH1Fif6dewmwbJ1p4YUZCu8dcw4Efopump": {
+      "symbol": "HOGE",
+      "px": 0.001213,
+      "fails": []
+    },
+    "HF2RBPrfNBk9TxggL2cYZFEKSgirzh5HKCngLENTpump": {
+      "symbol": "LOOSY",
+      "px": 0.001125,
+      "fails": [
+        "copycat: an earlier 'Cool Dog' exists (5tAB1D)"
+      ]
+    },
+    "GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump": {
+      "symbol": "WASTED",
+      "px": 0.0009318,
+      "fails": []
+    }
+  }
+}
